@@ -7,6 +7,10 @@ For running our scripts, you will need working Linux environment, Python (minimu
 v 2.4), GMTK (last available version) (http://ssli.ee.washington.edu/~bilmes/gmtk/) and envsubst command (on Debian
 it is part of gettext-base package). Also, you need PDT-2.0 (http://ufal.mff.cuni.cz/pdt2.0/) for morphological analysis.
 
+== Instalation ==
+
+Extract the page into your home directory. The name of the directory for extended HVS parser should be `extended-HVS-parser`.
+
 = Special words = 
 
 == `_UNKNOWN_` == 
