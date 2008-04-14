@@ -11,6 +11,53 @@ it is part of gettext-base package). Also, you need PDT-2.0 (http://ufal.mff.cun
 
 Extract the page into your home directory. The name of the directory for extended HVS parser should be `extended-HVS-parser`.
 
+Go to the directory "~/extended-HVS-parser/semantics-4":
+* `cd ~/extended-HVS-parser/semantics-4`
+
+Run command from the bash command line:
+* `./semantics.py runbatch --verbose-level DEBUG --script ./batch/full_run_example.py`
+
+You should see the following output:
+{{{
+Running external method SemanticsMain.makeDirs ('bin/semantics/makeDirs')
+Running external method SemanticsMain.deleteTmpData ('bin/semantics/deleteTmpData')
+Running external method SemanticsMain.setCommonParams ('bin/semantics/setCommonParams')
+Running external method SemanticsMain.copyXMLData ('bin/semantics/copyXMLData')
+}}}
+
+
+=== Error 1 ===
+
+If you see:
+
+{{{
+Traceback (most recent call last):
+  File "./semantics.py", line 6, in ?
+    from svc.utils import cartezian as _cartezianProduct, strnumber, strcomma
+ImportError: No module named svc.utils
+}}}
+
+than you have to add into you .bashrc file or you have to modify external variable:
+`export PYTHONPATH=$PYTHONPATH:~/extended-HVS-parser` 
+
+=== Error 2 ===
+
+If you see:
+
+{{{
+SemanticsMain.copyXMLData: Traceback (most recent call last):
+SemanticsMain.copyXMLData:   File "/home/filip/extended-HVS-parser/semantics-4/src/copyXML2DataRaw.py", line 270, in ?
+SemanticsMain.copyXMLData:     trainList, heldoutList, testList = loadLists(dirIn)
+SemanticsMain.copyXMLData:   File "/home/filip/extended-HVS-parser/semantics-4/src/copyXML2DataRaw.py", line 149, in loadLists
+SemanticsMain.copyXMLData:     trainList = readXMLsAppendDate(dirIn + "/.train.list")
+SemanticsMain.copyXMLData:   File "/home/filip/extended-HVS-parser/semantics-4/src/copyXML2DataRaw.py", line 92, in readXMLsAppendDate
+SemanticsMain.copyXMLData:     ff = open(fName, "r")
+SemanticsMain.copyXMLData: IOError: [Errno 2] No such file or directory: 'data_xml/.train.list'
+Script SemanticsMain: ExternalError: External method copyXMLData ('bin/semantics/copyXMLData') returned with nonzero exit status (1)
+}}}
+
+than you are missing the input XML data in the directory DATA_DIR. Original setting is `data_xml` which results into `~/extended-HVS-parser/semantics-4/data_xml`.
+
 = Special words = 
 
 == `_UNKNOWN_` == 
