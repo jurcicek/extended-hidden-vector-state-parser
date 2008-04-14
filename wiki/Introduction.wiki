@@ -3,6 +3,9 @@ Here we present the basic concepts used in our implementation of the parser.
 
 = Introduction =
 
+For running our scripts, you will need working Linux environment, Python (minimum
+v 2.4), GMTK (last available version) (http://ssli.ee.washington.edu/~bilmes/gmtk/) and envsubst command (on Debian
+it is part of gettext-base package). Also, you need PDT-2.0 (http://ufal.mff.cuni.cz/pdt2.0/) for morphological analysis.
 
 = Special words = 
 
