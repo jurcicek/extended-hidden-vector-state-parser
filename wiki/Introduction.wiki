@@ -1,0 +1,17 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+= Special Concepts = 
+_DUMMY_ - a value in the hidden vector state which represents 
+
+_EMPTY_ - a value in the hidden vector state which represents an empty stack at given position.
+
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
