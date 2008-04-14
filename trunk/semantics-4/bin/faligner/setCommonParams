@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cat $PARAMS/commonParamsSettings.templ | envsubst > params/commonParamsSettings

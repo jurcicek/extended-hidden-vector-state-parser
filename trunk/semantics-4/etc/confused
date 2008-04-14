@@ -1,0 +1,31 @@
+#!/bin/bash
+
+export CONFUSE=1
+export CONFUSE_NUM=50
+export CONFUSE_POWER=1.7
+# ACC 50.54 POWER=1.109
+# ACC 65.07 POWER=1.5   LMW=2.0 
+# ACC 78.13 POWER=1.7   LMW=2.0 
+# ACC 89.98 POWER=2.0   LMW=2.0 
+# ACC 96.84 POWER=2.5   LMW=2.0 
+# ACC 99.48 POWER=3.5   LMW=2.0 
+export CONFUSE_LMW=2.0
+
+# Dataset for HLDT and TST data
+if [ $S1_DATASET != off ]; then
+    export S1_DATASET_DCD=conf_$S1_DATASET
+else
+    export S1_DATASET_DCD=off
+fi
+if [ $S2_DATASET != off ]; then
+    export S2_DATASET_DCD=conf_$S2_DATASET
+else
+    export S2_DATASET_DCD=off
+fi
+if [ $S3_DATASET != off ]; then
+    export S3_DATASET_DCD=conf_$S3_DATASET
+else
+    export S3_DATASET_DCD=off
+fi
+
+export ORIG_DATASETS_DCD=conf_word,conf_lemma

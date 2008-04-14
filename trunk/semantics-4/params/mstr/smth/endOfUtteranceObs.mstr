@@ -1,0 +1,34 @@
+%
+%
+
+#ifndef END_OF_UTTERANCE
+#define END_OF_UTTERANCE
+
+#include <commonParams>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DECISION TREEs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+DT_IN_FILE inline
+1 % number of decision trees
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+0 % a DT that restricts values that can appear on the stack
+endOfUtteranceObs
+DATA_HLDT/endOfUtteranceObs.dts
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DETERMINISTIC_CPTs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+DETERMINISTIC_CPT_IN_FILE inline
+
+1 % number of dereministic CPTs
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+0 % a deterministic CPT
+endOfUtteranceObs
+1 % number of parents
+STACK_TRANS_COUNTER_CARD 2 % stackTransCounter(0), self card
+endOfUtteranceObs % DT name
+
+#endif

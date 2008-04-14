@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "Copying files from $BUILD_DIR into $RESULT_DIR" >&2
+
+find $BUILD_DIR \
+         -not -name '*.dcd*' \
+    -and -not -name '*.cmb*' \
+    -and -not -name '*.obs*' \
+    -and -not -name '*.ho' \
+    -and -not -name '*.hddn' | cplist.py $RESULT_DIR $BUILD_DIR
+
+if [ $1 == 0 ]; then
+    echo "Deleting $BUILD_DIR" >&2
+    rm -rf $BUILD_DIR
+fi
+

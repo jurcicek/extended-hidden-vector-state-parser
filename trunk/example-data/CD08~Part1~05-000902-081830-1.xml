@@ -1,0 +1,218 @@
+﻿<?xml version="1.0"  encoding="UTF-8" ?>
+<task comment="" day="02" description="" dialect="native" dialog="CD08~Part1~05-000902-081830-1" gender="female" hour="08" last-change="Tue May 23 00:06:16 2006" min="18" modified-by="XMLtextupdateLJ" month="09" pin="" processing-state="approved" quality="3" saved-by="Dialog Act Editor 1.0" specification="" system="hhdis-nádraží" transcription_level="2" update_code="127" volume="2" year="2000">
+  <turn number="1" speaker="operator">
+    <utterance end_time="2.484" length="2.484" overlap="0" overlap_time="0.000" speaker="operator" start_time="0.000">
+      <text type="transcription">
+        české dráhy plzeň informace prosím
+      </text>
+      <text type="normalized">
+        české dráhy plzeň informace prosím
+      </text>
+      <ne_typed_text>
+        [person] české dráhy [/person] [area] plzeň [/area] informace prosím
+      </ne_typed_text>
+      <dialogue_act conversational_domain="frame" semantics="AREA, GREETING" speech_act="opening">
+        [person] české dráhy [/person] [area] plzeň [/area] informace prosím
+      </dialogue_act>
+    </utterance>
+  </turn>
+  <turn number="2" speaker="user">
+    <utterance end_time="3.871" length="1.387" overlap="0" overlap_time="0.000" speaker="user" start_time="2.484">
+      <text type="transcription">
+        'hs' bezděková{jm} dobrý_den
+      </text>
+      <text type="normalized">
+        bezděková dobrý den
+      </text>
+      <ne_typed_text>
+        [person] bezděková [/person] dobrý den
+      </ne_typed_text>
+      <dialogue_act conversational_domain="frame" semantics="PERSON, GREETING" speech_act="opening">
+        [person] bezděková [/person] dobrý den
+      </dialogue_act>
+    </utterance>
+  </turn>
+  <turn number="3" speaker="operator">
+    <utterance end_time="4.374" length="0.503" overlap="0" overlap_time="0.000" speaker="operator" start_time="3.871">
+      <text type="transcription">
+        dobrý_den
+      </text>
+      <text type="normalized">
+        dobrý den
+      </text>
+      <ne_typed_text>
+        dobrý den
+      </ne_typed_text>
+      <dialogue_act conversational_domain="frame" semantics="GREETING" speech_act="opening">
+        dobrý den
+      </dialogue_act>
+    </utterance>
+  </turn>
+  <turn number="4" speaker="user">
+    <utterance end_time="12.469" length="8.095" overlap="0" overlap_time="0.000" speaker="user" start_time="4.374">
+      <text type="transcription">
+        prosim_vás pěkně já potřebovala vědět 'hs' dneska v sobotu kdy jezdí vlak plzeň{st} nepomuk{st} osobní 'hs' během dopoledne ňák
+      </text>
+      <text type="normalized">
+        prosím vás pěkně já potřebovala vědět dnes v sobotu kdy jezdí vlak plzeň nepomuk osobní během dopoledne nějak
+      </text>
+      <ne_typed_text>
+        prosím vás pěkně já potřebovala vědět dnes v sobotu kdy jezdí vlak [station] plzeň [/station] [station] nepomuk [/station] osobní během dopoledne nějak
+      </ne_typed_text>
+      <dialogue_act conversational_domain="task" semantics="DEPARTURE(TIME, FROM(STATION), TO(STATION), TRAIN_TYPE, TIME)" speech_act="request_info">
+        prosím vás pěkně já potřebovala vědět dnes v sobotu kdy jezdí vlak [station] plzeň [/station] [station] nepomuk [/station] osobní během dopoledne nějak
+      </dialogue_act>
+    </utterance>
+  </turn>
+  <turn number="5" speaker="operator">
+    <utterance end_time="14.761" length="1.719" overlap="2" overlap_time="12.469" speaker="operator" start_time="12.469">
+      <text type="transcription">
+        jenom osobáky
+      </text>
+      <text type="normalized">
+        jenom osobní
+      </text>
+      <ne_typed_text>
+        jenom osobní
+      </ne_typed_text>
+      <dialogue_act conversational_domain="task" semantics="TRAIN_TYPE" speech_act="verify">
+        jenom osobní
+      </dialogue_act>
+    </utterance>
+  </turn>
+  <turn number="6" speaker="user">
+    <utterance end_time="14.761" length="1.719" overlap="2" overlap_time="12.469" speaker="user" start_time="12.469">
+      <text type="transcription">
+        jenom osobáky
+      </text>
+      <text type="normalized">
+        jenom osobní
+      </text>
+      <ne_typed_text>
+        jenom osobní
+      </ne_typed_text>
+      <dialogue_act conversational_domain="task" semantics="ACCEPT(TRAIN_TYPE)" speech_act="acknowledgement">
+        jenom osobní
+      </dialogue_act>
+    </utterance>
+  </turn>
+  <turn number="7" speaker="operator">
+    <utterance end_time="20.249" length="5.488" overlap="0" overlap_time="0.000" speaker="operator" start_time="14.761">
+      <text type="transcription">
+        jeden odjel před třema minutama a další osobák na nepomuk jede v jedenáct deset
+      </text>
+      <text type="normalized">
+        jeden odjel před třemi minutami a další osobní na nepomuk jede v jedenáct deset
+      </text>
+      <ne_typed_text>
+        jeden odjel před třemi minutami a další osobní na [station] nepomuk [/station] jede v jedenáct deset
+      </ne_typed_text>
+      <dialogue_act conversational_domain="task" semantics="DEPARTURE(TIME)" speech_act="present_info">
+        jeden odjel před třemi minutami
+      </dialogue_act>
+      <dialogue_act conversational_domain="task" semantics="DEPARTURE(TRAIN_TYPE, TO(STATION), TIME)" speech_act="present_info">
+        a další osobní na [station] nepomuk [/station] jede v jedenáct deset
+      </dialogue_act>
+    </utterance>
+  </turn>
+  <turn number="8" speaker="user">
+    <utterance end_time="21.726" length="1.108" overlap="2" overlap_time="20.249" speaker="user" start_time="20.249">
+      <text type="transcription">
+        v jedenáct deset
+      </text>
+      <text type="normalized">
+        v jedenáct deset
+      </text>
+      <ne_typed_text>
+        v jedenáct deset
+      </ne_typed_text>
+      <dialogue_act conversational_domain="communication" semantics="TIME" speech_act="explicit_confirmation">
+        v jedenáct deset
+      </dialogue_act>
+    </utterance>
+  </turn>
+  <turn number="9" speaker="operator">
+    <utterance end_time="23.734" length="3.116" overlap="2" overlap_time="-21.726" speaker="operator" start_time="20.249">
+      <text type="transcription">
+        v jedenáct deset :: a další až dvanáct čtyrycet pět
+      </text>
+      <text type="normalized">
+        v jedenáct deset a další až dvanáct čtyřicet pět
+      </text>
+      <ne_typed_text>
+        v jedenáct deset a další až dvanáct čtyřicet pět
+      </ne_typed_text>
+      <dialogue_act conversational_domain="communication" semantics="TIME" speech_act="implicit_confirmation">
+        v jedenáct deset
+      </dialogue_act>
+      <dialogue_act conversational_domain="task" semantics="TIME" speech_act="present_info">
+        a další až dvanáct čtyřicet pět
+      </dialogue_act>
+    </utterance>
+  </turn>
+  <turn number="10" speaker="user">
+    <utterance end_time="26.301" length="2.567" overlap="0" overlap_time="0.000" speaker="user" start_time="23.734">
+      <text type="transcription">
+        a dvanáct čtyrycet pět | stačí bohatě
+      </text>
+      <text type="normalized">
+        a dvanáct čtyřicet pět stačí bohatě
+      </text>
+      <ne_typed_text>
+        a dvanáct čtyřicet pět stačí bohatě
+      </ne_typed_text>
+      <dialogue_act conversational_domain="task" semantics="ACCEPT(TIME)" speech_act="acknowledgement">
+        a dvanáct čtyřicet pět stačí bohatě
+      </dialogue_act>
+    </utterance>
+  </turn>
+  <turn number="11" speaker="operator">
+    <utterance end_time="26.722" length="0.421" overlap="0" overlap_time="0.000" speaker="operator" start_time="26.301">
+      <text type="transcription">
+        'hm'
+      </text>
+      <text type="normalized">
+      </text>
+      <ne_typed_text>
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn number="12" speaker="user">
+    <utterance end_time="29.282" length="1.920" overlap="2" overlap_time="26.722" speaker="user" start_time="26.722">
+      <text type="transcription">
+        'hm' děkuju moc nashledanou
+      </text>
+      <text type="normalized">
+        děkuji moc nashledanou
+      </text>
+      <ne_typed_text>
+        děkuji moc nashledanou
+      </ne_typed_text>
+      <dialogue_act conversational_domain="frame" semantics="" speech_act="thanking">
+        děkuji moc
+      </dialogue_act>
+      <dialogue_act conversational_domain="frame" semantics="" speech_act="closing">
+        nashledanou
+      </dialogue_act>
+    </utterance>
+  </turn>
+  <turn number="13" speaker="operator">
+    <utterance end_time="29.282" length="1.920" overlap="2" overlap_time="26.722" speaker="operator" start_time="26.722">
+      <text type="transcription">
+        nemáte zač naschle
+      </text>
+      <text type="normalized">
+        nemáte zač nashledanou
+      </text>
+      <ne_typed_text>
+        nemáte zač nashledanou
+      </ne_typed_text>
+      <dialogue_act conversational_domain="frame" semantics="" speech_act="thanking">
+        nemáte zač
+      </dialogue_act>
+      <dialogue_act conversational_domain="frame" semantics="" speech_act="closing">
+        nashledanou
+      </dialogue_act>
+    </utterance>
+  </turn>
+</task>

@@ -1,0 +1,3 @@
+nohup ./semantics.py runbatch --verbose-level DEBUG --script ./batch/tune_scale_simple.py
+
+./semantics.py runbatch --verbose-level DEBUG --script ./batch/tune_data_reduction.py

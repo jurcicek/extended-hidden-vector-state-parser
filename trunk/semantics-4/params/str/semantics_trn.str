@@ -1,0 +1,462 @@
+/*
+*  
+*/
+
+GRAPHICAL_MODEL SemanticsTraining 
+
+#include <commonParams>
+
+frame : 0 {
+
+  variable : concept4 {
+      type: discrete hidden cardinality CONCEPT_CARD ;
+      switchingparents: nil;
+      conditionalparents: nil using DeterministicCPT("conceptZero");
+  }
+
+  variable : concept3 {
+      type: discrete hidden cardinality CONCEPT_CARD ;
+      switchingparents: nil;
+      conditionalparents: nil using DeterministicCPT("conceptZero");
+  }
+
+  variable : concept2 {
+      type: discrete hidden cardinality CONCEPT_CARD ;
+      switchingparents: nil;
+      conditionalparents: nil using DeterministicCPT("conceptZero");
+  }
+
+  variable : concept1 {
+      type: discrete hidden cardinality CONCEPT_CARD ;
+      switchingparents: nil;
+      conditionalparents: nil using DeterministicCPT("conceptZero");
+  }
+
+  #include "symbols/observed_symbols.str"
+
+  variable : stackTransCounter {
+     type: discrete hidden cardinality STACK_TRANS_COUNTER_CARD ; 
+     switchingparents: nil;
+     conditionalparents: nil using DeterministicCPT("stackTransCounterZero");
+  }
+
+  variable : stackType {
+     type: discrete hidden cardinality STACK_TYPE_CARD; 
+     switchingparents: nil;
+     conditionalparents: stackTransCounter(0)
+        using DeterministicCPT("stackTypeGivenStc");
+  }
+   
+  variable : maxJump {
+     type: discrete hidden cardinality MAX_JUMP_CARD; 
+     switchingparents: nil;
+     conditionalparents: stackTransCounter(0)
+        using DeterministicCPT("maxJumpGivenStc");
+  }
+  
+  variable : jointC1C2C3C4 {
+     type: discrete hidden cardinality JOINT_C1C2C3C4_CARD ;
+     switchingparents: nil;
+     conditionalparents: concept1(0),concept2(0),concept3(0),concept4(0) 
+       using DeterministicCPT("jointC1C2C3C4");
+  }
+   
+  variable : jointProbC1C2C3C4 {
+     type: discrete hidden cardinality JOINT_C1C2C3C4_CARD ;
+     switchingparents: nil;
+     conditionalparents: nil using DenseCPT("jointProbC1C2C3C4");
+  }
+  
+  variable : matchJointProbC1C2C3C4 {
+     type: discrete observed value 1 cardinality 2 ; 
+     switchingparents: nil;
+     conditionalparents: jointProbC1C2C3C4(0), jointC1C2C3C4(0)
+       using DeterministicCPT("matchJointProbC1C2C3C4");
+  }
+}
+
+frame : 1 {
+
+  % generate the number of concepts which have to be poped of the stack
+  variable : pop {
+     type: discrete hidden cardinality POP_CARD;
+     switchingparents: nil;
+     conditionalparents: concept1(-1),concept2(-1),concept3(-1),concept4(-1)
+       using SparseCPT("popGivenC1C2C3C4");
+  }
+  
+  variable : maxPop {
+     type: discrete hidden cardinality POP_CARD;
+     switchingparents: nil;
+     conditionalparents: concept1(-1),concept2(-1),concept3(-1),concept4(-1)
+       using DeterministicCPT("maxPopGivenC1C2C3C4");
+  }
+
+  variable : popValidatorGivenPopMaxPop {
+     type: discrete observed value 1 cardinality 2; 
+     switchingparents: nil;
+     conditionalparents: pop(0), maxPop(0)
+        using DeterministicCPT("popValidatorGivenPopMaxPop");
+  }
+  
+  variable : concept4pop {
+     type: discrete hidden cardinality CONCEPT_CARD;
+     switchingparents: nil;
+     conditionalparents: pop(0),concept4(-1) 
+       using DeterministicCPT("concept4GivenPopC4");
+  }
+
+  variable : concept3pop {
+     type: discrete hidden cardinality CONCEPT_CARD;
+     switchingparents: nil;
+     conditionalparents: pop(0),concept3(-1),concept4(-1) 
+       using DeterministicCPT("concept3GivenPopC3C4");
+  }
+
+  variable : concept2pop {
+     type: discrete hidden cardinality CONCEPT_CARD;
+     switchingparents: nil;
+     conditionalparents: pop(0),concept2(-1),concept3(-1),concept4(-1) 
+       using DeterministicCPT("concept2GivenPopC2C3C4");
+  }
+
+  variable : concept1pop {
+     type: discrete hidden cardinality CONCEPT_CARD;
+     switchingparents: nil;
+     conditionalparents: pop(0),concept1(-1),concept2(-1),concept3(-1),concept4(-1)
+       using DeterministicCPT("concept1GivenPopC1C2C3C4");
+  }
+
+  % generate the number of concepts which have to be pushed into the stack
+  variable : push {
+     type: discrete hidden cardinality PUSH_CARD;
+     switchingparents: nil;
+     conditionalparents: concept1(-1),concept2(-1),concept3(-1),concept4(-1)
+       using SparseCPT("pushGivenC1C2C3C4");
+  }
+
+  variable : concept4 {
+     type: discrete hidden cardinality CONCEPT_CARD;
+     switchingparents: push(0) using mapping("copy");
+     conditionalparents: 
+        push(0),concept1pop(0),concept2pop(0),concept3pop(0),concept4pop(0) using DeterministicCPT("concept4GivenPushC1C2C3C4")
+      | push(0),concept1pop(0),concept2pop(0),concept3pop(0),concept4pop(0) using DeterministicCPT("concept4GivenPushC1C2C3C4")
+      | push(0),concept1pop(0),concept2pop(0),concept3pop(0),concept4pop(0) using DeterministicCPT("concept4GivenPushC1C2C3C4")
+      | push(0),concept1pop(0),concept2pop(0),concept3pop(0),concept4pop(0) using DeterministicCPT("concept4GivenPushC1C2C3C4")
+      | push(0),concept1pop(0),concept2pop(0),concept3pop(0),concept4pop(0) using DeterministicCPT("concept4GivenPushC1C2C3C4");
+     % | nil                                                                 using SparseCPT("concept4");
+  }
+
+  variable : concept3 {
+     type: discrete hidden cardinality CONCEPT_CARD;
+     switchingparents: push(0) using mapping("copy");
+     conditionalparents: 
+        push(0),concept1pop(0),concept2pop(0),concept3pop(0) using DeterministicCPT("concept3GivenPushC1C2C3")
+      | push(0),concept1pop(0),concept2pop(0),concept3pop(0) using DeterministicCPT("concept3GivenPushC1C2C3")
+      | push(0),concept1pop(0),concept2pop(0),concept3pop(0) using DeterministicCPT("concept3GivenPushC1C2C3")
+      | push(0),concept1pop(0),concept2pop(0),concept3pop(0) using DeterministicCPT("concept3GivenPushC1C2C3")
+      | push(0),concept1pop(0),concept2pop(0),concept3pop(0) using DeterministicCPT("concept3GivenPushC1C2C3");
+     % | concept4(0)                                          using SparseCPT("concept3GivenC4")
+     % | concept4(0)                                          using SparseCPT("concept3GivenC4");
+  }
+
+  variable : concept2 {
+     type: discrete hidden cardinality CONCEPT_CARD;
+     switchingparents: push(0) using mapping("copy");
+     conditionalparents: 
+        push(0),concept1pop(0),concept2pop(0) using DeterministicCPT("concept2GivenPushC1C2")
+      | push(0),concept1pop(0),concept2pop(0) using DeterministicCPT("concept2GivenPushC1C2")
+     % | push(0),concept1pop(0),concept2pop(0) using DeterministicCPT("concept2GivenPushC1C2")
+     % | push(0),concept1pop(0),concept2pop(0) using DeterministicCPT("concept2GivenPushC1C2")
+     % | push(0),concept1pop(0),concept2pop(0) using DeterministicCPT("concept2GivenPushC1C2");
+      | concept3(0),concept4(0)               using SparseCPT("concept2GivenC3C4")
+      | concept3(0),concept4(0)               using SparseCPT("concept2GivenC3C4")
+      | concept3(0),concept4(0)               using SparseCPT("concept2GivenC3C4");
+  }
+
+  variable : concept1 {
+     type: discrete hidden cardinality CONCEPT_CARD;
+     switchingparents: push(0) using mapping("copy");
+     conditionalparents: 
+        push(0),concept1pop(0)              using DeterministicCPT("concept1GivenPushC1")
+      | concept2(0),concept3(0),concept4(0) using SparseCPT("concept1GivenC2C3C4")
+      | concept2(0),concept3(0),concept4(0) using SparseCPT("concept1GivenC2C3C4")
+      | concept2(0),concept3(0),concept4(0) using SparseCPT("concept1GivenC2C3C4")
+      | concept2(0),concept3(0),concept4(0) using SparseCPT("concept1GivenC2C3C4");
+  }
+
+  #include "symbols/observed_symbols.str"
+
+  variable : skipDummy {
+     type: discrete hidden cardinality SKIP_DUMMY_CARD;
+     switchingparents: nil;
+     conditionalparents: nil using DenseCPT("skipDummy");
+  }
+
+  % choose to which vector state to jump (move)
+  variable : jump {
+     type: discrete hidden cardinality JUMP_CARD;
+     switchingparents: nil;
+     conditionalparents: nil using DenseCPT("jump");
+  }
+  
+  variable : stackTrans {
+     type: discrete hidden cardinality STACK_TRANS_CARD; 
+     switchingparents: nil;
+     conditionalparents: concept1(0),concept1(-1),concept2(0),concept2(-1),concept3(0),concept3(-1),concept4(0),concept4(-1), stackType(-1)
+       using DeterministicCPT("stackTransGivenC1C1_1C2C2_1C3C3_1C4C4_1Stp_1");
+  }
+  
+  variable : stackTransValidator {
+     type: discrete observed value 1 cardinality 2; 
+     switchingparents: nil;
+     conditionalparents: stackTrans(0), pop(0), push(0)
+        using DeterministicCPT("stackTransValidatorGivenStPopPush");
+  }
+
+  variable : stackTransCounter {
+     type: discrete hidden cardinality STACK_TRANS_COUNTER_CARD; 
+      switchingparents: nil;
+      conditionalparents: stackTransCounter(-1), stackTrans(0), skipDummy(0), concept1(-1), maxJump(-1), jump(0)
+        using DeterministicCPT("stackTransCounterGivenStc_1StSdC1_1Mj_1J");
+   }
+
+  variable : stackType {
+     type: discrete hidden cardinality STACK_TYPE_CARD ; 
+     switchingparents: nil;
+     conditionalparents: stackTransCounter(0)
+        using DeterministicCPT("stackTypeGivenStc");
+   }
+
+  variable : maxJump {
+     type: discrete hidden cardinality MAX_JUMP_CARD ; 
+     switchingparents: nil;
+     conditionalparents: stackTransCounter(0)
+        using DeterministicCPT("maxJumpGivenStc");
+   }
+   
+   variable : hiddenObservation {
+     type: discrete observed value 1 cardinality 2 ; 
+     switchingparents: nil;
+     conditionalparents: s1(0),concept1(0),concept2(0),concept3(0),concept4(0),stackTransCounter(0)
+        using DeterministicCPT("hiddenObservationGivenWC1C2C3C4Stc");
+   }
+
+   variable : jointC1C2C3C4 {
+      type: discrete hidden cardinality JOINT_C1C2C3C4_CARD ;
+      switchingparents: nil;
+      conditionalparents: concept1(0),concept2(0),concept3(0),concept4(0) 
+        using DeterministicCPT("jointC1C2C3C4");
+   }
+   
+   variable : jointProbC1C2C3C4 {
+       type: discrete hidden cardinality JOINT_C1C2C3C4_CARD ;
+       switchingparents: nil;
+       conditionalparents: nil using DenseCPT("jointProbC1C2C3C4");
+   }
+  
+   variable : matchJointProbC1C2C3C4 {
+     type: discrete observed value 1 cardinality 2 ; 
+      switchingparents: nil;
+      conditionalparents: jointProbC1C2C3C4(0), jointC1C2C3C4(0)
+        using DeterministicCPT("matchJointProbC1C2C3C4");
+   }
+}
+
+frame : 2 {
+
+  % generate the number of concepts which have to be poped of the stack
+  variable : pop {
+     type: discrete hidden cardinality POP_CARD;
+     switchingparents: nil;
+     conditionalparents: concept1(-1),concept2(-1),concept3(-1),concept4(-1)
+       using SparseCPT("popGivenC1C2C3C4");
+  }
+  
+  variable : maxPop {
+     type: discrete hidden cardinality POP_CARD;
+     switchingparents: nil;
+     conditionalparents: concept1(-1),concept2(-1),concept3(-1),concept4(-1)
+       using DeterministicCPT("maxPopGivenC1C2C3C4");
+  }
+
+  variable : popValidatorGivenPopMaxPop {
+     type: discrete observed value 1 cardinality 2; 
+     switchingparents: nil;
+     conditionalparents: pop(0), maxPop(0)
+        using DeterministicCPT("popValidatorGivenPopMaxPop");
+  }
+  
+  variable : concept4pop {
+     type: discrete hidden cardinality CONCEPT_CARD;
+     switchingparents: nil;
+     conditionalparents: pop(0),concept4(-1) 
+       using DeterministicCPT("concept4GivenPopC4");
+  }
+
+  variable : concept3pop {
+     type: discrete hidden cardinality CONCEPT_CARD;
+     switchingparents: nil;
+     conditionalparents: pop(0),concept3(-1),concept4(-1) 
+       using DeterministicCPT("concept3GivenPopC3C4");
+  }
+
+  variable : concept2pop {
+     type: discrete hidden cardinality CONCEPT_CARD;
+     switchingparents: nil;
+     conditionalparents: pop(0),concept2(-1),concept3(-1),concept4(-1) 
+       using DeterministicCPT("concept2GivenPopC2C3C4");
+  }
+
+  variable : concept1pop {
+     type: discrete hidden cardinality CONCEPT_CARD;
+     switchingparents: nil;
+     conditionalparents: pop(0),concept1(-1),concept2(-1),concept3(-1),concept4(-1)
+       using DeterministicCPT("concept1GivenPopC1C2C3C4");
+  }
+
+  % generate the number of concepts which have to be pushed into the stack
+  variable : push {
+     type: discrete hidden cardinality PUSH_CARD;
+     switchingparents: nil;
+     conditionalparents: concept1(-1),concept2(-1),concept3(-1),concept4(-1)
+       using SparseCPT("pushGivenC1C2C3C4");
+  }
+
+  variable : concept4 {
+     type: discrete hidden cardinality CONCEPT_CARD;
+     switchingparents: push(0) using mapping("copy");
+     conditionalparents: 
+        push(0),concept1pop(0),concept2pop(0),concept3pop(0),concept4pop(0) using DeterministicCPT("concept4GivenPushC1C2C3C4")
+      | push(0),concept1pop(0),concept2pop(0),concept3pop(0),concept4pop(0) using DeterministicCPT("concept4GivenPushC1C2C3C4")
+      | push(0),concept1pop(0),concept2pop(0),concept3pop(0),concept4pop(0) using DeterministicCPT("concept4GivenPushC1C2C3C4")
+      | push(0),concept1pop(0),concept2pop(0),concept3pop(0),concept4pop(0) using DeterministicCPT("concept4GivenPushC1C2C3C4")
+      | push(0),concept1pop(0),concept2pop(0),concept3pop(0),concept4pop(0) using DeterministicCPT("concept4GivenPushC1C2C3C4");
+     % | nil                                                                 using SparseCPT("concept4");
+  }
+
+  variable : concept3 {
+     type: discrete hidden cardinality CONCEPT_CARD;
+     switchingparents: push(0) using mapping("copy");
+     conditionalparents: 
+        push(0),concept1pop(0),concept2pop(0),concept3pop(0) using DeterministicCPT("concept3GivenPushC1C2C3")
+      | push(0),concept1pop(0),concept2pop(0),concept3pop(0) using DeterministicCPT("concept3GivenPushC1C2C3")
+      | push(0),concept1pop(0),concept2pop(0),concept3pop(0) using DeterministicCPT("concept3GivenPushC1C2C3")
+      | push(0),concept1pop(0),concept2pop(0),concept3pop(0) using DeterministicCPT("concept3GivenPushC1C2C3")
+      | push(0),concept1pop(0),concept2pop(0),concept3pop(0) using DeterministicCPT("concept3GivenPushC1C2C3");
+     % | concept4(0)                                          using SparseCPT("concept3GivenC4")
+     % | concept4(0)                                          using SparseCPT("concept3GivenC4");
+  }
+
+  variable : concept2 {
+     type: discrete hidden cardinality CONCEPT_CARD;
+     switchingparents: push(0) using mapping("copy");
+     conditionalparents: 
+        push(0),concept1pop(0),concept2pop(0) using DeterministicCPT("concept2GivenPushC1C2")
+      | push(0),concept1pop(0),concept2pop(0) using DeterministicCPT("concept2GivenPushC1C2")
+     % | push(0),concept1pop(0),concept2pop(0) using DeterministicCPT("concept2GivenPushC1C2")
+     % | push(0),concept1pop(0),concept2pop(0) using DeterministicCPT("concept2GivenPushC1C2")
+     % | push(0),concept1pop(0),concept2pop(0) using DeterministicCPT("concept2GivenPushC1C2");
+      | concept3(0),concept4(0)               using SparseCPT("concept2GivenC3C4")
+      | concept3(0),concept4(0)               using SparseCPT("concept2GivenC3C4")
+      | concept3(0),concept4(0)               using SparseCPT("concept2GivenC3C4");
+  }
+
+  variable : concept1 {
+     type: discrete hidden cardinality CONCEPT_CARD;
+     switchingparents: push(0) using mapping("copy");
+     conditionalparents: 
+        push(0),concept1pop(0)              using DeterministicCPT("concept1GivenPushC1")
+      | concept2(0),concept3(0),concept4(0) using SparseCPT("concept1GivenC2C3C4")
+      | concept2(0),concept3(0),concept4(0) using SparseCPT("concept1GivenC2C3C4")
+      | concept2(0),concept3(0),concept4(0) using SparseCPT("concept1GivenC2C3C4")
+      | concept2(0),concept3(0),concept4(0) using SparseCPT("concept1GivenC2C3C4");
+  }
+
+  #include "symbols/observed_symbols.str"
+
+  variable : skipDummy {
+       type: discrete hidden cardinality SKIP_DUMMY_CARD;
+       switchingparents: nil;
+       conditionalparents: nil using DenseCPT("skipDummy");
+  }
+
+  % choose to which vector state to jump (move)
+  variable : jump {
+      type: discrete hidden cardinality JUMP_CARD;
+      switchingparents: nil;
+      conditionalparents: nil using DenseCPT("jump");
+  }
+  
+  variable : stackTrans {
+     type: discrete hidden cardinality STACK_TRANS_CARD; 
+     switchingparents: nil;
+     conditionalparents: concept1(0),concept1(-1),concept2(0),concept2(-1),concept3(0),concept3(-1),concept4(0),concept4(-1), stackType(-1)
+        using DeterministicCPT("stackTransGivenC1C1_1C2C2_1C3C3_1C4C4_1Stp_1");
+  }
+
+  variable : stackTransValidator {
+     type: discrete observed value 1 cardinality 2; 
+     switchingparents: nil;
+     conditionalparents: stackTrans(0), pop(0), push(0)
+        using DeterministicCPT("stackTransValidatorGivenStPopPush");
+  }
+  
+  variable : stackTransCounter {
+     type: discrete hidden cardinality STACK_TRANS_COUNTER_CARD; 
+     switchingparents: nil;
+     conditionalparents: stackTransCounter(-1),stackTrans(0), skipDummy(0), concept1(-1), maxJump(-1), jump(0)
+        using DeterministicCPT("stackTransCounterGivenStc_1StSdC1_1Mj_1J");
+  }
+
+  variable : stackType {
+     type: discrete hidden cardinality STACK_TYPE_CARD ; 
+     switchingparents: nil;
+     conditionalparents: stackTransCounter(0)
+        using DeterministicCPT("stackTypeGivenStc");
+  }
+
+  variable : maxJump {
+     type: discrete hidden cardinality MAX_JUMP_CARD ; 
+     switchingparents: nil;
+     conditionalparents: stackTransCounter(0)
+        using DeterministicCPT("maxJumpGivenStc");
+  }
+   
+  variable : hiddenObservation {
+     type: discrete observed value 1 cardinality 2 ; 
+     switchingparents: nil;
+     conditionalparents: s1(0),concept1(0),concept2(0),concept3(0),concept4(0),stackTransCounter(0)
+        using DeterministicCPT("hiddenObservationGivenWC1C2C3C4Stc");
+  }
+   
+  variable : endOfUtteranceObs {
+     type: discrete observed value 1 cardinality 2 ; 
+     switchingparents: nil;
+     conditionalparents: stackTransCounter(0) 
+        using DeterministicCPT("endOfUtteranceObs");
+  }
+
+  variable : jointC1C2C3C4 {
+      type: discrete hidden cardinality JOINT_C1C2C3C4_CARD ;
+      switchingparents: nil;
+      conditionalparents: concept1(0),concept2(0),concept3(0),concept4(0) 
+        using DeterministicCPT("jointC1C2C3C4");
+  }
+   
+  variable : jointProbC1C2C3C4 {
+      type: discrete hidden cardinality JOINT_C1C2C3C4_CARD ;
+      switchingparents: nil;
+      conditionalparents: nil using DenseCPT("jointProbC1C2C3C4");
+  }
+  
+  variable : matchJointProbC1C2C3C4 {
+     type: discrete observed value 1 cardinality 2 ; 
+     switchingparents: nil;
+     conditionalparents: jointProbC1C2C3C4(0), jointC1C2C3C4(0)
+       using DeterministicCPT("matchJointProbC1C2C3C4");
+  }
+}
+
+chunk 1:1
+

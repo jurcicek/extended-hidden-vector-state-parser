@@ -1,0 +1,20 @@
+#!/bin/bash
+
+$SRC_DIR/scalePrMass.py \
+    --dpmf \
+    --inFile $GEN_DIR/smth/dpmfs.out \
+    --outFile $GEN_DIR/scale/dpmfs.out \
+    --job "concept1Given*:$SCALE_CONCEPT12:_SINK_@$CONCEPT_MAP" \
+    --job "concept2Given*:$SCALE_CONCEPT12:_SINK_@$CONCEPT_MAP" \
+    --job "popGiven*:$SCALE_PUSHPOP:0" \
+    --job "pushGiven**:$SCALE_PUSHPOP:0"
+
+$SRC_DIR/scalePrMass.py \
+    --dcpt \
+    --inFile $GEN_DIR/smth/dcpts.out \
+    --outFile $GEN_DIR/scale/dcpts.out \
+    --job "concept1Given*:$SCALE_CONCEPT12:_SINK_@$CONCEPT_MAP" \
+    --job "concept2Given*:$SCALE_CONCEPT12:_SINK_@$CONCEPT_MAP" \
+    --job "popGiven*:$SCALE_PUSHPOP:0" \
+    --job "pushGiven**:$SCALE_PUSHPOP:0"
+

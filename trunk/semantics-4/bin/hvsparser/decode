@@ -1,0 +1,35 @@
+#!/bin/bash
+
+gmtkTriangulate \
+    -cppCommandOptions "$CPP_OPTIONS" \
+    -strFile $STR_DIR/semantics_dcd.str \
+    -outputTri $1/str.tri \
+    -findBest T -verbosity 10
+
+gmtkViterbiNew \
+    -cppCommandOptions "$CPP_OPTIONS" \
+    -strFile $STR_DIR/semantics_dcd.str \
+    -inputMasterFile $MSTR_DCD_DIR/in.mstr \
+    -of1 $1/obs.list -nf1 0 -ni1 1 -fmt1 ascii \
+    -of2 $1/obs.2.list -nf2 0 -ni2 2 -fmt2 ascii \
+    -triFile $1/str.tri \
+    -dumpNames $MSTR_DCD_DIR/dump.list \
+    -ofilelist $1/out.list \
+    -verbosity 10 \
+    -ckbeam 10000
+
+$SRC_DIR/extractDcd.py \
+    --dirDcd=$1 \
+    --dirObs=$1 \
+    --conceptMap=$CONCEPT_MAP \
+    --wordMap=$S1_MAP
+
+$SRC_DIR/extractSmntcs.py --dirCmb=$1 \
+    --dirSmntcs=$1 \
+    --outputMlf=$2/semantics.mlf 
+
+$SRC_DIR/extractSmntcs.py --dirCmb=$1 \
+    --dirSmntcs=$1 \
+    --lemmatized \
+    --outputMlf=$2/semantics.lemma.mlf 
+

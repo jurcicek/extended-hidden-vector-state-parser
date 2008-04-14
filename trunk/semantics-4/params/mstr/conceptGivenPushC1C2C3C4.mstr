@@ -1,0 +1,93 @@
+%
+%
+
+#ifndef CONCEPT_POP_COUNTER
+#define CONCEPT_POP_COUNTER
+
+#include <commonParams>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DECISION TREEs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+DT_IN_FILE inline
+
+4 % number of decision trees
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+0 % a DT that copy C1,C2,C3, or C4 depending on a Push value
+concept4GivenPushC1C2C3C4
+5 % number of parents
+0	5 	3	2	1	0	default
+	-1	{p1}
+	-1	{p2}
+	-1	{p3}
+	-1	{p4}
+	-1 	2	% generate _SINK_ so that it will be invalid vector state
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1 % a DT that copy C1, C2, or C3 depending on a Push value
+concept3GivenPushC1C2C3
+4 % number of parents
+0	4 	2	1	0	default
+	-1	{p1}
+	-1	{p2}
+	-1	{p3}
+	-1 	2	% generate _SINK_ so that it will be invalid vector state
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2 % a DT that copy C1 or C2 depending on a Push value
+concept2GivenPushC1C2
+3 % number of parents
+0	3 	1	0	default
+	-1	{p1}
+	-1	{p2}
+	-1 	2	% generate _SINK_ so that it will be invalid vector state
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+3 % a DT that copy C1
+concept1GivenPushC1
+2 % number of parents
+0	2 	0	default
+	-1	{p1}
+	-1	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DETERMINISTIC CPTs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+DETERMINISTIC_CPT_IN_FILE inline
+
+4 % number of dereministic CPTs
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+0 % a deterministic CPT
+concept4GivenPushC1C2C3C4
+5 % three parents
+PUSH_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD % Push, C1, C2, C3, C4 and self cardinality
+concept4GivenPushC1C2C3C4 % DT name
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1 % a deterministic CPT
+concept3GivenPushC1C2C3
+4 % four parents
+PUSH_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD % Push, C1, C2, C3 and self cardinality
+concept3GivenPushC1C2C3 % DT name
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2 % a deterministic CPT
+concept2GivenPushC1C2
+3 % five parents
+PUSH_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD % Push, C1, C2, and self cardinality
+concept2GivenPushC1C2 % DT name
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+3 % a deterministic CPT
+concept1GivenPushC1
+2 % five parents
+PUSH_CARD CONCEPT_CARD CONCEPT_CARD % Push, C1 and self cardinality
+concept1GivenPushC1 % DT name
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+#endif

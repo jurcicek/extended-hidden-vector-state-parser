@@ -1,0 +1,198 @@
+﻿<?xml version="1.0"  encoding="UTF-8" ?>
+<task comment="přeprava zboží" day="08" description="přeprava zásilky" dialect="native" dialog="CD05~Part1~04-000608-082912-1" gender="female" hour="08" last-change="Tue May 23 00:05:54 2006" min="29" modified-by="XMLtextupdateLJ" month="06" pin="" processing-state="out-of-topic" quality="3" saved-by="Dialog Act Editor 1.0" specification="special" system="hhdis-nádraží" transcription_level="2" update_code="127" volume="3" year="2000">
+  <turn number="1" speaker="operator">
+    <utterance end_time="2.774" length="2.774" overlap="0" overlap_time="0.000" speaker="operator" start_time="0.000">
+      <text type="transcription">
+        informace prosím
+      </text>
+      <text type="normalized">
+        informace prosím
+      </text>
+      <ne_typed_text>
+        informace prosím
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn number="2" speaker="user">
+    <utterance end_time="3.334" length="0.560" overlap="0" overlap_time="0.000" speaker="user" start_time="2.774">
+      <text type="transcription">
+        haló
+      </text>
+      <text type="normalized">
+        haló
+      </text>
+      <ne_typed_text>
+        haló
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn number="3" speaker="operator">
+    <utterance end_time="4.146" length="0.812" overlap="0" overlap_time="0.000" speaker="operator" start_time="3.334">
+      <text type="transcription">
+        ano
+      </text>
+      <text type="normalized">
+        ano
+      </text>
+      <ne_typed_text>
+        ano
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn number="4" speaker="user">
+    <utterance end_time="6.147" length="1.501" overlap="2" overlap_time="4.146" speaker="user" start_time="4.146">
+      <text type="transcription">
+        dobrý den bartíčková{jm} media_tv_pro{on}
+      </text>
+      <text type="normalized">
+        dobrý den bartíčková média tv pro
+      </text>
+      <ne_typed_text>
+        dobrý den [person] bartíčková [/person] [person] média tv pro [/person]
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn number="5" speaker="operator">
+    <utterance end_time="6.147" length="1.501" overlap="2" overlap_time="4.146" speaker="operator" start_time="4.146">
+      <text type="transcription">
+        dobrý den
+      </text>
+      <text type="normalized">
+        dobrý den
+      </text>
+      <ne_typed_text>
+        dobrý den
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn number="6" speaker="user">
+    <utterance end_time="13.840" length="7.693" overlap="0" overlap_time="0.000" speaker="user" start_time="6.147">
+      <text type="transcription">
+        'lb' prosim vás já bysem potřebovala vědět no potře(boval)a bysem dneska dopravit 'lb' 'ps' 'hs' zásilku do brna{st} | kdypak jede vlak
+      </text>
+      <text type="normalized">
+        prosím vás já bych potřebovala vědět no potřebovala bych dnes dopravit zásilku do brna kdypak jede vlak
+      </text>
+      <ne_typed_text>
+        prosím vás já bych potřebovala vědět no potřebovala bych dnes dopravit zásilku do [station] brna [/station] kdypak jede vlak
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn number="7" speaker="operator">
+    <utterance end_time="41.715" length="4.248" overlap="0" overlap_time="0.000" speaker="operator" start_time="37.467">
+      <text type="transcription">
+        stačil by vám přímý rychlík ve dvanáct patnáct z plzně{st}
+      </text>
+      <text type="normalized">
+        stačil by vám přímý rychlík ve dvanáct patnáct z plzně
+      </text>
+      <ne_typed_text>
+        stačil by vám přímý rychlík ve dvanáct patnáct z [station] plzně [/station]
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn number="8" speaker="user">
+    <utterance end_time="43.152" length="1.437" overlap="0" overlap_time="0.000" speaker="user" start_time="41.715">
+      <text type="transcription">
+        no to by bylo úplně ideální
+      </text>
+      <text type="normalized">
+        no to by bylo úplně ideální
+      </text>
+      <ne_typed_text>
+        no to by bylo úplně ideální
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn number="9" speaker="operator">
+    <utterance end_time="60.697" length="17.545" overlap="0" overlap_time="0.000" speaker="operator" start_time="43.152">
+      <text type="transcription">
+        'ps' ten má přepravu zboží a v brně{st} by byl v osmnáct čtyřicet
+      </text>
+      <text type="normalized">
+        ten má přepravu zboží a v brně by byl v osmnáct čtyřicet
+      </text>
+      <ne_typed_text>
+        ten má přepravu zboží a v [station] brně [/station] by byl v osmnáct čtyřicet
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn number="10" speaker="user">
+    <utterance end_time="62.948" length="1.688" overlap="2" overlap_time="60.697" speaker="user" start_time="60.697">
+      <text type="transcription">
+        osmnáct čtyřicet
+      </text>
+      <text type="normalized">
+        osmnáct čtyřicet
+      </text>
+      <ne_typed_text>
+        osmnáct čtyřicet
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn number="11" speaker="operator">
+    <utterance end_time="64.493" length="3.233" overlap="2" overlap_time="-62.948" speaker="operator" start_time="60.697">
+      <text type="transcription">
+        ano :: a dvanáct patnáct z plzně{st}
+      </text>
+      <text type="normalized">
+        ano a dvanáct patnáct z plzně
+      </text>
+      <ne_typed_text>
+        ano a dvanáct patnáct z [station] plzně [/station]
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn number="12" speaker="user">
+    <utterance end_time="67.963" length="3.470" overlap="0" overlap_time="0.000" speaker="user" start_time="64.493">
+      <text type="transcription">
+        jo takže před dvanáctou doručit | 'lb' a bude to jako spěšnina jo
+      </text>
+      <text type="normalized">
+        jo takže před dvanáctou doručit a bude to jako spěšnina jo
+      </text>
+      <ne_typed_text>
+        jo takže před dvanáctou doručit a bude to jako spěšnina jo
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn number="13" speaker="operator">
+    <utterance end_time="74.562" length="6.599" overlap="0" overlap_time="0.000" speaker="operator" start_time="67.963">
+      <text type="transcription">
+        no to se ale musíte domluvit s podejem zavazadel a ne se mnou
+      </text>
+      <text type="normalized">
+        no to se ale musíte domluvit s podejem zavazadel a ne se mnou
+      </text>
+      <ne_typed_text>
+        no to se ale musíte domluvit s podejem zavazadel a ne se mnou
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn number="14" speaker="user">
+    <utterance end_time="89.398" length="2.094" overlap="2" overlap_time="86.606" speaker="user" start_time="86.606">
+      <text type="transcription">
+        dobře děkuju nashledanou
+      </text>
+      <text type="normalized">
+        dobře děkuji nashledanou
+      </text>
+      <ne_typed_text>
+        dobře děkuji nashledanou
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn number="15" speaker="operator">
+    <utterance end_time="89.398" length="2.094" overlap="2" overlap_time="86.606" speaker="operator" start_time="86.606">
+      <text type="transcription">
+        'hm' není zač nashledanou
+      </text>
+      <text type="normalized">
+        není zač nashledanou
+      </text>
+      <ne_typed_text>
+        není zač nashledanou
+      </ne_typed_text>
+    </utterance>
+  </turn>
+</task>

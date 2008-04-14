@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# konos hack
+unset module
+
+HEAD=pbs
+JOB_FN=$HEAD/job-${EXPERIMENT_NAME:-`date +%Y-%m-%d-%H.%M`}
+
+cat $HEAD/pbs.templ > $JOB_FN
+
+if [ "${EXPERIMENT_NAME}foo" != "foo" ]; then
+    echo "#PBS -N $EXPERIMENT_NAME" >> $JOB_FN
+fi
+
+echo cd `pwd` >> $JOB_FN
+echo $* >> $JOB_FN
+
+qsub $JOB_FN
+
+rm $JOB_FN

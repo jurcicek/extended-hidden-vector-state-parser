@@ -1,0 +1,103 @@
+#!/bin/bash
+
+$SRC_DIR/backoffC1C2C3C4.py -v $WORD_NO_SMOOTHING --dirOut=$GEN_DIR/smth \
+	--dirCmb=$FA_TRN/dcd \
+	--conceptMap=$CONCEPT_MAP \
+	--wordMap=$S1_MAP
+
+$SRC_DIR/backoffC2C3C4.py -v $CONCEPT1_NO_SMOOTHING --dirOut=$GEN_DIR/smth \
+	--dirCmb=$FA_TRN/dcd \
+	--conceptMap=$CONCEPT_MAP \
+	--wordMap=$S1_MAP
+
+
+$SRC_DIR/smoothSymbolGivenC1C2C3C4.py \
+    --symbolName s1 \
+    --conceptMap $CONCEPT_MAP \
+    --symbolMap $S1_MAP \
+    --symbolDt $DATA_TRN/s1GivenC1C2C3C4.dt \
+    --dcpts $GEN_DIR/trn/dcpts.out \
+    --dpmfs $GEN_DIR/trn/dpmfs.out \
+    --outDir $GEN_DIR/smth
+
+$SRC_DIR/smoothSymbolGivenC1C2C3C4.py \
+    --symbolName s2 \
+    --conceptMap $CONCEPT_MAP \
+    --symbolMap $S2_MAP \
+    --symbolDt $DATA_TRN/s2GivenC1C2C3C4.dt \
+    --dcpts $GEN_DIR/trn/dcpts.out \
+    --dpmfs $GEN_DIR/trn/dpmfs.out \
+    --outDir $GEN_DIR/smth
+
+$SRC_DIR/smoothSymbolGivenC1C2C3C4.py \
+    --symbolName s3 \
+    --conceptMap $CONCEPT_MAP \
+    --symbolMap $S3_MAP \
+    --symbolDt $DATA_TRN/s3GivenC1C2C3C4.dt \
+    --dcpts $GEN_DIR/trn/dcpts.out \
+    --dpmfs $GEN_DIR/trn/dpmfs.out \
+    --outDir $GEN_DIR/smth
+
+
+$SRC_DIR/smoothConcept1GivenC2C3C4.py --dirOut=$GEN_DIR/smth \
+	--dcptsFileName=$GEN_DIR/trn/dcpts.out \
+	--dpmfsFileName=$GEN_DIR/trn/dpmfs.out \
+	--wordDtFileName=$DATA_TRN/s1GivenC1C2C3C4.dt \
+	--concept1DtFileName=$DATA_TRN/concept1GivenC2C3C4.dt \
+	--conceptMap=$CONCEPT_MAP \
+	--wordMap=$S1_MAP
+
+$SRC_DIR/smoothConcept2GivenC3C4.py --dirOut=$GEN_DIR/smth \
+	--dcptsFileName=$GEN_DIR/trn/dcpts.out \
+	--dpmfsFileName=$GEN_DIR/trn/dpmfs.out \
+	--wordDtFileName=$DATA_TRN/s1GivenC1C2C3C4.dt \
+	--concept2DtFileName=$DATA_TRN/concept2GivenC3C4.dt \
+	--conceptMap=$CONCEPT_MAP \
+	--wordMap=$S1_MAP
+
+$SRC_DIR/smoothPopGivenC1C2C3C4.py --dirOut=$GEN_DIR/smth \
+	--popCard=$POP_CARD \
+	--penalty=$INSERTION_PENALTY \
+	--dcptsFileName=$GEN_DIR/trn/dcpts.out \
+	--dpmfsFileName=$GEN_DIR/trn/dpmfs.out \
+	--popDtFileName=$DATA_TRN/popGivenC1C2C3C4.dt \
+	--conceptMap=$CONCEPT_MAP
+
+$SRC_DIR/smoothPushGivenC1C2C3C4.py --dirOut=$GEN_DIR/smth \
+	--pushCard=$PUSH_CARD \
+	--penalty=$INSERTION_PENALTY \
+	--dcptsFileName=$GEN_DIR/trn/dcpts.out \
+	--dpmfsFileName=$GEN_DIR/trn/dpmfs.out \
+	--pushDtFileName=$DATA_TRN/pushGivenC1C2C3C4.dt \
+	--conceptMap=$CONCEPT_MAP
+
+
+$SRC_DIR/filterDpmfs.py --dpmfsFileName=$GEN_DIR/trn/dpmfs.out --dpmfsFileNameFltrd=$GEN_DIR/smth/dpmfs.in
+
+
+gmtkTriangulate \
+    -cppCommandOptions "$CPP_OPTIONS" \
+    -strFile $STR_DIR/semantics_smth.str \
+    -outputTri $GEN_DIR/tri/semantics_smth.str.tri \
+    -findBest T -verbosity 10
+
+gmtkDTindex \
+    -cppCommandOptions "$CPP_OPTIONS" \
+    -inputMasterFile $MSTR_SMTH_DIR/in.mstr \
+    -verbosity 30
+
+head $DATA_HLDT/heldout.list > $GEN_DIR/smth/short.list
+head $DATA_HLDT/heldout.2.list > $GEN_DIR/smth/short.2.list
+
+gmtkEMtrainNew \
+    -cppCommandOptions "$CPP_OPTIONS" \
+    -strFile $STR_DIR/semantics_smth.str \
+    -inputMasterFile $MSTR_SMTH_DIR/in.mstr \
+    -outputMasterFile $MSTR_SMTH_DIR/out.mstr \
+    -objsNotToTrain $MSTR_SMTH_DIR/objs_not_train \
+    -maxEmIter 1 \
+    -of1 $GEN_DIR/smth/short.list -nf1 0 -ni1 1 -fmt1 ascii \
+    -of2 $GEN_DIR/smth/short.2.list -nf2 0 -ni2 2 -fmt2 ascii \
+    -triFile $GEN_DIR/tri/semantics_smth.str.tri \
+    -verbosity 10
+

@@ -1,0 +1,41 @@
+#if defined(SMOOTH_SYMBOLS) && !defined(FORCE_ALIGN)
+    variable: backoffSymbolsGivenC1C2C3C4 {
+        type:
+            discrete hidden cardinality BACKOFF_C1C2C3C4_CARD;
+        switchingparents:
+            nil;
+        conditionalparents: 
+            concept1(0),concept2(0),concept3(0),concept4(0) using DeterministicCPT("backoffC1C2C3C4");
+    }
+#endif
+
+
+#if (USE_S1)
+    #ifdef SMOOTH_SYMBOLS
+        #define SYMBOL_SMOOTH
+    #endif
+    #define SYMBOL_NAME   s1
+    #define SYMBOL_INDEX  S1_INDEX
+    #define SYMBOL_CARD   S1_CARD
+    #include "generic_symbol.str"
+#endif
+
+#if (USE_S2)
+    #ifdef SMOOTH_SYMBOLS
+        #define SYMBOL_SMOOTH
+    #endif
+    #define SYMBOL_NAME   s2
+    #define SYMBOL_INDEX  S2_INDEX
+    #define SYMBOL_CARD   S2_CARD
+    #include "generic_symbol.str"
+#endif
+
+#if (USE_S3)
+    #ifdef SMOOTH_SYMBOLS
+        #define SYMBOL_SMOOTH
+    #endif
+    #define SYMBOL_NAME   s3
+    #define SYMBOL_INDEX  S3_INDEX
+    #define SYMBOL_CARD   S3_CARD
+    #include "generic_symbol.str"
+#endif

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+fsmcompile -t -s tropical $FSM_DIR/hvsparser.txt > $FSM_DIR/hvsparser.fsm

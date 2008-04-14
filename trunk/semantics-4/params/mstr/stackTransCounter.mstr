@@ -1,0 +1,230 @@
+%
+%
+
+#ifndef STACK_TRANS_COUNTER
+#define STACK_TRANS_COUNTER
+
+#include <commonParams>
+#include <utils.h>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DECISION TREEs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+DT_IN_FILE inline
+5 % number of decision trees
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+0 % a DT that evaluates to one when there is "transition"
+stackTransGivenC1C1_1C2C2_1C3C3_1C4C4_1Stp_1
+9 % number of parents
+-1	{(p8 == TRANS_IMMEDIATELY) || (!((p0==p1) && (p2==p3) && (p4==p5) && (p6==p7)))}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1 % a DT that evaluates to one when there is "transition"
+stackTransGivenC1C1_1C2C2_1C3C3_1C4C4_1
+8 % number of parents
+-1	{(!((p0==p1) && (p2==p3) && (p4==p5) && (p6==p7)))}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2 % a DT that validate pop, push, and stack transition
+%   if there is no transition, the pop and push RV should be equal to 0
+stackTransValidatorGivenStPopPush
+3 % number of parents
+0	2	0	default
+	-1	{(p1==0)&&(p2==0)}	% the pop and push should be equal to 0
+	-1	{p1||p2}		% the pop or push should be different to 0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+3 % a DT that evaluates to one when the stack content is acceptable
+
+  % 1) do not allow _SINK_ on the stack ( c[1,4] )
+  % 2) do not allow _DUMMY_ on c[2,4]
+  
+stackValidatorGivenC1C2C3C4
+4 %  number of parents
+-1	{!((p0==2) || (p1==2) || (p2==2) || (p3==2)) && !((p1==1) || (p2==1) || (p3==1))}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+4 % a DT that increase value of the first parent when a transition occures
+%   In case of generation of DUMMY signal I will increase the counter only by one
+%   because I want to enter the dummy vector state.
+%   If I do not want to enter the dummu vector state, I increase the counter by two
+stackTransCounterGivenStc_1StSdC1_1Mj_1J
+% 0: stackCounter(-1), 1: stackTransition(0), 2: skipDummy(0), 3: concept1(-1), 4: maxJump(-1), 5: jump(0)
+6 % number of parents
+1	2	TRANS	default
+                3	2	_DUMMY_	default
+		% if I leave a dummy vector state (the previous concept1 was _DUMMY_) 
+		% than you have to jump to not(_DUMMY_) vector state 
+		4	5	MAX_JUMP_1 MAX_JUMP_2 MAX_JUMP_3 MAX_JUMP_4 default
+			% you can move only 1 vector state ahead
+			-1	{p0+1}
+			% you can move only 2 not(dummy) vector states ahead
+			5	3	JUMP_1 JUMP_2 default
+				-1	{p0+1} % move to the next not(dummy) vector state
+				-1	{p0+3} % move to the next to next not(dummy) vector state
+				-1	{p0}   % do not allow any change 
+			% you can move only 3 not(dummy) vector states ahead
+			5	4	JUMP_1 JUMP_2 JUMP_3 default
+				-1	{p0+1} % move to 1st next not(dummy) vector state  
+				-1	{p0+3} % move to 2nd next to next not(dummy) vector state
+				-1	{p0+5} % move to 3rd next not(dummy) vector state
+				-1	{p0}   % do not allow any change 
+			% you can move only 4 not(dummy) vector states ahead
+			5	5	JUMP_1 JUMP_2 JUMP_3 JUMP_4 default
+				-1	{p0+1} % move to 1st next not(dummy) vector state  
+				-1	{p0+3} % move to 2nd next to next not(dummy) vector state
+				-1	{p0+5} % move to 3rd next not(dummy) vector state
+				-1	{p0+6} % move to 4th next not(dummy) vector state
+				-1	{p0}   % do not allow any change 
+			-1	{p0}
+			
+		% the concept1 of the vector state, which I leave, is not _DUMMY_ 
+		2	2	ENTER_DUMMY default
+			% you should eneter a dummy vector state
+			-1	{p0+1} % move to the nearest dummy vector state
+			% I can jump as far as is the maxJump
+			4	5	MAX_JUMP_1 MAX_JUMP_2 MAX_JUMP_3 MAX_JUMP_4 default
+				% you can move only 1 vector state ahead
+				-1	{p0+2}
+				% you can move only 2 not(dummy) vector states ahead
+				5	3	JUMP_1 JUMP_2 default
+					-1	{p0+2} % move to the next not(dummy) vector state
+					-1	{p0+4} % move to the next not(dummy) vector state
+					-1	{p0}   % do not allow any change 
+				% you can move only 3 not(dummy) vector states ahead
+				5	4	JUMP_1 JUMP_2 JUMP_3 default
+					-1	{p0+2} % move to 1st next not(dummy) vector state  
+					-1	{p0+4} % move to 2nd next not(dummy) vector state
+					-1	{p0+6} % move to 3rd next not(dummy) vector state
+					-1	{p0}     % do not allow any change 
+				% you can move only 4 not(dummy) vector states ahead
+				5	5	JUMP_1 JUMP_2 JUMP_3 JUMP_4 default
+					-1	{p0+2} % move to 1st next not(dummy) vector state  
+					-1	{p0+4} % move to 2nd next not(dummy) vector state
+					-1	{p0+6} % move to 3rd next not(dummy) vector state
+					-1	{p0+8} % move to 4th next not(dummy) vector state
+					-1	{p0}     % do not allow any change 
+				-1	{p0}
+				
+	-1	{p0} % TRANS/default
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DETERMINISTIC CPTs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+DETERMINISTIC_CPT_IN_FILE inline
+
+5 % number of dereministic CPTs
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+0 % a deterministic CPT
+stackTransGivenC1C1_1C2C2_1C3C3_1C4C4_1Stp_1
+9 % number of parents
+CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD STACK_TYPE_CARD STACK_TRANS_CARD % C1(0), C1(-1), C2(0), C2(-1), C3(0), C3(-1), C4(0), C4(-1), stackType(-1), self card
+stackTransGivenC1C1_1C2C2_1C3C3_1C4C4_1Stp_1 % DT name
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1 % a deterministic CPT
+stackTransGivenC1C1_1C2C2_1C3C3_1C4C4_1
+8 % number of parents
+CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD STACK_TRANS_CARD % C1(0), C1(-1), C2(0), C2(-1), C3(0), C3(-1), C4(0), C4(-1), self card
+stackTransGivenC1C1_1C2C2_1C3C3_1C4C4_1 % DT name
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2 % a deterministic CPT
+stackTransValidatorGivenStPopPush
+3 % number of parents
+STACK_TRANS_CARD POP_CARD PUSH_CARD 2 % stackTrans(0), pop(0), push(0), and self card
+stackTransValidatorGivenStPopPush % DT name
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+3 % a deterministic CPT
+stackTransCounterGivenStc_1StSdC1_1Mj_1J
+6 % number of parents
+  % stackTransCounter(-1), stackTrans(0), skipDummy(0), concept1(-1), maxJump(-1), jump(0), and self card
+STACK_TRANS_COUNTER_CARD STACK_TRANS_CARD SKIP_DUMMY_CARD CONCEPT_CARD MAX_JUMP_CARD JUMP_CARD STACK_TRANS_COUNTER_CARD 
+stackTransCounterGivenStc_1StSdC1_1Mj_1J % DT name
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+4 % a deterministic CPT
+stackValidatorGivenC1C2C3C4
+4 % number of parents
+CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD 2 % C1(0), C2(0), C3(0), C4(0), self card
+stackValidatorGivenC1C2C3C4 % DT name
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DENSE CPTs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#if !defined(DECODING) && !defined(UNSUPERVISED_TRAINING)
+
+  DENSE_CPT_IN_FILE inline
+  3 % number of DCPTs 
+
+  0 % a dense CPT
+  skipDummy % name
+  0 % no parents
+  SKIP_DUMMY_CARD  % self card
+  SKIP_DUMMY_PROBS
+
+  1 % a dense CPT
+  jump % name
+  0 % no parents
+  JUMP_CARD  % self card
+  JUMP_PROBS
+
+  2 % a dense CPT
+  backoff % name
+  0 % no parents
+  BACKOFF_FA_CARD  % self card
+  BACKOFF_FA_PROBS
+  
+#endif
+
+
+
+
+#if !defined(UNSUPERVISED_TRAINING)
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % DECISION TREEs
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  DT_IN_FILE inline
+  1 % number of decision trees
+
+ 
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  0 % a DT which defines how far I can jump from current vector state
+  maxJumpGivenStc
+  DATA_TRN/maxJumpGivenStc.dts
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % DETERMINISTIC CPTs
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  DETERMINISTIC_CPT_IN_FILE inline
+  1 % number of dereministic CPTs
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  0 % a deterministic CPT
+  maxJumpGivenStc
+  1 % number of parents
+  STACK_TRANS_COUNTER_CARD MAX_JUMP_CARD % stackTransCounter(0), and self card
+  maxJumpGivenStc % DT name
+
+#endif
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+#endif

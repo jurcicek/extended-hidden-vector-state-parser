@@ -1,0 +1,46 @@
+%
+%
+
+#ifndef CONCEPT2_GIVEN_C3C4
+#define CONCEPT2_GIVEN_C3C4
+
+#include <commonParams>
+
+DT_IN_FILE                      DATA_TRN/concept2GivenC3C4.dt ascii
+SPMF_IN_FILE                    DATA_TRN/concept2GivenC3C4.spmfs ascii
+NAME_COLLECTION_IN_FILE         DATA_TRN/concept2GivenC3C4.cllctn ascii
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SPARSE CPTs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+SPARSE_CPT_IN_FILE inline
+1 % number of saprse CPTs 
+
+0 % the first sparse CPT 
+concept2GivenC3C4  % name
+2 % num parents
+CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD % parent cardinality * 2, self cardinality
+concept2GivenC3C4 % the DT used by this sparse CPT
+concept2GivenC3C4 % the name colection used by this sparse CPT  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DECISION TREEs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+DT_IN_FILE inline
+
+1 % number of decision trees
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+0 % a DT which translate push and concept2Lambdas RVs into switching index
+spC2GivenPushC2Lambdas
+2 % number of parents
+0	3	0	1	default
+	-1	0	% copy concept2
+	-1	0	% copy concept2
+	-1	{p1+1}	% insert (generate) concept1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+#endif

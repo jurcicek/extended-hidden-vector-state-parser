@@ -1,0 +1,168 @@
+%
+%
+
+#ifndef OBSERVED_SYMBOLS
+#define OBSERVED_SYMBOLS
+
+#include <commonParams>
+
+% S1
+
+DT_IN_FILE                      DATA_TRN/s1GivenC1C2C3C4.dt ascii
+DPMF_IN_FILE                    GEN_DIR/smth/s1GivenC1C2C3C4.dpmfs ascii
+SPMF_IN_FILE                    DATA_TRN/s1GivenC1C2C3C4.spmfs ascii
+NAME_COLLECTION_IN_FILE         DATA_TRN/s1GivenC1C2C3C4.cllctn ascii
+
+DT_IN_FILE                      DATA_TRN/s1GivenC1C2C3.dt ascii
+DPMF_IN_FILE                    GEN_DIR/smth/s1GivenC1C2C3.dpmfs ascii
+SPMF_IN_FILE                    DATA_TRN/s1GivenC1C2C3.spmfs ascii
+NAME_COLLECTION_IN_FILE         DATA_TRN/s1GivenC1C2C3.cllctn ascii
+
+DT_IN_FILE                      DATA_TRN/s1GivenC1C2.dt ascii
+DPMF_IN_FILE                    GEN_DIR/smth/s1GivenC1C2.dpmfs ascii
+SPMF_IN_FILE                    DATA_TRN/s1GivenC1C2.spmfs ascii
+NAME_COLLECTION_IN_FILE         DATA_TRN/s1GivenC1C2.cllctn ascii
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SPARSE CPTs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+SPARSE_CPT_IN_FILE inline
+3 % number of saprse CPTs 
+
+0 % the first sparse CPT 
+s1GivenC1C2C3C4  % name
+4 % num parents
+CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD S1_CARD % parent cardinality * 4, self card
+s1GivenC1C2C3C4 % the DT used by this sparse CPT
+s1GivenC1C2C3C4 % the name colection used by this sparse CPT  
+
+1 % the first sparse CPT 
+s1GivenC1C2C3  % name
+3 % num parents
+CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD S1_CARD % parent cardinality * 3, self card
+s1GivenC1C2C3 % the DT used by this sparse CPT
+s1GivenC1C2C3 % the name colection used by this sparse CPT  
+
+2 % the first sparse CPT 
+s1GivenC1C2  % name
+2 % num parents
+CONCEPT_CARD CONCEPT_CARD S1_CARD % parent cardinality * 2, self card
+s1GivenC1C2 % the DT used by this sparse CPT
+s1GivenC1C2 % the name colection used by this sparse CPT  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DENSE CPTs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+DENSE_CPT_IN_FILE                   GEN_DIR/smth/s1GivenC1.dcpt ascii
+DENSE_CPT_IN_FILE                   GEN_DIR/smth/s1Unigram.dcpt ascii
+DENSE_CPT_IN_FILE                   GEN_DIR/smth/s1Zerogram.dcpt ascii
+
+
+
+% S2
+
+DT_IN_FILE                      DATA_TRN/s2GivenC1C2C3C4.dt ascii
+DPMF_IN_FILE                    GEN_DIR/smth/s2GivenC1C2C3C4.dpmfs ascii
+SPMF_IN_FILE                    DATA_TRN/s2GivenC1C2C3C4.spmfs ascii
+NAME_COLLECTION_IN_FILE         DATA_TRN/s2GivenC1C2C3C4.cllctn ascii
+
+DT_IN_FILE                      DATA_TRN/s2GivenC1C2C3.dt ascii
+DPMF_IN_FILE                    GEN_DIR/smth/s2GivenC1C2C3.dpmfs ascii
+SPMF_IN_FILE                    DATA_TRN/s2GivenC1C2C3.spmfs ascii
+NAME_COLLECTION_IN_FILE         DATA_TRN/s2GivenC1C2C3.cllctn ascii
+
+DT_IN_FILE                      DATA_TRN/s2GivenC1C2.dt ascii
+DPMF_IN_FILE                    GEN_DIR/smth/s2GivenC1C2.dpmfs ascii
+SPMF_IN_FILE                    DATA_TRN/s2GivenC1C2.spmfs ascii
+NAME_COLLECTION_IN_FILE         DATA_TRN/s2GivenC1C2.cllctn ascii
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SPARSE CPTs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+SPARSE_CPT_IN_FILE inline
+3 % number of saprse CPTs 
+
+0 % the first sparse CPT 
+s2GivenC1C2C3C4  % name
+4 % num parents
+CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD S2_CARD % parent cardinality * 4, self card
+s2GivenC1C2C3C4 % the DT used by this sparse CPT
+s2GivenC1C2C3C4 % the name colection used by this sparse CPT  
+
+1 % the first sparse CPT 
+s2GivenC1C2C3  % name
+3 % num parents
+CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD S2_CARD % parent cardinality * 3, self card
+s2GivenC1C2C3 % the DT used by this sparse CPT
+s2GivenC1C2C3 % the name colection used by this sparse CPT  
+
+2 % the first sparse CPT 
+s2GivenC1C2  % name
+2 % num parents
+CONCEPT_CARD CONCEPT_CARD S2_CARD % parent cardinality * 2, self card
+s2GivenC1C2 % the DT used by this sparse CPT
+s2GivenC1C2 % the name colection used by this sparse CPT  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DENSE CPTs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+DENSE_CPT_IN_FILE                   GEN_DIR/smth/s2GivenC1.dcpt ascii
+DENSE_CPT_IN_FILE                   GEN_DIR/smth/s2Unigram.dcpt ascii
+DENSE_CPT_IN_FILE                   GEN_DIR/smth/s2Zerogram.dcpt ascii
+
+
+% S3
+
+DT_IN_FILE                      DATA_TRN/s3GivenC1C2C3C4.dt ascii
+DPMF_IN_FILE                    GEN_DIR/smth/s3GivenC1C2C3C4.dpmfs ascii
+SPMF_IN_FILE                    DATA_TRN/s3GivenC1C2C3C4.spmfs ascii
+NAME_COLLECTION_IN_FILE         DATA_TRN/s3GivenC1C2C3C4.cllctn ascii
+
+DT_IN_FILE                      DATA_TRN/s3GivenC1C2C3.dt ascii
+DPMF_IN_FILE                    GEN_DIR/smth/s3GivenC1C2C3.dpmfs ascii
+SPMF_IN_FILE                    DATA_TRN/s3GivenC1C2C3.spmfs ascii
+NAME_COLLECTION_IN_FILE         DATA_TRN/s3GivenC1C2C3.cllctn ascii
+
+DT_IN_FILE                      DATA_TRN/s3GivenC1C2.dt ascii
+DPMF_IN_FILE                    GEN_DIR/smth/s3GivenC1C2.dpmfs ascii
+SPMF_IN_FILE                    DATA_TRN/s3GivenC1C2.spmfs ascii
+NAME_COLLECTION_IN_FILE         DATA_TRN/s3GivenC1C2.cllctn ascii
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SPARSE CPTs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+SPARSE_CPT_IN_FILE inline
+3 % number of saprse CPTs 
+
+0 % the first sparse CPT 
+s3GivenC1C2C3C4  % name
+4 % num parents
+CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD S3_CARD % parent cardinality * 4, self card
+s3GivenC1C2C3C4 % the DT used by this sparse CPT
+s3GivenC1C2C3C4 % the name colection used by this sparse CPT  
+
+1 % the first sparse CPT 
+s3GivenC1C2C3  % name
+3 % num parents
+CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD S3_CARD % parent cardinality * 3, self card
+s3GivenC1C2C3 % the DT used by this sparse CPT
+s3GivenC1C2C3 % the name colection used by this sparse CPT  
+
+2 % the first sparse CPT 
+s3GivenC1C2  % name
+2 % num parents
+CONCEPT_CARD CONCEPT_CARD S3_CARD % parent cardinality * 2, self card
+s3GivenC1C2 % the DT used by this sparse CPT
+s3GivenC1C2 % the name colection used by this sparse CPT  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DENSE CPTs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+DENSE_CPT_IN_FILE                   GEN_DIR/smth/s3GivenC1.dcpt ascii
+DENSE_CPT_IN_FILE                   GEN_DIR/smth/s3Unigram.dcpt ascii
+DENSE_CPT_IN_FILE                   GEN_DIR/smth/s3Zerogram.dcpt ascii
+
+#endif

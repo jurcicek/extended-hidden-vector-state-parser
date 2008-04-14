@@ -1,0 +1,7 @@
+#define BUCKETING
+
+#include "../../commonParams"
+
+DPMF_OUT_FILE           GEN_DIR/smth/dpmfs.out ascii
+DENSE_CPT_OUT_FILE      GEN_DIR/smth/dcpts.out ascii
+

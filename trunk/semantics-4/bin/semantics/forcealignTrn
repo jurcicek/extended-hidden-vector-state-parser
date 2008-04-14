@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# index decision trees
+gmtkDTindex \
+    -cppCommandOptions "$CPP_OPTIONS" \
+    -inputMasterFile $MSTR_FA_TRN_DIR/in.mstr \
+    -verbosity 30
+
+gmtkViterbiNew \
+    -cppCommandOptions "$CPP_OPTIONS" \
+    -strFile $STR_DIR/semantics_fa_trn.str \
+    -inputMasterFile $MSTR_FA_TRN_DIR/in.mstr \
+    -of1 $DATA_TRN/train.list -nf1 0 -ni1 1 -fmt1 ascii \
+    -of2 $DATA_TRN/train.2.list -nf2 0 -ni2 2 -fmt2 ascii \
+    -triFile $GEN_DIR/tri/semantics_fa_trn.str.tri \
+    -dumpNames $MSTR_FA_TRN_DIR/dump.list \
+    -ofilelist $DATA_TRN/fa_trn.list \
+    -verbosity 10
+
+
+$SRC_DIR/extractDcd.py -f \
+    --dirDcd=$FA_TRN/dcd \
+    --dirObs=$DATA_TRN/ho \
+    --conceptMap=$CONCEPT_MAP \
+    --wordMap=$S1_MAP
+
+$SRC_DIR/extractSmntcs.py --dirCmb=$FA_TRN/dcd \
+    --dirSmntcs=$FA_TRN/dcd \
+    --outputMlf=$FA_TRN/semantics.mlf 
+
+$SRC_DIR/extractSmntcs.py --dirCmb=$FA_TRN/dcd \
+    --dirSmntcs=$FA_TRN/dcd \
+    --lemmatized \
+    --outputMlf=$FA_TRN/semantics.lemma.mlf 
+
+printSettings > $FA_TRN/results.txt
+cdc-treedist.py sresults $DATA_TRN/semantics.mlf $FA_TRN/semantics.mlf >> $FA_TRN/results.txt
+
+

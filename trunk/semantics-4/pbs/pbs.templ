@@ -1,0 +1,11 @@
+#!/bin/bash
+#PBS -q iti
+#PBS -W group_list=kky
+#PBS -l nodes=1:ppn=1:iti:amd64
+#PBS -j oe
+#PBS -V
+#PBS -m a
+#PBS -M honzas@kky.zcu.cz
+
+export BUILD_DIR=/scratch/honzas/semantics-4
+
