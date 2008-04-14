@@ -11,11 +11,11 @@ it is part of gettext-base package). Also, you need PDT-2.0 (http://ufal.mff.cun
 
 Checkout the project into your home directory. The name of the directory for the extended HVS parser should be `extended-HVS-parser`.
 {{{
-svn checkout https://extended-hidden-vector-state-parser.googlecode.com/svn/trunk extended-hidden-vector-state-parser --username YOUR-USER-NAME
+svn checkout https://extended-hidden-vector-state-parser.googlecode.com/svn/trunk extended-HVS-parser --username YOUR-USER-NAME
 }}}
 or
 {{{
-svn checkout http://extended-hidden-vector-state-parser.googlecode.com/svn/trunk extended-hidden-vector-state-parser
+svn checkout http://extended-hidden-vector-state-parser.googlecode.com/svn/trunk extended-HVS-parser
 }}}
 
 
