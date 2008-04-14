@@ -6,10 +6,11 @@ Here we present the basic concepts used in our implementation of the parser.
 
 = Special words = 
 
- * _UNKNOWN_ - 
+ * `_UNKNOWN_` - 
 
 
 = Special Concepts = 
 
- * _DUMMY_ - a value in the hidden vector state which represents 
- * _EMPTY_ - a value in the hidden vector state which represents an empty stack at given position.
+ * `_EMPTY_` - a value in the hidden vector state which represents an empty stack at given position.
+ * `_DUMMY_` - a value in the hidden vector state which represents
+ * `_SINK_` - 
