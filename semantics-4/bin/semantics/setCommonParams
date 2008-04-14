@@ -1,0 +1,7 @@
+#!/bin/bash
+
+export USE_S1=`test $S1_DATASET = off; echo $?`
+export USE_S2=`test $S2_DATASET = off; echo $?`
+export USE_S3=`test $S3_DATASET = off; echo $?`
+
+cat $PARAMS/commonParamsSettings.templ | envsubst > $GEN_COMMON_PARAMS_SETTINGS

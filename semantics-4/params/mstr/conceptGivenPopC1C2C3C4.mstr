@@ -1,0 +1,92 @@
+%
+%
+
+#ifndef CONCEPT_GIVEN_POPC1C2C3C4_COUNTER
+#define CONCEPT_GIVEN_POPC1C2C3C4_COUNTER
+
+#include <commonParams>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DECISION TREEs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+DT_IN_FILE inline
+4 % number of decision trees
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+0 % a DT that copy C4, depending on a Pop value
+concept4GivenPopC4
+2 % number of parents
+0	2 	0	default
+	-1	{p1}
+	-1 	0	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1 % a DT that copy C2, C3, or C4, depending on a Pop value
+concept3GivenPopC3C4
+3 % number of parents
+0	3 	0	1	default
+	-1	{p1}
+	-1	{p2}
+	-1	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2 % a DT that copy C2, C3, or C4, depending on a Pop value
+concept2GivenPopC2C3C4
+4 % number of parents
+0	4 	0	1	2	default
+	-1	{p1}
+	-1	{p2}
+	-1	{p3}
+	-1	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+3 % a DT that copy C1, C2, C3, or C4, depending on a Pop value
+concept1GivenPopC1C2C3C4
+5 % number of parents
+0	5 	0	1	2	3	default
+	-1	{p1}
+	-1	{p2}
+	-1	{p3}
+	-1	{p4}
+	-1	0
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DETERMINISTIC CPTs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+DETERMINISTIC_CPT_IN_FILE inline
+4 % number of dereministic CPTs
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+0 % a deterministic CPT
+concept4GivenPopC4
+2 % three parents
+POP_CARD CONCEPT_CARD CONCEPT_CARD % Pop, C4 and self cardinality
+concept4GivenPopC4 % DT name
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1 % a deterministic CPT
+concept3GivenPopC3C4
+3 % four parents
+POP_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD % Pop, C3, C4 and self cardinality
+concept3GivenPopC3C4 % DT name
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2 % a deterministic CPT
+concept2GivenPopC2C3C4
+4 % five parents
+POP_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD % Pop, C1, C2, C3, C4 and self cardinality
+concept2GivenPopC2C3C4 % DT name
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+3 % a deterministic CPT
+concept1GivenPopC1C2C3C4
+5 % five parents
+POP_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD % Pop, C1, C2, C3, C4 and self cardinality
+concept1GivenPopC1C2C3C4 % DT name
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+#endif

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo myMethod3
+exit 1

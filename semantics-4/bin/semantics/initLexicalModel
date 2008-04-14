@@ -1,0 +1,56 @@
+#!/bin/bash
+
+if [ $S1_NEGEX == 1 ]; then
+    S1_NA="--negExamples $DATA_TRN/s1.negExamples"
+else
+    S1_NA="--noNegExamples"
+fi;
+
+if [ $S2_NEGEX == 1 ]; then
+    S2_NA="--negExamples $DATA_TRN/s2.negExamples"
+else
+    S2_NA="--noNegExamples"
+fi;
+
+if [ $S3_NEGEX == 1 ]; then
+    S3_NA="--negExamples $DATA_TRN/s3.negExamples"
+else
+    S3_NA="--noNegExamples"
+fi;
+
+######################################################################################
+# train
+######################################################################################
+
+$SRC_DIR/genSymbolGivenC1C2C3C4.py --files $DATA_TRN/ho --debug \
+        --obsColumn=0 \
+        --outDir $DATA_TRN/ \
+        $S1_NA \
+        --symName s1 \
+        --conceptMap $CONCEPT_MAP \
+        --symMap $S1_MAP \
+        --appendConst $GEN_DATA_CONSTANTS
+
+$SRC_DIR/genSymbolGivenC1C2C3C4.py --files $DATA_TRN/ho --debug \
+        --extraExt=.2 \
+        --obsColumn=0 \
+        --outDir $DATA_TRN/ \
+        $S2_NA \
+        --symName s2 \
+        --conceptMap $CONCEPT_MAP \
+        --symMap $S2_MAP
+
+$SRC_DIR/genSymbolGivenC1C2C3C4.py --files $DATA_TRN/ho --debug \
+        --extraExt=.2 \
+        --obsColumn=1 \
+        --outDir $DATA_TRN/ \
+        $S3_NA \
+        --symName s3 \
+        --conceptMap $CONCEPT_MAP \
+        --symMap $S3_MAP
+        
+######################################################################################
+# train
+######################################################################################
+$SRC_DIR/genJointProbC1C2C3C4.py --spmfsFile=$DATA_TRN/s1GivenC1C2C3C4.spmfs \
+        --dirOut=$DATA_TRN

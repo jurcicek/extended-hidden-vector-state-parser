@@ -1,0 +1,5 @@
+#include <commonParams>
+
+DPMF_OUT_FILE           GEN_DIR/trn/dpmfs.out ascii
+DENSE_CPT_OUT_FILE      GEN_DIR/trn/dcpts.out ascii
+

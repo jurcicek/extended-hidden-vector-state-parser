@@ -1,0 +1,13 @@
+#!/bin/bash
+
+gmtkTriangulate \
+    -cppCommandOptions "$CPP_OPTIONS" \
+    -strFile $STR_DIR/semantics_trn.str \
+    -outputTri $GEN_DIR/tri/semantics_trn.str.tri \
+    -findBest T -verbosity 10
+
+gmtkTriangulate \
+    -cppCommandOptions "$CPP_OPTIONS" \
+    -strFile $STR_DIR/semantics_fa_trn.str \
+    -outputTri $GEN_DIR/tri/semantics_fa_trn.str.tri \
+    -findBest T -verbosity 10

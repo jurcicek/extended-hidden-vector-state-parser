@@ -1,0 +1,37 @@
+#!/bin/bash
+
+mkdir -p $BUILD_DIR
+mkdir -p $BUILD_DIR/include
+mkdir -p $MAP_DIR
+mkdir -p $MAP_TXT_DIR
+mkdir -p $GEN_DIR
+mkdir -p $GEN_DIR/tri
+mkdir -p $GEN_DIR/trn
+mkdir -p $GEN_DIR/smth
+mkdir -p $GEN_DIR/scale
+
+mkdir -p $DATA_XML_TRN
+mkdir -p $DATA_XML_HLDT
+mkdir -p $DATA_XML_TST
+
+mkdir -p $DATA_TRN
+mkdir -p $DATA_TRN/ho
+mkdir -p $DATA_HLDT
+mkdir -p $DATA_HLDT/ho
+mkdir -p $DATA_TST
+mkdir -p $DATA_TST/ho
+
+mkdir -p $DATA_TXT_TRN
+mkdir -p $DATA_TXT_TRN/ho
+mkdir -p $DATA_TXT_HLDT
+mkdir -p $DATA_TXT_HLDT/ho
+mkdir -p $DATA_TXT_TST
+mkdir -p $DATA_TXT_TST/ho
+
+mkdir -p $DCD_HLDT/dcd
+mkdir -p $DCD_TST/dcd
+
+mkdir -p $FA_TRN/dcd
+mkdir -p $FA_HLDT/dcd
+mkdir -p $FA_TST/dcd
+

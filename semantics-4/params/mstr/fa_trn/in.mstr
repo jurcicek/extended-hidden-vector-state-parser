@@ -1,0 +1,131 @@
+#include <commonParams>
+
+% load trained prameters
+DPMF_IN_FILE            GEN_DIR/trn/dpmfs.out ascii
+
+#include "../conceptGivenPopC1C2C3C4.mstr"
+#include "../conceptGivenPushC1C2C3C4.mstr"
+#include "../stackTransCounter.mstr"
+
+#include "concept1GivenC2C3C4.mstr"
+#include "concept2GivenC3C4.mstr"
+#include "observed_symbols.mstr"
+#include "popGivenC1C2C3C4.mstr"
+#include "pushGivenC1C2C3C4.mstr"
+
+#include "endOfUtteranceObs.mstr"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DECISION TREEs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+DT_IN_FILE inline
+
+8 % number of decision trees
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+0 % a DT that takes no parents and always evaluates to zero
+zero
+0 % no parents
+-1 0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1 % a DT that copy a passed value 
+copy
+1 % number of parents
+-1	{p0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2 % a DT that restricts values that can appear on the stack
+hiddenObservationGivenWC1C2C3C4Stc
+DATA_TRN/hiddenObservationGivenWC1C2C3C4Stc.dts
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+3 % a DT that restricts values that can appear on the stack
+stackTypeGivenStc
+DATA_TRN/stackTypeGivenStc.dts
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+4 % a DT
+match2
+2 % number of parents
+-1	{(p0 == p1)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+5 % a DT
+match3
+3 % number of parents
+-1	{(p0 == p1) && (p1 == p2)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+6 % a DT
+match4
+4 % number of parents
+-1	{(p0 == p1) && (p1 == p2) && (p2 == p3)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+7 % a DT
+match5
+5 % number of parents
+-1	{(p0 == p1) && (p1 == p2) && (p2 == p3) && (p3 == p4)}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DETERMINISTIC CPTs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+DETERMINISTIC_CPT_IN_FILE inline
+7 % number of dereministic CPTs
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+0 % 1st deterministic CPT
+conceptZero
+0 % no parent
+CONCEPT_CARD % self card
+zero % DT name
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1 % 1st deterministic CPT
+stackTransCounterZero
+0 % no parent
+STACK_TRANS_COUNTER_CARD % self card
+zero % DT name
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2 % a deterministic CPT
+hiddenObservationGivenWC1C2C3C4Stc
+6 % five parents
+S1_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD STACK_TRANS_COUNTER_CARD 2 % W, C1, C2, C3, C4, STC, and self cardinality
+hiddenObservationGivenWC1C2C3C4Stc % DT name
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+3 % a deterministic CPT
+stackTypeGivenStc
+1 % number of parents
+STACK_TRANS_COUNTER_CARD STACK_TYPE_CARD % stackTransCounter(0), and self card
+stackTypeGivenStc % DT name
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+4 % a deterministic CPT
+jointC1C2C3C4
+4 % four parents
+CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD JOINT_C1C2C3C4_CARD % C1, C2, C3, C4, and self cardinality
+s1GivenC1C2C3C4 % DT name
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+5 % a deterministic CPT
+matchJointProbC1C2C3C4
+2 % two parents
+JOINT_C1C2C3C4_CARD JOINT_C1C2C3C4_CARD 2 %  jointC1C2C3C4(0), jointProbC1C2C3C4(0), and self cardinality
+match2 % DT name
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+6 % a deterministic CPT
+matchConcept1
+4 % two parents
+CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD 2 %  concept1(0), concept1GivenC2C3(0), conept1GivenC2(0), concept1Unigram, and self cardinality
+match4 % DT name
+
+

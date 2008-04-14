@@ -1,0 +1,119 @@
+#!/bin/bash
+
+######################################################################################
+# train
+######################################################################################
+$SRC_DIR/genStackTypeGivenStc.py --dirIn=$DATA_TRN/ho \
+        --dirOut=$DATA_TRN \
+        --conceptMap=$CONCEPT_MAP \
+        --wordMap=$S1_MAP
+# train - txt
+$SRC_DIR/genStackTypeGivenStc.py --dirIn=$DATA_TXT_TRN/ho \
+        --dirOut=$DATA_TXT_TRN \
+        --conceptMap=$CONCEPT_MAP_TXT \
+        --wordMap=$S1_MAP_TXT
+
+######################################################################################
+# heldout
+######################################################################################
+$SRC_DIR/genStackTypeGivenStc.py --dirIn=$DATA_HLDT/ho \
+        --dirOut=$DATA_HLDT \
+        --conceptMap=$CONCEPT_MAP \
+        --wordMap=$S1_MAP
+# heldout - txt
+$SRC_DIR/genStackTypeGivenStc.py --dirIn=$DATA_TXT_HLDT/ho \
+        --dirOut=$DATA_TXT_HLDT \
+        --conceptMap=$CONCEPT_MAP_TXT \
+        --wordMap=$S1_MAP_TXT
+
+######################################################################################
+# test
+######################################################################################
+$SRC_DIR/genStackTypeGivenStc.py --dirIn=$DATA_TST/ho \
+        --dirOut=$DATA_TST \
+        --conceptMap=$CONCEPT_MAP \
+        --wordMap=$S1_MAP
+# test - txt
+$SRC_DIR/genStackTypeGivenStc.py --dirIn=$DATA_TXT_TST/ho \
+        --dirOut=$DATA_TXT_TST \
+        --conceptMap=$CONCEPT_MAP_TXT \
+        --wordMap=$S1_MAP_TXT
+        
+
+######################################################################################
+# train
+######################################################################################
+$SRC_DIR/genMaxJumpGivenStc.py --dirIn=$DATA_TRN/ho \
+        --dirOut=$DATA_TRN
+# train - txt
+$SRC_DIR/genMaxJumpGivenStc.py --dirIn=$DATA_TXT_TRN/ho \
+        --dirOut=$DATA_TXT_TRN
+
+######################################################################################
+# heldout
+######################################################################################
+$SRC_DIR/genMaxJumpGivenStc.py --dirIn=$DATA_HLDT/ho \
+        --dirOut=$DATA_HLDT
+# heldout - txt
+$SRC_DIR/genMaxJumpGivenStc.py --dirIn=$DATA_TXT_HLDT/ho \
+        --dirOut=$DATA_TXT_HLDT
+
+######################################################################################
+# train
+######################################################################################
+$SRC_DIR/genConcept1GivenC2C3C4.py --dirIn=$DATA_TRN/ho \
+        --dirOut=$DATA_TRN \
+        --conceptMap=$CONCEPT_MAP \
+        --wordMap=$S1_MAP
+# train - txt
+$SRC_DIR/genConcept1GivenC2C3C4.py --dirIn=$DATA_TXT_TRN/ho \
+        --dirOut=$DATA_TXT_TRN \
+        --conceptMap=$CONCEPT_MAP_TXT \
+        --wordMap=$S1_MAP_TXT
+        
+######################################################################################
+# train
+######################################################################################
+$SRC_DIR/genConcept2GivenC3C4.py --dirIn=$DATA_TRN/ho \
+        --dirOut=$DATA_TRN \
+        --conceptMap=$CONCEPT_MAP \
+        --wordMap=$S1_MAP
+# train - txt
+$SRC_DIR/genConcept2GivenC3C4.py --dirIn=$DATA_TXT_TRN/ho \
+        --dirOut=$DATA_TXT_TRN \
+        --conceptMap=$CONCEPT_MAP_TXT \
+        --wordMap=$S1_MAP_TXT
+        
+######################################################################################
+# train
+######################################################################################
+$SRC_DIR/genPopGivenC1C2C3C4.py --popCard=$POP_CARD \
+        --dirIn=$DATA_TRN/ho \
+        --dirOut=$DATA_TRN \
+        --conceptMap=$CONCEPT_MAP \
+        --wordMap=$S1_MAP
+# train - txt
+$SRC_DIR/genPopGivenC1C2C3C4.py --popCard=$POP_CARD \
+        --dirIn=$DATA_TXT_TRN/ho \
+        --dirOut=$DATA_TXT_TRN \
+        --conceptMap=$CONCEPT_MAP_TXT \
+        --wordMap=$S1_MAP_TXT
+        
+######################################################################################
+# train
+######################################################################################
+$SRC_DIR/genPushGivenC1C2C3C4.py --pushCard=$PUSH_CARD \
+        --maxPush=$MAX_PUSH \
+        --dirIn=$DATA_TRN/ho \
+        --dirOut=$DATA_TRN \
+        --conceptMap=$CONCEPT_MAP \
+        --wordMap=$S1_MAP
+# train - txt
+$SRC_DIR/genPushGivenC1C2C3C4.py --pushCard=$PUSH_CARD \
+        --maxPush=$MAX_PUSH \
+        --dirIn=$DATA_TXT_TRN/ho \
+        --dirOut=$DATA_TXT_TRN \
+        --conceptMap=$CONCEPT_MAP_TXT \
+        --wordMap=$S1_MAP_TXT
+
+

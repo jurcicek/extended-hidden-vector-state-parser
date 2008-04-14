@@ -1,0 +1,78 @@
+#include <utils.h>
+
+#define _CPT_4         XSTR(CONCAT(SYMBOL_NAME, GivenC1C2C3C4))
+#define _CPT_3         XSTR(CONCAT(SYMBOL_NAME, GivenC1C2C3))
+#define _CPT_2         XSTR(CONCAT(SYMBOL_NAME, GivenC1C2))
+#define _CPT_1         XSTR(CONCAT(SYMBOL_NAME, GivenC1))
+#define _CPT_0         XSTR(CONCAT(SYMBOL_NAME, Unigram))
+
+#if !defined(SYMBOL_SMOOTH)
+
+    %--------------------%
+    %  Smoothing is off  %
+    %--------------------%
+    
+    variable: SYMBOL_NAME {
+        type:
+            discrete observed SYMBOL_INDEX:SYMBOL_INDEX cardinality SYMBOL_CARD;
+        switchingparents:
+            nil;
+        conditionalparents:
+            concept1(0),concept2(0),concept3(0),concept4(0)     using SparseCPT(_CPT_4);
+    }
+    
+#elif defined(SYMBOL_SMOOTH) && !defined(FORCE_ALIGN)
+
+    %------------------------%
+    %  Using full smoothing  %
+    %------------------------%
+
+    variable: SYMBOL_NAME {
+        type:
+            discrete observed SYMBOL_INDEX:SYMBOL_INDEX cardinality SYMBOL_CARD;
+        switchingparents:
+            backoffSymbolsGivenC1C2C3C4(0) using mapping("copy");
+        conditionalparents:
+              concept1(0),concept2(0),concept3(0),concept4(0)   using SparseCPT(_CPT_4)
+            | concept1(0),concept2(0),concept3(0)               using SparseCPT(_CPT_3)
+            | concept1(0),concept2(0)                           using SparseCPT(_CPT_2)
+            | concept1(0)                                       using  DenseCPT(_CPT_1)
+            | nil                                               using  DenseCPT(_CPT_0);
+    }
+    
+#else
+
+    %----------------------------------------------%
+    %  Using simple smoothing for force alignment  %
+    %----------------------------------------------%
+    
+    variable: CONCAT(backoff, SYMBOL_NAME) {
+        type:
+            discrete hidden cardinality BACKOFF_FA_CARD;
+        switchingparents:
+            nil;
+        conditionalparents:
+            nil using DenseCPT("backoff");
+    }
+
+    variable: SYMBOL_NAME {
+        type:
+            discrete observed SYMBOL_INDEX:SYMBOL_INDEX cardinality SYMBOL_CARD;
+        switchingparents:
+             CONCAT(backoff, SYMBOL_NAME)(0) using mapping("copy");
+        conditionalparents: 
+              concept1(0),concept2(0),concept3(0),concept4(0)   using SparseCPT(_CPT_4)
+            | nil                                               using  DenseCPT(_CPT_0);
+    }
+
+#endif
+
+#undef SYMBOL_NAME
+#undef SYMBOL_INDEX
+#undef SYMBOL_CARD
+#undef SYMBOL_SMOOTH
+#undef _CPT_4
+#undef _CPT_3
+#undef _CPT_2
+#undef _CPT_1
+#undef _CPT_0

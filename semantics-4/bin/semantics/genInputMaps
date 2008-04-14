@@ -1,0 +1,69 @@
+#!/bin/bash
+
+# concept.map
+$SRC_DIR/genInputMaps.py \
+        --files=$DATA_XML_TRN \
+        --files=$DATA_XML_HLDT \
+        --files=$DATA_XML_TST \
+        --writeConst=$GEN_DATA_CONSTANTS \
+        --conceptMap=$CONCEPT_MAP
+
+$SRC_DIR/genInputMaps.py --text \
+        --files=$DATA_XML_TRN \
+        --files=$DATA_XML_HLDT \
+        --files=$DATA_XML_TST \
+        --conceptMap=$CONCEPT_MAP_TXT
+
+# s1.map
+$SRC_DIR/genInputMaps.py \
+        --files=$DATA_XML_TRN \
+        --appendConst=$GEN_DATA_CONSTANTS \
+        --symName="s1" \
+        --pruneCount=$S1_PRUNE_COUNT \
+        --dataSet=$S1_DATASET \
+        --defaultDataSet=${ORIG_DATASETS%%,*} \
+        --symMap=$S1_MAP
+
+$SRC_DIR/genInputMaps.py --text \
+        --files=$DATA_XML_TRN \
+        --symName="s1" \
+        --pruneCount=$S1_PRUNE_COUNT \
+        --dataSet=$S1_DATASET \
+        --defaultDataSet=${ORIG_DATASETS%%,*} \
+        --symMap=$S1_MAP_TXT
+
+# s2.map
+$SRC_DIR/genInputMaps.py \
+        --files=$DATA_XML_TRN \
+        --appendConst=$GEN_DATA_CONSTANTS \
+        --symName="s2" \
+        --pruneCount=$S2_PRUNE_COUNT \
+        --dataSet=$S2_DATASET \
+        --defaultDataSet=${ORIG_DATASETS%%,*} \
+        --symMap=$S2_MAP
+
+$SRC_DIR/genInputMaps.py --text \
+        --files=$DATA_XML_TRN \
+        --symName="s2" \
+        --pruneCount=$S2_PRUNE_COUNT \
+        --dataSet=$S2_DATASET \
+        --defaultDataSet=${ORIG_DATASETS%%,*} \
+        --symMap=$S2_MAP_TXT
+
+# s3.map
+$SRC_DIR/genInputMaps.py \
+        --files=$DATA_XML_TRN \
+        --appendConst=$GEN_DATA_CONSTANTS \
+        --symName="s3" \
+        --pruneCount=$S3_PRUNE_COUNT \
+        --dataSet=$S3_DATASET \
+        --defaultDataSet=${ORIG_DATASETS%%,*} \
+        --symMap=$S3_MAP
+
+$SRC_DIR/genInputMaps.py --text \
+        --files=$DATA_XML_TRN \
+        --symName="s3" \
+        --pruneCount=$S3_PRUNE_COUNT \
+        --dataSet=$S3_DATASET \
+        --defaultDataSet=${ORIG_DATASETS%%,*} \
+        --symMap=$S3_MAP_TXT

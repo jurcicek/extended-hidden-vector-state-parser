@@ -1,0 +1,29 @@
+%
+%
+
+#ifndef POP_GIVEN_C1C2C3C4
+#define POP_GIVEN_C1C2C3C4
+
+#include <commonParams>
+#include "../popGivenC1C2C3C4.mstr"
+
+DT_IN_FILE                  DATA_TRN/popGivenC1C2C3C4.dt ascii
+SPMF_IN_FILE                DATA_TRN/popGivenC1C2C3C4.spmfs ascii
+NAME_COLLECTION_IN_FILE     DATA_TRN/popGivenC1C2C3C4.cllctn ascii
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SPARSE CPTs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+SPARSE_CPT_IN_FILE inline
+1 % number of saprse CPTs 
+
+0 % the first sparse CPT 
+popGivenC1C2C3C4  % name
+4 % num parents
+CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD POP_CARD % parent cardinality * 4, self card
+popGivenC1C2C3C4 % the DT used by this sparse CPT
+popGivenC1C2C3C4 % the name colection used by this sparse CPT  
+
+
+#endif

@@ -1,0 +1,57 @@
+#ifndef POP_GIVEN_C1C2C3C4_TSD
+#define POP_GIVEN_C1C2C3C4_TSD
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DECISION TREEs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+DT_IN_FILE inline
+
+2 % number of decision trees
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+0 % a DT
+maxPopGivenC1C2C3C4
+4 % number of parents
+3	2	0	default
+	2	2	0	default
+		1	2	0	default
+			0	2	0	default
+				-1	0
+				-1	1
+			-1	2
+		-1	3
+	-1	4
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1 % a DT
+popValidatorGivenPopMaxPop
+2 % number of parents
+-1	{p0 <= p1}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DETERMINISTIC CPTs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+DETERMINISTIC_CPT_IN_FILE inline
+
+2 % number of dereministic CPTs
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+0 % 1st deterministic CPT
+maxPopGivenC1C2C3C4
+4 % number of parents
+CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD POP_CARD % concept1(-1), concept2(-1), concept3(-1), concept4(-1), and self card
+maxPopGivenC1C2C3C4 % DT name
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1 % a deterministic CPT
+popValidatorGivenPopMaxPop
+2 % number of parents
+POP_CARD POP_CARD 2 % pop(0), maxPop(0), self card
+popValidatorGivenPopMaxPop % a DT name
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+#endif

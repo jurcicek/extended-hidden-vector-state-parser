@@ -1,0 +1,28 @@
+% file containing all objects that should not be updated after training (smoothing) iteration
+
+DPMF *
+SPMF *
+SPARSECPT *
+
+DENSECPT concept1GivenC2
+DENSECPT concept1Unigram
+DENSECPT concept2GivenC3
+DENSECPT concept2Unigram
+DENSECPT popGivenC1
+DENSECPT popUnigram
+DENSECPT pushGivenC1
+DENSECPT pushUnigram
+DENSECPT skipDummy
+
+
+DENSECPT s1GivenC1
+DENSECPT s1Unigram
+DENSECPT s1Zerogram
+
+DENSECPT s2GivenC1
+DENSECPT s2Unigram
+DENSECPT s2Zerogram
+
+DENSECPT s3GivenC1
+DENSECPT s3Unigram
+DENSECPT s3Zerogram

@@ -1,0 +1,14 @@
+*.aux
+*.ps
+*.dvi
+*.toc
+*.bbl
+*.blg
+*.log
+*.bak
+*.pyc
+*.pyo
+*.e3s
+*.e3t
+*.svn*
+Session.vim

@@ -1,0 +1,28 @@
+#!/bin/bash
+
+REMOVE_LIST=$BUILD_DIR/toremove
+
+rm $REMOVE_LIST 2> /dev/null
+
+find $DATA_XML_TRN -name "*.xml" >> $REMOVE_LIST 2> /dev/null
+find $DATA_XML_HLDT -name "*.xml" >> $REMOVE_LIST 2> /dev/null
+find $DATA_XML_TST -name "*.xml" >> $REMOVE_LIST 2> /dev/null
+
+find $DATA_TRN -name "*.hddn" -o -name "*.obs" -o -name "*.orig" >> $REMOVE_LIST 2> /dev/null
+find $DATA_HLDT -name "*.hddn" -o -name "*.obs" -o -name "*.orig" >> $REMOVE_LIST 2> /dev/null
+find $DATA_TST -name "*.hddn" -o -name "*.obs" -o -name "*.orig" >> $REMOVE_LIST 2> /dev/null
+
+find $DATA_TXT_TRN -name "*.hddn" -o -name "*.obs" -o -name "*.orig" >> $REMOVE_LIST 2> /dev/null
+find $DATA_TXT_HLDT -name "*.hddn" -o -name "*.obs" -o -name "*.orig" >> $REMOVE_LIST 2> /dev/null
+find $DATA_TXT_TST -name "*.hddn" -o -name "*.obs" -o -name "*.orig" >> $REMOVE_LIST 2> /dev/null
+
+find $FA_TRN -name "*.dcd*" >> $REMOVE_LIST 2> /dev/null
+find $FA_HLDT -name "*.dcd*" >> $REMOVE_LIST 2> /dev/null
+find $FA_TST -name "*.dcd*" >> $REMOVE_LIST 2> /dev/null
+
+find $DCD_HLDT -name "*.dcd*" >> $REMOVE_LIST 2> /dev/null
+find $DCD_TST -name "*.dcd*" >> $REMOVE_LIST 2> /dev/null
+
+rmlist.py < $REMOVE_LIST
+
+rm $REMOVE_LIST

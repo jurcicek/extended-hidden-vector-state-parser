@@ -1,0 +1,117 @@
+﻿<?xml version="1.0"  encoding="UTF-8" ?>
+<task comment="" day="02" description="" dialect="native" dialog="CD08~Part1~05-000902-081956-2" gender="female" hour="08" last-change="Tue May 23 00:06:16 2006" min="19" modified-by="XMLtextupdateLJ" month="09" pin="" processing-state="approved" quality="3" saved-by="Dialog Act Editor 1.0" specification="" system="hhdis-nádraží" transcription_level="1" update_code="127" volume="2" year="2000">
+  <turn number="1" speaker="operator">
+    <utterance end_time="2.444" length="2.444" overlap="0" overlap_time="0.000" speaker="operator" start_time="0.000">
+      <text type="transcription">
+        české dráhy plzeň informace prosím
+      </text>
+      <text type="normalized">
+        české dráhy plzeň informace prosím
+      </text>
+      <ne_typed_text>
+        [person] české dráhy [/person] [area] plzeň [/area] informace prosím
+      </ne_typed_text>
+      <dialogue_act conversational_domain="task" semantics="AREA, GREETING" speech_act="request_info">
+        [person] české dráhy [/person] [area] plzeň [/area] informace prosím
+      </dialogue_act>
+    </utterance>
+  </turn>
+  <turn number="2" speaker="user">
+    <utterance end_time="10.337" length="7.893" overlap="0" overlap_time="0.000" speaker="user" start_time="2.444">
+      <text type="transcription">
+        brý_en prosi_vás já jsem se chtěla zeptat 'hs' vlak na domažlice{st} teďka *do v poledne jakpa jezdí
+      </text>
+      <text type="normalized">
+        dobrý den prosím vás já jsem se chtěla zeptat vlak na domažlice teď v poledne jakpak jezdí
+      </text>
+      <ne_typed_text>
+        dobrý den prosím vás já jsem se chtěla zeptat vlak na [station] domažlice [/station] teď v poledne jakpak jezdí
+      </ne_typed_text>
+      <dialogue_act conversational_domain="frame" semantics="GREETING" speech_act="opening">
+        dobrý den
+      </dialogue_act>
+      <dialogue_act conversational_domain="task" semantics="DEPARTURE(TO(STATION), TIME)" speech_act="request_info">
+        prosím vás já jsem se chtěla zeptat vlak na [station] domažlice [/station] teď v poledne jakpak jezdí
+      </dialogue_act>
+    </utterance>
+  </turn>
+  <turn number="3" speaker="operator">
+    <utterance end_time="18.776" length="8.439" overlap="0" overlap_time="0.000" speaker="operator" start_time="10.337">
+      <text type="transcription">
+        na domažlice teďka dopoledne to jede v osm čtyřicet čtyři | potom v deset padesát a nebo dvanáct dvacet čtyry
+      </text>
+      <text type="normalized">
+        na domažlice teď dopoledne to jede v osm čtyřicet čtyři potom v deset padesát a nebo dvanáct dvacet čtyři
+      </text>
+      <ne_typed_text>
+        na [station] domažlice [/station] teď dopoledne to jede v osm čtyřicet čtyři potom v deset padesát a nebo dvanáct dvacet čtyři
+      </ne_typed_text>
+      <dialogue_act conversational_domain="communication" semantics="TO(STATION), TIME" speech_act="implicit_confirmation">
+        na [station] domažlice [/station] teď dopoledne
+      </dialogue_act>
+      <dialogue_act conversational_domain="task" semantics="DEPARTURE(TIME)" speech_act="present_info">
+        to jede v osm čtyřicet čtyři
+      </dialogue_act>
+      <dialogue_act conversational_domain="task" semantics="TIME" speech_act="present_info">
+        potom v deset padesát
+      </dialogue_act>
+      <dialogue_act conversational_domain="task" semantics="TIME" speech_act="present_info">
+        a nebo dvanáct dvacet čtyři
+      </dialogue_act>
+    </utterance>
+  </turn>
+  <turn number="4" speaker="user">
+    <utterance end_time="20.473" length="1.697" overlap="0" overlap_time="0.000" speaker="user" start_time="18.776">
+      <text type="transcription">
+        dvacet čtyři děkuju moc
+      </text>
+      <text type="normalized">
+        dvacet čtyři děkuji moc
+      </text>
+      <ne_typed_text>
+        dvacet čtyři děkuji moc
+      </ne_typed_text>
+      <dialogue_act conversational_domain="communication" semantics="TIME" speech_act="implicit_confirmation">
+        dvacet čtyři
+      </dialogue_act>
+      <dialogue_act conversational_domain="frame" semantics="" speech_act="thanking">
+        děkuji moc
+      </dialogue_act>
+    </utterance>
+  </turn>
+  <turn number="5" speaker="operator">
+    <utterance end_time="21.795" length="0.992" overlap="2" overlap_time="20.473" speaker="operator" start_time="20.473">
+      <text type="transcription">
+        není zač nashledanou
+      </text>
+      <text type="normalized">
+        není zač nashledanou
+      </text>
+      <ne_typed_text>
+        není zač nashledanou
+      </ne_typed_text>
+      <dialogue_act conversational_domain="frame" semantics="" speech_act="thanking">
+        není zač
+      </dialogue_act>
+      <dialogue_act conversational_domain="frame" semantics="" speech_act="closing">
+        nashledanou
+      </dialogue_act>
+    </utterance>
+  </turn>
+  <turn number="6" speaker="user">
+    <utterance end_time="21.795" length="0.992" overlap="2" overlap_time="20.473" speaker="user" start_time="20.473">
+      <text type="transcription">
+        nashledanou
+      </text>
+      <text type="normalized">
+        nashledanou
+      </text>
+      <ne_typed_text>
+        nashledanou
+      </ne_typed_text>
+      <dialogue_act conversational_domain="frame" semantics="" speech_act="closing">
+        nashledanou
+      </dialogue_act>
+    </utterance>
+  </turn>
+</task>

@@ -1,0 +1,157 @@
+#!/bin/bash
+
+ORIG_DATASETS_DCD=${ORIG_DATASETS_DCD:-$ORIG_DATASETS}
+S1_DATASET_DCD=${S1_DATASET_DCD:-$S1_DATASET}
+S2_DATASET_DCD=${S2_DATASET_DCD:-$S2_DATASET}
+S3_DATASET_DCD=${S3_DATASET_DCD:-$S3_DATASET}
+
+######################################################################################
+# train
+######################################################################################
+$SRC_DIR/genInputs.py \
+        --files=$DATA_XML_TRN \
+        --outDir=$DATA_TRN/ho \
+        --parseType=$PARSE_TYPE \
+        --origDataSets=$ORIG_DATASETS \
+        --conceptMap=$CONCEPT_MAP \
+        --outList="$DATA_TRN/train.list:$DATA_TRN/ho/%(id)s.obs" \
+        --outList="$DATA_TRN/fa_trn.list:$FA_TRN/dcd/%(id)s.dcd" \
+        --unsList="$DATA_TRN/trainUnsupervised.list:$DATA_TRN/ho/%(id)s.obs" \
+        --dataSet="$S1_DATASET:$S1_MAP" \
+        --outputMlf=$DATA_TRN/semantics.mlf
+	
+$SRC_DIR/genInputs.py \
+        --files=$DATA_XML_TRN \
+        --outDir=$DATA_TRN/ho \
+        --parseType=$PARSE_TYPE \
+        --origDataSets=$ORIG_DATASETS \
+        --extraExt=.2 \
+        --outList="$DATA_TRN/train.2.list:$DATA_TRN/ho/%(id)s.2.obs" \
+        --unsList="$DATA_TRN/trainUnsupervised.2.list:$DATA_TRN/ho/%(id)s.2.obs" \
+        --dataSet="$S2_DATASET:$S2_MAP" \
+        --dataSet="$S3_DATASET:$S3_MAP"
+	
+# train - txt
+$SRC_DIR/genInputs.py \
+        --files=$DATA_XML_TRN \
+        --outDir=$DATA_TXT_TRN/ho \
+        --parseType=$PARSE_TYPE \
+        --origDataSets=$ORIG_DATASETS \
+        --conceptMap=$CONCEPT_MAP_TXT \
+        --outList="$DATA_TXT_TRN/train.list:$DATA_TXT_TRN/ho/%(id)s.obs" \
+        --unsList="$DATA_TXT_TRN/trainUnsupervised.list:$DATA_TXT_TRN/ho/%(id)s.obs" \
+        --dataSet="$S1_DATASET:$S1_MAP_TXT" \
+        --outputMlf=$DATA_TXT_TRN/semantics.mlf
+	
+$SRC_DIR/genInputs.py \
+        --files=$DATA_XML_TRN \
+        --outDir=$DATA_TXT_TRN/ho \
+        --parseType=$PARSE_TYPE \
+        --origDataSets=$ORIG_DATASETS \
+        --extraExt=.2 \
+        --outList="$DATA_TXT_TRN/train.2.list:$DATA_TXT_TRN/ho/%(id)s.2.obs" \
+        --unsList="$DATA_TXT_TRN/trainUnsupervised.2.list:$DATA_TXT_TRN/ho/%(id)s.2.obs" \
+        --dataSet="$S2_DATASET:$S2_MAP_TXT" \
+        --dataSet="$S3_DATASET:$S3_MAP_TXT"
+	
+######################################################################################
+# heldout
+######################################################################################
+$SRC_DIR/genInputs.py \
+        --files=$DATA_XML_HLDT \
+        --outDir=$DATA_HLDT/ho \
+        --parseType=$PARSE_TYPE \
+        --origDataSets=$ORIG_DATASETS_DCD \
+        --conceptMap=$CONCEPT_MAP \
+        --outList="$DATA_HLDT/heldout.list:$DATA_HLDT/ho/%(id)s.obs" \
+        --outList="$DATA_HLDT/fa_hldt.list:$FA_HLDT/dcd/%(id)s.dcd" \
+        --outList="$DATA_HLDT/dcd_hldt.list:$DCD_HLDT/dcd/%(id)s.dcd" \
+        --dataSet="$S1_DATASET_DCD:$S1_MAP" \
+        --outputMlfDcd=$DATA_HLDT/semantics.mlf.dcd \
+        --outputMlfSmntcs=$DATA_HLDT/semantics.mlf.smntcs \
+        --outputMlf=$DATA_HLDT/semantics.mlf
+	
+$SRC_DIR/genInputs.py \
+        --files=$DATA_XML_HLDT \
+        --outDir=$DATA_HLDT/ho \
+        --parseType=$PARSE_TYPE \
+        --origDataSets=$ORIG_DATASETS_DCD \
+        --extraExt=.2 \
+        --outList="$DATA_HLDT/heldout.2.list:$DATA_HLDT/ho/%(id)s.2.obs" \
+        --dataSet="$S2_DATASET_DCD:$S2_MAP" \
+        --dataSet="$S3_DATASET_DCD:$S3_MAP"
+	
+# heldout - txt
+$SRC_DIR/genInputs.py \
+        --files=$DATA_XML_HLDT \
+        --outDir=$DATA_TXT_HLDT/ho \
+        --parseType=$PARSE_TYPE \
+        --origDataSets=$ORIG_DATASETS_DCD \
+        --conceptMap=$CONCEPT_MAP_TXT \
+        --outList="$DATA_TXT_HLDT/heldout.list:$DATA_TXT_HLDT/ho/%(id)s.obs" \
+        --dataSet="$S1_DATASET_DCD:$S1_MAP_TXT" \
+        --outputMlfDcd=$DATA_TXT_HLDT/semantics.mlf.dcd \
+        --outputMlfSmntcs=$DATA_TXT_HLDT/semantics.mlf.smntcs \
+        --outputMlf=$DATA_TXT_HLDT/semantics.mlf
+	
+$SRC_DIR/genInputs.py \
+        --files=$DATA_XML_HLDT \
+        --outDir=$DATA_TXT_HLDT/ho \
+        --parseType=$PARSE_TYPE \
+        --origDataSets=$ORIG_DATASETS_DCD \
+        --extraExt=.2 \
+        --outList="$DATA_TXT_HLDT/heldout.2.list:$DATA_TXT_HLDT/ho/%(id)s.2.obs" \
+        --dataSet="$S2_DATASET_DCD:$S2_MAP_TXT" \
+        --dataSet="$S3_DATASET_DCD:$S3_MAP_TXT"
+
+######################################################################################
+# test
+######################################################################################
+$SRC_DIR/genInputs.py \
+        --files=$DATA_XML_TST \
+        --outDir=$DATA_TST/ho \
+        --parseType=$PARSE_TYPE \
+        --origDataSets=$ORIG_DATASETS_DCD \
+        --conceptMap=$CONCEPT_MAP \
+        --outList="$DATA_TST/test.list:$DATA_TST/ho/%(id)s.obs" \
+        --outList="$DATA_TST/fa_tst.list:$FA_TST/dcd/%(id)s.dcd" \
+        --outList="$DATA_TST/dcd_tst.list:$DCD_TST/dcd/%(id)s.dcd" \
+        --dataSet="$S1_DATASET_DCD:$S1_MAP" \
+        --outputMlfDcd=$DATA_TST/semantics.mlf.dcd \
+        --outputMlfSmntcs=$DATA_TST/semantics.mlf.smntcs \
+        --outputMlf=$DATA_TST/semantics.mlf
+
+$SRC_DIR/genInputs.py \
+        --files=$DATA_XML_TST \
+        --outDir=$DATA_TST/ho \
+        --parseType=$PARSE_TYPE \
+        --origDataSets=$ORIG_DATASETS_DCD \
+        --extraExt=.2 \
+        --outList="$DATA_TST/test.2.list:$DATA_TST/ho/%(id)s.2.obs" \
+        --dataSet="$S2_DATASET_DCD:$S2_MAP" \
+        --dataSet="$S3_DATASET_DCD:$S3_MAP"
+	
+# test - txt
+$SRC_DIR/genInputs.py \
+        --files=$DATA_XML_TST \
+        --outDir=$DATA_TXT_TST/ho \
+        --parseType=$PARSE_TYPE \
+        --origDataSets=$ORIG_DATASETS_DCD \
+        --conceptMap=$CONCEPT_MAP_TXT \
+        --outList="$DATA_TXT_TST/test.list:$DATA_TXT_TST/ho/%(id)s.obs" \
+        --dataSet="$S1_DATASET_DCD:$S1_MAP_TXT" \
+        --outputMlfDcd=$DATA_TXT_TST/semantics.mlf.dcd \
+        --outputMlfSmntcs=$DATA_TXT_TST/semantics.mlf.smntcs \
+        --outputMlf=$DATA_TXT_TST/semantics.mlf
+
+$SRC_DIR/genInputs.py \
+        --files=$DATA_XML_TST \
+        --outDir=$DATA_TXT_TST/ho \
+        --parseType=$PARSE_TYPE \
+        --origDataSets=$ORIG_DATASETS_DCD \
+        --extraExt=.2 \
+        --outList="$DATA_TXT_TST/test.2.list:$DATA_TXT_TST/ho/%(id)s.2.obs" \
+        --dataSet="$S2_DATASET_DCD:$S2_MAP_TXT" \
+        --dataSet="$S3_DATASET_DCD:$S3_MAP_TXT"
+	
+

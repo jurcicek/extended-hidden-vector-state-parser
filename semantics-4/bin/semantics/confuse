@@ -1,0 +1,34 @@
+#!/bin/bash
+
+OLD_DIR=`pwd`
+
+cd $CONFUSE_DIR && (echo "Cannot change dir into confusion"; exit 1)
+echo "Generating utt lists" >&2
+python2.4 genUttList.py $OLD_DIR/$DATA_DIR
+
+echo "Making bigram language model" >&2
+./make_blm uttlm.txt 
+
+echo "Running upMap.py" >&2
+python2.4 ./upMap.py $CONFUSE_POWER 
+
+echo "Disambiguating" >&2
+disambig -lmw $CONFUSE_LMW -mapw 1 -scale -keep-unk -text uttlm.txt -map map.up.txt -lm uttlm.txt.blm  | sed 's/<s> //' | sed 's/ <\/s>//' > uttlm.conf.txt 
+
+echo "Converting text to MLF" >&2
+python2.4 ./txt2mlf.py lab uttlm.txt uttlm.mlf 
+python2.4 ./txt2mlf.py rec uttlm.conf.txt uttlm.conf.mlf 
+
+echo "Running HResults" >&2
+HResults -I uttlm.mlf /dev/null uttlm.conf.mlf >&2 
+
+cd $OLD_DIR 
+
+mkdir -p $CONFUSE_DATA_DIR 
+
+echo "Parametrizing input files" >&2
+./pdttools.py parametrize confused $CONFUSE_DIR/uttlm.conf.txt --inDir=$DATA_DIR --outDir=$CONFUSE_DATA_DIR 
+cp $DATA_DIR/.*.list $CONFUSE_DATA_DIR 
+
+echo "Running PDTTools" >&2
+./pdttools.py all --type='confused' --type-prefix='confused_' --inDir=$CONFUSE_DATA_DIR --outDir=$CONFUSE_DATA_DIR --deleteResults 

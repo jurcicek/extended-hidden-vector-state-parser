@@ -1,0 +1,7 @@
+#!/bin/bash
+
+$PDT20_TOOLS/run_tagger \
+    $PDT_WORK_DIR/output \
+    $PDT_WORK_DIR/sen_file || exit 1
+
+cp $PDT_WORK_DIR/output/2-morph/sen_file.csts $PDT_WORK_DIR/sen_file.csts || exit 1

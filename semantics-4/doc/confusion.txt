@@ -1,0 +1,31 @@
+Práce se simulovaným ASR kanálem v semantics-4
+==============================================
+
+Nejprve je nutné mít nainstalované PDT-2.0 se skriptem 'run_tagger'
+(což je upravený 'run_all' tak, aby prováděl pouze morfologickou
+analýzu a značkování). Dále je nutné mít nainstalovanou sadu
+DIALOGUE/confusion, jež provádí samotné "zmatení" vstupů.
+
+Nejprve je třeba nastavit cesty v souboru settings.path:
+
+    export PDT20_TOOLS=/opt/PDT-2.0/tools/machine-annotation
+    export CONFUSE_DIR=~/Research/DIALOGUE/confusion
+
+Samotné nastavení zmatení je v souboru etc/confused, kde je nutné ho
+ZAPNOUT nastavením CONFUSE=1. Po nastavení parametrů simulovaného
+kanálu je třeba určit, jaké datové množiny se použijí na jednotlivých
+vstupech. Pro trénování to určuje množina S[123]_DATASET, pro heldout
+data a testovací data S[123]_DATASET_DCD (pokud není nastavenou
+použije se S[123]_DATASET). Možné datové množiny podléhající zmatení
+jsou:
+
+    - Slova: word, conf_word
+    - Lemmata: lemma, conf_lemma
+    - POS tagy: pos, conf_pos
+
+Po vhodné úpravě souboru etc/confused lze již spustit soubor
+semantics.py s vhodnými parametry, tj. je nutné použít kromě
+standardních settings a settings.path souborů i etc/confused. To může
+zajistit například příkaz:
+
+    ./settings.py -vvv all --cfgfile etc/confused

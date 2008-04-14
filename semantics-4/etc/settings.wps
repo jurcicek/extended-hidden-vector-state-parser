@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# cAcc(hldt) = 75.05%
+# uCorr(hldt) = 66.71%
+
+export S1_DATASET=word
+export S2_DATASET=pos
+export S3_DATASET=speech_act
+
+export SCALE_CONCEPT12=2.2
+export SCALE_PUSHPOP=2
+
+export S1_NEGEX=1
+export S2_NEGEX=0
+export S3_NEGEX=1

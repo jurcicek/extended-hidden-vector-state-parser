@@ -1,0 +1,232 @@
+﻿<?xml version="1.0"  encoding="UTF-8" ?>
+<task comment="" day="27" description="" dialect="native" dialog="CD03~Part1~04-000427-090306-1" gender="female" hour="09" last-change="Tue May 23 00:04:40 2006" min="03" modified-by="XMLtextupdateLJ" month="04" pin="" processing-state="approved" quality="3" saved-by="Dialog Act Editor 1.0" specification="" system="hhdis-nádraží" transcription_level="?" update_code="127" volume="2" year="2000">
+  <turn number="1" speaker="operator">
+    <utterance end_time="2.250" length="1.480" overlap="0" overlap_time="0.000" speaker="operator" start_time="0.770">
+      <text type="transcription">
+        informace prosím
+      </text>
+      <text type="normalized">
+        informace prosím
+      </text>
+      <ne_typed_text>
+        informace prosím
+      </ne_typed_text>
+      <dialogue_act conversational_domain="frame" semantics="GREETING" speech_act="opening">
+        informace prosím
+      </dialogue_act>
+    </utterance>
+  </turn>
+  <turn number="2" speaker="user">
+    <utterance end_time="9.994" length="7.744" overlap="1" overlap_time="2.250" speaker="user" start_time="2.250">
+      <text type="transcription">
+        sýkorová{jm} dobrý den | já bych *se chtěla vědět jestli v neděli ráno jede z plzně{st} do chomutova{st} rychlík v šest sedm(náct)~
+      </text>
+      <text type="normalized">
+        sýkorová dobrý den já bych chtěla vědět jestli v neděli ráno jede z plzně do chomutova rychlík v šest sedmnáct
+      </text>
+      <ne_typed_text>
+        [person] sýkorová [/person] dobrý den já bych chtěla vědět jestli v neděli ráno jede z [station] plzně [/station] do [station] chomutova [/station] rychlík v šest sedmnáct
+      </ne_typed_text>
+      <dialogue_act conversational_domain="frame" semantics="PERSON, GREETING" speech_act="opening">
+        [person] sýkorová [/person] dobrý den
+      </dialogue_act>
+      <dialogue_act conversational_domain="task" semantics="DEPARTURE(TIME, FROM(STATION), TO(STATION), TRAIN_TYPE, TIME)" speech_act="verify">
+        já bych chtěla vědět jestli v neděli ráno jede z [station] plzně [/station] do [station] chomutova [/station] rychlík v šest sedmnáct
+      </dialogue_act>
+    </utterance>
+  </turn>
+  <turn number="3" speaker="operator">
+    <utterance end_time="12.490" length="2.496" overlap="1" overlap_time="9.994" speaker="operator" start_time="9.994">
+      <text type="transcription">
+        ne ne ne | 'ps' ten v neděli neje(zdí)~
+      </text>
+      <text type="normalized">
+        ne ne ne ten v neděli nejezdí
+      </text>
+      <ne_typed_text>
+        ne ne ne ten v neděli nejezdí
+      </ne_typed_text>
+      <dialogue_act conversational_domain="task" semantics="REJECT(TIME)" speech_act="acknowledgement">
+        ne ne ne ten v neděli nejezdí
+      </dialogue_act>
+    </utterance>
+  </turn>
+  <turn number="4" speaker="user">
+    <utterance end_time="15.871" length="3.381" overlap="1" overlap_time="12.490" speaker="user" start_time="12.490">
+      <text type="transcription">
+        ten v neděli nejede | a v neděli by ňákej náhradní spoj byl
+      </text>
+      <text type="normalized">
+        ten v neděli nejede a v neděli by nějaký náhradní spoj byl
+      </text>
+      <ne_typed_text>
+        ten v neděli nejede a v neděli by nějaký náhradní spoj byl
+      </ne_typed_text>
+      <dialogue_act conversational_domain="communication" semantics="REJECT(TIME)" speech_act="implicit_confirmation">
+        ten v neděli nejede
+      </dialogue_act>
+      <dialogue_act conversational_domain="task" semantics="DEPARTURE(TIME)" speech_act="request_info">
+        a v neděli by nějaký náhradní spoj byl
+      </dialogue_act>
+    </utterance>
+  </turn>
+  <turn number="5" speaker="operator">
+    <utterance end_time="23.731" length="6.540" overlap="0" overlap_time="0.000" speaker="operator" start_time="17.191">
+      <text type="transcription">
+        náhradní žádnej ale jezdí ale jezdí vám v osm hodin osobní do žatce{st} | 'lb' ten by se vám nelíbil
+      </text>
+      <text type="normalized">
+        náhradní žádný ale jezdí ale jezdí vám v osm hodin osobní do žatce ten by se vám nelíbil
+      </text>
+      <ne_typed_text>
+        náhradní žádný ale jezdí ale jezdí vám v osm hodin osobní do [station] žatce [/station] ten by se vám nelíbil
+      </ne_typed_text>
+      <dialogue_act conversational_domain="task" semantics="REJECT" speech_act="acknowledgement">
+        náhradní žádný
+      </dialogue_act>
+      <dialogue_act conversational_domain="task" semantics="DEPARTURE(TIME, TRAIN_TYPE, TO(STATION))" speech_act="offer">
+        ale jezdí ale jezdí vám v osm hodin osobní do [station] žatce [/station] ten by se vám nelíbil
+      </dialogue_act>
+    </utterance>
+  </turn>
+  <turn number="6" speaker="user">
+    <utterance end_time="25.445" length="1.714" overlap="0" overlap_time="0.000" speaker="user" start_time="23.731">
+      <text type="transcription">
+        'lb' to víte že by se mi líbil~
+      </text>
+      <text type="normalized">
+        to víte že by se mi líbil
+      </text>
+      <ne_typed_text>
+        to víte že by se mi líbil
+      </ne_typed_text>
+      <dialogue_act conversational_domain="task" semantics="ACCEPT" speech_act="acknowledgement">
+        to víte že by se mi líbil
+      </dialogue_act>
+    </utterance>
+  </turn>
+  <turn number="7" speaker="operator">
+    <utterance end_time="44.018" length="18.573" overlap="1" overlap_time="25.445" speaker="operator" start_time="25.445">
+      <text type="transcription">
+        tak poslouchejte | osum nula nula | 'ps' 'lb' v žatci{st} budete v deset padesát tři | 'hm' máte | 'lb' a ze žatce{st} vám odjíždí přípoj 'ps' no dvanáct nula tři | a jste v chomutově{st} dvanáct třicet sedum
+      </text>
+      <text type="normalized">
+        tak poslouchejte osm nula nula v žatci budete v deset padesát tři máte a ze žatce vám odjíždí přípoj no dvanáct nula tři a jste v chomutově dvanáct třicet sedm
+      </text>
+      <ne_typed_text>
+        tak poslouchejte osm nula nula v [station] žatci [/station] budete v deset padesát tři máte a ze [station] žatce [/station] vám odjíždí přípoj no dvanáct nula tři a jste v [station] chomutově [/station] dvanáct třicet sedm
+      </ne_typed_text>
+      <dialogue_act conversational_domain="frame" semantics="" speech_act="instruction">
+        tak poslouchejte
+      </dialogue_act>
+      <dialogue_act conversational_domain="task" semantics="TIME" speech_act="present_info">
+        osm nula nula
+      </dialogue_act>
+      <dialogue_act conversational_domain="task" semantics="ARRIVAL(TO(STATION), TIME)" speech_act="present_info">
+        v [station] žatci [/station] budete v deset padesát tři máte
+      </dialogue_act>
+      <dialogue_act conversational_domain="task" semantics="DEPARTURE(FROM(STATION), TRAIN_TYPE, TIME)" speech_act="present_info">
+        a ze [station] žatce [/station] vám odjíždí přípoj no dvanáct nula tři
+      </dialogue_act>
+      <dialogue_act conversational_domain="task" semantics="ARRIVAL(TO(STATION), TIME)" speech_act="present_info">
+        a jste v [station] chomutově [/station] dvanáct třicet sedm
+      </dialogue_act>
+    </utterance>
+  </turn>
+  <turn number="8" speaker="user">
+    <utterance end_time="48.434" length="2.460" overlap="0" overlap_time="0.000" speaker="user" start_time="45.974">
+      <text type="transcription">
+        takže v tu neděli opravdu nic jiný(ho)~
+      </text>
+      <text type="normalized">
+        takže v tu neděli opravdu nic jiného
+      </text>
+      <ne_typed_text>
+        takže v tu neděli opravdu nic jiného
+      </ne_typed_text>
+      <dialogue_act conversational_domain="task" semantics="TIME, NEXT" speech_act="verify">
+        takže v tu neděli opravdu nic jiného
+      </dialogue_act>
+    </utterance>
+  </turn>
+  <turn number="9" speaker="operator">
+    <utterance end_time="49.049" length="0.615" overlap="1" overlap_time="48.434" speaker="operator" start_time="48.434">
+      <text type="transcription">
+        bohužel
+      </text>
+      <text type="normalized">
+        bohužel
+      </text>
+      <ne_typed_text>
+        bohužel
+      </ne_typed_text>
+      <dialogue_act conversational_domain="frame" semantics="" speech_act="apology">
+        bohužel
+      </dialogue_act>
+    </utterance>
+  </turn>
+  <turn number="10" speaker="user">
+    <utterance end_time="51.504" length="1.169" overlap="0" overlap_time="0.000" speaker="user" start_time="50.335">
+      <text type="transcription">
+        'lb' tak děkuju
+      </text>
+      <text type="normalized">
+        tak děkuji
+      </text>
+      <ne_typed_text>
+        tak děkuji
+      </ne_typed_text>
+      <dialogue_act conversational_domain="frame" semantics="" speech_act="thanking">
+        tak děkuji
+      </dialogue_act>
+    </utterance>
+  </turn>
+  <turn number="11" speaker="operator">
+    <utterance end_time="52.404" length="0.675" overlap="2" overlap_time="51.504" speaker="operator" start_time="51.504">
+      <text type="transcription">
+        nemáte zač
+      </text>
+      <text type="normalized">
+        nemáte zač
+      </text>
+      <ne_typed_text>
+        nemáte zač
+      </ne_typed_text>
+      <dialogue_act conversational_domain="frame" semantics="" speech_act="thanking">
+        nemáte zač
+      </dialogue_act>
+    </utterance>
+  </turn>
+  <turn number="12" speaker="user">
+    <utterance end_time="52.404" length="0.675" overlap="2" overlap_time="51.504" speaker="user" start_time="51.504">
+      <text type="transcription">
+        nashledanou
+      </text>
+      <text type="normalized">
+        nashledanou
+      </text>
+      <ne_typed_text>
+        nashledanou
+      </ne_typed_text>
+      <dialogue_act conversational_domain="frame" semantics="" speech_act="closing">
+        nashledanou
+      </dialogue_act>
+    </utterance>
+  </turn>
+  <turn number="13" speaker="operator">
+    <utterance end_time="53.214" length="0.810" overlap="0" overlap_time="0.000" speaker="operator" start_time="52.404">
+      <text type="transcription">
+        nashledanou
+      </text>
+      <text type="normalized">
+        nashledanou
+      </text>
+      <ne_typed_text>
+        nashledanou
+      </ne_typed_text>
+      <dialogue_act conversational_domain="frame" semantics="" speech_act="closing">
+        nashledanou
+      </dialogue_act>
+    </utterance>
+  </turn>
+</task>

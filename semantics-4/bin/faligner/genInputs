@@ -1,0 +1,47 @@
+#!/bin/bash
+
+######################################################################################
+# train
+######################################################################################
+$SRC_DIR/genInputs.py \
+        --files=$DATA_XML_TRN \
+        --outDir=$DATA_TRN/ho \
+        --parseType=$PARSE_TYPE \
+        --conceptMap=$CONCEPT_MAP \
+        --outList="$DATA_TRN/train.list:$DATA_TRN/ho/%(id)s.obs" \
+        --outList="$DATA_TRN/fa_trn.list:$FA_TRN/dcd/%(id)s.dcd" \
+        --unsList="$DATA_TRN/trainUnsupervised.list:$DATA_TRN/ho/%(id)s.obs" \
+        --dataSet="$S1_DATASET:$S1_MAP" \
+        --outputMlf=$DATA_TRN/semantics.mlf
+	
+$SRC_DIR/genInputs.py \
+        --files=$DATA_XML_TRN \
+        --outDir=$DATA_TRN/ho \
+        --parseType=$PARSE_TYPE \
+        --extraExt=.2 \
+        --outList="$DATA_TRN/train.2.list:$DATA_TRN/ho/%(id)s.2.obs" \
+        --unsList="$DATA_TRN/trainUnsupervised.2.list:$DATA_TRN/ho/%(id)s.2.obs" \
+        --dataSet="$S2_DATASET:$S2_MAP" \
+        --dataSet="$S3_DATASET:$S3_MAP"
+	
+# train - txt
+$SRC_DIR/genInputs.py \
+        --files=$DATA_XML_TRN \
+        --outDir=$DATA_TXT_TRN/ho \
+        --parseType=$PARSE_TYPE \
+        --conceptMap=$CONCEPT_MAP_TXT \
+        --outList="$DATA_TXT_TRN/train.list:$DATA_TXT_TRN/ho/%(id)s.obs" \
+        --unsList="$DATA_TXT_TRN/trainUnsupervised.list:$DATA_TXT_TRN/ho/%(id)s.obs" \
+        --dataSet="$S1_DATASET:$S1_MAP_TXT" \
+        --outputMlf=$DATA_TXT_TRN/semantics.mlf
+	
+$SRC_DIR/genInputs.py \
+        --files=$DATA_XML_TRN \
+        --outDir=$DATA_TXT_TRN/ho \
+        --parseType=$PARSE_TYPE \
+        --extraExt=.2 \
+        --outList="$DATA_TXT_TRN/train.2.list:$DATA_TXT_TRN/ho/%(id)s.2.obs" \
+        --unsList="$DATA_TXT_TRN/trainUnsupervised.2.list:$DATA_TXT_TRN/ho/%(id)s.2.obs" \
+        --dataSet="$S2_DATASET:$S2_MAP_TXT" \
+        --dataSet="$S3_DATASET:$S3_MAP_TXT"
+

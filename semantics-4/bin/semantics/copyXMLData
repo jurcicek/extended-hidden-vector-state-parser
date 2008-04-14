@@ -1,0 +1,13 @@
+#!/bin/bash
+
+$SRC_DIR/copyXML2DataRaw.py --dataReduction=$DATA_REDUCTION \
+	--trainDataReduction=$TRAIN_DATA_REDUCTION \
+	--dirIn=$DATA_DIR \
+	--dirTrain=$DATA_XML_TRN \
+	--weightTrain=72 \
+	--dirHeldout=$DATA_XML_HLDT \
+	--weightHeldout=8 \
+	--dirTest=$DATA_XML_TST \
+	--weightTest=20
+
+

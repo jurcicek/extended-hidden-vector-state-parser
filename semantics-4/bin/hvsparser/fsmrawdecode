@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#tee $1/input.txt | fsmcompile -t -s tropical | tee $1/input.fsm | fsmcompose - $1/hvsparser.fsm | fsmbestpath | fsmprint
+fsmcompile -t -s tropical | fsmcompose - $1/hvsparser.fsm | fsmbestpath | fsmprint
