@@ -1,5 +1,5 @@
 #labels Featured,Phase-Design
-Here we present the basic concepts used in our implementation of the parser.
+This chapter presents the basic concepts used in our implementation of the parser.
 
 = Introduction =
 
