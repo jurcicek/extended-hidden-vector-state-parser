@@ -1,8 +1,8 @@
 = GMTK implementation of Hidden Vector State Parser with some extensions =
 _Friday, 21 March 2008_
  
-Copyright (C) 2005-2008, Filip Jurcicek, filip.jurcicek(at)gmail.com
-Copyright (C) 2006-2008, Jan Svec, honza.svec(at)gmail.com
+* Copyright (C) 2005-2008, Filip Jurcicek, filip.jurcicek(at)gmail.com
+* Copyright (C) 2006-2008, Jan Svec, honza.svec(at)gmail.com
 
 All avilable programs and scripts in this package are available under the GNU General Public License. The license is included in the file COPYING.
 
