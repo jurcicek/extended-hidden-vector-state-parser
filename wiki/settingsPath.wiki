@@ -1,4 +1,4 @@
-The default setting for paths in the project..
+The default setting for paths in the project.
 
 = Paths =
 
