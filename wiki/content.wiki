@@ -2,8 +2,8 @@ Conten of the domumentation for the extended HVS parser.
 
 = Content =
 
+  * [License]
   * [Introduction]
   * [StackValidation Stack Validation]
   * [simulatedASRChannel Usage of an simulated ASR Channel]
-  * Files descriptions:
-  ** [settingPath settings.path]
+  * [settingsPath settings.path]
