@@ -65,7 +65,7 @@ SemanticsMain.copyXMLData: IOError: [Errno 2] No such file or directory: 'data_x
 Script SemanticsMain: ExternalError: External method copyXMLData ('bin/semantics/copyXMLData') returned with nonzero exit status (1)
 }}}
 
-than you are missing the input XML data in the directory DATA_DIR. Original setting is `data_xml` which results into `~/extended-HVS-parser/semantics-4/data_xml`.
+than you are missing the input XML data in the directory DATA_DIR. Original setting is `example-data` which results into `~/extended-HVS-parser/example-data`. The directory DATA_DIR is possible to set in the file [settings.path].
 
 = Special words = 
 
