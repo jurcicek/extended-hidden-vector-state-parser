@@ -4,7 +4,7 @@ This chapter describe how to use simulated ASR channel on the input of the parse
 = Usage of simmulated ASR channel in semantics-4 = 
 
 First of all, you have to have instaleded PDT-2.0 with the script `run_tagger`
-(which altered 'run_all' so that it performes only the mophological analysis and tagging). Than you need `confusion` package from the top directory of the parser. This package performs the mentioned "confusion: of the input word sequences.
+(which altered 'run_all' so that it performes only the mophological analysis and tagging). Then you need `confusion` package from the top directory of the parser. This package performs the mentioned "confusion: of the input word sequences.
 
 You must set the follwing variables in the [settingsPath settings.path]:
 {{{
