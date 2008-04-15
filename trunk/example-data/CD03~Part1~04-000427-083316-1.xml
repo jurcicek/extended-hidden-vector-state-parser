@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task comment="" dialect="native" modified-by="XMLtextupdateLJ" description="" hour="08" min="33" gender="female" specification="special" system="hhdis-nádraží" saved-by="Dialog Act Editor 1.0" month="04" volume="4" dialog="CD03~Part1~04-000427-083316-1" processing-state="out-of-topic" pin="" year="2000" transcription_level="?" last-change="Tue May 23 00:04:40 2006" quality="2" day="27" update_code="127">
+  <turn speaker="operator" number="1">
+    <utterance overlap_time="0.000" start_time="0.000" overlap="0" length="1.700" speaker="operator" end_time="1.700">
+      <text type="transcription">
+        informace prosím
+      </text>
+      <text type="normalized">
+        informace prosím
+      </text>
+      <text type="lemmatized">
+         informace prosit
+      </text>
+      <text type="pos_tagged">
+         NNFS2-----A---- VB-S---1P-AA---
+      </text>
+      <ne_typed_text>
+        informace prosím
+      </ne_typed_text>
+      <dialogue_act speech_act="opening" conversational_domain="frame" semantics="GREETING">
+        informace prosím
+      </dialogue_act>
+      <parametrized_act speech_act="opening" type="lemmatized" conversational_domain="frame" semantics="GREETING">
+         informace prosit
+      </parametrized_act>
+      <parametrized_act speech_act="opening" type="pos_tagged" conversational_domain="frame" semantics="GREETING">
+         NNFS2-----A---- VB-S---1P-AA---
+      </parametrized_act>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="2">
+    <utterance overlap_time="1.700" start_time="1.700" overlap="1" length="11.576" speaker="user" end_time="13.276">
+      <text type="transcription">
+        'lb' dobrý den hanžlová{jm} 'ps' 'lb' mladá paní já bych měla takovej velkej problém nebo prosbu 'ps' nevíte náhodou číslo 'lb' 'ps' 'hs' jak je dole ta cestovní kancelář
+      </text>
+      <text type="normalized">
+        dobrý den hanžlová mladá paní já bych měla takový velký problém nebo prosbu nevíte náhodou číslo jak je dole ta cestovní kancelář
+      </text>
+      <text type="lemmatized">
+         dobrý den Hanžlová mladý paní já být mít takový velký problém nebo prosba nevědět náhodou číslo jak být dole ten cestovní kancelář
+      </text>
+      <text type="pos_tagged">
+         AAIS1----1A---- NNIS1-----A---- NNFS1-----A---- AAFS1----1A---- NNFS1-----A---- PP-S1--1------- Vc-S---1------- VpQW---XR-AA--- PDYS1---------- AAIS4----1A---- NNIS4-----A---- J-------------- NNFS4-----A---- VB-P---2P-NA--- Db------------- NNNS1-----A---- Db------------- VB-S---3P-AA--- Db------------- PDNP1---------- AAFS1----1A---- NNFS1-----A----
+      </text>
+      <ne_typed_text>
+        dobrý den [person] hanžlová [/person] mladá paní já bych měla takový velký problém nebo prosbu nevíte náhodou číslo jak je dole ta cestovní kancelář
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="3">
+    <utterance overlap_time="30.947" start_time="28.984" overlap="6" length="3.629" speaker="operator" end_time="34.364">
+      <text type="transcription">
+        takže paní 'hs' :: máte drážní
+      </text>
+      <text type="normalized">
+        takže paní máte drážní
+      </text>
+      <text type="lemmatized">
+         takže paní mít Drážný
+      </text>
+      <text type="pos_tagged">
+         J-------------- NNFP1-----A---- VB-P---2P-AA--- NNMP1-----A----
+      </text>
+      <ne_typed_text>
+        takže paní máte drážní
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="4">
+    <utterance overlap_time="32.143" start_time="32.143" overlap="2" length="1.666" speaker="user" end_time="34.364">
+      <text type="transcription">
+        drážní drážní
+      </text>
+      <text type="normalized">
+        drážní drážní
+      </text>
+      <text type="lemmatized">
+         drážní Drážný
+      </text>
+      <text type="pos_tagged">
+         AAFS1----1A---- NNMP1-----A----
+      </text>
+      <ne_typed_text>
+        drážní drážní
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="5">
+    <utterance overlap_time="0.000" start_time="34.364" overlap="0" length="6.420" speaker="operator" end_time="40.784">
+      <text type="transcription">
+        takže vytočíte devětset devadesát to je plzeň{st} a dvacet sedm dvacet osm
+      </text>
+      <text type="normalized">
+        takže vytočíte devětset devadesát to je plzeň a dvacet sedm dvacet osm
+      </text>
+      <text type="lemmatized">
+         takže vytočit devětset devadesát ten být Plzeň a dvacet sedm dvacet osm
+      </text>
+      <text type="pos_tagged">
+         J-------------- VB-P---2P-AA--- Cn-S4---------- Cn-S4---------- PDNS1---------- VB-S---3P-AA--- NNFS1-----A---- J-------------- Cn-S4---------- Cn-S4---------- Cn-S4---------- Cn-S4----------
+      </text>
+      <ne_typed_text>
+        takže vytočíte devětset devadesát to je [station] plzeň [/station] a dvacet sedm dvacet osm
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="6">
+    <utterance overlap_time="0.000" start_time="40.784" overlap="0" length="1.180" speaker="user" end_time="41.964">
+      <text type="transcription">
+        dvacet sedm dvacet os(m)~
+      </text>
+      <text type="normalized">
+        dvacet sedm dvacet osm
+      </text>
+      <text type="lemmatized">
+         dvacet sedm dvacet osm
+      </text>
+      <text type="pos_tagged">
+         Cn-S4---------- Cn-S4---------- Cn-S4---------- Cn-S4----------
+      </text>
+      <ne_typed_text>
+        dvacet sedm dvacet osm
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="7">
+    <utterance overlap_time="41.964" start_time="41.964" overlap="1" length="0.310" speaker="operator" end_time="42.274">
+      <text type="transcription">
+        ano
+      </text>
+      <text type="normalized">
+        ano
+      </text>
+      <text type="lemmatized">
+         ano
+      </text>
+      <text type="pos_tagged">
+         TT-------------
+      </text>
+      <ne_typed_text>
+        ano
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="8">
+    <utterance overlap_time="73.576" start_time="73.576" overlap="2" length="1.853" speaker="user" end_time="76.046">
+      <text type="transcription">
+        děkuju moc | nashledanou
+      </text>
+      <text type="normalized">
+        děkuji moc nashledanou
+      </text>
+      <text type="lemmatized">
+         děkovat moc nashledanou
+      </text>
+      <text type="pos_tagged">
+         VB-S---1P-AA--1 Db------------- AAFS4----1A----
+      </text>
+      <ne_typed_text>
+        děkuji moc nashledanou
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="9">
+    <utterance overlap_time="73.576" start_time="73.576" overlap="2" length="1.853" speaker="operator" end_time="76.046">
+      <text type="transcription">
+        není zač | nashledanou
+      </text>
+      <text type="normalized">
+        není zač nashledanou
+      </text>
+      <text type="lemmatized">
+         nebýt zač nashledanou
+      </text>
+      <text type="pos_tagged">
+         VB-S---3P-NA--- PY------------- AAFS4----1A----
+      </text>
+      <ne_typed_text>
+        není zač nashledanou
+      </ne_typed_text>
+    </utterance>
+  </turn>
+</task>

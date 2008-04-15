@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task comment="" dialect="native" modified-by="XMLtextupdateLJ" description="" hour="16" min="19" gender="male" specification="" system="hhdis-nádraží" saved-by="Dialog Act Editor 1.0" month="05" volume="2" dialog="CD03~Part1~04-000506-161930-1" processing-state="approved" pin="" year="2000" transcription_level="?" last-change="Tue May 23 00:04:59 2006" quality="2" day="06" update_code="127">
+  <turn speaker="operator" number="1">
+    <utterance overlap_time="0.000" start_time="0.000" overlap="0" length="1.399" speaker="operator" end_time="1.399">
+      <text type="transcription">
+        informace
+      </text>
+      <text type="normalized">
+        informace
+      </text>
+      <text type="lemmatized">
+         informace
+      </text>
+      <text type="pos_tagged">
+         NNFS2-----A----
+      </text>
+      <ne_typed_text>
+        informace
+      </ne_typed_text>
+      <dialogue_act speech_act="opening" conversational_domain="frame" semantics="GREETING">
+        informace
+      </dialogue_act>
+      <parametrized_act speech_act="opening" type="lemmatized" conversational_domain="frame" semantics="GREETING">
+         informace
+      </parametrized_act>
+      <parametrized_act speech_act="opening" type="pos_tagged" conversational_domain="frame" semantics="GREETING">
+         NNFS2-----A----
+      </parametrized_act>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="2">
+    <utterance overlap_time="0.000" start_time="1.399" overlap="0" length="4.311" speaker="user" end_time="5.710">
+      <text type="transcription">
+        (do)brý den v kolik jede poslední vlak 'hs' z bezdružic{st} do pňovan{st}
+      </text>
+      <text type="normalized">
+        dobrý den v kolik jede poslední vlak z bezdružic do pňovan
+      </text>
+      <text type="lemmatized">
+         dobrý den v kolik jet poslední vlak z Bezdružice do Pňovany
+      </text>
+      <text type="pos_tagged">
+         AAIS1----1A---- NNIS1-----A---- RR--4---------- C-------------- VB-S---3P-AA--- AAIS1----1A---- NNIS1-----A---- RR--2---------- NNFP2-----A---- RR--2---------- NNIP2-----A----
+      </text>
+      <ne_typed_text>
+        dobrý den v kolik jede poslední vlak z [station] bezdružic [/station] do [station] pňovan [/station]
+      </ne_typed_text>
+      <dialogue_act speech_act="opening" conversational_domain="frame" semantics="GREETING">
+        dobrý den
+      </dialogue_act>
+      <parametrized_act speech_act="opening" type="lemmatized" conversational_domain="frame" semantics="GREETING">
+         dobrý den
+      </parametrized_act>
+      <parametrized_act speech_act="opening" type="pos_tagged" conversational_domain="frame" semantics="GREETING">
+         AAIS1----1A---- NNIS1-----A----
+      </parametrized_act>
+      <dialogue_act speech_act="request_info" conversational_domain="task" semantics="DEPARTURE(TIME, TRAIN_TYPE, FROM(STATION), TO(STATION))">
+        v kolik jede poslední vlak z [station] bezdružic [/station] do [station] pňovan [/station]
+      </dialogue_act>
+      <parametrized_act speech_act="request_info" type="lemmatized" conversational_domain="task" semantics="DEPARTURE(TIME, TRAIN_TYPE, FROM(STATION), TO(STATION))">
+         v kolik jet poslední vlak z Bezdružice do Pňovany
+      </parametrized_act>
+      <parametrized_act speech_act="request_info" type="pos_tagged" conversational_domain="task" semantics="DEPARTURE(TIME, TRAIN_TYPE, FROM(STATION), TO(STATION))">
+         RR--4---------- C-------------- VB-S---3P-AA--- AAIS1----1A---- NNIS1-----A---- RR--2---------- NNFP2-----A---- RR--2---------- NNIP2-----A----
+      </parametrized_act>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="3">
+    <utterance overlap_time="0.000" start_time="7.982" overlap="0" length="0.849" speaker="operator" end_time="8.831">
+      <text type="transcription">
+        dneska
+      </text>
+      <text type="normalized">
+        dnes
+      </text>
+      <text type="lemmatized">
+         dnes
+      </text>
+      <text type="pos_tagged">
+         Db-------------
+      </text>
+      <ne_typed_text>
+        dnes
+      </ne_typed_text>
+      <dialogue_act speech_act="verify" conversational_domain="task" semantics="TIME">
+        dnes
+      </dialogue_act>
+      <parametrized_act speech_act="verify" type="lemmatized" conversational_domain="task" semantics="TIME">
+         dnes
+      </parametrized_act>
+      <parametrized_act speech_act="verify" type="pos_tagged" conversational_domain="task" semantics="TIME">
+         Db-------------
+      </parametrized_act>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="4">
+    <utterance overlap_time="0.000" start_time="8.831" overlap="0" length="0.691" speaker="user" end_time="9.522">
+      <text type="transcription">
+        ano
+      </text>
+      <text type="normalized">
+        ano
+      </text>
+      <text type="lemmatized">
+         ano
+      </text>
+      <text type="pos_tagged">
+         TT-------------
+      </text>
+      <ne_typed_text>
+        ano
+      </ne_typed_text>
+      <dialogue_act speech_act="acknowledgement" conversational_domain="task" semantics="ACCEPT">
+        ano
+      </dialogue_act>
+      <parametrized_act speech_act="acknowledgement" type="lemmatized" conversational_domain="task" semantics="ACCEPT">
+         ano
+      </parametrized_act>
+      <parametrized_act speech_act="acknowledgement" type="pos_tagged" conversational_domain="task" semantics="ACCEPT">
+         TT-------------
+      </parametrized_act>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="5">
+    <utterance overlap_time="0.000" start_time="11.381" overlap="0" length="1.431" speaker="operator" end_time="12.812">
+      <text type="transcription">
+        v osmnáct třicet šest
+      </text>
+      <text type="normalized">
+        v osmnáct třicet šest
+      </text>
+      <text type="lemmatized">
+         v osmnáct třicet šest
+      </text>
+      <text type="pos_tagged">
+         RR--4---------- Cn-S4---------- Cn-S4---------- Cn-S4----------
+      </text>
+      <ne_typed_text>
+        v osmnáct třicet šest
+      </ne_typed_text>
+      <dialogue_act speech_act="present_info" conversational_domain="task" semantics="TIME">
+        v osmnáct třicet šest
+      </dialogue_act>
+      <parametrized_act speech_act="present_info" type="lemmatized" conversational_domain="task" semantics="TIME">
+         v osmnáct třicet šest
+      </parametrized_act>
+      <parametrized_act speech_act="present_info" type="pos_tagged" conversational_domain="task" semantics="TIME">
+         RR--4---------- Cn-S4---------- Cn-S4---------- Cn-S4----------
+      </parametrized_act>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="6">
+    <utterance overlap_time="0.000" start_time="12.812" overlap="0" length="1.172" speaker="user" end_time="13.984">
+      <text type="transcription">
+        'ps'
+      </text>
+      <text type="normalized">
+      </text>
+      <text type="lemmatized">
+         NONE
+      </text>
+      <text type="pos_tagged">
+         VB-S---3P-AA---
+      </text>
+      <ne_typed_text>
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="7">
+    <utterance overlap_time="0.000" start_time="13.984" overlap="0" length="0.687" speaker="operator" end_time="14.671">
+      <text type="transcription">
+        naschle
+      </text>
+      <text type="normalized">
+        nashledanou
+      </text>
+      <text type="lemmatized">
+         nashledanou
+      </text>
+      <text type="pos_tagged">
+         AAFS4----1A----
+      </text>
+      <ne_typed_text>
+        nashledanou
+      </ne_typed_text>
+      <dialogue_act speech_act="closing" conversational_domain="frame" semantics="">
+        nashledanou
+      </dialogue_act>
+      <parametrized_act speech_act="closing" type="lemmatized" conversational_domain="frame" semantics="">
+         nashledanou
+      </parametrized_act>
+      <parametrized_act speech_act="closing" type="pos_tagged" conversational_domain="frame" semantics="">
+         AAFS4----1A----
+      </parametrized_act>
+    </utterance>
+  </turn>
+</task>

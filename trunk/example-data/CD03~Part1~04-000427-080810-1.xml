@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task comment="přízvuk" dialect="nonnative" modified-by="XMLtextupdateLJ" description="" hour="08" min="08" gender="male" specification="special" system="hhdis-nádraží" saved-by="Dialog Act Editor 1.0" month="04" volume="3" dialog="CD03~Part1~04-000427-080810-1" processing-state="out-of-topic" pin="" year="2000" transcription_level="?" last-change="Tue May 23 00:04:39 2006" quality="3" day="27" update_code="127">
+  <turn speaker="operator" number="1">
+    <utterance overlap_time="0.000" start_time="0.000" overlap="0" length="2.360" speaker="operator" end_time="2.360">
+      <text type="transcription">
+        'hm' informace prosím
+      </text>
+      <text type="normalized">
+        informace prosím
+      </text>
+      <text type="lemmatized">
+         informace prosit
+      </text>
+      <text type="pos_tagged">
+         NNFS2-----A---- VB-S---1P-AA---
+      </text>
+      <ne_typed_text>
+        informace prosím
+      </ne_typed_text>
+      <dialogue_act speech_act="opening" conversational_domain="frame" semantics="GREETING">
+        informace prosím
+      </dialogue_act>
+      <parametrized_act speech_act="opening" type="lemmatized" conversational_domain="frame" semantics="GREETING">
+         informace prosit
+      </parametrized_act>
+      <parametrized_act speech_act="opening" type="pos_tagged" conversational_domain="frame" semantics="GREETING">
+         NNFS2-----A---- VB-S---1P-AA---
+      </parametrized_act>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="2">
+    <utterance overlap_time="0.000" start_time="2.360" overlap="0" length="1.478" speaker="user" end_time="3.838">
+      <text type="transcription">
+        kubica{jm} odry{on} dobrý den
+      </text>
+      <text type="normalized">
+        kubica odry dobrý den
+      </text>
+      <text type="lemmatized">
+         Kubica Odra dobrý den
+      </text>
+      <text type="pos_tagged">
+         NNFS1-----A---- NNFS2-----A---- AAIS1----1A---- NNIS1-----A----
+      </text>
+      <ne_typed_text>
+        [person] kubica [/person] [area] odry [/area] dobrý den
+      </ne_typed_text>
+      <dialogue_act speech_act="opening" conversational_domain="frame" semantics="PERSON, AREA, GREETING">
+        [person] kubica [/person] [area] odry [/area] dobrý den
+      </dialogue_act>
+      <parametrized_act speech_act="opening" type="lemmatized" conversational_domain="frame" semantics="PERSON, AREA, GREETING">
+         Kubica Odra dobrý den
+      </parametrized_act>
+      <parametrized_act speech_act="opening" type="pos_tagged" conversational_domain="frame" semantics="PERSON, AREA, GREETING">
+         NNFS1-----A---- NNFS2-----A---- AAIS1----1A---- NNIS1-----A----
+      </parametrized_act>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="3">
+    <utterance overlap_time="0.000" start_time="3.838" overlap="0" length="0.535" speaker="operator" end_time="4.373">
+      <text type="transcription">
+        dobrý den
+      </text>
+      <text type="normalized">
+        dobrý den
+      </text>
+      <text type="lemmatized">
+         dobrý den
+      </text>
+      <text type="pos_tagged">
+         AAIS1----1A---- NNIS1-----A----
+      </text>
+      <ne_typed_text>
+        dobrý den
+      </ne_typed_text>
+      <dialogue_act speech_act="opening" conversational_domain="frame" semantics="GREETING">
+        dobrý den
+      </dialogue_act>
+      <parametrized_act speech_act="opening" type="lemmatized" conversational_domain="frame" semantics="GREETING">
+         dobrý den
+      </parametrized_act>
+      <parametrized_act speech_act="opening" type="pos_tagged" conversational_domain="frame" semantics="GREETING">
+         AAIS1----1A---- NNIS1-----A----
+      </parametrized_act>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="4">
+    <utterance overlap_time="0.000" start_time="4.373" overlap="0" length="8.054" speaker="user" end_time="12.427">
+      <text type="transcription">
+        prosim vás chci informovat já jsem včera posílal z 'hs' z českých drah odry{st} dva balíky k vám do plzně{st} hlavní nádraží
+      </text>
+      <text type="normalized">
+        prosím vás chci informovat já jsem včera posílal z českých drah odry dva balíky k vám do plzně hlavní nádraží
+      </text>
+      <text type="lemmatized">
+         prosit ty chtít informovat já být včera posílat z český dráha Odra dva balík k ty do Plzeň hlavní nádraží
+      </text>
+      <text type="pos_tagged">
+         VB-S---1P-AA--- PP-P4--2------- VB-S---1P-AA--- Vf--------A---- PP-S1--1------- VB-S---1P-AA--- Db------------- VpYS---XR-AA--- RR--2---------- AAFP2----1A---- NNFP2-----A---- NNFS2-----A---- ClYP4---------- NNIP4-----A---- RR--3---------- PP-P3--2------- RR--2---------- NNFS2-----A---- AAFS2----1A---- NNNS1-----A----
+      </text>
+      <ne_typed_text>
+        prosím vás chci informovat já jsem včera posílal z českých drah [train] odry [/train] dva balíky k vám do [station] plzně [/station] [station] hlavní nádraží [/station]
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="5">
+    <utterance overlap_time="12.427" start_time="12.427" overlap="1" length="9.897" speaker="operator" end_time="22.324">
+      <text type="transcription">
+        pane prosím pěkně zadržte jste na informaci o vlacích takže pokud chcete zda vám došli balíky 'ps' pište si číslo
+      </text>
+      <text type="normalized">
+        pane prosím pěkně zadržte jste na informaci o vlacích takže pokud chcete zda vám došli balíky pište si číslo
+      </text>
+      <text type="lemmatized">
+         Pan prosit pěkně zadržet být na informace o vlak takže pokud chtít zda ty dojít balík psát se číslo
+      </text>
+      <text type="pos_tagged">
+         NNMS5-----A---- VB-S---1P-AA--- Dg-------1A---- Vi-P---2--A---- VB-P---2P-AA--- RR--6---------- NNFS6-----A---- RR--6---------- NNIP6-----A---- J-------------- J-------------- VB-P---2P-AA--- J-------------- PP-P3--2------- VpMP---XR-AA--- NNMP4-----A---- Vi-P---2--A---- P7-X3---------- NNNS1-----A----
+      </text>
+      <ne_typed_text>
+        pane prosím pěkně zadržte jste na informaci o vlacích takže pokud chcete zda vám došli balíky pište si číslo
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="6">
+    <utterance overlap_time="0.000" start_time="22.324" overlap="0" length="0.500" speaker="user" end_time="22.824">
+      <text type="transcription">
+        no
+      </text>
+      <text type="normalized">
+        no
+      </text>
+      <text type="lemmatized">
+         no
+      </text>
+      <text type="pos_tagged">
+         TT-------------
+      </text>
+      <ne_typed_text>
+        no
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="7">
+    <utterance overlap_time="0.000" start_time="22.824" overlap="0" length="2.341" speaker="operator" end_time="25.165">
+      <text type="transcription">
+        'lb' voláte drážním nebo státním
+      </text>
+      <text type="normalized">
+        voláte drážním nebo státním
+      </text>
+      <text type="lemmatized">
+         volat drážní nebo státní
+      </text>
+      <text type="pos_tagged">
+         VB-P---2P-AA--- AAFP3----1A---- J-------------- AAFP3----1A----
+      </text>
+      <ne_typed_text>
+        voláte drážním nebo státním
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="8">
+    <utterance overlap_time="0.000" start_time="25.165" overlap="0" length="2.474" speaker="user" end_time="27.639">
+      <text type="transcription">
+        *mi místním svojím statní(m)~
+      </text>
+      <text type="normalized">
+        místním svým státním
+      </text>
+      <text type="lemmatized">
+         místní svůj státní
+      </text>
+      <text type="pos_tagged">
+         AAFP3----1A---- P8XP3---------- AAFP3----1A----
+      </text>
+      <ne_typed_text>
+        místním svým státním
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="9">
+    <utterance overlap_time="27.639" start_time="27.639" overlap="1" length="9.955" speaker="operator" end_time="37.594">
+      <text type="transcription">
+        státním | 'lb' takže 'hs' vytočíte nula devatenáct plzeň{on} že jo sedumset jedna čtyřicet dva třicet šest
+      </text>
+      <text type="normalized">
+        státním takže vytočíte nula devatenáct plzeň že jo sedmset jedna čtyřicet dva třicet šest
+      </text>
+      <text type="lemmatized">
+         státní takže vytočit nula devatenáct Plzeň že jo SEDMSET jeden čtyřicet dva třicet šest
+      </text>
+      <text type="pos_tagged">
+         AAFP3----1A---- J-------------- VB-P---2P-AA--- NNFS1-----A---- Cn-S1---------- NNFS1-----A---- J-------------- TT------------- NNIS1-----A---- ClFS1---------- Cn-S1---------- ClYP1---------- Cn-S1---------- Cn-S1----------
+      </text>
+      <ne_typed_text>
+        státním takže vytočíte nula devatenáct [area] plzeň [/area] že jo sedmset jedna čtyřicet dva třicet šest
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="10">
+    <utterance overlap_time="38.317" start_time="37.594" overlap="2" length="2.233" speaker="user" end_time="40.330">
+      <text type="transcription">
+        ano :: děkuju paní | příjený den
+      </text>
+      <text type="normalized">
+        ano děkuji paní příjemný den
+      </text>
+      <text type="lemmatized">
+         ano děkovat paní příjemný den
+      </text>
+      <text type="pos_tagged">
+         TT------------- VB-S---1P-AA--1 NNFS1-----A---- AAIS1----1A---- NNIS1-----A----
+      </text>
+      <ne_typed_text>
+        ano děkuji paní příjemný den
+      </ne_typed_text>
+      <dialogue_act speech_act="thanking" conversational_domain="frame" semantics="">
+        ano děkuji paní příjemný den
+      </dialogue_act>
+      <parametrized_act speech_act="thanking" type="lemmatized" conversational_domain="frame" semantics="">
+         ano děkovat paní příjemný den
+      </parametrized_act>
+      <parametrized_act speech_act="thanking" type="pos_tagged" conversational_domain="frame" semantics="">
+         TT------------- VB-S---1P-AA--1 NNFS1-----A---- AAIS1----1A---- NNIS1-----A----
+      </parametrized_act>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="11">
+    <utterance overlap_time="38.317" start_time="38.317" overlap="2" length="1.510" speaker="operator" end_time="40.330">
+      <text type="transcription">
+        jo nemáte zač pane
+      </text>
+      <text type="normalized">
+        jo nemáte zač pane
+      </text>
+      <text type="lemmatized">
+         jo nemít zač Pan
+      </text>
+      <text type="pos_tagged">
+         TT------------- VB-P---2P-NA--- PY------------- NNMS5-----A----
+      </text>
+      <ne_typed_text>
+        jo nemáte zač pane
+      </ne_typed_text>
+      <dialogue_act speech_act="thanking" conversational_domain="frame" semantics="">
+        jo nemáte zač pane
+      </dialogue_act>
+      <parametrized_act speech_act="thanking" type="lemmatized" conversational_domain="frame" semantics="">
+         jo nemít zač Pan
+      </parametrized_act>
+      <parametrized_act speech_act="thanking" type="pos_tagged" conversational_domain="frame" semantics="">
+         TT------------- VB-P---2P-NA--- PY------------- NNMS5-----A----
+      </parametrized_act>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="12">
+    <utterance overlap_time="40.330" start_time="40.330" overlap="2" length="1.061" speaker="user" end_time="41.744">
+      <text type="transcription">
+        naschle
+      </text>
+      <text type="normalized">
+        nashledanou
+      </text>
+      <text type="lemmatized">
+         nashledanou
+      </text>
+      <text type="pos_tagged">
+         AAFS4----1A----
+      </text>
+      <ne_typed_text>
+        nashledanou
+      </ne_typed_text>
+      <dialogue_act speech_act="closing" conversational_domain="frame" semantics="">
+        nashledanou
+      </dialogue_act>
+      <parametrized_act speech_act="closing" type="lemmatized" conversational_domain="frame" semantics="">
+         nashledanou
+      </parametrized_act>
+      <parametrized_act speech_act="closing" type="pos_tagged" conversational_domain="frame" semantics="">
+         AAFS4----1A----
+      </parametrized_act>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="13">
+    <utterance overlap_time="-41.744" start_time="40.330" overlap="2" length="1.887" speaker="operator" end_time="42.570">
+      <text type="transcription">
+        děkuju nápodobně :: naschle
+      </text>
+      <text type="normalized">
+        děkuji nápodobně nashledanou
+      </text>
+      <text type="lemmatized">
+         děkovat nápodobně nashledanou
+      </text>
+      <text type="pos_tagged">
+         VB-S---1P-AA--1 Db------------- AAFS4----1A----
+      </text>
+      <ne_typed_text>
+        děkuji nápodobně nashledanou
+      </ne_typed_text>
+      <dialogue_act speech_act="thanking" conversational_domain="frame" semantics="">
+        děkuji nápodobně
+      </dialogue_act>
+      <parametrized_act speech_act="thanking" type="lemmatized" conversational_domain="frame" semantics="">
+         děkovat nápodobně
+      </parametrized_act>
+      <parametrized_act speech_act="thanking" type="pos_tagged" conversational_domain="frame" semantics="">
+         VB-S---1P-AA--1 Db-------------
+      </parametrized_act>
+      <dialogue_act speech_act="closing" conversational_domain="frame" semantics="">
+        nashledanou
+      </dialogue_act>
+      <parametrized_act speech_act="closing" type="lemmatized" conversational_domain="frame" semantics="">
+         nashledanou
+      </parametrized_act>
+      <parametrized_act speech_act="closing" type="pos_tagged" conversational_domain="frame" semantics="">
+         AAFS4----1A----
+      </parametrized_act>
+    </utterance>
+  </turn>
+</task>
