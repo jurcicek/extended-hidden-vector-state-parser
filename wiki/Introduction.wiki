@@ -67,7 +67,7 @@ Results:
 {'cI': 36, 'cH': 157, 'cN': 196, 'F': 76.399026763990264, 'Recall': 80.102040816326522, 'uS': 52, 'cD': 17, 'Prec': 73.023255813953497, 'uN': 114, 'cCorr': 80.102040816326536, 'uH': 62, 'cAcc': 61.734693877551024, 'cS': 22, 'uCorr': 54.385964912280699}
 }}}
 
-*In the directory `~/extended-HVS-parser/semantics-4/build`, are all intermediate and final results.*
+*In the directory `~/extended-HVS-parser/semantics-4/build`, there are all intermediate and final results.*
 
 === Error 1 ===
 
