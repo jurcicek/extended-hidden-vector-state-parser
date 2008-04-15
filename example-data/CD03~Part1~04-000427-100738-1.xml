@@ -1,0 +1,818 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task comment="" dialect="native" modified-by="XMLtextupdateLJ" description="dotaz na to jestli potrebuji obcanku nabo jinou prukazku na slevu" hour="10" min="07" gender="female" specification="special" system="hhdis-nádraží" saved-by="Dialog Act Editor 1.0" month="04" volume="2" dialog="CD03~Part1~04-000427-100738-1" processing-state="out-of-topic" pin="" year="2000" transcription_level="?" last-change="Tue May 23 00:04:41 2006" quality="3" day="27" update_code="127">
+  <turn speaker="operator" number="1">
+    <utterance overlap_time="0.000" start_time="1.075" overlap="0" length="1.040" speaker="operator" end_time="2.115">
+      <text type="transcription">
+        informace prosím
+      </text>
+      <text type="normalized">
+        informace prosím
+      </text>
+      <text type="lemmatized">
+         informace prosit
+      </text>
+      <text type="pos_tagged">
+         NNFS2-----A---- VB-S---1P-AA---
+      </text>
+      <ne_typed_text>
+        informace prosím
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="2">
+    <utterance overlap_time="0.000" start_time="2.115" overlap="0" length="7.184" speaker="user" end_time="9.299">
+      <text type="transcription">
+        'lb' dobrý den já bych prosila spojení ze žďáru_nad_sázavou{st} 'ps' 'lb' 'ps' 'hs' v pátek 'hs' do plzně{st}
+      </text>
+      <text type="normalized">
+        dobrý den já bych prosila spojení ze žďáru nad sázavou v pátek do plzně
+      </text>
+      <text type="lemmatized">
+         dobrý den já být prosít spojení z Žďár nad Sázava v pátek do Plzeň
+      </text>
+      <text type="pos_tagged">
+         AAIS1----1A---- NNIS1-----A---- PP-S1--1------- Vc-S---1------- VpQW---XR-AA--- NNNS4-----A---- RV--2---------- NNIS2-----A---- RR--7---------- NNFS7-----A---- RR--4---------- NNIS4-----A---- RR--2---------- NNFS2-----A----
+      </text>
+      <ne_typed_text>
+        dobrý den já bych prosila spojení ze [station] žďáru nad sázavou [/station] v pátek do [station] plzně [/station]
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="3">
+    <utterance overlap_time="0.000" start_time="12.228" overlap="0" length="1.756" speaker="operator" end_time="13.984">
+      <text type="transcription">
+        odpoledne nebo dopoledne jste říkala
+      </text>
+      <text type="normalized">
+        odpoledne nebo dopoledne jste říkala
+      </text>
+      <text type="lemmatized">
+         odpoledne nebo dopoledne být říkat
+      </text>
+      <text type="pos_tagged">
+         Db------------- J-------------- Db------------- VB-P---2P-AA--- VpQW---XR-AA---
+      </text>
+      <ne_typed_text>
+        odpoledne nebo dopoledne jste říkala
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="4">
+    <utterance overlap_time="0.000" start_time="13.984" overlap="0" length="9.797" speaker="user" end_time="23.781">
+      <text type="transcription">
+        no kdyby jste mě řekla obě dvě možný varianty | 'ps' chtěla bych to tak aby to nebylo s přestupem ten přímej vlak jak jede
+      </text>
+      <text type="normalized">
+        no kdyby jste mě řekla obě dvě možný varianty chtěla bych to tak aby to nebylo s přestupem ten přímý vlak jak jede
+      </text>
+      <text type="lemmatized">
+         no kdyby být já říci oba dva možný varianta chtít být ten tak aby ten nebýt s přestup ten přímý vlak jak jet
+      </text>
+      <text type="pos_tagged">
+         TT------------- J-------------- VB-P---2P-AA--- PH-S4--1------- VpQW---XR-AA--- ClHP4---------- ClHP4---------- AAFP4----1A---6 NNFP4-----A---- VpQW---XR-AA--- Vc-S---1------- PDNS4---------- J-------------- J-------------- PDNS4---------- VpNS---XR-NA--- RR--7---------- NNIS7-----A---- PDIS4---------- AAIS4----1A---- NNIS4-----A---- Db------------- VB-S---3P-AA---
+      </text>
+      <ne_typed_text>
+        no kdyby jste mě řekla obě dvě možný varianty chtěla bych to tak aby to nebylo s přestupem ten přímý vlak jak jede
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="5">
+    <utterance overlap_time="26.997" start_time="23.781" overlap="2" length="3.773" speaker="operator" end_time="27.740">
+      <text type="transcription">
+        no ale počkejte ten jede ze žďáru{st} už :: ráno
+      </text>
+      <text type="normalized">
+        no ale počkejte ten jede ze žďáru už ráno
+      </text>
+      <text type="lemmatized">
+         no ale počkat ten jet z Žďár už ráno
+      </text>
+      <text type="pos_tagged">
+         TT------------- J-------------- Vi-P---2--A---- PDIS4---------- VB-S---3P-AA--- RV--2---------- NNIS2-----A---- Db------------- Db-------------
+      </text>
+      <ne_typed_text>
+        no ale počkejte ten jede ze [station] žďáru [/station] už ráno
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="6">
+    <utterance overlap_time="-27.740" start_time="26.997" overlap="2" length="1.988" speaker="user" end_time="29.171">
+      <text type="transcription">
+        ten byl jenom :: jednou denně myslím
+      </text>
+      <text type="normalized">
+        ten byl jenom jednou denně myslím
+      </text>
+      <text type="lemmatized">
+         ten být jenom jednou denně myslit
+      </text>
+      <text type="pos_tagged">
+         PDYS1---------- VpYS---XR-AA--- TT------------- Cv------------- Dg-------1A---- VB-S---1P-AA---
+      </text>
+      <ne_typed_text>
+        ten byl jenom jednou denně myslím
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="7">
+    <utterance overlap_time="0.000" start_time="29.171" overlap="0" length="1.700" speaker="operator" end_time="30.871">
+      <text type="transcription">
+        a to je *zít v pátek ano
+      </text>
+      <text type="normalized">
+        a to je zítra v pátek ano
+      </text>
+      <text type="lemmatized">
+         a ten být zítra v pátek ano
+      </text>
+      <text type="pos_tagged">
+         J-------------- PDNS1---------- VB-S---3P-AA--- Db------------- RR--4---------- NNIS4-----A---- TT-------------
+      </text>
+      <ne_typed_text>
+        a to je zítra v pátek ano
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="8">
+    <utterance overlap_time="0.000" start_time="30.871" overlap="0" length="0.930" speaker="user" end_time="31.801">
+      <text type="transcription">
+        v pátek ano
+      </text>
+      <text type="normalized">
+        v pátek ano
+      </text>
+      <text type="lemmatized">
+         v pátek ano
+      </text>
+      <text type="pos_tagged">
+         RR--4---------- NNIS4-----A---- TT-------------
+      </text>
+      <ne_typed_text>
+        v pátek ano
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="9">
+    <utterance overlap_time="0.000" start_time="31.801" overlap="0" length="6.370" speaker="operator" end_time="38.171">
+      <text type="transcription">
+        'ps' přímej jede ze žďáru{st} ráno v sedum třicet jedna
+      </text>
+      <text type="normalized">
+        přímý jede ze žďáru ráno v sedm třicet jedna
+      </text>
+      <text type="lemmatized">
+         přímý jet z Žďár ráno v sedm třicet jeden
+      </text>
+      <text type="pos_tagged">
+         AAIS1----1A---- VB-S---3P-AA--- RV--2---------- NNIS2-----A---- Db------------- RR--4---------- Cn-S4---------- Cn-S4---------- ClFS1----------
+      </text>
+      <ne_typed_text>
+        přímý jede ze [station] žďáru [/station] ráno v sedm třicet jedna
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="10">
+    <utterance overlap_time="0.000" start_time="38.171" overlap="0" length="1.423" speaker="user" end_time="39.594">
+      <text type="transcription">
+        v sedum třicet jedna
+      </text>
+      <text type="normalized">
+        v sedm třicet jedna
+      </text>
+      <text type="lemmatized">
+         v sedm třicet jeden
+      </text>
+      <text type="pos_tagged">
+         RR--4---------- Cn-S4---------- Cn-S4---------- ClFS1----------
+      </text>
+      <ne_typed_text>
+        v sedm třicet jedna
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="11">
+    <utterance overlap_time="0.000" start_time="39.594" overlap="0" length="2.140" speaker="operator" end_time="41.734">
+      <text type="transcription">
+        a v plzni{st} jedenáct čtyrycet čtyři
+      </text>
+      <text type="normalized">
+        a v plzni jedenáct čtyřicet čtyři
+      </text>
+      <text type="lemmatized">
+         a v Plzeň jedenáct čtyřicet čtyři
+      </text>
+      <text type="pos_tagged">
+         J-------------- RR--6---------- NNFS6-----A---- Cn-S4---------- Cn-S4---------- ClXP4----------
+      </text>
+      <ne_typed_text>
+        a v [station] plzni [/station] jedenáct čtyřicet čtyři
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="12">
+    <utterance overlap_time="0.000" start_time="41.734" overlap="0" length="1.223" speaker="user" end_time="42.957">
+      <text type="transcription">
+        a je to bez přestu(pu)~
+      </text>
+      <text type="normalized">
+        a je to bez přestupu
+      </text>
+      <text type="lemmatized">
+         a být ten bez přestup
+      </text>
+      <text type="pos_tagged">
+         J-------------- VB-S---3P-AA--- PDNS1---------- RR--2---------- NNIS2-----A----
+      </text>
+      <ne_typed_text>
+        a je to bez přestupu
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="13">
+    <utterance overlap_time="0.000" start_time="42.957" overlap="0" length="0.990" speaker="operator" end_time="43.947">
+      <text type="transcription">
+        to je přímý ano
+      </text>
+      <text type="normalized">
+        to je přímý ano
+      </text>
+      <text type="lemmatized">
+         ten být přímý ano
+      </text>
+      <text type="pos_tagged">
+         PDNS4---------- VB-S---3P-AA--- AAIS1----1A---- TT-------------
+      </text>
+      <ne_typed_text>
+        to je přímý ano
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="14">
+    <utterance overlap_time="0.000" start_time="43.947" overlap="0" length="2.200" speaker="user" end_time="46.147">
+      <text type="transcription">
+        je to přímý | a v praze{st} stojí jak dlouho
+      </text>
+      <text type="normalized">
+        je to přímý a v praze stojí jak dlouho
+      </text>
+      <text type="lemmatized">
+         být ten přímý a v Praga stát jak dlouho
+      </text>
+      <text type="pos_tagged">
+         VB-S---3P-AA--- PDNS1---------- AAIS1----1A---- J-------------- RR--6---------- NNFS6-----A---- VB-S---3P-AA--- Db------------- Dg-------1A----
+      </text>
+      <ne_typed_text>
+        je to přímý a v [station] praze [/station] stojí jak dlouho
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="15">
+    <utterance overlap_time="0.000" start_time="46.147" overlap="0" length="8.740" speaker="operator" end_time="54.887">
+      <text type="transcription">
+        'ps' do prahy{st} to přijede v 'hs' 'ps' v deset třináct a vodjíždí hned deset patnáct
+      </text>
+      <text type="normalized">
+        do prahy to přijede v v deset třináct a odjíždí hned deset patnáct
+      </text>
+      <text type="lemmatized">
+         do Praha ten přijet v v deset třináct a odjíždět hned deset patnáct
+      </text>
+      <text type="pos_tagged">
+         RR--2---------- NNFS2-----A---- PDNS1---------- VB-S---3P-AA--- RR--6---------- RR--4---------- Cn-S4---------- Cn-S4---------- J-------------- VB-S---3P-AA--- Db------------- Cn-S4---------- Cn-S4----------
+      </text>
+      <ne_typed_text>
+        do [station] prahy [/station] to přijede v v deset třináct a odjíždí hned deset patnáct
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="16">
+    <utterance overlap_time="0.000" start_time="54.887" overlap="0" length="5.710" speaker="user" end_time="60.597">
+      <text type="transcription">
+        jo tak to by bylo bezvadný | a je to bez přestupu | takže sedum třicet jedna a jedenáct čtyrycet čtyři
+      </text>
+      <text type="normalized">
+        jo tak to by bylo bezvadný a je to bez přestupu takže sedm třicet jedna a jedenáct čtyřicet čtyři
+      </text>
+      <text type="lemmatized">
+         jo tak ten být být bezvadný a být ten bez přestup takže sedm třicet jeden a jedenáct čtyřicet čtyři
+      </text>
+      <text type="pos_tagged">
+         TT------------- Db------------- PDNS1---------- Vc-X---3------- VpNS---XR-AA--- AAIS1----1A---- J-------------- VB-S---3P-AA--- PDNS1---------- RR--2---------- NNIS2-----A---- J-------------- Cn-S4---------- Cn-S4---------- ClFS1---------- J-------------- Cn-S1---------- Cn-S1---------- ClXP1----------
+      </text>
+      <ne_typed_text>
+        jo tak to by bylo bezvadný a je to bez přestupu takže sedm třicet jedna a jedenáct čtyřicet čtyři
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="17">
+    <utterance overlap_time="0.000" start_time="60.597" overlap="0" length="9.880" speaker="operator" end_time="70.477">
+      <text type="transcription">
+        teda pardon to je smíchov{st} 'ps' 'ps' na hlavní přijede devět padesát dva a vodjíždí deset nula šest no to 'ps' není zas tak dlouho
+      </text>
+      <text type="normalized">
+        teda pardon to je smíchov na hlavní přijede devět padesát dva a odjíždí deset nula šest no to není zase tak dlouho
+      </text>
+      <text type="lemmatized">
+         teda pardon ten být Smíchov na hlavní přijet devět padesát dva a odjíždět deset nula šest no ten nebýt zase tak dlouho
+      </text>
+      <text type="pos_tagged">
+         Db------------6 NNIS1-----A---- PDNS1---------- VB-S---3P-AA--- NNIS1-----A---- RR--6---------- AAFS4----1A---- VB-S---3P-AA--- Cn-S1---------- Cn-S1---------- ClYP1---------- J-------------- VB-S---3P-AA--- Cn-S1---------- NNFS1-----A---- Cn-S1---------- TT------------- PDNS1---------- VB-S---3P-NA--- Db------------- Db------------- Dg-------1A----
+      </text>
+      <ne_typed_text>
+        teda pardon to je [station] smíchov [/station] na [station] hlavní [/station] přijede devět padesát dva a odjíždí deset nula šest no to není zase tak dlouho
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="18">
+    <utterance overlap_time="0.000" start_time="70.477" overlap="0" length="2.571" speaker="user" end_time="73.048">
+      <text type="transcription">
+        no to je tak čtvrt hodinky deset minut mximálně
+      </text>
+      <text type="normalized">
+        no to je tak čtvrt hodiny deset minut maximálně
+      </text>
+      <text type="lemmatized">
+         no ten být tak čtvrt hodina deset minuta maximálně
+      </text>
+      <text type="pos_tagged">
+         TT------------- PDNS1---------- VB-S---3P-AA--- Db------------- NNFS4-----A---- NNFS2-----A---- Cn-S4---------- NNFP2-----A---- Dg-------1A----
+      </text>
+      <ne_typed_text>
+        no to je tak čtvrt hodiny deset minut maximálně
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="19">
+    <utterance overlap_time="0.000" start_time="73.048" overlap="0" length="3.680" speaker="operator" end_time="76.728">
+      <text type="transcription">
+        no a jinak pak už to všechno ostatní to už jsou potom s přestupem
+      </text>
+      <text type="normalized">
+        no a jinak pak už to všechno ostatní to už jsou potom s přestupem
+      </text>
+      <text type="lemmatized">
+         no a jinak pak už ten všechen ostatní ten už být potom s přestup
+      </text>
+      <text type="pos_tagged">
+         TT------------- J-------------- Db------------- Db------------- Db------------- PDNS1---------- PLNS1---------- AANS1----1A---- PDNS1---------- Db------------- VB-P---3P-AA--- Db------------- RR--7---------- NNIS7-----A----
+      </text>
+      <ne_typed_text>
+        no a jinak pak už to všechno ostatní to už jsou potom s přestupem
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="20">
+    <utterance overlap_time="0.000" start_time="76.728" overlap="0" length="1.480" speaker="user" end_time="78.208">
+      <text type="transcription">
+        'lb' a vodpoledne
+      </text>
+      <text type="normalized">
+        a odpoledne
+      </text>
+      <text type="lemmatized">
+         a odpoledne
+      </text>
+      <text type="pos_tagged">
+         J-------------- Db-------------
+      </text>
+      <ne_typed_text>
+        a odpoledne
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="21">
+    <utterance overlap_time="0.000" start_time="79.742" overlap="0" length="1.344" speaker="operator" end_time="81.086">
+      <text type="transcription">
+        ne to už bude všechno
+      </text>
+      <text type="normalized">
+        ne to už bude všechno
+      </text>
+      <text type="lemmatized">
+         ne ten už být všechen
+      </text>
+      <text type="pos_tagged">
+         TT------------- PDNS1---------- Db------------- VB-S---3F-AA--- PLNS1----------
+      </text>
+      <ne_typed_text>
+        ne to už bude všechno
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="22">
+    <utterance overlap_time="0.000" start_time="81.086" overlap="0" length="2.056" speaker="user" end_time="83.142">
+      <text type="transcription">
+        to už je všechno s přestupem že jo
+      </text>
+      <text type="normalized">
+        to už je všechno s přestupem že jo
+      </text>
+      <text type="lemmatized">
+         ten už být všechen s přestup že jo
+      </text>
+      <text type="pos_tagged">
+         PDNS1---------- Db------------- VB-S---3P-AA--- PLNS1---------- RR--7---------- NNIS7-----A---- J-------------- TT-------------
+      </text>
+      <ne_typed_text>
+        to už je všechno s přestupem že jo
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="23">
+    <utterance overlap_time="0.000" start_time="90.055" overlap="0" length="3.633" speaker="operator" end_time="93.688">
+      <text type="transcription">
+        no tam už potom nejede nic přímo to už je všechno s přestupem odpoledne
+      </text>
+      <text type="normalized">
+        no tam už potom nejede nic přímo to už je všechno s přestupem odpoledne
+      </text>
+      <text type="lemmatized">
+         no tam už potom nejet nic přímo ten už být všechen s přestup odpoledne
+      </text>
+      <text type="pos_tagged">
+         TT------------- Db------------- Db------------- Db------------- VB-S---3P-NA--- PW--4---------- Dg-------1A---- PDNS1---------- Db------------- VB-S---3P-AA--- PLNS1---------- RR--7---------- NNIS7-----A---- Db-------------
+      </text>
+      <ne_typed_text>
+        no tam už potom nejede nic přímo to už je všechno s přestupem odpoledne
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="24">
+    <utterance overlap_time="0.000" start_time="93.688" overlap="0" length="6.920" speaker="user" end_time="100.608">
+      <text type="transcription">
+        vona je to právě stará paní 'ps' a ještě se zeptám teda na tu sobotu (j)es(tl)i jede aj v sobotu
+      </text>
+      <text type="normalized">
+        ona je to právě stará paní a ještě se zeptám teda na tu sobotu jestli jede i v sobotu
+      </text>
+      <text type="lemmatized">
+         on být ten právě starý paní a ještě se zeptat teda na ten sobota jestli jet I v sobota
+      </text>
+      <text type="pos_tagged">
+         PPFS1--3------- VB-S---3P-AA--- PDNS1---------- Db------------- AAFS1----1A---- NNFS4-----A---- J-------------- Db------------- P7-X4---------- VB-S---1P-AA--- Db------------6 RR--4---------- PDFS4---------- NNFS4-----A---- J-------------- VB-S---3P-AA--- NNXXX-----A---8 RR--4---------- NNFS4-----A----
+      </text>
+      <ne_typed_text>
+        ona je to právě stará paní a ještě se zeptám teda na tu sobotu jestli jede i v sobotu
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="25">
+    <utterance overlap_time="0.000" start_time="100.608" overlap="0" length="6.650" speaker="operator" end_time="107.258">
+      <text type="transcription">
+        'ps' tam omezení není žádný ten jezdí každý den
+      </text>
+      <text type="normalized">
+        tam omezení není žádný ten jezdí každý den
+      </text>
+      <text type="lemmatized">
+         tam omezení nebýt žádný ten jezdit každý den
+      </text>
+      <text type="pos_tagged">
+         Db------------- NNNS1-----A---- VB-S---3P-NA--- PWYS1---------- PDIS4---------- VB-S---3P-AA--- AAIS4----1A---- NNIS4-----A----
+      </text>
+      <ne_typed_text>
+        tam omezení není žádný ten jezdí každý den
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="26">
+    <utterance overlap_time="107.258" start_time="107.258" overlap="3" length="4.381" speaker="user" end_time="111.794">
+      <text type="transcription">
+        takže každej den v sedum třicet jedna ráno a jedenáct čtyrycet čtyry || v plzni{st}
+      </text>
+      <text type="normalized">
+        takže každý den v sedm třicet jedna ráno a jedenáct čtyřicet čtyři v plzni
+      </text>
+      <text type="lemmatized">
+         takže každý den v sedm třicet jeden ráno a jedenáct čtyřicet čtyři v Plzeň
+      </text>
+      <text type="pos_tagged">
+         J-------------- AAIS1----1A---- NNIS1-----A---- RR--4---------- Cn-S4---------- Cn-S4---------- ClFS1---------- Db------------- J-------------- Cn-S1---------- Cn-S1---------- ClXP1---------- RR--6---------- NNFS6-----A----
+      </text>
+      <ne_typed_text>
+        takže každý den v sedm třicet jedna ráno a jedenáct čtyřicet čtyři v [station] plzni [/station]
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="27">
+    <utterance overlap_time="111.172" start_time="111.172" overlap="2" length="0.466" speaker="operator" end_time="111.794">
+      <text type="transcription">
+        ano
+      </text>
+      <text type="normalized">
+        ano
+      </text>
+      <text type="lemmatized">
+         ano
+      </text>
+      <text type="pos_tagged">
+         TT-------------
+      </text>
+      <ne_typed_text>
+        ano
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="28">
+    <utterance overlap_time="0.000" start_time="111.794" overlap="0" length="1.269" speaker="user" end_time="113.063">
+      <text type="transcription">
+        bez přestupu
+      </text>
+      <text type="normalized">
+        bez přestupu
+      </text>
+      <text type="lemmatized">
+         bez přestup
+      </text>
+      <text type="pos_tagged">
+         RR--2---------- NNIS2-----A----
+      </text>
+      <ne_typed_text>
+        bez přestupu
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="29">
+    <utterance overlap_time="0.000" start_time="113.063" overlap="0" length="0.541" speaker="operator" end_time="113.604">
+      <text type="transcription">
+        ano
+      </text>
+      <text type="normalized">
+        ano
+      </text>
+      <text type="lemmatized">
+         ano
+      </text>
+      <text type="pos_tagged">
+         TT-------------
+      </text>
+      <ne_typed_text>
+        ano
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="30">
+    <utterance overlap_time="113.984" start_time="113.604" overlap="2" length="1.040" speaker="user" end_time="114.864">
+      <text type="transcription">
+        tak jo :: děkuju mockrát
+      </text>
+      <text type="normalized">
+        tak jo děkuji mockrát
+      </text>
+      <text type="lemmatized">
+         tak jo děkovat mockrát
+      </text>
+      <text type="pos_tagged">
+         Db------------- TT------------- VB-S---1P-AA--1 Cv-------------
+      </text>
+      <ne_typed_text>
+        tak jo děkuji mockrát
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="31">
+    <utterance overlap_time="113.984" start_time="113.984" overlap="2" length="0.660" speaker="operator" end_time="114.864">
+      <text type="transcription">
+        prosím
+      </text>
+      <text type="normalized">
+        prosím
+      </text>
+      <text type="lemmatized">
+         prosit
+      </text>
+      <text type="pos_tagged">
+         VB-S---1P-AA---
+      </text>
+      <ne_typed_text>
+        prosím
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="32">
+    <utterance overlap_time="114.864" start_time="114.864" overlap="1" length="2.520" speaker="user" end_time="117.384">
+      <text type="transcription">
+        jo ještě jsem se prosi(m) vás chtěla zeptat kolipa to stojí
+      </text>
+      <text type="normalized">
+        jo ještě jsem se prosím vás chtěla zeptat kolikpak to stojí
+      </text>
+      <text type="lemmatized">
+         jo ještě být se prosit ty chtít zeptat kolikpak ten stát
+      </text>
+      <text type="pos_tagged">
+         TT------------- Db------------- VB-S---1P-AA--- P7-X4---------- VB-S---1P-AA--- PP-P4--2------- VpQW---XR-AA--- Vf--------A---- C-------------- PDNS1---------- VB-S---3P-AA---
+      </text>
+      <ne_typed_text>
+        jo ještě jsem se prosím vás chtěla zeptat kolikpak to stojí
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="33">
+    <utterance overlap_time="0.000" start_time="117.384" overlap="0" length="3.900" speaker="operator" end_time="121.284">
+      <text type="transcription">
+        a je to sto šedesát celá jízdenka vona má asi poloviční že jo
+      </text>
+      <text type="normalized">
+        a je to sto šedesát celá jízdenka ona má asi poloviční že jo
+      </text>
+      <text type="lemmatized">
+         a být ten sto šedesát celý jízdenka on mít asi poloviční že jo
+      </text>
+      <text type="pos_tagged">
+         J-------------- VB-S---3P-AA--- PDNS1---------- NNNS1-----A---- Cn-S1---------- AAFS1----1A---- NNFS1-----A---- PPFS1--3------- VB-S---3P-AA--- TT------------- AAFS4----1A---- J-------------- TT-------------
+      </text>
+      <ne_typed_text>
+        a je to sto šedesát celá jízdenka ona má asi poloviční že jo
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="34">
+    <utterance overlap_time="0.000" start_time="121.284" overlap="0" length="4.670" speaker="user" end_time="125.954">
+      <text type="transcription">
+        no tak 'hs' je jí přes sedumdesát tak já nevím jes(tl)i *má musí mít ňákou průkazku
+      </text>
+      <text type="normalized">
+        no tak je jí přes sedmdesát tak já nevím jestli musí mít nějakou průkazku
+      </text>
+      <text type="lemmatized">
+         no tak být on přes sedmdesát tak já nevědět jestli muset mít nějaký průkazka
+      </text>
+      <text type="pos_tagged">
+         TT------------- Db------------- VB-S---3P-AA--- PPFS2--3------- RR--4---------- Cn-S4---------- Db------------- PP-S1--1------- VB-S---1P-NA--- J-------------- VB-S---3P-AA--- Vf--------A---- PZFS4---------- NNFS4-----A----
+      </text>
+      <ne_typed_text>
+        no tak je jí přes sedmdesát tak já nevím jestli musí mít nějakou průkazku
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="35">
+    <utterance overlap_time="125.954" start_time="125.954" overlap="1" length="6.310" speaker="operator" end_time="132.264">
+      <text type="transcription">
+        tak to už takhle přes sedumdesát to už nemusí to už jí stačí občanka na to si teda 'lb' koupí poloviční jízdenku
+      </text>
+      <text type="normalized">
+        tak to už takto přes sedmdesát to už nemusí to už jí stačí občanka na to si teda koupí poloviční jízdenku
+      </text>
+      <text type="lemmatized">
+         tak ten už takto přes sedmdesát ten už nemuset ten už on stačit občanka na ten se Ted koupě poloviční jízdenka
+      </text>
+      <text type="pos_tagged">
+         Db------------- PDNS1---------- Db------------- Db------------- RR--4---------- Cn-S4---------- PDNS1---------- Db------------- VB-S---3P-NA--- PDNS1---------- Db------------- PPFS3--3------- VB-S---3P-AA--- NNFS1-----A---- RR--4---------- PDNS4---------- P7-X3---------- NNMS4-----A---- NNFS7-----A---- AAFS4----1A---- NNFS4-----A----
+      </text>
+      <ne_typed_text>
+        tak to už takto přes sedmdesát to už nemusí to už jí stačí občanka na to si teda koupí poloviční jízdenku
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="36">
+    <utterance overlap_time="132.264" start_time="132.264" overlap="1" length="3.743" speaker="user" end_time="136.007">
+      <text type="transcription">
+        jo tak jenom občanku a poloviční jízdenku koupit automaticky
+      </text>
+      <text type="normalized">
+        jo tak jenom občanku a poloviční jízdenku koupit automaticky
+      </text>
+      <text type="lemmatized">
+         jo tak jenom občanka a poloviční jízdenka koupit automaticky
+      </text>
+      <text type="pos_tagged">
+         TT------------- Db------------- TT------------- NNFS4-----A---- J-------------- AAFS4----1A---- NNFS4-----A---- Vf--------A---- Dg-------1A----
+      </text>
+      <ne_typed_text>
+        jo tak jenom občanku a poloviční jízdenku koupit automaticky
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="37">
+    <utterance overlap_time="136.007" start_time="136.007" overlap="1" length="1.370" speaker="operator" end_time="137.377">
+      <text type="transcription">
+        takže to by bylo osumdesát
+      </text>
+      <text type="normalized">
+        takže to by bylo osmdesát
+      </text>
+      <text type="lemmatized">
+         takže ten být být osmdesát
+      </text>
+      <text type="pos_tagged">
+         J-------------- PDNS1---------- Vc-X---3------- VpNS---XR-AA--- Cn-S1----------
+      </text>
+      <ne_typed_text>
+        takže to by bylo osmdesát
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="38">
+    <utterance overlap_time="0.000" start_time="137.377" overlap="0" length="1.433" speaker="user" end_time="138.810">
+      <text type="transcription">
+        osumdesát korun
+      </text>
+      <text type="normalized">
+        osmdesát korun
+      </text>
+      <text type="lemmatized">
+         osmdesát koruna
+      </text>
+      <text type="pos_tagged">
+         Cn-S1---------- NNFP2-----A----
+      </text>
+      <ne_typed_text>
+        osmdesát korun
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="39">
+    <utterance overlap_time="0.000" start_time="138.810" overlap="0" length="0.471" speaker="operator" end_time="139.281">
+      <text type="transcription">
+        'hm'
+      </text>
+      <text type="normalized">
+      </text>
+      <text type="lemmatized">
+         NONE
+      </text>
+      <text type="pos_tagged">
+         VB-S---3P-AA---
+      </text>
+      <ne_typed_text>
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="40">
+    <utterance overlap_time="0.000" start_time="140.801" overlap="0" length="0.954" speaker="user" end_time="141.755">
+      <text type="transcription">
+        dobře děkuju mo(c)~
+      </text>
+      <text type="normalized">
+        dobře děkuji moc
+      </text>
+      <text type="lemmatized">
+         dobře děkovat moc
+      </text>
+      <text type="pos_tagged">
+         Dg-------1A---- VB-S---1P-AA--1 Db-------------
+      </text>
+      <ne_typed_text>
+        dobře děkuji moc
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="41">
+    <utterance overlap_time="0.000" start_time="141.755" overlap="0" length="0.515" speaker="operator" end_time="142.270">
+      <text type="transcription">
+        prosím
+      </text>
+      <text type="normalized">
+        prosím
+      </text>
+      <text type="lemmatized">
+         prosit
+      </text>
+      <text type="pos_tagged">
+         VB-S---1P-AA---
+      </text>
+      <ne_typed_text>
+        prosím
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="user" number="42">
+    <utterance overlap_time="142.270" start_time="142.270" overlap="2" length="0.780" speaker="user" end_time="143.310">
+      <text type="transcription">
+        nashledanou
+      </text>
+      <text type="normalized">
+        nashledanou
+      </text>
+      <text type="lemmatized">
+         nashledanou
+      </text>
+      <text type="pos_tagged">
+         AAFS4----1A----
+      </text>
+      <ne_typed_text>
+        nashledanou
+      </ne_typed_text>
+    </utterance>
+  </turn>
+  <turn speaker="operator" number="43">
+    <utterance overlap_time="142.270" start_time="142.270" overlap="2" length="0.780" speaker="operator" end_time="143.310">
+      <text type="transcription">
+        nashledanou
+      </text>
+      <text type="normalized">
+        nashledanou
+      </text>
+      <text type="lemmatized">
+         nashledanou
+      </text>
+      <text type="pos_tagged">
+         AAFS4----1A----
+      </text>
+      <ne_typed_text>
+        nashledanou
+      </ne_typed_text>
+    </utterance>
+  </turn>
+</task>
