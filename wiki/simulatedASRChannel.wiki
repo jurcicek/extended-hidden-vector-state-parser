@@ -7,9 +7,10 @@ First of all, you have to have instaleded PDT-2.0 with the script `run_tagger`
 (which altered 'run_all' so that it performes only the mophological analysis and tagging). Than you need `confusion` package from the top directory of the parser. This package performs the mentioned "confusion: of the input word sequences.
 
 You must set the follwing variables in the [settingsPath settings.path]:
-
+{{{
     export PDT20_TOOLS=/opt/PDT-2.0/tools/machine-annotation
     export CONFUSE_DIR=`pwd`/../confusion
+}}}
 
 To set the confusion on, you have to set the variable CONFUSE to 1 
 {{{
