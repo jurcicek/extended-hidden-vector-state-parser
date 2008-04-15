@@ -69,6 +69,10 @@ Results:
 
 *In the directory `~/extended-HVS-parser/semantics-4/build`, there are all intermediate and final results.*
 
+Performance of the results (from our papers):
+  * SAcc = Utterance Correctness
+  * CAcc = cAcc = Concept Accuracy
+
 === Error 1 ===
 
 If you see:
