@@ -6,5 +6,5 @@ Content of the documentation for the extended HVS parser.
   * [License]
   * [Introduction]
   * [StackValidation Stack Validation]
-  * [simulatedASRChannel Usage of an simulated ASR Channel]
+  * [simulatedASRChannel Usage of a simulated ASR Channel]
   * [settingsPath settings.path]
