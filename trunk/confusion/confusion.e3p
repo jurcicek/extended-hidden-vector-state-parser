@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Project SYSTEM "Project-3.8.dtd">
+<!-- Project file for project confusion -->
+<!-- Saved: 2006-09-04, 12:52:53 -->
+<!-- Copyright (C) 2006 ,  -->
+<Project version="3.8">
+  <ProgLanguage mixed="0">Python</ProgLanguage>
+  <UIType>Qt</UIType>
+  <Description></Description>
+  <Version>0.1</Version>
+  <Author></Author>
+  <Email></Email>
+  <Sources>
+    <Source>
+      <Name>genUttList.py</Name>
+    </Source>
+    <Source>
+      <Name>genMap.py</Name>
+    </Source>
+    <Source>
+      <Name>txt2mlf.py</Name>
+    </Source>
+    <Source>
+      <Name>upMap.py</Name>
+    </Source>
+    <Source>
+      <Name>plotPower.py</Name>
+    </Source>
+  </Sources>
+  <Forms>
+  </Forms>
+  <Translations>
+  </Translations>
+  <Interfaces>
+  </Interfaces>
+  <Others>
+  </Others>
+  <Vcs>
+    <VcsType>CVS</VcsType>
+    <VcsOptions>{'status': ['-v'], 'log': [''], 'global': ['-f'], 'update': ['-dP'], 'remove': ['-f'], 'add': [''], 'tag': ['-c'], 'export': [''], 'diff': ['-u3', '-p'], 'commit': [''], 'checkout': [''], 'history': ['-e', '-a']}</VcsOptions>
+    <VcsOtherData>{}</VcsOtherData>
+  </Vcs>
+  <FiletypeAssociations>
+    <FiletypeAssociation pattern="*.ui.h" type="FORMS" />
+    <FiletypeAssociation pattern="*.ui" type="FORMS" />
+    <FiletypeAssociation pattern="*.idl" type="INTERFACES" />
+    <FiletypeAssociation pattern="*.py" type="SOURCES" />
+    <FiletypeAssociation pattern="*.ptl" type="SOURCES" />
+  </FiletypeAssociations>
+</Project>

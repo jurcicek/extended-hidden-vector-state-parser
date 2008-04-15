@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="generator" content=
+"HTML Tidy for Linux/x86 (vers 1 September 2005), see www.w3.org">
+<meta http-equiv="CONTENT-TYPE" content=
+"text/html; charset=us-ascii">
+<title>Building the clnum Package on Windows</title>
+</head>
+<body lang="en-US" dir="ltr">
+<h1 align="center">Building the clnum Package on Windows</h1>
+<p>Frank Palazzolo<br>
+palazzol@comcast.net<br>
+12-August-2006</p>
+<p>This is the process for building clnum on Windows, using the
+mingw/MSYS compile environment, and the standard Python distutils
+system.</p>
+<p>This process has several steps:</p>
+<ol>
+<li>
+<p>Downloading the required files</p>
+</li>
+<li>
+<p>Setting up the mingw/MSYS compile environment</p>
+</li>
+<li>
+<p>Building gmp-4.2.1</p>
+</li>
+<li>
+<p>Building cln-1.1.13</p>
+</li>
+<li>
+<p>Building clnum, and the binary installer</p>
+</li>
+</ol>
+<h2>Step 1 - Downloading the required files:</h2>
+<p>These instructions are for downloading the exact versions of the
+files that I did. (Future versions may work as well.)</p>
+<p>These directions assume that you download the mingw.org files
+to:</p>
+<p>c:\mingw_downloads</p>
+<p>and the rest to:</p>
+<p>c:\clnum_build</p>
+<br>
+<p><b>From <a href=
+"http://www.mingw.org/">http://www.mingw.org/</a> (from the
+"Current" distribution):</b></p>
+<p><b>GCC section:</b><br>
+gcc-core-3.4.2-20040916-1.tar.gz<br>
+gcc-g++-3.4.2-20040916-1.tar.gz<br></p>
+<p><b>MSYS section:</b><br>
+MSYS-1.0.10.exe</p>
+<p><b>MinGW Runtime:</b><br>
+mingw-runtime-3.9.tar.gz</p>
+<p><b>Windows API:</b><br>
+w32api-3.6.tar.gz</p>
+<p><b>binutils:</b><br>
+binutils-2.15.91-20040904-1.tar.gz</p>
+<p><b>From <a href=
+"http://www.swox.com/gmp/">http://www.swox.com/gmp/</a></b><br>
+gmp-4.2.1.tar.gz</p>
+<p><b>From <a href=
+"http://www.ginac.de/CLN/">http://www.ginac.de/CLN/</a></b><br>
+cln-1.1.13.tar.bz2</p>
+<p><b>From <a href=
+"http://sourceforge.net/projects/calcrpnpy/">http://sourceforge.net/projects/calcrpnpy/</a></b><br>
+
+clnum-1.3.tar.gz</p>
+<h2>Step 2 - Setting up the mingw/MSYS compile environment</h2>
+<p>The easiest way to do this from scratch is to install MSYS
+first, just to get tar, gzip, and bzip2 on your system. Usually, it
+is better to install MSYS after mingw, since MSYS wants to know
+where your mingw is. In this case, we will just install it
+twice.</p>
+<p>Install MSYS-1.0.10.exe</p>
+<p>During the post-install questions, answer that you do not have a
+mingw install yet.</p>
+<p>Now, you can launch the MSYS shell:</p>
+<p>Program Files-&gt;Mingw-&gt;MSYS</p>
+<p>From within the MSYS shell, we will unpack the mingw
+compiler:<br>
+<br>
+(We will put mingw into c:/mingw)<br>
+cd /c/<br>
+mkdir mingw<br>
+cd mingw<br>
+(Unpack the C compiler core)<br>
+tar zxvf /c/mingw_downloads/gcc-core-3.4.2-20040916-1.tar.gz<br>
+(Unpack the C++ compiler)<br>
+tar zxvf /c/mingw_downloads/gcc-g++-3.4.2-20040916-1.tar.gz<br>
+(Unpack the runtime)<br>
+tar zxvf /c/mingw_downloads/mingw-runtime-3.9.tar.gz<br>
+(Unpack winapi)<br>
+tar zxvf /c/mingw_downloads/w32api-3.6.tar.gz<br>
+(Unpack utilities)<br>
+tar zxvf
+/c/mingw_downloads/binutils-2.15.91-20040904-1.tar.gz<br></p>
+<p>Close the shell, and install MSYS-1.0.10.exe again. This time
+give c:\mingw as your mingw path.</p>
+<h2>Step 3 - Building gmp-4.2.1</h2>
+<p>From within the MSYS shell, we will unpack and build GMP:</p>
+<pre>
+cd /c/clnum_build
+tar zxvf gmp-4.2.1.tar.gz
+cd gmp-4.2.1
+./configure
+make
+make check
+make install
+</pre>
+<p>GMP should build correctly with the default settings. All tests
+during "make check" should pass. The "make install" puts files in
+the MSYS /usr/local/include and /usr/local/lib directories.</p>
+<h2>Step 4 - Building cln-1.1.13</h2>
+<p>From within the MSYS shell, we will unpack and build CLN:</p>
+<p>Build CLN with these settings, per the manual, enabling gmp.</p>
+<pre>
+cd /c/clnum_build
+bunzip2 cln-1.1.13.tar.bz2
+tar xvf cln-1.1.13.tar
+cd cln-1.1.13
+</pre>
+<p>And finally, configure and build:</p>
+<p>(Now, all on one long line:)</p>
+<pre>
+CC="gcc" CFLAGS="-O" CXX="g++" CXXFLAGS="-O -fno-exceptions -finline-limit=1000" \
+CPPFLAGS="-I/usr/local/include" LDFLAGS="-L/usr/local/lib" \
+./configure --with-gmp
+</pre>
+<p>Note: compiling with -O2 fails during "make check", so I
+reverted to -O. If you check config.log, you should see that gmp.h
+was found and that gmp will be used for the build.</p>
+<pre>
+make
+make check
+make install
+</pre>
+<p>As with gmp, all checks should pass and the install puts things
+in MSYS's /usr/local/.</p>
+<p>Before we leave the MSYS shell, we should uncompress clnum,
+since we'll need it for the next step</p>
+<pre>
+cd /c/clnum_build
+tar zxvf clnum-1.3.tar.gz
+</pre>
+<h2>Step 5 - Building clnum, and the Binary Installer</h2>
+<p>Now, we are building clnum at the command prompt, (not in
+MSYS!), using Python distutils.</p>
+<p>First, we set up the command prompt to paths<br>
+<br>
+(To find the mingw compiler)<br>
+set PATH=c:\mingw\bin;%PATH%<br>
+<br>
+(To find the cln include files - this is /usr/local/include,
+assuming MSYS is installed in the default place)<br>
+set CPLUS_INCLUDE_PATH=c:\msys\1.0\local\include<br>
+<br>
+(To find the cln library file - this is /usr/local/lib, assuming
+MSYS is installed in the default place)<br>
+set LIBRARY_PATH=c:\msys\1.0\local\lib</p>
+<p>Now, we assume Python 2.4 is installed and in the path (Mine was
+Python2.4.3)</p>
+<pre>
+
+cd c:\clnum_build\clnum-1.3
+python setup.py build --compiler=mingw32 bdist_wininst -o
+</pre>
+<p>(You can replace python with c:\python24\python or whatever, if
+python is not in your path.) This should build and link clnum, and
+build a binary installer.</p>
+<p>Now go into the dist subdirectory, to find the binary installer.
+Run this to install clnum into your python environment.</p>
+<pre>
+cd dist
+clnum-1.3.win32-py2.4.exe
+</pre>
+<p>You can run the test scripts to verify functionality:</p>
+<pre>
+cd c:\clnum_build\clnum-1.3\test
+test_clnum.py
+</pre>
+<p>If all tests pass, congratulations - you're done!</p>
+</body>
+</html>
