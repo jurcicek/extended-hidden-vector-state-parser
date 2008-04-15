@@ -1,4 +1,4 @@
-Conten of the domumentation for the extended HVS parser.
+Content of the domumentation for the extended HVS parser.
 
 = Content =
 
