@@ -1,0 +1,304 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="generator" content=
+"HTML Tidy for Linux/x86 (vers 1 September 2005), see www.w3.org">
+<meta http-equiv="CONTENT-TYPE" content=
+"text/html; charset=us-ascii">
+<title>Class Library For Numbers Module</title>
+</head>
+<body lang="en-US" dir="ltr">
+<h1 align="center">Class Library For Numbers Module</h1>
+<h2>Introduction</h2>
+<p>The module clnum adds arbitrary precision floating point and
+rational numbers to Python. Both real and complex types are
+supported. The module also contains arbitrary precision
+replacements for the functions in the standard library math and
+cmath modules.</p>
+<p>The clnum module uses the <a href=
+"http://www.ginac.de/CLN/">Class Library for Numbers</a> (CLN) to
+do all of the hard work. The module simply provides a proper type
+interface so that the CLN numbers work with the standard Python
+arithmetic operators and interact properly with the built-in Python
+numeric types.</p>
+<h2>Installation</h2>
+<p>To install the clnum module, you need to have some other
+components installed on your system.</p>
+<ul>
+<li>
+<p>The GNU g++ compiler and standard library installed so that you
+can build C++ programs.</p>
+</li>
+<li>
+<p>The Python header files and the distutils package.</p>
+</li>
+<li>
+<p>CLN library and development files.</p>
+</li>
+</ul>
+<p>On a Debian system, these are satisfied by installing the
+following packages: g++, libcln-dev, and python-dev. Other Linux
+systems will have similar packages. If your system does not have a
+CLN package, go to <a href=
+"http://www.ginac.de/CLN/">http://www.ginac.de/CLN/</a> and
+download the source. Then follow the instructions for building
+CLN.</p>
+<p>Once you have the required components installed, installing the
+clnum module is simple. You need to download rpncalc from <a href=
+"http://sourceforge.net/projects/calcrpnpy/">http://sourceforge.net/projects/calcrpnpy/</a>
+and unpack it. Go to the directory that was created and run the
+following command as root.</p>
+<pre>
+python clnum_setup.py install --prefix=/usr/local
+</pre>
+<p>Verify the installation by running the unit test
+(test_clnum.py).</p>
+<p>If you want information on customizing the install process, see
+the section titled "Installing Python Modules" in the standard
+Python documentation.</p>
+<h3>Windows Users</h3>
+<p>A binary installer is now available for Windows thanks to the
+contribution of Frank Palazzolo. So all you need to get this module
+installed on Windows is to <a href=
+"http://sourceforge.net/projects/calcrpnpy/">download</a> and run
+the installer.</p>
+<p>If you want to build the source on Windows, see the <a href=
+'WindowsBuild.html'>Windows build instructions</a>.</p>
+<h2>Types</h2>
+<p>The clnum package adds four numeric types to the standard set
+available in Python. The mpf type is an arbitrary precision
+floating point type. The mpq type is a rational type. The types
+cmpf and cmpq are complex versions of these types.</p>
+<dl>
+<dt><b>mpf(x, prec=0)</b></dt>
+<dd>Convert a string or a number to arbitrary precision floating
+point. If the x argument is a string, it must follow the syntax for
+a Python float. However, infinity and NaN are not supported.
+Otherwise, the x argument may be any of the types int, long, float,
+mpq, or mpf. The optional prec argument specifies the desired
+number of decimal digits in the fraction part (zero means use the
+global default). See the discussion on precision for more
+information.</dd>
+<dd><br></dd>
+<dt><b>mpq(numer, denom=None)</b></dt>
+<dd>Convert a string or a number to a rational number. If the numer
+argument is a string, it must have the form
+"[+-]numerator_digits/denominator_digits" (the
+"/denominator_digits" part is optional). Otherwise, the numer
+argument may be any of the types int, long, float, mpq, or mpf. If
+the second parameter is used, both values must be integer types
+(int or long). In that case, the numer parameter is the numerator
+and denom is the denominator of the rational number. The resulting
+number is always reduced to lowest terms.</dd>
+<dd><br></dd>
+<dt><b>cmpf(real, imag=None, prec=0)</b></dt>
+<dd>Convert a string or a number to arbitrary precision complex
+floating point. If the real argument is a string, it must follow
+the syntax for a Python complex. However, infinity and NaN are not
+supported. Otherwise, the real argument may be any of the types
+int, long, float, complex, mpq, mpf, cmpq or cmpf. If the optional
+imag parameter is used, both the real and imag values must be
+numbers from the set int, long, float, mpq, or mpf. The optional
+prec argument specifies the desired number of decimal digits in the
+fraction part (zero means use the global default). See the
+discussion on precision for more information.</dd>
+<dd><br></dd>
+<dt><b>cmpq(real, imag=None)</b></dt>
+<dd>Convert a string or a number to a complex rational number where
+both the real and imaginary parts are rationals. If the real
+argument is a string, it must follow the syntax for a Python
+complex with the real and imaginary parts following the syntax for
+mpq. Otherwise, the real argument may be any of the types int,
+long, float, complex, mpq, mpf, cmpq or cmpf. If the optional imag
+parameter is used, both the real and imag values must be numbers
+from the set int, long, float, mpq, or mpf.</dd>
+</dl>
+<h2>Precision</h2>
+<p>There are two major categories of numbers, those that are exact,
+and those that are approximate. The exact numbers are from the set
+int, long, mpq, and cmpq. The approximate numbers are from the set
+float, complex, mpf, and cmpf.</p>
+<p>Whenever a calculation is performed with high-precision numbers,
+you want the result to reflect the precision used in all of the
+intermediate calculations. So if the result is exact, you want all
+of the intermediate calculations to be exact. This means that there
+can be no implicit conversions of approximate numbers to exact
+numbers. As a consequence, whenever mpq and cmpq types are used in
+an expression they can only be coerced to an approximate type not
+the other way around. Since the float and complex types do not
+recognize mpq and cmpq, an exception is raised whenever arithmetic
+between these types is attempted.</p>
+<p>If you perform mixed arithmetic on two approximate types, the
+precision of the result always decays to the precision of the value
+with the lowest precision. There is one exception to this rule.
+Python float and complex types use the C type double to represent
+the values. While the CLN library has types that encapsulate
+doubles, they can lead to non-recoverable aborts when mixed with
+the extended precision type. To avoid this problem, doubles are
+converted to an extended precision type with the lowest possible
+precision (approximately 17 decimal digits).</p>
+<h2>Attributes and Methods</h2>
+<p>The mpf and cmpf types have the following attribute.</p>
+<dl>
+<dt><b>prec</b></dt>
+<dd>The number of decimal digits of precision.</dd>
+<dd><br></dd>
+</dl>
+<p>The complex types cmpq and cmpf have the following attributes
+and method. They behave the same as the corresponding attributes
+and method of the built-in complex type.</p>
+<dl>
+<dt><b>conjugate()</b></dt>
+<dd>Returns the complex conjugate of the complex number.</dd>
+<dd><br></dd>
+<dt><b>imag</b></dt>
+<dd>The imaginary part of the complex number.</dd>
+<dd><br></dd>
+<dt><b>real</b></dt>
+<dd>The real part of the complex number.</dd>
+<dd><br></dd>
+</dl>
+<p>In addition, the cmpf type has the following attribute.</p>
+<dl>
+<dt><b>phase</b></dt>
+<dd>The phase angle in radians of the complex number. Range is
+-pi...pi.</dd>
+<dd><br></dd>
+</dl>
+<p>The mpq type has the following attributes.</p>
+<dl>
+<dt><b>denom</b></dt>
+<dd>The denominator of the rational number.</dd>
+<dd><br></dd>
+<dt><b>numer</b></dt>
+<dd>The numerator of the rational number.</dd>
+<dd><br></dd>
+</dl>
+<h2>Functions</h2>
+<p>Most of the functions in the clnum module are arbitrary
+precision floating point versions of Python builtins. See the
+Python documentation in the math, cmath, and builtins sections for
+the following functions: <b>acos, acosh, asin, asinh, atan, atan2,
+atanh, ceil, cos, cosh, degrees, exp, floor, hypot, log, log10,
+radians, round, sin, sinh, sqrt, tan,</b> and <b>tanh</b>. Note
+that these functions can operate on both real and complex numbers.
+If the inputs are real, they work like the functions in the math
+module. If the inputs are complex, they work like the functions in
+the cmath module.</p>
+<p>Since there is no longer a fixed form for the constants
+<code>e</code> and <code>pi</code>, they become the functions
+<code>exp1</code> and <code>pi</code> in the clnum module. These
+functions take the number of decimal digits as the parameter and
+return the constant with at least the requested precision. The
+parameter is optional and if not provided, the default precision is
+used.</p>
+<dl>
+<dt><b>binomial(m,n)</b></dt>
+<dd><code>m</code> and <code>n</code> must be small integers &gt;=
+0. This function returns the binomial coefficient (<code>m</code>
+choose <code>n</code>) = <code>m</code>! / <code>n</code>!
+<code>(m-n)</code>! for 0 &lt;= n &lt;= m, 0 otherwise.</dd>
+<dd><br></dd>
+<dt><b>cis(x)</b></dt>
+<dd>Returns the value of the expression
+<code>cos(x)+1j*sin(x)</code>.</dd>
+<dd><br></dd>
+<dt><b>doublefactorial(n)</b></dt>
+<dd><code>n</code> must be a small integer &gt;= 0. This function
+returns the doublefactorial <code>n</code>!! =
+<code>1*3*<small>...</small>*n</code> or <code>n</code>!! =
+<code>2*4*<small>...</small>*n</code>, respectively.</dd>
+<dd><br></dd>
+<dt><b>factorial(n)</b></dt>
+<dd><code>n</code> must be a small integer &gt;= 0. This function
+returns the factorial <code>n</code>! =
+<code>1*2*<small>...</small>*n</code>.</dd>
+<dd><br></dd>
+<dt><b>find_root(func, x1, x3, eps=1e-12, imax=40)</b></dt>
+<dd>Find a root of the user-defined function func that is bracketed
+by the values x1 and x3. The function must take a single real
+parameter and return a single real number. The optional argument
+eps specifies the convergence criterion. The optional argument imax
+specifies the maximum number of iterations to try before raising an
+exception.</dd>
+<dd><br></dd>
+<dt><b>get_default_precision()</b></dt>
+<dd>Returns the approximate number of decimal digits of precision
+used for conversions where the default precision is specified.</dd>
+<dd><br></dd>
+<dt><b>iscomplex(x)</b></dt>
+<dd>Returns True if x is one of the types complex, cmpf, or cmpq.
+Otherwise, False.</dd>
+<dd><br></dd>
+<dt><b>isexact(x)</b></dt>
+<dd>Returns True if x is one of the types int, long, mpq, or cmpq.
+Otherwise, False.</dd>
+<dd><br></dd>
+<dt><b>isreal(x)</b></dt>
+<dd>Returns True if x is one of the types int, long, float, mpf, or
+mpq. Otherwise, False.</dd>
+<dd><br></dd>
+<dt><b>number_str(s, prec=0, prefer_cmpf=False)</b></dt>
+<dd>Converts a string representing a number to the most appropriate
+type from the set int, long, mpq, mpf, cmpq, and cmpf. If
+prefer_cmpf is True, integers in complex input are treated as
+floating point. Otherwise, integers in complex input are treated as
+rationals. Integers may have an optional base specification prefix
+from the set (0x - hex, 0o - octal, 0b - binary). If the string
+represents one of the floating point types mpf or cmpf, the value
+of prec is used in the conversion.</dd>
+<dd><br></dd>
+<dt><b>ratapx(x, maxint=0x7FFF)</b></dt>
+<dd>Returns a rational approximation to the number x where the
+numerator and denominator are constrained to be less than or equal
+to maxint.</dd>
+<dd><br></dd>
+<dt><b>set_default_precision(prec)</b></dt>
+<dd>Set the number of decimal digits to use in conversions that
+specify the default precision.</dd>
+</dl>
+<h2>Examples</h2>
+<p>All of the examples assume the following import.</p>
+<p><code>from clnum import *</code></p>
+<pre>
+&gt;&gt;&gt; x = mpq(1,3); y = mpq(1,5); z = cmpq(mpq(2,3),mpq(3,5))
+&gt;&gt;&gt; print x+y
+8/15
+&gt;&gt;&gt; print x-y
+2/15
+&gt;&gt;&gt; print x*y
+1/15
+&gt;&gt;&gt; print x/y
+5/3
+&gt;&gt;&gt; print x+1 # Mix with integers.
+4/3
+&gt;&gt;&gt; print x+z
+(1+3/5j)
+&gt;&gt;&gt; print z**3
+(-286/675+73/125j)
+&gt;&gt;&gt; print abs(cmpf(z)), degrees(cmpf(z).phase)  # Polar form of complex number
+0.89690826980491402114 41.987212495816660054
+&gt;&gt;&gt; print hypot(z.real, z.imag) # Another way to compute abs(z)
+0.89690826980491402114
+&gt;&gt;&gt; print get_default_precision()
+26
+&gt;&gt;&gt; print repr(pi(40))
+mpf('3.141592653589793238462643383279502884197169399376',46)
+&gt;&gt;&gt; print repr(exp1(40))
+mpf('2.7182818284590452353602874713526624977572470937',46)
+&gt;&gt;&gt; def f(x): return x*x-2
+&gt;&gt;&gt; r = find_root(f, 1, 2, 1e-20)
+&gt;&gt;&gt; print r
+1.4142135623730950488
+&gt;&gt;&gt; print abs(r - sqrt(2))
+1.5692147344401202195e-24
+&gt;&gt;&gt; print ratapx(pi())
+355/113
+
+</pre>
+<p><a href="http://sourceforge.net"><img src=
+"http://sourceforge.net/sflogo.php?group_id=124786&amp;type=1"
+width="88" height="31" border="0" alt=
+"SourceForge.net Logo"></a></p>
+</body>
+</html>

@@ -1,0 +1,16 @@
+*.aux
+*.ps
+*.dvi
+*.toc
+*.bbl
+*.blg
+*.log
+*.bak
+*.pyc
+*.pyc
+*.e3s
+*.e3t
+*.txt~
+dict.txt
+confusion.out
+utt.txt

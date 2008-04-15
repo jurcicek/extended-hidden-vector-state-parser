@@ -1,0 +1,38 @@
+1.4 Enhancement Release - Nov 19, 2006
+
+* Fixed anomaly where an exact zero was converted using default precision in
+  multiply and divide routines.
+
+* Added function to approximate a number as a rational with the size of the
+  numerator and denominator constrained.
+
+
+1.3 Enhancement Release - Aug 18, 2006
+
+* Added combinatorial functions.
+
+* Improved the performance of converting very large Python longs.
+
+
+1.2.1 Bugfix Release - June 10, 2006
+
+Correct the unit test so that it works on both 32-bit and 64-bit platforms.
+There are no changes to the module code, only the unit test needed correction.
+
+
+1.2 Enhancement Release - May 6, 2006
+
+* Make compatible with Python 2.5 on 64-bit platforms.
+
+* Windows installer now available.
+
+* Include documentation for building clnum on Windows.
+
+
+1.1 Enhancement Release - Nov 27, 2005
+
+* Added optional parameter to number_str to allow the user to specify cmpf
+  format for integer complex forms.
+
+
+1.0 Initial Release - Aug 18, 2005

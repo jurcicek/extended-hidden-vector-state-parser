@@ -1,0 +1,3 @@
+#!/bin/sh
+
+ngram-count -sort -order 2 -lm $1.blm -text $1 -wbdiscount

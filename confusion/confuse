@@ -1,0 +1,59 @@
+#!/bin/sh
+
+# je treba instalovat:
+#   emerge cln
+# 
+# pak si stahnout package pro python clnum
+#   a instalovat jako python setup.py
+
+# :-)
+# to by melo stacit
+
+
+# tento soubor je hlavni. po skonceni vygenereju confused prepisy a vypise s jakym ACC byly vygenerenovany
+
+  
+# pocet moznosti na jedno slovo
+NUM=50
+
+# zmenou POWER se dá menit ACC vyslednych prepisu
+POWER=1.73
+
+# language model weight, stim asi neni treba hybat, ale muze se. 
+# podle mne jedulezite ACC, jak toho bude dosazeno na tom nezalezi
+LMW=2.0
+
+
+# ACC 50.54 POWER=1.109
+# ACC 65.07 POWER=1.5   LMW=2.0 
+# ACC 78.13 POWER=1.7   LMW=2.0 
+# ACC 89.98 POWER=2.0   LMW=2.0 
+# ACC 96.84 POWER=2.5   LMW=2.0 
+# ACC 99.48 POWER=3.5   LMW=2.0 
+
+echo "genUttList"
+#python ./genUttList.py
+
+echo "Generate Bigram Language Model - uttlm.txt.blm"
+#./make_blm uttlm.txt
+
+echo "genMap"
+# tenhle prikaz staci spustit jendou, kdyby se poustel pokazde tak je to ztrata casu. pri ladeni POWER to nema cenu
+#python ./genMap.py $NUM
+
+echo "upMap"
+./upMap.py $POWER
+
+echo "disambig"
+#disambig -lmw $LMW -mapw 1 -scale -keep-unk -text uttlm.txt -map map.up.txt -lm uttlm.txt.blm \
+#  | sed 's/<s> //' | sed 's/ <\/s>//' > uttlm.conf.txt
+
+disambig -lmw $LMW -mapw 1 -scale -keep-unk -text 1sent.txt -map map.up.txt -lm uttlm.txt.blm \
+  | sed 's/<s> //' | sed 's/ <\/s>//' > uttlm.conf.txt
+  
+echo "txt2mlf"
+./txt2mlf.py lab 1sent.txt uttlm.mlf
+./txt2mlf.py rec uttlm.conf.txt uttlm.conf.mlf
+
+echo "HResults"
+HResults -I uttlm.mlf /dev/null uttlm.conf.mlf

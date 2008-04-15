@@ -1,0 +1,3 @@
+The contents of the clnum package are identical to what is contained in the
+rpncalc and ratfun packages.  This is a separate package to aid those who are
+repackaging it for a Linux distribution. 

@@ -6,7 +6,7 @@ export EXPERIMENT_NAME=`date +%Y-%m-%d-%H.%M`${EXPERIMENT_NAME:+-$EXPERIMENT_NAM
 
 export BUILD_DIR=${REUSE_BUILD_DIR:-${BUILD_DIR:-build}/$EXPERIMENT_NAME}
 export RESULT_DIR=${RESULT_DIR:-results}/${BUILD_DIR##*/}
-export DATA_DIR=data_xml
+export DATA_DIR=`pwd`/../example-data
 export ANNOTATED_DIR=data_annotated
 export SRC_DIR=`pwd`/src
 export MAP_DIR=$BUILD_DIR/maps
@@ -64,5 +64,5 @@ export PDT_WORK_DIR=$BUILD_DIR/pdt
 
 export FSM_DIR=$BUILD_DIR/fsm
 
-export CONFUSE_DIR=~/Research/DIALOGUE/confusion
+export CONFUSE_DIR=`pwd`/../confusion
 export CONFUSE_DATA_DIR=$BUILD_DIR/data-confused
