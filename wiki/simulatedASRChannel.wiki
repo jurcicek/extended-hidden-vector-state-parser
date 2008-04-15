@@ -17,20 +17,22 @@ CONFUSE = 1
 }}}
 in the file `etc/confused`. 
 
-Po nastavení parametrů simulovaného
-kanálu je třeba určit, jaké datové množiny se použijí na jednotlivých
-vstupech. Pro trénování to určuje množina S[123]_DATASET, pro heldout
-data a testovací data S[123]_DATASET_DCD (pokud není nastavenou
-použije se S[123]_DATASET). Možné datové množiny podléhající zmatení
-jsou:
+After setting the simulated channel on, zou must to decide what data sets will be used on each inputs (input features). 
 
-    - Slova: word, conf_word
-    - Lemmata: lemma, conf_lemma
-    - POS tagy: pos, conf_pos
+For training you can chose from:
+  * S[123]_DATASET
 
-Po vhodné úpravě souboru etc/confused lze již spustit soubor
-semantics.py s vhodnými parametry, tj. je nutné použít kromě
-standardních settings a settings.path souborů i etc/confused. To může
-zajistit například příkaz:
+For heldout and testing data, you can chose from:
+  * S[123]_DATASET_DCD (if it is not set, use S[123]_DATASET)
 
-    ./settings.py -vvv all --cfgfile etc/confused
+Availabe confusion sets:
+  * Words: word, conf_word
+  * Lemmas: lemma, conf_lemma
+  * POS tags: pos, conf_pos
+
+After approriet modification of etc/confused, you shuld be able to run `semantics.py` with necessary paremeters. 
+
+It necessary to used not only parameters from [settingsPath settings.path] but also `etc/confused`. It can be done by:
+{{{
+./settings.py -vvv all --cfgfile etc/confused
+}}}
