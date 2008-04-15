@@ -21,10 +21,14 @@ svn checkout http://extended-hidden-vector-state-parser.googlecode.com/svn/trunk
 
 
 Go to the directory "~/extended-HVS-parser/semantics-4":
-* `cd ~/extended-HVS-parser/semantics-4`
+{{{
+cd ~/extended-HVS-parser/semantics-4
+}}}
 
 Run command from the bash command line:
-* `./semantics.py runbatch --verbose-level DEBUG --script ./batch/full_run_example.py`
+{{{
+./semantics.py runbatch --verbose-level DEBUG --script ./batch/full_run_example.py
+}}}
 
 You should see the following output:
 {{{
@@ -32,6 +36,13 @@ Running external method SemanticsMain.makeDirs ('bin/semantics/makeDirs')
 Running external method SemanticsMain.deleteTmpData ('bin/semantics/deleteTmpData')
 Running external method SemanticsMain.setCommonParams ('bin/semantics/setCommonParams')
 Running external method SemanticsMain.copyXMLData ('bin/semantics/copyXMLData')
+Running external method SemanticsMain.genInputMaps ('bin/semantics/genInputMaps')
+Running external method SemanticsMain.genInputs ('bin/semantics/genInputs')
+Running external method SemanticsMain.genHiddenObservation ('bin/semantics/genHiddenObservation')
+Running external method SemanticsMain.genEndOfUtteranceObservation ('bin/semantics/genEndOfUtteranceObservation')
+Running external method SemanticsMain.initSemanticModel ('bin/semantics/initSemanticModel')
+Running external method SemanticsMain.initLexicalModel ('bin/semantics/initLexicalModel')
+Running external method SemanticsMain.triangulate ('bin/semantics/triangulate')
 }}}
 
 
@@ -67,9 +78,25 @@ Script SemanticsMain: ExternalError: External method copyXMLData ('bin/semantics
 
 than you are missing the input XML data in the directory DATA_DIR. Original setting is `example-data` which results into `~/extended-HVS-parser/example-data`. The directory DATA_DIR is possible to set in the file [settingsPath settings.path].
 
+=== Error 3 ===
+
+If you see:
+
+{{{
+SemanticsMain.triangulate: bin/semantics/triangulate: line 4: gmtkTriangulate: command not found
+SemanticsMain.triangulate: bin/semantics/triangulate: line 10: gmtkTriangulate: command not found
+Script SemanticsMain: ExternalError: External method triangulate ('bin/semantics/triangulate') returned with nonzero exit status (127)
+}}}
+
+than the scripts can not access the GMTK binary files. Add path to the GMTK binary files into the PATH variable:
+{{{
+export PATH=$PATH:$HOME/bin-speech/gmtk/bin
+}}}
+
+
 = Special words = 
 
-== `_UNKNOWN_` == 
+== `_unseen_` == 
 
 
 = Special Concepts = 
