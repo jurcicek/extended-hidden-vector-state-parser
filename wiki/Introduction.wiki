@@ -42,6 +42,29 @@ Running external method SemanticsMain.genEndOfUtteranceObservation ('bin/semanti
 Running external method SemanticsMain.initSemanticModel ('bin/semantics/initSemanticModel')
 Running external method SemanticsMain.initLexicalModel ('bin/semantics/initLexicalModel')
 Running external method SemanticsMain.triangulate ('bin/semantics/triangulate')
+Running external method SemanticsMain.trainModel ('bin/semantics/trainModel')
+Running external method SemanticsMain.forcealignTrn ('bin/semantics/forcealignTrn')
+Results:
+========
+    Concept Accuracy          :  99.93
+    Concept Correctness       :  99.93
+    Utterance Correctness     :  99.93
+Running external method SemanticsMain.smoothModel ('bin/semantics/smoothModel')
+Running external method SemanticsMain.scaleModel ('bin/semantics/scaleModel')
+Running external method SemanticsMain.decodeHldt ('bin/semantics/decodeHldt')
+Results:
+========
+    Concept Accuracy          :  66.96
+    Concept Correctness       :  77.97
+    Utterance Correctness     :  65.12
+{'cI': 25, 'cH': 177, 'cN': 227, 'F': 79.909706546275402, 'Recall': 77.973568281938327, 'uS': 45, 'cD': 36, 'Prec': 81.944444444444443, 'uN': 129, 'cCorr': 77.973568281938327, 'uH': 84, 'cAcc': 66.960352422907491, 'cS': 14, 'uCorr': 65.116279069767444}
+Running external method SemanticsMain.decodeTst ('bin/semantics/decodeTst')
+Results:
+========
+    Concept Accuracy          :  68.57
+    Concept Correctness       :  82.04
+    Utterance Correctness     :  63.18
+{'cI': 78, 'cH': 475, 'cN': 579, 'F': 81.475128644939957, 'Recall': 82.037996545768564, 'uS': 109, 'cD': 70, 'Prec': 80.919931856899481, 'uN': 296, 'cCorr': 82.037996545768564, 'uH': 187, 'cAcc': 68.566493955094998, 'cS': 34, 'uCorr': 63.175675675675677}
 }}}
 
 
