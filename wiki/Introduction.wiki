@@ -46,25 +46,25 @@ Running external method SemanticsMain.trainModel ('bin/semantics/trainModel')
 Running external method SemanticsMain.forcealignTrn ('bin/semantics/forcealignTrn')
 Results:
 ========
-    Concept Accuracy          :  99.93
-    Concept Correctness       :  99.93
-    Utterance Correctness     :  99.93
+    Concept Accuracy          : 100.00
+    Concept Correctness       : 100.00
+    Utterance Correctness     : 100.00
 Running external method SemanticsMain.smoothModel ('bin/semantics/smoothModel')
 Running external method SemanticsMain.scaleModel ('bin/semantics/scaleModel')
 Running external method SemanticsMain.decodeHldt ('bin/semantics/decodeHldt')
 Results:
 ========
-    Concept Accuracy          :  66.96
-    Concept Correctness       :  77.97
-    Utterance Correctness     :  65.12
-{'cI': 25, 'cH': 177, 'cN': 227, 'F': 79.909706546275402, 'Recall': 77.973568281938327, 'uS': 45, 'cD': 36, 'Prec': 81.944444444444443, 'uN': 129, 'cCorr': 77.973568281938327, 'uH': 84, 'cAcc': 66.960352422907491, 'cS': 14, 'uCorr': 65.116279069767444}
+    Concept Accuracy          :  63.01
+    Concept Correctness       :  87.67
+    Utterance Correctness     :  63.41
+{'cI': 18, 'cH': 64, 'cN': 73, 'F': 80.503144654088047, 'Recall': 87.671232876712324, 'uS': 15, 'cD': 5, 'Prec': 74.418604651162795, 'uN': 41, 'cCorr': 87.671232876712324, 'uH': 26, 'cAcc': 63.013698630136986, 'cS': 4, 'uCorr': 63.414634146341463}
 Running external method SemanticsMain.decodeTst ('bin/semantics/decodeTst')
 Results:
 ========
-    Concept Accuracy          :  68.57
-    Concept Correctness       :  82.04
-    Utterance Correctness     :  63.18
-{'cI': 78, 'cH': 475, 'cN': 579, 'F': 81.475128644939957, 'Recall': 82.037996545768564, 'uS': 109, 'cD': 70, 'Prec': 80.919931856899481, 'uN': 296, 'cCorr': 82.037996545768564, 'uH': 187, 'cAcc': 68.566493955094998, 'cS': 34, 'uCorr': 63.175675675675677}
+    Concept Accuracy          :  61.73
+    Concept Correctness       :  80.10
+    Utterance Correctness     :  54.39
+{'cI': 36, 'cH': 157, 'cN': 196, 'F': 76.399026763990264, 'Recall': 80.102040816326522, 'uS': 52, 'cD': 17, 'Prec': 73.023255813953497, 'uN': 114, 'cCorr': 80.102040816326536, 'uH': 62, 'cAcc': 61.734693877551024, 'cS': 22, 'uCorr': 54.385964912280699}
 }}}
 
 
