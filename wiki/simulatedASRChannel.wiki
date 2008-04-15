@@ -20,10 +20,10 @@ in the file `etc/confused`.
 After setting the simulated channel on, zou must to decide what data sets will be used on each inputs (input features). 
 
 For training you can chose from:
-  * S\[123\]_DATASET
+  * `S[123]_DATASET`
 
 For heldout and testing data, you can chose from:
-  * S\[123\]_DATASET_DCD (if it is not set, use S[123]_DATASET)
+  * `S[123]_DATASET_DCD` (if it is not set, use `S[123]_DATASET`)
 
 Availabe confusion sets:
   * Words: word, conf_word
