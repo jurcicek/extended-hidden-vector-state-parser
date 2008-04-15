@@ -1,5 +1,5 @@
 #labels Featured
-Content of the domumentation for the extended HVS parser.
+Content of the documentation for the extended HVS parser.
 
 = Content =
 
