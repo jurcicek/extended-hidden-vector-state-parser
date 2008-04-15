@@ -8,8 +8,8 @@ First of all, you have to have instaleded PDT-2.0 with the script `run_tagger`
 
 You must set the follwing variables in the [settingsPath settings.path]:
 {{{
-    export PDT20_TOOLS=/opt/PDT-2.0/tools/machine-annotation
-    export CONFUSE_DIR=`pwd`/../confusion
+export PDT20_TOOLS=/opt/PDT-2.0/tools/machine-annotation
+export CONFUSE_DIR=`pwd`/../confusion
 }}}
 
 To set the confusion on, you have to set the variable CONFUSE to 1 
