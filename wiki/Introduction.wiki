@@ -7,7 +7,7 @@ it is part of gettext-base package).
 
 = Instalation =
 
-Checkout the project into your home directory. The name of the directory for the extended HVS parser should be `extended-HVS-parser`.
+Checkout the project into your home directory. The name of the directory for the extended HVS parser should be `extended-HVS-parser`. If you want to have read/write access to the project SVN tree use the following command (you also have to be a contributor in this project)
 {{{
 svn checkout https://extended-hidden-vector-state-parser.googlecode.com/svn/trunk extended-HVS-parser --username YOUR-USER-NAME
 }}}
@@ -15,6 +15,7 @@ or
 {{{
 svn checkout http://extended-hidden-vector-state-parser.googlecode.com/svn/trunk extended-HVS-parser
 }}}
+the read-only version.
 
 = Full run example =
 
