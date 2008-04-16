@@ -115,7 +115,7 @@ SemanticsMain.triangulate: bin/semantics/triangulate: line 10: gmtkTriangulate: 
 Script SemanticsMain: ExternalError: External method triangulate ('bin/semantics/triangulate') returned with nonzero exit status (127)
 }}}
 
-than the scripts can not access the GMTK binary files. Add path to the GMTK binary files into the PATH variable:
+than the scripts cannot access the GMTK binary files. Add path to the GMTK binary files into the PATH variable:
 {{{
 export PATH=$PATH:$HOME/..your-path-to-GMTK../gmtk/bin
 }}}
@@ -135,7 +135,7 @@ Script SemanticsMain: ExternalError: External method forcealignTrn ('bin/semanti
 
 }}}
 
-than the scripts can not access the SVC scripts. Add path to the SVC package into the PATH variable:
+than the scripts cannot access the SVC scripts. Add path to the SVC package into the PATH variable:
 {{{
 export PATH=$PATH:$HOME/extended-HVS-parser/svc
 }}}
