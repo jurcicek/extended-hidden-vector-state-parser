@@ -8,3 +8,4 @@ Content of the documentation for the extended HVS parser.
   * [StackValidation Stack Validation]
   * [simulatedASRChannel Usage of a simulated ASR Channel]
   * [settingsPath settings.path]
+  * [faq FAQ]
