@@ -5,7 +5,7 @@ To run our scripts, you will need working Linux environment, Python (minimum
 v 2.4), GMTK (last available version) (http://ssli.ee.washington.edu/~bilmes/gmtk/) and envsubst command (on Debian
 it is part of gettext-base package).
 
-= Instalation =
+= Installation =
 
 Checkout the project into your home directory. The name of the directory for the extended HVS parser should be `extended-HVS-parser`. If you want to have read/write access to the project SVN tree use the following command (you also have to be a contributor in this project)
 {{{
@@ -143,15 +143,17 @@ export PATH=$PATH:$HOME/extended-HVS-parser/svc
 = Special words = 
 
 == `_unseen_` == 
+Preprocesing of input utterances of the test or heldout data replaces all unseen words (we have not seen them in the training data) with this _artifficial_ word. 
 
 
 = Special Concepts = 
 
 == `_EMPTY_` ==
-a value in the hidden vector state which represents an empty stack at given position.
+A value in the hidden vector state which represents an empty stack value at given position.
 
 == `_DUMMY_` == 
-a value in the hidden vector state which represents
+A value in the hidden vector state (concept) which represents irrelevant input words
+such as _chould you_ and ir is subsequently discarded from the outpu semantics.
 
 == `_SINK_` == 
-the concept is used as an error assertion in the model. The concept is generated onto the stack any time, the hidden variables lead to inapproriate content on the stack. Later the [StackValidation stack validation] will dissable this HVS trasition sequence.
+The concept is used as an error assertion in the model. The concept is generated onto the stack any time, the hidden variables lead to inapproriate content on the stack. Later the [StackValidation stack validation] will dissable this HVS trasition sequence.
