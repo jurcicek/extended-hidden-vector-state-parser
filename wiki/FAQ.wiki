@@ -5,7 +5,7 @@ Frequently Asked Questions
 
 We have a question regarding the CPT tablesWe are currently trying to find ways to write the various probability tables in a concise way, e.g. P(word|c1,c2,c3,c4), without having to write card_word*card_concept^4 values. You seem to use GMTK's sparseCPTs, with only 207 different stack configurations. How do you reduce the state space this much? I'm sure your code explains this somewhere, but we didn't really understand this part.
 
-== Answer 1 ==
+== Answer ==
 
 You are right. We use sparseCPTs. 
  
