@@ -1,5 +1,5 @@
 #labels Featured,Phase-Requirements
-= GMTK implementation of Hidden Vector State Parser with some extensions =
+= GMTK implementation of the extended Hidden Vector State parser  =
 _Friday, 21 March 2008_
  
  * Copyright (C) 2005-2008, Filip Jurcicek, filip.jurcicek(at)gmail.com
