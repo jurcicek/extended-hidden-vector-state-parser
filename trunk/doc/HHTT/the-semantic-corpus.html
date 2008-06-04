@@ -1,0 +1,2413 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>The human-human train timetable dialogue corpus</TITLE>
+<META NAME="description" CONTENT="The human-human train timetable dialogue corpus">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="main.css">
+
+<LINK REL="next" HREF="node13.html">
+<LINK REL="previous" HREF="node11.html">
+<LINK REL="up" HREF="main.html">
+<LINK REL="next" HREF="node13.html">
+</HEAD>
+
+<BODY >
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html459"
+  HREF="node12.html#SECTION001210000000000000000">The train timetable dialogue corpus</A>
+<LI><A NAME="tex2html460"
+  HREF="node12.html#SECTION001220000000000000000">The dialogue act annotation scheme</A>
+<UL>
+<LI><A NAME="tex2html461"
+  HREF="node12.html#SECTION001221000000000000000">CONVERSATIONAL-DOMAIN dimension</A>
+<LI><A NAME="tex2html462"
+  HREF="node12.html#SECTION001222000000000000000">SPEECH-ACT dimension</A>
+<LI><A NAME="tex2html463"
+  HREF="node12.html#SECTION001223000000000000000">SEMANTIC dimension</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html464"
+  HREF="node12.html#SECTION001230000000000000000">Annotation process</A>
+<LI><A NAME="tex2html465"
+  HREF="node12.html#SECTION001240000000000000000">Corpus division into the training, development, test, and IAA data</A>
+<LI><A NAME="tex2html466"
+  HREF="node12.html#SECTION001250000000000000000">Reliability of the dialogue act annotation scheme</A>
+<UL>
+<LI><A NAME="tex2html467"
+  HREF="node12.html#SECTION001251000000000000000">The kappa statistic</A>
+<LI><A NAME="tex2html468"
+  HREF="node12.html#SECTION001252000000000000000">Dialogue act segmentation</A>
+<LI><A NAME="tex2html469"
+  HREF="node12.html#SECTION001253000000000000000">CONVERSATIONAL-DOMAIN dimension</A>
+<LI><A NAME="tex2html470"
+  HREF="node12.html#SECTION001254000000000000000">SPEECH-ACT dimension</A>
+<LI><A NAME="tex2html471"
+  HREF="node12.html#SECTION001255000000000000000">SEMANTIC dimension</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html472"
+  HREF="node12.html#SECTION001260000000000000000">The lower-bound baseline and the upper-bound ceiling</A>
+<UL>
+<LI><A NAME="tex2html473"
+  HREF="node12.html#SECTION001261000000000000000">CONVERSATIONAL-DOMAIN dimension</A>
+<UL>
+<LI><A NAME="tex2html474"
+  HREF="node12.html#SECTION001261100000000000000">The lower-bound baseline</A>
+<LI><A NAME="tex2html475"
+  HREF="node12.html#SECTION001261200000000000000">The upper-bound ceiling</A>
+</UL>
+<LI><A NAME="tex2html476"
+  HREF="node12.html#SECTION001262000000000000000">SPEECH-ACT dimension</A>
+<UL>
+<LI><A NAME="tex2html477"
+  HREF="node12.html#SECTION001262100000000000000">The lower-bound baseline</A>
+<LI><A NAME="tex2html478"
+  HREF="node12.html#SECTION001262200000000000000">The upper-bound ceiling</A>
+</UL>
+<LI><A NAME="tex2html479"
+  HREF="node12.html#SECTION001263000000000000000">SEMANTIC dimension</A>
+<UL>
+<LI><A NAME="tex2html480"
+  HREF="node12.html#SECTION001263100000000000000">The lower-bound baseline</A>
+<LI><A NAME="tex2html481"
+  HREF="node12.html#SECTION001263200000000000000">The upper-bound ceiling</A>
+</UL></UL></UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A NAME="SECTION001200000000000000000"></A> <A NAME="chptr:corpus"></A>
+<BR>
+The human-human train timetable dialogue corpus
+</H1>
+
+<P>
+This chapter describes the human-human train timetable (HHTT) dialogue corpus. The corpus contains transcribed user's phone calls to a train timetable information center. The phone calls consist of inquiries regarding their train traveler plans. The corpus is based on dialogues' transcription of user's inquiries that were previously collected in a train timetable information center. We enriched this transcription by dialogue act tags, which comprehend abstract semantic annotation. The corpus comprises a recorded speech of both operators and users, orthographic transcription, normalized transcription, normalized transcription with named entities, and dialogue act tags with abstract semantic annotation. 
+
+<P>
+First, Section <A HREF="#sctn:crps:corpus">5.1</A> describes the human-human train timetable dialogue corpus. Second, we propose and describe a dialogue act annotation scheme including abstract semantic annotation in Section <A HREF="#sctn:crps:annotation:scheme">5.2</A>. Further, Section <A HREF="#sctn:annotation">5.3</A> elaborates on the annotation process. Next, Section <A HREF="#sctn:crps:division:of:data">5.4</A> details division of the corpus into the training, development, test, and inter-intra annotator agreement data. In addition, in Section <A HREF="#sctn:crps:reliability">5.5</A> we measure the kappa statistic on the inter-intra annotator agreement data in order to evaluate the reliability of the collected dialogue acts. Finally, on the inter-annotator agreement data we estimate the complexity of the corpus by computing the lower-bound baselines and the upper-bound ceilings in Section <A HREF="#sctn:crps:lb:ub">5.6</A>. 
+
+<P>
+The corpus was also described in jurcicek05timetable.
+
+<P>
+
+<H1><A NAME="SECTION001210000000000000000"></A> <A NAME="sctn:crps:corpus"></A>
+<BR>
+The train timetable dialogue corpus
+</H1>
+
+<P>
+The calls were collected in a train timetable information center. We had been recording the corpus since April, 2000 to September, 2000. We collected 6,584 calls from which we transcribed 6,353 calls (dialogues). Callers were mainly Czechs. A small portions of callers were from abroad (0.7%); their Czech language was heavily influenced by their native language. Therefore, we labeled this type of recordings as unsuitable for further processing.
+
+<P>
+The whole corpus contains 106 hours of speech, which is a single channel, sampled at 8kHz with A-Law compression. The average length of a dialogue is about 60 seconds. The effective user's and operator's speech (without noise and silence) is 32% and 39%. The audio files were divided into turns that start with a speaker change. The corpus consists of 81,543 turns. The size of the vocabulary of the whole corpus is about 12,000 words, and there are almost 603,000 tokens in the corpus. The operator's vocabulary (5,839 words) is smaller than user's vocabulary (9,485 words). While a dialogue has 6 user's turns on average, the first user's turn contains 35% of user's tokens in the dialogue.
+
+<P>
+Transcription was done using the Transcriber<A NAME="tex2html18"
+  HREF="footnode.html#foot2511"><SUP>5.1</SUP></A> 1.4.1 speech editing tool. In addition to orthographic transcription, the following non-speech sounds were marked: tongue click, lip smack, laughter, breath, background noise, silence, and unintelligible. Further, we divided each utterance into segments that allow us to assign one dialogue act to each segment. We chose orthographic transcription because it is more suitable for transcription of Czech spontaneous speech psutka04isues. Spontaneous Czech contains words and usages not found either in standard written or in formal spoken Czech.
+
+<P>
+In jelinek04spontaneous, there is described the previous work on the presented dialogue corpus. Named entities were labeled. Normalized transcription was generated automatically with the aid of a dictionary containing only formal Czech words. Only context independent normalization was performed. There also started the collection of semantic annotation for the first user's inquiry.
+
+<P>
+
+<H1><A NAME="SECTION001220000000000000000"></A> <A NAME="sctn:crps:annotation:scheme"></A>
+<BR>
+The dialogue act annotation scheme
+</H1>
+
+<P>
+Defining a new annotation scheme is a challenging task that is not easy and not always desirable. Therefore, we wanted to reuse an existing annotation scheme that would fulfill the following requirements:
+
+<P>
+
+<OL>
+<LI>Robustness: reliability of human annotation of typical data (high inter-annotator and intra-annotator agreement, at least potentially).
+
+<P>
+</LI>
+<LI>Evaluation: relation to one or more existing systems so that we can compare already obtained experimental results with new results.
+
+<P>
+</LI>
+<LI>Reusability: available mapping of existing annotation scheme to the proposed annotation scheme at least partially so that useful insights are preserved.
+
+<P>
+</LI>
+<LI>Separation: separation of dialogue control related information from task related information.
+
+<P>
+</LI>
+<LI>Universality: general and expandable semantic representation to easy maintain the annotation.
+</LI>
+</OL>
+
+<P>
+First of all, we were interested in DAMSL (Dialogue Act Markup in Several Layer) allen97damsl; however, DAMSL was too sophisticated for our purposes, covering many aspects of dialogue structure that were not necessarily relevant to our task. clark04multilevel states that dialogue act tagging on Switchboard data that initially started with full DAMSL scheme (about 4 million possible combination of DAMSL tags) resulted in a clustered 42 mutually exclusive dialogue act tags. The given reason was that only a minimal portion of all possible DAMSL tag's combinations had been seen. In addition, the inter-annotator agreement levels reported for this scheme were quite low. Thus, we rejected the DAMSL. Nonetheless, we decided to reuse some ideas.
+
+<P>
+Secondly, we investigated DATE (Dialogue Act Tagging for Evaluation)  scheme walker00date. Each DATE's dialogue act consists of three dimensions: (1) DOMAIN, (2) SPEECH-ACT, (3) TASK-SUBTASK (sometimes referred as a FRAME domain). We found its limitations as well. Because it was originally designed for evaluation and comparison of spoken dialogue systems, it mainly focuses on human-computer dialogs. In addition, in walker00date only operator (computer system) part of COMMUNICATOR data walker01darpa was annotated. Finally, the TASK-SUBTASK dimension does not contain enough information about a particular utterance for successful control of a dialogue.
+
+<P>
+Although neither of both tagsets were suitable on their own, we adopted a combination of these two tagsets that suppresses their disadvantages and boosts their advantages. We started to build on a DATE for its simplicity and because it had been designed for task-oriented dialogues. We removed the TASK-SUBTASK dimension and replaced it with a new SEMANTIC dimension. The new dimension covers full semantic annotation. Additionally, we found necessity of new tags for annotating user's utterances and complex (human) operator's answers. Therefore,  we extended tagset by a few elements borrowed from DAMSL tagset (agreement, politeness - thanking, speech-repair); it was necessary to fully cover human-human interaction. The selected tags were sufficiently clear and simple so that we believed we would be able to tag the data reliably. Because DAMSL is differently structured, some of these tags were incorporated into the SEMANTIC dimension (e.g. concepts ACCEPT, REJECT) and rest to the SPEECH-ACT dimension.
+
+<P>
+We describe the CONVERSATIONAL-DOMAIN, the SPEECH-ACT, and the SEMANTIC dimensions in three following sections.
+
+<P>
+
+<H2><A NAME="SECTION001221000000000000000">
+CONVERSATIONAL-DOMAIN dimension</A>
+</H2>
+
+<P>
+The CONVERSATIONAL-DOMAIN dimension assigns every utterance to three areas of conversational action. We adopted this approach from DATE. The first area of CONVERSATIONAL-DOMAIN is the task domain, which is train timetable inquiry answering. The second area is the managing communication channel. Finally, the third area is the situation frame, which refers to an apology or an instruction contained in a sentence.
+
+<P>
+<B>Task</B> - the tag for an utterance that deals with a task completion. For example, a task utterance asks about departure time or presents departure time of a questioned train (see Table <A HREF="#tbl:sample:dialogue:hhtt">5.1</A>). This tag is mostly used with the following values of SPEECH-ACT dimension: request_info, present_info, offer, and acknowledgment (see Section <A HREF="#sctn:crps:speech:act">5.2.2</A>). 
+
+<P>
+<B>Communication</B> - the tag for an utterance that manages the verbal channel and provides evidence what has been understood. For example, in the early annotation stage we have found implicit confirmation very common in the corpus.  A typical example is repetition of departure time. This tag is mostly used with the following values of SPEECH-ACT dimension: explicit_confirmation, implicit_confirmation, and acknowledgment.
+
+<P>
+<B>Frame</B> - the tag for an utterance that describes a state of a dialogue e.g. instruction, apology.  As is stated in walker00date, these parts of dialogue are very common in human-computer dialogues (instructions) but rare in human-human dialogues. Nonetheless, we kept a frame value in our tagging scheme mainly to maintain compatibility with DATE. This tag is mostly used with the following values of SPEECH-ACT dimension: instruction, apology, opening, closing, thanking, speech_repair, status_report.
+
+<P>
+
+<H2><A NAME="SECTION001222000000000000000"></A> <A NAME="sctn:crps:speech:act"></A>
+<BR>
+SPEECH-ACT dimension
+</H2>
+
+<P>
+The SPEECH-ACT dimension refers to an utterance's communicative goal, independently on an utterance form. This dimension differentiates utterances that have the same value of the SEMANTIC dimension. For instance, the SPEECH-ACT dimension values request_info and present_info can refer to the same value in the SEMANTIC dimension, e.g. DEPARTURE(TIME, FROM(STATION)). In the following examples is presented also the abstract semantic annotation, which is described in details in Section <A HREF="#sbsctn:crps:semantics">5.2.3</A>.
+
+<P>
+For this dimension the following tags are defined: 
+acknowledgment, 
+apology, 
+closing, 
+explicit_confirmation, 
+implicit_confirmation, 
+instruction, 
+offer, 
+opening, 
+present_info, 
+request_info, 
+speech_repair,
+status_report, 
+thanking, 
+verify,
+verify_neg.
+
+<P>
+<B>Acknowledgment</B> - this tag represents utterances which accept or reject some already mentioned information.
+<BR>
+<IMG
+ WIDTH="501" HEIGHT="202" ALIGN="BOTTOM" BORDER="0"
+ SRC="img138.png"
+ ALT="\begin{example}
+\xmpl
+{a to by tak òák staèilo tich jedenáct deset z hlavního jo...
+...))}
+\par
+\xmpl
+{ano}
+{yes}
+{communication}{acknowledgment}{ACCEPT}
+\end{example}">
+<BR>
+
+<P>
+<B>Apology</B> - represents utterances containing an apology for inability to answer user's question. 
+<BR>
+<IMG
+ WIDTH="432" HEIGHT="198" ALIGN="BOTTOM" BORDER="0"
+ SRC="img139.png"
+ ALT="\begin{example}
+\xmpl
+{bohu¾el to vám nepovím}
+{so sorry this I do not know}
+{fr...
+...ký vagóny}
+{wait what do you mean what cars}
+{frame}{apology}{---}
+\end{example}">
+<BR>
+
+<P>
+<B>Closing</B> - represents utterances ending dialogues. 
+<BR>
+<IMG
+ WIDTH="432" HEIGHT="98" ALIGN="BOTTOM" BORDER="0"
+ SRC="img140.png"
+ ALT="\begin{example}
+\xmpl
+{nashle}
+{bye}
+{frame}{closing}{---}
+\end{example}">
+<BR>
+
+<P>
+<B>Explicit_confirmation</B> - represents utterances which ask about already mentioned information. It is used for explicit confirmation and mainly an answer is expected. 
+<BR>
+<IMG
+ WIDTH="548" HEIGHT="102" ALIGN="BOTTOM" BORDER="0"
+ SRC="img141.png"
+ ALT="\begin{example}
+\xmpl
+{odpoledne jste øíkala ¾e jo}
+{at afternoon you have said}
+{communication}{explicit\_confirmation}{TIME}
+\end{example}">
+<BR>
+
+<P>
+<B>Implicit_confirmation</B> - represents utterances which ask about already mentioned information. It is used for implicit confirmation. It is used when someone repeats some information to confirm it, for instance the last time from the just pronounced utterance. Generally, an answer is not expected unless the repeated information is wrong. 
+<BR>
+<IMG
+ WIDTH="548" HEIGHT="104" ALIGN="BOTTOM" BORDER="0"
+ SRC="img142.png"
+ ALT="\begin{example}
+\xmpl
+{v jedenáct deset z hlavního}
+{at eleven ten from the main...
+...ation}
+{communication}{implicit\_confirmation}{TIME,FROM(STATION)}
+\end{example}">
+<BR>
+
+<P>
+<B>Instruction</B> - represents utterances consisting of instructions which say how to act, what to say, what to do. 
+<BR>
+<IMG
+ WIDTH="466" HEIGHT="203" ALIGN="BOTTOM" BORDER="0"
+ SRC="img143.png"
+ ALT="\begin{example}
+\xmpl
+{no kdy¾ budete na mì paní køièet tak najdu}
+{well if you ...
+...move to Masarykovo nádra¾í}
+{task}{instruction}{TRANSFER(STATION)}
+\end{example}">
+<BR>
+
+<P>
+<B>Offer</B> - represents utterances when an operator offers to a user some additional options which have not been requested. It is very specialized tag which is usually possible to determine only from the context. 
+<BR>
+<IMG
+ WIDTH="415" HEIGHT="302" ALIGN="BOTTOM" BORDER="0"
+ SRC="img144.png"
+ ALT="\begin{example}
+\xmpl
+{ale mù¾ete jet v nedìli}
+{but you can go on Sunday}
+{task...
+... will be better through Doma¾lice}
+{task}{offer}{THROUGH(STATION)}
+\end{example}">
+<BR>
+
+<P>
+<B>Opening</B> - represents utterances that open dialogues.
+<BR>
+<IMG
+ WIDTH="432" HEIGHT="202" ALIGN="BOTTOM" BORDER="0"
+ SRC="img145.png"
+ ALT="\begin{example}
+\xmpl
+{informace prosím}
+{information please}
+{frame}{opening}{GREETING}
+\par
+\xmpl
+{dobrý den}
+{hallo}
+{frame}{opening}{GREETING}
+\end{example}">
+<BR>
+
+<P>
+<B>Present_info</B> - represents utterances presenting some new information. It is a response to the SPEECH-ACT request_info.
+<BR>
+<IMG
+ WIDTH="471" HEIGHT="104" ALIGN="BOTTOM" BORDER="0"
+ SRC="img146.png"
+ ALT="\begin{example}
+\xmpl
+{v jedenáct ètyøicet vyjedete ze Su¹ice}
+{at eleven forty ...
+...leave Su¹ice}
+{task}{present\_info}{DEPARTURE(TIME,FROM(STATION))}
+\end{example}">
+<BR>
+
+<P>
+<B>Request_info</B> - represents utterances requesting some information. It always contains an object and eventually its attributes. 
+<BR>
+<IMG
+ WIDTH="471" HEIGHT="499" ALIGN="BOTTOM" BORDER="0"
+ SRC="img147.png"
+ ALT="\begin{example}
+\xmpl
+{já bych potøeboval spojení ze Su¹ice dneska kolem poledne...
+...am chcete jet}
+{where do you want to go}
+{task}{request\_info}{TO}
+\end{example}">
+<BR>
+
+<P>
+<B>Speech_repair</B> - represents utterances containing disfluences or repetitions.
+<BR>
+<IMG
+ WIDTH="480" HEIGHT="198" ALIGN="BOTTOM" BORDER="0"
+ SRC="img148.png"
+ ALT="\begin{example}
+\xmpl
+{v sobotu teda vlastnì}
+{on Saturday actually}
+{frame}{spe...
+...ture to chrr at eight hehe sixty five}
+{task}{speech\_repair}{---}
+\end{example}">
+<BR>
+
+<P>
+<B>Status_report</B> - represents utterances which are not related to the topic of the dialogue. 
+<BR>
+<IMG
+ WIDTH="478" HEIGHT="198" ALIGN="BOTTOM" BORDER="0"
+ SRC="img149.png"
+ ALT="\begin{example}
+\xmpl
+{no tak tam u¾ moc na výbìr nemáte}
+{well you do not have ...
+...o napí¹u}
+{wait I am writing it down}
+{frame}{status\_report}{---}
+\end{example}">
+<BR>
+
+<P>
+<B>Thanking</B> - represents utterances which contain thanking. 
+<BR>
+<IMG
+ WIDTH="440" HEIGHT="198" ALIGN="BOTTOM" BORDER="0"
+ SRC="img150.png"
+ ALT="\begin{example}
+\xmpl
+{dìkuju moc}
+{thank you a lot}
+{frame}{thanking}{---}
+\par
+\xmpl
+{není zaè}
+{you are welcome}
+{frame}{thanking}{---}
+\end{example}">
+<BR>
+
+<P>
+<B>Verify</B> - represents utterances verifying some information already mentioned. This verification should be always related to the task.
+<BR>
+<IMG
+ WIDTH="424" HEIGHT="301" ALIGN="BOTTOM" BORDER="0"
+ SRC="img151.png"
+ ALT="\begin{example}
+\xmpl
+{a chcete jet pane pøes Svoj¹ín nebo pøes Nicov}
+{and do y...
+...pl
+{to je ta pùlnoèka}
+{is it midnight train}
+{task}{verify}{TIME}
+\end{example}">
+<BR>
+
+<P>
+<B>Verify_neg</B> - represents utterances verifying some information already mentioned. This is negative complement to the SPEECH-ACT verify. It is used when the semantic content is negated and is accepted by negation. Simply, no can actually mean yes.
+
+<P>
+
+<H2><A NAME="SECTION001223000000000000000"></A> <A NAME="sbsctn:crps:semantics"></A>
+<BR>
+SEMANTIC dimension
+</H2>
+
+<P>
+The SEMANTIC dimension captures task relevant information from each utterance. Our domain is train timetable inquiry answering; therefore, the goal of communication is to determine information needed to answer an inquiry, for instance a departure train station or time of a desired departure. In the utterance máte tam nìjaký vlak do Plznì v osm hodin ránoIs there any train to Pilsen at eight a.m.?, the semantics could be expressed by the following attribute-value pairs: REQUEST=departure, TO=Plznì, and TIME=osm hodin ránoeight a.m..
+
+<P>
+Semantic annotation should be simple and easy to obtain. he05semantic described a semantic annotation that preserved the hierarchical structure of an utterance but it still keep simplicity. For instance, the semantic annotation of the previous sentence would be DEPARTURE(TO(STATION), TIME). Moreover, the same semantic annotation could belong to the utterance jede nìjaký spì¹ný vlak do Prahy kolem ètvrté odpoledneDoes go any train to Prague around four p.m.?. This generalization is very precious. The He's annotation is moderate to acquire. We do not need fully annotated treebank data. Dialogue transcribers have to define the semantics that represents each training utterance but they do not have to provide semantic parse trees aligned with the underlying utterance. Because abstract semantic annotation is fairly simple, transcribers do not have to have a prior linguistic knowledge. Sentence modality does not influence the abstract semantic annotation. For example, we do not distinguish between a question or an answer in abstract semantic annotation; thus, we have to assign either request-info or present-info into the SPEECH-ACT dimension.
+
+<P>
+To simplify the training of a parser, we require that the order of the abstract semantic annotation concepts must match the order of the words they correspond to. Thus, the semantics for the utterance jede kolem ètvrté odpoledne do Prahy nìjaký spì¹ný vlakDoes go any train to Prague around four p.m.? includes the same concepts as the previous example but in different order. However, for both examples the interpretation is the same. 
+
+<P>
+A difficulty with this style of semantic annotation is that the abstract semantic annotation does not align the words of the utterance with the semantic concepts of the annotation.
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="2513"></A>
+<TABLE>
+<CAPTION><STRONG>Table 5.1:</STRONG>
+A sample of dialogue act annotation scheme. The literal English translation of the dialogue is in Table <A HREF="node21.html#tbl:sample:dialogue:hhtt:en">A.2</A>.</CAPTION>
+<TR><TD>  <DIV ALIGN="CENTER"><FONT SIZE="-2">
+    </FONT><TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT"><FONT SIZE="-2"> Speaker </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> Conversational domain </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> Speech act </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> Semantics </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> Utterance</FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="-2"> 
+      operator </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> communication </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> opening </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> GREETING </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> informace prosím  </FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="-2"> 
+     user </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> communication </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> opening </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> GREETING </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> dobrý den </FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="-2"> 
+     </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> task </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> request-info </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> DEPARTURE(TIME, </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2">  já mám prosbu jakpak jedou dneska dopoledne </FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="-2"> 
+    </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> TRAIN_TYPE,  </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2">  osobní vlaky òák  </FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="-2"> 
+    </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> TO(STATION)) </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2">  do  Starýho Plzence  </FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="-2"> 
+     operator </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> frame </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> status-report </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> OTHER_INFO </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> no tak tam u¾ moc na výbìr nemáte  </FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="-2"> 
+     </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> task </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> present-info </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> TIME, </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> teïka jede v osm ¹estnáct jestli stihnete  </FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="-2"> 
+    </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> TIME </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> potom a¾ v jedenáct deset </FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="-2"> 
+     user </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> communication </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> implicit-confirm </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> TIME </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> a¾ v jedenáct deset </FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="-2"> 
+     </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> task </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> acknowledgment </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> ACCEPT(TIME, </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> a to by tak òák staèilo tich jedenáct deset </FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="-2"> 
+    </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> FROM(STATION)) </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> z  hlavního  jo  </FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="-2"> 
+     </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> task </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> verify </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> TRAIN_TYPE </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> a dá se tam vzít koèárek  </FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="-2"> 
+     operator </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> task </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> acknowledgment </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> ACCEPT </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> samozøejmì paní to víte ¾e ano </FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="-2"> 
+     user </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> task </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> verify </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> TRAIN_TYPE </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> tak¾e tam jsou ty nový vagóny </FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="-2"> 
+     operator </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> frame </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> apology </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> OTHER_INFO </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> moment jak to myslíte jaký vagóny </FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="-2"> 
+     user </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> task </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> verify </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> TRAIN_TYPE </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> jako jestli ho musím vzít jako zavazadlo </FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="-2"> 
+     </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> task </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> verify </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> TRAIN_TYPE </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> nebo jestli ho vezmu pro matky s dìtmi </FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="-2"> 
+     operator </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> task </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> acknowledgment </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> ACCEPT(TRAIN_TYPE) </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> pro matky s dìtmi </FONT></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><FONT SIZE="-2"> 
+     user </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> communication </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> closing </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> CLOSING </FONT></TD>
+<TD ALIGN="LEFT"><FONT SIZE="-2"> jo dobøe tak jo </FONT></TD>
+</TR>
+</TABLE></DIV>
+
+  
+  <A NAME="tbl:sample:dialogue:hhtt"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+In Table <A HREF="#tbl:sample:dialogue:hhtt">5.1</A> is a sample dialogue annotated by the dialogue act annotation scheme. The literal English translation of the dialogue is in Table <A HREF="node21.html#tbl:sample:dialogue:hhtt:en">A.2</A>. 
+
+<P>
+The SEMANTIC dimension of our annotation scheme provides training data for a semantic parser. The goal of the semantic parser is to label both user's and operator's utterances. From labeled utterances, a simple algorithm should easily extract attribute-value pairs in which we are interested. Therefore, an output of the semantic parser should be the  following DEPARTURE(jede nìjaký spì¹ný vlak, TO(do STATION(Prahy)), TIME(kolem ètvrté odpoledne)). The resultant parse tree is shown in Figure <A HREF="#fgr:example">5.1</A>. The task-related details, e.g. a station, time, and train type are the most important information. 
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fgr:example"></A><A NAME="2518"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 5.1:</STRONG>
+An example of a semantic parse tree.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+      <IMG
+ WIDTH="526" HEIGHT="173" ALIGN="BOTTOM" BORDER="0"
+ SRC="img152.png"
+ ALT="\includegraphics{./eps/semantics}">
+    
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+For this dimension the following concepts are defined:
+ACCEPT,
+AMOUNT,
+AREA,
+ARRIVAL,
+BACK,
+DELAY,
+DEPARTURE,
+DISCONNECT,
+DISTANCE,
+DURATION,
+FROM,
+GREETING,
+LENGTH,
+MAYBE,
+NEXT,
+NUMBER,
+OTHER_INFO,
+PERSON,
+PLATFORM,
+PREVIOUS,
+PRICE,
+REF,
+REJECT,
+REPEAT,
+STATION,
+SYSTEM_FEATURE,
+THROUGH,
+TIME,
+TO,
+TRAIN_TYPE,
+TRANSFER,
+WAIT,
+WHAT_TIME.
+You can find variations of these concepts in he05semantic.
+
+<P>
+<B>ARRIVAL</B> - this concept represents utterances which question or answer the question about an arrival of a train.
+<BR>
+<IMG
+ WIDTH="494" HEIGHT="204" ALIGN="BOTTOM" BORDER="0"
+ SRC="img153.png"
+ ALT="\begin{example}
+\xmpl
+{abych byla v Praze tak mezi druhou a pùl tøetí nebo døív}...
+...ven thirty five}
+{task}{present\_info}{ARRIVAL(TO(STATION), TIME)}
+\end{example}">
+<BR>
+
+<P>
+<B>ACCEPT</B> - represents positive answer, agreement, or acceptance of some fact which was mentioned, questioned, or answered in the previous utterance with the SPEECH-ACT verify or the SPEECH-ACT implicit_confirmation. 
+<BR>
+<IMG
+ WIDTH="490" HEIGHT="202" ALIGN="BOTTOM" BORDER="0"
+ SRC="img154.png"
+ ALT="\begin{example}
+\xmpl
+{ano bez výjimky}
+{yes without exceptions}
+{task}{acknowle...
+...PT}
+\par
+\xmpl
+{ano}
+{yes}
+{communication}{acknowledgment}{ACCEPT}
+\end{example}">
+<BR>
+
+<P>
+<B>AMOUNT</B> - represents some concrete amount of money which has to be paid, for instance, for a ticket. It is used together with the concept PRICE.
+<BR>
+<IMG
+ WIDTH="471" HEIGHT="203" ALIGN="BOTTOM" BORDER="0"
+ SRC="img155.png"
+ ALT="\begin{example}
+\xmpl
+{a kolik to stojí}
+{and how much is it}
+{task}{request\_in...
+...he price is sixty two crowns}
+{task}{present\_info}{PRICE(AMOUNT)}
+\end{example}">
+<BR>
+
+<P>
+<B>AREA</B> - represents an area from where the user calls, mostly used in utterances labeled with the SPEECH-ACT opening. 
+<BR>
+<IMG
+ WIDTH="432" HEIGHT="104" ALIGN="BOTTOM" BORDER="0"
+ SRC="img156.png"
+ ALT="\begin{example}
+\xmpl
+{dobrý den [person]Hilianová[/person] [area]Plzeò[/area]}
+...
+...rson] [area]Plzeò[/area]}
+{frame}{opening}{GREETING, PERSON, AREA}
+\end{example}">
+<BR>
+
+<P>
+<B>BACK</B> - represents a request for a return connection. For instance, a user wants a train from the city Prague to the city Olomouc but at the end wants a train from Olomouc to Prague as well. 
+<BR>
+<IMG
+ WIDTH="557" HEIGHT="229" ALIGN="BOTTOM" BORDER="0"
+ SRC="img157.png"
+ ALT="\begin{example}
+\xmpl
+{já bych potøeboval vìdìt vlaky v sobotu co jede z Varù do...
+... then on Sunday back}
+{task}{request\_info}{DEPARTURE(TIME, BACK)}
+\end{example}">
+<BR>
+
+<P>
+<B>DELAY</B> - represents a question related to the delay of a train, or it presents information about the delay of a train.
+<BR>
+<IMG
+ WIDTH="471" HEIGHT="202" ALIGN="BOTTOM" BORDER="0"
+ SRC="img158.png"
+ ALT="\begin{example}
+\xmpl
+{ale teïka mu hlásí zpo¾dìní}
+{but now they say that it ha...
+... je}
+{how many minutes it is delayed}
+{task}{request\_info}{DELAY}
+\end{example}">
+<BR>
+
+<P>
+<B>DEPARTURE</B> - represents a question or an answer about the departure of a train. Mostly it is used with the concepts TRAIN_TYPE, TIME, FROM, and TO.
+<BR>
+<IMG
+ WIDTH="477" HEIGHT="204" ALIGN="BOTTOM" BORDER="0"
+ SRC="img159.png"
+ ALT="\begin{example}
+\xmpl
+{jede nìjakej pøímej vlak do Mnichova}
+{is there any direc...
+...ty}
+{task}{present\_info}{DEPARTURE(TRAIN\_TYPE,TIME,TRAIN\_TYPE)}
+\end{example}">
+<BR>
+
+<P>
+<B>DISCONNECT</B> - describes a splitting of a train into two parts which continue in different directions. The parts of the train are described by the concept TRAIN_TYPE, for example TRAIN_TYPE(zadní èást).
+<BR>
+<IMG
+ WIDTH="548" HEIGHT="303" ALIGN="BOTTOM" BORDER="0"
+ SRC="img160.png"
+ ALT="\begin{example}
+\xmpl
+{ta zadní èást jede do Brna jo}
+{the rear part continues t...
+...task}{implicit\_confirmation}{DEPARTURE(TRAIN\_TYPE, TO(STATION))}
+\end{example}">
+<BR>
+
+<P>
+<B>DISTANCE</B> - represents the length between two train stations. It is used together with the concept LENGTH.
+<BR>
+<IMG
+ WIDTH="473" HEIGHT="204" ALIGN="BOTTOM" BORDER="0"
+ SRC="img161.png"
+ ALT="\begin{example}
+\xmpl
+{já bych potøebovala zjistit kolik kilometrù je to voca» d...
+...task}{present\_info}{DISTANCE(FROM(STATION), TO(STATION), LENGTH)}
+\end{example}">
+<BR>
+
+<P>
+<B>DURATION</B> - represents the duration of a journey between two train stations. It is used together with the concept TIME.
+<BR>
+<IMG
+ WIDTH="471" HEIGHT="203" ALIGN="BOTTOM" BORDER="0"
+ SRC="img162.png"
+ ALT="\begin{example}
+\xmpl
+{ale to jako tam jede stra¹nì dlouho}
+{but it takes to muc...
+...t seven hours, how terrible}
+{task}{present\_info}{DURATION(TIME)}
+\end{example}">
+<BR>
+
+<P>
+<B>FROM</B> - represents the departure station. It is used together with the concept DEPARTURE, ARRIVAL, and so on.
+<BR>
+<IMG
+ WIDTH="471" HEIGHT="104" ALIGN="BOTTOM" BORDER="0"
+ SRC="img163.png"
+ ALT="\begin{example}
+\xmpl
+{jede nìjakej pøímej vlak z Mnichova}
+{is there any direct...
+...hova}
+{task}{request\_info}{DEPARTURE(TRAIN\_TYPE, FROM(STATION))}
+\end{example}">
+<BR>
+
+<P>
+<B>GREETING</B> - represents a greeting. It is used only with the SPEECH-ACT opening. 
+<BR>
+<IMG
+ WIDTH="432" HEIGHT="204" ALIGN="BOTTOM" BORDER="0"
+ SRC="img164.png"
+ ALT="\begin{example}
+\xmpl
+{informace prosím}
+{information please}
+{frame}{opening}{G...
+...lo [person]Hanzlíková[/person]}
+{frame}{opening}{GREETING, PERSON}
+\end{example}">
+<BR>
+
+<P>
+<B>LENGTH</B> - represents the length of a journey between two train stations. It is used together with the concept DISTANCE.
+<BR>
+<IMG
+ WIDTH="471" HEIGHT="204" ALIGN="BOTTOM" BORDER="0"
+ SRC="img165.png"
+ ALT="\begin{example}
+\xmpl
+{já bych potøebovala zjistit kolik kilometrù je to voca» d...
+...task}{present\_info}{DISTANCE(FROM(STATION), TO(STATION), LENGTH)}
+\end{example}">
+<BR>
+
+<P>
+<B>MAYBE</B> - represents an uncertain response to an utterance with the SPEECH-ACT verify or implicit_confirmation. 
+
+<P>
+<B>NEXT</B> - represents utterance which requests information about the next train. It is used with the SPEECH-ACT request_info. It is never used with the SPEECH-ACT present_info.
+<BR>
+<IMG
+ WIDTH="471" HEIGHT="102" ALIGN="BOTTOM" BORDER="0"
+ SRC="img166.png"
+ ALT="\begin{example}
+\xmpl
+{a prosím vás nìco dal¹ího}
+{and please something else}
+{task}{request\_info}{NEXT}
+\end{example}">
+<BR>
+
+<P>
+<B>NUMBER</B> - represents some numerical value which is not used to express time. It is usually used to specify the order of some options or specify the number of a platform. 
+<BR>
+<IMG
+ WIDTH="471" HEIGHT="203" ALIGN="BOTTOM" BORDER="0"
+ SRC="img167.png"
+ ALT="\begin{example}
+\xmpl
+{a ten druhý je taky rychlík}
+{and the second is also an e...
+... second platform}
+{task}{present\_info}{ARRIVAL(PLATFORM(NUMBER))}
+\end{example}">
+<BR>
+
+<P>
+<B>OTHER_INFO</B> - represents utterances with semantics which cannot be described by another concepts. 
+<BR>
+<IMG
+ WIDTH="470" HEIGHT="202" ALIGN="BOTTOM" BORDER="0"
+ SRC="img168.png"
+ ALT="\begin{example}
+\xmpl
+{jedou pouze dva spoje}
+{there are only two connections}
+{...
+...y connections are there indeed}
+{task}{request\_info}{OTHER\_INFO}
+\end{example}">
+<BR>
+
+<P>
+<B>PERSON</B> - represents names or person's identification. It is used only with the SPEECH-ACT opening.
+<BR>
+<IMG
+ WIDTH="432" HEIGHT="104" ALIGN="BOTTOM" BORDER="0"
+ SRC="img169.png"
+ ALT="\begin{example}
+\xmpl
+{dobrý den [person]Hanzlíková[/person]}
+{hallo [person]Hanzlíková[/person]}
+{frame}{opening}{GREETING, PERSON}
+\end{example}">
+<BR>
+
+<P>
+<B>PRICE</B> - represents the price of a train connection, supplement, or discount. This concept is used together with the concept  AMOUNT.
+<BR>
+<IMG
+ WIDTH="471" HEIGHT="203" ALIGN="BOTTOM" BORDER="0"
+ SRC="img170.png"
+ ALT="\begin{example}
+\xmpl
+{a kolipa to stojí je¹tì}
+{and how much does it cost}
+{tas...
+...
+{so it is eighty six crowns}
+{task}{present\_info}{PRICE(AMOUNT)}
+\end{example}">
+<BR>
+
+<P>
+<B>PREVIOUS</B> - represents an utterance which requests information about the previous train. It is used with the SPEECH-ACT request_info. It is never used with the SPEECH-ACT present_info.
+<BR>
+<IMG
+ WIDTH="471" HEIGHT="102" ALIGN="BOTTOM" BORDER="0"
+ SRC="img171.png"
+ ALT="\begin{example}
+\xmpl
+{a nìco døív}
+{and something earlier}
+{task}{request\_info}{PREVIOUS}
+\end{example}">
+<BR>
+
+<P>
+<B>PLATFORM</B> - represents a platform or place of departure.
+<BR>
+<IMG
+ WIDTH="548" HEIGHT="302" ALIGN="BOTTOM" BORDER="0"
+ SRC="img172.png"
+ ALT="\begin{example}
+\xmpl
+{z kterýhopak nástupi¹tì}
+{from what platform}
+{task}{requ...
+...rd east}
+{communication}{implicit\_confirmation}{PLATFORM(NUMBER)}
+\end{example}">
+<BR>
+
+<P>
+<B>REF</B> - represents a reference to already mentioned object in dialogue.
+<BR>
+<IMG
+ WIDTH="546" HEIGHT="203" ALIGN="BOTTOM" BORDER="0"
+ SRC="img173.png"
+ ALT="\begin{example}
+\xmpl
+{a kdy jede ten rychlík co jste øíkala jako první}
+{and wh...
+...t what time is it there}
+{task}{request\_info}{ARRIVAL(REF(TIME))}
+\end{example}">
+<BR>
+
+<P>
+<B>REJECT</B> - represents utterances which reject some information. It is usually an answer to an utterance with the SPEECH-ACT verify. The concept REJECT is used very often with the concepts TIME, TRAIN_TYPE, STATION, FROM, TO, and so on.
+<BR>
+<IMG
+ WIDTH="490" HEIGHT="103" ALIGN="BOTTOM" BORDER="0"
+ SRC="img174.png"
+ ALT="\begin{example}
+\xmpl
+{ne ne ten u¾ jel osm nula pìt}
+{no no it already left at eight zero five}
+{task}{acknowledgment}{REJECT(TIME)}
+\end{example}">
+<BR>
+
+<P>
+<B>REPEAT</B> - represents a request to repeat some information.
+<BR>
+<IMG
+ WIDTH="433" HEIGHT="202" ALIGN="BOTTOM" BORDER="0"
+ SRC="img175.png"
+ ALT="\begin{example}
+\xmpl
+{a bude to je¹tì teïko nìkdy jo}
+{and will it be sometime ...
+...IME}
+\par
+\xmpl
+{prosím}
+{please}
+{communication}{apology}{REPEAT}
+\end{example}">
+<BR>
+
+<P>
+<B>STATION</B> - represents a name of a train station. It represents not only their official names but also their local  or colloquial variations.
+<BR>
+<IMG
+ WIDTH="473" HEIGHT="104" ALIGN="BOTTOM" BORDER="0"
+ SRC="img176.png"
+ ALT="\begin{example}
+\xmpl
+{já bych potøebovala zjistit kolik kilometrù je to voca» d...
+...olína}
+{task}{request\_info}{DISTANCE(FROM(STATION), TO(STATION))}
+\end{example}">
+<BR>
+
+<P>
+<B>SYSTEM_FEATURE</B> - represents utterances in which a user checks whether an operator is able to provide some information.
+<BR>
+<IMG
+ WIDTH="474" HEIGHT="102" ALIGN="BOTTOM" BORDER="0"
+ SRC="img177.png"
+ ALT="\begin{example}
+\xmpl
+{prosím vás dáváte taky na mezinárodní spoje informace}
+{p...
+...mation about international trains}
+{task}{verify}{SYSTEM\_FEATURE}
+\end{example}">
+<BR>
+
+<P>
+<B>TIME</B> - represents time or date in utterances. It is either independent or connected with the concepts DEPARTURE, ARRIVAL, DURATION, and so on.
+<BR>
+<IMG
+ WIDTH="548" HEIGHT="402" ALIGN="BOTTOM" BORDER="0"
+ SRC="img178.png"
+ ALT="\begin{example}
+\xmpl
+{dvacet dva nula ¹est}
+{twenty two zero six}
+{communicatio...
+... it is intercity don't you mind}
+{task}{verify}{TIME, TRAIN\_TYPE}
+\end{example}">
+<BR>
+
+<P>
+<B>TO</B> - represents the destination station. It is used together with the concept DEPARTURE, ARRIVAL, and so on. This concept is used also with the meaning: in direction (see the third example).
+<BR>
+<IMG
+ WIDTH="513" HEIGHT="303" ALIGN="BOTTOM" BORDER="0"
+ SRC="img179.png"
+ ALT="\begin{example}
+\xmpl
+{ano v Praze na Hlavním nádra¾í budete v ¹estnáct ètyøicet...
+... it stop in Berounì}
+{task}{verify}{REF(TO(STATION)), TO(STATION)}
+\end{example}">
+<BR>
+
+<P>
+<B>TRAIN_TYPE</B> - represents a special property of a train connection,  for instance personal train, express train, a train with supplement, and so on. 
+<BR>
+<IMG
+ WIDTH="548" HEIGHT="303" ALIGN="BOTTOM" BORDER="0"
+ SRC="img180.png"
+ ALT="\begin{example}
+\xmpl
+{no v patnáct ¹estnáct pøímo}
+{well at fifteen sixteen dir...
+...ine zero zero}
+{task}{present\_info}{DEPARTURE(TRAIN\_TYPE, TIME)}
+\end{example}">
+<BR>
+
+<P>
+<B>TRANSFER</B> - represents a train connection in which you have to change from a train. 
+<BR>
+<IMG
+ WIDTH="471" HEIGHT="203" ALIGN="BOTTOM" BORDER="0"
+ SRC="img181.png"
+ ALT="\begin{example}
+\xmpl
+{tak¾e paní tam pøecházíte na Prahu Masarykovo }
+{so madam...
+... with a change in Prague}
+{task}{present\_info}{TRANSFER(STATION)}
+\end{example}">
+<BR>
+
+<P>
+<B>WAIT</B> - represents the fact that a train has to wait in a train station. It is used together with the concepts STATION and TIME.
+<BR>
+<IMG
+ WIDTH="471" HEIGHT="203" ALIGN="BOTTOM" BORDER="0"
+ SRC="img182.png"
+ ALT="\begin{example}
+\xmpl
+{èeká to tam}
+{it waits there}
+{task}{request\_info}{WAIT}...
+...t fifteen minutes to the change}
+{task}{present\_info}{WAIT(TIME)}
+\end{example}">
+<BR>
+
+<P>
+<B>WHAT_TIME</B> - represents a question requesting time in its answer; however, in the question is not exactly specified what time the question refers to, for example time of departure, time of arrival, and so on. It is used only for utterances with the SPEECH-ACT request_info if you cannot use the concept DEPARTURE or ARRIVAL.
+<BR>
+<IMG
+ WIDTH="471" HEIGHT="203" ALIGN="BOTTOM" BORDER="0"
+ SRC="img183.png"
+ ALT="\begin{example}
+\xmpl
+{a kdy pøesnì}
+{and what time exactly}
+{task}{request\_inf...
+... what time in the morning}
+{task}{request\_info}{WHAT\_TIME(TIME)}
+\end{example}">
+<BR>
+
+<P>
+
+<H1><A NAME="SECTION001230000000000000000"></A> <A NAME="sctn:annotation"></A>
+<BR>
+Annotation process
+</H1>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fgr:crps:dae:main"></A><A NAME="2525"></A>
+<TABLE width="100%">
+ <IMG
+ WIDTH="800" ALIGN="BOTTOM" BORDER="0"
+ SRC="dae-main.r.png"
+ ALT="">
+
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 5.2:</STRONG>
+The main window of the dialogue act editor.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+      
+    
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+To speed-up the annotation process, we developed an annotation tool to simplify the whole process. We had several requirements: a configurable task-related tagset, annotation robustness, validation of every possible input, and several different viewing modes for annotated dialogues. We required multi-platform design and easy maintenance. In Figure <A HREF="#fgr:crps:dae:main">5.2</A>, the dialogue act editor (DAE) is depicted. It was written in Python language using a GUI toolkit wxPython that wraps the wxWidgets cross platform GUI library. The program was used on both Windows and Linux workstations.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fgr:crps:dae:main:ov"></A><A NAME="2532"></A>
+<TABLE width="100%">
+ <IMG
+ width="800" ALIGN="BOTTOM" BORDER="0"
+ SRC="dae-main-ov.r.png"
+ ALT="">
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 5.3:</STRONG>
+The main window in the overview mode.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+      
+    
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+We have been concerned about achieving high annotation robustness. Therefore, we implemented an overview mode in our annotation tool in which an annotator can see only dialogue acts without the utterances. Standalone dialogue acts, without utterances, should make the sense of story, and they have to be good enough to give an annotator an overview of a dialogue (see Figure <A HREF="#fgr:crps:dae:main:ov">5.3</A>). In the overview mode, we do not show even name entity values because misunderstanding to a dialogue purely from the dialogue act tags is a signal to revise, probably wrong, dialogue act annotation.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fgr:crps:dae:seg"></A><A NAME="2539"></A>
+<TABLE width="100%">
+ <IMG
+ width="500" ALIGN="BOTTOM" BORDER="0"
+ SRC="dae-seg.r.png"
+ ALT="">
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 5.4:</STRONG>
+Segmentation of a turn into dialogue acts.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+      
+    
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fgr:crps:dae:eda"></A><A NAME="2546"></A>
+<TABLE width="100%">
+ <IMG
+ width="600" ALIGN="BOTTOM" BORDER="0"
+ SRC="dae-eda.r.png"
+ ALT="">
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 5.5:</STRONG>
+Selection of a dialogue act.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+      
+    
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fgr:crps:dae:da"></A><A NAME="2553"></A>
+<TABLE width="100%">
+ <IMG
+ width="500" ALIGN="BOTTOM" BORDER="0"
+ SRC="dae-da.r.png"
+ ALT="">
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 5.6:</STRONG>
+Dialogue act annotation.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+      
+    
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Annotation process proceeds in the following way. If an utterance contains more than one dialogue act, an annotator chops it into fragments each of which corresponds to one dialogue act (see Figure <A HREF="#fgr:crps:dae:seg">5.4</A>). Then the annotator has to select which dialogue act he wants to edit (see Figure <A HREF="#fgr:crps:dae:eda">5.5</A>). Finally, the annotator annotates the selected dialogue act (see Figure <A HREF="#fgr:crps:dae:da">5.6</A>). The SEMANTIC dimension of each dialogue act is validated by a validator which can discover spelling errors and mistakenly structured semantics. After annotating the whole dialogue, an annotator overviews the dialogue. An annotator can verify dialogue semantics without being distracted by transcriptions of utterances.
+
+<P>
+
+<H1><A NAME="SECTION001240000000000000000"></A> <A NAME="sctn:crps:division:of:data"></A>
+<BR>
+Corpus division into the training, development, test, and IAA data
+</H1>
+
+<P>
+We annotated 1,109 dialogues, a portion of all available dialogues. Both operators' and users' turns were annotated, about 12,935 turns. The turns were divided into 17,900 dialogue acts (utterances) in total. There are about 118,000 tokens in all annotated dialogues. The vocabulary size of the annotated dialogues is 2,872 words. The vocabulary is smaller than the vocabulary of all recorded dialogues because in the corpus there are a lot of names of train stations which occurred just one time. Thus, the vocabulary grows very fast with additional dialogues. 
+
+<P>
+The dialogues were randomly divided into the
+training data   (798 dialogues - 9,344 turns - 12,972 dialogue acts, 72%), development data (88 dialogues - 1,020 turns - 1,418 dialogue acts, 8%), and test data       (223 dialogues - 2,571 turns - 3,510 dialogue acts, 20%). 
+
+<P>
+In addition, we annotated a set of 50 dialogues (IAA / inter-intra annotator agreement data) different from already annotated 1,109 dialogues. The set was used for measuring reliability (inter-intra annotator agreement) of the dialogue act annotation scheme. The set consists of 912 turns - 1,326 dialogue acts. There are about 7,000 tokens in the inter-intra annotator agreement data. See Section <A HREF="#sbsctn:kappa:statistic">5.5.1</A> for more details.
+
+<P>
+
+<H1><A NAME="SECTION001250000000000000000"></A> <A NAME="sctn:crps:reliability"></A>
+<BR>
+Reliability of the dialogue act annotation scheme
+</H1>
+
+<P>
+Our annotation scheme relies on subjective judgments. As a result, we need  evidence that the annotators reliably annotated the corpus. The purpose of showing that annotators reasonably agree on the annotations is that only then there is a chance that we will be able to construct a system which will reasonably replace the human annotators.
+
+<P>
+One way to measure the reliability is based on the percent agreement: the percentage of all labels in the test data where the annotators mutually agree. However, one problem with the percent agreement metric is that it does not reflect how easy the annotation is. For example, if one label, let say X, occurred 95% of all cases, then getting 95% correctness is not good enough; we could obtain 95% correct just by guessing X. In addition, if we measure reliability of human annotators on such subjective task as is the semantic annotation, we cannot expect that there is another annotator who could be considered as the Gold Standart annotator. Thus, evaluation of agreement between annotators cannot be based on the Gold Standard jurafsky00slp. In other words, it is really difficult to compare annotators which are evaluated on different test data or different tasks. Better approach is to use instead of the percent agreement the kappa statistic <IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.png"
+ ALT="$\kappa$"> because it controlls the complexity of the annotation task siegel88kappa,carletta96kappa. 
+
+<P>
+
+<H2><A NAME="SECTION001251000000000000000"></A> <A NAME="sbsctn:kappa:statistic"></A>
+<BR>
+The kappa statistic
+</H2>
+
+<P>
+Kappa statistic is useful when we compare human annotators on a difficult subjective task. Kappa measures pairwise agreement among a set of annotators making category judgments, corrected for expected chance agreement:
+<IMG
+ WIDTH="143" HEIGHT="58" ALIGN="BOTTOM" BORDER="0"
+ SRC="img189.png"
+ ALT="\begin{equation*}
+\kappa = \frac{P(A) - P(E)}{1 - P(E)},
+\end{equation*}">
+where <IMG
+ WIDTH="45" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img82.png"
+ ALT="$P(A)$"> is the proportion of times that the annotators agree and <IMG
+ WIDTH="45" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img190.png"
+ ALT="$P(E)$"> is the proportion of times that we would expect them to agree by chance. For more details see siegel88kappa.  Important values for <IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.png"
+ ALT="$\kappa$"> are 0 if there is no agreement other than which would be expected by chance and 1 if there is a total agreement. We have to point out that <IMG
+ WIDTH="46" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img191.png"
+ ALT="$\kappa=0$"> does not mean that the annotators' decisions are worthless, rather, it means that the decisions are no more consistent than we would expect by chance, and a negative value of kappa statistic reveals that the observed agreement is worse than expected by chance alone. According to krippendorf80content, the good reliability is achieved when <IMG
+ WIDTH="60" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img192.png"
+ ALT="$\kappa &gt; 0.8$">.
+
+<P>
+According to krippendorf80content, there are two different tests of reliability with increasing strength:
+
+<UL>
+<LI>The <I>stability</I> measures the intra-annotator's variance. In other words, annotator's judgments should not change over time. It can be measured by comparing annotations of the same data at different times.
+
+<P>
+</LI>
+<LI>The <I>reproducibility</I> measures inter-annotators' variance. In other words, two or more annotators should annotate in the same way. It can be measured by comparing results of different annotators.
+</LI>
+</UL>
+
+<P>
+To evaluate the reproducibility (inter-annotator agreement), we performed the following experiment. Three experienced annotators, who had already annotated a substantial portion of HHTT corpus, annotated the same set of dialogues. The set consisted of 50 dialogues which were randomly selected from available unannotated dialogues. The annotators did not interact with each other neither with the coding scheme developers. The resultant data are denoted as IAA (intra-inter annotator agreement) data 1, which are composed of annotations from three annotators 1, 2, and 3.
+
+<P>
+To evaluate the stability (intra-annotator agreement), we let the annotators to annotate the same set of dialogues two times, one month and many dialogues apart. The resultant data are denoted as IAA (intra-inter annotator agreement) data 2. Again, they composed of annotations from annotators 1, 2, and 3.
+
+<P>
+As we mentioned in the previous sections, the dialogue act annotation scheme involves:
+
+<UL>
+<LI>segmentation of the dialogue turns into the dialogue acts,
+</LI>
+<LI>annotation of CONVERSATIONAL-DOMAIN dimension of each dialogue act,
+</LI>
+<LI>annotation of SPEECH-ACT dimension of each dialogue act,
+</LI>
+<LI>annotation of SEMANTIC dimension of each dialogue act.
+</LI>
+</UL>
+
+<P>
+
+<H2><A NAME="SECTION001252000000000000000">
+Dialogue act segmentation</A>
+</H2>
+
+<P>
+First of all, annotators have to agree on turn segmentation into dialogue acts. Kappa statistic is used to measure agreement on weather or not the word boundaries are also the dialogue act boundaries.
+
+<P>
+For example, we present two segmentations (S1, S2) of the turnGood afternoon, I would like to ask about to Beroun ehm the train was usually leaving around quarter to eleven. Right?: No dobrý den, prosím vás já bych se vás chtìl zeptat do Berouna òák vlak von jezdil òák ve tøiètvrtì na jedenáct. Viïte?
+
+<P>
+<TABLE  WIDTH="726">
+<TR><TD>
+ 
+<PRE>
+S1: no dobrý den | prosím vás   já bych se vás chtìl zeptat do Berouna 
+S2: no dobrý den | prosím vás | já bych se vás chtìl zeptat do Berouna 
+
+S1: òák vlak | von jezdil òák ve tøiètvrtì na jedenáct   viïte
+S2: òák vlak   von jezdil òák ve tøiètvrtì na jedenáct | viïte
+</PRE>
+  
+</TD></TR>
+</TABLE>
+where is an extra segmentation between the words <I>vás</I>,  <I>já</I> and <I>jedenáct</I>, <I>viïte</I> and a missing segmentation between the words <I>vlak</I> and <I>von</I> in the segmentation S2. 
+
+<P>
+The kappa statistic for the stability is given in Table <A HREF="#tbl:seg:stability">5.2</A> and the kappa statistic for the reproducibility is in Table <A HREF="#tbl:seg:reproducibility">5.3</A>.
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="2263"></A>
+<TABLE>
+<CAPTION><STRONG>Table 5.2:</STRONG>
+The stability (intra-annotator agreement) of segmentation of dialogue turns into the dialogue acts. Each measurement row is given for one annotator.</CAPTION>
+<TR><TD>  <DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="CENTER">Annotator ID</TD>
+<TD ALIGN="CENTER">Number of units</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.png"
+ ALT="$\kappa$"></TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="CENTER">1</TD>
+<TD ALIGN="CENTER">38245</TD>
+<TD ALIGN="CENTER">0.97</TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="CENTER">2</TD>
+<TD ALIGN="CENTER">38087</TD>
+<TD ALIGN="CENTER">0.98</TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="CENTER">3</TD>
+<TD ALIGN="CENTER">38245</TD>
+<TD ALIGN="CENTER">0.98</TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+</TABLE>
+</DIV>
+  
+  <A NAME="tbl:seg:stability"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="2272"></A>
+<TABLE>
+<CAPTION><STRONG>Table 5.3:</STRONG>
+The reproducibility (inter-annotator agreement) of segmentation of dialogue turns into the dialogue acts. Each measurement row is given for one IAA data set (data 1 and data 2).</CAPTION>
+<TR><TD>  <DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="CENTER">IAA data</TD>
+<TD ALIGN="CENTER">Number of units</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.png"
+ ALT="$\kappa$"></TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="CENTER">1</TD>
+<TD ALIGN="CENTER">38131</TD>
+<TD ALIGN="CENTER">0.95</TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="CENTER">2</TD>
+<TD ALIGN="CENTER">38201</TD>
+<TD ALIGN="CENTER">0.96</TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+</TABLE>
+</DIV>
+  
+  <A NAME="tbl:seg:reproducibility"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+
+<H2><A NAME="SECTION001253000000000000000">
+CONVERSATIONAL-DOMAIN dimension</A>
+</H2>
+
+<P>
+To measure the kappa statistic of the CONVERSATIONAL-DOMAIN dimension, we used only the dialogue acts (units of turns) for which the annotators agreed on the turn segmentation. The CONVERSATIONAL-DOMAIN dimension of a dialogue act can be labeled by one from three labels (task, communication, and frame).
+
+<P>
+The kappa statistic for the stability is presented in Table <A HREF="#tbl:con:stability">5.4</A> and the kappa statistic for the reproducibility is presented in Table <A HREF="#tbl:con:reproducibility">5.5</A>.
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="2284"></A>
+<TABLE>
+<CAPTION><STRONG>Table 5.4:</STRONG>
+The stability (intra-annotator agreement) of labeling the CONVERSATIONAL-DOMAIN dimension.</CAPTION>
+<TR><TD>  <DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="CENTER">Annotator ID</TD>
+<TD ALIGN="CENTER">Number of units</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.png"
+ ALT="$\kappa$"></TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="CENTER">1</TD>
+<TD ALIGN="CENTER">1195</TD>
+<TD ALIGN="CENTER">0.89</TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="CENTER">2</TD>
+<TD ALIGN="CENTER">1242</TD>
+<TD ALIGN="CENTER">0.95</TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="CENTER">3</TD>
+<TD ALIGN="CENTER">1216</TD>
+<TD ALIGN="CENTER">0.94</TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+</TABLE>
+</DIV>
+  
+  <A NAME="tbl:con:stability"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="2293"></A>
+<TABLE>
+<CAPTION><STRONG>Table 5.5:</STRONG>
+The reproducibility (inter-annotator agreement) of labeling the CONVERSATIONAL-DOMAIN dimension.</CAPTION>
+<TR><TD>  <DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="CENTER">IAA data</TD>
+<TD ALIGN="CENTER">Number of units</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.png"
+ ALT="$\kappa$"></TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="CENTER">1</TD>
+<TD ALIGN="CENTER">1035</TD>
+<TD ALIGN="CENTER">0.87</TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="CENTER">2</TD>
+<TD ALIGN="CENTER">1102</TD>
+<TD ALIGN="CENTER">0.96</TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+</TABLE>
+</DIV>
+  
+  <A NAME="tbl:con:reproducibility"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+
+<H2><A NAME="SECTION001254000000000000000">
+SPEECH-ACT dimension</A>
+</H2>
+
+<P>
+To measure the kappa statistic of the SPEECH-ACT dimension, we used again only dialogue acts for which the annotators agreed on the turn segmentation.  The SPEECH-ACT dimension of a dialogue act can be labeled by labels which are described in Section <A HREF="#sctn:crps:speech:act">5.2.2</A>.
+
+<P>
+The kappa statistic for the stability is presented in Table <A HREF="#tbl:spe:stability">5.6</A> and the kappa statistic for the reproducibility is presented in Table <A HREF="#tbl:spe:reproducibility">5.7</A>.
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="2306"></A>
+<TABLE>
+<CAPTION><STRONG>Table 5.6:</STRONG>
+The stability (intra-annotator agreement) of labeling the SPEECH-ACT dimension.</CAPTION>
+<TR><TD>  <DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="CENTER">Annotator ID</TD>
+<TD ALIGN="CENTER">Number of units</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.png"
+ ALT="$\kappa$"></TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="CENTER">1</TD>
+<TD ALIGN="CENTER">1195</TD>
+<TD ALIGN="CENTER">0.89</TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="CENTER">2</TD>
+<TD ALIGN="CENTER">1242</TD>
+<TD ALIGN="CENTER">0.96</TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="CENTER">3</TD>
+<TD ALIGN="CENTER">1216</TD>
+<TD ALIGN="CENTER">0.94</TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+</TABLE>
+</DIV>
+  
+  <A NAME="tbl:spe:stability"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="2315"></A>
+<TABLE>
+<CAPTION><STRONG>Table 5.7:</STRONG>
+The reproducibility (inter-annotator agreement) of labeling the SPEECH-ACT dimension.</CAPTION>
+<TR><TD>  <DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="CENTER">IAA data</TD>
+<TD ALIGN="CENTER">Number of units</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.png"
+ ALT="$\kappa$"></TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="CENTER">1</TD>
+<TD ALIGN="CENTER">1035</TD>
+<TD ALIGN="CENTER">0.85</TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="CENTER">2</TD>
+<TD ALIGN="CENTER">1102</TD>
+<TD ALIGN="CENTER">0.86</TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+</TABLE>
+</DIV>
+  
+  <A NAME="tbl:spe:reproducibility"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+
+<H2><A NAME="SECTION001255000000000000000">
+SEMANTIC dimension</A>
+</H2>
+
+<P>
+To measure the kappa statistic of the SEMANTIC dimension, we used again only the dialogue acts for which the annotators agreed on the turn segmentation. Two semantics are considered equal only if they exactly match each other. The exact match is very tough standard because a small difference or complete difference is treated in the same way. For example, under the exact match the difference between the semantics ARRIVAL(TIME, FROM(STATION)) and ARRIVAL(TIME, TO(STATION)) is equal to the difference between the semantics ARRIVAL(TIME, FROM(STATION)) and DEPARTURE(TRAIN_TYPE).
+
+<P>
+The kappa statistic for the stability is presented in Table <A HREF="#tbl:sem:stability">5.8</A> and the kappa statistic for the reproducibility is presented in Table <A HREF="#tbl:sem:reproducibility">5.9</A>.
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="2327"></A>
+<TABLE>
+<CAPTION><STRONG>Table 5.8:</STRONG>
+The stability (intra-annotator agreement) of annotating the SEMANTIC dimension.</CAPTION>
+<TR><TD>  <DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="CENTER">Annotator ID</TD>
+<TD ALIGN="CENTER">Number of units</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.png"
+ ALT="$\kappa$"></TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="CENTER">1</TD>
+<TD ALIGN="CENTER">1195</TD>
+<TD ALIGN="CENTER">0.89</TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="CENTER">2</TD>
+<TD ALIGN="CENTER">1242</TD>
+<TD ALIGN="CENTER">0.93</TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="CENTER">3</TD>
+<TD ALIGN="CENTER">1216</TD>
+<TD ALIGN="CENTER">0.93</TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+</TABLE>
+</DIV>
+  
+  <A NAME="tbl:sem:stability"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="2336"></A>
+<TABLE>
+<CAPTION><STRONG>Table 5.9:</STRONG>
+The reproducibility (inter-annotator agreement) of annotating the SEMANTIC dimension.</CAPTION>
+<TR><TD>  <DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="CENTER">IAA data</TD>
+<TD ALIGN="CENTER">Number of units</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.png"
+ ALT="$\kappa$"></TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="CENTER">1</TD>
+<TD ALIGN="CENTER">1035</TD>
+<TD ALIGN="CENTER">0.81</TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="CENTER">2</TD>
+<TD ALIGN="CENTER">1102</TD>
+<TD ALIGN="CENTER">0.82</TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+</TABLE>
+</DIV>
+  
+  <A NAME="tbl:sem:reproducibility"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+
+<H1><A NAME="SECTION001260000000000000000"></A>
+<A NAME="sctn:crps:lb:ub"></A>
+<BR>
+The lower-bound baseline and the upper-bound ceiling
+</H1>
+
+<P>
+To estimate the complexity of the corpus, we computed the lower-bound baseline and the upper-bound ceiling for each dimension of our dialogue act annotation scheme. The lower-bound baseline is set by a naive decoder which assigns to any input the most apriori probable annotation for a particular dimension. The ceiling can be set by how well human annotators do on the task. 
+
+<P>
+Without the lower-bound baseline and the upper-bound ceiling, we cannot correctly interpret a performance of a semantic parser. For example, if we observe that a semantic parser performs 60% in CAcc, we still do not know how good the parser is because it can be still worse than the  lower-bound baseline or on the other hand we have already reached the upper-bound ceiling so that we can hardly expect additional improvement.
+
+<P>
+
+<H2><A NAME="SECTION001261000000000000000">
+CONVERSATIONAL-DOMAIN dimension</A>
+</H2>
+
+<P>
+
+<H3><A NAME="SECTION001261100000000000000"></A> <A NAME="sbsctn:lb:con"></A>
+<BR>
+The lower-bound baseline
+</H3>
+
+<P>
+To estimate the percent agreement of the lower-bound baseline, we use the most apriori probable label of the CONVERSATIONAL-DOMAIN dimension in the training data. Consequently, the label is used as an output of a naive lower-bound baseline decoder. Then, we measure the percent agreement of this naive output against the CONVERSATIONAL-DOMAIN dimension from the test data.
+
+<P>
+In Table <A HREF="#tbl:con:prob:list">5.10</A>, we present the labels from the CONVERSATIONAL-DOMAIN dimension sorted by the probability of the occurrence of a label in the training data. The most probable label is the label <I>task</I>, which occurred in the training data 53.7% of the time on the training data. 
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="2352"></A>
+<TABLE>
+<CAPTION><STRONG>Table 5.10:</STRONG>
+Labels from the CONVERSATIONAL-DOMAIN dimension sorted by the probability of the occurrence of a label in the training data.</CAPTION>
+<TR><TD>  <DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="CENTER">Labels of the CONVERSATIONAL-DOMAIN dimension</TD>
+<TD ALIGN="CENTER">Probability [%]</TD>
+</TR>
+<TR><TD ALIGN="CENTER">task</TD>
+<TD ALIGN="CENTER">53.7</TD>
+</TR>
+<TR><TD ALIGN="CENTER">frame</TD>
+<TD ALIGN="CENTER">29.7</TD>
+</TR>
+<TR><TD ALIGN="CENTER">communication</TD>
+<TD ALIGN="CENTER">16.6</TD>
+</TR>
+</TABLE>
+</DIV>
+  
+  <A NAME="tbl:con:prob:list"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+The measured performance of the naive decoder of the CONVERSATIONAL-DOMAIN dimension, which output is only the label <I>task</I>, is 54.1% in the percent agreement on the test data. In other words, any decoder of the CONVERSATIONAL-DOMAIN dimension should get more than 54.1% in the percent agreement on the test data; otherwise, it would be simply better to always label the CONVERSATIONAL-DOMAIN dimension by the label <I>task</I>.
+
+<P>
+To evaluate whether one of the annotators is not biased, we measured the percent agreement of the output from the naive decoder against the IAA data (against each annotator on both data 1 and 2). Tables <A HREF="#tbl:con:iaa:lb:data1">5.11</A> and <A HREF="#tbl:con:iaa:lb:data2">5.12</A> show the results, which are not significantly different (<IMG
+ WIDTH="13" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img123.png"
+ ALT="$p$">-value<IMG
+ WIDTH="18" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img193.png"
+ ALT="$&gt;$">0.01).
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="2365"></A>
+<TABLE>
+<CAPTION><STRONG>Table 5.11:</STRONG>
+The lower-bound baseline of the performance of the naive decoder of the CONVERSATIONAL-DOMAIN dimension on the IAA data 1.</CAPTION>
+<TR><TD>  <DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="CENTER">Annotator</TD>
+<TD ALIGN="CENTER">Percent agreement</TD>
+</TR>
+<TR><TD ALIGN="CENTER">1</TD>
+<TD ALIGN="CENTER">53.6</TD>
+</TR>
+<TR><TD ALIGN="CENTER">2</TD>
+<TD ALIGN="CENTER">52.8</TD>
+</TR>
+<TR><TD ALIGN="CENTER">3</TD>
+<TD ALIGN="CENTER">53.7</TD>
+</TR>
+</TABLE>
+</DIV>
+  
+  <A NAME="tbl:con:iaa:lb:data1"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="2374"></A>
+<TABLE>
+<CAPTION><STRONG>Table 5.12:</STRONG>
+The lower-bound baseline of the performance of the naive decoder of the CONVERSATIONAL-DOMAIN dimension on the IAA data 2.</CAPTION>
+<TR><TD>  <DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="CENTER">Annotator</TD>
+<TD ALIGN="CENTER">Percent agreement</TD>
+</TR>
+<TR><TD ALIGN="CENTER">1</TD>
+<TD ALIGN="CENTER">53.4</TD>
+</TR>
+<TR><TD ALIGN="CENTER">2</TD>
+<TD ALIGN="CENTER">52.9</TD>
+</TR>
+<TR><TD ALIGN="CENTER">3</TD>
+<TD ALIGN="CENTER">53.1</TD>
+</TR>
+</TABLE>
+</DIV>
+  
+  <A NAME="tbl:con:iaa:lb:data2"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+
+<H3><A NAME="SECTION001261200000000000000"></A> <A NAME="sbsctn:ub:con"></A>
+<BR>
+The upper-bound ceiling
+</H3>
+
+<P>
+To estimate the percent agreement of an upper-bound ceiling, we can conveniently use the IAA data because we have the same set of dialogues annotated by three annotators. For example, we can use annotation from one annotator as the gold standard and measure the percent agreement of the annotation from another annotator against the gold standard. In this case, we can think of it as if we constructed a decoder which has performance of a human annotator. If we evaluate the mutual performance for all combinations among our three annotators, we get the percent agreement values for the pairs of annotators 1-2, 1-3, and 2-3. 
+
+<P>
+In Tables <A HREF="#tbl:con:iaa:up:data1">5.13</A> and <A HREF="#tbl:con:iaa:up:data2">5.14</A>, we report the mutual performance, which is not significantly different (<IMG
+ WIDTH="13" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img123.png"
+ ALT="$p$">-value<IMG
+ WIDTH="18" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img193.png"
+ ALT="$&gt;$">0.01). We can see that the mutual annotators' performance was about  96% in the percent agreement. This suggest that there is about the 4% margin in the percent agreement. Consequently, our goal should not be to achieve 100%  but it should be more modest, to reach only 96% because the training data are not consistent enough to reach 100%. 
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="2387"></A>
+<TABLE>
+<CAPTION><STRONG>Table 5.13:</STRONG>
+The upper-bound ceiling of the performance of the "human" decoder of the CONVERSATIONAL-DOMAIN dimension on the IAA data 1.</CAPTION>
+<TR><TD>  <DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="CENTER">Pair of annotators</TD>
+<TD ALIGN="CENTER">Percent agreement</TD>
+</TR>
+<TR><TD ALIGN="CENTER">1-2</TD>
+<TD ALIGN="CENTER">94.2</TD>
+</TR>
+<TR><TD ALIGN="CENTER">1-3</TD>
+<TD ALIGN="CENTER">96.9</TD>
+</TR>
+<TR><TD ALIGN="CENTER">2-3</TD>
+<TD ALIGN="CENTER">96.0</TD>
+</TR>
+</TABLE>
+</DIV>
+  
+  <A NAME="tbl:con:iaa:up:data1"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="2396"></A>
+<TABLE>
+<CAPTION><STRONG>Table 5.14:</STRONG>
+The upper-bound ceiling of the performance of the "human" decoder of the CONVERSATIONAL-DOMAIN dimension on the IAA data 2.</CAPTION>
+<TR><TD>  <DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="CENTER">Pair of annotators</TD>
+<TD ALIGN="CENTER">Percent agreement</TD>
+</TR>
+<TR><TD ALIGN="CENTER">1-2</TD>
+<TD ALIGN="CENTER">97.8</TD>
+</TR>
+<TR><TD ALIGN="CENTER">1-3</TD>
+<TD ALIGN="CENTER">97.7</TD>
+</TR>
+<TR><TD ALIGN="CENTER">2-3</TD>
+<TD ALIGN="CENTER">98.9</TD>
+</TR>
+</TABLE>
+</DIV>
+  
+  <A NAME="tbl:con:iaa:up:data2"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+
+<H2><A NAME="SECTION001262000000000000000">
+SPEECH-ACT dimension</A>
+</H2>
+
+<P>
+
+<H3><A NAME="SECTION001262100000000000000">
+The lower-bound baseline</A>
+</H3>
+
+<P>
+Similarly to Section <A HREF="#sbsctn:lb:con">5.6.1</A>, we use the most apriori probable label of the SPEECH-ACT dimension in the training data to estimate the percent agreement of the lower-bound baseline. Consequently, the label is used as an output of a naive lower-bound baseline decoder. Then, we measure the percent agreement of this naive output against the SPEECH-ACT dimension from the test data.
+
+<P>
+In Table <A HREF="#tbl:spe:prob:list">5.15</A>, we present the labels from the SPEECH-ACT dimension sorted by the probability of the occurrence of a label in the training data. The most probable label is the label <I>present_info</I>, which occurred in the training data 27.5% of the time on the training data. 
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="2410"></A>
+<TABLE>
+<CAPTION><STRONG>Table 5.15:</STRONG>
+Labels from the SPEECH-ACT dimension sorted by the probability of the occurrence of a label in the training data.</CAPTION>
+<TR><TD>  <DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="CENTER">Labels of the SPEECH-ACT dimension</TD>
+<TD ALIGN="CENTER">Probability [%]</TD>
+</TR>
+<TR><TD ALIGN="CENTER">present_info</TD>
+<TD ALIGN="CENTER">27.5</TD>
+</TR>
+<TR><TD ALIGN="CENTER">acknowledgment</TD>
+<TD ALIGN="CENTER">13.2</TD>
+</TR>
+<TR><TD ALIGN="CENTER">request_info</TD>
+<TD ALIGN="CENTER">12.2</TD>
+</TR>
+<TR><TD ALIGN="CENTER">opening</TD>
+<TD ALIGN="CENTER">10.5</TD>
+</TR>
+<TR><TD ALIGN="CENTER">thanking</TD>
+<TD ALIGN="CENTER">8.7</TD>
+</TR>
+<TR><TD ALIGN="CENTER">closing</TD>
+<TD ALIGN="CENTER">8.2</TD>
+</TR>
+<TR><TD ALIGN="CENTER">implicit_confirmation</TD>
+<TD ALIGN="CENTER">7.2</TD>
+</TR>
+<TR><TD ALIGN="CENTER">verify</TD>
+<TD ALIGN="CENTER">6.5</TD>
+</TR>
+<TR><TD ALIGN="CENTER">explicit_confirmation</TD>
+<TD ALIGN="CENTER">2.9</TD>
+</TR>
+<TR><TD ALIGN="CENTER">status_report</TD>
+<TD ALIGN="CENTER">1.3</TD>
+</TR>
+<TR><TD ALIGN="CENTER">speech_repair</TD>
+<TD ALIGN="CENTER">0.9</TD>
+</TR>
+<TR><TD ALIGN="CENTER">apology</TD>
+<TD ALIGN="CENTER">0.4</TD>
+</TR>
+<TR><TD ALIGN="CENTER">verify_neg</TD>
+<TD ALIGN="CENTER">0.2</TD>
+</TR>
+<TR><TD ALIGN="CENTER">instruction</TD>
+<TD ALIGN="CENTER">0.2</TD>
+</TR>
+<TR><TD ALIGN="CENTER">offer</TD>
+<TD ALIGN="CENTER">0.1</TD>
+</TR>
+</TABLE>
+</DIV>
+  
+  <A NAME="tbl:spe:prob:list"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+The performance of the naive decoder, which output is only the label <I>present_info</I>, of the SPEECH-ACT dimension is 27.3% in the percent agreement on the test data. 
+
+<P>
+To evaluate whether one of the annotators is not biased, we measured the percent agreement of the output from the naive decoder against the IAA data. Tables <A HREF="#tbl:spe:iaa:lb:data1">5.16</A> and <A HREF="#tbl:spe:iaa:lb:data2">5.17</A> show the results, which are not significantly different (<IMG
+ WIDTH="13" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img123.png"
+ ALT="$p$">-value<IMG
+ WIDTH="18" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img193.png"
+ ALT="$&gt;$">0.01).
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="2422"></A>
+<TABLE>
+<CAPTION><STRONG>Table 5.16:</STRONG>
+The lower-bound baseline of the performance of the naive decoder of the SPEECH-ACT dimension on the IAA data 1.</CAPTION>
+<TR><TD>  <DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="CENTER">Annotator</TD>
+<TD ALIGN="CENTER">Percent agreement</TD>
+</TR>
+<TR><TD ALIGN="CENTER">1</TD>
+<TD ALIGN="CENTER">26.5</TD>
+</TR>
+<TR><TD ALIGN="CENTER">2</TD>
+<TD ALIGN="CENTER">26.2</TD>
+</TR>
+<TR><TD ALIGN="CENTER">3</TD>
+<TD ALIGN="CENTER">26.8</TD>
+</TR>
+</TABLE>
+</DIV>
+  
+  <A NAME="tbl:spe:iaa:lb:data1"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="2431"></A>
+<TABLE>
+<CAPTION><STRONG>Table 5.17:</STRONG>
+The lower-bound baseline of the performance of the naive decoder of the SPEECH-ACT dimension on the IAA data 2.</CAPTION>
+<TR><TD>  <DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="CENTER">Annotator</TD>
+<TD ALIGN="CENTER">Percent agreement</TD>
+</TR>
+<TR><TD ALIGN="CENTER">1</TD>
+<TD ALIGN="CENTER">27.1</TD>
+</TR>
+<TR><TD ALIGN="CENTER">2</TD>
+<TD ALIGN="CENTER">27.0</TD>
+</TR>
+<TR><TD ALIGN="CENTER">3</TD>
+<TD ALIGN="CENTER">26.8</TD>
+</TR>
+</TABLE>
+</DIV>
+  
+  <A NAME="tbl:spe:iaa:lb:data2"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+
+<H3><A NAME="SECTION001262200000000000000">
+The upper-bound ceiling</A>
+</H3> 
+
+<P>
+We estimate the upper-bound ceiling for the SPEECH-ACT dimension similarly as in Section <A HREF="#sbsctn:ub:con">5.6.1</A>. In Tables <A HREF="#tbl:spe:iaa:up:data1">5.18</A> and <A HREF="#tbl:spe:iaa:up:data2">5.19</A>, we report the mutual performance, which is not significantly different (<IMG
+ WIDTH="13" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img123.png"
+ ALT="$p$">-value<IMG
+ WIDTH="18" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img193.png"
+ ALT="$&gt;$">0.01). We see that the mutual annotators' performance was about  95% in the percent agreement. As a consequence, there is about the  5% margin in the percent agreement. 
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="2444"></A>
+<TABLE>
+<CAPTION><STRONG>Table 5.18:</STRONG>
+The upper-bound ceiling of the performance of the "human" decoder of the SPEECH-ACT dimension on the IAA data 1.</CAPTION>
+<TR><TD>  <DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="CENTER">Pair of annotators</TD>
+<TD ALIGN="CENTER">Percent agreement</TD>
+</TR>
+<TR><TD ALIGN="CENTER">1-2</TD>
+<TD ALIGN="CENTER">94.9</TD>
+</TR>
+<TR><TD ALIGN="CENTER">1-3</TD>
+<TD ALIGN="CENTER">95.6</TD>
+</TR>
+<TR><TD ALIGN="CENTER">2-3</TD>
+<TD ALIGN="CENTER">95.9</TD>
+</TR>
+</TABLE>
+</DIV>
+  
+  <A NAME="tbl:spe:iaa:up:data1"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="2453"></A>
+<TABLE>
+<CAPTION><STRONG>Table 5.19:</STRONG>
+The upper-bound ceiling of the performance of the "human" decoder of the SPEECH-ACT dimension on the IAA data 2.</CAPTION>
+<TR><TD>  <DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="CENTER">Pair of annotators</TD>
+<TD ALIGN="CENTER">Percent agreement</TD>
+</TR>
+<TR><TD ALIGN="CENTER">1-2</TD>
+<TD ALIGN="CENTER">95.2</TD>
+</TR>
+<TR><TD ALIGN="CENTER">1-3</TD>
+<TD ALIGN="CENTER">96.1</TD>
+</TR>
+<TR><TD ALIGN="CENTER">2-3</TD>
+<TD ALIGN="CENTER">96.0</TD>
+</TR>
+</TABLE>
+</DIV>
+  
+  <A NAME="tbl:spe:iaa:up:data2"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+
+<H2><A NAME="SECTION001263000000000000000">
+SEMANTIC dimension</A>
+</H2>
+
+<P>
+
+<H3><A NAME="SECTION001263100000000000000">
+The lower-bound baseline</A>
+</H3>
+
+<P>
+Similarly, to estimate SAcc and CAcc of the lower-bound baseline, we use the most apriori probable semantic annotation of the SEMANTIC dimension in the training data. We consider semantics as an output of some naive lower-bound baseline semantic parser. Consequently, we measure SAcc and CAcc of this naive semantic output against the test data.
+
+<P>
+First of all, we present the most apriori probable semantic annotations in Table <A HREF="#tbl:sem:prob:list">5.20</A>. The best candidate for the naive semantic output is the semantics TIME which was the most often in the training data. 
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="2465"></A>
+<TABLE>
+<CAPTION><STRONG>Table 5.20:</STRONG>
+The most probable (<!-- MATH
+ $P(semantics)\geq1.0\%$
+ -->
+<IMG
+ WIDTH="171" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$P(semantics)\geq 1.0\%$">) abstract semantic annotations sorted by the probability of occurrence of the semantics in the training data. The sum of the probabilities of these twenty annotations is 68.3%.</CAPTION>
+<TR><TD>  <DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="CENTER">Annotations of the SEMANTIC dimension</TD>
+<TD ALIGN="CENTER">Probability [%]</TD>
+</TR>
+<TR><TD ALIGN="CENTER">TIME</TD>
+<TD ALIGN="CENTER">19.0</TD>
+</TR>
+<TR><TD ALIGN="CENTER">ACCEPT</TD>
+<TD ALIGN="CENTER">11.2</TD>
+</TR>
+<TR><TD ALIGN="CENTER">GREETING</TD>
+<TD ALIGN="CENTER">11.0</TD>
+</TR>
+<TR><TD ALIGN="CENTER">OTHER_INFO</TD>
+<TD ALIGN="CENTER">2.3</TD>
+</TR>
+<TR><TD ALIGN="CENTER">ARRIVAL(TO(STATION), TIME)</TD>
+<TD ALIGN="CENTER">2.2</TD>
+</TR>
+<TR><TD ALIGN="CENTER">DEPARTURE(TIME)</TD>
+<TD ALIGN="CENTER">2.0</TD>
+</TR>
+<TR><TD ALIGN="CENTER">TIME, TRAIN_TYPE</TD>
+<TD ALIGN="CENTER">2.0</TD>
+</TR>
+<TR><TD ALIGN="CENTER">TRAIN_TYPE</TD>
+<TD ALIGN="CENTER">2.0</TD>
+</TR>
+<TR><TD ALIGN="CENTER">TIME, FROM(STATION)</TD>
+<TD ALIGN="CENTER">1.9</TD>
+</TR>
+<TR><TD ALIGN="CENTER">NEXT</TD>
+<TD ALIGN="CENTER">1.8</TD>
+</TR>
+<TR><TD ALIGN="CENTER">REJECT</TD>
+<TD ALIGN="CENTER">1.7</TD>
+</TR>
+<TR><TD ALIGN="CENTER">ARRIVAL(TIME)</TD>
+<TD ALIGN="CENTER">1.5</TD>
+</TR>
+<TR><TD ALIGN="CENTER">ACCEPT(TIME)</TD>
+<TD ALIGN="CENTER">1.5</TD>
+</TR>
+<TR><TD ALIGN="CENTER">FROM(STATION), TIME</TD>
+<TD ALIGN="CENTER">1.4</TD>
+</TR>
+<TR><TD ALIGN="CENTER">ARRIVAL(TIME, TO(STATION))</TD>
+<TD ALIGN="CENTER">1.3</TD>
+</TR>
+<TR><TD ALIGN="CENTER">TO(STATION)</TD>
+<TD ALIGN="CENTER">1.2</TD>
+</TR>
+<TR><TD ALIGN="CENTER">WHAT_TIME</TD>
+<TD ALIGN="CENTER">1.1</TD>
+</TR>
+<TR><TD ALIGN="CENTER">ARRIVAL(TO(STATION))</TD>
+<TD ALIGN="CENTER">1.1</TD>
+</TR>
+<TR><TD ALIGN="CENTER">GREETING, PERSON</TD>
+<TD ALIGN="CENTER">1.1</TD>
+</TR>
+<TR><TD ALIGN="CENTER">TIME, TO(STATION)</TD>
+<TD ALIGN="CENTER">1.0</TD>
+</TR>
+</TABLE>
+</DIV>
+  
+  <A NAME="tbl:sem:prob:list"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+The performance of the naive semantic parser using only abstract semantics TIME is 17.3% in SAcc and 26.0% in CAcc on the test data. The value of CAcc is much higher than the value of SAcc because the concept TIME occures very often in semantics which contain additional concepts to the concept TIME (see Table <A HREF="#tbl:sem:prob:list">5.20</A>) and the CAcc measure takes this fact into account.
+
+<P>
+To evaluate whether one of the annotators is not biased, we measured SAcc and CAcc of the naive semantics against the IAA data (against each annotator on both data 1 and 2). Tables <A HREF="#tbl:sem:iaa:lb:data1">5.21</A> and <A HREF="#tbl:sem:iaa:lb:data2">5.22</A> show the results, which are not significantly different (<IMG
+ WIDTH="13" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img123.png"
+ ALT="$p$">-value<IMG
+ WIDTH="18" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img193.png"
+ ALT="$&gt;$">0.01).
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="2477"></A>
+<TABLE>
+<CAPTION><STRONG>Table 5.21:</STRONG>
+The lower-bound baseline of the performance of the naive semantic parser of the SEMANTIC dimension on the IAA data 1.</CAPTION>
+<TR><TD>  <DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="CENTER">Annotator</TD>
+<TD ALIGN="CENTER">SAcc</TD>
+<TD ALIGN="CENTER">CAcc</TD>
+</TR>
+<TR><TD ALIGN="CENTER">1</TD>
+<TD ALIGN="CENTER">17.5</TD>
+<TD ALIGN="CENTER">26.2</TD>
+</TR>
+<TR><TD ALIGN="CENTER">2</TD>
+<TD ALIGN="CENTER">17.7</TD>
+<TD ALIGN="CENTER">25.8</TD>
+</TR>
+<TR><TD ALIGN="CENTER">3</TD>
+<TD ALIGN="CENTER">17.8</TD>
+<TD ALIGN="CENTER">26.2</TD>
+</TR>
+</TABLE>
+</DIV>
+  
+  <A NAME="tbl:sem:iaa:lb:data1"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="2486"></A>
+<TABLE>
+<CAPTION><STRONG>Table 5.22:</STRONG>
+The lower-bound baseline of the performance of the naive semantic parser of the SEMANTIC dimension on the IAA data 2.</CAPTION>
+<TR><TD>  <DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="CENTER">Annotator</TD>
+<TD ALIGN="CENTER">SAcc</TD>
+<TD ALIGN="CENTER">CAcc</TD>
+</TR>
+<TR><TD ALIGN="CENTER">1</TD>
+<TD ALIGN="CENTER">16.7</TD>
+<TD ALIGN="CENTER">26.3</TD>
+</TR>
+<TR><TD ALIGN="CENTER">2</TD>
+<TD ALIGN="CENTER">17.1</TD>
+<TD ALIGN="CENTER">25.6</TD>
+</TR>
+<TR><TD ALIGN="CENTER">3</TD>
+<TD ALIGN="CENTER">17.9</TD>
+<TD ALIGN="CENTER">26.2</TD>
+</TR>
+</TABLE>
+</DIV>
+  
+  <A NAME="tbl:sem:iaa:lb:data2"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+Because the topic of this thesis is semantic parsing, we present in Chapter <A HREF="node14.html#chptr:baseline">7</A> a more sophisticated baseline, which we significantly improve in both SAcc and CAcc in the following chapters.
+
+<P>
+
+<H3><A NAME="SECTION001263200000000000000">
+The upper-bound ceiling</A>
+</H3>
+
+<P>
+Again to estimate SAcc and CAcc of the upper-bound ceiling, we can use the IAA data because we have the same set of dialogues annotated by more than one annotator. We use annotation from one annotator as the gold standard and measure SAcc and CAcc of annotations from another annotator against the gold standard. In this case, we can think of it as if we constructed a semantic parser with human annotator performance. If we evaluate the mutual performance for all combination among three annotators, we get SAcc and CAcc values for the following pairs of annotators 1-2, 1-3, and 2-3. 
+
+<P>
+In Tables <A HREF="#tbl:iaa:up:data1">5.23</A> and <A HREF="#tbl:iaa:up:data2">5.24</A>, we report the mutual performance, which is not significantly different (<IMG
+ WIDTH="13" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img123.png"
+ ALT="$p$">-value<IMG
+ WIDTH="18" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img193.png"
+ ALT="$&gt;$">0.01). We see that the mutual annotators' performance was about 85% in SAcc and 91% in CAcc. This suggest that there is about 9% margin in CAcc. As a result, our goal should not be to achieve 100% in CAcc but the goal should be more modest to reach only 91% in CAcc. As we already mentioned, we believe that the upper-bound ceiling for the test data is roughly the same.
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="2499"></A>
+<TABLE>
+<CAPTION><STRONG>Table 5.23:</STRONG>
+The upper-bound ceiling of the performance of the "human" semantic parser of the SEMANTIC dimension on the IAA data 1.</CAPTION>
+<TR><TD>  <DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="CENTER">Pair of annotators</TD>
+<TD ALIGN="CENTER">SAcc</TD>
+<TD ALIGN="CENTER">CAcc</TD>
+</TR>
+<TR><TD ALIGN="CENTER">1-2</TD>
+<TD ALIGN="CENTER">82.4</TD>
+<TD ALIGN="CENTER">90.2</TD>
+</TR>
+<TR><TD ALIGN="CENTER">1-3</TD>
+<TD ALIGN="CENTER">85.1</TD>
+<TD ALIGN="CENTER">90.9</TD>
+</TR>
+<TR><TD ALIGN="CENTER">2-3</TD>
+<TD ALIGN="CENTER">85.2</TD>
+<TD ALIGN="CENTER">91.3</TD>
+</TR>
+</TABLE>
+</DIV>
+  
+  <A NAME="tbl:iaa:up:data1"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="2508"></A>
+<TABLE>
+<CAPTION><STRONG>Table 5.24:</STRONG>
+The upper-bound ceiling of the performance of the "human" semantic parser of the SEMANTIC dimension on the IAA data 2.</CAPTION>
+<TR><TD>  <DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="CENTER">Pair of annotators</TD>
+<TD ALIGN="CENTER">SAcc</TD>
+<TD ALIGN="CENTER">CAcc</TD>
+</TR>
+<TR><TD ALIGN="CENTER">1-2</TD>
+<TD ALIGN="CENTER">83.3</TD>
+<TD ALIGN="CENTER">90.2</TD>
+</TR>
+<TR><TD ALIGN="CENTER">1-3</TD>
+<TD ALIGN="CENTER">86.1</TD>
+<TD ALIGN="CENTER">91.1</TD>
+</TR>
+<TR><TD ALIGN="CENTER">2-3</TD>
+<TD ALIGN="CENTER">86.1</TD>
+<TD ALIGN="CENTER">92.0</TD>
+</TR>
+</TABLE>
+</DIV>
+  
+  <A NAME="tbl:iaa:up:data2"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+<HR>
+<ADDRESS>
+filip.jurcicek
+2008-05-27
+</ADDRESS>
+</BODY>
+</HTML>
