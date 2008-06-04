@@ -9,3 +9,4 @@ Content of the documentation for the extended HVS parser.
   * [simulatedASRChannel Usage of a simulated ASR Channel]
   * [settingsPath settings.path]
   * [FAQ Frequently Asked Questions]
+  * [http://extended-hidden-vector-state-parser.googlecode.com/svn/trunk/doc/HHTT/the-semantic-corpus.html      Semantic annotation scheme]
