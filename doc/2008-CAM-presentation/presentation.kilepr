@@ -35,7 +35,7 @@ order=1
 
 [item:main.handout.tex]
 archive=true
-column=7
+column=3
 encoding=ISO 8859-2
 highlight=LaTeX
 line=1
@@ -44,9 +44,9 @@ order=-1
 
 [item:main.tex]
 archive=true
-column=32
+column=14
 encoding=ISO 8859-2
 highlight=LaTeX
-line=1091
+line=1362
 open=true
 order=0
