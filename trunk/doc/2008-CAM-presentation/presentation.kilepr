@@ -1,0 +1,52 @@
+[General]
+img_extIsRegExp=false
+img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif .dvi
+kileprversion=2
+kileversion=2.0
+lastDocument=main.tex
+masterDocument=main.beamer.tex
+name=cu-prezentace
+pkg_extIsRegExp=false
+pkg_extensions=.cls .sty
+src_extIsRegExp=false
+src_extensions=.tex .ltx .latex .dtx .ins .bib .mp
+
+[Tools]
+MakeIndex=
+QuickBuild=PDFLaTeX+ViewPDF
+
+[item:../FJDzrtc/my.bib]
+archive=true
+column=4718665
+encoding=
+highlight=
+line=0
+open=false
+order=-1
+
+[item:main.beamer.tex]
+archive=true
+column=0
+encoding=ISO 8859-2
+highlight=LaTeX
+line=7
+open=false
+order=1
+
+[item:main.handout.tex]
+archive=true
+column=7
+encoding=ISO 8859-2
+highlight=LaTeX
+line=1
+open=false
+order=-1
+
+[item:main.tex]
+archive=true
+column=32
+encoding=ISO 8859-2
+highlight=LaTeX
+line=1091
+open=true
+order=0

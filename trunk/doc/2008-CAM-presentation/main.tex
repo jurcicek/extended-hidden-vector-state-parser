@@ -1,0 +1,1390 @@
+%%===============================================================
+%%      LaTeX2e source.
+%%
+%%           Author:    Filip Jurcicek
+%%             Date:    2. Jun  2008
+%%      description:    Cambridge Invited talk
+%%===============================================================
+
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage[czech]{babel}
+\usepackage[latin2]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[overlay,absolute]{textpos}
+\usepackage{pgf}
+
+\setcounter{tocdepth}{2}
+
+\setlength{\TPHorizModule}{1mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{0mm}{0mm}
+
+% \useoutertheme{tree}
+
+\definecolor{logobg}{rgb}{1.0,1.0,0.99}
+\definecolor{pval}{rgb}{0.0,0.5,0.0}
+\definecolor{green}{rgb}{0.0,0.5,0.0}
+\definecolor{galert}{rgb}{0.0,0.5,0.0}
+\definecolor{ralert}{rgb}{0.8,0.0,0.0}
+\definecolor{yellow}{rgb}{0.99,0.99,0.0}
+
+\newcommand{\unseen}{\textit{\_unseen\_}}
+\newcommand{\ut}{\textit}
+\newcommand{\abs}[1]{\left\vert#1\right\vert}
+
+\def\captionsczech{%
+  \def\prefacename{Preface}%
+  \def\refname{References}%
+  \def\abstractname{Abstract}%
+  \def\bibname{Bibliography}%
+  \def\chaptername{Chapter}%
+  \def\appendixname{Appendix}%
+  \def\contentsname{Contents}%
+  \def\listfigurename{List of Figures}%
+  \def\listtablename{List of Tables}%
+  \def\indexname{Index}%
+  \def\figurename{Figure}%
+  \def\tablename{Table}%
+  \def\partname{Part}%
+  \def\enclname{encl}%
+  \def\ccname{cc}%
+  \def\headtoname{To}%
+  \def\pagename{Page}%
+  \def\headpagename{Page}%
+  \def\prefacename{Preface}%
+  \def\seename{see}%
+  \def\alsoname{see also}}
+
+\def\dateczech{%
+  \def\today{\ifcase\month\or
+      January\or February\or March\or April\or May\or June\or July\or
+      August\or September\or October\or November\or December\fi
+      \space\number\day, \number\year}}
+
+\DeclareMathOperator*{\argmax}{argmax}
+
+\newcommand{\fgr}[4]
+{
+  \begin{figure}[htbp]
+    \begin{center}
+      \leavevmode
+      \includegraphics[#1]{#2}
+    \end{center}
+    \caption{#4}
+    \label{#3}
+  \end{figure}
+}
+
+\newcommand{\fgrc}[4]
+{
+  \begin{figure}[htbp]
+    \begin{center}
+      \leavevmode
+      \includegraphics[#1]{#2}
+    \end{center}
+    \label{#3}
+  \end{figure}
+}
+
+\newcommand{\fgrpos}[4]
+{
+  \begin{textblock}{#1}(#2,#3)
+    \includegraphics[width=#1mm]{#4}
+  \end{textblock}
+}
+
+\newcommand{\fgrposb}[4]
+{
+  \begin{textblock}{#1}(#2,#3)
+    \includegraphics[width=#1mm]{#4}
+  \end{textblock}
+}
+
+\newcommand{\bfgrc}[4]
+{
+  \begin{figure}[htbp]
+    \begin{center}
+      \leavevmode
+      \pgfimage[interpolate=true,#1]{#2}
+    \end{center}
+    \label{#3}
+  \end{figure}
+}
+
+\title{Extended HVS parser}
+\author{Filip Jurèíèek}
+\institute{UWB - University of West Bohemia, Center of Applied Cybernetics\\Pilsen, 306 14, Czech Republic\\
+  \hspace{0cm}\\
+  {\small \tt filip@kky.zcu.cz}
+}
+
+\date{Jun 2, 2008}
+
+% \AtBeginSection[]{\frame{\frametitle{Outline}\tableofcontents[current]}}
+\AtBeginSection[]{
+\frame{
+  \frametitle{Outline}
+  \begin{small}
+  \tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/show/hide]
+  \end{small}
+}
+}
+
+
+\begin{document}
+
+\frame{
+\titlepage
+}
+
+\mode<article>
+{
+  \maketitle
+}
+
+
+%%===============================================================
+%%===============================================================
+
+\section{Introduction}
+
+\subsection{Semantic analysis of spoken dialogues}
+
+\frame
+{
+  \frametitle{Dialogue systems}
+
+  \begin{footnotesize}
+  \vspace{-.9cm}
+  \fgrc{width=8cm}{eps/ds-structure.pdf}{fgr:dss}{Typical structure of a dialogue system.}
+  
+%   \begin{block}{Structure}
+%     A spoken dialogue system is composed of three main parts: 
+%     \begin{itemize}
+%       \item the block of spoken language understanding, 
+%       \item the block of spoken dialogue management, 
+%       \item the block of speech generation.
+%     \end{itemize}
+%   \end{block}
+
+  \vspace{-.4cm}
+  \begin{block}{Spoken language understanding}
+    \begin{itemize}
+      \item continuous spontaneous spoken speech
+      \item spoken speech is often ungrammatical, includes disfluences
+      \item the transformation into text form contains errors
+    \end{itemize}
+  \end{block}
+  \end{footnotesize}
+}
+
+\frame
+{
+  \frametitle{Systems using ATIS data}
+
+  \begin{block}{Based on context free grammars}
+    \begin{itemize}
+      \item TINA from Massachusetts Institute of Technology
+      \item PHOENIX from Carnegie Mellon University
+      \item GEMINI from SRI International
+    \end{itemize}
+  \end{block}
+
+  \vspace{1cm}
+  \begin{block}{Based on statistical models}
+    \begin{itemize}
+      \item CHRONUS (Markov models) from~AT\&T
+      \item Hidden Understanding Model (HUM) from BBN Technologies
+      \item Hidden Vector State (HVS) parser from The University of Cambridge
+    \end{itemize}
+  \end{block}
+}
+
+% \subsection{Automatic speech understanding}
+% 
+% \frame
+% {
+%   \frametitle{Word sequence decoding}
+%   \begin{block}{Word sequence decoding}
+%     \begin{equation*}
+%       W^* = \argmax_{W} P(O|W)P(W)
+%     \end{equation*}
+%     \begin{itemize}
+%       \item $O = o_1, o_2, \ldots, o_T$ is the acoustic signal
+%       \item $P(O|W)$ is the probability that when the word sequence $W = w_1, w_2, \ldots, w_N$ is spoken, the acoustic signal $O$ is received,
+%       \item $P(W)$ is the apriori probability that the speaker uttered $W$, i.e. probability given by the language model.
+%     \end{itemize}
+%   \end{block}
+% }
+% 
+% \frame
+% {
+%   \frametitle{HMM model of a triphone}
+%   \fgr{width=11cm}{eps/triphone.pdf}{fgr:triphone}{An example of an HMM model of a triphone.}
+% }
+% 
+% \frame
+% {
+%   \frametitle{Dynamic Bayesian Networks}
+%   \fgr{width=11cm}{eps/dbn-hmm.pdf}{fgr:dbn:hmm}{A dynamic Bayesian network representing a hidden Markov model. The variable $o$ is an observed variable and the variable $s$ is a hidden state variable.}
+% }
+% 
+% \frame
+% {
+%   \frametitle{Dynamic Bayesian Networks}
+%   \fgr{width=8cm}{eps/dbn-ahmm.pdf}{fgr:dbn:ahmm}{A dynamic Bayesian network  representing a factorized hidden Markov model. The variable $o$ is an observed variable and the variables $a_1,\ldots, a_4$ are factorized hidden state variables.}
+% }
+
+\subsection{Statistical semantic parsing}
+
+% \frame
+% {
+%   \frametitle{The noisy channel}
+% 
+% %   \fgrpos{9}{5}{77.3}{eps/best/robokacer.png}
+%   \vspace{-0.6cm}
+% %   \fgrc{width=11cm}{eps/noisy-asr.pdf}{fgr:noisy:asr}{The noisy channel of automatic speech understanding.}
+%   
+%   \bfgrc{width=11cm}{eps/noisy-asr}{fgr:noisy:asr}{The noisy channel of automatic speech understanding.}
+% }
+
+\frame
+{
+  \frametitle{Concept sequence decoding}
+  \begin{block}{Concept sequence decoding}
+    \begin{equation*}
+      S^*  = \argmax_{S} P(W|S)P(S) 
+    \end{equation*}
+    \begin{itemize}
+      \item $P(S)$ is the semantic model
+      \item $P(W|S)$ is the lexical model
+
+%       \item $O = o_1, o_2, \ldots, o_T$ is the acoustic signal,
+%       \item $P(O|W)$ is the probability that when the word sequence $W = w_1, w_2, \ldots, w_N$ is spoken, the acoustic signal $O$ is received,
+%       \item $P(W)$ is the apriori probability that the speaker uttered $W$, i.e. probability given by the language model.
+
+    \end{itemize}
+  \end{block}
+}
+
+\frame
+{
+  \frametitle{Flat-concept parser}
+
+  \fgr{width=8cm}{eps/gmtk-fst.pdf}{fgr:fcm}{The graphical model of the FC model.}
+}
+
+\frame
+{
+  \frametitle{Flat-concept parser}
+
+  \begin{block}{Implementation}
+    The semantic model is
+    \begin{equation*}
+    P(S) = \prod_{t=1}^{T} P(c_t | c_{t-1})
+    \end{equation*} 
+    The lexical model is 
+    \begin{equation*}
+    P(W|S) = \prod_{t=1}^{T} P(w_t | c_t)
+    \end{equation*} 
+  \end{block}
+}
+
+\subsection{The Hidden Vector State parser}
+
+\frame
+{
+  \frametitle{The Hidden Vector State parser}
+
+  \fgr{width=10cm}{eps/gmtk-hvs-he.pdf}{fgr:HVS:he}{The graphical model of the HVS parser.}
+}
+
+\frame
+{
+  \frametitle{The Hidden Vector State parser}
+
+  \begin{block}{Implementation}
+    The semantic model is
+    \begin{equation*}
+    P(S) = \prod_{t=1}^{T} P(pop_t | c_{t-1}[1,4]) P(c_{t}[1] | c_{t}[2,4])
+    \end{equation*} 
+    The lexical model is 
+    \begin{equation*}
+    P(W|S) = \prod_{t=1}^{T} P(w_t | c_t[1,4])
+    \end{equation*} 
+  \end{block}
+}
+
+\frame
+{
+  \frametitle{HVS parser - training data}
+
+  \begin{block}{Training data}
+    \ut{does any train go to Prague around four p.m.} 
+
+    DEPARTURE( TO( STATION), TIME)
+  \end{block}
+
+  \fgrc{width=10cm}{eps/semantics-stack-en-EM.pdf}{fgr:smntcs:stack}{}
+}
+
+\frame
+{
+  \frametitle{HVS parser - output of decoding}
+
+  \fgr{width=11cm}{eps/semantics-stack-en.pdf}{fgr:smntcs:stack}{A full semantic parse tree with the corresponding stack sequence. }
+}
+
+%%===============================================================
+%%===============================================================
+\section{The baseline}
+
+\subsection{Semantic data}
+
+% \frame
+% {
+%   \frametitle{Semantic and dialogue act example dialogue}
+% 
+%   \begin{table} 
+%     \begin{footnotesize}
+%       \centerline{
+%       \begin{tabular}{|l|l|l|l|l}
+%       \hline \makebox[1cm][l]{Speaker} & \makebox[1.5cm][l]{Speech act} & \makebox[2.5cm][l]{Semantics} & \makebox[4cm][l]{Utterance (Czech)}\\
+%       \hline 
+%       \hline operator & opening & GREETING & informace prosím  \\
+%       \hline user & opening & GREETING & dobrý den \\
+%       \hline & request-info & DEPARTURE( & já mám prosbu jakpak jedou \\
+%       & & TIME, & dneska dopoledne \\
+%       & & TRAIN\_TYPE,  & osobní vlaky òák  \\
+%       & & TO(STATION)) & do  Starýho Plzence  \\
+%       \hline operator & status-report & OTHER\_INFO & no tak tam u¾ moc \\
+%       & & & na výbìr nemáte  \\
+%       \hline & present-info & TIME, & teïka jede v osm ¹estnáct \\
+%       & & & jestli stihnete  \\
+%       & & TIME & potom a¾ v jedenáct deset \\
+%       \hline user & implicit-confirm & TIME & a¾ v jedenáct deset \\
+%       \hline ... &  ... & ... & ... \\
+% %       \hline & acknowledgment & ACCEPT(TIME, & a to by tak òák staèilo tich jedenáct deset \\
+% %       & & FROM(STATION)) & z  hlavního  jo  \\
+% %       \hline & verify & TRAIN\_TYPE & a dá se tam vzít koèárek  \\
+% %       \hline operator & acknowledgment & ACCEPT & samozøejmì paní to víte ¾e ano \\
+% %       \hline user & verify & TRAIN\_TYPE & tak¾e tam jsou ty nový vagóny \\
+% %       \hline operator & apology & OTHER\_INFO & moment jak to myslíte jaký vagóny \\
+% %       \hline user & verify & TRAIN\_TYPE & jako jestli ho musím vzít jako zavazadlo \\
+% %       \hline & verify & TRAIN\_TYPE & nebo jestli ho vezmu pro matky s dìtmi \\
+% %       \hline operator & acknowledgment & ACCEPT(TRAIN\_TYPE) & pro matky s dìtmi \\
+% %       \hline user & closing & CLOSING & jo dobøe tak jo \\
+%       \hline
+%       \end{tabular}
+%     }
+%     \end{footnotesize}
+%   \end{table}
+% }
+
+\frame
+{
+  \frametitle{Semantic example dialogue - UWB}
+
+  \begin{table} 
+    \begin{footnotesize}
+      \centerline{
+      \begin{tabular}{|l|l|l|l|l}
+      \hline \makebox[2.5cm][l]{Semantics} & \makebox[5cm][l]{Utterance (Literal English translation)}\\
+      \hline
+      \hline GREETING & the information please \\
+      \hline GREETING & hello \\
+      \hline DEPARTURE(TIME, &  I have a question how can I go today \\
+      TRAIN\_TYPE,  &  by regional train  \\
+      TO(STATION)) &  to  Starýho Plzence  \\
+      \hline OTHER\_INFO & well we do not have many connections here \\
+      \hline TIME, & now one goes at eight sixteen if you   \\
+      TIME & catch it after that only at eleven ten \\
+      \hline TIME & at eleven ten \\
+      \hline ACCEPT(TIME, & it is not so bad at eleven ten  \\
+      FROM(STATION)) & from  Hlavního  yeah \\
+      \hline TRAIN\_TYPE & is it possible to take a stroller with me \\
+      \hline ACCEPT & of course madam be sure that you can \\
+      \hline TRAIN\_TYPE & so there are the new cars \\
+      \hline
+      \end{tabular}
+    }
+    \end{footnotesize}
+  \end{table}
+}
+
+\frame
+{
+  \frametitle{Size, cardinality and reliability}
+
+  \begin{block}{Size of the corpus}
+    \begin{itemize}
+      \item 1,109 dialogues
+      \item 17,900 utterances
+      \item 2,872 unique words 
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{Cardinality}
+    \begin{itemize}
+      \item 35 semantic concepts (DEPARTURE, FROM, TO, STATION, $\ldots$)
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{Reliability of semantics}
+    \begin{itemize}
+      \item stability (intra-annotator's agreement): about 0.90
+      \item reproducibility (inter-annotator's agreement): about 0.81
+    \end{itemize}
+  \end{block}
+}
+
+\subsection{Difference in data}
+\frame
+{
+  \frametitle{Difference between CU-ATIS and UWB semantic data}
+
+%   \fgrpos{9}{60}{65}{eps/best/kacka.png}
+
+  \vspace{0.6cm}
+
+  \begin{overlayarea}{\textwidth}{11cm}
+    \only<1->{
+    \begin{table}
+      \begin{footnotesize}
+        \centerline{
+        \begin{tabular}{|l|l|l|}
+        \hline \makebox[4.8cm][l]{}  & \makebox[3.3cm][l]{CU-ATIS data}     & \makebox[2.5cm][l]{UWB data}    \\
+        \hline 
+        \hline \textbf<1>{order of semantic concepts} & \textbf<1>{not defined} & \textbf<1>{defined}     \\
+        \hline \textbf<2>{lexical classes}            & \textbf<2>{defined}     & \textbf<2>{not defined} \\
+        \hline \textbf<3>{performance evaluation based on}     & \textbf<3>{extracted slot values}  & \textbf<3>{semantics} \\
+        \hline
+        \end{tabular}
+        }
+      \end{footnotesize}
+    \end{table}
+  }
+
+  \only<1>{
+    \begin{block}{Order of semantic concepts}
+      it is not so bad at eleven ten from  Hlavního yeah
+  
+      \vspace{0.5cm}
+      S1:  ACCEPT(TIME, FROM(STATION))
+  
+      S2:  ACCEPT(FROM(STATION), TIME)
+    \end{block}
+  }
+  \only<2>{
+    \begin{block}{Lexical classes}
+      it is not so bad at eleven ten from \alert{Hlavního} yeah
+  
+      \vspace{0.3cm}
+      $\Longrightarrow$
+      \vspace{0.3cm}
+
+      it is not so bad at eleven ten from \alert{station\_name} yeah
+    \end{block}
+  }
+  \only<3>{
+    \begin{block}{Evaluation}
+      Frame: FLIGHT
+      
+      Slots: 
+      \begin{itemize}
+      \item FROMLOC.CITY = Boston
+      \item TOLOC.CITY = NewYork
+      \end{itemize}
+
+      \vspace{0.3cm}
+      $\times$
+      \vspace{0.3cm}
+
+      HYP: ACCEPT(TIME, FROM(STATION))
+    \end{block}
+  }
+  \end{overlayarea}
+}
+
+\subsection{Performance of the HVS parser}
+\frame
+{
+  \frametitle{Error criteria}
+
+  \begin{block}{Semantic Accuracy - SAcc}
+    The reference and the hypothesis annotations are considered equal only if they exactly match each other. 
+%     \begin{equation*}
+%     SAcc = \frac{E}{N} \cdot 100 \%
+%     \end{equation*} 
+%     where $N$ is the number of evaluated semantics, $E$ is the number of hypothesis semantic annotations which exactly match the reference. 
+  \end{block}
+
+  \begin{block}{Example}
+    REF:  ARRIVAL(TIME, FROM(STATION))
+
+    \vspace{0.5cm} 
+    HYP1: ARRIVAL(TIME, \alert<2->{TO}(STATION)) \\
+    HYP2: \alert<2->{DEPARTURE(TRAIN\_TYPE)}
+  \end{block}
+}
+
+\frame
+{
+  \frametitle{Error criteria}
+
+  \begin{block}{Concept Accuracy - CAcc}
+    Measures the minimum number of: 
+    \begin{itemize}
+    \item substitutions
+    \item deletions
+    \item insertions
+    \end{itemize}
+    required to transform one tree into another. 
+  \end{block}
+
+%   \fgr{width=11cm}{./eps/ted.pdf}{fgr:ted}{The tree edit distance operations' sequence.}
+}
+
+\frame
+{
+  \frametitle{The tree edit distance}
+
+  \fgrc{width=10.5cm}{./eps/ted.pdf}{fgr:ted}{.}
+}
+
+
+% \frame
+% {
+%   \frametitle{The lower-bound baseline and the upper-bound ceiling}
+% 
+%   \begin{block}{The lower-bound baseline}
+%     \begin{itemize}
+%       \item SPEECH-ACT: 26\%
+%       \item SEMANTIC: 17\% SAcc, 26\% CAcc
+%     \end{itemize}
+%   \end{block}
+% 
+%   \begin{block}{The upper-bound ceiling}
+%     \begin{itemize}
+%       \item SPEECH-ACT: 95\%
+%       \item SEMANTIC: 83\% SAcc, 91\% CAcc
+%     \end{itemize}
+%   \end{block}
+}
+
+\frame
+{
+  \frametitle{Performance}
+
+  \fgrpos{9}{110}{58}{eps/best/skrblik.png}
+  
+  \vspace{-0.6cm}
+  \begin{table}
+    \begin{center}
+    \begin{tabular}{|r|c|c|c|c|}
+      \hline \makebox[5cm][l]{} & \multicolumn{2}{|c|}{Test data} & \multicolumn{2}{|c|}{Development data}    \\
+      \hline                          & SAcc & CAcc & SAcc & CAcc \\ 
+      \hline
+      \hline \textbf<1>{the lower-bound baseline} & \textbf<1>{17.3} & \textbf<1>{26.0} & - & - \\
+      \hline \textbf<2>{the tuned HVS parser} & \textbf<2>{47.9} & \textbf<2>{63.2} & \textbf<2>{50.7} & \textbf<2>{64.3} \\ % SC=1.4;SP=1.7
+      \hline  \textbf<1>{the upper-bound ceiling} & \textbf<1>{85.0} & \textbf<1>{91.0} & - & - \\
+      \hline
+    \end{tabular}
+%     \caption{Performance of the tuned HVS parser.}
+    \label{tbl:tunned:HVS:parser}
+    \end{center}
+  \end{table}
+
+  \begin{block}{Tunned system}
+    \begin{itemize}
+      \item insertion penalty
+      \item scaling factor - $P(S)$ 
+      \item pruning of vocabulary
+      \item number of EM iterations
+    \end{itemize}
+
+  \end{block}
+
+}
+
+% \subsection{Error analysis}
+% \frame
+% {
+%   \frametitle{Error analysis}
+% 
+%   \begin{block}{Error analysis}
+%     \begin{itemize}
+%     \item \textbf{Strong word dependency errors}: in some cases the lexical model is biased toward some words.
+%     \item \textbf{Pushing errors}: the errors are caused by inserting one concept onto the stack for every input word. 
+%     \item \textbf{Left-branching errors}: the errors are caused by the inability to push more than one concept onto the stack.
+%     \item \textbf{Context errors}: the errors are caused by dependency of   semantic annotation on a context (previous semantic annotations).
+%     \end{itemize}
+%   \end{block}
+% }
+% 
+% \frame
+% {
+%   \frametitle{Error analysis}
+% 
+%   \begin{table}
+%     \begin{center}
+%     \begin{tabular}{|c|c|c|c|c|c|}
+%       \hline    Type of error   & Number of errors & \% \\ 
+%       \hline
+%       \hline    Strong word dependency & 19  & 12.0 \\
+%       \hline    Pushing                & 8   & 5.0 \\
+%       \hline    Left-branching         & 12  & 7.0 \\
+%       \hline    Context                & 21  & 13.0 \\
+%       \hline    Unclassified           & 101 & 63.0 \\
+%       \hline
+%     \end{tabular}
+%     \end{center}
+%   \end{table}
+% }
+
+%%===============================================================
+%%===============================================================
+\section{Negative examples}
+
+\subsection{Positive examples}
+
+\frame
+{
+  \frametitle{Positive examples}
+
+  \begin{block}{The corpus}
+  \begin{footnotesize}
+    \begin{center}
+      \begin{tabular}{|l|l|l|l|l}
+      \hline does any train go to {\color<2->{green}Prague} & DEPARTURE(TO({\color<2->{green}STATION})\\
+      {\color<2->{red}around four p.m.} & {\color<2->{red}TIME}) \\
+      
+      \hline what is the price of a ticket to  & PRICE(TO(\\
+      {\color<2->{green}Cambridge} {\color<2->{red}around six a.m.} & {\color<2->{green}STATION}), {\color<2->{red}TIME}) \\
+      
+      \hline if you want a {\color<2->{blue}direct} train than & DEPARTURE({\color<2->{blue}TRAIN\_TYPE}, \\
+      it departures {\color<2->{red}around nine p.m.} & {\color<2->{red}TIME}) \\
+      \hline
+      \end{tabular}
+    \end{center}
+  \end{footnotesize}
+  \end{block}
+
+  \begin{block}{Positive example not labeled in the corpus (word level)}<2->
+  \begin{footnotesize}
+    \centerline{
+    \begin{tabular}{|l|l|l|l|l}
+    \hline \makebox[4cm][l]{Word (words)} & \makebox[4cm][l]{Concept (Semantics)} \\
+    \hline 
+    \hline {\color<2->{green}Prague} & {\color<2->{green}STATION}\\
+    \hline {\color<2->{red}around four p.m.} & {\color<2->{red}TIME} \\
+    \hline {\color<2->{green}Cambridge} & {\color<2->{green}STATION} \\
+    \hline {\color<2->{red}around six a.m.} & {\color<2->{red}TIME} \\
+    \hline {\color<2->{blue}direct} & {\color<2->{blue}TRAIN\_TYPE} \\ 
+    \hline {\color<2->{red}around nine p.m.} & {\color<2->{red}TIME} \\
+    \hline $\ldots$ & $\ldots$ \\
+    \hline
+    \end{tabular}
+  }
+  \end{footnotesize}
+  \end{block}
+}
+
+\subsection{Negative examples}
+\frame
+{
+  \frametitle{Negative examples}
+
+  \begin{block}<2->{The corpus}
+  \begin{footnotesize}
+    \begin{center}
+      \begin{tabular}{|l|l|l|l|l}
+      \hline {\color<3->{blue}does any {\color<3->{red}train} go to Prague} & {\color<3->{blue}DEPARTURE(TO({\color<3->{green}STATION})}\\
+      {\color<3->{blue}{\color<3->{red}around} four {\color<3->{red}p.m.}} & {\color<3->{blue}TIME)} \\
+      
+      \hline {\color<3->{blue}what is the price of {\color<3->{red}a} ticket to}  & {\color<3->{blue}PRICE(TO(}\\
+      {\color<3->{blue}Cambridge {\color<3->{red}around} six a.m.} & {\color<3->{blue}{\color<3->{green}STATION}), TIME)} \\
+      
+      \hline {\color<2-2>{green}if you want {\color<2-2>{red}a} direct {\color<2-2>{red}train} than} & {\color<2-2>{green}DEPARTURE(TRAIN\_TYPE,} \\
+      {\color<2-2>{green}it departures {\color<2-2>{red}around} nine {\color<2-2>{red}p.m.}} & {\color<2-2>{green}TIME)} \\
+      \hline
+      \end{tabular}
+    \end{center}
+  \end{footnotesize}
+  \end{block}
+
+
+  \begin{block}{Negative examples not labeled in the corpus (word level)}
+  \begin{center} 
+  \begin{footnotesize}
+    \begin{tabular}{|l|l|l|l|l}
+    \hline \makebox[4cm][l]{Word (words)} & \makebox[4cm][l]{Concept (Semantics)} \\
+    \hline 
+    \hline \textcolor<2->{red}{a} & {\color{green}STATION}\\
+    \hline \textcolor<2->{red}{around} & {\color{green}STATION}\\
+%     \hline {departures} & {\color{green}STATION} \\ 
+%     \hline {nine} & {\color{green}STATION} \\ 
+    \hline \textcolor<2->{red}{train} & {\color{green}STATION}\\
+    \hline \textcolor<2->{red}{p.m.} & {\color{green}STATION}\\
+    \hline $\ldots$ & $\ldots$ \\
+    \hline
+    \end{tabular}
+  \end{footnotesize}
+  \end{center}  
+  \end{block}
+}
+
+\frame{
+  \frametitle{Negative examples}
+
+  \vspace{-0.4cm}
+  \fgrc{width=10cm}{eps/semantics-en-neg.pdf}{fgr:sem:en:neg}{Disabled alignment.}
+
+  \vspace{-0.4cm}
+  \begin{block}{Negative examples not labeled in the corpus (word level)}
+  \begin{center} 
+  \begin{footnotesize}
+    \begin{tabular}{|l|l|l|l|l}
+    \hline \makebox[4cm][l]{Word (words)} & \makebox[4cm][l]{Concept (Semantics)} \\
+    \hline 
+    \hline \textcolor<1->{red}{a} & {\color{green}STATION}\\
+    \hline \textcolor<1->{red}{around} & {\color{green}STATION}\\
+%     \hline {departures} & {\color{green}STATION} \\ 
+%     \hline {nine} & {\color{green}STATION} \\ 
+    \hline \textcolor<1->{red}{train} & {\color{green}STATION}\\
+    \hline \textcolor<1->{red}{p.m.} & {\color{green}STATION}\\
+    \hline $\ldots$ & $\ldots$ \\
+    \hline
+    \end{tabular}
+  \end{footnotesize}
+  \end{center}  
+  \end{block}
+}
+
+\subsection{Extraction of negative examples}
+\frame
+{
+  \frametitle{Extraction of negative examples}
+
+  \begin{footnotesize}
+  \begin{block}{Used concepts}
+    {\color<2->{green}AMOUNT, LENGTH, NUMBER, TIME}, STATION and TRAIN\_TYPE 
+  \end{block}
+
+  \begin{block}{Potential problems}<2->
+    \begin{itemize}
+      \item the lexical realization of the concepts {\color<2->{green}AMOUNT, LENGTH, NUMBER, TIME} is similar
+      \item incorrectly annotated utterance
+    \end{itemize}
+    \vspace{-.5cm}
+    \begin{table} 
+    \begin{footnotesize}
+    {\fontsize{1}{2}
+      \centerline{
+      \begin{tabular}{|l|l|l|l|l}
+      \hline Utterance & Semantics \\
+      \hline 
+      \hline does any train go to {\color{green}Prague} around four p.m. & DEPARTURE({\color{blue}TRAIN\_TYPE}, TIME) \\
+      \hline
+      \end{tabular}
+    }}
+    \end{footnotesize}
+    \end{table}  
+    \vspace{-.6cm}
+    \begin{itemize}
+      \item too general concept in the annotation
+    \end{itemize}
+    \vspace{-.6cm}
+    \begin{table} 
+    \begin{footnotesize}
+    {\fontsize{1}{2}
+      \centerline{
+      \begin{tabular}{|l|l|l|l|l}
+      \hline Word (words) & Concept (Semantics) \\
+      \hline 
+      \hline weather is pleasant today in Prague & OTHER\_INFO \\
+      \hline $\ldots$ & $\ldots$ \\
+      \hline
+      \end{tabular}
+    }}
+    \end{footnotesize}
+    \end{table}  
+  \end{block}
+  \end{footnotesize}
+}
+
+\frame
+{
+  \frametitle{Selection of proper utterances}
+  
+  \begin{block}{Only utterances containing concepts}
+    ACCEPT, ARRIVAL, DELAY, DEPARTURE, DISTANCE, DURATION, PLATFORM, PRICE, and REJECT
+  \end{block}
+
+  \begin{example}
+  \begin{table} 
+  \begin{footnotesize}
+    \centerline{
+    \begin{tabular}{|l|l|l|l|l}
+    \hline Utterance & Semantics \\
+    \hline 
+    \hline what is the price of a ticket to Cambridge & PRICE(TO(STATION)) \\
+    \hline it will arrive at the second platform & ARRIVAL(PLATFORM(NUMBER)) \\
+    \hline $\ldots$ & $\ldots$ \\
+    \hline
+    \end{tabular}
+  }
+  \end{footnotesize}
+  \end{table}  
+  \end{example}
+}
+
+% \frame[containsverbatim]
+% {
+%   \frametitle{Extraction algorithm}
+% 
+% {\fontsize{7}{9}
+% \begin{verbatim}
+% dominatingConcepts = [ACCEPT, ARRIVAL, DELAY, DEPARTURE, DISTANCE, 
+%                       DURATION, PLATFORM, PRICE, REJECT]
+% dominatedConcepts  = [STATION, TRAIN_TYPE]
+% dominatedGrupedConcepts = [AMOUNT, LENGTH, NUMBER, TIME] 
+% 
+% for every utterance in trainingSet:
+%   if utterance.semantics contains a concept from dominatingConcepts:
+%     # use the utterance as a source of negative examples
+% 
+%     for every concept in dominatedConcepts:
+%       if concept is not in utterance.semantics:
+%         # use words as negative examples 
+%         negativeExamples[concept].append(utterance.words)
+% 
+%     if no element of dominatedGrupedConcepts is in utterance.semantics:
+%       for every concept in dominatedGrupedConcepts:
+%           negativeExamples[concept].append(utterance.words)
+% 
+% prune(negativeExamples)
+% \end{verbatim}
+% }
+% }
+
+\subsection{Application of negative examples}
+\frame
+{
+  \frametitle{Application of negative examples}
+
+  \begin{block}{Modification of the lexical model}
+    \begin{equation*} 
+    x(w , c[1,4]) = 
+      \begin{cases}
+        \epsilon & \text{if $(w , c[1])$ is a negative example}, \\
+        1/\abs{V} & \text{otherwise}
+      \end{cases}
+    \end{equation*} 
+    \begin{equation*}
+    P(w | c[1,4])  = \frac{x(w,c[1,4])}{\sum_{\overline{w} \in V} x(\overline{w},c[1,4])} \quad  \forall c[1,4] \quad \forall w \in V  
+    \end{equation*} 
+    where $\epsilon$ is reasonably small positive value and $V$ is a word lexicon.
+  \end{block}
+}
+
+\subsection{Performance}
+\frame
+{
+  \frametitle{Performance}
+
+  \fgrpos{10}{60}{65}{eps/best/nouma.png}
+  
+  \vspace{-0.6cm}
+  \begin{table}
+    \begin{center}
+    \begin{tabular}{|r|c|c|c|c|c|c|}
+      \hline       & \multicolumn{3}{|c|}{Test data} & \multicolumn{3}{|c|}{Development data}    \\
+      \hline                      & SAcc & CAcc & $p$-value & SAcc & CAcc & $p$-value \\ 
+      \hline
+      \hline   baseline           & 47.9 & 63.2 &           & 50.7 & 64.3 &           \\ 
+      \hline   \textbf{neg. examples} & \textbf{50.4} & \textbf{64.9} & $<$ 0.01  & \textbf{52.8} & \textbf{67.0} & $<$ 0.01  \\ % SC=1.4;SP=1.7
+      \hline
+    \end{tabular}
+    \label{tbl:test:results}
+    \end{center}
+  \end{table}
+}
+
+%%===============================================================
+%%===============================================================
+\section{Left-right-branching parsing}
+
+\subsection{Motivation}
+
+\frame
+{
+  \frametitle{The incorrect parse tree}
+
+  \fgrpos{10}{5}{50}{eps/best/sikula.png}
+
+  \vspace{-0.4cm}
+  \fgrc{width=10cm}{eps/semantics-LB-errors.pdf}{fgr:semantics:parsing:error}{An incorrect parse tree from a right-branching parser and a correct parse tree from a left-right-branching parser.}
+}
+
+\subsection{The HVS parser with probabilistic pushing}
+
+\frame
+{
+  \frametitle{Recapitulation - The Hidden Vector State parser}
+
+  \fgr{width=10cm}{eps/gmtk-hvs-he.pdf}{fgr:HVS:he:rec}{The graphical model of the HVS parser.}
+}
+
+\frame
+{
+  \frametitle{The HVS parser with probabilistic pushing}
+
+  \fgr{width=10cm}{eps/gmtk-hvs-fj-intro.pdf}{fgr:HVS:fj:intro}{The graphical model of the HVS parser with probabilistic pushing (HVS-PP).}
+}
+
+\subsection{The left-right-branching HVS}
+
+\frame
+{
+  \frametitle{The left-right-branching HVS}
+
+  \fgr{width=10cm}{eps/gmtk-hvs-fj.pdf}{fgr:HVS:fj}{The graphical model of the right-branching HVS parser limited to insert at most two new concepts (LRB-HVS).}
+}
+
+\frame
+{
+  \frametitle{Mathematical representation}
+  \begin{footnotesize}
+  \begin{block}{The HVS parser with probabilistic pushing}
+    \vspace{-.4cm}
+    \begin{align*} 
+    P(S) = \prod_{t=1}^{T} & P(pop_t | c_{t-1}[1, 4]) P(push_t | c_{t-1}[1, 4]) \notag \\
+      & \cdot 
+      \begin{cases}
+        1 & \text{if $push_t = 0$} \\
+        P(c_{t}[1] | c_{t}[2,  4])         & \text{if $push_t = 1$} 
+      \end{cases}
+    \end{align*} 
+  \end{block}
+
+  \begin{block}{The left-right-branching HVS}
+    \vspace{-.4cm}
+    \begin{align*} 
+    P(S) = & \prod_{t=1}^{T} P(pop_t | c_{t-1}[1, 4]) P(push_t | c_{t-1}[1,  4]) \cdot \notag \\
+      & \cdot
+      \begin{cases}
+        1                                                  & \text{if $push_t = 0$} \\
+        P(c_{t}[1] | c_{t}[2,  4])                  & \text{if $push_t = 1$} \\
+        P(c_{t}[1] | c_{t}[2,  4]) P(c_{t}[2] | c_{t}[3, 4])  & \text{if $push_t = 2$} 
+      \end{cases}
+    \end{align*} 
+  \end{block}
+  \end{footnotesize}
+}
+
+\subsection{Performance}
+\frame
+{
+  \frametitle{Performance}
+  \begin{block}{}
+    The baseline is the parser using negative examples.
+  \end{block}
+
+
+\begin{table}
+% use packages: array
+  \begin{center}
+  \begin{tabular}{|r|c|c|c|c|c|c|}
+     \hline       & \multicolumn{3}{|c|}{Test data} & \multicolumn{3}{|c|}{Development data}    \\
+     \hline            & SAcc & CAcc & $p$-value & SAcc & CAcc & $p$-value \\ 
+     \hline
+     \hline   baseline & 50.4 & 64.9 &           & 52.8 & 67.0 &           \\
+     \hline   HVS-PP   & 54.1 & 67.2 & $<$ 0.01  & 56.6 & 68.4 & $<$ 0.01  \\
+     \hline   \textbf{LRB-HVS}  & \textbf{58.3} & \textbf{69.3} & $<$ 0.01  & \textbf{60.1} & 70.6 & $<$ \textbf{0.01}  \\
+     \hline
+  \end{tabular}
+  \label{tbl:newsys:test}
+  \end{center}
+\end{table}
+}
+
+%%===============================================================
+%%===============================================================
+\section{Semantic parser input parametrization}
+
+\subsection{Input feature vector}
+\frame
+{
+  \frametitle{Input feature vector}
+
+  \fgr{width=10cm}{eps/gmtk-hvs-fj-ifv.pdf}{fgr:HVS:fj:f}{The graphical model of the HVS parser with the input feature vector composed of a lemma and a morphological tag (HVS-IFV).}
+}
+
+\frame
+{
+  \frametitle{Mathematical representation}
+  \begin{footnotesize}
+  \begin{block}{Input feature vector}
+    \vspace{-.4cm}
+    \begin{equation*}
+      \begin{split}
+        P(F|S) & = \prod_{t=1}^T P(f_t~|~c_t) \\
+               & = \prod_{t=1}^T P(f_t[1], f_t[2], \ldots f_t[N]~|~c_t) \\
+               & \approx \prod_{t=1}^T \prod_{i=1}^N P(f_t[i]~|~c_t)
+      \end{split}
+      \label{eq:ifv-lexical}
+    \end{equation*}
+  \end{block}
+
+  \begin{block}{Scaling of the semantic model}
+    \begin{equation*}
+        S^* = \arg\max_S P(F|S)P^\lambda(S)
+        \label{eq:ifv-search}
+    \end{equation*}
+
+  \end{block}
+  \end{footnotesize}
+}
+
+\subsection{Performance}
+\frame
+{
+  \frametitle{Performance}
+  \begin{block}{}
+    The baseline is the LRB-HVS parser.
+  \end{block}
+
+  \begin{footnotesize}
+  \begin{table}
+  \begin{center}
+    \begin{tabular}{|l|c|c|c|c|c|c|}
+    \hline       & \multicolumn{3}{|c|}{Test data} & \multicolumn{3}{|c|}{Development data}    \\
+    \hline input feature vector & SAcc & CAcc & $p$-value & SAcc & CAcc & $p$-value \\ 
+    \hline
+    \hline baseline (Words)    & 58.3 & 69.3 &           & 60.1 & 70.6 & \\
+    \hline Lemmas              & 58.4 & 69.8 &           & 60.5 & 71.3 & \\   
+    \hline \textbf{Lemmas+Morphological tags} & \textbf{63.1} & \textbf{73.8} & $<$ 0.01  & \textbf{65.4}\textbf{} & \textbf{75.7} & $<$ 0.01 \\ 
+    \hline
+    \end{tabular}
+  \end{center}
+%   \caption{The performance of the HVS parser using the input feature vector in the lexical model. The parsers were evaluated on the test and the development data.}
+  \label{tbl:f:test}
+  \end{table}
+  \end{footnotesize}
+}
+
+\frame[label=IFV]
+{
+  \frametitle{Benefits}
+
+  \begin{block}{Example}
+  \begin{footnotesize}
+  \begin{center}
+  % use packages: array
+  \begin{tabular}{|l|l|}
+  \hline from the corpus: Words & ehm from \textcolor{red}{Bøeclavi} to \textcolor{red}{Mikulova} then \\ 
+  \hline from the corpus: Lemmas & ehm from \textcolor{red}{Bøeclav} to \textcolor{red}{Mikulov} then \\
+  \hline from the corpus: Morf. tags & J\hspace{.7cm}R\hspace{.76cm}N\hspace{.51cm}R\hspace{.61cm}N\hspace{.71cm}D \\
+  \hline & \\
+  \hline parser's input: Words & ehm from \textcolor{red}{\_unseen\_} to \textcolor{red}{\_unseen\_} then \\
+  \hline parser's input: Lemmas & ehm from \textcolor{red}{\_unseen\_} to \textcolor{red}{\_unseen\_} then \\
+  \hline parser's input: Morf. tags & J\hspace{.7cm}R\hspace{.76cm}N\hspace{.61cm}R\hspace{.61cm}N\hspace{.71cm}D  \\
+  \hline & \\
+  \hline LRB-HVS Output Semantics & OTHER\_INFO \\ 
+  \hline HVS-IFV Output Semantics & FROM(STATION),TO(STATION) \\ 
+  \hline 
+  \end{tabular}
+  \end{center}
+  \end{footnotesize}
+
+  \end{block}
+
+  \vfill \hfill \hyperlink{IFV-ex<1>}{\beamerbutton{Extra}}
+}
+
+%%===============================================================
+%%===============================================================
+
+\section{HVS parser \& GMTK}
+
+\frame{
+  \frametitle{GMTK}
+
+  \begin{block}{The Graphical Models Toolkit (GMTK)}
+    \begin{itemize}
+      \item Jeff Bilmes, University of Washington, Dept. of EE
+      \item Geoffrey Zweig, Microsoft, Speech Research Group
+      \item \url{http://ssli.ee.washington.edu/~bilmes/gmtk/}
+      \item \url{http://ssli.ee.washington.edu/~bilmes/gmtk/doc.pdf}
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{Main tools used from GMTK}
+    \begin{itemize}
+      \item Preparing input files: gmtkTriangulate, gmtkDTindex
+      \item Training: gmtkEMtrain(New)
+      \item Decoding: gmtkViterbi(New)
+    \end{itemize}
+  \end{block}
+}
+
+\frame[containsverbatim]
+{
+  \frametitle{HMM Tagger (flat-concept parser) in GMTK}
+  \fgrpos{50}{77}{13}{eps/gmtk-fst-short.pdf}
+
+\begin{footnotesize}
+\begin{verbatim}
+
+
+#include "commonParams"
+
+frame : 0 {
+  variable : concept {
+    type: discrete hidden cardinality CONCEPT_CARD;
+    switchingparents : nil;
+    conditionalparents: nil using DeterministicCPT("conceptZero");
+  }
+  
+  variable : word  {
+    type: discrete observed 0:0 cardinality WORD_CARD;
+    switchingparents : nil;
+    conditionalparents: concept(0) using DenseCPT("wordGivenC1");
+  }
+}
+
+...
+\end{verbatim}
+\end{footnotesize}
+}
+
+\frame[containsverbatim]
+{
+  \frametitle{HMM Tagger (flat-concept parser) in GMTK}
+  \fgrpos{50}{77}{13}{eps/gmtk-fst-short.pdf}
+
+\begin{footnotesize}
+\begin{verbatim}
+
+
+
+
+frame : 1 {
+  variable : concept {
+    type: discrete hidden cardinality CONCEPT_CARD;
+    switchingparents : nil;
+    conditionalparents: concept(-1) using DenseCPT("conceptGivenC_1");
+  }
+
+  variable : word  {
+    type: discrete observed 0:0 cardinality WORD_CARD;
+    switchingparents : nil;
+    conditionalparents: concept(0) using DenseCPT("wordGivenC1");
+  }
+}
+
+chunk 1:1
+\end{verbatim}
+\end{footnotesize}
+}
+
+\frame{
+  \frametitle{Graphical model from implementation}
+
+  \fgrpos{43}{85}{27}{eps/gmtk-hvs-fj-bw.pdf}
+
+  \fgrpos{130}{0}{15}{eps/s3dcd.pdf}
+}
+
+% \frame[containsverbatim]
+% {
+%   \frametitle{Backoff word generation}
+% 
+% \begin{footnotesize}
+% \begin{verbatim}
+% variable : backoffWordGivenC1C2C3C4 {
+%     type: discrete hidden cardinality BACKOFF_C1C2C3C4_CARD;
+%     switchingparents: nil;
+%     conditionalparents: 
+%       concept1(0),concept2(0),concept3(0),concept4(0) 
+%         using DeterministicCPT("backoffC1C2C3C4");
+%   }
+%   
+% variable : word  {
+%     type: discrete observed 0:0 cardinality WORD_CARD;
+%     switchingparents: backoffWordGivenC1C2C3C4(0) using mapping("copy");
+%     conditionalparents: 
+%         concept1(0),concept2(0),concept3(0),concept4(0) 
+%           using SparseCPT("wordGivenC1C2C3C4")
+%       | concept1(0),concept2(0),concept3(0)             
+%           using SparseCPT("wordGivenC1C2C3")
+%       | concept1(0),concept2(0) using SparseCPT("wordGivenC1C2")
+%       | concept1(0) using  DenseCPT("wordGivenC1")
+%       | nil using DenseCPT("wordUnigram");
+% }
+% \end{verbatim}
+% \end{footnotesize}
+% }
+
+
+\frame[containsverbatim]
+{
+  \frametitle{Stack transition validator}
+  \begin{block}{Motivation - Duplicit paths with the same stack sequence}
+    \begin{small}
+    ($pop_t = 1$, $push_t = 1$, $concept1_{t-1} = concept1_t$) equals to ($pop_t = 0$, $push_t = 0$)
+    \end{small}
+  \end{block}
+
+
+\vspace{-.0cm}
+\begin{footnotesize}
+\begin{verbatim}
+variable : stackTrans {
+    type: discrete hidden cardinality STACK_TRANS_CARD; 
+    switchingparents: nil;
+    conditionalparents: concept1(0),concept1(-1),concept2(0),concept2(-1),concept3(0),concept3(-1),concept4(0),concept4(-1)
+      using DeterministicCPT("stackTransGivenC1C1_1C2C2_1C3C3_1C4C4_1");
+}
+
+% make sure that in case no change on the stack, it will use pop==push==0
+variable : stackTransValidator {
+    type: discrete observed value 1 cardinality 2; 
+    switchingparents: nil;
+    conditionalparents: stackTrans(0), pop(0), push(0)
+      using DeterministicCPT("stackTransValidatorGivenStPopPush");
+}
+\end{verbatim}
+\end{footnotesize}
+}
+
+\frame[containsverbatim]
+{
+  \frametitle{Stack transition validator - decision trees}
+\vspace{-.4cm}
+\begin{footnotesize}
+\begin{verbatim}
+1 % a DT that evaluates to one when there is "transition"
+stackTransGivenC1C1_1C2C2_1C3C3_1C4C4_1
+8 % number of parents
+-1  {(!((p0==p1) && (p2==p3) && (p4==p5) && (p6==p7)))}
+
+2 % a DT that validate pop, push, and stack transition
+%   if there is no transition, the pop and push RV should be equal to 0
+stackTransValidatorGivenStPopPush
+3 % number of parents
+0 2 0 default
+  -1  {(p1==0)&&(p2==0)}  % the pop and push should be equal to 0
+  -1  {p1||p2}    % the pop or push should be different to 0
+
+\end{verbatim}
+\end{footnotesize}
+}
+
+%%===============================================================
+%%===============================================================
+
+\section{Conclusion}
+
+\subsection{Performance overview}
+\frame
+{
+  \frametitle{Performance overview}
+  \begin{footnotesize}
+  \begin{table}
+    \begin{center}
+      \begin{tabular}{|l|c|c|c|c|c|c|}
+      \hline \makebox[4cm][l]{}      & \multicolumn{3}{|c|}{Test data} & \multicolumn{3}{|c|}{Development data}    \\
+      \hline          & SAcc & CAcc & $p$-value & SAcc & CAcc & $p$-value \\ 
+      \hline
+      \hline {the lower-bound baseline} & {17.3} & {26.0} & & & &\\
+      \hline
+      \hline {original HVS parser}      & {47.9} & {63.2} &           & {50.7} & {64.3} &           \\ 
+      \hline
+      \hline {negative examples}            & {50.4} & {64.9} & $<$ 0.01  & {52.8} & 3{67.0} & $<$ 0.01  \\
+      \hline {LRB-HVS}                  & {58.3} & {69.3} & $<$ 0.01  & {60.1} & {70.6} & $<$ 0.01  \\
+      \hline
+      \hline \textbf{HVS-IFV}                   & \textbf{63.1} & \textbf{73.8} & $<$ 0.01  & \textbf{65.4} & \textbf{75.7} & $<$ 0.01  \\
+      \hline
+      \hline {the upper-bound ceiling}  & {85.0} & {91.0} & & & &\\ 
+      \hline
+      \end{tabular}
+    \end{center}
+%     \caption{The parsers were evaluated on the test and the development data.}
+    \label{tbl:all:test}
+  \end{table}
+  \end{footnotesize}
+}
+
+% \subsection{Comparison of the learning curves}
+% \frame
+% {
+%   \frametitle{Comparison of the learning curves}
+% 
+%   \fgr{width=7cm}{eps/baseline-best-td.pdf}{fgr:HVS:learning:curve:td:best}{The learning curve of the best HVS-IFV parser and the learning curve of the tuned baseline HVS parser.}
+% }
+% 
+% \subsection{Dependence on an ASR system performance}
+% \frame
+% {
+%   \frametitle{Dependence on an ASR system performance}
+% 
+%   \fgr{width=7cm}{eps/wacc-sim.pdf}{fgr:WAcc:sim}{The performance of the best HVS-IFV parser in dependence on simulated WAcc.}
+% }
+
+\subsection{Questions?}
+
+\frame
+{
+  \frametitle{Questions?}
+
+  \begin{block}{}
+  \begin{LARGE}
+  \begin{center}
+    {\color{red}Thank you!}
+  \end{center}
+  \end{LARGE}
+  \end{block}
+
+  \vspace{1cm}
+  \begin{block}{And also}
+    Many thanks to my colleague Jan ©vec from UWB for his work on the IFV part of the parser.
+  \end{block}
+
+  \begin{block}{The parser is available at}
+  \begin{small}
+    \url{http://code.google.com/p/extended-hidden-vector-state-parser/}
+    
+    \vspace{.3cm}
+    \url{http://code.google.com/p/dialogue-act-editor/}
+  \end{small}
+  \end{block}
+}
+
+% \subsection{Q\&A}
+% \frame
+% {
+%   \frametitle{Questions and Answers}
+% 
+%   \fgrc{width=2cm}{eps/best/rockerkvac.png}{fgr:rockerkvac}{}
+% }
+% 
+
+%%===============================================================
+%%===============================================================
+
+\frame[label=IFV-ex]
+{
+%   \frametitle{Comparison of the learning curves}
+
+  \fgrc{width=12cm}{eps/comp_standard.pdf}{fgr:comp:stand}{}
+  \vfill \hfill \hyperlink{IFV<1>}{\beamerreturnbutton{Return}}
+}
+
+\end{document}
+
