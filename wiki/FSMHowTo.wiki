@@ -128,7 +128,7 @@ There is the simple script named `hvsparser.py` which loads the converted FSM mo
 
 `./hvsparser.py results/2008-06-16-13.09/fsm`
 
-You can type some input or you can redirect the stdin and stdout streams using your shell. To process the whole directory of XMl files, you can use the command:
+You can type some input or you can redirect the stdin and stdout streams using your shell. To process the whole directory of XML files, you can use the command:
 
 `./hvsparser.py results/2008-06-16-13.09/fsm --xml-dir DIR_WITH_XML --skip-empty --mlf --omit-leaves`
 
