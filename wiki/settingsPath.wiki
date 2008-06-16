@@ -69,7 +69,7 @@ export PDT_WORK_DIR=$BUILD_DIR/pdt
 
 export FSM_DIR=$BUILD_DIR/fsm
 
-export CONFUSE_DIR=~/Research/DIALOGUE/confusion
+export CONFUSE_DIR=`pwd`/../confusion
 export CONFUSE_DATA_DIR=$BUILD_DIR/data-confused
 
 }}}
