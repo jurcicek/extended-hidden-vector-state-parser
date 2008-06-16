@@ -1,8 +1,25 @@
+# SVC library - usefull Python routines and classes
+# Copyright (C) 2006-2008 Jan Svec, honza.svec@gmail.com
+# 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 import sys
 import os
 import re
 import time
 import getpass
+from copy import copy
 from threading import Thread
 from select import select
 from subprocess import Popen, PIPE
@@ -29,7 +46,7 @@ class ExternalError(OSError):
     pass
 
 class ExternalMethod(PythonEgg):
-    def __init__(self, file_name, name=None, args=[], logger=None, env=None, path=None, etype='', pre_func=None, post_func=None):
+    def __init__(self, file_name, name=None, args=[], logger=None, env=None, path=None, etype=ExecGenerator, pre_func=None, post_func=None):
         super(ExternalMethod, self).__init__()
         if path is None:
             self.fileName = file_name
@@ -91,43 +108,58 @@ class ExternalMethod(PythonEgg):
         :Returns:
             Generator yielding lines of stdout of `fn`
         """
-        if 'stdin' in kwargs:
-            stdin = kwargs.pop('stdin')
-        else:
-            stdin = None
-
-        if 'env' in kwargs:
-            env = kwargs.pop('env')
-        else:
-            env = {}
+        stdin = kwargs.pop('stdin', None)
+        stdin_file = kwargs.pop('stdin_file', None)
+        stdout_file = kwargs.pop('stdout_file', None)
+        env = kwargs.pop('env', {})
 
         if kwargs:
             raise TypeError("Bad keyword arguments: %s" % kwargs.keys())
+
+        if stdin is not None and stdin_file is not None:
+            raise TypeError("You cannot use both stdin and stdin_file argument")
 
         e = dict(self.getEnv())
         e.update(env)
         e = self._strEnv(e)
         args = self._strArgs(self.args + list(args))
+
+        to_close = []
+
         if stdin is not None:
             stdin_func = iter(stdin)
             stdin = PIPE
+        elif stdin_file is not None:
+            stdin_func = None
+            stdin = file(stdin_file, 'r')
+            to_close.append(stdin)
         else:
+            stdin_func = None
             stdin = None
+
+        if stdout_file is not None:
+            stdout = file(stdout_file, 'w')
+            to_close.append(stdout)
+        else:
+            stdout = PIPE
+
         exec_list = [self.fileName] + args
         if self.pre_func is not None:
             self.pre_func(self, exec_list, env)
-
         try:
             process = Popen(exec_list, shell=False, env=e,
-                    stdin=stdin, stdout=PIPE, stderr=PIPE, bufsize=0)
+                    stdin=stdin, stdout=stdout, stderr=PIPE, bufsize=0)
         except OSError, e:
             raise ExternalError("Couldn't execute external method %r: %s" % (self.name, e))
 
         stdin = process.stdin
         stdout = process.stdout
         stderr = process.stderr
-        poll_r = [stdout, stderr]
-        if stdin is not None:
+        if stdout_file is not None:
+            poll_r = [stderr]
+        else:
+            poll_r = [stdout, stderr]
+        if stdin_func is not None:
             poll_w = [stdin]
         else:
             poll_w = []
@@ -162,6 +194,8 @@ class ExternalMethod(PythonEgg):
                     poll_w.remove(stdin)
 
         retcode = process.wait()
+        for f in to_close:
+            f.close()
         if self.post_func is not None:
             self.post_func(self, exec_list, env)
         if retcode < 0:
@@ -169,7 +203,10 @@ class ExternalMethod(PythonEgg):
         elif retcode > 0:
             raise ExternalError("External method %s (%r) returned with nonzero exit status (%d)" % (self.name, ' '.join(exec_list), retcode))
 
-    executeGenerator = execute
+    def executeGenerator(self, *args, **kwargs):
+        return self.execute(*args, **kwargs)
+
+    __iter__ = executeGenerator
 
     def executeList(self, *args, **kwargs):
         return list(self.execute(*args, **kwargs))
@@ -197,6 +234,155 @@ class ExternalMethod(PythonEgg):
     def __call__(self, *args, **kwargs):
         m = self.getExecuteMethod(self.etype)
         return m(*args, **kwargs)
+
+    def new(self, *args, **kwargs):
+        if 'stdin' in kwargs:
+            stdin = kwargs.pop('stdin')
+        else:
+            stdin = None
+
+        if 'env' in kwargs:
+            env = kwargs.pop('env')
+        else:
+            env = {}
+
+        if kwargs:
+            raise TypeError("Bad keyword arguments: %s" % kwargs.keys())
+
+        e = dict(self.getEnv())
+        e.update(env)
+        e = self._strEnv(e)
+        args = self._strArgs(self.args + list(args))
+
+        ret = copy(self)
+        ret.setArgs(args)
+        return ret
+
+
+    # Pipeline overloading
+    def __or__(left, right):
+        return Pipeline( (left, right) )
+
+    def __ror__(right, left):
+        return Pipeline( (left, right) )
+
+    def __rshift__(self, fn):
+        return Pipeline( (self,), redir_stdout=fn)
+
+    def __rrshift__(self, fn):
+        return Pipeline( (self,), redir_stdin=fn)
+
+class Pipeline(PythonEgg):
+    def __init__(self, pipeline, redir_stdin=None, redir_stdout=None):
+        super(Pipeline, self).__init__()
+        self.setupPipeline(pipeline, redir_stdin, redir_stdout)
+
+    def setupPipeline(self, pipeline, redir_stdin, redir_stdout):
+        ret = []
+
+        no_stdin = False
+
+        for i, item in enumerate(pipeline):
+            first = (i==0)
+            last = (i==len(pipeline)-1)
+
+            item_callable = callable(item)
+
+            if not item_callable:
+                if first:
+                    no_stdin = True
+                else:
+                    raise ValueError("Items in pipeline must be callable")
+
+            if isinstance(item, Pipeline):
+                if first and item.redir_stdin is not None:
+                    if redir_stdin:
+                        raise ValueError("Input of pipeline is redirected")
+                    else:
+                        redir_stdin = item.redir_stdin
+                if last and item.redir_stdout is not None:
+                    if redir_stdout:
+                        raise ValueError("Output of pipeline is redirected")
+                    else:
+                        redir_stdout = item.redir_stdout
+                ret.extend(item._pipeline)
+            else:
+                if not callable(item):
+                    if first:
+                        no_stdin = True
+                    else:
+                        raise ValueError("Items in pipeline must be callable")
+                ret.append(item)
+
+        self._pipeline = tuple(ret)
+        self.no_stdin = no_stdin
+        self.redir_stdin = redir_stdin
+        self.redir_stdout = redir_stdout
+
+    def getOSEnv(self):
+        return dict(os.environ)
+
+    def _strEnv(self, env):
+        ret = {}
+        for key, value in env.iteritems():
+            ret[key] = str(value)
+        return ret
+
+    def execute(self, stdin=None, env={}):
+        e = self.getOSEnv()
+        e.update(env)
+        e = self._strEnv(e)
+
+        pipeline = self._pipeline
+
+        if self.no_stdin and stdin is not None:
+            raise ValueError("Pipeline doesn't have a stdin")
+        
+        if self.redir_stdin and stdin is not None:
+            raise ValueError("Pipeline have a redirected stdin")
+        
+        generator = stdin
+        for i, item in enumerate(pipeline):
+            first = (i==0)
+            last = (i==len(pipeline)-1)
+
+            if isinstance(item, ExternalMethod):
+                if not last:
+                    method = item.executeGenerator
+                else:
+                    method = item
+                kwargs = {}
+                if self.redir_stdin is not None and first:
+                    kwargs['stdin_file'] = self.redir_stdin
+                else:
+                    kwargs['stdin'] = generator
+                if self.redir_stdout is not None and last:
+                    kwargs['stdout_file'] = self.redir_stdout
+                generator = method(env=e, **kwargs)
+            elif callable(item):
+                generator = item(generator)
+            else:
+                generator = item
+        return generator
+
+    def __call__(self, *args, **kwargs):
+        return self.execute(*args, **kwargs)
+
+    def __iter__(self):
+        return self.execute()
+
+    # Pipeline overloading
+    def __or__(left, right):
+        return Pipeline( (left, right) )
+
+    def __ror__(right, left):
+        return Pipeline( (left, right) )
+
+    def __rshift__(self, fn):
+        return Pipeline( (self,), redir_stdout=fn)
+
+    def __rrshift__(self, fn):
+        return Pipeline( (self,), redir_stdin=fn)
 
 class MetaExternalMethods(MetaEgg):
     def __init__(cls, name, bases, dict):

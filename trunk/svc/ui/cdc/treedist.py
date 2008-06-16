@@ -1,13 +1,35 @@
+# SVC library - usefull Python routines and classes
+# Copyright (C) 2006-2008 Jan Svec, honza.svec@gmail.com
+# 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 import sys
 import os
 import time
 from itertools import izip
 
 from svc.scripting import *
-from svc.utils import issequence, ADict
+from svc.utils import issequence, ADict, cartezian
 from svc.ui.treedist import OrderedTree, TreeDist, CommonDist, EditScript
 
 ROOT_CONCEPT = '__S'
+
+CONCEPT_GROUPS = {
+    'DA': ['ACKNOWLEDGEMENT', 'CLOSING', 'DISCONNECT', 'OPENING', 'OTHER',
+           'PRESENT_INFO', 'REQUEST_INFO', 'THANKING',],
+    'SKIP': ['_DUMMY_', '_FILLER_'],
+}
 
 def utils_dict_sum(*dicts):
     ret = {}
@@ -33,9 +55,11 @@ class ConceptTree(OrderedTree):
         return ret
 
 class ConceptLine(list):
-    def __init__(self, separator):
+    def __init__(self, separator, only=None, skip=None):
         super(ConceptLine, self).__init__()
         self._separator = separator
+        self._only = only
+        self._skip = skip
 
     def addSeparator(self):
         self.append(self._separator)
@@ -48,7 +72,15 @@ class ConceptLine(list):
         self.removeSeparator()
         ret = ''.join(self)
         del self[:]
-        return ConceptTree.fromString(ret, label=ROOT_CONCEPT)
+        try:
+            ret = ConceptTree.fromString(ret, label=ROOT_CONCEPT)
+            if self._only:
+                ret.removeNodesWithoutLabels(self._only)
+            if self._skip:
+                ret.removeNodesWithLabels(self._skip)
+            return ret
+        except ValueError:
+            return None
 
 class TreeDistScript(ExScript):
     """Tools for compute tree-edit-distance on input Files.
@@ -64,17 +96,38 @@ class TreeDistScript(ExScript):
         'kappa.nconc': Integer,
         'matching.files': OptionAlias,
         'sresults.files': OptionAlias,
+        'sresults.only': (Multiple, String),
+        'sresults.skip': (Multiple, String),
+        'sresults.twoside': Flag,
+        'sresults.groupby': String,
     }
 
     posOpts = ['command', 'files', Ellipsis]
 
     debugMain = True
 
-    def readForestFromMLF(self, in_fn):
+    def createConceptGroups(self, grp):
+        if not issequence(grp):
+            grp = [grp]
+        ret = []
+        for item in grp:
+            for i in item.split(','):
+                if i.startswith('@'):
+                    ret.extend(CONCEPT_GROUPS.get(i[1:], []))
+                else:
+                    ret.append(i)
+        return set(ret)
+
+    def readForestFromMLF(self, in_fn, only=None, skip=None):
         SEPARATOR = ', '
         OPEN_PAR = '('
         CLOSING_PAR = ')'
         HEADER = '#!MLF!#'
+
+        if only is not None:
+            only = self.createConceptGroups(only)
+        if skip is not None:
+            skip = self.createConceptGroups(skip)
 
         fr = file(in_fn)
         forest = {}
@@ -84,7 +137,7 @@ class TreeDistScript(ExScript):
                 self.logger.error("Not a MLF file: %r", in_fn)
                 return
             filename_line = True
-            concept_line = ConceptLine(SEPARATOR)
+            concept_line = ConceptLine(SEPARATOR, only, skip)
             for line in fr:
                 line = line.strip()
                 if not line:
@@ -187,6 +240,8 @@ class TreeDistScript(ExScript):
                 continue
             self.logger.debug("Processing file %r", fn)
             try:
+                if tree1 is None or tree2 is None:
+                    raise ValueError('Bad semantics trees')
                 dist, script = d.fullDist(tree1, tree2)
             except ValueError:
                 self.logger.error("Error in semantics %r:", fn)
@@ -201,10 +256,10 @@ class TreeDistScript(ExScript):
         for fn in sorted(forest2.keys()):
             self.logger.error("Semantics of %r not found in forest1", fn)
 
-    def loadForestFiles(self, files):
+    def loadForestFiles(self, files, only=None, skip=None):
         forests = []
         for fn in files:
-            f = self.readForestFromMLF(fn)
+            f = self.readForestFromMLF(fn, only, skip)
             forests.append(f)
         return forests
 
@@ -223,6 +278,18 @@ class TreeDistScript(ExScript):
         sys.stdout.write("# %s\n" % summary)
         sys.stdout.write("%s\n.\n" % script)
 
+    def genFnPairs(self, files, twoside=False):
+        if not twoside:
+            for i, f1 in enumerate(files):
+                for f2 in files[i+1:]:
+                    if f1 != f2:
+                        yield f1, f2
+        else:
+            for f1 in files:
+                for f2 in files:
+                    if f1 != f2:
+                        yield f1, f2
+
     @ExScript.command
     def editscripts(self, files):
         """Print edit-script, use 2 input sets: test, system_output
@@ -234,49 +301,99 @@ class TreeDistScript(ExScript):
         for fn, tree1, tree2, dist, script in self.forestProcessor(forest1, forest2):
             self.printEditScript(fn, tree1, tree2, script)
 
-    @ExScript.command
-    def sresults(self, files, fw=sys.stdout):
-        """Print HResults-like statistics of system's output, Files are 2 input sets: test, system_output
-        """
-        if len(files) != 2:
-            raise ValueError("You must supply 2 input files for `sresults` command")
+    def groupMapping(self, fn, type):
+        if type == 'none':
+            return fn
+        elif type == 'dlg':
+            return fn.split('_', 1)[0]
+        else:
+            raise ValueError("Unknown grouping: %s" % type)
 
-        fw.write('----------------------- Semantics Scores --------------------------\n')
-        fw.write('====================== CDC Results Analysis =======================\n')
-        fw.write('  Date: %s\n' % time.strftime('%a, %d %b %Y %H:%M:%S'))
-        fw.write('  Ref : %s\n' % files[0])
-        fw.write('  Rec : %s\n' % files[1])
-        fw.write('-------------------------- File Results ---------------------------\n')
-        forest1, forest2 = self.loadForestFiles(files)
+    @ExScript.command
+    def sresults(self, files, fw=sys.stdout, only=[], skip=[], twoside=False, groupby='none'):
+        """Print HResults-like statistics of system's output
+        """
+
+        if not only:
+            only = None
+        if not skip:
+            skip = None
 
         tH = tD = tS = tI = tN = 0
         uH = uN = 0
-
-        processor = self.forestProcessor(forest1, forest2)
-
         tHit = ADict()
         tMiss = ADict()
         tFA = ADict()
 
-        for fn, tree1, tree2, dist, script in processor:
-            H, D, I, S = script.HDIS
-            N = script.numConcepts[0]
-            Corr = script.statCorr*100.
-            Acc = script.statAcc*100.
+        strftime = time.strftime('%a, %d %b %Y %H:%M:%S')
+
+        fw.write('----------------------- Semantics Scores --------------------------\n')
+
+        for fn1, fn2 in self.genFnPairs(files, twoside):
+            forest1, forest2 = self.loadForestFiles((fn1, fn2), only, skip)
+            fw.write('====================== CDC Results Analysis =======================\n')
+            fw.write('  Date: %s\n' % strftime)
+            fw.write('  Ref : %s\n' % fn1)
+            fw.write('  Rec : %s\n' % fn2)
+            fw.write('-------------------------- File Results ---------------------------\n')
+
+            processor = self.forestProcessor(forest1, forest2)
+
+            H = N = D = I = S = 0
+            last_group = None
+            for fn, tree1, tree2, dist, script in processor:
+                new_group = self.groupMapping(fn, groupby)
+                if last_group is None:
+                    last_group = new_group
+                if new_group != last_group:
+                    # Doslo ke zmene skupiny, vypisu charakteristiky
+                    if N != 0:
+                        Corr = (float(H)/N)*100.
+                        Acc = (float(H-I)/N)*100.
+                    else:
+                        Corr = Acc = 0.
+
+                    fw.write('%s:  %6.2f(%6.2f)  [H=%4d, D=%3d, S=%3d, I=%3d, N=%3d]\n' % \
+                             (last_group, Corr, Acc, H, D, S, I, N))
+                    tH += H; tD += D; tS += S;
+                    tI += I; tN += N
+                    if S == 0 and I == 0 and D == 0:
+                        assert H == N
+                        uH += 1
+                    uN += 1
+
+                    # Vynulovani prubeznych skupinovych charakteristik
+                    H = N = D = I = S = 0
+                    # Nastaveni nove skupiny
+                    last_group = new_group
+
+                lH, lD, lI, lS = script.HDIS
+                H += lH
+                D += lD
+                I += lI
+                S += lS
+                N += script.numConcepts[0]
+
+                hit, miss, fa = script.hitMissFA
+                tHit += hit
+                tMiss += miss
+                tFA += fa
+        else:
+            # Vypsani za posledni skupinu
+            if N != 0:
+                Corr = (float(H)/N)*100.
+                Acc = (float(H-I)/N)*100.
+            else:
+                Corr = Acc = 0.
 
             fw.write('%s:  %6.2f(%6.2f)  [H=%4d, D=%3d, S=%3d, I=%3d, N=%3d]\n' % \
-                     (fn, Corr, Acc, H, D, S, I, N))
+                     (last_group, Corr, Acc, H, D, S, I, N))
             tH += H; tD += D; tS += S;
             tI += I; tN += N
             if S == 0 and I == 0 and D == 0:
                 assert H == N
                 uH += 1
             uN += 1
-
-            hit, miss, fa = script.hitMissFA
-            tHit += hit
-            tMiss += miss
-            tFA += fa
 
         tCorr = 100. * tH / tN
         tAcc = 100. * (tH - tI) / tN

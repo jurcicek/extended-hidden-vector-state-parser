@@ -1,3 +1,19 @@
+# SVC library - usefull Python routines and classes
+# Copyright (C) 2006-2008 Jan Svec, honza.svec@gmail.com
+# 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 import re
 import sys
 import copy
@@ -132,6 +148,25 @@ class EditScript(list, PythonEgg):
         self._cache['HitMissFA'] = hit, miss, fa
         return hit, miss, fa
 
+    def getErrStat(self):
+        if 'ErrStat' in self._cache:
+            return self._cache['ErrStat']
+
+        stat = ADict()
+        for a, b in self:
+            if a == b:
+                continue
+            elif a == None:
+                stat[b] += 1
+            elif b == None:
+                stat[a] += 1
+            else:
+                stat[a] += 0.5
+                stat[b] += 0.5
+
+        self._cache['ErrStat'] = stat
+        return stat
+
     def getNodes(self):
         """Return tuple (N, M) containing number of nodes
 
@@ -219,6 +254,7 @@ class EditScript(list, PythonEgg):
             else:
                 ret.append('S(%s, %s)' % (a, b))
         return ret
+
 
 class DartString(tuple):
     """Class representing closed Euler path trough ordered tree
@@ -383,7 +419,10 @@ class OrderedTree(list, PythonEgg):
         """
         tree = cls(parent=parent, label=label)
 
+
         while source:
+            source = source.strip()
+
             try:
                 separator_index = string_minindex(source, ' ,(')
             except ValueError:
@@ -396,6 +435,10 @@ class OrderedTree(list, PythonEgg):
 
             if separator_index < len(source):
                 separator = source[separator_index]
+                if separator == ' ':
+                    test = source[separator_index:].lstrip()
+                    if test and test[0] in ',(':
+                        separator = test[0]
             else:
                 separator = None
 
@@ -448,6 +491,10 @@ class OrderedTree(list, PythonEgg):
 
         return tree
 
+    def toStateVector(self):
+        """Create vector state representation of tree"""
+        return [node.getAllParents() for label, node in self.preOrder()]
+
     def getAllParents(self):
         """Return tuple containing full path to this tree
 
@@ -496,12 +543,12 @@ class OrderedTree(list, PythonEgg):
         # XXX: Make __strlabel__() method
         child_str = []
         for child in self:
-            child_str.append(str(child))
+            child_str.append(unicode(child))
         if child_str:
             child_str = ', '.join(child_str)
             return '%s(%s)' % (self.label, child_str)
         else:
-            return str(self.label)
+            return unicode(self.label)
 
     def preOrder(self):
         """Return pre-order iterator of the tree
@@ -551,6 +598,37 @@ class OrderedTree(list, PythonEgg):
                 yield child, child
         yield label, self, _stack
 
+    def splitStateVector(self, *labels):
+        tree_stack = []
+        for foo, node in self.preOrder():
+            tree_stack.append(node.allParents)
+
+        splitted = []
+        one_slice = []
+        for stack in tree_stack:
+            if stack[-1] in labels:
+                if one_slice:
+                    splitted.append(one_slice)
+                    one_slice = []
+                splitted.append([stack])
+            else:
+                one_slice.append(stack)
+        else:
+            if one_slice:
+                splitted.append(one_slice)
+        return splitted
+
+    def split(self, *labels):
+        splitted = self.splitStateVector(*labels)
+
+        ret = []
+        for item in splitted:
+            enrich = item[0][:-1]
+            while enrich:
+                item.insert(0, enrich)
+                enrich = enrich[:-1]
+            ret.append(self.fromStateVector(item))
+        return ret
 
     def getConceptCounts(self):
         """Return dictionary with counts of concepts used in tree
@@ -559,6 +637,35 @@ class OrderedTree(list, PythonEgg):
         for label, tree in self.preOrder():
             ret[label] = ret.get(label, 0) + 1
         return ret
+
+    def removeNodesWithLabels(self, labels, _inverted=False):
+        new = []
+        for i in self:
+            if hasattr(i, 'label'):
+                i.removeNodesWithLabels(labels, _inverted)
+                if not _inverted:
+                    if i.label in labels:
+                        new.extend(i)
+                    else:
+                        new.append(i)
+                else:
+                    if i.label not in labels:
+                        new.extend(i)
+                    else:
+                        new.append(i)
+            else:
+                new.append(i)
+        self[:] = new
+
+    def removeNodesWithoutLabels(self, labels):
+        return self.removeNodesWithLabels(labels, True)
+
+    def upperNodesLables(self):
+        for i in self:
+            if hasattr(i, 'label'):
+                i.upperNodesLables()
+                if hasattr(i.label, 'upper'):
+                    i.label = i.label.upper()
 
 class CommonOrderedTree(OrderedTree):
     """Instance used as result of CommonDist.commonTree

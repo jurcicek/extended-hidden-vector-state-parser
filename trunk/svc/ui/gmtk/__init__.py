@@ -1,13 +1,33 @@
+# SVC library - usefull Python routines and classes
+# Copyright (C) 2006-2008 Jan Svec, honza.svec@gmail.com
+# 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 import os.path
-from scipy import zeros, Float, equal, alltrue
 from svc.egg import PythonEgg
 from svc.utils import issequence, cartezian, iterslice
 from fnmatch import fnmatchcase
 from copy import deepcopy
 import subprocess
 
-GmtkFloat = Float
 _LEAF = -1
+
+class DCPTDict(dict):
+    def flat(self):
+        for key in sorted(self.keys()):
+            for i in self[key]:
+                yield i
 
 class WordFile(file):
     """Class for reading file wordwise
@@ -127,7 +147,12 @@ class ProbTable(PythonEgg):
 
 class DenseTable(ProbTable):
     def _initTable(self, scard, pcard):
-        return zeros(pcard+scard, GmtkFloat)
+        if len(scard) != 1:
+            raise ValueError("DenseTable currently supports only 1D variables")
+        ret = DCPTDict()
+        for p in self.possibleParents:
+            ret[p] = [0.] * scard[0]
+        return ret
 
     def _getMassFunction(self, parents):
         if len(parents) != self._npars:
@@ -135,13 +160,16 @@ class DenseTable(ProbTable):
         return self._table[parents]
 
     def _eqTables(self, other):
-        return alltrue(alltrue(equal(self._table, other._table)))
+        return self._table == other._table
 
     _createMassFunction = _getMassFunction
 
     def getPossibleParents(self):
         keys = [range(i) for i in self.parentCards]
-        return cartezian(*keys)
+        if keys:
+            return cartezian(*keys)
+        else:
+            return [()]
 
 
 class _Object(PythonEgg):
@@ -367,7 +395,7 @@ class DT(_Object):
         return self._parentCount
 
     @classmethod
-    def readFromFile(cls, parent, stream):
+    def readFromFile(cls, parent, stream, readDTS=True):
         name = stream.readWord()
         w = stream.readWord()
         try:
@@ -380,7 +408,7 @@ class DT(_Object):
             tree = TreeBranch.readFromFile(stream)
             return cls(parent, name, parentCount, tree)
         else:
-            return DTs(parent, w)
+            return DTs(parent, w, readDTS)
 
     def writeToFile(self, stream):
         stream.writelnWord(self.name)
@@ -471,10 +499,11 @@ class DT(_Object):
                     old_tree = None
 
 class DTs(_Object):
-    def __init__(self, parent, name):
+    def __init__(self, parent, name, readDTS=True):
         gmtk_name = os.path.basename(name).replace('.', '_')
         super(DTs, self).__init__(parent, gmtk_name)
         self._trees = []
+        self._readDTS=readDTS
         self.setDtsFilename(name)
 
     def __eq__(self, other):
@@ -487,7 +516,8 @@ class DTs(_Object):
 
     def setDtsFilename(self, name):
         self._dtsFilename = name
-        self.readTrees()
+        if self._readDTS:
+            self.readTrees()
 
     def writeToFile(self, stream):
         stream.writelnWord(self.name)
@@ -684,9 +714,10 @@ class DCPT(_CPT, DenseTable):
 
         dcpt = cls(parent, name, parent_cards, self_card)
 
-        t = dcpt.table.flat
-        for i in range(total):
-            t[i] = stream.readFloat()
+        t = dcpt.table
+        for key in sorted(t.keys()):
+            for i in range(self_card):
+                t[key][i] = stream.readFloat()
 
         return dcpt
 
@@ -698,7 +729,7 @@ class DCPT(_CPT, DenseTable):
         stream.writeNewLine()
         self_card = self.selfCard
         stream.writelnInt(self_card)
-        for i, val in enumerate(self.table.flat):
+        for i, val in enumerate(self.table.flat()):
             if i > 0 and i % self_card == 0:
                 stream.writeNewLine()
             stream.writeFloat(val)
@@ -824,6 +855,14 @@ class DetCPT(_CPT):
     def _initTable(self, scard, pcard):
         return None
 
+    def _getMassFunction(self, parents):
+        i = self.dt[parents]
+        ret = [0.] * self.selfCard
+        if not (0 <= i < self.selfCard):
+            raise IndexError("DT %r returns value %d, which is out of range [0, %d]" % (self.dtName, i, self.selfCard-1))
+        ret[i] = 1.0
+        return ret
+
     @classmethod
     def readFromFile(cls, parent, stream):
         name = stream.readWord()
@@ -861,10 +900,11 @@ class Workspace(PythonEgg):
             '____DTs': DTs,
     }
 
-    def __init__(self, cppOptions=None):
+    def __init__(self, cppOptions=None, readDTS=True):
         super(Workspace, self).__init__()
         self._objects = dict((name, {}) for name in self.knownTypes)
         self._cpp = Preprocessor(cppOptions=cppOptions)
+        self._readDTS = readDTS
 
     def getKnownTypes(self):
         return self.knownObjects.values()
@@ -899,13 +939,42 @@ class Workspace(PythonEgg):
                 file_io = self.preprocessFile(fn)
                 self.readFromIO(obj_type, file_io)
 
+    def writeMasterFile(self, mstr):
+        OUT_FILE = '_OUT_FILE'
+        ASCII = 'ascii'
+        mstr_io = self.preprocessFile(mstr)
+        while True:
+            try:
+                command = mstr_io.readWord()
+            except IOError:
+                break
+            if not command.endswith(OUT_FILE):
+                raise ValueError('Invalid master file command: %s' % command)
+            type_name = command[:-len(OUT_FILE)]
+            obj_type = self.knownObjects[type_name]
+            fn = mstr_io.readWord()
+
+            format = mstr_io.readWord()
+            if format != ASCII:
+                raise ValueError('Format of %r not supported: %s' % (fn, format))
+
+            fw = file(fn, 'w')
+            try:
+                file_io = WorkspaceIO(fw)
+                self.writeToIO(obj_type, file_io)
+            finally:
+                fw.close()
+
     def readFromIO(self, obj_type, io):
         nobj = io.readInt()
         for i in range(nobj):
             ri = io.readInt()
             if i != ri:
                 raise ValueError('Invalid object index, read %d, expected %d' % (ri, i))
-            obj = obj_type.readFromFile(self, io)
+            if obj_type == DT:
+                obj = obj_type.readFromFile(self, io, readDTS=self._readDTS)
+            else:
+                obj = obj_type.readFromFile(self, io)
 
     def readFromFile(self, obj_type, filename):
         f = self.preprocessFile(filename)
