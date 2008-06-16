@@ -1,3 +1,19 @@
+# SVC library - usefull Python routines and classes
+# Copyright (C) 2006-2008 Jan Svec, honza.svec@gmail.com
+# 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 import os
 import threading
 import re
@@ -167,6 +183,8 @@ class Morphology(PythonEgg):
             input_fw = codecs.open(input_fn, 'w', PDT_ENCODING)
             try:
                 for line in lines:
+                    # PROBLEMATIC POINT
+                    #line = ' '.join(line)
                     input_fw.write(line + '\n')
             finally:
                 input_fw.close()
@@ -195,8 +213,8 @@ class Morphology(PythonEgg):
 class PDT20Parser(PythonEgg):
     """Prague Dependency Treebank v2.0 SGML-like format parser
     """
-    _reWord = re.compile(r'(?mu)<(?P<type>f|d|D|s)(>|\s.*?>)(?P<orig>.*?)(?P<rest><+.*)*$')
-    _rePDTTag = re.compile(r'(?u)<MD(?P<type>.).*?>(?P<content>(\w|[0-9]|-)*)')
+    _reWord = re.compile(r'(?mu)<(?P<type>f|d|D|s|w)(>|\s(?P<type_arg>.*?)>)(?P<orig>.*?)(?P<rest><+.*)*$')
+    _rePDTTag = re.compile(r'(?u)<MD(?P<type>.).*?>(?P<content>[^<_`]*)')
 
     def parse(self, text):
         """Parse string `text`
@@ -204,6 +222,7 @@ class PDT20Parser(PythonEgg):
         Return generator yielding 4-tuple (`orig`, `unique_lemma`,
         `unique_pos`, `uniq_analytic`).
         """
+        stored_number = None
         for match in self._reWord.finditer(text):
             uniq_lemma = None
             uniq_tag = None
@@ -218,7 +237,13 @@ class PDT20Parser(PythonEgg):
                 yield '<s>', None, None, None
                 continue
 
-            orig = match.group('orig')
+            type_arg = match.group('type_arg')
+
+            if type == 'w' and type_arg == 'num.orig':
+                stored_number = match.group('orig')
+                continue
+            else:
+                orig = match.group('orig')
 
             if type == 'd':
                 yield orig, None, None, None
@@ -241,6 +266,11 @@ class PDT20Parser(PythonEgg):
                     uniq_analytic = content
                 else:
                     continue
+
+            if stored_number is not None:
+                uniq_lemma = stored_number
+                orig = stored_number
+                stored_number = None
 
             yield orig, uniq_lemma, uniq_tag, uniq_analytic
 

@@ -1,5 +1,23 @@
+# SVC library - usefull Python routines and classes
+# Copyright (C) 2006-2008 Jan Svec, honza.svec@gmail.com
+# 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 import sys
+import codecs
 from types import StringTypes
+from inspect import isroutine
 
 class sym(object):
     def __init__(self, s):
@@ -170,12 +188,35 @@ def linrange(start, stop, step):
     count = int(round((stop - start) / step) + 1)
     return [start+i*step for i in range(count)]
 
+unique_value = ['unique_value']
+
+def all_same(seq, default=unique_value):
+    for i in seq:
+        if default is unique_value:
+            default = i
+        if i != default:
+            return False
+    else:
+        return True
+
+def _defaultZero():
+    return 0
 
 class ADict(dict):
     'Accumulator dictionary'
+    def __init__(self, source={}, default=_defaultZero, **kwargs):
+        super(ADict, self).__init__(source, **kwargs)
+        self._default = default
+
     def __getitem__(self, key):
         if key not in self:
-            return 0
+            ret = self._default()
+            try:
+                hash(ret)
+            except TypeError:
+                # Store it
+                self[key] = ret
+            return ret
         else:
             return super(ADict, self).__getitem__(key)
 
@@ -187,3 +228,31 @@ class ADict(dict):
     
     def sum(self):
         return sum(self.values())
+
+    def writeToFile(self, fn, key=None, format='%d', encoding='utf-8'):
+        fw = codecs.open(fn, 'w', encoding)
+        try:
+            for key, count in sorted(self.iteritems(), key=key):
+                if not issequence(key):
+                    key = [key]
+                string = u'\t'.join(unicode(i) for i in key)
+                value = format % count
+                fw.write('%s\t%s\n' % (string, value))
+        finally:
+            fw.close()
+
+    @classmethod
+    def readFromFile(cls, fn, format=int, encoding='utf-8'):
+        fr = codecs.open(fn, 'r', encoding)
+        try:
+            new = cls()
+            for line in fr:
+                items = line.split()
+                value = format(items[-1])
+                key = tuple(items[:-1])
+                new[key] += value
+            return new
+        finally:
+            fr.close()
+
+
