@@ -128,7 +128,11 @@ There is the simple script named `hvsparser.py` which loads the converted FSM mo
 
 `./hvsparser.py results/2008-06-16-13.09/fsm`
 
-You can type some input or you can redirect the stdin and stdout streams using your shell.
+You can type some input or you can redirect the stdin and stdout streams using your shell. To process the whole directory of XMl files, you can use the command:
+
+`./hvsparser.py results/2008-06-16-13.09/fsm --xml-dir DIR_WITH_XML --skip-empty --mlf --omit-leaves`
+
+where `DIR_WITH_XML` is the directory with dialogue XML files, `--skip-empty` instructs the HVS parser to skip dialogue acts with empty semantics, if `--mlf` is used, the output is in the MLF format and if `--omit-leaves` is used, the `--mlf` does NOT contain the word-level alignment and is suitable for the `cdc-treedist.py` tool.
 
 = Step 4. - setting the conversion parameters =
 
@@ -140,4 +144,3 @@ In the `settings` file there are three options which controls the conversion pro
 = Step 5. - using it in the batch =
 
 To convert the model into FSM in the batch file, you can add the call of `fsmconvert()` at the end of your batch.
-
