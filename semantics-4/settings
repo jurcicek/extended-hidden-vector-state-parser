@@ -9,7 +9,7 @@ export INSERTION_PENALTY=1.0
 export DATA_REDUCTION=100
 export TRAIN_DATA_REDUCTION=100
 
-export TRAIN_EM_ITERS=5
+export TRAIN_EM_ITERS=4
 
 # Possible parse types: LR, LRRL, LRRL-FT
 export PARSE_TYPE='LRRL-FT'
@@ -20,17 +20,17 @@ export PARSE_TYPE='LRRL-FT'
 #       analytical,
 #       domain_speech_act, speech_act, domain,
 #       off (symbol is not used)
-export S1_DATASET=word
-export S2_DATASET=lemma
+export S1_DATASET=lemma
+export S2_DATASET=pos
 export S3_DATASET=off
-export ORIG_DATASETS=word,lemma
+export ORIG_DATASETS=lemma,pos
 
 export SCALE_CONCEPT12=2.4
 export SCALE_PUSHPOP=2.0
 
 export S1_NEGEX=1
-export S2_NEGEX=1
-export S3_NEGEX=1
+export S2_NEGEX=0
+export S3_NEGEX=0
 
 export S1_PRUNE_COUNT=-0.05
 export S2_PRUNE_COUNT=-0.05
@@ -45,3 +45,7 @@ export S2_INDEX=1
 export S3_INDEX=2
 
 export CONFUSE=0
+
+export FSM_STATES=1000
+export FSM_CUTOFF_SYM=1e-20
+export FSM_CUTOFF_TRANS=1e-10
