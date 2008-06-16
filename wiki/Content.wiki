@@ -5,6 +5,7 @@ Content of the documentation for the extended HVS parser.
 
   * [License]
   * [Introduction]
+  * [FSMHowTo FSM Howto]
   * [StackValidation Stack Validation]
   * [simulatedASRChannel Usage of a simulated ASR Channel]
   * [settingsPath settings.path]
