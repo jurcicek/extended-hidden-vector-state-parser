@@ -138,8 +138,11 @@ where `DIR_WITH_XML` is the directory with dialogue XML files, `--skip-empty` in
 
 In the `settings` file there are three options which controls the conversion process:
 
-* FSM_STATES - the maximum number of states (stacks) to expand
-* FSM_CUTOFF_SYM and FSM_CUTOFF_TRANS - the thresholds for probability of transitions
+  * FSM_STATES - the maximum number of states (stacks) to expand (first the most probable states (hiden vector states) are expanded. The probabiliti of a HVS is given the probability of the path from the state zero '[-,-,-,-]. Typcal value might be about 1000 states.
+  * FSM_CUTOFF_SYM and FSM_CUTOFF_TRANS - the thresholds for probability of transitions. The typycal values might be '1e-10'
+
+
+
 
 = Step 5. - using it in the batch =
 
