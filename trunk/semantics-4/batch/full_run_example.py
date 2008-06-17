@@ -8,3 +8,5 @@ scale(env=env)
 print decodeHldt()
 print decodeTst()
 
+fsmconvert()
+moveResults(True)
