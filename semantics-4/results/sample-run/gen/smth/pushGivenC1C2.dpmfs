@@ -1,0 +1,567 @@
+113 % number of Dense Probability Mass Functions
+
+0 % index of DPMF 
+pushGivenC1C2_0000 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+2.000e-01 2.000e-01 2.000e-01 2.000e-01 2.000e-01 
+
+1 % index of DPMF [C4,C3,C2,C1] = [0, 0]
+pushGivenC1C2_0001 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+0.000e-00 9.353e-01 6.468e-02 0.000e-00 0.000e-00 
+
+2 % index of DPMF [C4,C3,C2,C1] = [0, 1]
+pushGivenC1C2_0002 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+8.062e-01 1.938e-01 5.432e-13 0.000e-00 0.000e-00 
+
+3 % index of DPMF [C4,C3,C2,C1] = [0, 3]
+pushGivenC1C2_0003 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+9.423e-01 5.163e-02 6.034e-03 0.000e-00 0.000e-00 
+
+4 % index of DPMF [C4,C3,C2,C1] = [0, 5]
+pushGivenC1C2_0004 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+5.162e-01 4.838e-01 0.000e-00 0.000e-00 0.000e-00 
+
+5 % index of DPMF [C4,C3,C2,C1] = [0, 6]
+pushGivenC1C2_0005 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+6.303e-01 3.697e-01 8.736e-06 0.000e-00 0.000e-00 
+
+6 % index of DPMF [C4,C3,C2,C1] = [0, 7]
+pushGivenC1C2_0006 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+8.206e-01 1.794e-01 2.623e-13 0.000e-00 0.000e-00 
+
+7 % index of DPMF [C4,C3,C2,C1] = [0, 8]
+pushGivenC1C2_0007 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 5.609e-36 0.000e-00 0.000e-00 0.000e-00 
+
+8 % index of DPMF [C4,C3,C2,C1] = [0, 9]
+pushGivenC1C2_0008 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+7.332e-01 2.568e-01 9.990e-03 0.000e-00 0.000e-00 
+
+9 % index of DPMF [C4,C3,C2,C1] = [0, 10]
+pushGivenC1C2_0009 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+5.017e-01 4.983e-01 4.709e-08 0.000e-00 0.000e-00 
+
+10 % index of DPMF [C4,C3,C2,C1] = [0, 11]
+pushGivenC1C2_0010 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+3.750e-01 6.250e-01 0.000e-00 0.000e-00 0.000e-00 
+
+11 % index of DPMF [C4,C3,C2,C1] = [0, 12]
+pushGivenC1C2_0011 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+9.641e-01 3.586e-02 2.728e-19 0.000e-00 0.000e-00 
+
+12 % index of DPMF [C4,C3,C2,C1] = [0, 14]
+pushGivenC1C2_0012 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 0.000e-00 0.000e-00 0.000e-00 0.000e-00 
+
+13 % index of DPMF [C4,C3,C2,C1] = [0, 15]
+pushGivenC1C2_0013 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 4.113e-36 0.000e-00 0.000e-00 0.000e-00 
+
+14 % index of DPMF [C4,C3,C2,C1] = [0, 17]
+pushGivenC1C2_0014 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 0.000e-00 0.000e-00 0.000e-00 0.000e-00 
+
+15 % index of DPMF [C4,C3,C2,C1] = [0, 18]
+pushGivenC1C2_0015 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+6.002e-01 3.998e-01 0.000e-00 0.000e-00 0.000e-00 
+
+16 % index of DPMF [C4,C3,C2,C1] = [0, 19]
+pushGivenC1C2_0016 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+8.480e-01 1.520e-01 2.643e-13 0.000e-00 0.000e-00 
+
+17 % index of DPMF [C4,C3,C2,C1] = [0, 20]
+pushGivenC1C2_0017 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+9.139e-01 8.607e-02 0.000e-00 0.000e-00 0.000e-00 
+
+18 % index of DPMF [C4,C3,C2,C1] = [0, 21]
+pushGivenC1C2_0018 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+9.426e-01 5.742e-02 1.075e-13 0.000e-00 0.000e-00 
+
+19 % index of DPMF [C4,C3,C2,C1] = [0, 22]
+pushGivenC1C2_0019 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+6.634e-01 2.079e-01 1.287e-01 0.000e-00 0.000e-00 
+
+20 % index of DPMF [C4,C3,C2,C1] = [0, 23]
+pushGivenC1C2_0020 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+9.732e-01 2.677e-02 3.181e-10 0.000e-00 0.000e-00 
+
+21 % index of DPMF [C4,C3,C2,C1] = [0, 24]
+pushGivenC1C2_0021 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 0.000e-00 0.000e-00 0.000e-00 0.000e-00 
+
+22 % index of DPMF [C4,C3,C2,C1] = [0, 25]
+pushGivenC1C2_0022 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+9.000e-01 1.000e-01 0.000e-00 0.000e-00 0.000e-00 
+
+23 % index of DPMF [C4,C3,C2,C1] = [0, 26]
+pushGivenC1C2_0023 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 4.955e-37 0.000e-00 0.000e-00 0.000e-00 
+
+24 % index of DPMF [C4,C3,C2,C1] = [0, 27]
+pushGivenC1C2_0024 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+8.000e-01 2.000e-01 0.000e-00 0.000e-00 0.000e-00 
+
+25 % index of DPMF [C4,C3,C2,C1] = [0, 28]
+pushGivenC1C2_0025 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+9.351e-01 6.486e-02 0.000e-00 0.000e-00 0.000e-00 
+
+26 % index of DPMF [C4,C3,C2,C1] = [0, 29]
+pushGivenC1C2_0026 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+4.003e-01 5.997e-01 1.221e-14 0.000e-00 0.000e-00 
+
+27 % index of DPMF [C4,C3,C2,C1] = [0, 30]
+pushGivenC1C2_0027 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+8.615e-01 1.385e-01 0.000e-00 0.000e-00 0.000e-00 
+
+28 % index of DPMF [C4,C3,C2,C1] = [0, 31]
+pushGivenC1C2_0028 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+8.461e-01 1.539e-01 0.000e-00 0.000e-00 0.000e-00 
+
+29 % index of DPMF [C4,C3,C2,C1] = [0, 32]
+pushGivenC1C2_0029 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+0.000e-00 1.000e-00 0.000e-00 0.000e-00 0.000e-00 
+
+30 % index of DPMF [C4,C3,C2,C1] = [0, 33]
+pushGivenC1C2_0030 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+8.510e-01 1.490e-01 0.000e-00 0.000e-00 0.000e-00 
+
+31 % index of DPMF [C4,C3,C2,C1] = [0, 34]
+pushGivenC1C2_0031 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 7.027e-36 0.000e-00 0.000e-00 0.000e-00 
+
+32 % index of DPMF [C4,C3,C2,C1] = [3, 1]
+pushGivenC1C2_0032 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 1.016e-11 1.969e-07 0.000e-00 0.000e-00 
+
+33 % index of DPMF [C4,C3,C2,C1] = [3, 6]
+pushGivenC1C2_0033 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+4.991e-01 5.009e-01 0.000e-00 0.000e-00 0.000e-00 
+
+34 % index of DPMF [C4,C3,C2,C1] = [3, 11]
+pushGivenC1C2_0034 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+6.237e-01 3.763e-01 0.000e-00 0.000e-00 0.000e-00 
+
+35 % index of DPMF [C4,C3,C2,C1] = [3, 26]
+pushGivenC1C2_0035 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 6.683e-16 0.000e-00 0.000e-00 0.000e-00 
+
+36 % index of DPMF [C4,C3,C2,C1] = [3, 27]
+pushGivenC1C2_0036 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 0.000e-00 0.000e-00 0.000e-00 0.000e-00 
+
+37 % index of DPMF [C4,C3,C2,C1] = [3, 28]
+pushGivenC1C2_0037 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 1.691e-06 3.374e-21 0.000e-00 0.000e-00 
+
+38 % index of DPMF [C4,C3,C2,C1] = [4, 1]
+pushGivenC1C2_0038 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 4.286e-56 1.638e-74 0.000e-00 0.000e-00 
+
+39 % index of DPMF [C4,C3,C2,C1] = [5, 1]
+pushGivenC1C2_0039 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 0.000e-00 0.000e-00 0.000e-00 0.000e-00 
+
+40 % index of DPMF [C4,C3,C2,C1] = [6, 1]
+pushGivenC1C2_0040 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+9.006e-49 9.995e-01 5.138e-04 0.000e-00 0.000e-00 
+
+41 % index of DPMF [C4,C3,C2,C1] = [6, 11]
+pushGivenC1C2_0041 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+7.626e-01 2.374e-01 2.610e-27 0.000e-00 0.000e-00 
+
+42 % index of DPMF [C4,C3,C2,C1] = [6, 22]
+pushGivenC1C2_0042 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 0.000e-00 0.000e-00 0.000e-00 0.000e-00 
+
+43 % index of DPMF [C4,C3,C2,C1] = [6, 28]
+pushGivenC1C2_0043 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+9.897e-01 1.028e-02 1.394e-05 0.000e-00 0.000e-00 
+
+44 % index of DPMF [C4,C3,C2,C1] = [6, 29]
+pushGivenC1C2_0044 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+2.781e-02 9.719e-01 3.161e-04 0.000e-00 0.000e-00 
+
+45 % index of DPMF [C4,C3,C2,C1] = [6, 31]
+pushGivenC1C2_0045 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 0.000e-00 0.000e-00 0.000e-00 0.000e-00 
+
+46 % index of DPMF [C4,C3,C2,C1] = [7, 1]
+pushGivenC1C2_0046 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 0.000e-00 0.000e-00 0.000e-00 0.000e-00 
+
+47 % index of DPMF [C4,C3,C2,C1] = [7, 6]
+pushGivenC1C2_0047 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+7.126e-01 2.874e-01 4.049e-24 0.000e-00 0.000e-00 
+
+48 % index of DPMF [C4,C3,C2,C1] = [7, 11]
+pushGivenC1C2_0048 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.340e-04 9.999e-01 0.000e-00 0.000e-00 0.000e-00 
+
+49 % index of DPMF [C4,C3,C2,C1] = [7, 28]
+pushGivenC1C2_0049 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 5.539e-17 0.000e-00 0.000e-00 0.000e-00 
+
+50 % index of DPMF [C4,C3,C2,C1] = [7, 29]
+pushGivenC1C2_0050 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+0.000e-00 1.000e-00 0.000e-00 0.000e-00 0.000e-00 
+
+51 % index of DPMF [C4,C3,C2,C1] = [8, 1]
+pushGivenC1C2_0051 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 0.000e-00 0.000e-00 0.000e-00 0.000e-00 
+
+52 % index of DPMF [C4,C3,C2,C1] = [9, 1]
+pushGivenC1C2_0052 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+9.662e-01 3.275e-02 1.042e-03 0.000e-00 0.000e-00 
+
+53 % index of DPMF [C4,C3,C2,C1] = [9, 4]
+pushGivenC1C2_0053 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+8.126e-01 1.874e-01 8.861e-19 0.000e-00 0.000e-00 
+
+54 % index of DPMF [C4,C3,C2,C1] = [9, 6]
+pushGivenC1C2_0054 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+2.866e-02 9.426e-01 2.874e-02 0.000e-00 0.000e-00 
+
+55 % index of DPMF [C4,C3,C2,C1] = [9, 11]
+pushGivenC1C2_0055 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+8.156e-02 9.184e-01 4.395e-13 0.000e-00 0.000e-00 
+
+56 % index of DPMF [C4,C3,C2,C1] = [9, 16]
+pushGivenC1C2_0056 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+2.144e-02 9.786e-01 2.520e-18 0.000e-00 0.000e-00 
+
+57 % index of DPMF [C4,C3,C2,C1] = [9, 19]
+pushGivenC1C2_0057 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 3.229e-17 0.000e-00 0.000e-00 0.000e-00 
+
+58 % index of DPMF [C4,C3,C2,C1] = [9, 22]
+pushGivenC1C2_0058 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+0.000e-00 1.000e-00 6.436e-10 0.000e-00 0.000e-00 
+
+59 % index of DPMF [C4,C3,C2,C1] = [9, 27]
+pushGivenC1C2_0059 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 6.093e-13 0.000e-00 0.000e-00 0.000e-00 
+
+60 % index of DPMF [C4,C3,C2,C1] = [9, 28]
+pushGivenC1C2_0060 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+9.121e-01 8.792e-02 2.341e-06 0.000e-00 0.000e-00 
+
+61 % index of DPMF [C4,C3,C2,C1] = [9, 29]
+pushGivenC1C2_0061 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+2.783e-08 1.000e-00 3.823e-35 0.000e-00 0.000e-00 
+
+62 % index of DPMF [C4,C3,C2,C1] = [9, 30]
+pushGivenC1C2_0062 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+5.223e-01 4.777e-01 1.023e-06 0.000e-00 0.000e-00 
+
+63 % index of DPMF [C4,C3,C2,C1] = [9, 31]
+pushGivenC1C2_0063 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+5.674e-01 4.326e-01 3.038e-28 0.000e-00 0.000e-00 
+
+64 % index of DPMF [C4,C3,C2,C1] = [10, 1]
+pushGivenC1C2_0064 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+0.000e-00 1.000e-00 7.786e-11 0.000e-00 0.000e-00 
+
+65 % index of DPMF [C4,C3,C2,C1] = [10, 11]
+pushGivenC1C2_0065 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+5.000e-01 5.000e-01 0.000e-00 0.000e-00 0.000e-00 
+
+66 % index of DPMF [C4,C3,C2,C1] = [10, 13]
+pushGivenC1C2_0066 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 3.079e-27 0.000e-00 0.000e-00 0.000e-00 
+
+67 % index of DPMF [C4,C3,C2,C1] = [10, 29]
+pushGivenC1C2_0067 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+5.989e-01 4.011e-01 1.973e-34 0.000e-00 0.000e-00 
+
+68 % index of DPMF [C4,C3,C2,C1] = [11, 1]
+pushGivenC1C2_0068 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+2.087e-12 1.000e-00 2.365e-12 0.000e-00 0.000e-00 
+
+69 % index of DPMF [C4,C3,C2,C1] = [11, 25]
+pushGivenC1C2_0069 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+5.843e-01 4.053e-01 1.034e-02 0.000e-00 0.000e-00 
+
+70 % index of DPMF [C4,C3,C2,C1] = [12, 1]
+pushGivenC1C2_0070 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 6.990e-07 0.000e-00 0.000e-00 0.000e-00 
+
+71 % index of DPMF [C4,C3,C2,C1] = [12, 18]
+pushGivenC1C2_0071 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 2.135e-25 0.000e-00 0.000e-00 0.000e-00 
+
+72 % index of DPMF [C4,C3,C2,C1] = [13, 1]
+pushGivenC1C2_0072 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 0.000e-00 0.000e-00 0.000e-00 0.000e-00 
+
+73 % index of DPMF [C4,C3,C2,C1] = [14, 1]
+pushGivenC1C2_0073 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 0.000e-00 0.000e-00 0.000e-00 0.000e-00 
+
+74 % index of DPMF [C4,C3,C2,C1] = [15, 1]
+pushGivenC1C2_0074 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 0.000e-00 0.000e-00 0.000e-00 0.000e-00 
+
+75 % index of DPMF [C4,C3,C2,C1] = [16, 1]
+pushGivenC1C2_0075 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 3.064e-26 5.260e-48 0.000e-00 0.000e-00 
+
+76 % index of DPMF [C4,C3,C2,C1] = [17, 1]
+pushGivenC1C2_0076 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 0.000e-00 0.000e-00 0.000e-00 0.000e-00 
+
+77 % index of DPMF [C4,C3,C2,C1] = [17, 28]
+pushGivenC1C2_0077 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 1.684e-29 0.000e-00 0.000e-00 0.000e-00 
+
+78 % index of DPMF [C4,C3,C2,C1] = [18, 1]
+pushGivenC1C2_0078 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 2.080e-09 0.000e-00 0.000e-00 0.000e-00 
+
+79 % index of DPMF [C4,C3,C2,C1] = [19, 1]
+pushGivenC1C2_0079 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 0.000e-00 0.000e-00 0.000e-00 0.000e-00 
+
+80 % index of DPMF [C4,C3,C2,C1] = [19, 16]
+pushGivenC1C2_0080 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 1.970e-18 2.031e-34 0.000e-00 0.000e-00 
+
+81 % index of DPMF [C4,C3,C2,C1] = [19, 25]
+pushGivenC1C2_0081 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 1.556e-35 0.000e-00 0.000e-00 0.000e-00 
+
+82 % index of DPMF [C4,C3,C2,C1] = [20, 1]
+pushGivenC1C2_0082 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 0.000e-00 0.000e-00 0.000e-00 0.000e-00 
+
+83 % index of DPMF [C4,C3,C2,C1] = [20, 30]
+pushGivenC1C2_0083 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 0.000e-00 0.000e-00 0.000e-00 0.000e-00 
+
+84 % index of DPMF [C4,C3,C2,C1] = [21, 1]
+pushGivenC1C2_0084 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 0.000e-00 0.000e-00 0.000e-00 0.000e-00 
+
+85 % index of DPMF [C4,C3,C2,C1] = [21, 4]
+pushGivenC1C2_0085 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 5.416e-17 0.000e-00 0.000e-00 0.000e-00 
+
+86 % index of DPMF [C4,C3,C2,C1] = [21, 11]
+pushGivenC1C2_0086 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+9.082e-01 9.178e-02 0.000e-00 0.000e-00 0.000e-00 
+
+87 % index of DPMF [C4,C3,C2,C1] = [21, 29]
+pushGivenC1C2_0087 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+8.045e-01 1.955e-01 5.344e-38 0.000e-00 0.000e-00 
+
+88 % index of DPMF [C4,C3,C2,C1] = [22, 1]
+pushGivenC1C2_0088 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+7.117e-10 6.530e-01 3.470e-01 0.000e-00 0.000e-00 
+
+89 % index of DPMF [C4,C3,C2,C1] = [22, 6]
+pushGivenC1C2_0089 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.271e-04 9.999e-01 3.964e-13 0.000e-00 0.000e-00 
+
+90 % index of DPMF [C4,C3,C2,C1] = [22, 11]
+pushGivenC1C2_0090 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.679e-25 1.000e-00 5.754e-27 0.000e-00 0.000e-00 
+
+91 % index of DPMF [C4,C3,C2,C1] = [22, 28]
+pushGivenC1C2_0091 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 2.347e-29 0.000e-00 0.000e-00 0.000e-00 
+
+92 % index of DPMF [C4,C3,C2,C1] = [22, 30]
+pushGivenC1C2_0092 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 0.000e-00 0.000e-00 0.000e-00 0.000e-00 
+
+93 % index of DPMF [C4,C3,C2,C1] = [23, 1]
+pushGivenC1C2_0093 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 0.000e-00 0.000e-00 0.000e-00 0.000e-00 
+
+94 % index of DPMF [C4,C3,C2,C1] = [23, 17]
+pushGivenC1C2_0094 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 3.769e-34 0.000e-00 0.000e-00 0.000e-00 
+
+95 % index of DPMF [C4,C3,C2,C1] = [23, 19]
+pushGivenC1C2_0095 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 7.185e-18 0.000e-00 0.000e-00 0.000e-00 
+
+96 % index of DPMF [C4,C3,C2,C1] = [23, 28]
+pushGivenC1C2_0096 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 8.447e-12 6.366e-33 0.000e-00 0.000e-00 
+
+97 % index of DPMF [C4,C3,C2,C1] = [24, 1]
+pushGivenC1C2_0097 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 0.000e-00 0.000e-00 0.000e-00 0.000e-00 
+
+98 % index of DPMF [C4,C3,C2,C1] = [25, 1]
+pushGivenC1C2_0098 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+7.398e-01 2.240e-01 3.615e-02 0.000e-00 0.000e-00 
+
+99 % index of DPMF [C4,C3,C2,C1] = [26, 1]
+pushGivenC1C2_0099 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 0.000e-00 0.000e-00 0.000e-00 0.000e-00 
+
+100 % index of DPMF [C4,C3,C2,C1] = [27, 1]
+pushGivenC1C2_0100 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+7.523e-56 1.000e-00 7.160e-56 0.000e-00 0.000e-00 
+
+101 % index of DPMF [C4,C3,C2,C1] = [27, 25]
+pushGivenC1C2_0101 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 1.070e-35 0.000e-00 0.000e-00 0.000e-00 
+
+102 % index of DPMF [C4,C3,C2,C1] = [28, 1]
+pushGivenC1C2_0102 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+6.141e-01 3.859e-01 1.249e-05 0.000e-00 0.000e-00 
+
+103 % index of DPMF [C4,C3,C2,C1] = [29, 1]
+pushGivenC1C2_0103 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+6.912e-01 3.088e-01 2.150e-10 0.000e-00 0.000e-00 
+
+104 % index of DPMF [C4,C3,C2,C1] = [29, 25]
+pushGivenC1C2_0104 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+8.749e-01 1.251e-01 1.952e-26 0.000e-00 0.000e-00 
+
+105 % index of DPMF [C4,C3,C2,C1] = [30, 1]
+pushGivenC1C2_0105 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 3.488e-09 2.498e-52 0.000e-00 0.000e-00 
+
+106 % index of DPMF [C4,C3,C2,C1] = [31, 1]
+pushGivenC1C2_0106 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+6.786e-01 3.214e-01 2.465e-49 0.000e-00 0.000e-00 
+
+107 % index of DPMF [C4,C3,C2,C1] = [31, 25]
+pushGivenC1C2_0107 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 7.804e-43 0.000e-00 0.000e-00 0.000e-00 
+
+108 % index of DPMF [C4,C3,C2,C1] = [32, 1]
+pushGivenC1C2_0108 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+0.000e-00 1.000e-00 0.000e-00 0.000e-00 0.000e-00 
+
+109 % index of DPMF [C4,C3,C2,C1] = [32, 25]
+pushGivenC1C2_0109 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 0.000e-00 0.000e-00 0.000e-00 0.000e-00 
+
+110 % index of DPMF [C4,C3,C2,C1] = [33, 1]
+pushGivenC1C2_0110 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 0.000e-00 0.000e-00 0.000e-00 0.000e-00 
+
+111 % index of DPMF [C4,C3,C2,C1] = [33, 28]
+pushGivenC1C2_0111 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 4.491e-36 0.000e-00 0.000e-00 0.000e-00 
+
+112 % index of DPMF [C4,C3,C2,C1] = [34, 1]
+pushGivenC1C2_0112 % DPMF name 
+5 % cardinality of X1 (self cardinality)
+1.000e-00 0.000e-00 0.000e-00 0.000e-00 0.000e-00 
+

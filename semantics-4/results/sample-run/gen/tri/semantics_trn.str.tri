@@ -1,0 +1,374 @@
+% Structure File Identification Information
+0 concept4 0 35 D 0 1 0 
+1 concept3 0 35 D 0 1 0 
+2 concept2 0 35 D 0 1 0 
+3 concept1 0 35 D 0 1 0 
+4 s1 0 265 D 0 1 4 concept1 0 concept2 0 concept3 0 concept4 0 
+5 s2 0 83 D 0 1 4 concept1 0 concept2 0 concept3 0 concept4 0 
+6 stackTransCounter 0 60 D 0 1 0 
+7 stackType 0 2 D 0 1 1 stackTransCounter 0 
+8 maxJump 0 8 D 0 1 1 stackTransCounter 0 
+9 jointC1C2C3C4 0 207 D 0 1 4 concept1 0 concept2 0 concept3 0 concept4 0 
+10 jointProbC1C2C3C4 0 207 D 0 1 0 
+11 matchJointProbC1C2C3C4 0 2 D 0 1 2 jointProbC1C2C3C4 0 jointC1C2C3C4 0 
+12 pop 1 5 D 0 1 4 concept1 -1 concept2 -1 concept3 -1 concept4 -1 
+13 maxPop 1 5 D 0 1 4 concept1 -1 concept2 -1 concept3 -1 concept4 -1 
+14 popValidatorGivenPopMaxPop 1 2 D 0 1 2 pop 0 maxPop 0 
+15 concept4pop 1 35 D 0 1 2 pop 0 concept4 -1 
+16 concept3pop 1 35 D 0 1 3 pop 0 concept3 -1 concept4 -1 
+17 concept2pop 1 35 D 0 1 4 pop 0 concept2 -1 concept3 -1 concept4 -1 
+18 concept1pop 1 35 D 0 1 5 pop 0 concept1 -1 concept2 -1 concept3 -1 concept4 -1 
+19 push 1 5 D 0 1 4 concept1 -1 concept2 -1 concept3 -1 concept4 -1 
+20 concept4 1 35 D 1 push 0 5 5 push 0 concept1pop 0 concept2pop 0 concept3pop 0 concept4pop 0 5 push 0 concept1pop 0 concept2pop 0 concept3pop 0 concept4pop 0 5 push 0 concept1pop 0 concept2pop 0 concept3pop 0 concept4pop 0 5 push 0 concept1pop 0 concept2pop 0 concept3pop 0 concept4pop 0 5 push 0 concept1pop 0 concept2pop 0 concept3pop 0 concept4pop 0 
+21 concept3 1 35 D 1 push 0 5 4 push 0 concept1pop 0 concept2pop 0 concept3pop 0 4 push 0 concept1pop 0 concept2pop 0 concept3pop 0 4 push 0 concept1pop 0 concept2pop 0 concept3pop 0 4 push 0 concept1pop 0 concept2pop 0 concept3pop 0 4 push 0 concept1pop 0 concept2pop 0 concept3pop 0 
+22 concept2 1 35 D 1 push 0 5 3 push 0 concept1pop 0 concept2pop 0 3 push 0 concept1pop 0 concept2pop 0 2 concept3 0 concept4 0 2 concept3 0 concept4 0 2 concept3 0 concept4 0 
+23 concept1 1 35 D 1 push 0 5 2 push 0 concept1pop 0 3 concept2 0 concept3 0 concept4 0 3 concept2 0 concept3 0 concept4 0 3 concept2 0 concept3 0 concept4 0 3 concept2 0 concept3 0 concept4 0 
+24 s1 1 265 D 0 1 4 concept1 0 concept2 0 concept3 0 concept4 0 
+25 s2 1 83 D 0 1 4 concept1 0 concept2 0 concept3 0 concept4 0 
+26 skipDummy 1 2 D 0 1 0 
+27 jump 1 7 D 0 1 0 
+28 stackTrans 1 2 D 0 1 9 concept1 0 concept1 -1 concept2 0 concept2 -1 concept3 0 concept3 -1 concept4 0 concept4 -1 stackType -1 
+29 stackTransValidator 1 2 D 0 1 3 stackTrans 0 pop 0 push 0 
+30 stackTransCounter 1 60 D 0 1 6 stackTransCounter -1 stackTrans 0 skipDummy 0 concept1 -1 maxJump -1 jump 0 
+31 stackType 1 2 D 0 1 1 stackTransCounter 0 
+32 maxJump 1 8 D 0 1 1 stackTransCounter 0 
+33 hiddenObservation 1 2 D 0 1 6 s1 0 concept1 0 concept2 0 concept3 0 concept4 0 stackTransCounter 0 
+34 jointC1C2C3C4 1 207 D 0 1 4 concept1 0 concept2 0 concept3 0 concept4 0 
+35 jointProbC1C2C3C4 1 207 D 0 1 0 
+36 matchJointProbC1C2C3C4 1 2 D 0 1 2 jointProbC1C2C3C4 0 jointC1C2C3C4 0 
+37 pop 2 5 D 0 1 4 concept1 -1 concept2 -1 concept3 -1 concept4 -1 
+38 maxPop 2 5 D 0 1 4 concept1 -1 concept2 -1 concept3 -1 concept4 -1 
+39 popValidatorGivenPopMaxPop 2 2 D 0 1 2 pop 0 maxPop 0 
+40 concept4pop 2 35 D 0 1 2 pop 0 concept4 -1 
+41 concept3pop 2 35 D 0 1 3 pop 0 concept3 -1 concept4 -1 
+42 concept2pop 2 35 D 0 1 4 pop 0 concept2 -1 concept3 -1 concept4 -1 
+43 concept1pop 2 35 D 0 1 5 pop 0 concept1 -1 concept2 -1 concept3 -1 concept4 -1 
+44 push 2 5 D 0 1 4 concept1 -1 concept2 -1 concept3 -1 concept4 -1 
+45 concept4 2 35 D 1 push 0 5 5 push 0 concept1pop 0 concept2pop 0 concept3pop 0 concept4pop 0 5 push 0 concept1pop 0 concept2pop 0 concept3pop 0 concept4pop 0 5 push 0 concept1pop 0 concept2pop 0 concept3pop 0 concept4pop 0 5 push 0 concept1pop 0 concept2pop 0 concept3pop 0 concept4pop 0 5 push 0 concept1pop 0 concept2pop 0 concept3pop 0 concept4pop 0 
+46 concept3 2 35 D 1 push 0 5 4 push 0 concept1pop 0 concept2pop 0 concept3pop 0 4 push 0 concept1pop 0 concept2pop 0 concept3pop 0 4 push 0 concept1pop 0 concept2pop 0 concept3pop 0 4 push 0 concept1pop 0 concept2pop 0 concept3pop 0 4 push 0 concept1pop 0 concept2pop 0 concept3pop 0 
+47 concept2 2 35 D 1 push 0 5 3 push 0 concept1pop 0 concept2pop 0 3 push 0 concept1pop 0 concept2pop 0 2 concept3 0 concept4 0 2 concept3 0 concept4 0 2 concept3 0 concept4 0 
+48 concept1 2 35 D 1 push 0 5 2 push 0 concept1pop 0 3 concept2 0 concept3 0 concept4 0 3 concept2 0 concept3 0 concept4 0 3 concept2 0 concept3 0 concept4 0 3 concept2 0 concept3 0 concept4 0 
+49 s1 2 265 D 0 1 4 concept1 0 concept2 0 concept3 0 concept4 0 
+50 s2 2 83 D 0 1 4 concept1 0 concept2 0 concept3 0 concept4 0 
+51 skipDummy 2 2 D 0 1 0 
+52 jump 2 7 D 0 1 0 
+53 stackTrans 2 2 D 0 1 9 concept1 0 concept1 -1 concept2 0 concept2 -1 concept3 0 concept3 -1 concept4 0 concept4 -1 stackType -1 
+54 stackTransValidator 2 2 D 0 1 3 stackTrans 0 pop 0 push 0 
+55 stackTransCounter 2 60 D 0 1 6 stackTransCounter -1 stackTrans 0 skipDummy 0 concept1 -1 maxJump -1 jump 0 
+56 stackType 2 2 D 0 1 1 stackTransCounter 0 
+57 maxJump 2 8 D 0 1 1 stackTransCounter 0 
+58 hiddenObservation 2 2 D 0 1 6 s1 0 concept1 0 concept2 0 concept3 0 concept4 0 stackTransCounter 0 
+59 endOfUtteranceObs 2 2 D 0 1 1 stackTransCounter 0 
+60 jointC1C2C3C4 2 207 D 0 1 4 concept1 0 concept2 0 concept3 0 concept4 0 
+61 jointProbC1C2C3C4 2 207 D 0 1 0 
+62 matchJointProbC1C2C3C4 2 2 D 0 1 2 jointProbC1C2C3C4 0 jointC1C2C3C4 0 
+1 1 
+@@@!!!TRIFILE_END_OF_ID_STRING!!!@@@ 
+
+% ---
+% GMTK Triangulation File Created: Tuesday June 17 2008, 14:28:16 CEST
+% Options-: triangulationHeuristic: completed, jtWeight: T, jtwUB: F, jtwPUI: 0.000000, jtwMC: F, jtwSNSC: 1.000000, jtwDNSC: 1.000000, pfCobWeight: 0.000000, findBestBoundary: T, traverseFraction: 1.000000, noBoundaryMemoize: F, forceLeftRight: , boundaryHeuristic: S, 
+% ---
+
+
+% ---
+% --- M, number of chunks in which to find interface boundary
+1 
+
+% ---
+% --- S, chunk skip
+1 
+
+% ---
+% --- interface method
+LEFT 
+
+% ---
+% --- boundary method
+Left_interface:Run_Bdry_Alg(T),Bnd_Heurs(S),TravFrac(1.000000),Tri_Heur(completed) 
+
+% ---
+% --- P partition information: variables and their neighbors
+% concept4(0) : concept3(0), concept2(0), concept1(0), s1(0), s2(0), stackTransCounter(0), stackType(0), maxJump(0), jointC1C2C3C4(0), jointProbC1C2C3C4(0), matchJointProbC1C2C3C4(0), pop(1), maxPop(1), popValidatorGivenPopMaxPop(1), concept4pop(1), concept3pop(1), concept2pop(1), concept1pop(1), push(1), concept4(1), concept3(1), concept2(1), concept1(1), skipDummy(1), jump(1), stackTrans(1), stackTransValidator(1), stackTransCounter(1),
+% concept3(0) : concept4(0), concept2(0), concept1(0), s1(0), s2(0), stackTransCounter(0), stackType(0), maxJump(0), jointC1C2C3C4(0), jointProbC1C2C3C4(0), matchJointProbC1C2C3C4(0), pop(1), maxPop(1), popValidatorGivenPopMaxPop(1), concept4pop(1), concept3pop(1), concept2pop(1), concept1pop(1), push(1), concept4(1), concept3(1), concept2(1), concept1(1), skipDummy(1), jump(1), stackTrans(1), stackTransValidator(1), stackTransCounter(1),
+% concept2(0) : concept4(0), concept3(0), concept1(0), s1(0), s2(0), stackTransCounter(0), stackType(0), maxJump(0), jointC1C2C3C4(0), jointProbC1C2C3C4(0), matchJointProbC1C2C3C4(0), pop(1), maxPop(1), popValidatorGivenPopMaxPop(1), concept4pop(1), concept3pop(1), concept2pop(1), concept1pop(1), push(1), concept4(1), concept3(1), concept2(1), concept1(1), skipDummy(1), jump(1), stackTrans(1), stackTransValidator(1), stackTransCounter(1),
+% concept1(0) : concept4(0), concept3(0), concept2(0), s1(0), s2(0), stackTransCounter(0), stackType(0), maxJump(0), jointC1C2C3C4(0), jointProbC1C2C3C4(0), matchJointProbC1C2C3C4(0), pop(1), maxPop(1), popValidatorGivenPopMaxPop(1), concept4pop(1), concept3pop(1), concept2pop(1), concept1pop(1), push(1), concept4(1), concept3(1), concept2(1), concept1(1), skipDummy(1), jump(1), stackTrans(1), stackTransValidator(1), stackTransCounter(1),
+% s1(0) : concept4(0), concept3(0), concept2(0), concept1(0), s2(0), stackTransCounter(0), stackType(0), maxJump(0), jointC1C2C3C4(0), jointProbC1C2C3C4(0), matchJointProbC1C2C3C4(0), pop(1), maxPop(1), popValidatorGivenPopMaxPop(1), concept4pop(1), concept3pop(1), concept2pop(1), concept1pop(1), push(1), concept4(1), concept3(1), concept2(1), concept1(1), skipDummy(1), jump(1), stackTrans(1), stackTransValidator(1), stackTransCounter(1),
+% s2(0) : concept4(0), concept3(0), concept2(0), concept1(0), s1(0), stackTransCounter(0), stackType(0), maxJump(0), jointC1C2C3C4(0), jointProbC1C2C3C4(0), matchJointProbC1C2C3C4(0), pop(1), maxPop(1), popValidatorGivenPopMaxPop(1), concept4pop(1), concept3pop(1), concept2pop(1), concept1pop(1), push(1), concept4(1), concept3(1), concept2(1), concept1(1), skipDummy(1), jump(1), stackTrans(1), stackTransValidator(1), stackTransCounter(1),
+% stackTransCounter(0) : concept4(0), concept3(0), concept2(0), concept1(0), s1(0), s2(0), stackType(0), maxJump(0), jointC1C2C3C4(0), jointProbC1C2C3C4(0), matchJointProbC1C2C3C4(0), pop(1), maxPop(1), popValidatorGivenPopMaxPop(1), concept4pop(1), concept3pop(1), concept2pop(1), concept1pop(1), push(1), concept4(1), concept3(1), concept2(1), concept1(1), skipDummy(1), jump(1), stackTrans(1), stackTransValidator(1), stackTransCounter(1),
+% stackType(0) : concept4(0), concept3(0), concept2(0), concept1(0), s1(0), s2(0), stackTransCounter(0), maxJump(0), jointC1C2C3C4(0), jointProbC1C2C3C4(0), matchJointProbC1C2C3C4(0), pop(1), maxPop(1), popValidatorGivenPopMaxPop(1), concept4pop(1), concept3pop(1), concept2pop(1), concept1pop(1), push(1), concept4(1), concept3(1), concept2(1), concept1(1), skipDummy(1), jump(1), stackTrans(1), stackTransValidator(1), stackTransCounter(1),
+% maxJump(0) : concept4(0), concept3(0), concept2(0), concept1(0), s1(0), s2(0), stackTransCounter(0), stackType(0), jointC1C2C3C4(0), jointProbC1C2C3C4(0), matchJointProbC1C2C3C4(0), pop(1), maxPop(1), popValidatorGivenPopMaxPop(1), concept4pop(1), concept3pop(1), concept2pop(1), concept1pop(1), push(1), concept4(1), concept3(1), concept2(1), concept1(1), skipDummy(1), jump(1), stackTrans(1), stackTransValidator(1), stackTransCounter(1),
+% jointC1C2C3C4(0) : concept4(0), concept3(0), concept2(0), concept1(0), s1(0), s2(0), stackTransCounter(0), stackType(0), maxJump(0), jointProbC1C2C3C4(0), matchJointProbC1C2C3C4(0), pop(1), maxPop(1), popValidatorGivenPopMaxPop(1), concept4pop(1), concept3pop(1), concept2pop(1), concept1pop(1), push(1), concept4(1), concept3(1), concept2(1), concept1(1), skipDummy(1), jump(1), stackTrans(1), stackTransValidator(1), stackTransCounter(1),
+% jointProbC1C2C3C4(0) : concept4(0), concept3(0), concept2(0), concept1(0), s1(0), s2(0), stackTransCounter(0), stackType(0), maxJump(0), jointC1C2C3C4(0), matchJointProbC1C2C3C4(0), pop(1), maxPop(1), popValidatorGivenPopMaxPop(1), concept4pop(1), concept3pop(1), concept2pop(1), concept1pop(1), push(1), concept4(1), concept3(1), concept2(1), concept1(1), skipDummy(1), jump(1), stackTrans(1), stackTransValidator(1), stackTransCounter(1),
+% matchJointProbC1C2C3C4(0) : concept4(0), concept3(0), concept2(0), concept1(0), s1(0), s2(0), stackTransCounter(0), stackType(0), maxJump(0), jointC1C2C3C4(0), jointProbC1C2C3C4(0), pop(1), maxPop(1), popValidatorGivenPopMaxPop(1), concept4pop(1), concept3pop(1), concept2pop(1), concept1pop(1), push(1), concept4(1), concept3(1), concept2(1), concept1(1), skipDummy(1), jump(1), stackTrans(1), stackTransValidator(1), stackTransCounter(1),
+% pop(1) : concept4(0), concept3(0), concept2(0), concept1(0), s1(0), s2(0), stackTransCounter(0), stackType(0), maxJump(0), jointC1C2C3C4(0), jointProbC1C2C3C4(0), matchJointProbC1C2C3C4(0), maxPop(1), popValidatorGivenPopMaxPop(1), concept4pop(1), concept3pop(1), concept2pop(1), concept1pop(1), push(1), concept4(1), concept3(1), concept2(1), concept1(1), skipDummy(1), jump(1), stackTrans(1), stackTransValidator(1), stackTransCounter(1),
+% maxPop(1) : concept4(0), concept3(0), concept2(0), concept1(0), s1(0), s2(0), stackTransCounter(0), stackType(0), maxJump(0), jointC1C2C3C4(0), jointProbC1C2C3C4(0), matchJointProbC1C2C3C4(0), pop(1), popValidatorGivenPopMaxPop(1), concept4pop(1), concept3pop(1), concept2pop(1), concept1pop(1), push(1), concept4(1), concept3(1), concept2(1), concept1(1), skipDummy(1), jump(1), stackTrans(1), stackTransValidator(1), stackTransCounter(1),
+% popValidatorGivenPopMaxPop(1) : concept4(0), concept3(0), concept2(0), concept1(0), s1(0), s2(0), stackTransCounter(0), stackType(0), maxJump(0), jointC1C2C3C4(0), jointProbC1C2C3C4(0), matchJointProbC1C2C3C4(0), pop(1), maxPop(1), concept4pop(1), concept3pop(1), concept2pop(1), concept1pop(1), push(1), concept4(1), concept3(1), concept2(1), concept1(1), skipDummy(1), jump(1), stackTrans(1), stackTransValidator(1), stackTransCounter(1),
+% concept4pop(1) : concept4(0), concept3(0), concept2(0), concept1(0), s1(0), s2(0), stackTransCounter(0), stackType(0), maxJump(0), jointC1C2C3C4(0), jointProbC1C2C3C4(0), matchJointProbC1C2C3C4(0), pop(1), maxPop(1), popValidatorGivenPopMaxPop(1), concept3pop(1), concept2pop(1), concept1pop(1), push(1), concept4(1), concept3(1), concept2(1), concept1(1), skipDummy(1), jump(1), stackTrans(1), stackTransValidator(1), stackTransCounter(1),
+% concept3pop(1) : concept4(0), concept3(0), concept2(0), concept1(0), s1(0), s2(0), stackTransCounter(0), stackType(0), maxJump(0), jointC1C2C3C4(0), jointProbC1C2C3C4(0), matchJointProbC1C2C3C4(0), pop(1), maxPop(1), popValidatorGivenPopMaxPop(1), concept4pop(1), concept2pop(1), concept1pop(1), push(1), concept4(1), concept3(1), concept2(1), concept1(1), skipDummy(1), jump(1), stackTrans(1), stackTransValidator(1), stackTransCounter(1),
+% concept2pop(1) : concept4(0), concept3(0), concept2(0), concept1(0), s1(0), s2(0), stackTransCounter(0), stackType(0), maxJump(0), jointC1C2C3C4(0), jointProbC1C2C3C4(0), matchJointProbC1C2C3C4(0), pop(1), maxPop(1), popValidatorGivenPopMaxPop(1), concept4pop(1), concept3pop(1), concept1pop(1), push(1), concept4(1), concept3(1), concept2(1), concept1(1), skipDummy(1), jump(1), stackTrans(1), stackTransValidator(1), stackTransCounter(1),
+% concept1pop(1) : concept4(0), concept3(0), concept2(0), concept1(0), s1(0), s2(0), stackTransCounter(0), stackType(0), maxJump(0), jointC1C2C3C4(0), jointProbC1C2C3C4(0), matchJointProbC1C2C3C4(0), pop(1), maxPop(1), popValidatorGivenPopMaxPop(1), concept4pop(1), concept3pop(1), concept2pop(1), push(1), concept4(1), concept3(1), concept2(1), concept1(1), skipDummy(1), jump(1), stackTrans(1), stackTransValidator(1), stackTransCounter(1),
+% push(1) : concept4(0), concept3(0), concept2(0), concept1(0), s1(0), s2(0), stackTransCounter(0), stackType(0), maxJump(0), jointC1C2C3C4(0), jointProbC1C2C3C4(0), matchJointProbC1C2C3C4(0), pop(1), maxPop(1), popValidatorGivenPopMaxPop(1), concept4pop(1), concept3pop(1), concept2pop(1), concept1pop(1), concept4(1), concept3(1), concept2(1), concept1(1), skipDummy(1), jump(1), stackTrans(1), stackTransValidator(1), stackTransCounter(1),
+% concept4(1) : concept4(0), concept3(0), concept2(0), concept1(0), s1(0), s2(0), stackTransCounter(0), stackType(0), maxJump(0), jointC1C2C3C4(0), jointProbC1C2C3C4(0), matchJointProbC1C2C3C4(0), pop(1), maxPop(1), popValidatorGivenPopMaxPop(1), concept4pop(1), concept3pop(1), concept2pop(1), concept1pop(1), push(1), concept3(1), concept2(1), concept1(1), skipDummy(1), jump(1), stackTrans(1), stackTransValidator(1), stackTransCounter(1),
+% concept3(1) : concept4(0), concept3(0), concept2(0), concept1(0), s1(0), s2(0), stackTransCounter(0), stackType(0), maxJump(0), jointC1C2C3C4(0), jointProbC1C2C3C4(0), matchJointProbC1C2C3C4(0), pop(1), maxPop(1), popValidatorGivenPopMaxPop(1), concept4pop(1), concept3pop(1), concept2pop(1), concept1pop(1), push(1), concept4(1), concept2(1), concept1(1), skipDummy(1), jump(1), stackTrans(1), stackTransValidator(1), stackTransCounter(1),
+% concept2(1) : concept4(0), concept3(0), concept2(0), concept1(0), s1(0), s2(0), stackTransCounter(0), stackType(0), maxJump(0), jointC1C2C3C4(0), jointProbC1C2C3C4(0), matchJointProbC1C2C3C4(0), pop(1), maxPop(1), popValidatorGivenPopMaxPop(1), concept4pop(1), concept3pop(1), concept2pop(1), concept1pop(1), push(1), concept4(1), concept3(1), concept1(1), skipDummy(1), jump(1), stackTrans(1), stackTransValidator(1), stackTransCounter(1),
+% concept1(1) : concept4(0), concept3(0), concept2(0), concept1(0), s1(0), s2(0), stackTransCounter(0), stackType(0), maxJump(0), jointC1C2C3C4(0), jointProbC1C2C3C4(0), matchJointProbC1C2C3C4(0), pop(1), maxPop(1), popValidatorGivenPopMaxPop(1), concept4pop(1), concept3pop(1), concept2pop(1), concept1pop(1), push(1), concept4(1), concept3(1), concept2(1), skipDummy(1), jump(1), stackTrans(1), stackTransValidator(1), stackTransCounter(1),
+% skipDummy(1) : concept4(0), concept3(0), concept2(0), concept1(0), s1(0), s2(0), stackTransCounter(0), stackType(0), maxJump(0), jointC1C2C3C4(0), jointProbC1C2C3C4(0), matchJointProbC1C2C3C4(0), pop(1), maxPop(1), popValidatorGivenPopMaxPop(1), concept4pop(1), concept3pop(1), concept2pop(1), concept1pop(1), push(1), concept4(1), concept3(1), concept2(1), concept1(1), jump(1), stackTrans(1), stackTransValidator(1), stackTransCounter(1),
+% jump(1) : concept4(0), concept3(0), concept2(0), concept1(0), s1(0), s2(0), stackTransCounter(0), stackType(0), maxJump(0), jointC1C2C3C4(0), jointProbC1C2C3C4(0), matchJointProbC1C2C3C4(0), pop(1), maxPop(1), popValidatorGivenPopMaxPop(1), concept4pop(1), concept3pop(1), concept2pop(1), concept1pop(1), push(1), concept4(1), concept3(1), concept2(1), concept1(1), skipDummy(1), stackTrans(1), stackTransValidator(1), stackTransCounter(1),
+% stackTrans(1) : concept4(0), concept3(0), concept2(0), concept1(0), s1(0), s2(0), stackTransCounter(0), stackType(0), maxJump(0), jointC1C2C3C4(0), jointProbC1C2C3C4(0), matchJointProbC1C2C3C4(0), pop(1), maxPop(1), popValidatorGivenPopMaxPop(1), concept4pop(1), concept3pop(1), concept2pop(1), concept1pop(1), push(1), concept4(1), concept3(1), concept2(1), concept1(1), skipDummy(1), jump(1), stackTransValidator(1), stackTransCounter(1),
+% stackTransValidator(1) : concept4(0), concept3(0), concept2(0), concept1(0), s1(0), s2(0), stackTransCounter(0), stackType(0), maxJump(0), jointC1C2C3C4(0), jointProbC1C2C3C4(0), matchJointProbC1C2C3C4(0), pop(1), maxPop(1), popValidatorGivenPopMaxPop(1), concept4pop(1), concept3pop(1), concept2pop(1), concept1pop(1), push(1), concept4(1), concept3(1), concept2(1), concept1(1), skipDummy(1), jump(1), stackTrans(1), stackTransCounter(1),
+% stackTransCounter(1) : concept4(0), concept3(0), concept2(0), concept1(0), s1(0), s2(0), stackTransCounter(0), stackType(0), maxJump(0), jointC1C2C3C4(0), jointProbC1C2C3C4(0), matchJointProbC1C2C3C4(0), pop(1), maxPop(1), popValidatorGivenPopMaxPop(1), concept4pop(1), concept3pop(1), concept2pop(1), concept1pop(1), push(1), concept4(1), concept3(1), concept2(1), concept1(1), skipDummy(1), jump(1), stackTrans(1), stackTransValidator(1),
+% --- P partition definition
+P_PARTITION 29 concept4 0 concept3 0 concept2 0 concept1 0 s1 0 s2 0 stackTransCounter 0 stackType 0 maxJump 0 jointC1C2C3C4 0 jointProbC1C2C3C4 0 matchJointProbC1C2C3C4 0 pop 1 maxPop 1 popValidatorGivenPopMaxPop 1 concept4pop 1 concept3pop 1 concept2pop 1 concept1pop 1 push 1 concept4 1 concept3 1 concept2 1 concept1 1 skipDummy 1 jump 1 stackTrans 1 stackTransValidator 1 stackTransCounter 1 
+
+% ---
+% --- C partition information: variables and their neighbors
+% concept4(1) : concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% concept3(1) : concept4(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% concept2(1) : concept4(1), concept3(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% concept1(1) : concept4(1), concept3(1), concept2(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% s1(1) : concept4(1), concept3(1), concept2(1), concept1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% s2(1) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% stackTransCounter(1) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% stackType(1) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% maxJump(1) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% hiddenObservation(1) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% jointC1C2C3C4(1) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% jointProbC1C2C3C4(1) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% matchJointProbC1C2C3C4(1) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% pop(2) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% maxPop(2) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% popValidatorGivenPopMaxPop(2) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% concept4pop(2) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% concept3pop(2) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% concept2pop(2) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% concept1pop(2) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% push(2) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% concept4(2) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% concept3(2) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% concept2(2) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% concept1(2) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% skipDummy(2) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% jump(2) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% stackTrans(2) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTransValidator(2), stackTransCounter(2),
+% stackTransValidator(2) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransCounter(2),
+% stackTransCounter(2) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2),
+% --- C partition definition
+C_PARTITION 30 concept4 1 concept3 1 concept2 1 concept1 1 s1 1 s2 1 stackTransCounter 1 stackType 1 maxJump 1 hiddenObservation 1 jointC1C2C3C4 1 jointProbC1C2C3C4 1 matchJointProbC1C2C3C4 1 pop 2 maxPop 2 popValidatorGivenPopMaxPop 2 concept4pop 2 concept3pop 2 concept2pop 2 concept1pop 2 push 2 concept4 2 concept3 2 concept2 2 concept1 2 skipDummy 2 jump 2 stackTrans 2 stackTransValidator 2 stackTransCounter 2 
+
+% ---
+% --- E partition information: variables and their neighbors
+% concept4(2) : concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% concept3(2) : concept4(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% concept2(2) : concept4(2), concept3(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% concept1(2) : concept4(2), concept3(2), concept2(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% s1(2) : concept4(2), concept3(2), concept2(2), concept1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% s2(2) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% stackTransCounter(2) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% stackType(2) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% maxJump(2) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% hiddenObservation(2) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% jointC1C2C3C4(2) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% jointProbC1C2C3C4(2) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% matchJointProbC1C2C3C4(2) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% pop(3) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% maxPop(3) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% popValidatorGivenPopMaxPop(3) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% concept4pop(3) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% concept3pop(3) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% concept2pop(3) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% concept1pop(3) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% push(3) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% concept4(3) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% concept3(3) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% concept2(3) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% concept1(3) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% s1(3) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% s2(3) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% skipDummy(3) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% jump(3) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% stackTrans(3) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% stackTransValidator(3) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% stackTransCounter(3) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% stackType(3) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% maxJump(3) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% hiddenObservation(3) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% endOfUtteranceObs(3) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% jointC1C2C3C4(3) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointProbC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% jointProbC1C2C3C4(3) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), matchJointProbC1C2C3C4(3),
+% matchJointProbC1C2C3C4(3) : concept4(2), concept3(2), concept2(2), concept1(2), s1(2), s2(2), stackTransCounter(2), stackType(2), maxJump(2), hiddenObservation(2), jointC1C2C3C4(2), jointProbC1C2C3C4(2), matchJointProbC1C2C3C4(2), pop(3), maxPop(3), popValidatorGivenPopMaxPop(3), concept4pop(3), concept3pop(3), concept2pop(3), concept1pop(3), push(3), concept4(3), concept3(3), concept2(3), concept1(3), s1(3), s2(3), skipDummy(3), jump(3), stackTrans(3), stackTransValidator(3), stackTransCounter(3), stackType(3), maxJump(3), hiddenObservation(3), endOfUtteranceObs(3), jointC1C2C3C4(3), jointProbC1C2C3C4(3),
+% --- E partition definition
+E_PARTITION 39 concept4 2 concept3 2 concept2 2 concept1 2 s1 2 s2 2 stackTransCounter 2 stackType 2 maxJump 2 hiddenObservation 2 jointC1C2C3C4 2 jointProbC1C2C3C4 2 matchJointProbC1C2C3C4 2 pop 3 maxPop 3 popValidatorGivenPopMaxPop 3 concept4pop 3 concept3pop 3 concept2pop 3 concept1pop 3 push 3 concept4 3 concept3 3 concept2 3 concept1 3 s1 3 s2 3 skipDummy 3 jump 3 stackTrans 3 stackTransValidator 3 stackTransCounter 3 stackType 3 maxJump 3 hiddenObservation 3 endOfUtteranceObs 3 jointC1C2C3C4 3 jointProbC1C2C3C4 3 matchJointProbC1C2C3C4 3 
+
+% ---
+% --- PC information : variables and their neighbors
+% concept4(1) : concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% concept3(1) : concept4(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% concept2(1) : concept4(1), concept3(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% concept1(1) : concept4(1), concept3(1), concept2(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% stackTransCounter(1) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% --- PC interface definition
+PC_PARTITION 5 concept4 1 concept3 1 concept2 1 concept1 1 stackTransCounter 1 
+
+% ---
+% --- CE information : variables and their neighbors
+% concept4(2) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% concept3(2) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% concept2(2) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% concept1(2) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2), stackTransCounter(2),
+% stackTransCounter(2) : concept4(1), concept3(1), concept2(1), concept1(1), s1(1), s2(1), stackTransCounter(1), stackType(1), maxJump(1), hiddenObservation(1), jointC1C2C3C4(1), jointProbC1C2C3C4(1), matchJointProbC1C2C3C4(1), pop(2), maxPop(2), popValidatorGivenPopMaxPop(2), concept4pop(2), concept3pop(2), concept2pop(2), concept1pop(2), push(2), concept4(2), concept3(2), concept2(2), concept1(2), skipDummy(2), jump(2), stackTrans(2), stackTransValidator(2),
+% --- CE interface definition
+CE_PARTITION 5 concept4 2 concept3 2 concept2 2 concept1 2 stackTransCounter 2 
+
+% ---
+% ---- P Partitions Cliques and their weights
+% ---- 1 total max-cliques 
+% ---- Triangulation came from method: 1-completed
+% 0 : 29  7.948174
+%    concept4(0)
+%    concept3(0)
+%    concept2(0)
+%    concept1(0)
+%    s1(0)
+%    s2(0)
+%    stackTransCounter(0)
+%    stackType(0)
+%    maxJump(0)
+%    jointC1C2C3C4(0)
+%    jointProbC1C2C3C4(0)
+%    matchJointProbC1C2C3C4(0)
+%    pop(1)
+%    maxPop(1)
+%    popValidatorGivenPopMaxPop(1)
+%    concept4pop(1)
+%    concept3pop(1)
+%    concept2pop(1)
+%    concept1pop(1)
+%    push(1)
+%    concept4(1)
+%    concept3(1)
+%    concept2(1)
+%    concept1(1)
+%    skipDummy(1)
+%    jump(1)
+%    stackTrans(1)
+%    stackTransValidator(1)
+%    stackTransCounter(1)
+% Maximum clique state space = 1e7.948174, total state space = 1e7.948174
+1-completed 
+1 
+0 29 concept4 0 concept3 0 concept2 0 concept1 0 s1 0 s2 0 stackTransCounter 0 stackType 0 maxJump 0 jointC1C2C3C4 0 jointProbC1C2C3C4 0 matchJointProbC1C2C3C4 0 pop 1 maxPop 1 popValidatorGivenPopMaxPop 1 concept4pop 1 concept3pop 1 concept2pop 1 concept1pop 1 push 1 concept4 1 concept3 1 concept2 1 concept1 1 skipDummy 1 jump 1 stackTrans 1 stackTransValidator 1 stackTransCounter 1 
+
+% ---
+% ---- C Partitions Cliques and their weights
+% ---- 1 total max-cliques 
+% ---- Triangulation came from method: 1-completed
+% 0 : 30  15.902598
+%    concept4(1)
+%    concept3(1)
+%    concept2(1)
+%    concept1(1)
+%    s1(1)
+%    s2(1)
+%    stackTransCounter(1)
+%    stackType(1)
+%    maxJump(1)
+%    hiddenObservation(1)
+%    jointC1C2C3C4(1)
+%    jointProbC1C2C3C4(1)
+%    matchJointProbC1C2C3C4(1)
+%    pop(2)
+%    maxPop(2)
+%    popValidatorGivenPopMaxPop(2)
+%    concept4pop(2)
+%    concept3pop(2)
+%    concept2pop(2)
+%    concept1pop(2)
+%    push(2)
+%    concept4(2)
+%    concept3(2)
+%    concept2(2)
+%    concept1(2)
+%    skipDummy(2)
+%    jump(2)
+%    stackTrans(2)
+%    stackTransValidator(2)
+%    stackTransCounter(2)
+% Maximum clique state space = 1e15.902598, total state space = 1e15.902598
+1-completed 
+1 
+0 30 concept4 1 concept3 1 concept2 1 concept1 1 s1 1 s2 1 stackTransCounter 1 stackType 1 maxJump 1 hiddenObservation 1 jointC1C2C3C4 1 jointProbC1C2C3C4 1 matchJointProbC1C2C3C4 1 pop 2 maxPop 2 popValidatorGivenPopMaxPop 2 concept4pop 2 concept3pop 2 concept2pop 2 concept1pop 2 push 2 concept4 2 concept3 2 concept2 2 concept1 2 skipDummy 2 jump 2 stackTrans 2 stackTransValidator 2 stackTransCounter 2 
+
+% ---
+% ---- E Partitions Cliques and their weights
+% ---- 1 total max-cliques 
+% ---- Triangulation came from method: 1-completed
+% 0 : 39  18.218569
+%    concept4(2)
+%    concept3(2)
+%    concept2(2)
+%    concept1(2)
+%    s1(2)
+%    s2(2)
+%    stackTransCounter(2)
+%    stackType(2)
+%    maxJump(2)
+%    hiddenObservation(2)
+%    jointC1C2C3C4(2)
+%    jointProbC1C2C3C4(2)
+%    matchJointProbC1C2C3C4(2)
+%    pop(3)
+%    maxPop(3)
+%    popValidatorGivenPopMaxPop(3)
+%    concept4pop(3)
+%    concept3pop(3)
+%    concept2pop(3)
+%    concept1pop(3)
+%    push(3)
+%    concept4(3)
+%    concept3(3)
+%    concept2(3)
+%    concept1(3)
+%    s1(3)
+%    s2(3)
+%    skipDummy(3)
+%    jump(3)
+%    stackTrans(3)
+%    stackTransValidator(3)
+%    stackTransCounter(3)
+%    stackType(3)
+%    maxJump(3)
+%    hiddenObservation(3)
+%    endOfUtteranceObs(3)
+%    jointC1C2C3C4(3)
+%    jointProbC1C2C3C4(3)
+%    matchJointProbC1C2C3C4(3)
+% Maximum clique state space = 1e18.218569, total state space = 1e18.218569
+1-completed 
+1 
+0 39 concept4 2 concept3 2 concept2 2 concept1 2 s1 2 s2 2 stackTransCounter 2 stackType 2 maxJump 2 hiddenObservation 2 jointC1C2C3C4 2 jointProbC1C2C3C4 2 matchJointProbC1C2C3C4 2 pop 3 maxPop 3 popValidatorGivenPopMaxPop 3 concept4pop 3 concept3pop 3 concept2pop 3 concept1pop 3 push 3 concept4 3 concept3 3 concept2 3 concept1 3 s1 3 s2 3 skipDummy 3 jump 3 stackTrans 3 stackTransValidator 3 stackTransCounter 3 stackType 3 maxJump 3 hiddenObservation 3 endOfUtteranceObs 3 jointC1C2C3C4 3 jointProbC1C2C3C4 3 matchJointProbC1C2C3C4 3 
+
+
+% ----
+% ----
+% ----
+% ---- Printing final clique set and clique weights---
+%   --- Prologue summary, 1 cliques
+%    --- P curWeight = 7.948174
+%   --- Prologue max clique weight = 7.948174, total weight = 7.948174, jt_weight = 1.000000
+%   --- Chunk summary, 1 cliques
+%    --- C curWeight = 15.902598
+%   --- Chunk max clique weight = 15.902598, total Cx1 weight = 15.902598, per-chunk total C weight = 15.902598, jt_weight = 1.000000
+%   --- Epilogue summary, 1 cliques
+%    --- E curWeight = 18.218569
+%   --- Epilogue max clique weight = 18.218569, total weight = 18.218569, jt_weight = 1.000000
+% --- Final set (P,Cx1,E) has max clique weight = 18.218569, total state space = 18.220662 ---
+% --- Total weight when unrolling 1x = 18.220662 ---
+% --- Total weight when unrolling 2x = 18.222745 ---
+% --- Total weight when unrolling 5x = 18.228934 ---
+% --- Total weight when unrolling 10x = 18.239058 ---
+% --- Total weight when unrolling 20x = 18.258624 ---
+% --- Total weight when unrolling 50x = 18.312532 ---
+% --- Total weight when unrolling 100x = 18.389737 ---
+% --- Total weight when unrolling 500x = 18.752018 ---
+% --- Total weight when unrolling 1000x = 18.984306 ---

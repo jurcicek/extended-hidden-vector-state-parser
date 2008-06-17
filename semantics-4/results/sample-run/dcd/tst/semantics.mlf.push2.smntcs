@@ -1,0 +1,31 @@
+#!MLF!#
+"*/CD03~Part1~04-000506-152014-1_00001.rec"
+OTHER_INFO(FROM(prosit ty),TO(na,STATION(dobřany))),TIME(jet dnes v sobota vlak v šestnáct třicet)
+.
+"*/CD03~Part1~04-000506-152014-1_00009.rec"
+OTHER_INFO(TRAIN_TYPE(tak,_DUMMY_(dobře))),TIME(osmnáct padesát osm)
+.
+"*/CD03~Part1~04-000506-155916-1_00006.rec"
+TIME(v devatenáct nula čtyři),OTHER_INFO(TRANSFER(s přestup v),ražice)
+.
+"*/CD03~Part1~04-000506-155916-1_00011.rec"
+TIME(a ten být vlakový nebo autobusový),ACCEPT(SYSTEM_FEATURE(informace))
+.
+"*/CD03~Part1~04-000506-155916-1_00018.rec"
+OTHER_INFO(FROM(z,STATION(hlavní nádraží)))
+.
+"*/CD03~Part1~04-000506-155916-1_00019.rec"
+OTHER_INFO(TRANSFER(s přestup v),ražice)
+.
+"*/CD03~Part1~04-000506-155916-1_00020.rec"
+OTHER_INFO(TRANSFER(s přestup v),ražice)
+.
+"*/CD03~Part1~04-000506-155916-1_00026.rec"
+DEPARTURE(TIME(dvěstě třicet čtyři))
+.
+"*/CD03~Part1~04-000506-160946-1_00004.rec"
+OTHER_INFO(TO(do žihla))
+.
+"*/CD03~Part1~04-000506-160946-1_00010.rec"
+REJECT(OTHER_INFO(nebýt),TIME(ten lokálka))
+.

@@ -1,0 +1,7 @@
+1 % number of Dense Conditional Probability Trees
+
+0 % index of DCPT 
+pushUnigram % DCPT name 
+0 % number of parents 
+5 % self cardinality
+6.093e-01 3.678e-01 2.298e-02 0.000e-00 0.000e-00 

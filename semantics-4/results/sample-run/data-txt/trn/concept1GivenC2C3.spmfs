@@ -1,0 +1,562 @@
+80 % number of Sparse Probability Mass Functions
+
+0 % index of SPMF 
+concept1GivenC2C3_0000 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0000 % DPFM name 
+
+1 % index of SPMF 
+concept1GivenC2C3_0001 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0001 % DPFM name 
+
+2 % index of SPMF 
+concept1GivenC2C3_0002 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0002 % DPFM name 
+
+3 % index of SPMF 
+concept1GivenC2C3_0003 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0003 % DPFM name 
+
+4 % index of SPMF 
+concept1GivenC2C3_0004 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0004 % DPFM name 
+
+5 % index of SPMF 
+concept1GivenC2C3_0005 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0005 % DPFM name 
+
+6 % index of SPMF 
+concept1GivenC2C3_0006 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0006 % DPFM name 
+
+7 % index of SPMF 
+concept1GivenC2C3_0007 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0007 % DPFM name 
+
+8 % index of SPMF 
+concept1GivenC2C3_0008 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0008 % DPFM name 
+
+9 % index of SPMF 
+concept1GivenC2C3_0009 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0009 % DPFM name 
+
+10 % index of SPMF 
+concept1GivenC2C3_0010 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0010 % DPFM name 
+
+11 % index of SPMF 
+concept1GivenC2C3_0011 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0011 % DPFM name 
+
+12 % index of SPMF 
+concept1GivenC2C3_0012 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0012 % DPFM name 
+
+13 % index of SPMF 
+concept1GivenC2C3_0013 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0013 % DPFM name 
+
+14 % index of SPMF 
+concept1GivenC2C3_0014 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0014 % DPFM name 
+
+15 % index of SPMF 
+concept1GivenC2C3_0015 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0015 % DPFM name 
+
+16 % index of SPMF 
+concept1GivenC2C3_0016 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0016 % DPFM name 
+
+17 % index of SPMF 
+concept1GivenC2C3_0017 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0017 % DPFM name 
+
+18 % index of SPMF 
+concept1GivenC2C3_0018 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0018 % DPFM name 
+
+19 % index of SPMF 
+concept1GivenC2C3_0019 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0019 % DPFM name 
+
+20 % index of SPMF 
+concept1GivenC2C3_0020 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0020 % DPFM name 
+
+21 % index of SPMF 
+concept1GivenC2C3_0021 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0021 % DPFM name 
+
+22 % index of SPMF 
+concept1GivenC2C3_0022 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0022 % DPFM name 
+
+23 % index of SPMF 
+concept1GivenC2C3_0023 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0023 % DPFM name 
+
+24 % index of SPMF 
+concept1GivenC2C3_0024 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0024 % DPFM name 
+
+25 % index of SPMF 
+concept1GivenC2C3_0025 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0025 % DPFM name 
+
+26 % index of SPMF 
+concept1GivenC2C3_0026 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0026 % DPFM name 
+
+27 % index of SPMF 
+concept1GivenC2C3_0027 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0027 % DPFM name 
+
+28 % index of SPMF 
+concept1GivenC2C3_0028 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0028 % DPFM name 
+
+29 % index of SPMF 
+concept1GivenC2C3_0029 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0029 % DPFM name 
+
+30 % index of SPMF 
+concept1GivenC2C3_0030 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0030 % DPFM name 
+
+31 % index of SPMF 
+concept1GivenC2C3_0031 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0031 % DPFM name 
+
+32 % index of SPMF 
+concept1GivenC2C3_0032 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0032 % DPFM name 
+
+33 % index of SPMF 
+concept1GivenC2C3_0033 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0033 % DPFM name 
+
+34 % index of SPMF 
+concept1GivenC2C3_0034 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0034 % DPFM name 
+
+35 % index of SPMF 
+concept1GivenC2C3_0035 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0035 % DPFM name 
+
+36 % index of SPMF 
+concept1GivenC2C3_0036 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0036 % DPFM name 
+
+37 % index of SPMF 
+concept1GivenC2C3_0037 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0037 % DPFM name 
+
+38 % index of SPMF 
+concept1GivenC2C3_0038 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0038 % DPFM name 
+
+39 % index of SPMF 
+concept1GivenC2C3_0039 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0039 % DPFM name 
+
+40 % index of SPMF 
+concept1GivenC2C3_0040 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0040 % DPFM name 
+
+41 % index of SPMF 
+concept1GivenC2C3_0041 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0041 % DPFM name 
+
+42 % index of SPMF 
+concept1GivenC2C3_0042 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0042 % DPFM name 
+
+43 % index of SPMF 
+concept1GivenC2C3_0043 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0043 % DPFM name 
+
+44 % index of SPMF 
+concept1GivenC2C3_0044 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0044 % DPFM name 
+
+45 % index of SPMF 
+concept1GivenC2C3_0045 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0045 % DPFM name 
+
+46 % index of SPMF 
+concept1GivenC2C3_0046 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0046 % DPFM name 
+
+47 % index of SPMF 
+concept1GivenC2C3_0047 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0047 % DPFM name 
+
+48 % index of SPMF 
+concept1GivenC2C3_0048 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0048 % DPFM name 
+
+49 % index of SPMF 
+concept1GivenC2C3_0049 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0049 % DPFM name 
+
+50 % index of SPMF 
+concept1GivenC2C3_0050 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0050 % DPFM name 
+
+51 % index of SPMF 
+concept1GivenC2C3_0051 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0051 % DPFM name 
+
+52 % index of SPMF 
+concept1GivenC2C3_0052 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0052 % DPFM name 
+
+53 % index of SPMF 
+concept1GivenC2C3_0053 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0053 % DPFM name 
+
+54 % index of SPMF 
+concept1GivenC2C3_0054 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0054 % DPFM name 
+
+55 % index of SPMF 
+concept1GivenC2C3_0055 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0055 % DPFM name 
+
+56 % index of SPMF 
+concept1GivenC2C3_0056 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0056 % DPFM name 
+
+57 % index of SPMF 
+concept1GivenC2C3_0057 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0057 % DPFM name 
+
+58 % index of SPMF 
+concept1GivenC2C3_0058 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0058 % DPFM name 
+
+59 % index of SPMF 
+concept1GivenC2C3_0059 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0059 % DPFM name 
+
+60 % index of SPMF 
+concept1GivenC2C3_0060 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0060 % DPFM name 
+
+61 % index of SPMF 
+concept1GivenC2C3_0061 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0061 % DPFM name 
+
+62 % index of SPMF 
+concept1GivenC2C3_0062 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0062 % DPFM name 
+
+63 % index of SPMF 
+concept1GivenC2C3_0063 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0063 % DPFM name 
+
+64 % index of SPMF 
+concept1GivenC2C3_0064 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0064 % DPFM name 
+
+65 % index of SPMF 
+concept1GivenC2C3_0065 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0065 % DPFM name 
+
+66 % index of SPMF 
+concept1GivenC2C3_0066 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0066 % DPFM name 
+
+67 % index of SPMF 
+concept1GivenC2C3_0067 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0067 % DPFM name 
+
+68 % index of SPMF 
+concept1GivenC2C3_0068 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0068 % DPFM name 
+
+69 % index of SPMF 
+concept1GivenC2C3_0069 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0069 % DPFM name 
+
+70 % index of SPMF 
+concept1GivenC2C3_0070 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0070 % DPFM name 
+
+71 % index of SPMF 
+concept1GivenC2C3_0071 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0071 % DPFM name 
+
+72 % index of SPMF 
+concept1GivenC2C3_0072 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0072 % DPFM name 
+
+73 % index of SPMF 
+concept1GivenC2C3_0073 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0073 % DPFM name 
+
+74 % index of SPMF 
+concept1GivenC2C3_0074 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0074 % DPFM name 
+
+75 % index of SPMF 
+concept1GivenC2C3_0075 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0075 % DPFM name 
+
+76 % index of SPMF 
+concept1GivenC2C3_0076 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0076 % DPFM name 
+
+77 % index of SPMF 
+concept1GivenC2C3_0077 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0077 % DPFM name 
+
+78 % index of SPMF 
+concept1GivenC2C3_0078 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0078 % DPFM name 
+
+79 % index of SPMF 
+concept1GivenC2C3_0079 % SPMF name 
+35 % cardinality of X1 (self cardinality)
+35 % number of values with non-zero probability
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 
+concept1GivenC2C3_0079 % DPFM name 
+

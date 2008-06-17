@@ -1,0 +1,9231 @@
+627 % Number of DTs
+
+0 % DT number
+CD03~Part1~04-000427-074450-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+1 % DT number
+CD03~Part1~04-000427-074450-1_00001_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+2 % DT number
+CD03~Part1~04-000427-074450-1_00002_st % DT name
+1 % number of parents
+0	24	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+3 % DT number
+CD03~Part1~04-000427-074450-1_00004_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+4 % DT number
+CD03~Part1~04-000427-074450-1_00005_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+5 % DT number
+CD03~Part1~04-000427-074450-1_00006_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+6 % DT number
+CD03~Part1~04-000427-074450-1_00007_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+7 % DT number
+CD03~Part1~04-000427-074450-1_00008_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+8 % DT number
+CD03~Part1~04-000427-074450-1_00009_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+9 % DT number
+CD03~Part1~04-000427-074450-1_00010_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+10 % DT number
+CD03~Part1~04-000427-074450-1_00012_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+11 % DT number
+CD03~Part1~04-000427-074450-1_00013_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+12 % DT number
+CD03~Part1~04-000427-074450-1_00014_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+13 % DT number
+CD03~Part1~04-000427-075424-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+14 % DT number
+CD03~Part1~04-000427-075424-1_00001_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+15 % DT number
+CD03~Part1~04-000427-075424-1_00002_st % DT name
+1 % number of parents
+0	20	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+16 % DT number
+CD03~Part1~04-000427-075424-1_00003_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+17 % DT number
+CD03~Part1~04-000427-075424-1_00004_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+18 % DT number
+CD03~Part1~04-000427-075424-1_00005_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+19 % DT number
+CD03~Part1~04-000427-075424-1_00006_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+20 % DT number
+CD03~Part1~04-000427-075424-1_00007_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+21 % DT number
+CD03~Part1~04-000427-075424-1_00008_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+22 % DT number
+CD03~Part1~04-000427-075424-1_00009_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+23 % DT number
+CD03~Part1~04-000427-075424-1_00010_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+24 % DT number
+CD03~Part1~04-000427-075424-1_00011_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+25 % DT number
+CD03~Part1~04-000427-075424-1_00012_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+26 % DT number
+CD03~Part1~04-000427-075424-1_00013_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+27 % DT number
+CD03~Part1~04-000427-075424-1_00015_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+28 % DT number
+CD03~Part1~04-000427-075424-1_00016_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+29 % DT number
+CD03~Part1~04-000427-075424-1_00017_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+30 % DT number
+CD03~Part1~04-000427-075424-1_00018_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+31 % DT number
+CD03~Part1~04-000427-075424-1_00019_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+32 % DT number
+CD03~Part1~04-000427-075424-1_00020_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+33 % DT number
+CD03~Part1~04-000427-075424-1_00025_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+34 % DT number
+CD03~Part1~04-000427-075424-1_00026_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+35 % DT number
+CD03~Part1~04-000427-075758-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+36 % DT number
+CD03~Part1~04-000427-075758-1_00001_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+37 % DT number
+CD03~Part1~04-000427-075758-1_00002_st % DT name
+1 % number of parents
+0	22	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+38 % DT number
+CD03~Part1~04-000427-075758-1_00003_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+39 % DT number
+CD03~Part1~04-000427-075758-1_00004_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+40 % DT number
+CD03~Part1~04-000427-075758-1_00005_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+41 % DT number
+CD03~Part1~04-000427-075758-1_00006_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+42 % DT number
+CD03~Part1~04-000427-075758-1_00007_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+43 % DT number
+CD03~Part1~04-000427-075758-1_00008_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+44 % DT number
+CD03~Part1~04-000427-075758-1_00009_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+45 % DT number
+CD03~Part1~04-000427-075758-1_00010_st % DT name
+1 % number of parents
+0	20	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+46 % DT number
+CD03~Part1~04-000427-075758-1_00011_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+47 % DT number
+CD03~Part1~04-000427-075758-1_00012_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+48 % DT number
+CD03~Part1~04-000427-075758-1_00013_st % DT name
+1 % number of parents
+0	20	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+49 % DT number
+CD03~Part1~04-000427-075758-1_00014_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+50 % DT number
+CD03~Part1~04-000427-075758-1_00015_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+51 % DT number
+CD03~Part1~04-000427-075758-1_00016_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+52 % DT number
+CD03~Part1~04-000427-075758-1_00017_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+53 % DT number
+CD03~Part1~04-000427-080612-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+54 % DT number
+CD03~Part1~04-000427-080612-1_00001_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+55 % DT number
+CD03~Part1~04-000427-080612-1_00002_st % DT name
+1 % number of parents
+0	22	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+56 % DT number
+CD03~Part1~04-000427-080612-1_00003_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+57 % DT number
+CD03~Part1~04-000427-080612-1_00004_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+58 % DT number
+CD03~Part1~04-000427-080612-1_00005_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+59 % DT number
+CD03~Part1~04-000427-080612-1_00006_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+60 % DT number
+CD03~Part1~04-000427-080612-1_00007_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+61 % DT number
+CD03~Part1~04-000427-080612-1_00008_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+62 % DT number
+CD03~Part1~04-000427-080612-1_00009_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+63 % DT number
+CD03~Part1~04-000427-080612-1_00010_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+64 % DT number
+CD03~Part1~04-000427-080612-1_00011_st % DT name
+1 % number of parents
+0	12	0	1	2	3	4	5	6	7	8	9	10	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+65 % DT number
+CD03~Part1~04-000427-080612-1_00012_st % DT name
+1 % number of parents
+0	18	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+66 % DT number
+CD03~Part1~04-000427-080612-1_00013_st % DT name
+1 % number of parents
+0	12	0	1	2	3	4	5	6	7	8	9	10	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+67 % DT number
+CD03~Part1~04-000427-080612-1_00014_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+68 % DT number
+CD03~Part1~04-000427-080612-1_00015_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+69 % DT number
+CD03~Part1~04-000427-080612-1_00016_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+70 % DT number
+CD03~Part1~04-000427-080612-1_00017_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+71 % DT number
+CD03~Part1~04-000427-080612-1_00018_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+72 % DT number
+CD03~Part1~04-000427-080612-1_00020_st % DT name
+1 % number of parents
+0	18	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+73 % DT number
+CD03~Part1~04-000427-080612-1_00021_st % DT name
+1 % number of parents
+0	14	0	1	2	3	4	5	6	7	8	9	10	11	12	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+74 % DT number
+CD03~Part1~04-000427-080612-1_00022_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+75 % DT number
+CD03~Part1~04-000427-080612-1_00023_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+76 % DT number
+CD03~Part1~04-000427-080612-1_00024_st % DT name
+1 % number of parents
+0	12	0	1	2	3	4	5	6	7	8	9	10	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+77 % DT number
+CD03~Part1~04-000427-080612-1_00025_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+78 % DT number
+CD03~Part1~04-000427-080612-1_00026_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+79 % DT number
+CD03~Part1~04-000427-080612-1_00027_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+80 % DT number
+CD03~Part1~04-000427-080612-1_00028_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+81 % DT number
+CD03~Part1~04-000427-080612-1_00029_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+82 % DT number
+CD03~Part1~04-000427-080612-1_00030_st % DT name
+1 % number of parents
+0	18	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+83 % DT number
+CD03~Part1~04-000427-080612-1_00031_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+84 % DT number
+CD03~Part1~04-000427-080612-1_00032_st % DT name
+1 % number of parents
+0	14	0	1	2	3	4	5	6	7	8	9	10	11	12	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+85 % DT number
+CD03~Part1~04-000427-080612-1_00033_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+86 % DT number
+CD03~Part1~04-000427-080612-1_00034_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+87 % DT number
+CD03~Part1~04-000427-080612-1_00035_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+88 % DT number
+CD03~Part1~04-000427-080612-1_00036_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+89 % DT number
+CD03~Part1~04-000427-080612-1_00037_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+90 % DT number
+CD03~Part1~04-000427-080612-1_00038_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+91 % DT number
+CD03~Part1~04-000427-080612-1_00039_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+92 % DT number
+CD03~Part1~04-000427-080648-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+93 % DT number
+CD03~Part1~04-000427-080648-1_00001_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+94 % DT number
+CD03~Part1~04-000427-080648-1_00002_st % DT name
+1 % number of parents
+0	20	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+95 % DT number
+CD03~Part1~04-000427-080648-1_00003_st % DT name
+1 % number of parents
+0	14	0	1	2	3	4	5	6	7	8	9	10	11	12	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+96 % DT number
+CD03~Part1~04-000427-080648-1_00004_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+97 % DT number
+CD03~Part1~04-000427-080648-1_00005_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+98 % DT number
+CD03~Part1~04-000427-080648-1_00006_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+99 % DT number
+CD03~Part1~04-000427-080648-1_00007_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+100 % DT number
+CD03~Part1~04-000427-080810-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+101 % DT number
+CD03~Part1~04-000427-080810-1_00001_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+102 % DT number
+CD03~Part1~04-000427-080810-1_00002_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+103 % DT number
+CD03~Part1~04-000427-081044-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+104 % DT number
+CD03~Part1~04-000427-081044-1_00001_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+105 % DT number
+CD03~Part1~04-000427-081044-1_00002_st % DT name
+1 % number of parents
+0	12	0	1	2	3	4	5	6	7	8	9	10	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+106 % DT number
+CD03~Part1~04-000427-081044-1_00003_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+107 % DT number
+CD03~Part1~04-000427-081044-1_00004_st % DT name
+1 % number of parents
+0	20	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+108 % DT number
+CD03~Part1~04-000427-081044-1_00005_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+109 % DT number
+CD03~Part1~04-000427-081044-1_00006_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+110 % DT number
+CD03~Part1~04-000427-081044-1_00007_st % DT name
+1 % number of parents
+0	14	0	1	2	3	4	5	6	7	8	9	10	11	12	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+111 % DT number
+CD03~Part1~04-000427-081044-1_00008_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+112 % DT number
+CD03~Part1~04-000427-081044-1_00009_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+113 % DT number
+CD03~Part1~04-000427-081044-1_00010_st % DT name
+1 % number of parents
+0	20	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+114 % DT number
+CD03~Part1~04-000427-081044-1_00012_st % DT name
+1 % number of parents
+0	12	0	1	2	3	4	5	6	7	8	9	10	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+115 % DT number
+CD03~Part1~04-000427-081044-1_00013_st % DT name
+1 % number of parents
+0	12	0	1	2	3	4	5	6	7	8	9	10	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+116 % DT number
+CD03~Part1~04-000427-081044-1_00017_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+117 % DT number
+CD03~Part1~04-000427-081044-1_00019_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+118 % DT number
+CD03~Part1~04-000427-081044-1_00020_st % DT name
+1 % number of parents
+0	12	0	1	2	3	4	5	6	7	8	9	10	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+119 % DT number
+CD03~Part1~04-000427-081044-1_00021_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+120 % DT number
+CD03~Part1~04-000427-081044-1_00023_st % DT name
+1 % number of parents
+0	14	0	1	2	3	4	5	6	7	8	9	10	11	12	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+121 % DT number
+CD03~Part1~04-000427-081044-1_00024_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+122 % DT number
+CD03~Part1~04-000427-081044-1_00025_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+123 % DT number
+CD03~Part1~04-000427-081044-1_00026_st % DT name
+1 % number of parents
+0	12	0	1	2	3	4	5	6	7	8	9	10	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+124 % DT number
+CD03~Part1~04-000427-081044-1_00027_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+125 % DT number
+CD03~Part1~04-000427-081044-1_00028_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+126 % DT number
+CD03~Part1~04-000427-081044-1_00029_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+127 % DT number
+CD03~Part1~04-000427-081044-1_00030_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+128 % DT number
+CD03~Part1~04-000427-081044-1_00031_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+129 % DT number
+CD03~Part1~04-000427-081044-1_00032_st % DT name
+1 % number of parents
+0	20	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+130 % DT number
+CD03~Part1~04-000427-081044-1_00033_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+131 % DT number
+CD03~Part1~04-000427-081044-1_00034_st % DT name
+1 % number of parents
+0	18	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+132 % DT number
+CD03~Part1~04-000427-081044-1_00035_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+133 % DT number
+CD03~Part1~04-000427-081044-1_00036_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+134 % DT number
+CD03~Part1~04-000427-081044-1_00038_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+135 % DT number
+CD03~Part1~04-000427-081044-1_00039_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+136 % DT number
+CD03~Part1~04-000427-081044-1_00041_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+137 % DT number
+CD03~Part1~04-000427-081236-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+138 % DT number
+CD03~Part1~04-000427-081236-1_00002_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+139 % DT number
+CD03~Part1~04-000427-081236-1_00003_st % DT name
+1 % number of parents
+0	14	0	1	2	3	4	5	6	7	8	9	10	11	12	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+140 % DT number
+CD03~Part1~04-000427-081236-1_00004_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+141 % DT number
+CD03~Part1~04-000427-081236-1_00005_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+142 % DT number
+CD03~Part1~04-000427-081236-1_00006_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+143 % DT number
+CD03~Part1~04-000427-081236-1_00007_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+144 % DT number
+CD03~Part1~04-000427-081236-1_00008_st % DT name
+1 % number of parents
+0	14	0	1	2	3	4	5	6	7	8	9	10	11	12	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+145 % DT number
+CD03~Part1~04-000427-081236-1_00009_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+146 % DT number
+CD03~Part1~04-000427-081236-1_00010_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+147 % DT number
+CD03~Part1~04-000427-081236-1_00011_st % DT name
+1 % number of parents
+0	20	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+148 % DT number
+CD03~Part1~04-000427-081236-1_00012_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+149 % DT number
+CD03~Part1~04-000427-081236-1_00013_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+150 % DT number
+CD03~Part1~04-000427-081236-1_00015_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+151 % DT number
+CD03~Part1~04-000427-081236-1_00016_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+152 % DT number
+CD03~Part1~04-000427-081412-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+153 % DT number
+CD03~Part1~04-000427-081412-1_00001_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+154 % DT number
+CD03~Part1~04-000427-081412-1_00002_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+155 % DT number
+CD03~Part1~04-000427-081412-1_00003_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+156 % DT number
+CD03~Part1~04-000427-081412-1_00004_st % DT name
+1 % number of parents
+0	20	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+157 % DT number
+CD03~Part1~04-000427-081412-1_00005_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+158 % DT number
+CD03~Part1~04-000427-081412-1_00006_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+159 % DT number
+CD03~Part1~04-000427-081412-1_00007_st % DT name
+1 % number of parents
+0	14	0	1	2	3	4	5	6	7	8	9	10	11	12	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+160 % DT number
+CD03~Part1~04-000427-081412-1_00008_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+161 % DT number
+CD03~Part1~04-000427-081412-1_00009_st % DT name
+1 % number of parents
+0	20	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+162 % DT number
+CD03~Part1~04-000427-081412-1_00010_st % DT name
+1 % number of parents
+0	14	0	1	2	3	4	5	6	7	8	9	10	11	12	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+163 % DT number
+CD03~Part1~04-000427-081412-1_00011_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+164 % DT number
+CD03~Part1~04-000427-081412-1_00012_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+165 % DT number
+CD03~Part1~04-000427-082740-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+166 % DT number
+CD03~Part1~04-000427-082740-1_00001_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+167 % DT number
+CD03~Part1~04-000427-082740-1_00002_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+168 % DT number
+CD03~Part1~04-000427-082740-1_00004_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+169 % DT number
+CD03~Part1~04-000427-082740-1_00005_st % DT name
+1 % number of parents
+0	22	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+170 % DT number
+CD03~Part1~04-000427-082740-1_00006_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+171 % DT number
+CD03~Part1~04-000427-082740-1_00007_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+172 % DT number
+CD03~Part1~04-000427-082740-1_00008_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+173 % DT number
+CD03~Part1~04-000427-082740-1_00010_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+174 % DT number
+CD03~Part1~04-000427-082740-1_00011_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+175 % DT number
+CD03~Part1~04-000427-082740-1_00012_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+176 % DT number
+CD03~Part1~04-000427-082740-1_00013_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+177 % DT number
+CD03~Part1~04-000427-082740-1_00014_st % DT name
+1 % number of parents
+0	26	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+178 % DT number
+CD03~Part1~04-000427-082740-1_00015_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+179 % DT number
+CD03~Part1~04-000427-082740-1_00017_st % DT name
+1 % number of parents
+0	26	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+180 % DT number
+CD03~Part1~04-000427-082740-1_00018_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+181 % DT number
+CD03~Part1~04-000427-082740-1_00019_st % DT name
+1 % number of parents
+0	34	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	25	26	27	28	29	30	31	32	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+182 % DT number
+CD03~Part1~04-000427-082740-1_00020_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+183 % DT number
+CD03~Part1~04-000427-082740-1_00021_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+184 % DT number
+CD03~Part1~04-000427-082908-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+185 % DT number
+CD03~Part1~04-000427-082908-1_00001_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+186 % DT number
+CD03~Part1~04-000427-082908-1_00002_st % DT name
+1 % number of parents
+0	22	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+187 % DT number
+CD03~Part1~04-000427-082908-1_00003_st % DT name
+1 % number of parents
+0	14	0	1	2	3	4	5	6	7	8	9	10	11	12	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+188 % DT number
+CD03~Part1~04-000427-082908-1_00004_st % DT name
+1 % number of parents
+0	14	0	1	2	3	4	5	6	7	8	9	10	11	12	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+189 % DT number
+CD03~Part1~04-000427-082908-1_00005_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+190 % DT number
+CD03~Part1~04-000427-082908-1_00006_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+191 % DT number
+CD03~Part1~04-000427-082908-1_00007_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+192 % DT number
+CD03~Part1~04-000427-082908-1_00008_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+193 % DT number
+CD03~Part1~04-000427-082908-1_00009_st % DT name
+1 % number of parents
+0	14	0	1	2	3	4	5	6	7	8	9	10	11	12	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+194 % DT number
+CD03~Part1~04-000427-083316-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+195 % DT number
+CD03~Part1~04-000427-083506-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+196 % DT number
+CD03~Part1~04-000427-083506-1_00001_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+197 % DT number
+CD03~Part1~04-000427-083506-1_00002_st % DT name
+1 % number of parents
+0	12	0	1	2	3	4	5	6	7	8	9	10	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+198 % DT number
+CD03~Part1~04-000427-083506-1_00003_st % DT name
+1 % number of parents
+0	38	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	25	26	27	28	29	30	31	32	33	34	35	36	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+199 % DT number
+CD03~Part1~04-000427-083506-1_00004_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+200 % DT number
+CD03~Part1~04-000427-083506-1_00005_st % DT name
+1 % number of parents
+0	18	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+201 % DT number
+CD03~Part1~04-000427-083506-1_00006_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+202 % DT number
+CD03~Part1~04-000427-083506-1_00007_st % DT name
+1 % number of parents
+0	14	0	1	2	3	4	5	6	7	8	9	10	11	12	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+203 % DT number
+CD03~Part1~04-000427-083506-1_00008_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+204 % DT number
+CD03~Part1~04-000427-083506-1_00010_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+205 % DT number
+CD03~Part1~04-000427-083506-1_00011_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+206 % DT number
+CD03~Part1~04-000427-083506-1_00012_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+207 % DT number
+CD03~Part1~04-000427-083506-1_00013_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+208 % DT number
+CD03~Part1~04-000427-083506-1_00014_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+209 % DT number
+CD03~Part1~04-000427-083506-1_00015_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+210 % DT number
+CD03~Part1~04-000427-083506-1_00016_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+211 % DT number
+CD03~Part1~04-000427-083506-1_00017_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+212 % DT number
+CD03~Part1~04-000427-083506-1_00018_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+213 % DT number
+CD03~Part1~04-000427-083940-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+214 % DT number
+CD03~Part1~04-000427-083940-1_00001_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+215 % DT number
+CD03~Part1~04-000427-083940-1_00002_st % DT name
+1 % number of parents
+0	26	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+216 % DT number
+CD03~Part1~04-000427-083940-1_00003_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+217 % DT number
+CD03~Part1~04-000427-083940-1_00004_st % DT name
+1 % number of parents
+0	12	0	1	2	3	4	5	6	7	8	9	10	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+218 % DT number
+CD03~Part1~04-000427-083940-1_00005_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+219 % DT number
+CD03~Part1~04-000427-083940-1_00006_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+220 % DT number
+CD03~Part1~04-000427-083940-1_00007_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+221 % DT number
+CD03~Part1~04-000427-083940-1_00008_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+222 % DT number
+CD03~Part1~04-000427-083940-1_00009_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+223 % DT number
+CD03~Part1~04-000427-083940-1_00010_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+224 % DT number
+CD03~Part1~04-000427-083940-1_00011_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+225 % DT number
+CD03~Part1~04-000427-083940-1_00012_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+226 % DT number
+CD03~Part1~04-000427-083940-1_00013_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+227 % DT number
+CD03~Part1~04-000427-083940-1_00015_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+228 % DT number
+CD03~Part1~04-000427-083940-1_00016_st % DT name
+1 % number of parents
+0	12	0	1	2	3	4	5	6	7	8	9	10	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+229 % DT number
+CD03~Part1~04-000427-083940-1_00017_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+230 % DT number
+CD03~Part1~04-000427-083940-1_00018_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+231 % DT number
+CD03~Part1~04-000427-083940-1_00019_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+232 % DT number
+CD03~Part1~04-000427-083940-1_00020_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+233 % DT number
+CD03~Part1~04-000427-083940-1_00021_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+234 % DT number
+CD03~Part1~04-000427-083940-1_00022_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+235 % DT number
+CD03~Part1~04-000427-083940-1_00023_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+236 % DT number
+CD03~Part1~04-000427-083940-1_00024_st % DT name
+1 % number of parents
+0	22	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+237 % DT number
+CD03~Part1~04-000427-083940-1_00025_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+238 % DT number
+CD03~Part1~04-000427-083940-1_00026_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+239 % DT number
+CD03~Part1~04-000427-083940-1_00027_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+240 % DT number
+CD03~Part1~04-000427-083940-1_00028_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+241 % DT number
+CD03~Part1~04-000427-083940-1_00029_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+242 % DT number
+CD03~Part1~04-000427-083940-1_00030_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+243 % DT number
+CD03~Part1~04-000427-083940-1_00031_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+244 % DT number
+CD03~Part1~04-000427-083940-1_00032_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+245 % DT number
+CD03~Part1~04-000427-083940-1_00033_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+246 % DT number
+CD03~Part1~04-000427-083940-1_00034_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+247 % DT number
+CD03~Part1~04-000427-083940-1_00035_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+248 % DT number
+CD03~Part1~04-000427-083940-1_00036_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+249 % DT number
+CD03~Part1~04-000427-083940-1_00037_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+250 % DT number
+CD03~Part1~04-000427-084334-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+251 % DT number
+CD03~Part1~04-000427-084334-1_00001_st % DT name
+1 % number of parents
+0	20	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+252 % DT number
+CD03~Part1~04-000427-084334-1_00002_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+253 % DT number
+CD03~Part1~04-000427-084334-1_00003_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+254 % DT number
+CD03~Part1~04-000427-084334-1_00004_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+255 % DT number
+CD03~Part1~04-000427-084334-1_00005_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+256 % DT number
+CD03~Part1~04-000427-084334-1_00006_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+257 % DT number
+CD03~Part1~04-000427-084334-1_00007_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+258 % DT number
+CD03~Part1~04-000427-084334-1_00008_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+259 % DT number
+CD03~Part1~04-000427-084334-1_00009_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+260 % DT number
+CD03~Part1~04-000427-084334-1_00010_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+261 % DT number
+CD03~Part1~04-000427-084334-1_00011_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+262 % DT number
+CD03~Part1~04-000427-084334-1_00012_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+263 % DT number
+CD03~Part1~04-000427-084334-1_00013_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+264 % DT number
+CD03~Part1~04-000427-084334-1_00014_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+265 % DT number
+CD03~Part1~04-000427-084334-1_00015_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+266 % DT number
+CD03~Part1~04-000427-084334-1_00016_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+267 % DT number
+CD03~Part1~04-000427-084334-1_00017_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+268 % DT number
+CD03~Part1~04-000427-084334-1_00018_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+269 % DT number
+CD03~Part1~04-000427-084334-1_00019_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+270 % DT number
+CD03~Part1~04-000427-084334-1_00020_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+271 % DT number
+CD03~Part1~04-000427-084334-1_00021_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+272 % DT number
+CD03~Part1~04-000427-084334-1_00022_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+273 % DT number
+CD03~Part1~04-000427-084334-1_00023_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+274 % DT number
+CD03~Part1~04-000427-084334-1_00024_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+275 % DT number
+CD03~Part1~04-000427-084334-1_00025_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+276 % DT number
+CD03~Part1~04-000427-084334-1_00026_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+277 % DT number
+CD03~Part1~04-000427-084334-1_00027_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+278 % DT number
+CD03~Part1~04-000427-084334-1_00028_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+279 % DT number
+CD03~Part1~04-000427-084934-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+280 % DT number
+CD03~Part1~04-000427-084934-1_00001_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+281 % DT number
+CD03~Part1~04-000427-084934-1_00002_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+282 % DT number
+CD03~Part1~04-000427-084934-1_00003_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+283 % DT number
+CD03~Part1~04-000427-084934-1_00004_st % DT name
+1 % number of parents
+0	14	0	1	2	3	4	5	6	7	8	9	10	11	12	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+284 % DT number
+CD03~Part1~04-000427-084934-1_00005_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+285 % DT number
+CD03~Part1~04-000427-084934-1_00006_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+286 % DT number
+CD03~Part1~04-000427-084934-1_00007_st % DT name
+1 % number of parents
+0	12	0	1	2	3	4	5	6	7	8	9	10	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+287 % DT number
+CD03~Part1~04-000427-084934-1_00008_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+288 % DT number
+CD03~Part1~04-000427-084934-1_00010_st % DT name
+1 % number of parents
+0	12	0	1	2	3	4	5	6	7	8	9	10	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+289 % DT number
+CD03~Part1~04-000427-084934-1_00011_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+290 % DT number
+CD03~Part1~04-000427-084934-1_00012_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+291 % DT number
+CD03~Part1~04-000427-084934-1_00013_st % DT name
+1 % number of parents
+0	26	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+292 % DT number
+CD03~Part1~04-000427-084934-1_00015_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+293 % DT number
+CD03~Part1~04-000427-084934-1_00016_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+294 % DT number
+CD03~Part1~04-000427-084934-1_00017_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+295 % DT number
+CD03~Part1~04-000427-090306-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+296 % DT number
+CD03~Part1~04-000427-090306-1_00001_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+297 % DT number
+CD03~Part1~04-000427-090306-1_00002_st % DT name
+1 % number of parents
+0	30	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	25	26	27	28	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+298 % DT number
+CD03~Part1~04-000427-090306-1_00003_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+299 % DT number
+CD03~Part1~04-000427-090306-1_00004_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+300 % DT number
+CD03~Part1~04-000427-090306-1_00005_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+301 % DT number
+CD03~Part1~04-000427-090306-1_00006_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+302 % DT number
+CD03~Part1~04-000427-090306-1_00007_st % DT name
+1 % number of parents
+0	20	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+303 % DT number
+CD03~Part1~04-000427-090306-1_00008_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+304 % DT number
+CD03~Part1~04-000427-090306-1_00010_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+305 % DT number
+CD03~Part1~04-000427-090306-1_00011_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+306 % DT number
+CD03~Part1~04-000427-090306-1_00012_st % DT name
+1 % number of parents
+0	20	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+307 % DT number
+CD03~Part1~04-000427-090306-1_00013_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+308 % DT number
+CD03~Part1~04-000427-090306-1_00014_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+309 % DT number
+CD03~Part1~04-000427-091708-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+310 % DT number
+CD03~Part1~04-000427-091708-1_00001_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+311 % DT number
+CD03~Part1~04-000427-091708-1_00002_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+312 % DT number
+CD03~Part1~04-000427-091708-1_00003_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+313 % DT number
+CD03~Part1~04-000427-091708-1_00004_st % DT name
+1 % number of parents
+0	12	0	1	2	3	4	5	6	7	8	9	10	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+314 % DT number
+CD03~Part1~04-000427-091708-1_00005_st % DT name
+1 % number of parents
+0	22	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+315 % DT number
+CD03~Part1~04-000427-091708-1_00006_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+316 % DT number
+CD03~Part1~04-000427-091708-1_00007_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+317 % DT number
+CD03~Part1~04-000427-091708-1_00008_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+318 % DT number
+CD03~Part1~04-000427-091708-1_00009_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+319 % DT number
+CD03~Part1~04-000427-091708-1_00010_st % DT name
+1 % number of parents
+0	18	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+320 % DT number
+CD03~Part1~04-000427-091708-1_00011_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+321 % DT number
+CD03~Part1~04-000427-091708-1_00012_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+322 % DT number
+CD03~Part1~04-000427-091708-1_00013_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+323 % DT number
+CD03~Part1~04-000427-091708-1_00014_st % DT name
+1 % number of parents
+0	18	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+324 % DT number
+CD03~Part1~04-000427-091708-1_00015_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+325 % DT number
+CD03~Part1~04-000427-091708-1_00016_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+326 % DT number
+CD03~Part1~04-000427-091708-1_00017_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+327 % DT number
+CD03~Part1~04-000427-091708-1_00018_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+328 % DT number
+CD03~Part1~04-000427-091708-1_00019_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+329 % DT number
+CD03~Part1~04-000427-093336-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+330 % DT number
+CD03~Part1~04-000427-093336-1_00001_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+331 % DT number
+CD03~Part1~04-000427-093336-1_00002_st % DT name
+1 % number of parents
+0	20	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+332 % DT number
+CD03~Part1~04-000427-093336-1_00003_st % DT name
+1 % number of parents
+0	14	0	1	2	3	4	5	6	7	8	9	10	11	12	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+333 % DT number
+CD03~Part1~04-000427-093336-1_00006_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+334 % DT number
+CD03~Part1~04-000427-093336-1_00007_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+335 % DT number
+CD03~Part1~04-000427-094034-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+336 % DT number
+CD03~Part1~04-000427-094034-1_00001_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+337 % DT number
+CD03~Part1~04-000427-094034-1_00002_st % DT name
+1 % number of parents
+0	18	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+338 % DT number
+CD03~Part1~04-000427-094034-1_00003_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+339 % DT number
+CD03~Part1~04-000427-094034-1_00004_st % DT name
+1 % number of parents
+0	22	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+340 % DT number
+CD03~Part1~04-000427-094034-1_00005_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+341 % DT number
+CD03~Part1~04-000427-094034-1_00006_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+342 % DT number
+CD03~Part1~04-000427-094034-1_00007_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+343 % DT number
+CD03~Part1~04-000427-094034-1_00008_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+344 % DT number
+CD03~Part1~04-000427-094034-1_00009_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+345 % DT number
+CD03~Part1~04-000427-094034-1_00011_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+346 % DT number
+CD03~Part1~04-000427-094034-1_00012_st % DT name
+1 % number of parents
+0	14	0	1	2	3	4	5	6	7	8	9	10	11	12	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+347 % DT number
+CD03~Part1~04-000427-094034-1_00013_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+348 % DT number
+CD03~Part1~04-000427-094034-1_00014_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+349 % DT number
+CD03~Part1~04-000427-094034-1_00015_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+350 % DT number
+CD03~Part1~04-000427-094034-1_00016_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+351 % DT number
+CD03~Part1~04-000427-094034-1_00017_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+352 % DT number
+CD03~Part1~04-000427-094034-1_00018_st % DT name
+1 % number of parents
+0	14	0	1	2	3	4	5	6	7	8	9	10	11	12	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+353 % DT number
+CD03~Part1~04-000427-094034-1_00019_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+354 % DT number
+CD03~Part1~04-000427-094034-1_00020_st % DT name
+1 % number of parents
+0	12	0	1	2	3	4	5	6	7	8	9	10	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+355 % DT number
+CD03~Part1~04-000427-094034-1_00021_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+356 % DT number
+CD03~Part1~04-000427-094034-1_00022_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+357 % DT number
+CD03~Part1~04-000427-094034-1_00023_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+358 % DT number
+CD03~Part1~04-000427-094034-1_00024_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+359 % DT number
+CD03~Part1~04-000427-094034-1_00025_st % DT name
+1 % number of parents
+0	12	0	1	2	3	4	5	6	7	8	9	10	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+360 % DT number
+CD03~Part1~04-000427-094034-1_00026_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+361 % DT number
+CD03~Part1~04-000427-094034-1_00027_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+362 % DT number
+CD03~Part1~04-000427-095212-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+363 % DT number
+CD03~Part1~04-000427-095212-1_00001_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+364 % DT number
+CD03~Part1~04-000427-095212-1_00002_st % DT name
+1 % number of parents
+0	20	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+365 % DT number
+CD03~Part1~04-000427-095212-1_00003_st % DT name
+1 % number of parents
+0	14	0	1	2	3	4	5	6	7	8	9	10	11	12	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+366 % DT number
+CD03~Part1~04-000427-095212-1_00005_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+367 % DT number
+CD03~Part1~04-000427-095212-1_00007_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+368 % DT number
+CD03~Part1~04-000427-095212-1_00008_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+369 % DT number
+CD03~Part1~04-000427-095212-1_00009_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+370 % DT number
+CD03~Part1~04-000427-095656-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+371 % DT number
+CD03~Part1~04-000427-095656-1_00001_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+372 % DT number
+CD03~Part1~04-000427-095656-1_00002_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+373 % DT number
+CD03~Part1~04-000427-095656-1_00003_st % DT name
+1 % number of parents
+0	20	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+374 % DT number
+CD03~Part1~04-000427-095656-1_00004_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+375 % DT number
+CD03~Part1~04-000427-095656-1_00005_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+376 % DT number
+CD03~Part1~04-000427-095656-1_00006_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+377 % DT number
+CD03~Part1~04-000427-095656-1_00007_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+378 % DT number
+CD03~Part1~04-000427-095656-1_00008_st % DT name
+1 % number of parents
+0	14	0	1	2	3	4	5	6	7	8	9	10	11	12	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+379 % DT number
+CD03~Part1~04-000427-095656-1_00009_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+380 % DT number
+CD03~Part1~04-000427-095656-1_00010_st % DT name
+1 % number of parents
+0	12	0	1	2	3	4	5	6	7	8	9	10	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+381 % DT number
+CD03~Part1~04-000427-095656-1_00011_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+382 % DT number
+CD03~Part1~04-000427-095656-1_00012_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+383 % DT number
+CD03~Part1~04-000427-095656-1_00013_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+384 % DT number
+CD03~Part1~04-000427-095656-1_00014_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+385 % DT number
+CD03~Part1~04-000427-095656-1_00015_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+386 % DT number
+CD03~Part1~04-000427-095656-1_00016_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+387 % DT number
+CD03~Part1~04-000427-095824-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+388 % DT number
+CD03~Part1~04-000427-095824-1_00001_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+389 % DT number
+CD03~Part1~04-000427-095824-1_00002_st % DT name
+1 % number of parents
+0	22	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+390 % DT number
+CD03~Part1~04-000427-095824-1_00003_st % DT name
+1 % number of parents
+0	20	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+391 % DT number
+CD03~Part1~04-000427-095824-1_00004_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+392 % DT number
+CD03~Part1~04-000427-095824-1_00005_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+393 % DT number
+CD03~Part1~04-000427-095824-1_00006_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+394 % DT number
+CD03~Part1~04-000427-095824-1_00007_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+395 % DT number
+CD03~Part1~04-000427-095824-1_00008_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+396 % DT number
+CD03~Part1~04-000427-095824-1_00009_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+397 % DT number
+CD03~Part1~04-000427-095824-1_00010_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+398 % DT number
+CD03~Part1~04-000427-095824-1_00011_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+399 % DT number
+CD03~Part1~04-000427-095824-1_00012_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+400 % DT number
+CD03~Part1~04-000427-095824-1_00013_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+401 % DT number
+CD03~Part1~04-000427-095824-1_00014_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+402 % DT number
+CD03~Part1~04-000427-095824-1_00015_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+403 % DT number
+CD03~Part1~04-000427-095824-1_00016_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+404 % DT number
+CD03~Part1~04-000427-095824-1_00017_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+405 % DT number
+CD03~Part1~04-000427-095824-1_00018_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+406 % DT number
+CD03~Part1~04-000427-100346-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+407 % DT number
+CD03~Part1~04-000427-100346-1_00001_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+408 % DT number
+CD03~Part1~04-000427-100346-1_00002_st % DT name
+1 % number of parents
+0	22	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+409 % DT number
+CD03~Part1~04-000427-100346-1_00003_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+410 % DT number
+CD03~Part1~04-000427-100346-1_00005_st % DT name
+1 % number of parents
+0	14	0	1	2	3	4	5	6	7	8	9	10	11	12	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+411 % DT number
+CD03~Part1~04-000427-100346-1_00006_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+412 % DT number
+CD03~Part1~04-000427-100346-1_00007_st % DT name
+1 % number of parents
+0	18	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+413 % DT number
+CD03~Part1~04-000427-100346-1_00008_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+414 % DT number
+CD03~Part1~04-000427-100346-1_00009_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+415 % DT number
+CD03~Part1~04-000427-100346-1_00010_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+416 % DT number
+CD03~Part1~04-000427-100346-1_00011_st % DT name
+1 % number of parents
+0	14	0	1	2	3	4	5	6	7	8	9	10	11	12	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+417 % DT number
+CD03~Part1~04-000427-100346-1_00012_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+418 % DT number
+CD03~Part1~04-000427-100346-1_00013_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+419 % DT number
+CD03~Part1~04-000427-100346-1_00014_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+420 % DT number
+CD03~Part1~04-000427-100346-1_00015_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+421 % DT number
+CD03~Part1~04-000427-100346-1_00016_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+422 % DT number
+CD03~Part1~04-000427-100346-1_00017_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+423 % DT number
+CD03~Part1~04-000427-100346-1_00018_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+424 % DT number
+CD03~Part1~04-000427-101208-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+425 % DT number
+CD03~Part1~04-000427-101208-1_00001_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+426 % DT number
+CD03~Part1~04-000427-101208-1_00002_st % DT name
+1 % number of parents
+0	14	0	1	2	3	4	5	6	7	8	9	10	11	12	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+427 % DT number
+CD03~Part1~04-000427-101208-1_00003_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+428 % DT number
+CD03~Part1~04-000427-101208-1_00004_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+429 % DT number
+CD03~Part1~04-000427-101208-1_00005_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+430 % DT number
+CD03~Part1~04-000427-101208-1_00007_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+431 % DT number
+CD03~Part1~04-000427-101208-1_00008_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+432 % DT number
+CD03~Part1~04-000427-101428-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+433 % DT number
+CD03~Part1~04-000427-101428-1_00001_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+434 % DT number
+CD03~Part1~04-000427-101428-1_00002_st % DT name
+1 % number of parents
+0	20	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+435 % DT number
+CD03~Part1~04-000427-101428-1_00003_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+436 % DT number
+CD03~Part1~04-000427-101428-1_00004_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+437 % DT number
+CD03~Part1~04-000427-101428-1_00005_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+438 % DT number
+CD03~Part1~04-000427-101428-1_00006_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+439 % DT number
+CD03~Part1~04-000427-101656-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+440 % DT number
+CD03~Part1~04-000427-101656-1_00001_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+441 % DT number
+CD03~Part1~04-000427-101656-1_00002_st % DT name
+1 % number of parents
+0	26	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+442 % DT number
+CD03~Part1~04-000427-101656-1_00003_st % DT name
+1 % number of parents
+0	18	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+443 % DT number
+CD03~Part1~04-000427-102022-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+444 % DT number
+CD03~Part1~04-000427-102022-1_00001_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+445 % DT number
+CD03~Part1~04-000427-102022-1_00002_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+446 % DT number
+CD03~Part1~04-000427-102022-1_00003_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+447 % DT number
+CD03~Part1~04-000427-102022-1_00004_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+448 % DT number
+CD03~Part1~04-000427-102022-1_00005_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+449 % DT number
+CD03~Part1~04-000427-102022-1_00006_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+450 % DT number
+CD03~Part1~04-000427-102022-1_00007_st % DT name
+1 % number of parents
+0	32	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	25	26	27	28	29	30	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+451 % DT number
+CD03~Part1~04-000427-102022-1_00008_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+452 % DT number
+CD03~Part1~04-000427-102022-1_00009_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+453 % DT number
+CD03~Part1~04-000427-102022-1_00010_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+454 % DT number
+CD03~Part1~04-000427-102022-1_00011_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+455 % DT number
+CD03~Part1~04-000427-102022-1_00012_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+456 % DT number
+CD03~Part1~04-000427-102022-1_00013_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+457 % DT number
+CD03~Part1~04-000427-102022-1_00014_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+458 % DT number
+CD03~Part1~04-000427-102022-1_00016_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+459 % DT number
+CD03~Part1~04-000427-102022-1_00017_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+460 % DT number
+CD03~Part1~04-000427-102022-1_00018_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+461 % DT number
+CD03~Part1~04-000427-102022-1_00019_st % DT name
+1 % number of parents
+0	20	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+462 % DT number
+CD03~Part1~04-000427-102022-1_00020_st % DT name
+1 % number of parents
+0	12	0	1	2	3	4	5	6	7	8	9	10	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+463 % DT number
+CD03~Part1~04-000427-102022-1_00021_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+464 % DT number
+CD03~Part1~04-000427-102022-1_00022_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+465 % DT number
+CD03~Part1~04-000427-102022-1_00023_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+466 % DT number
+CD03~Part1~04-000427-102022-1_00024_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+467 % DT number
+CD03~Part1~04-000427-102022-1_00025_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+468 % DT number
+CD03~Part1~04-000427-102836-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+469 % DT number
+CD03~Part1~04-000427-102836-1_00001_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+470 % DT number
+CD03~Part1~04-000427-102836-1_00002_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+471 % DT number
+CD03~Part1~04-000427-102836-1_00003_st % DT name
+1 % number of parents
+0	22	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+472 % DT number
+CD03~Part1~04-000427-102836-1_00004_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+473 % DT number
+CD03~Part1~04-000427-102836-1_00005_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+474 % DT number
+CD03~Part1~04-000427-102836-1_00006_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+475 % DT number
+CD03~Part1~04-000427-102836-1_00007_st % DT name
+1 % number of parents
+0	18	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+476 % DT number
+CD03~Part1~04-000427-102836-1_00008_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+477 % DT number
+CD03~Part1~04-000427-102836-1_00009_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+478 % DT number
+CD03~Part1~04-000427-131722-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+479 % DT number
+CD03~Part1~04-000427-131722-1_00001_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+480 % DT number
+CD03~Part1~04-000427-131722-1_00002_st % DT name
+1 % number of parents
+0	26	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+481 % DT number
+CD03~Part1~04-000427-131722-1_00003_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+482 % DT number
+CD03~Part1~04-000427-131722-1_00005_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+483 % DT number
+CD03~Part1~04-000427-131722-1_00006_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+484 % DT number
+CD03~Part1~04-000427-131722-1_00007_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+485 % DT number
+CD03~Part1~04-000427-131722-1_00009_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+486 % DT number
+CD03~Part1~04-000427-131722-1_00011_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+487 % DT number
+CD03~Part1~04-000427-131722-1_00012_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+488 % DT number
+CD03~Part1~04-000427-131722-1_00013_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+489 % DT number
+CD03~Part1~04-000427-131722-1_00016_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+490 % DT number
+CD03~Part1~04-000427-131722-1_00017_st % DT name
+1 % number of parents
+0	22	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+491 % DT number
+CD03~Part1~04-000427-131826-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+492 % DT number
+CD03~Part1~04-000427-131826-1_00001_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+493 % DT number
+CD03~Part1~04-000427-131826-1_00002_st % DT name
+1 % number of parents
+0	18	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+494 % DT number
+CD03~Part1~04-000427-131826-1_00003_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+495 % DT number
+CD03~Part1~04-000427-131826-1_00005_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+496 % DT number
+CD03~Part1~04-000427-131826-1_00009_st % DT name
+1 % number of parents
+0	18	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+497 % DT number
+CD03~Part1~04-000427-131826-1_00011_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+498 % DT number
+CD03~Part1~04-000427-131826-1_00012_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+499 % DT number
+CD03~Part1~04-000427-131826-1_00013_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+500 % DT number
+CD03~Part1~04-000427-131826-1_00014_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+501 % DT number
+CD03~Part1~04-000427-131826-1_00015_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+502 % DT number
+CD03~Part1~04-000427-131826-1_00016_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+503 % DT number
+CD03~Part1~04-000427-131826-1_00018_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+504 % DT number
+CD03~Part1~04-000427-131826-1_00019_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+505 % DT number
+CD03~Part1~04-000427-131826-1_00021_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+506 % DT number
+CD03~Part1~04-000427-131826-1_00022_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+507 % DT number
+CD03~Part1~04-000427-132152-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+508 % DT number
+CD03~Part1~04-000427-132152-1_00001_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+509 % DT number
+CD03~Part1~04-000427-132152-1_00002_st % DT name
+1 % number of parents
+0	20	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+510 % DT number
+CD03~Part1~04-000427-132152-1_00003_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+511 % DT number
+CD03~Part1~04-000427-132152-1_00004_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+512 % DT number
+CD03~Part1~04-000427-132152-1_00005_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+513 % DT number
+CD03~Part1~04-000427-132152-1_00006_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+514 % DT number
+CD03~Part1~04-000427-132152-1_00007_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+515 % DT number
+CD03~Part1~04-000427-132152-1_00008_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+516 % DT number
+CD03~Part1~04-000427-132152-1_00010_st % DT name
+1 % number of parents
+0	22	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+517 % DT number
+CD03~Part1~04-000427-132152-1_00011_st % DT name
+1 % number of parents
+0	28	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	25	26	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+518 % DT number
+CD03~Part1~04-000427-132152-1_00012_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+519 % DT number
+CD03~Part1~04-000427-132152-1_00013_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+520 % DT number
+CD03~Part1~04-000427-132152-1_00014_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+521 % DT number
+CD03~Part1~04-000427-132152-1_00015_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+522 % DT number
+CD03~Part1~04-000427-132152-1_00016_st % DT name
+1 % number of parents
+0	20	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+523 % DT number
+CD03~Part1~04-000427-132152-1_00017_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+524 % DT number
+CD03~Part1~04-000427-132152-1_00018_st % DT name
+1 % number of parents
+0	12	0	1	2	3	4	5	6	7	8	9	10	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+525 % DT number
+CD03~Part1~04-000427-132152-1_00019_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+526 % DT number
+CD03~Part1~04-000427-132152-1_00020_st % DT name
+1 % number of parents
+0	12	0	1	2	3	4	5	6	7	8	9	10	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+527 % DT number
+CD03~Part1~04-000427-132152-1_00021_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+528 % DT number
+CD03~Part1~04-000427-132152-1_00022_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+529 % DT number
+CD03~Part1~04-000427-132152-1_00023_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+530 % DT number
+CD03~Part1~04-000427-132152-1_00024_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+531 % DT number
+CD03~Part1~04-000427-132152-1_00025_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+532 % DT number
+CD03~Part1~04-000427-132152-1_00026_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+533 % DT number
+CD03~Part1~04-000427-132152-1_00027_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+534 % DT number
+CD03~Part1~04-000427-132152-1_00028_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+535 % DT number
+CD03~Part1~04-000427-132152-1_00029_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+536 % DT number
+CD03~Part1~04-000427-132152-1_00030_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+537 % DT number
+CD03~Part1~04-000427-132152-1_00031_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+538 % DT number
+CD03~Part1~04-000427-133208-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+539 % DT number
+CD03~Part1~04-000427-133208-1_00001_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+540 % DT number
+CD03~Part1~04-000427-133208-1_00003_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+541 % DT number
+CD03~Part1~04-000427-133606-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+542 % DT number
+CD03~Part1~04-000427-133606-1_00001_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+543 % DT number
+CD03~Part1~04-000427-133606-1_00002_st % DT name
+1 % number of parents
+0	24	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+544 % DT number
+CD03~Part1~04-000427-133606-1_00003_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+545 % DT number
+CD03~Part1~04-000427-133606-1_00004_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+546 % DT number
+CD03~Part1~04-000427-133606-1_00006_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+547 % DT number
+CD03~Part1~04-000427-133606-1_00009_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+548 % DT number
+CD03~Part1~04-000427-133606-1_00010_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+549 % DT number
+CD03~Part1~04-000427-133606-1_00011_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+550 % DT number
+CD03~Part1~04-000427-133606-1_00012_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+551 % DT number
+CD03~Part1~04-000427-133606-1_00013_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+552 % DT number
+CD03~Part1~04-000427-134612-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+553 % DT number
+CD03~Part1~04-000427-134612-1_00001_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+554 % DT number
+CD03~Part1~04-000427-134612-1_00002_st % DT name
+1 % number of parents
+0	22	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+555 % DT number
+CD03~Part1~04-000427-134612-1_00003_st % DT name
+1 % number of parents
+0	14	0	1	2	3	4	5	6	7	8	9	10	11	12	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+556 % DT number
+CD03~Part1~04-000427-134612-1_00004_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+557 % DT number
+CD03~Part1~04-000427-134612-1_00005_st % DT name
+1 % number of parents
+0	12	0	1	2	3	4	5	6	7	8	9	10	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+558 % DT number
+CD03~Part1~04-000427-134612-1_00006_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+559 % DT number
+CD03~Part1~04-000427-134612-1_00008_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+560 % DT number
+CD03~Part1~04-000427-134612-1_00009_st % DT name
+1 % number of parents
+0	28	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	25	26	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+561 % DT number
+CD03~Part1~04-000427-134612-1_00010_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+562 % DT number
+CD03~Part1~04-000427-134612-1_00011_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+563 % DT number
+CD03~Part1~04-000427-134612-1_00012_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+564 % DT number
+CD03~Part1~04-000427-135246-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+565 % DT number
+CD03~Part1~04-000427-135246-1_00001_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+566 % DT number
+CD03~Part1~04-000427-135246-1_00002_st % DT name
+1 % number of parents
+0	24	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+567 % DT number
+CD03~Part1~04-000427-135246-1_00003_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+568 % DT number
+CD03~Part1~04-000427-135246-1_00004_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+569 % DT number
+CD03~Part1~04-000427-135246-1_00005_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+570 % DT number
+CD03~Part1~04-000427-135246-1_00006_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+571 % DT number
+CD03~Part1~04-000427-135246-1_00007_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+572 % DT number
+CD03~Part1~04-000427-135246-1_00008_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+573 % DT number
+CD03~Part1~04-000427-140420-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+574 % DT number
+CD03~Part1~04-000427-140420-1_00001_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+575 % DT number
+CD03~Part1~04-000427-140420-1_00002_st % DT name
+1 % number of parents
+0	20	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+576 % DT number
+CD03~Part1~04-000427-140420-1_00003_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+577 % DT number
+CD03~Part1~04-000427-140420-1_00004_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+578 % DT number
+CD03~Part1~04-000427-140420-1_00005_st % DT name
+1 % number of parents
+0	12	0	1	2	3	4	5	6	7	8	9	10	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+579 % DT number
+CD03~Part1~04-000427-140420-1_00006_st % DT name
+1 % number of parents
+0	22	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+580 % DT number
+CD03~Part1~04-000427-140420-1_00007_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+581 % DT number
+CD03~Part1~04-000427-140420-1_00008_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+582 % DT number
+CD03~Part1~04-000427-140420-1_00009_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+583 % DT number
+CD03~Part1~04-000427-140420-1_00010_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+584 % DT number
+CD03~Part1~04-000427-140420-1_00011_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+585 % DT number
+CD03~Part1~04-000427-140420-1_00012_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+586 % DT number
+CD03~Part1~04-000427-140420-1_00013_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+587 % DT number
+CD03~Part1~04-000427-140614-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+588 % DT number
+CD03~Part1~04-000427-140614-1_00001_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+589 % DT number
+CD03~Part1~04-000427-140614-1_00002_st % DT name
+1 % number of parents
+0	22	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+590 % DT number
+CD03~Part1~04-000427-140614-1_00003_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+591 % DT number
+CD03~Part1~04-000427-140614-1_00004_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+592 % DT number
+CD03~Part1~04-000427-140614-1_00005_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+593 % DT number
+CD03~Part1~04-000427-140614-1_00006_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+594 % DT number
+CD03~Part1~04-000427-140614-1_00008_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+595 % DT number
+CD03~Part1~04-000427-140614-1_00009_st % DT name
+1 % number of parents
+0	14	0	1	2	3	4	5	6	7	8	9	10	11	12	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+596 % DT number
+CD03~Part1~04-000427-140614-1_00010_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+597 % DT number
+CD03~Part1~04-000427-140614-1_00011_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+598 % DT number
+CD03~Part1~04-000427-140614-1_00012_st % DT name
+1 % number of parents
+0	22	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+599 % DT number
+CD03~Part1~04-000427-140614-1_00013_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+600 % DT number
+CD03~Part1~04-000427-140614-1_00014_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+601 % DT number
+CD03~Part1~04-000427-140614-1_00015_st % DT name
+1 % number of parents
+0	12	0	1	2	3	4	5	6	7	8	9	10	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+602 % DT number
+CD03~Part1~04-000427-140614-1_00019_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+603 % DT number
+CD03~Part1~04-000427-140614-1_00020_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+604 % DT number
+CD03~Part1~04-000427-140614-1_00021_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+605 % DT number
+CD03~Part1~04-000427-140614-1_00022_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+606 % DT number
+CD03~Part1~04-000427-141328-1_00000_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+607 % DT number
+CD03~Part1~04-000427-141328-1_00001_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+608 % DT number
+CD03~Part1~04-000427-141328-1_00002_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+609 % DT number
+CD03~Part1~04-000427-141328-1_00003_st % DT name
+1 % number of parents
+0	30	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	25	26	27	28	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+610 % DT number
+CD03~Part1~04-000427-141328-1_00004_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+611 % DT number
+CD03~Part1~04-000427-141328-1_00005_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+612 % DT number
+CD03~Part1~04-000427-141328-1_00006_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+613 % DT number
+CD03~Part1~04-000427-141328-1_00007_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+614 % DT number
+CD03~Part1~04-000427-141328-1_00008_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+615 % DT number
+CD03~Part1~04-000427-141328-1_00009_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+616 % DT number
+CD03~Part1~04-000427-141328-1_00010_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+617 % DT number
+CD03~Part1~04-000427-141328-1_00011_st % DT name
+1 % number of parents
+0	20	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+618 % DT number
+CD03~Part1~04-000427-141328-1_00012_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+619 % DT number
+CD03~Part1~04-000427-141328-1_00013_st % DT name
+1 % number of parents
+0	20	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+620 % DT number
+CD03~Part1~04-000427-141328-1_00014_st % DT name
+1 % number of parents
+0	16	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+621 % DT number
+CD03~Part1~04-000427-141328-1_00015_st % DT name
+1 % number of parents
+0	8	0	1	2	3	4	5	6	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+622 % DT number
+CD03~Part1~04-000427-141328-1_00016_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+623 % DT number
+CD03~Part1~04-000427-141328-1_00017_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+624 % DT number
+CD03~Part1~04-000427-141328-1_00018_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+625 % DT number
+CD03~Part1~04-000427-141328-1_00019_st % DT name
+1 % number of parents
+0	6	0	1	2	3	4	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
+626 % DT number
+CD03~Part1~04-000427-141328-1_00020_st % DT name
+1 % number of parents
+0	10	0	1	2	3	4	5	6	7	8	default
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+	-1	0
+
