@@ -30,16 +30,27 @@ cd ~/extended-HVS-parser/semantics-4
 
 Run command from the bash command line:
 {{{
-./semantics.py runbatch --verbose-level DEBUG --script ./batch/full_run_example.py
+./semantics.py all -vvv
+}}}
+
+You can also use the shortcut command:
+{{{
+./_full_run_example
 }}}
 
 You should see the following output:
 {{{
+Út čen 17 15:04:52 CEST 2008
 Running external method SemanticsMain.makeDirs ('bin/semantics/makeDirs')
 Running external method SemanticsMain.deleteTmpData ('bin/semantics/deleteTmpData')
 Running external method SemanticsMain.setCommonParams ('bin/semantics/setCommonParams')
 Running external method SemanticsMain.copyXMLData ('bin/semantics/copyXMLData')
 Running external method SemanticsMain.genInputMaps ('bin/semantics/genInputMaps')
+OOV rate per symbol:
+===================:
+    S1: 4.86%
+    S2: 4.92%
+    S3: 0.00%
 Running external method SemanticsMain.genInputs ('bin/semantics/genInputs')
 Running external method SemanticsMain.genHiddenObservation ('bin/semantics/genHiddenObservation')
 Running external method SemanticsMain.genEndOfUtteranceObservation ('bin/semantics/genEndOfUtteranceObservation')
@@ -47,31 +58,51 @@ Running external method SemanticsMain.initSemanticModel ('bin/semantics/initSema
 Running external method SemanticsMain.initLexicalModel ('bin/semantics/initLexicalModel')
 Running external method SemanticsMain.triangulate ('bin/semantics/triangulate')
 Running external method SemanticsMain.trainModel ('bin/semantics/trainModel')
+SemanticsMain.trainModel: <built-in>:0: fatal error: when writing output to : Přerušena roura (SIGPIPE)
+SemanticsMain.trainModel: compilation terminated.
+SemanticsMain.trainModel: WARNING: Can't close pipe 'cpp build/2008-06-17-15.04/gen/tri/semantics_trn.str.tri'.
 Running external method SemanticsMain.forcealignTrn ('bin/semantics/forcealignTrn')
+SemanticsMain.forcealignTrn: <built-in>:0: fatal error: when writing output to : Přerušena roura (SIGPIPE)
+SemanticsMain.forcealignTrn: compilation terminated.
+SemanticsMain.forcealignTrn: WARNING: Can't close pipe 'cpp build/2008-06-17-15.04/gen/tri/semantics_fa_trn.str.tri'.
 Results:
 ========
     Concept Accuracy          : 100.00
     Concept Correctness       : 100.00
     Utterance Correctness     : 100.00
 Running external method SemanticsMain.smoothModel ('bin/semantics/smoothModel')
+SemanticsMain.smoothModel: <built-in>:0: fatal error: when writing output to : Přerušena roura (SIGPIPE)
+SemanticsMain.smoothModel: compilation terminated.
+SemanticsMain.smoothModel: WARNING: Can't close pipe 'cpp build/2008-06-17-15.04/gen/tri/semantics_smth.str.tri'.
 Running external method SemanticsMain.scaleModel ('bin/semantics/scaleModel')
 Running external method SemanticsMain.decodeHldt ('bin/semantics/decodeHldt')
+SemanticsMain.decodeHldt: <built-in>:0: fatal error: when writing output to : Přerušena roura (SIGPIPE)
+SemanticsMain.decodeHldt: compilation terminated.
+SemanticsMain.decodeHldt: WARNING: Can't close pipe 'cpp build/2008-06-17-15.04/gen/tri/semantics_dcd.str.tri'.
 Results:
 ========
-    Concept Accuracy          :  63.01
-    Concept Correctness       :  87.67
-    Utterance Correctness     :  63.41
-{'cI': 18, 'cH': 64, 'cN': 73, 'F': 80.503144654088047, 'Recall': 87.671232876712324, 'uS': 15, 'cD': 5, 'Prec': 74.418604651162795, 'uN': 41, 'cCorr': 87.671232876712324, 'uH': 26, 'cAcc': 63.013698630136986, 'cS': 4, 'uCorr': 63.414634146341463}
+    Concept Accuracy          :  43.84
+    Concept Correctness       :  53.42
+    Utterance Correctness     :  56.10
 Running external method SemanticsMain.decodeTst ('bin/semantics/decodeTst')
+SemanticsMain.decodeTst: <built-in>:0: fatal error: when writing output to : Přerušena roura (SIGPIPE)
+SemanticsMain.decodeTst: compilation terminated.
+SemanticsMain.decodeTst: WARNING: Can't close pipe 'cpp build/2008-06-17-15.04/gen/tri/semantics_dcd.str.tri'.
 Results:
 ========
-    Concept Accuracy          :  61.73
-    Concept Correctness       :  80.10
-    Utterance Correctness     :  54.39
-{'cI': 36, 'cH': 157, 'cN': 196, 'F': 76.399026763990264, 'Recall': 80.102040816326522, 'uS': 52, 'cD': 17, 'Prec': 73.023255813953497, 'uN': 114, 'cCorr': 80.102040816326536, 'uH': 62, 'cAcc': 61.734693877551024, 'cS': 22, 'uCorr': 54.385964912280699}
+    Concept Accuracy          :  36.22
+    Concept Correctness       :  49.49
+    Utterance Correctness     :  44.74
+Generating output XMLs for: fa_trn
+Generating output XMLs for: dcd_hldt
+Generating output XMLs for: dcd_tst
+Running external method SemanticsMain.moveResults ('bin/semantics/moveResults 0')
+SemanticsMain.moveResults: Copying files from build/2008-06-17-15.04 into results/2008-06-17-15.04
+SemanticsMain.moveResults: Deleting build/2008-06-17-15.04
+Út čen 17 15:15:22 CEST 2008
 }}}
 
-*In the directory `~/extended-HVS-parser/semantics-4/build`, there are all intermediate and final results.*
+*In the directory `~/extended-HVS-parser/semantics-4/results`, there are all final results.* The archive of this directory is available [http://extended-hidden-vector-state-parser.googlecode.com/files/sample-run.zip here].
 
 Performance of the results (from our papers):
   * SAcc = Utterance Correctness
