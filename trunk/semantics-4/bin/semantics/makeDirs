@@ -35,3 +35,4 @@ mkdir -p $FA_TRN/dcd
 mkdir -p $FA_HLDT/dcd
 mkdir -p $FA_TST/dcd
 
+mkdir -p $DA_DIR

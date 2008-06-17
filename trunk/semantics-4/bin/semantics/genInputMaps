@@ -2,6 +2,8 @@
 
 # concept.map
 $SRC_DIR/genInputMaps.py \
+        --inputChain="$INPUT_CHAIN" \
+        --useEmpty=$TRAIN_USE_EMPTY \
         --files=$DATA_XML_TRN \
         --files=$DATA_XML_HLDT \
         --files=$DATA_XML_TST \
@@ -9,22 +11,31 @@ $SRC_DIR/genInputMaps.py \
         --conceptMap=$CONCEPT_MAP
 
 $SRC_DIR/genInputMaps.py --text \
+        --inputChain="$INPUT_CHAIN" \
+        --useEmpty=$TRAIN_USE_EMPTY \
         --files=$DATA_XML_TRN \
         --files=$DATA_XML_HLDT \
         --files=$DATA_XML_TST \
         --conceptMap=$CONCEPT_MAP_TXT
 
+echo "" > $MAP_DIR/symbol.stats
+
 # s1.map
 $SRC_DIR/genInputMaps.py \
+        --inputChain="$INPUT_CHAIN" \
+        --useEmpty=$TRAIN_USE_EMPTY \
         --files=$DATA_XML_TRN \
         --appendConst=$GEN_DATA_CONSTANTS \
         --symName="s1" \
         --pruneCount=$S1_PRUNE_COUNT \
         --dataSet=$S1_DATASET \
         --defaultDataSet=${ORIG_DATASETS%%,*} \
+        --stats=$MAP_DIR/symbol.stats \
         --symMap=$S1_MAP
 
 $SRC_DIR/genInputMaps.py --text \
+        --inputChain="$INPUT_CHAIN" \
+        --useEmpty=$TRAIN_USE_EMPTY \
         --files=$DATA_XML_TRN \
         --symName="s1" \
         --pruneCount=$S1_PRUNE_COUNT \
@@ -34,15 +45,20 @@ $SRC_DIR/genInputMaps.py --text \
 
 # s2.map
 $SRC_DIR/genInputMaps.py \
+        --inputChain="$INPUT_CHAIN" \
+        --useEmpty=$TRAIN_USE_EMPTY \
         --files=$DATA_XML_TRN \
         --appendConst=$GEN_DATA_CONSTANTS \
         --symName="s2" \
         --pruneCount=$S2_PRUNE_COUNT \
         --dataSet=$S2_DATASET \
         --defaultDataSet=${ORIG_DATASETS%%,*} \
+        --stats=$MAP_DIR/symbol.stats \
         --symMap=$S2_MAP
 
 $SRC_DIR/genInputMaps.py --text \
+        --inputChain="$INPUT_CHAIN" \
+        --useEmpty=$TRAIN_USE_EMPTY \
         --files=$DATA_XML_TRN \
         --symName="s2" \
         --pruneCount=$S2_PRUNE_COUNT \
@@ -52,15 +68,20 @@ $SRC_DIR/genInputMaps.py --text \
 
 # s3.map
 $SRC_DIR/genInputMaps.py \
+        --inputChain="$INPUT_CHAIN" \
+        --useEmpty=$TRAIN_USE_EMPTY \
         --files=$DATA_XML_TRN \
         --appendConst=$GEN_DATA_CONSTANTS \
         --symName="s3" \
         --pruneCount=$S3_PRUNE_COUNT \
         --dataSet=$S3_DATASET \
         --defaultDataSet=${ORIG_DATASETS%%,*} \
+        --stats=$MAP_DIR/symbol.stats \
         --symMap=$S3_MAP
 
 $SRC_DIR/genInputMaps.py --text \
+        --inputChain="$INPUT_CHAIN" \
+        --useEmpty=$TRAIN_USE_EMPTY \
         --files=$DATA_XML_TRN \
         --symName="s3" \
         --pruneCount=$S3_PRUNE_COUNT \

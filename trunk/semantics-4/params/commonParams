@@ -41,7 +41,7 @@
 %    in this case we have to leave imediately becasue we consumed one word
 #define TRANS_IMMEDIATELY	1
 
-% define whether to skip one vector state, it will change to skiping of more than a vector state witch a dummy concept
+% define wheather to skip one vector state, it will change to skiping of more than a vector state witch a dummy concept
 %    enter a vector state with a dummy concept, several alternative names
 #define NO_SKIP_DUMMY	0
 #define ENTER_DUMMY	0

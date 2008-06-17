@@ -12,20 +12,14 @@ export CONFUSE_POWER=1.7
 export CONFUSE_LMW=2.0
 
 # Dataset for HLDT and TST data
-if [ $S1_DATASET != off ]; then
-    export S1_DATASET_DCD=conf_$S1_DATASET
-else
-    export S1_DATASET_DCD=off
-fi
-if [ $S2_DATASET != off ]; then
-    export S2_DATASET_DCD=conf_$S2_DATASET
-else
-    export S2_DATASET_DCD=off
-fi
-if [ $S3_DATASET != off ]; then
-    export S3_DATASET_DCD=conf_$S3_DATASET
-else
-    export S3_DATASET_DCD=off
-fi
+export S1_DATASET=word
+export S2_DATASET=lemma
+export S3_DATASET=off
+
+export ORIG_DATASETS=word,lemma
+
+export S1_DATASET_DCD=conf_word
+export S2_DATASET_DCD=conf_lemma
+export S3_DATASET_DCD=off
 
 export ORIG_DATASETS_DCD=conf_word,conf_lemma

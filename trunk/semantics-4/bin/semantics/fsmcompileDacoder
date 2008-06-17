@@ -1,0 +1,8 @@
+#!/bin/bash
+
+mkdir -p $DA_DIR/fsm
+
+cp $DA_DIR/dacoder.fsm $DA_DIR/fsm/dacoder1.fsm
+cp $DA_DIR/dialogue_act.fsm $DA_DIR/fsm/dacoder2.fsm
+cp $DA_DIR/dacoder.fsm.isym $DA_DIR/fsm/dacoder.isym
+cp $DA_DIR/dacoder.fsm.osym $DA_DIR/fsm/dacoder.osym

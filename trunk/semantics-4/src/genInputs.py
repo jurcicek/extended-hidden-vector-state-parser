@@ -3,13 +3,14 @@
 import os.path
 from glob import glob
 import codecs
+import sys
 
 from svc.scripting import *
 from svc.ui.dxml import DXML
 
 from lexMap import LexMap
 from semantics import Semantics, removeTextFromSemantics, splitSmntcsToMlf
-import input
+from svc.ui.smntcs import input
 import observation
 import random
 
@@ -36,18 +37,20 @@ class InputGenerator(Script):
         'extraExt': String,
         'txtInput': Flag,
         'pdtDir': String,
+        'inputChain': String,
+        'useEmpty': Integer,
     }
 
     debugMain = True
 
-    def splitDatasetEmpty(self, semantics):
+    def splitDatasetEmpty(self, semantics, useEmpty=False):
         """Return lists of filled and empty semantics
         """
         filled = []
         empty = []
         for all_smntcs in semantics:
             first = all_smntcs[0]
-            if first.isEmpty():
+            if not useEmpty and first.isEmpty():
                 empty.append(all_smntcs)
             else:
                 filled.append(all_smntcs)
@@ -225,7 +228,7 @@ class InputGenerator(Script):
         finally:
             fw.close()
 
-    def readSemantics(self, files, dataSets, parseType, origDataSet, txtInput=False, pdtDir=None):
+    def readSemantics(self, files, dataSets, parseType, origDataSet, txtInput=False, pdtDir=None, inputChain='none'):
         if txtInput:
             reader = input.MultiReader(files, input.TXTReader)
             if 'lemma' in dataSets or 'pos' in dataSets:
@@ -234,13 +237,16 @@ class InputGenerator(Script):
                 reader = input.PDTReader(pdtDir, reader, online=False)
         else:
             reader = input.MultiReader(files, input.DXMLReader)
+        reader = input.InputChain(inputChain, reader)
         generator = input.InputGenerator(reader, dataSets, origDataSet)
-        return generator.readSemantics(parseType)
+        for da_fn, da_id, da_semantics, da_txts in generator.readInputs():
+            s = [Semantics(da_id, da_semantics, ' '.join(txt), parseType) for txt in da_txts]
+            yield s
 
-    def main(self, files, outDir, conceptMap=None, outList=[],
-            outputMlf=None, outputMlfDcd=None, outputMlfSmntcs=None,
-            unsList=[], dataSet=None, parseType='LR', extraExt='',
-            origDataSets='word,lemma', txtInput=False, pdtDir=None):
+    def main(self, files, outDir, conceptMap=None, outList=[], outputMlf=None,
+            outputMlfDcd=None, outputMlfSmntcs=None, unsList=[], dataSet=None,
+            parseType='LR', extraExt='', origDataSets='word,lemma',
+            txtInput=False, pdtDir=None, inputChain='none', useEmpty=False):
 
         dataSets = []
         dataMaps = []
@@ -270,12 +276,12 @@ class InputGenerator(Script):
         if len(origDataSets) != 2:
             raise ValueError("Option origDataSets must contain two datasets separated with comma")
 
-        semantics = self.readSemantics(globfiles, dataSets, parseType, origDataSets[0], txtInput, pdtDir)
-        orig_semantics = self.readSemantics(globfiles, origDataSets, parseType, origDataSets[0], txtInput, pdtDir)
+        semantics = self.readSemantics(globfiles, dataSets, parseType, origDataSets[0], txtInput, pdtDir, inputChain)
+        orig_semantics = self.readSemantics(globfiles, origDataSets, parseType, origDataSets[0], txtInput, pdtDir, inputChain)
         orig_maps = [{}, {}]
 
-        semantics, empty_semantics = self.splitDatasetEmpty(semantics)
-        orig_semantics, empty_orig_semantics = self.splitDatasetEmpty(orig_semantics)
+        semantics, empty_semantics = self.splitDatasetEmpty(semantics, useEmpty)
+        orig_semantics, empty_orig_semantics = self.splitDatasetEmpty(orig_semantics, useEmpty)
 
         simpleMap = dataMaps[0]
         simple_semantics = self.firstSymbols(semantics)

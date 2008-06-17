@@ -15,7 +15,7 @@ from lexMap import *
 ######################################################################################################
 ######################################################################################################
 
-def saveHiddenDts(dts, dtsName, hidden):
+def saveHiddenDts(dts, dtsName, hidden, allowEmpty):
     dtsFile = dts.append(dtsName + " % DT name\n")
     dtsFile = dts.append("6 % number of parents\n")
     
@@ -29,10 +29,12 @@ def saveHiddenDts(dts, dtsName, hidden):
     for hv in hidden:
         dts.append("\t-1\t{")
 
-        if hv[0] != wordMap["_empty_"] or (hv[1] == hv[2] == hv[3] == hv[4] == conceptMap["_EMPTY_"]):
-            dts.append("  (p%d ==%3s) &&" % (0, hv[0]))
-        else:
-            dts.append("(!(p%d ==%3s))&&" % (0, wordMap["_empty_"]))
+        if not allowEmpty:
+            if hv[0] != wordMap["_empty_"] or (hv[1] == hv[2] == hv[3] == hv[4] == conceptMap["_EMPTY_"]):
+                dts.append("  (p%d ==%3s) &&" % (0, hv[0]))
+            else:
+                dts.append("(!(p%d ==%3s))&&" % (0, wordMap["_empty_"]))
+            
             
         for i in range(1,4): # print out four concepts
             dts.append("(p%d ==%3s)&&" % (i, hv[i]))
@@ -81,7 +83,8 @@ try:
         ["dirIn=", 
         "dirOut=", 
         "conceptMap=",
-        "wordMap="])
+        "wordMap=",
+        "allowEmpty",])
          
 except getopt.GetoptError, exc:
     print("ERROR: " + exc.msg)
@@ -89,6 +92,7 @@ except getopt.GetoptError, exc:
     sys.exit(2)
 
 verbose = None
+allowEmpty = False
 
 for o, a in opts:
     if o == "-h":
@@ -104,6 +108,8 @@ for o, a in opts:
         conceptFileName = a
     elif o == "--wordMap":
         wordFileName = a
+    elif o == '--allowEmpty':
+        allowEmpty = True
 
 list = glob.glob(dirIn + "/*.hddn")
 list.sort()
@@ -129,7 +135,7 @@ for fileName in list:
     i += 1
 
     hidden = HiddenObservation().read(fileName)
-    saveHiddenDts(dts, dtName, hidden)
+    saveHiddenDts(dts, dtName, hidden, allowEmpty)
     dts.append("\n")
 
 dts.insert(0, "%d %% Number of DTs\n\n" % (i))

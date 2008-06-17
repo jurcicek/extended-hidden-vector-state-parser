@@ -10,6 +10,10 @@ find $BUILD_DIR \
     -and -not -name '*.xml' \
     -and -not -name '*.hddn' | cplist.py $RESULT_DIR $BUILD_DIR
 
+find $FA_TRN   -name '*.xml' | cplist.py $RESULT_DIR $BUILD_DIR
+find $DCD_HLDT -name '*.xml' | cplist.py $RESULT_DIR $BUILD_DIR
+find $DCD_TST  -name '*.xml' | cplist.py $RESULT_DIR $BUILD_DIR
+
 if [ $1 == 0 ]; then
     echo "Deleting $BUILD_DIR" >&2
     rm -rf $BUILD_DIR

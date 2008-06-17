@@ -5,6 +5,8 @@ S1_DATASET_DCD=${S1_DATASET_DCD:-$S1_DATASET}
 S2_DATASET_DCD=${S2_DATASET_DCD:-$S2_DATASET}
 S3_DATASET_DCD=${S3_DATASET_DCD:-$S3_DATASET}
 
+INPUT_CHAIN_DCD=${INPUT_CHAIN_DCD:-$INPUT_CHAIN}
+
 ######################################################################################
 # train
 ######################################################################################
@@ -13,6 +15,8 @@ $SRC_DIR/genInputs.py \
         --outDir=$DATA_TRN/ho \
         --parseType=$PARSE_TYPE \
         --origDataSets=$ORIG_DATASETS \
+        --inputChain="$INPUT_CHAIN" \
+        --useEmpty=$TRAIN_USE_EMPTY \
         --conceptMap=$CONCEPT_MAP \
         --outList="$DATA_TRN/train.list:$DATA_TRN/ho/%(id)s.obs" \
         --outList="$DATA_TRN/fa_trn.list:$FA_TRN/dcd/%(id)s.dcd" \
@@ -25,6 +29,8 @@ $SRC_DIR/genInputs.py \
         --outDir=$DATA_TRN/ho \
         --parseType=$PARSE_TYPE \
         --origDataSets=$ORIG_DATASETS \
+        --inputChain="$INPUT_CHAIN" \
+        --useEmpty=$TRAIN_USE_EMPTY \
         --extraExt=.2 \
         --outList="$DATA_TRN/train.2.list:$DATA_TRN/ho/%(id)s.2.obs" \
         --unsList="$DATA_TRN/trainUnsupervised.2.list:$DATA_TRN/ho/%(id)s.2.obs" \
@@ -37,6 +43,8 @@ $SRC_DIR/genInputs.py \
         --outDir=$DATA_TXT_TRN/ho \
         --parseType=$PARSE_TYPE \
         --origDataSets=$ORIG_DATASETS \
+        --inputChain="$INPUT_CHAIN" \
+        --useEmpty=$TRAIN_USE_EMPTY \
         --conceptMap=$CONCEPT_MAP_TXT \
         --outList="$DATA_TXT_TRN/train.list:$DATA_TXT_TRN/ho/%(id)s.obs" \
         --unsList="$DATA_TXT_TRN/trainUnsupervised.list:$DATA_TXT_TRN/ho/%(id)s.obs" \
@@ -48,6 +56,8 @@ $SRC_DIR/genInputs.py \
         --outDir=$DATA_TXT_TRN/ho \
         --parseType=$PARSE_TYPE \
         --origDataSets=$ORIG_DATASETS \
+        --inputChain="$INPUT_CHAIN" \
+        --useEmpty=$TRAIN_USE_EMPTY \
         --extraExt=.2 \
         --outList="$DATA_TXT_TRN/train.2.list:$DATA_TXT_TRN/ho/%(id)s.2.obs" \
         --unsList="$DATA_TXT_TRN/trainUnsupervised.2.list:$DATA_TXT_TRN/ho/%(id)s.2.obs" \
@@ -62,6 +72,8 @@ $SRC_DIR/genInputs.py \
         --outDir=$DATA_HLDT/ho \
         --parseType=$PARSE_TYPE \
         --origDataSets=$ORIG_DATASETS_DCD \
+        --inputChain="$INPUT_CHAIN_DCD" \
+        --useEmpty=$TRAIN_USE_EMPTY \
         --conceptMap=$CONCEPT_MAP \
         --outList="$DATA_HLDT/heldout.list:$DATA_HLDT/ho/%(id)s.obs" \
         --outList="$DATA_HLDT/fa_hldt.list:$FA_HLDT/dcd/%(id)s.dcd" \
@@ -76,6 +88,8 @@ $SRC_DIR/genInputs.py \
         --outDir=$DATA_HLDT/ho \
         --parseType=$PARSE_TYPE \
         --origDataSets=$ORIG_DATASETS_DCD \
+        --inputChain="$INPUT_CHAIN_DCD" \
+        --useEmpty=$TRAIN_USE_EMPTY \
         --extraExt=.2 \
         --outList="$DATA_HLDT/heldout.2.list:$DATA_HLDT/ho/%(id)s.2.obs" \
         --dataSet="$S2_DATASET_DCD:$S2_MAP" \
@@ -87,6 +101,8 @@ $SRC_DIR/genInputs.py \
         --outDir=$DATA_TXT_HLDT/ho \
         --parseType=$PARSE_TYPE \
         --origDataSets=$ORIG_DATASETS_DCD \
+        --inputChain="$INPUT_CHAIN_DCD" \
+        --useEmpty=$TRAIN_USE_EMPTY \
         --conceptMap=$CONCEPT_MAP_TXT \
         --outList="$DATA_TXT_HLDT/heldout.list:$DATA_TXT_HLDT/ho/%(id)s.obs" \
         --dataSet="$S1_DATASET_DCD:$S1_MAP_TXT" \
@@ -99,6 +115,8 @@ $SRC_DIR/genInputs.py \
         --outDir=$DATA_TXT_HLDT/ho \
         --parseType=$PARSE_TYPE \
         --origDataSets=$ORIG_DATASETS_DCD \
+        --inputChain="$INPUT_CHAIN_DCD" \
+        --useEmpty=$TRAIN_USE_EMPTY \
         --extraExt=.2 \
         --outList="$DATA_TXT_HLDT/heldout.2.list:$DATA_TXT_HLDT/ho/%(id)s.2.obs" \
         --dataSet="$S2_DATASET_DCD:$S2_MAP_TXT" \
@@ -112,6 +130,8 @@ $SRC_DIR/genInputs.py \
         --outDir=$DATA_TST/ho \
         --parseType=$PARSE_TYPE \
         --origDataSets=$ORIG_DATASETS_DCD \
+        --inputChain="$INPUT_CHAIN_DCD" \
+        --useEmpty=$TRAIN_USE_EMPTY \
         --conceptMap=$CONCEPT_MAP \
         --outList="$DATA_TST/test.list:$DATA_TST/ho/%(id)s.obs" \
         --outList="$DATA_TST/fa_tst.list:$FA_TST/dcd/%(id)s.dcd" \
@@ -126,6 +146,8 @@ $SRC_DIR/genInputs.py \
         --outDir=$DATA_TST/ho \
         --parseType=$PARSE_TYPE \
         --origDataSets=$ORIG_DATASETS_DCD \
+        --inputChain="$INPUT_CHAIN_DCD" \
+        --useEmpty=$TRAIN_USE_EMPTY \
         --extraExt=.2 \
         --outList="$DATA_TST/test.2.list:$DATA_TST/ho/%(id)s.2.obs" \
         --dataSet="$S2_DATASET_DCD:$S2_MAP" \
@@ -137,6 +159,8 @@ $SRC_DIR/genInputs.py \
         --outDir=$DATA_TXT_TST/ho \
         --parseType=$PARSE_TYPE \
         --origDataSets=$ORIG_DATASETS_DCD \
+        --inputChain="$INPUT_CHAIN_DCD" \
+        --useEmpty=$TRAIN_USE_EMPTY \
         --conceptMap=$CONCEPT_MAP_TXT \
         --outList="$DATA_TXT_TST/test.list:$DATA_TXT_TST/ho/%(id)s.obs" \
         --dataSet="$S1_DATASET_DCD:$S1_MAP_TXT" \
@@ -149,6 +173,8 @@ $SRC_DIR/genInputs.py \
         --outDir=$DATA_TXT_TST/ho \
         --parseType=$PARSE_TYPE \
         --origDataSets=$ORIG_DATASETS_DCD \
+        --inputChain="$INPUT_CHAIN_DCD" \
+        --useEmpty=$TRAIN_USE_EMPTY \
         --extraExt=.2 \
         --outList="$DATA_TXT_TST/test.2.list:$DATA_TXT_TST/ho/%(id)s.2.obs" \
         --dataSet="$S2_DATASET_DCD:$S2_MAP_TXT" \

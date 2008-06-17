@@ -7,8 +7,9 @@ from StringIO import StringIO
 
 from svc.scripting import *
 
-from input import DXMLReader, MultiReader, InputGenerator
+from svc.ui.smntcs import input
 from lexMap import LexMap, mapCmp
+import semantics
 
 EXTRA_CONCEPTS = {
     "_EMPTY_": 1,
@@ -47,26 +48,32 @@ class MapGenerator(Script):
         'writeConst': String,
         'appendConst': String,
         'symName': String,
+        'inputChain': String,
+        'useEmpty': Integer,
+        'stats': String,
     }
 
     debug = False
 
-    def createSemanticReader(self, files, data_set, default_data_set):
-        reader = MultiReader(files, DXMLReader)
-        generator = InputGenerator(reader, [data_set], default_data_set)
+    def createSemanticReader(self, files, data_set, default_data_set, inputChain='none'):
+        reader = input.MultiReader(files, input.DXMLReader)
+        reader = input.InputChain(inputChain, reader)
+        generator = input.InputGenerator(reader, [data_set], default_data_set)
         return generator
 
-    def addSymbols(self, generator):
+    def addSymbols(self, generator, useEmpty=False):
         d = dict()
-        for s in generator.readSemantics():
-            if not s[0].isEmpty():
+        for da_fn, da_id, da_semantics, da_txts in generator.readInputs():
+            s = [semantics.Semantics(da_id, da_semantics, ' '.join(txt), 'LR') for txt in da_txts]
+            if useEmpty or not s[0].isEmpty():
                 s[0].addWords(d)
         return d
 
-    def addConcepts(self, generator):
+    def addConcepts(self, generator, useEmpty=False):
         d = dict()
-        for s in generator.readSemantics():
-            if not s[0].isEmpty():
+        for da_fn, da_id, da_semantics, da_txts in generator.readInputs():
+            s = [semantics.Semantics(da_id, da_semantics, ' '.join(txt), 'LR') for txt in da_txts]
+            if useEmpty or not s[0].isEmpty():
                 s[0].addConcepts(d)
         return d
 
@@ -134,13 +141,13 @@ class MapGenerator(Script):
         return ret
 
     def pruneSymbols(self, d, pruneCount):
-        if 0.0 <= pruneCount < 1.0:
+        if 0.0 < pruneCount < 1.0:
             return self.pruneSymbolsRel(d, pruneCount)
-        elif -1.0 < pruneCount < 0.0:
+        elif -1.0 <= pruneCount <= 0.0:
             return self.pruneSymbolsMass(d, -pruneCount)
         elif 1.0 <= pruneCount:
             return self.pruneSymbolsAbs(d, pruneCount)
-        elif pruneCount <= -1.0:
+        elif pruneCount < -1.0:
             return self.pruneSymbolsNum(d, -pruneCount)
 
     def printPruned(self, orig, pruned, fw=None, symName=None):
@@ -153,6 +160,23 @@ class MapGenerator(Script):
         else:
             symName = ' (%s)' % symName
         fw.write("%% I pruned %0.1f%% symbols%s from the original vocabulary.\n" % ((lo-lp)/float(lo)*100, symName))
+
+    def writeSymbolStats(self, stat_fn, orig, pruned, symName, dataSet):
+        fw = file(stat_fn, 'a')
+        o_tokens = sum(orig.values())
+        o_symbols = len(orig)
+        p_tokens = sum(pruned.values())
+        p_symbols = len(pruned)
+        oov = 1.-(float(p_tokens)/o_tokens)
+        pruned_rate = 1.-(float(p_symbols)/o_symbols)
+        fw.write("%s_total_tokens=%d\n" % (symName, o_tokens))
+        fw.write("%s_total_symbols=%d\n" % (symName, o_symbols))
+        fw.write("%s_tokens=%d\n" % (symName, p_tokens))
+        fw.write("%s_symbols=%d\n" % (symName, p_symbols))
+        fw.write("%s_oov=%.5f\n" % (symName, oov))
+        fw.write("%s_pruned_rate=%.5f\n" % (symName, pruned_rate))
+        fw.write("%s_dataset=%r\n" % (symName, dataSet))
+        fw.close()
 
     def saveMap(self, fn, d, text=False):
         dir, fn = os.path.split(fn)
@@ -171,7 +195,8 @@ class MapGenerator(Script):
 
     def main(self, files, symMap=None, conceptMap=None, dataSet=None,
             defaultDataSet=None, pruneCount=0, text=False, writeConst=None,
-            appendConst=None, symName=None):
+            appendConst=None, symName=None, inputChain='none', useEmpty=False,
+            stats=None):
 
         if writeConst is not None and appendConst is not None:
             raise ValueError("Use only writeConst or appendConst, not both")
@@ -199,10 +224,10 @@ class MapGenerator(Script):
                 globfiles.add(fn)
         globfiles = sorted(globfiles)
 
-        generator = self.createSemanticReader(globfiles, dataSet, defaultDataSet)
+        generator = self.createSemanticReader(globfiles, dataSet, defaultDataSet, inputChain)
 
         if conceptMap is not None:
-            conceptDict = self.addConcepts(generator)
+            conceptDict = self.addConcepts(generator, useEmpty)
             conceptDict.update(EXTRA_CONCEPTS)
             self.saveMap(conceptMap, conceptDict, text)
             self.saveDict(conceptMap + '.dict', conceptDict)
@@ -210,10 +235,12 @@ class MapGenerator(Script):
             
 
         if symMap is not None:
-            symDict = self.addSymbols(generator)
+            symDict = self.addSymbols(generator, useEmpty)
             symDictP = self.pruneSymbols(symDict, pruneCount)
             self.printPruned(symDict, symDictP, symName=dataSet)
             self.printPruned(symDict, symDictP, fw=const_fw, symName=dataSet)
+            if stats is not None:
+                self.writeSymbolStats(stats, symDict, symDictP, symName, dataSet)
             symDictP.update(EXTRA_SYMBOLS)
             self.saveMap(symMap, symDictP, text)
             self.saveDict(symMap + '.dict', symDictP)
@@ -265,6 +292,9 @@ class MapGenerator(Script):
     'symName': 
         """Symbol name. Used in data constant definition. If it is not specified,
         dataSet value will be used.
+        """,
+    'stats':
+        """File to write symbol statistics to.
         """,
     }
 

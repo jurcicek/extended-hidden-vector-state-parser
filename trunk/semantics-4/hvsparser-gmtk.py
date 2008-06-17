@@ -12,9 +12,9 @@ import codecs
 import re
 import shutil
 
+from svc.ui.smntcs import input
 sys.path.insert(0, 'src')
 import genInputs
-import input
 
 class HVSParser(ExternalScript):
     externalMethodDirs = ['bin/hvsparser', 'bin/semantics']

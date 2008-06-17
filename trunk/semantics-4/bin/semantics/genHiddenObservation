@@ -1,14 +1,22 @@
 #!/bin/bash
 
+if [ "$TRAIN_ALLOW_EMPTY" != "0" ]; then
+    ALLOW_EMPTY="--allowEmpty"
+else
+    ALLOW_EMPTY=""
+fi
+
 ######################################################################################
 # train
 ######################################################################################
 $SRC_DIR/genHiddenObservationGivenWC1C2C3C4Stc.py --dirIn=$DATA_TRN/ho \
+        $ALLOW_EMPTY \
         --dirOut=$DATA_TRN \
         --conceptMap=$CONCEPT_MAP \
         --wordMap=$S1_MAP
 # train - txt
 $SRC_DIR/genHiddenObservationGivenWC1C2C3C4Stc.py --dirIn=$DATA_TXT_TRN/ho \
+        $ALLOW_EMPTY \
         --dirOut=$DATA_TXT_TRN \
         --conceptMap=$CONCEPT_MAP_TXT \
         --wordMap=$S1_MAP_TXT
@@ -17,12 +25,14 @@ $SRC_DIR/genHiddenObservationGivenWC1C2C3C4Stc.py --dirIn=$DATA_TXT_TRN/ho \
 # heldout
 ######################################################################################
 $SRC_DIR/genHiddenObservationGivenWC1C2C3C4Stc.py --dirIn=$DATA_HLDT/ho \
+        $ALLOW_EMPTY \
         --dirOut=$DATA_HLDT \
         --conceptMap=$CONCEPT_MAP \
         --wordMap=$S1_MAP
 
 # heldout - txt
 $SRC_DIR/genHiddenObservationGivenWC1C2C3C4Stc.py --dirIn=$DATA_TXT_HLDT/ho \
+        $ALLOW_EMPTY \
         --dirOut=$DATA_TXT_HLDT \
         --conceptMap=$CONCEPT_MAP_TXT \
         --wordMap=$S1_MAP_TXT
@@ -31,11 +41,13 @@ $SRC_DIR/genHiddenObservationGivenWC1C2C3C4Stc.py --dirIn=$DATA_TXT_HLDT/ho \
 # test
 ######################################################################################
 $SRC_DIR/genHiddenObservationGivenWC1C2C3C4Stc.py --dirIn=$DATA_TST/ho \
+        $ALLOW_EMPTY \
         --dirOut=$DATA_TST \
         --conceptMap=$CONCEPT_MAP \
         --wordMap=$S1_MAP
 # test - txt
 $SRC_DIR/genHiddenObservationGivenWC1C2C3C4Stc.py --dirIn=$DATA_TXT_TST/ho \
+        $ALLOW_EMPTY \
         --dirOut=$DATA_TXT_TST \
         --conceptMap=$CONCEPT_MAP_TXT \
         --wordMap=$S1_MAP_TXT

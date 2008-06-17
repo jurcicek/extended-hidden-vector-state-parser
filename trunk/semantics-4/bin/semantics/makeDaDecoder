@@ -1,0 +1,11 @@
+#!/bin/bash
+
+$SRC_DIR/makeDaDecoder.py \
+    --dataTrn $DATA_XML_TRN \
+    --dataHldt $DATA_XML_HLDT \
+    --dataTst $DATA_XML_TST \
+    --dataLm $DA_DIR \
+    -vvv --debug
+
+cdc-treedist.py sresults $DA_DIR/hldt_ref.mlf $DA_DIR/hldt_hyp.mlf >> $DA_DIR/hldt_results.txt
+cdc-treedist.py sresults $DA_DIR/tst_ref.mlf $DA_DIR/tst_hyp.mlf >> $DA_DIR/tst_results.txt

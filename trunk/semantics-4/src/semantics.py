@@ -339,7 +339,11 @@ class Semantics:
         
     def parseLeaves(self, semantics):
 ##      print "L:"+semantics
-        smntcsList = self.splitByComma(semantics.strip())
+        semantics = semantics.strip()
+        if semantics:
+            smntcsList = self.splitByComma(semantics)
+        else:
+            smntcsList = []
       
         if self.parseType == "RL":
             # reverse the tree because we are going to create right-left parse derivation

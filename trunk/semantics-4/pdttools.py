@@ -5,10 +5,12 @@ from svc.scripting.externals import *
 from svc.osutils import mkdirp
 from svc.ui import pdt
 from svc.ui.dxml import DXML
+from svc.ui.mlf import MLF
 from glob import glob
 import xml.dom.minidom 
 import codecs
 import re
+import tempfile
 
 LOWER_DATASETS = ['lemmatized']
 
@@ -32,6 +34,12 @@ class PDTTools(ExternalScript):
         'mktxt.type': String,
         'mktxt.lower': Flag,
         'mktxt.new_sen_file': String,
+        'mlfparametrize.mlf': (Required, String),
+        'mlfparametrize.source_type': String,
+        'mlfparametrize.target_type': String,
+        'mlfparametrize.inDir': OptionAlias,
+        'mlfparametrize.outDir': OptionAlias,
+        'mlfparametrize.use_empty': Flag,
         'splitCSTS.csts': String,
         'parametrize.new_type': (Required, String),
         'parametrize.sen_file': (Required, String),
@@ -42,7 +50,8 @@ class PDTTools(ExternalScript):
     settingsFiles = ['settings.path']
 
     posOpts = ['command', {'parametrize': ['new_type', 'sen_file'],
-                           'mktxt': ['type']
+                           'mktxt': ['type'],
+                           'mlfparametrize': ['mlf', 'inDir', 'outDir'],
                           }
               ]
 
@@ -64,6 +73,7 @@ class PDTTools(ExternalScript):
 
     @ExScript.command
     def mktxt(self, type='normalized', lower=False, new_sen_file=None):
+        self.logger.info("Making build directories")
         self.makeDirs()
         self.logger.info("Getting text from XMLs")
         if new_sen_file is None:
@@ -86,7 +96,47 @@ class PDTTools(ExternalScript):
                         fw.write(txt)
         finally:
             fw.close()
+
+    @ExScript.command
+    def mlfparametrize(self, mlf, inDir=None, outDir=None,
+            source_type='normalized', target_type='decoded', use_empty=False):
+        self.setupDirs(inDir, outDir)
+        foo, new_sen_file = tempfile.mkstemp()
+        self.logger.info("Reading MLF")
+        mlf = MLF.readFromFile(mlf)
         self.logger.info("Making build directories")
+        self.makeDirs()
+        self.logger.info("Getting text from XMLs")
+        if new_sen_file is None:
+            fn = os.path.join(self.settings['PDT_WORK_DIR'], 'sen_file')
+        else:
+            fn = new_sen_file
+        fw = codecs.open(fn, 'w', 'utf-8')
+        try:
+            for fn in self.getInputXMLs():
+                dxml = DXML.readFromFile(fn)
+                acts = dxml.getDialogueActs(source_type)
+                idx = 0
+                for utter in acts:
+                    for txt, attrs in utter:
+                        if not txt:
+                            self.logger.info("Empty <dialogue_act> in file: %s", fn)
+                        key = "*/%s_%05d" % (os.path.splitext(os.path.basename(fn))[0], idx)
+                        if key in mlf:
+                            line = mlf[key]
+                        elif not use_empty:
+                            line = [txt + '\n']
+                        else:
+                            line = ['\n']
+                        line = '\n'.join(line)
+                        fw.write(line)
+                        idx += 1
+        finally:
+            fw.close()
+
+        self.parametrize(target_type, new_sen_file)
+        os.remove(new_sen_file)
+
 
     @ExScript.command
     def splitCSTS(self, csts=None):
@@ -170,7 +220,7 @@ class PDTTools(ExternalScript):
         elif moveResults:
             self.moveResults(int(self.debugMain), env=env)
 
-    def main(self, inDir=None, outDir=None, **kwargs):
+    def setupDirs(self, inDir, outDir):
         if inDir is not None:
             self.inDir = inDir
         else:
@@ -179,6 +229,9 @@ class PDTTools(ExternalScript):
             self.outDir = outDir
         else:
             self.outDir = os.path.join(self.settings['PDT_WORK_DIR'], 'parametrized')
+
+    def main(self, inDir=None, outDir=None, **kwargs):
+        self.setupDirs(inDir, outDir)
         return super(PDTTools, self).main(**kwargs)
 
     def premain(self, cfgfile=[], variable=[], *args, **kwargs):

@@ -1,4 +1,5 @@
 #!/usr/bin/env python2.4
+# -*- coding: iso-8859-2 -*-
 
 import re
 import sys
@@ -216,11 +217,14 @@ class SemanticsMain(ExternalScript):
         'forcealignTrn': ExecNoStdout,
         'smoothModel': ExScript.command,
         'scaleModel': ExScript.command,
+        'scaleModelFaligner': ExScript.command,
         'decodeHldt': ExecNoStdout,
         'decodeTst': ExecNoStdout,
         'moveResults': ExecNoStdout,
         'fsmcompile': ExecNoStdout,
         'confuse': ExecNoStdout,
+        'makeDaDecoder': ExScript.command,
+        'fsmcompileDacoder': ExecNoStdout,
     }
 
     options = {
@@ -230,6 +234,7 @@ class SemanticsMain(ExternalScript):
         '__premain__.variable': (Multiple, String),
         '__premain__.cfgfile': (Multiple, String),
         'storeEnv.settingsfn': String,
+        'parametrizeXML.dataset': (Required, String),
     }
 
     settingsFiles = ['settings', 'settings.path']
@@ -237,6 +242,7 @@ class SemanticsMain(ExternalScript):
     posOpts = ['command', {'runbatch': ['script', 'argv', Ellipsis],
                            'all':      ['variable', Ellipsis],
                            'storeEnv': ['settingsfn'],
+                           'parametrizeXML': ['dataset'],
                           }]
 
     shortOpts = {
@@ -245,8 +251,46 @@ class SemanticsMain(ExternalScript):
 
     Grid = Grid
 
+    def getSymbolStats(self, env={}):
+        env = dict(env)
+        ret = {}
+        stats_fn = os.path.join(self.settings['MAP_DIR'], 'symbol.stats')
+        fr = file(stats_fn)
+        try:
+            for line in fr:
+                orig_line = line
+                line = line.strip()
+                if not line:
+                    continue
+                line = line.split('#', 1)[0]
+                try:
+                    key, value = line.split('=', 1)
+                    key = key.strip()
+                    value = value.strip()
+                except ValueError:
+                    self.logger.warning("Bad line in symbol.stats: %r" % orig_line)
+                    continue
+                try:
+                    ret[key] = eval(value)
+                except:
+                    self.logger.warning("Bad line in symbol.stats: %r" % orig_line)
+            return ret
+        finally:
+            fr.close()
+
+    def printSymbolStats(self, stats=None, env={}):
+        env = dict(env)
+        if stats == None:
+            stats = self.getSymbolStats(env=env)
+        self.logger.info('OOV rate per symbol:')
+        self.logger.info('===================:')
+        self.logger.info('    S1: %.2f%%' % (stats['s1_oov'] * 100. ,))
+        self.logger.info('    S2: %.2f%%' % (stats['s2_oov'] * 100. ,))
+        self.logger.info('    S3: %.2f%%' % (stats['s3_oov'] * 100. ,))
+
     @ExScript.command
     def prepareData(self, env={}):
+        env = dict(env)
         self.makeDirs(env=env)
         self.deleteTmpData(env=env)
         self.setCommonParams(env=env)
@@ -255,6 +299,7 @@ class SemanticsMain(ExternalScript):
             env['DATA_DIR'] = self.settings['CONFUSE_DATA_DIR']
         self.copyXMLData(env=env)
         self.genInputMaps(env=env)
+        self.printSymbolStats(env=env)
         self.genInputs(env=env)
         self.genHiddenObservation(env=env)
         self.genEndOfUtteranceObservation(env=env)
@@ -263,6 +308,7 @@ class SemanticsMain(ExternalScript):
 
     @ExScript.command
     def train(self, env={}):
+        env = dict(env)
         self.triangulate(env=env)
         self.trainModel(env=env)
 
@@ -280,6 +326,10 @@ class SemanticsMain(ExternalScript):
         self.scaleModel(*args, **kwargs)
 
     @ExScript.command
+    def scaleFaligner(self, *args, **kwargs):
+        self.scaleModelFaligner(*args, **kwargs)
+
+    @ExScript.command
     def decodeHldt(self, *args, **kwargs):
         super(SemanticsMain, self).decodeHldt(*args, **kwargs)
         return self.evaluateResults('dcd_hldt')
@@ -291,7 +341,33 @@ class SemanticsMain(ExternalScript):
 
     @ExScript.command
     def moveResults(self, keep=False, env={}):
+        env = dict(env)
         super(SemanticsMain, self).moveResults(int(keep), env=env)
+
+    @ExScript.command
+    def parametrizeXML(self, dataset):
+        if dataset == 'fa_trn':
+            var_name = 'FA_TRN'
+            var_name2 = 'DATA_XML_TRN'
+        elif dataset == 'dcd_hldt':
+            var_name = 'DCD_HLDT'
+            var_name2 = 'DATA_XML_HLDT'
+        elif dataset == 'dcd_tst':
+            var_name = 'DCD_TST'
+            var_name2 = 'DATA_XML_TST'
+        else:
+            raise ValueError("Unknown dataset: %s" % dataset)
+        dir_name = self.settings[var_name]
+        in_dir = self.settings[var_name2]
+        mlf_name = os.path.join(dir_name, 'semantics.mlf.smntcs')
+        out_dir = os.path.join(dir_name, 'xml')
+        try:
+            os.makedirs(out_dir)
+        except OSError:
+            pass
+        self.logger.info("Generating output XMLs for: %s", dataset)
+        os.system('./pdttools.py mlfparametrize %s %s %s --target-type %s' % (mlf_name, in_dir, out_dir, dataset))
+
 
     @ExScript.command
     def storeEnv(self, settingsfn=None, info={}, results={}):
@@ -320,7 +396,24 @@ class SemanticsMain(ExternalScript):
         return super(SemanticsMain, self).storeEnv(settingsfn, info)
 
     @ExScript.command
+    def faligner(self, moveResults=True, env={}):
+        env = dict(env)
+        self.prepareData(env=env)
+        self.train(env=env)
+        self.scaleFaligner(env=env)
+        self.forcealignTrn(env=env)
+
+        if self.settings['MAKE_XML'] == '1':
+            self.parametrizeXML('fa_trn')
+
+        results = {}
+        self.storeEnv(results=results)
+        if moveResults:
+            self.moveResults(int(self.debugMain), env=env)
+
+    @ExScript.command
     def all(self, moveResults=True, noDcd=False, env={}):
+        env = dict(env)
         self.prepareData(env=env)
         self.train(env=env)
         self.forcealignTrn(env=env)
@@ -331,6 +424,11 @@ class SemanticsMain(ExternalScript):
         if not noDcd:
             results = self.decodeHldt(env=env)
             self.decodeTst(env=env)
+
+        if self.settings['MAKE_XML'] == '1':
+            self.parametrizeXML('fa_trn')
+            self.parametrizeXML('dcd_hldt')
+            self.parametrizeXML('dcd_tst')
 
         self.storeEnv(results=results)
         if moveResults:
@@ -373,9 +471,12 @@ class SemanticsMain(ExternalScript):
         elif hyp_mlf is None:
             raise ValueError('If you use path for `gold_mlf`, you must supply `hyp_mlf`')
 
+        only = self.settings.get('SRESULTS_ONLY', None)
+        skip = self.settings.get('SRESULTS_SKIP', None)
+
         output = StringIO()
         td = TreeDistScript()
-        results = td.sresults((gold_mlf, hyp_mlf), fw=output)
+        results = td.sresults((gold_mlf, hyp_mlf), fw=output, only=only, skip=skip)
         self.printResults(results)
         return results
 
@@ -393,6 +494,7 @@ class SemanticsMain(ExternalScript):
                 pass
             self.logger.info('    %-25s : %-10s', title, value)
 
+
     def premain(self, cfgfile=[], variable=[], *args, **kwargs):
         ret = super(SemanticsMain, self).premain(*args, **kwargs)
         for fn in cfgfile:
@@ -406,10 +508,14 @@ class SemanticsMain(ExternalScript):
         return ret
 
     @ExScript.command
-    def fsmconvert(self, cutoff=1e-5, trans_cutoff=1e-5):
+    def fsmconvert(self, pteMapFn=None):
         sys.path.append('src')
         import fsm
         from svc.ui import gmtk
+
+        max_states = int(self.settings['FSM_STATES'])
+        cutoff_sym = float(self.settings['FSM_CUTOFF_SYM'])
+        cutoff_trans = float(self.settings['FSM_CUTOFF_TRANS'])
 
         self.setCommonParams()
         FSM_DIR = self.settings['FSM_DIR']
@@ -418,48 +524,73 @@ class SemanticsMain(ExternalScript):
         conceptMapFn = self.settings['CONCEPT_MAP']
         self.logger.debug("Reading concept map: %s", conceptMapFn)
         conceptMap = SymMap.readFromFile(conceptMapFn, format=(int, unicode)).inverse
-        #conceptMap = SymMap((k, conceptMap[k]) for k in ['_EMPTY_', 'GREETING', 'DEPARTURE', 'ARRIVAL', 'TO', 'FROM', 'STATION', 'THROUGH', 'OTHER_INFO', 'TIME', 'TRAIN_TYPE', 'ACCEPT', 'REJECT'])
         del conceptMap['_SINK_']
-        #conceptMap = SymMap((k, conceptMap[k]) for k in ['_EMPTY_', 'DEPARTURE', 'TO', 'FROM', 'STATION', 'TIME'])
+        #conceptMap = SymMap((k, v) for (k, v) in conceptMap.iteritems() if k in '_EMPTY_ GREETING DEPARTURE'.split())
+        #conceptMap = SymMap((k, v) for (k, v) in conceptMap.iteritems() if k in '_EMPTY_ GREETING'.split())
 
-        s1MapFn = self.settings['S1_MAP']
-        self.logger.debug("Reading s1 map: %s", s1MapFn)
-        s1Map = SymMap.readFromFile(s1MapFn, format=(int, unicode)).inverse
+        dataset_fn = os.path.join(FSM_DIR, 'datasets')
+        dataset_fw = file(dataset_fn, 'w')
+        sMaps = []
+        for ds in [1, 2, 3]:
+            ds_value = self.settings['S%d_DATASET' % ds]
+            if ds_value != 'off':
+                mapFn = self.settings['S%d_MAP'% ds]
+                self.logger.debug("Reading s%d map: %s", ds, mapFn)
+                map = SymMap.readFromFile(mapFn, format=(int, unicode)).inverse
+                #map = SymMap((k, v) for (k, v) in map.iteritems() if k in u'dobrý den kdy jede _empty_ _unseen_'.split())
+                sMaps.append(map)
+            else:
+                self.logger.debug("Dataset s%d is turned off", ds)
+                sMaps.append(None)
+            dataset_fw.write(ds_value + '\n')
+        dataset_fw.close()
 
-        s2MapFn = self.settings['S2_MAP']
-        self.logger.debug("Reading s2 map: %s", s2MapFn)
-        s2Map = SymMap.readFromFile(s2MapFn, format=(int, unicode)).inverse
-
-        s3MapFn = self.settings['S3_MAP']
-        self.logger.debug("Reading s3 map: %s", s3MapFn)
-        s3Map = SymMap.readFromFile(s3MapFn, format=(int, unicode)).inverse
-
+        if pteMapFn is not None:
+            self.logger.debug("Reading pte map: %s", pteMapFn)
+            pteMap = SymMap.readFromFile(pteMapFn, format=(unicode, int))
+        else:
+            pteMap = {}
+        pteSymbols = pteMap.keys()
+        
         mstr = os.path.join(self.settings['MSTR_DCD_DIR'], 'in.mstr')
         cppOptions = self.settings['CPP_OPTIONS'].split()
-        workspace = gmtk.Workspace(cppOptions=cppOptions)
+        workspace = gmtk.Workspace(cppOptions=cppOptions, readDTS=False)
         self.logger.info('Reading master file: %s', mstr)
         workspace.readMasterFile(mstr)
 
         self.logger.info('Creating FSM from arcs')
 
         self.logger.info('Total number of concepts: %d', len(conceptMap))
-        self.logger.info('Total number of symbols: %d', len(s1Map))
+        #self.logger.info('Total number of symbols: %d', len(s1Map))
 
-        stateGenerator = fsm.FSMGenerator(workspace, conceptMap, [s1Map, s2Map, s3Map], cutoff, trans_cutoff, logger=self.logger)
-        stateGenerator.writeFSM(os.path.join(FSM_DIR, 'hvsparser.txt'))
+        stateGenerator = fsm.FSMGenerator(workspace, conceptMap, sMaps,
+                                    cutoff_sym, cutoff_trans, max_states,
+                                    pteSymbols=pteSymbols,
+                                    logger=self.logger)
+        stateGenerator.writeFSMRepeater(os.path.join(FSM_DIR, 'hvsrepeater.txt'))
+        stateGenerator.writeFSMPadder(os.path.join(FSM_DIR, 'hvspadder.txt'))
+        stateGenerator.writeFSM(os.path.join(FSM_DIR, 'hvsparser_pad.txt'))
+
         stateGenerator.stateMap.writeToFile(os.path.join(FSM_DIR, 'state.map'))
         stateGenerator.osymMap.writeToFile(os.path.join(FSM_DIR, 'osym.map'))
         for i, map in enumerate(stateGenerator.isymMaps):
             map.writeToFile(os.path.join(FSM_DIR, 'isym%d.map' % (i+1, )))
-
-        dataset_fn = os.path.join(FSM_DIR, 'datasets')
-        dataset_fw = file(dataset_fn, 'w')
-        dataset_fw.write(self.settings['S1_DATASET'] + '\n')
-        dataset_fw.write(self.settings['S2_DATASET'] + '\n')
-        dataset_fw.write(self.settings['S3_DATASET'] + '\n')
-        dataset_fw.close()
+        stateGenerator.ipteMap.writeToFile(os.path.join(FSM_DIR, 'pte.map'))
 
         self.fsmcompile()
+
+    @ExScript.command
+    def dadecoder(self, env={}):
+        env = dict(env)
+        self.makeDirs(env=env)
+        self.deleteTmpData(env=env)
+        self.setCommonParams(env=env)
+        if int(self.settings['CONFUSE']):
+            self.confuse(env=env)
+            env['DATA_DIR'] = self.settings['CONFUSE_DATA_DIR']
+        self.copyXMLData(env=env)
+        self.makeDaDecoder(env=env)
+        self.fsmcompileDacoder(env=env)
 
 def __main__():
     s = SemanticsMain()
