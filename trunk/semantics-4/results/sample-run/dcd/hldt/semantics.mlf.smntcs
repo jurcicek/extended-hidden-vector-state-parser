@@ -1,0 +1,124 @@
+#!MLF!#
+"*/CD03~Part1~04-000506-105348-1_00000.rec"
+GREETING(informace)
+.
+"*/CD03~Part1~04-000506-105348-1_00001.rec"
+GREETING(dobrý,PERSON(den))
+.
+"*/CD03~Part1~04-000506-105348-1_00002.rec"
+TROUGH(prosit ty moci já říci kdy jet kolem šestý hodina vlak do,STATION(přeštice))
+.
+"*/CD03~Part1~04-000506-105348-1_00003.rec"
+TIME(kolem šestý večer)
+.
+"*/CD03~Part1~04-000506-105348-1_00004.rec"
+TIME(osmnáct padesát osm)
+.
+"*/CD03~Part1~04-000506-105348-1_00005.rec"
+TIME(osmnáct padesát osm)
+.
+"*/CD03~Part1~04-000506-105348-1_00007.rec"
+GREETING(nashledanou)
+.
+"*/CD03~Part1~04-000506-105348-1_00008.rec"
+GREETING(nashledanou)
+.
+"*/CD03~Part1~04-000506-110436-1_00000.rec"
+GREETING(informace)
+.
+"*/CD03~Part1~04-000506-110436-1_00001.rec"
+GREETING(dobrý den markový),AREA(plzeň)
+.
+"*/CD03~Part1~04-000506-110436-1_00002.rec"
+TROUGH(prosit ty podávat informace o odjezd,STATION(vlak))
+.
+"*/CD03~Part1~04-000506-110436-1_00003.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000506-110436-1_00004.rec"
+TROUGH(já být potřebovat blízký osobní který jet z hlavní nádraží do,STATION(stodo))
+.
+"*/CD03~Part1~04-000506-110436-1_00005.rec"
+TIME(takže v deset padesát tři),DEPARTURE(ty ujet)
+.
+"*/CD03~Part1~04-000506-110436-1_00006.rec"
+TIME(takže v dvanáct dvacet osm dnes)
+.
+"*/CD03~Part1~04-000506-110436-1_00007.rec"
+TIME(dvanáct dvacet osm)
+.
+"*/CD03~Part1~04-000506-110436-1_00009.rec"
+GREETING(nashledanou)
+.
+"*/CD03~Part1~04-000506-111212-1_00000.rec"
+GREETING(informace)
+.
+"*/CD03~Part1~04-000506-111212-1_00001.rec"
+GREETING(no dobrý,PERSON(den))
+.
+"*/CD03~Part1~04-000506-111212-1_00002.rec"
+TROUGH(prosit ty já být potřebovat zjistit v kolik dnes jet vlak z strakonice do,STATION(plzeň))
+.
+"*/CD03~Part1~04-000506-111212-1_00003.rec"
+ARRIVAL(v kolik tak hodina)
+.
+"*/CD03~Part1~04-000506-111212-1_00004.rec"
+DEPARTURE(no odpoledne kolem po druhý hodina nebo kolem druhý)
+.
+"*/CD03~Part1~04-000506-111212-1_00005.rec"
+FROM(z),TIME(strakonice čtrnáct třicet)
+.
+"*/CD03~Part1~04-000506-111212-1_00006.rec"
+TRAIN_TYPE(a ten být rychlík)
+.
+"*/CD03~Part1~04-000506-111212-1_00007.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000506-111212-1_00008.rec"
+TIME(čtrnáct třicet)
+.
+"*/CD03~Part1~04-000506-111212-1_00009.rec"
+_DUMMY_(pak),ARRIVAL(už dlouho),NEXT(nic nejet)
+.
+"*/CD03~Part1~04-000506-111212-1_00010.rec"
+TIME(potom jet),OTHER_INFO(TRAIN_TYPE(osobní)),TIME(v šestnáct dvacet šest)
+.
+"*/CD03~Part1~04-000506-111212-1_00011.rec"
+REJECT(no ten být dlouho)
+.
+"*/CD03~Part1~04-000506-111212-1_00012.rec"
+ARRIVAL(a brzy něco)
+.
+"*/CD03~Part1~04-000506-111212-1_00013.rec"
+TROUGH(ten být osobní jet jedenáct padesát sedm z,STATION(strakonice))
+.
+"*/CD03~Part1~04-000506-111212-1_00014.rec"
+TROUGH(takže ten v čtrnáct třicet ten být takový spojení tak jo rychlík,STATION(jo))
+.
+"*/CD03~Part1~04-000506-111212-1_00015.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000506-111212-1_00017.rec"
+GREETING(nashledanou)
+.
+"*/CD03~Part1~04-000506-111212-1_00018.rec"
+GREETING(nashledanou)
+.
+"*/CD03~Part1~04-000506-111510-1_00000.rec"
+GREETING(informace)
+.
+"*/CD03~Part1~04-000506-111510-1_00001.rec"
+GREETING(dobrý,PERSON(den))
+.
+"*/CD03~Part1~04-000506-111510-1_00002.rec"
+TROUGH(já být potřebovat vědět vlak kolem pátý hodina na,STATION(cheb osobní))
+.
+"*/CD03~Part1~04-000506-111510-1_00003.rec"
+TIME(v šestnáct třicet tři)
+.
+"*/CD03~Part1~04-000506-111510-1_00005.rec"
+GREETING(nashledanou)
+.
+"*/CD03~Part1~04-000506-111510-1_00006.rec"
+GREETING(nashledanou)
+.

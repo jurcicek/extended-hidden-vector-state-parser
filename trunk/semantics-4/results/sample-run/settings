@@ -1,0 +1,155 @@
+#!/bin/bash
+
+#               Author:  honza
+#                 Date:  2008-06-17-14:37:15
+#             Filename:  settings
+#      Build directory:  build/2008-06-17-14.26
+#         Command line:  ./semantics.py all -vvv
+#      Experiment name:  < Unknown >
+# Results:  cAcc(hldt):  43.84%
+# Results: uCorr(hldt):  56.10%
+
+export ANNOTATED_DIR=data_annotated
+export BACKOFF_FA_PROBS="0.9999 0.0001"
+export BUILD_DIR=build/2008-06-17-14.26
+export CONCEPT_MAP=build/2008-06-17-14.26/maps/concept.map
+export CONCEPT_MAP_TXT=build/2008-06-17-14.26/maps-txt/concept.map
+export CONFUSE=0
+export CONFUSE_DATA_DIR=build/2008-06-17-14.26/data-confused
+export CONFUSE_DIR=/home/honza/Research/Semantics/extended-hidden-vector-state-parser-my/semantics-4/../confusion
+export CPP_OPTIONS="-I build/2008-06-17-14.26/include -I params"
+export DATA_DIR=/home/honza/Research/Semantics/extended-hidden-vector-state-parser-my/semantics-4/../example-data
+export DATA_HLDT=build/2008-06-17-14.26/data/hldt
+export DATA_REDUCTION=100
+export DATA_TRN=build/2008-06-17-14.26/data/trn
+export DATA_TST=build/2008-06-17-14.26/data/tst
+export DATA_TXT_HLDT=build/2008-06-17-14.26/data-txt/hldt
+export DATA_TXT_TRN=build/2008-06-17-14.26/data-txt/trn
+export DATA_TXT_TST=build/2008-06-17-14.26/data-txt/tst
+export DATA_XML_HLDT=build/2008-06-17-14.26/data-xml/hldt
+export DATA_XML_TRN=build/2008-06-17-14.26/data-xml/trn
+export DATA_XML_TST=build/2008-06-17-14.26/data-xml/tst
+export DA_DIR=build/2008-06-17-14.26/da
+export DCD_HLDT=build/2008-06-17-14.26/dcd/hldt
+export DCD_TST=build/2008-06-17-14.26/dcd/tst
+export EXPERIMENT_NAME=2008-06-17-14.26
+export FA_HLDT=build/2008-06-17-14.26/fa/hldt
+export FA_TRN=build/2008-06-17-14.26/fa/trn
+export FA_TST=build/2008-06-17-14.26/fa/tst
+export FSM_CUTOFF_SYM=1e-20
+export FSM_CUTOFF_TRANS=1e-10
+export FSM_DIR=build/2008-06-17-14.26/fsm
+export FSM_STATES=200
+export GEN_COMMON_PARAMS_SETTINGS=build/2008-06-17-14.26/include/commonParamsSettings.h
+export GEN_DATA_CONSTANTS=build/2008-06-17-14.26/include/dataConstants.h
+export GEN_DIR=build/2008-06-17-14.26/gen
+export INPUT_CHAIN=none
+export INSERTION_PENALTY=1.0
+export JUMP_PROBS="0.5 0.5 0.0 0.0 0.0 0.0 0.0"
+export MAKE_XML=1
+export MAP_DIR=build/2008-06-17-14.26/maps
+export MAP_TXT_DIR=build/2008-06-17-14.26/maps-txt
+export MAX_PUSH=2
+export MSTR_DCD_DIR=params/mstr/dcd
+export MSTR_FALIGNER_FA_TRN_DIR=params/mstr/faligner_fa_trn
+export MSTR_FA_HLDT_DIR=params/mstr/fa_hldt
+export MSTR_FA_TRN_DIR=params/mstr/fa_trn
+export MSTR_FA_TST_DIR=params/mstr/fa_tst
+export MSTR_SMTH_DIR=params/mstr/smth
+export MSTR_TRN_DIR=params/mstr/trn
+export ORIG_DATASETS=lemma,pos
+export PARAMS=params
+export PARSE_TYPE=LRRL-FT
+export PATH=/home/honza/bin:/usr/local/bin:/usr/bin:/bin:/usr/games:/opt/fsm-4.0/bin:/opt/gmtk-20070511:/opt/srilm-1.5.3/bin:/opt/srilm-1.5.3/bin/i686:/opt/htk-3.4/bin:/opt/srilm-1.4.6/bin:/opt/srilm-1.4.6/bin/i686:/opt/sctk/bin:/opt/OpenFST:/home/honza/bin-speech/bin:/home/honza/bin-speech/brecog/bin:/home/honza/bin-speech/dcd-2.0/bin:/home/honza/bin-speech/fsm-4.0/bin:/home/honza/bin-speech/fsm-misc/bin:/home/honza/bin-speech/gmtk/bin:/home/honza/bin-speech/grm-4.0/bin:/home/honza/bin-speech/htk-3.2/bin:/home/honza/bin-speech/htk-misc/bin:/home/honza/bin-speech/misc:/home/honza/bin-speech/nist/sctk-1.2c:/home/honza/bin-speech/nist/tranfilt-1.12:/home/honza/bin-speech/scripts:/home/honza/bin-speech/srilm-1.5.2/bin/i686:/home/honza/bin-speech/srilm-1.5.2/bin:/home/honza/bin-speech/xbin:/home/honza/bin-speech/evalb:/home/honza/bin-speech/svc:/home/honza/bin:/opt/ind:/home/honza/Research/Semantics/extended-hidden-vector-state-parser-my/semantics-4/bin/
+export PDT20_TOOLS=/opt/PDT-2.0/tools/machine-annotation
+export PDT_WORK_DIR=build/2008-06-17-14.26/pdt
+export POP_CARD=5
+export PUSH_CARD=5
+export RESULT_DIR=results/2008-06-17-14.26
+export S1_DATASET=lemma
+export S1_INDEX=0
+export S1_MAP=build/2008-06-17-14.26/maps/s1.map
+export S1_MAP_TXT=build/2008-06-17-14.26/maps-txt/s1.map
+export S1_NEGEX=1
+export S1_NEG_METHOD=basic
+export S1_PRUNE_COUNT=-0.05
+export S2_DATASET=pos
+export S2_INDEX=1
+export S2_MAP=build/2008-06-17-14.26/maps/s2.map
+export S2_MAP_TXT=build/2008-06-17-14.26/maps-txt/s2.map
+export S2_NEGEX=0
+export S2_NEG_METHOD=basic
+export S2_PRUNE_COUNT=-0.05
+export S3_DATASET=off
+export S3_INDEX=2
+export S3_MAP=build/2008-06-17-14.26/maps/s3.map
+export S3_MAP_TXT=build/2008-06-17-14.26/maps-txt/s3.map
+export S3_NEGEX=0
+export S3_NEG_METHOD=basic
+export S3_PRUNE_COUNT=-0.05
+export SCALE_CONCEPT12=2.4
+export SCALE_PUSHPOP=2.0
+export SKIP_DUMMY_PROBS="0.3 0.7"
+export SRC_DIR=/home/honza/Research/Semantics/extended-hidden-vector-state-parser-my/semantics-4/src
+export SRESULTS_SKIP=@SKIP,@DA
+export STR_DIR=params/str
+export TRAIN_ALLOW_EMPTY=0
+export TRAIN_DATA_REDUCTION=100
+export TRAIN_EM_ITERS=5
+export TRAIN_USE_ALL=0
+export TRAIN_USE_EMPTY=0
+export USE_COMMON_DATASET=0
+export USE_NAMED_ENTITIES=0
+
+
+###########################
+#  Operating environment  #
+###########################
+
+# CDPATH=.:/home/honza/Programovani/Python:/home/honza/Programovani/Python/UI:/home:/home/honza/Research
+# COLORTERM=xterm
+# CVSROOT=:ext:jps@147.228.47.84:/cvs
+# CVS_RSH=ssh
+# DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-FMKazKtHNx,guid=e0fb29706277f583fe84fc8e4856a64b
+# DESKTOP_SESSION=default
+# DISPLAY=:0.0
+# DM_CONTROL=/var/run/xdmctl
+# EDITOR="gvim -f"
+# GS_LIB=/home/honza/.fonts
+# GTK2_RC_FILES=/home/honza/.gtkrc-2.0-kde:/home/honza/.kde/share/config/gtkrc-2.0
+# GTK_RC_FILES=/etc/gtk/gtkrc:/home/honza/.gtkrc:/home/honza/.kde/share/config/gtkrc
+# HOME=/home/honza
+# HOSTNAME=honzas2
+# KDE_FULL_SESSION=true
+# KDE_MULTIHEAD=false
+# KDE_SESSION_UID=1000
+# KONSOLE_DCOP=DCOPRef(konsole-12769,konsole)
+# KONSOLE_DCOP_SESSION=DCOPRef(konsole-12769,session-1)
+# LANG=cs_CZ.UTF-8
+# LD_LIBRARY_PATH=:/home/honza/bin-speech/att/lib:/home/honza/bin-speech/att/lib/rec11:/home/honza/bin-speech/dst-4.0/lib:/home/honza/bin-speech/fsm-4.0/lib
+# LESS=-M
+# LOGNAME=honza
+# LS_COLORS=*.swp=00;44;37:*,v=5;34;93:*.vim=35:no=0:fi=0:di=32:ln=36:or=1;40:mi=1;40:pi=31:so=33:bd=44;37:cd=44;37:ex=35:*.jpg=1;32:*.jpeg=1;32:*.JPG=1;32:*.gif=1;32:*.png=1;32:*.jpeg=1;32:*.ppm=1;32:*.pgm=1;32:*.pbm=1;32:*.c=1;32:*.C=1;33:*.h=1;33:*.cc=1;33:*.awk=1;33:*.pl=1;33:*.gz=31:*.tar=31:*.zip=31:*.lha=1;31:*.lzh=1;31:*.arj=1;31:*.bz2=31:*.tgz=31:*.taz=1;31:*.html=36:*.htm=1;34:*.doc=1;34:*.txt=1;34:*.o=1;36:*.a=1;36
+# MANPATH=:/home/honza/bin-speech/man:/home/honza/bin-speech/srilm-1.4.6/man
+# NLTK_DATA=/usr/share/nltk/data
+# OS=linux-gnu
+# OSMAJOR=
+# OSVERSION=
+# PAGER=less
+# PATH=/home/honza/bin:/usr/local/bin:/usr/bin:/bin:/usr/games:/opt/fsm-4.0/bin:/opt/gmtk-20070511:/opt/srilm-1.5.3/bin:/opt/srilm-1.5.3/bin/i686:/opt/htk-3.4/bin:/opt/srilm-1.4.6/bin:/opt/srilm-1.4.6/bin/i686:/opt/sctk/bin:/opt/OpenFST:/home/honza/bin-speech/bin:/home/honza/bin-speech/brecog/bin:/home/honza/bin-speech/dcd-2.0/bin:/home/honza/bin-speech/fsm-4.0/bin:/home/honza/bin-speech/fsm-misc/bin:/home/honza/bin-speech/gmtk/bin:/home/honza/bin-speech/grm-4.0/bin:/home/honza/bin-speech/htk-3.2/bin:/home/honza/bin-speech/htk-misc/bin:/home/honza/bin-speech/misc:/home/honza/bin-speech/nist/sctk-1.2c:/home/honza/bin-speech/nist/tranfilt-1.12:/home/honza/bin-speech/scripts:/home/honza/bin-speech/srilm-1.5.2/bin/i686:/home/honza/bin-speech/srilm-1.5.2/bin:/home/honza/bin-speech/xbin:/home/honza/bin-speech/evalb:/home/honza/bin-speech/svc:/home/honza/bin:/opt/ind
+# PERL5LIB=:/home/honza/bin-speech/xperl:/home/honza/bin-speech/xperl/byrne/site_perl:/home/honza/bin-speech/xperl:/home/honza/bin-speech/xperl/byrne/site_perl
+# PWD=/home/honza/Research/Semantics/extended-hidden-vector-state-parser-my/semantics-4
+# PYTHONPATH=/home/honza/lib/python2.2/user-packages
+# PYTHONSTARTUP=/home/honza/lib/python2.2/startup.py
+# SESSION_MANAGER=local/honzas2:/tmp/.ICE-unix/4275
+# SHELL=/usr/bin/zsh
+# SHLVL=4
+# SSH_AGENT_PID=4210
+# SSH_AUTH_SOCK=/tmp/ssh-YWISqI4186/agent.4186
+# TERM=xterm
+# USER=honza
+# VISUAL="gvim -f"
+# WINDOWID=81788936
+# XCURSOR_THEME=default
+# XDM_MANAGED=/var/run/xdmctl/xdmctl-:0,maysd,mayfn,sched,rsvd,method=classic,auto
+# _=./semantics.py

@@ -1,0 +1,667 @@
+1 % number of Decision Trees
+0 % index of DT
+
+pushGivenC1C2C3C4 % DT name
+4 % number of parents
+
+%% (C4,C3,C2,C1)
+
+3	9	_EMPTY_	ACCEPT	ARRIVAL	BACK	DEPARTURE	DISTANCE	PRICE	REF	default
+	2	20	_EMPTY_	ACCEPT	ARRIVAL	BACK	DEPARTURE	DISTANCE	FROM	GREETING	OTHER_INFO	PLATFORM	PREVIOUS	PRICE	REF	REJECT	THROUGH	TO	TRANSFER	TROUGH	WAIT	default
+		1	31	_EMPTY_	ACCEPT	AREA	ARRIVAL	BACK	DELAY	DEPARTURE	DISTANCE	FROM	GREETING	MAYBE	NEXT	OTHER_INFO	PERSON	PLATFORM	PREVIOUS	PRICE	REF	REJECT	REPEAT	STATION	SYSTEM_FEATURE	THROUGH	TIME	TO	TRAIN_TYPE	TRANSFER	TROUGH	WAIT	WHAT_TIME	default
+			0	32	_EMPTY_	_DUMMY_	ACCEPT	AREA	ARRIVAL	BACK	DELAY	DEPARTURE	DISTANCE	FROM	GREETING	MAYBE	NEXT	OTHER_INFO	PERSON	PLATFORM	PREVIOUS	PRICE	REF	REJECT	REPEAT	STATION	SYSTEM_FEATURE	THROUGH	TIME	TO	TRAIN_TYPE	TRANSFER	TROUGH	WAIT	WHAT_TIME	default
+					-1	1      % [_EMPTY_,_EMPTY_,_EMPTY_,_EMPTY_]
+					-1	2      % [_EMPTY_,_EMPTY_,_EMPTY_,_DUMMY_]
+					-1	3      % [_EMPTY_,_EMPTY_,_EMPTY_,ACCEPT]
+					-1	4      % [_EMPTY_,_EMPTY_,_EMPTY_,AREA]
+					-1	5      % [_EMPTY_,_EMPTY_,_EMPTY_,ARRIVAL]
+					-1	6      % [_EMPTY_,_EMPTY_,_EMPTY_,BACK]
+					-1	7      % [_EMPTY_,_EMPTY_,_EMPTY_,DELAY]
+					-1	8      % [_EMPTY_,_EMPTY_,_EMPTY_,DEPARTURE]
+					-1	9      % [_EMPTY_,_EMPTY_,_EMPTY_,DISTANCE]
+					-1	10     % [_EMPTY_,_EMPTY_,_EMPTY_,FROM]
+					-1	11     % [_EMPTY_,_EMPTY_,_EMPTY_,GREETING]
+					-1	12     % [_EMPTY_,_EMPTY_,_EMPTY_,MAYBE]
+					-1	13     % [_EMPTY_,_EMPTY_,_EMPTY_,NEXT]
+					-1	14     % [_EMPTY_,_EMPTY_,_EMPTY_,OTHER_INFO]
+					-1	15     % [_EMPTY_,_EMPTY_,_EMPTY_,PERSON]
+					-1	16     % [_EMPTY_,_EMPTY_,_EMPTY_,PLATFORM]
+					-1	17     % [_EMPTY_,_EMPTY_,_EMPTY_,PREVIOUS]
+					-1	18     % [_EMPTY_,_EMPTY_,_EMPTY_,PRICE]
+					-1	19     % [_EMPTY_,_EMPTY_,_EMPTY_,REF]
+					-1	20     % [_EMPTY_,_EMPTY_,_EMPTY_,REJECT]
+					-1	21     % [_EMPTY_,_EMPTY_,_EMPTY_,REPEAT]
+					-1	22     % [_EMPTY_,_EMPTY_,_EMPTY_,STATION]
+					-1	23     % [_EMPTY_,_EMPTY_,_EMPTY_,SYSTEM_FEATURE]
+					-1	24     % [_EMPTY_,_EMPTY_,_EMPTY_,THROUGH]
+					-1	25     % [_EMPTY_,_EMPTY_,_EMPTY_,TIME]
+					-1	26     % [_EMPTY_,_EMPTY_,_EMPTY_,TO]
+					-1	27     % [_EMPTY_,_EMPTY_,_EMPTY_,TRAIN_TYPE]
+					-1	28     % [_EMPTY_,_EMPTY_,_EMPTY_,TRANSFER]
+					-1	29     % [_EMPTY_,_EMPTY_,_EMPTY_,TROUGH]
+					-1	30     % [_EMPTY_,_EMPTY_,_EMPTY_,WAIT]
+					-1	31     % [_EMPTY_,_EMPTY_,_EMPTY_,WHAT_TIME]
+					-1	0 % fail index
+
+			0	7	_DUMMY_	ARRIVAL	FROM	SYSTEM_FEATURE	THROUGH	TIME	default
+					-1	32     % [_EMPTY_,_EMPTY_,ACCEPT,_DUMMY_]
+					-1	33     % [_EMPTY_,_EMPTY_,ACCEPT,ARRIVAL]
+					-1	34     % [_EMPTY_,_EMPTY_,ACCEPT,FROM]
+					-1	35     % [_EMPTY_,_EMPTY_,ACCEPT,SYSTEM_FEATURE]
+					-1	36     % [_EMPTY_,_EMPTY_,ACCEPT,THROUGH]
+					-1	37     % [_EMPTY_,_EMPTY_,ACCEPT,TIME]
+					-1	0 % fail index
+
+			0	2	_DUMMY_	default
+					-1	38     % [_EMPTY_,_EMPTY_,AREA,_DUMMY_]
+					-1	0 % fail index
+
+			0	7	_DUMMY_	FROM	REF	TIME	TO	TRANSFER	default
+					-1	39     % [_EMPTY_,_EMPTY_,ARRIVAL,_DUMMY_]
+					-1	40     % [_EMPTY_,_EMPTY_,ARRIVAL,FROM]
+					-1	41     % [_EMPTY_,_EMPTY_,ARRIVAL,REF]
+					-1	42     % [_EMPTY_,_EMPTY_,ARRIVAL,TIME]
+					-1	43     % [_EMPTY_,_EMPTY_,ARRIVAL,TO]
+					-1	44     % [_EMPTY_,_EMPTY_,ARRIVAL,TRANSFER]
+					-1	0 % fail index
+
+			0	6	_DUMMY_	ARRIVAL	FROM	TIME	TO	default
+					-1	45     % [_EMPTY_,_EMPTY_,BACK,_DUMMY_]
+					-1	46     % [_EMPTY_,_EMPTY_,BACK,ARRIVAL]
+					-1	47     % [_EMPTY_,_EMPTY_,BACK,FROM]
+					-1	48     % [_EMPTY_,_EMPTY_,BACK,TIME]
+					-1	49     % [_EMPTY_,_EMPTY_,BACK,TO]
+					-1	0 % fail index
+
+			0	2	_DUMMY_	default
+					-1	50     % [_EMPTY_,_EMPTY_,DELAY,_DUMMY_]
+					-1	0 % fail index
+
+			0	13	_DUMMY_	AMOUNT	ARRIVAL	FROM	NUMBER	PLATFORM	REF	THROUGH	TIME	TO	TRAIN_TYPE	TRANSFER	default
+					-1	51     % [_EMPTY_,_EMPTY_,DEPARTURE,_DUMMY_]
+					-1	52     % [_EMPTY_,_EMPTY_,DEPARTURE,AMOUNT]
+					-1	53     % [_EMPTY_,_EMPTY_,DEPARTURE,ARRIVAL]
+					-1	54     % [_EMPTY_,_EMPTY_,DEPARTURE,FROM]
+					-1	55     % [_EMPTY_,_EMPTY_,DEPARTURE,NUMBER]
+					-1	56     % [_EMPTY_,_EMPTY_,DEPARTURE,PLATFORM]
+					-1	57     % [_EMPTY_,_EMPTY_,DEPARTURE,REF]
+					-1	58     % [_EMPTY_,_EMPTY_,DEPARTURE,THROUGH]
+					-1	59     % [_EMPTY_,_EMPTY_,DEPARTURE,TIME]
+					-1	60     % [_EMPTY_,_EMPTY_,DEPARTURE,TO]
+					-1	61     % [_EMPTY_,_EMPTY_,DEPARTURE,TRAIN_TYPE]
+					-1	62     % [_EMPTY_,_EMPTY_,DEPARTURE,TRANSFER]
+					-1	0 % fail index
+
+			0	5	_DUMMY_	FROM	LENGTH	TO	default
+					-1	63     % [_EMPTY_,_EMPTY_,DISTANCE,_DUMMY_]
+					-1	64     % [_EMPTY_,_EMPTY_,DISTANCE,FROM]
+					-1	65     % [_EMPTY_,_EMPTY_,DISTANCE,LENGTH]
+					-1	66     % [_EMPTY_,_EMPTY_,DISTANCE,TO]
+					-1	0 % fail index
+
+			0	3	_DUMMY_	STATION	default
+					-1	67     % [_EMPTY_,_EMPTY_,FROM,_DUMMY_]
+					-1	68     % [_EMPTY_,_EMPTY_,FROM,STATION]
+					-1	0 % fail index
+
+			0	3	_DUMMY_	PERSON	default
+					-1	69     % [_EMPTY_,_EMPTY_,GREETING,_DUMMY_]
+					-1	70     % [_EMPTY_,_EMPTY_,GREETING,PERSON]
+					-1	0 % fail index
+
+			0	2	_DUMMY_	default
+					-1	71     % [_EMPTY_,_EMPTY_,MAYBE,_DUMMY_]
+					-1	0 % fail index
+
+			0	2	_DUMMY_	default
+					-1	72     % [_EMPTY_,_EMPTY_,NEXT,_DUMMY_]
+					-1	0 % fail index
+
+			0	3	_DUMMY_	TIME	default
+					-1	73     % [_EMPTY_,_EMPTY_,OTHER_INFO,_DUMMY_]
+					-1	74     % [_EMPTY_,_EMPTY_,OTHER_INFO,TIME]
+					-1	0 % fail index
+
+			0	2	_DUMMY_	default
+					-1	75     % [_EMPTY_,_EMPTY_,PERSON,_DUMMY_]
+					-1	0 % fail index
+
+			0	4	_DUMMY_	NUMBER	STATION	default
+					-1	76     % [_EMPTY_,_EMPTY_,PLATFORM,_DUMMY_]
+					-1	77     % [_EMPTY_,_EMPTY_,PLATFORM,NUMBER]
+					-1	78     % [_EMPTY_,_EMPTY_,PLATFORM,STATION]
+					-1	0 % fail index
+
+			0	3	_DUMMY_	TRAIN_TYPE	default
+					-1	79     % [_EMPTY_,_EMPTY_,PREVIOUS,_DUMMY_]
+					-1	80     % [_EMPTY_,_EMPTY_,PREVIOUS,TRAIN_TYPE]
+					-1	0 % fail index
+
+			0	5	_DUMMY_	AMOUNT	FROM	TO	default
+					-1	81     % [_EMPTY_,_EMPTY_,PRICE,_DUMMY_]
+					-1	82     % [_EMPTY_,_EMPTY_,PRICE,AMOUNT]
+					-1	83     % [_EMPTY_,_EMPTY_,PRICE,FROM]
+					-1	84     % [_EMPTY_,_EMPTY_,PRICE,TO]
+					-1	0 % fail index
+
+			0	5	_DUMMY_	ARRIVAL	TIME	TRAIN_TYPE	default
+					-1	85     % [_EMPTY_,_EMPTY_,REF,_DUMMY_]
+					-1	86     % [_EMPTY_,_EMPTY_,REF,ARRIVAL]
+					-1	87     % [_EMPTY_,_EMPTY_,REF,TIME]
+					-1	88     % [_EMPTY_,_EMPTY_,REF,TRAIN_TYPE]
+					-1	0 % fail index
+
+			0	5	_DUMMY_	OTHER_INFO	PLATFORM	TIME	default
+					-1	89     % [_EMPTY_,_EMPTY_,REJECT,_DUMMY_]
+					-1	90     % [_EMPTY_,_EMPTY_,REJECT,OTHER_INFO]
+					-1	91     % [_EMPTY_,_EMPTY_,REJECT,PLATFORM]
+					-1	92     % [_EMPTY_,_EMPTY_,REJECT,TIME]
+					-1	0 % fail index
+
+			0	2	_DUMMY_	default
+					-1	93     % [_EMPTY_,_EMPTY_,REPEAT,_DUMMY_]
+					-1	0 % fail index
+
+			0	2	_DUMMY_	default
+					-1	94     % [_EMPTY_,_EMPTY_,STATION,_DUMMY_]
+					-1	0 % fail index
+
+			0	2	_DUMMY_	default
+					-1	95     % [_EMPTY_,_EMPTY_,SYSTEM_FEATURE,_DUMMY_]
+					-1	0 % fail index
+
+			0	3	_DUMMY_	STATION	default
+					-1	96     % [_EMPTY_,_EMPTY_,THROUGH,_DUMMY_]
+					-1	97     % [_EMPTY_,_EMPTY_,THROUGH,STATION]
+					-1	0 % fail index
+
+			0	2	_DUMMY_	default
+					-1	98     % [_EMPTY_,_EMPTY_,TIME,_DUMMY_]
+					-1	0 % fail index
+
+			0	3	_DUMMY_	STATION	default
+					-1	99     % [_EMPTY_,_EMPTY_,TO,_DUMMY_]
+					-1	100    % [_EMPTY_,_EMPTY_,TO,STATION]
+					-1	0 % fail index
+
+			0	2	_DUMMY_	default
+					-1	101    % [_EMPTY_,_EMPTY_,TRAIN_TYPE,_DUMMY_]
+					-1	0 % fail index
+
+			0	3	_DUMMY_	STATION	default
+					-1	102    % [_EMPTY_,_EMPTY_,TRANSFER,_DUMMY_]
+					-1	103    % [_EMPTY_,_EMPTY_,TRANSFER,STATION]
+					-1	0 % fail index
+
+			0	3	_DUMMY_	STATION	default
+					-1	104    % [_EMPTY_,_EMPTY_,TROUGH,_DUMMY_]
+					-1	105    % [_EMPTY_,_EMPTY_,TROUGH,STATION]
+					-1	0 % fail index
+
+			0	3	_DUMMY_	TIME	default
+					-1	106    % [_EMPTY_,_EMPTY_,WAIT,_DUMMY_]
+					-1	107    % [_EMPTY_,_EMPTY_,WAIT,TIME]
+					-1	0 % fail index
+
+			0	2	_DUMMY_	default
+					-1	108    % [_EMPTY_,_EMPTY_,WHAT_TIME,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	6	ARRIVAL	FROM	SYSTEM_FEATURE	THROUGH	TIME	default
+			0	3	_DUMMY_	TIME	default
+					-1	109    % [_EMPTY_,ACCEPT,ARRIVAL,_DUMMY_]
+					-1	110    % [_EMPTY_,ACCEPT,ARRIVAL,TIME]
+					-1	0 % fail index
+
+			0	3	_DUMMY_	STATION	default
+					-1	111    % [_EMPTY_,ACCEPT,FROM,_DUMMY_]
+					-1	112    % [_EMPTY_,ACCEPT,FROM,STATION]
+					-1	0 % fail index
+
+			0	2	_DUMMY_	default
+					-1	113    % [_EMPTY_,ACCEPT,SYSTEM_FEATURE,_DUMMY_]
+					-1	0 % fail index
+
+			0	3	_DUMMY_	STATION	default
+					-1	114    % [_EMPTY_,ACCEPT,THROUGH,_DUMMY_]
+					-1	115    % [_EMPTY_,ACCEPT,THROUGH,STATION]
+					-1	0 % fail index
+
+			0	2	_DUMMY_	default
+					-1	116    % [_EMPTY_,ACCEPT,TIME,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	6	FROM	REF	TIME	TO	TRANSFER	default
+			0	2	_DUMMY_	default
+					-1	117    % [_EMPTY_,ARRIVAL,FROM,_DUMMY_]
+					-1	0 % fail index
+
+			0	2	_DUMMY_	default
+					-1	118    % [_EMPTY_,ARRIVAL,REF,_DUMMY_]
+					-1	0 % fail index
+
+			0	2	_DUMMY_	default
+					-1	119    % [_EMPTY_,ARRIVAL,TIME,_DUMMY_]
+					-1	0 % fail index
+
+			0	3	_DUMMY_	STATION	default
+					-1	120    % [_EMPTY_,ARRIVAL,TO,_DUMMY_]
+					-1	121    % [_EMPTY_,ARRIVAL,TO,STATION]
+					-1	0 % fail index
+
+			0	2	_DUMMY_	default
+					-1	122    % [_EMPTY_,ARRIVAL,TRANSFER,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	5	ARRIVAL	FROM	TIME	TO	default
+			0	3	_DUMMY_	TIME	default
+					-1	123    % [_EMPTY_,BACK,ARRIVAL,_DUMMY_]
+					-1	124    % [_EMPTY_,BACK,ARRIVAL,TIME]
+					-1	0 % fail index
+
+			0	3	_DUMMY_	STATION	default
+					-1	125    % [_EMPTY_,BACK,FROM,_DUMMY_]
+					-1	126    % [_EMPTY_,BACK,FROM,STATION]
+					-1	0 % fail index
+
+			0	2	_DUMMY_	default
+					-1	127    % [_EMPTY_,BACK,TIME,_DUMMY_]
+					-1	0 % fail index
+
+			0	3	_DUMMY_	STATION	default
+					-1	128    % [_EMPTY_,BACK,TO,_DUMMY_]
+					-1	129    % [_EMPTY_,BACK,TO,STATION]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	12	AMOUNT	ARRIVAL	FROM	NUMBER	PLATFORM	REF	THROUGH	TIME	TO	TRAIN_TYPE	TRANSFER	default
+			0	2	_DUMMY_	default
+					-1	130    % [_EMPTY_,DEPARTURE,AMOUNT,_DUMMY_]
+					-1	0 % fail index
+
+			0	5	_DUMMY_	FROM	TIME	TO	default
+					-1	131    % [_EMPTY_,DEPARTURE,ARRIVAL,_DUMMY_]
+					-1	132    % [_EMPTY_,DEPARTURE,ARRIVAL,FROM]
+					-1	133    % [_EMPTY_,DEPARTURE,ARRIVAL,TIME]
+					-1	134    % [_EMPTY_,DEPARTURE,ARRIVAL,TO]
+					-1	0 % fail index
+
+			0	3	_DUMMY_	STATION	default
+					-1	135    % [_EMPTY_,DEPARTURE,FROM,_DUMMY_]
+					-1	136    % [_EMPTY_,DEPARTURE,FROM,STATION]
+					-1	0 % fail index
+
+			0	2	_DUMMY_	default
+					-1	137    % [_EMPTY_,DEPARTURE,NUMBER,_DUMMY_]
+					-1	0 % fail index
+
+			0	3	_DUMMY_	NUMBER	default
+					-1	138    % [_EMPTY_,DEPARTURE,PLATFORM,_DUMMY_]
+					-1	139    % [_EMPTY_,DEPARTURE,PLATFORM,NUMBER]
+					-1	0 % fail index
+
+			0	3	_DUMMY_	FROM	default
+					-1	140    % [_EMPTY_,DEPARTURE,REF,_DUMMY_]
+					-1	141    % [_EMPTY_,DEPARTURE,REF,FROM]
+					-1	0 % fail index
+
+			0	3	_DUMMY_	STATION	default
+					-1	142    % [_EMPTY_,DEPARTURE,THROUGH,_DUMMY_]
+					-1	143    % [_EMPTY_,DEPARTURE,THROUGH,STATION]
+					-1	0 % fail index
+
+			0	2	_DUMMY_	default
+					-1	144    % [_EMPTY_,DEPARTURE,TIME,_DUMMY_]
+					-1	0 % fail index
+
+			0	3	_DUMMY_	STATION	default
+					-1	145    % [_EMPTY_,DEPARTURE,TO,_DUMMY_]
+					-1	146    % [_EMPTY_,DEPARTURE,TO,STATION]
+					-1	0 % fail index
+
+			0	2	_DUMMY_	default
+					-1	147    % [_EMPTY_,DEPARTURE,TRAIN_TYPE,_DUMMY_]
+					-1	0 % fail index
+
+			0	3	_DUMMY_	STATION	default
+					-1	148    % [_EMPTY_,DEPARTURE,TRANSFER,_DUMMY_]
+					-1	149    % [_EMPTY_,DEPARTURE,TRANSFER,STATION]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	4	FROM	LENGTH	TO	default
+			0	3	_DUMMY_	STATION	default
+					-1	150    % [_EMPTY_,DISTANCE,FROM,_DUMMY_]
+					-1	151    % [_EMPTY_,DISTANCE,FROM,STATION]
+					-1	0 % fail index
+
+			0	2	_DUMMY_	default
+					-1	152    % [_EMPTY_,DISTANCE,LENGTH,_DUMMY_]
+					-1	0 % fail index
+
+			0	3	_DUMMY_	STATION	default
+					-1	153    % [_EMPTY_,DISTANCE,TO,_DUMMY_]
+					-1	154    % [_EMPTY_,DISTANCE,TO,STATION]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	2	STATION	default
+			0	2	_DUMMY_	default
+					-1	155    % [_EMPTY_,FROM,STATION,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	2	PERSON	default
+			0	2	_DUMMY_	default
+					-1	156    % [_EMPTY_,GREETING,PERSON,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	2	TIME	default
+			0	2	_DUMMY_	default
+					-1	157    % [_EMPTY_,OTHER_INFO,TIME,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	3	NUMBER	STATION	default
+			0	2	_DUMMY_	default
+					-1	158    % [_EMPTY_,PLATFORM,NUMBER,_DUMMY_]
+					-1	0 % fail index
+
+			0	2	_DUMMY_	default
+					-1	159    % [_EMPTY_,PLATFORM,STATION,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	2	TRAIN_TYPE	default
+			0	2	_DUMMY_	default
+					-1	160    % [_EMPTY_,PREVIOUS,TRAIN_TYPE,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	4	AMOUNT	FROM	TO	default
+			0	2	_DUMMY_	default
+					-1	161    % [_EMPTY_,PRICE,AMOUNT,_DUMMY_]
+					-1	0 % fail index
+
+			0	3	_DUMMY_	STATION	default
+					-1	162    % [_EMPTY_,PRICE,FROM,_DUMMY_]
+					-1	163    % [_EMPTY_,PRICE,FROM,STATION]
+					-1	0 % fail index
+
+			0	3	_DUMMY_	STATION	default
+					-1	164    % [_EMPTY_,PRICE,TO,_DUMMY_]
+					-1	165    % [_EMPTY_,PRICE,TO,STATION]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	4	ARRIVAL	TIME	TRAIN_TYPE	default
+			0	4	_DUMMY_	TIME	TO	default
+					-1	166    % [_EMPTY_,REF,ARRIVAL,_DUMMY_]
+					-1	167    % [_EMPTY_,REF,ARRIVAL,TIME]
+					-1	168    % [_EMPTY_,REF,ARRIVAL,TO]
+					-1	0 % fail index
+
+			0	2	_DUMMY_	default
+					-1	169    % [_EMPTY_,REF,TIME,_DUMMY_]
+					-1	0 % fail index
+
+			0	2	_DUMMY_	default
+					-1	170    % [_EMPTY_,REF,TRAIN_TYPE,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	4	OTHER_INFO	PLATFORM	TIME	default
+			0	2	_DUMMY_	default
+					-1	171    % [_EMPTY_,REJECT,OTHER_INFO,_DUMMY_]
+					-1	0 % fail index
+
+			0	2	_DUMMY_	default
+					-1	172    % [_EMPTY_,REJECT,PLATFORM,_DUMMY_]
+					-1	0 % fail index
+
+			0	2	_DUMMY_	default
+					-1	173    % [_EMPTY_,REJECT,TIME,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	2	STATION	default
+			0	2	_DUMMY_	default
+					-1	174    % [_EMPTY_,THROUGH,STATION,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	2	STATION	default
+			0	2	_DUMMY_	default
+					-1	175    % [_EMPTY_,TO,STATION,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	2	STATION	default
+			0	2	_DUMMY_	default
+					-1	176    % [_EMPTY_,TRANSFER,STATION,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	2	STATION	default
+			0	2	_DUMMY_	default
+					-1	177    % [_EMPTY_,TROUGH,STATION,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	2	TIME	default
+			0	2	_DUMMY_	default
+					-1	178    % [_EMPTY_,WAIT,TIME,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		-1	0 % fail index
+
+	2	4	ARRIVAL	FROM	THROUGH	default
+		1	2	TIME	default
+			0	2	_DUMMY_	default
+					-1	179    % [ACCEPT,ARRIVAL,TIME,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	2	STATION	default
+			0	2	_DUMMY_	default
+					-1	180    % [ACCEPT,FROM,STATION,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	2	STATION	default
+			0	2	_DUMMY_	default
+					-1	181    % [ACCEPT,THROUGH,STATION,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		-1	0 % fail index
+
+	2	3	FROM	TO	default
+		1	2	STATION	default
+			0	2	_DUMMY_	default
+					-1	182    % [ARRIVAL,FROM,STATION,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	2	STATION	default
+			0	2	_DUMMY_	default
+					-1	183    % [ARRIVAL,TO,STATION,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		-1	0 % fail index
+
+	2	4	ARRIVAL	FROM	TO	default
+		1	2	TIME	default
+			0	2	_DUMMY_	default
+					-1	184    % [BACK,ARRIVAL,TIME,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	2	STATION	default
+			0	2	_DUMMY_	default
+					-1	185    % [BACK,FROM,STATION,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	2	STATION	default
+			0	2	_DUMMY_	default
+					-1	186    % [BACK,TO,STATION,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		-1	0 % fail index
+
+	2	8	ARRIVAL	FROM	PLATFORM	REF	THROUGH	TO	TRANSFER	default
+		1	4	FROM	TIME	TO	default
+			0	3	_DUMMY_	STATION	default
+					-1	187    % [DEPARTURE,ARRIVAL,FROM,_DUMMY_]
+					-1	188    % [DEPARTURE,ARRIVAL,FROM,STATION]
+					-1	0 % fail index
+
+			0	2	_DUMMY_	default
+					-1	189    % [DEPARTURE,ARRIVAL,TIME,_DUMMY_]
+					-1	0 % fail index
+
+			0	3	_DUMMY_	STATION	default
+					-1	190    % [DEPARTURE,ARRIVAL,TO,_DUMMY_]
+					-1	191    % [DEPARTURE,ARRIVAL,TO,STATION]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	2	STATION	default
+			0	2	_DUMMY_	default
+					-1	192    % [DEPARTURE,FROM,STATION,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	2	NUMBER	default
+			0	2	_DUMMY_	default
+					-1	193    % [DEPARTURE,PLATFORM,NUMBER,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	2	FROM	default
+			0	3	_DUMMY_	STATION	default
+					-1	194    % [DEPARTURE,REF,FROM,_DUMMY_]
+					-1	195    % [DEPARTURE,REF,FROM,STATION]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	2	STATION	default
+			0	2	_DUMMY_	default
+					-1	196    % [DEPARTURE,THROUGH,STATION,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	2	STATION	default
+			0	2	_DUMMY_	default
+					-1	197    % [DEPARTURE,TO,STATION,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	2	STATION	default
+			0	2	_DUMMY_	default
+					-1	198    % [DEPARTURE,TRANSFER,STATION,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		-1	0 % fail index
+
+	2	3	FROM	TO	default
+		1	2	STATION	default
+			0	2	_DUMMY_	default
+					-1	199    % [DISTANCE,FROM,STATION,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	2	STATION	default
+			0	2	_DUMMY_	default
+					-1	200    % [DISTANCE,TO,STATION,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		-1	0 % fail index
+
+	2	3	FROM	TO	default
+		1	2	STATION	default
+			0	2	_DUMMY_	default
+					-1	201    % [PRICE,FROM,STATION,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	2	STATION	default
+			0	2	_DUMMY_	default
+					-1	202    % [PRICE,TO,STATION,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		-1	0 % fail index
+
+	2	3	ARRIVAL	FROM	default
+		1	3	TIME	TO	default
+			0	2	_DUMMY_	default
+					-1	203    % [REF,ARRIVAL,TIME,_DUMMY_]
+					-1	0 % fail index
+
+			0	3	_DUMMY_	STATION	default
+					-1	204    % [REF,ARRIVAL,TO,_DUMMY_]
+					-1	205    % [REF,ARRIVAL,TO,STATION]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		1	2	STATION	default
+			0	2	_DUMMY_	default
+					-1	206    % [REF,FROM,STATION,_DUMMY_]
+					-1	0 % fail index
+
+			-1	0 % fail index
+
+		-1	0 % fail index
+
+	-1	0 % fail index
+

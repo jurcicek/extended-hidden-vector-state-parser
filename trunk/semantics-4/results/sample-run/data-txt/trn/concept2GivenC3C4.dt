@@ -1,0 +1,75 @@
+1 % number of Decision Trees
+0 % index of DT
+
+concept2GivenC3C4 % DT name
+2 % number of parents
+
+%% (C4,C3,C2,C1)
+
+1	9	_EMPTY_	ACCEPT	ARRIVAL	BACK	DEPARTURE	DISTANCE	PRICE	REF	default
+	0	20	_EMPTY_	ACCEPT	ARRIVAL	BACK	DEPARTURE	DISTANCE	FROM	GREETING	OTHER_INFO	PLATFORM	PREVIOUS	PRICE	REF	REJECT	THROUGH	TO	TRANSFER	TROUGH	WAIT	default
+			-1	1      % [_EMPTY_,_EMPTY_]
+			-1	2      % [_EMPTY_,ACCEPT]
+			-1	3      % [_EMPTY_,ARRIVAL]
+			-1	4      % [_EMPTY_,BACK]
+			-1	5      % [_EMPTY_,DEPARTURE]
+			-1	6      % [_EMPTY_,DISTANCE]
+			-1	7      % [_EMPTY_,FROM]
+			-1	8      % [_EMPTY_,GREETING]
+			-1	9      % [_EMPTY_,OTHER_INFO]
+			-1	10     % [_EMPTY_,PLATFORM]
+			-1	11     % [_EMPTY_,PREVIOUS]
+			-1	12     % [_EMPTY_,PRICE]
+			-1	13     % [_EMPTY_,REF]
+			-1	14     % [_EMPTY_,REJECT]
+			-1	15     % [_EMPTY_,THROUGH]
+			-1	16     % [_EMPTY_,TO]
+			-1	17     % [_EMPTY_,TRANSFER]
+			-1	18     % [_EMPTY_,TROUGH]
+			-1	19     % [_EMPTY_,WAIT]
+			-1	0 % fail index
+
+	0	4	ARRIVAL	FROM	THROUGH	default
+			-1	20     % [ACCEPT,ARRIVAL]
+			-1	21     % [ACCEPT,FROM]
+			-1	22     % [ACCEPT,THROUGH]
+			-1	0 % fail index
+
+	0	3	FROM	TO	default
+			-1	23     % [ARRIVAL,FROM]
+			-1	24     % [ARRIVAL,TO]
+			-1	0 % fail index
+
+	0	4	ARRIVAL	FROM	TO	default
+			-1	25     % [BACK,ARRIVAL]
+			-1	26     % [BACK,FROM]
+			-1	27     % [BACK,TO]
+			-1	0 % fail index
+
+	0	8	ARRIVAL	FROM	PLATFORM	REF	THROUGH	TO	TRANSFER	default
+			-1	28     % [DEPARTURE,ARRIVAL]
+			-1	29     % [DEPARTURE,FROM]
+			-1	30     % [DEPARTURE,PLATFORM]
+			-1	31     % [DEPARTURE,REF]
+			-1	32     % [DEPARTURE,THROUGH]
+			-1	33     % [DEPARTURE,TO]
+			-1	34     % [DEPARTURE,TRANSFER]
+			-1	0 % fail index
+
+	0	3	FROM	TO	default
+			-1	35     % [DISTANCE,FROM]
+			-1	36     % [DISTANCE,TO]
+			-1	0 % fail index
+
+	0	3	FROM	TO	default
+			-1	37     % [PRICE,FROM]
+			-1	38     % [PRICE,TO]
+			-1	0 % fail index
+
+	0	3	ARRIVAL	FROM	default
+			-1	39     % [REF,ARRIVAL]
+			-1	40     % [REF,FROM]
+			-1	0 % fail index
+
+	-1	0 % fail index
+

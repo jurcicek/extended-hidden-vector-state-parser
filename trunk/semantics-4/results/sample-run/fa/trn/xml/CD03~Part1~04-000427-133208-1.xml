@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task comment="" day="27" description="slevové průkazky pro děti" dialect="native" dialog="CD03~Part1~04-000427-133208-1" gender="male" hour="13" last-change="Tue May 23 00:04:42 2006" min="32" modified-by="XMLtextupdateLJ" month="04" pin="" processing-state="out-of-topic" quality="2" saved-by="Dialog Act Editor 1.0" specification="special" system="hhdis-nádraží" transcription_level="?" update_code="127" volume="2" year="2000">
+  <turn number="1" speaker="operator">
+    <utterance end_time="1.260" length="1.260" overlap="0" overlap_time="0.000" speaker="operator" start_time="0.000">
+      <text type="transcription">
+        informace prosím
+      </text>
+      <text type="normalized">
+        informace prosím
+      </text>
+      <text type="lemmatized">
+        informace prosit
+      </text>
+      <text type="pos_tagged">
+        NNFS2-----A---- VB-S---1P-AA---
+      </text>
+      <ne_typed_text>
+        informace prosím
+      </ne_typed_text>
+      <dialogue_act conversational_domain="frame" semantics="GREETING" speech_act="opening">
+        informace prosím
+      </dialogue_act>
+      <parametrized_act conversational_domain="frame" semantics="GREETING" speech_act="opening" type="lemmatized">
+        informace prosit
+      </parametrized_act>
+      <parametrized_act conversational_domain="frame" semantics="GREETING" speech_act="opening" type="pos_tagged">
+        NNFS2-----A---- VB-S---1P-AA---
+      </parametrized_act>
+      <text type="fa_trn">
+        GREETING(informace prosit)
+      </text>
+      <parametrized_act conversational_domain="frame" semantics="GREETING" speech_act="opening" type="fa_trn">
+        GREETING(informace prosit)
+      </parametrized_act>
+    </utterance>
+  </turn>
+  <turn number="2" speaker="user">
+    <utterance end_time="14.490" length="13.230" overlap="0" overlap_time="0.000" speaker="user" start_time="1.260">
+      <text type="transcription">
+        'hs' bystřický{jm} dobrý den prosím vás chtěl jsem se zeptat 'lb' 'hs' takhle 'hs' vydáváte taky 'hs' ňáký slevový průkazky pro 'hs' děti do patnácti let
+      </text>
+      <text type="normalized">
+        bystřický dobrý den prosím vás chtěl jsem se zeptat takto vydáváte také nějaký slevové průkazky pro děti do patnácti let
+      </text>
+      <text type="lemmatized">
+        bystřický dobrý den prosit ty chtít být se zeptat takto vydávat také nějaký slevový průkazka pro dítě do patnáct rok
+      </text>
+      <text type="pos_tagged">
+        AAMS1----1A---- AAMS1----1A---- NNIS1-----A---- VB-S---1P-AA--- PP-P4--2------- VpYS---XR-AA--- VB-S---1P-AA--- P7-X4---------- Vf--------A---- Db------------- VB-P---2P-AA--- Db------------- PZYS1---------- AAFP1----1A---- NNFP1-----A---- RR--4---------- NNFP4-----A---- RR--2---------- Cn-P2---------- NNNP2-----A----
+      </text>
+      <ne_typed_text>
+        [person] bystřický [/person] dobrý den prosím vás chtěl jsem se zeptat takto vydáváte také nějaký slevové průkazky pro děti do patnácti let
+      </ne_typed_text>
+      <dialogue_act conversational_domain="frame" semantics="GREETING(PERSON)" speech_act="opening">
+        [person] bystřický [/person] dobrý den
+      </dialogue_act>
+      <parametrized_act conversational_domain="frame" semantics="GREETING(PERSON)" speech_act="opening" type="lemmatized">
+        bystřický dobrý den
+      </parametrized_act>
+      <parametrized_act conversational_domain="frame" semantics="GREETING(PERSON)" speech_act="opening" type="pos_tagged">
+        AAMS1----1A---- AAMS1----1A---- NNIS1-----A----
+      </parametrized_act>
+      <dialogue_act conversational_domain="task" semantics="" speech_act="request_info">
+        prosím vás chtěl jsem se zeptat takto vydáváte také nějaký slevové průkazky pro děti do patnácti let
+      </dialogue_act>
+      <parametrized_act conversational_domain="task" semantics="" speech_act="request_info" type="lemmatized">
+        prosit ty chtít být se zeptat takto vydávat také nějaký slevový průkazka pro dítě do patnáct rok
+      </parametrized_act>
+      <parametrized_act conversational_domain="task" semantics="" speech_act="request_info" type="pos_tagged">
+        VB-S---1P-AA--- PP-P4--2------- VpYS---XR-AA--- VB-S---1P-AA--- P7-X4---------- Vf--------A---- Db------------- VB-P---2P-AA--- Db------------- PZYS1---------- AAFP1----1A---- NNFP1-----A---- RR--4---------- NNFP4-----A---- RR--2---------- Cn-P2---------- NNNP2-----A----
+      </parametrized_act>
+      <text type="fa_trn">
+        GREETING(PERSON(bystřický dobrý),den) prosím vás chtěl jsem se zeptat takto vydáváte také nějaký slevové průkazky pro děti do patnácti let
+      </text>
+      <parametrized_act conversational_domain="frame" semantics="GREETING(PERSON)" speech_act="opening" type="fa_trn">
+        GREETING(PERSON(bystřický dobrý),den)
+      </parametrized_act>
+      <parametrized_act conversational_domain="task" semantics="" speech_act="request_info" type="fa_trn">
+        prosím vás chtěl jsem se zeptat takto vydáváte také nějaký slevové průkazky pro děti do patnácti let
+      </parametrized_act>
+    </utterance>
+  </turn>
+  <turn number="3" speaker="operator">
+    <utterance end_time="22.312" length="7.822" overlap="0" overlap_time="0.000" speaker="operator" start_time="14.490">
+      <text type="transcription">
+        no tak *vod vod deseti let musí mít tu průkazku *a *to *by to se vystavuje dole u pokladny a musí bejt jedna fotografi(e)~
+      </text>
+      <text type="normalized">
+        no tak od od deseti let musí mít tu průkazku to se vystavuje dole u pokladny a musí být jedna fotografie
+      </text>
+      <text type="lemmatized">
+        no tak od od deset rok muset mít tady průkazka ten se vystavovat dole u pokladna a muset být jeden Fotografia
+      </text>
+      <text type="pos_tagged">
+        TT------------- Db------------- RR--2---------- RR--2---------- Cn-P2---------- NNNP2-----A---- VB-S---3P-AA--- Vf--------A---- Db------------1 NNFS4-----A---- PDNS1---------- P7-X4---------- VB-S---3P-AA--- Db------------- RR--2---------- NNFS2-----A---- J-------------- VB-S---3P-AA--- Vf--------A---- ClFS1---------- NNFS1-----A----
+      </text>
+      <ne_typed_text>
+        no tak od od deseti let musí mít tu průkazku to se vystavuje dole u pokladny a musí být jedna fotografie
+      </ne_typed_text>
+      <text type="fa_trn"/>
+    </utterance>
+  </turn>
+  <turn number="4" speaker="user">
+    <utterance end_time="27.169" length="4.857" overlap="0" overlap_time="0.000" speaker="user" start_time="22.312">
+      <text type="transcription">
+        'hs' no takže k tomu potřebuju fotografii *co copak (j)eště
+      </text>
+      <text type="normalized">
+        no takže k tomu potřebuju fotografii copak ještě
+      </text>
+      <text type="lemmatized">
+        no takže k ten potřebovat Fotografia copak ještě
+      </text>
+      <text type="pos_tagged">
+        TT------------- J-------------- RR--3---------- PDZS3---------- VB-S---1P-AA--- NNFS4-----A---- PQ--1---------- Db-------------
+      </text>
+      <ne_typed_text>
+        no takže k tomu potřebuju fotografii copak ještě
+      </ne_typed_text>
+      <text type="fa_trn"/>
+    </utterance>
+  </turn>
+  <turn number="5" speaker="operator">
+    <utterance end_time="28.000" length="0.831" overlap="0" overlap_time="0.000" speaker="operator" start_time="27.169">
+      <text type="transcription">
+        rodný list
+      </text>
+      <text type="normalized">
+        rodný list
+      </text>
+      <text type="lemmatized">
+        rodný List
+      </text>
+      <text type="pos_tagged">
+        AAIS1----1A---- NNMS1-----A----
+      </text>
+      <ne_typed_text>
+        rodný list
+      </ne_typed_text>
+      <text type="fa_trn"/>
+    </utterance>
+  </turn>
+  <turn number="6" speaker="user">
+    <utterance end_time="34.310" length="6.036" overlap="3" overlap_time="28.000" speaker="user" start_time="28.000">
+      <text type="transcription">
+        'hs' rodnej list stačí | a dole u u pokladny u u kterýkoliv || mi to vystaví
+      </text>
+      <text type="normalized">
+        rodný list stačí a dole u u pokladny u u kterýkoliv mi to vystaví
+      </text>
+      <text type="lemmatized">
+        rodný List stačit a dole u u pokladna u u kterýkoliv já ten vystavět
+      </text>
+      <text type="pos_tagged">
+        AAIS1----1A---- NNMS1-----A---- VB-S---3P-AA--- J-------------- Db------------- RR--2---------- RR--2---------- NNFS2-----A---- RR--2---------- RR--2---------- PZIS4---------- PH-S3--1------- PDNS1---------- VB-S---3P-AA---
+      </text>
+      <ne_typed_text>
+        rodný list stačí a dole u u pokladny u u kterýkoliv mi to vystaví
+      </ne_typed_text>
+      <text type="fa_trn"/>
+    </utterance>
+  </turn>
+  <turn number="7" speaker="operator">
+    <utterance end_time="34.310" length="0.823" overlap="2" overlap_time="33.212" speaker="operator" start_time="33.212">
+      <text type="transcription">
+        no ano ano
+      </text>
+      <text type="normalized">
+        no ano ano
+      </text>
+      <text type="lemmatized">
+        no ano ano
+      </text>
+      <text type="pos_tagged">
+        TT------------- TT------------- TT-------------
+      </text>
+      <ne_typed_text>
+        no ano ano
+      </ne_typed_text>
+      <text type="fa_trn"/>
+    </utterance>
+  </turn>
+  <turn number="8" speaker="user">
+    <utterance end_time="36.055" length="1.745" overlap="1" overlap_time="34.310" speaker="user" start_time="34.310">
+      <text type="transcription">
+        a platí se za to něco nebo
+      </text>
+      <text type="normalized">
+        a platí se za to něco nebo
+      </text>
+      <text type="lemmatized">
+        a platit se za ten něco nebo
+      </text>
+      <text type="pos_tagged">
+        J-------------- VB-S---3P-AA--- P7-X4---------- RR--4---------- PDNS4---------- PZ--1---------- J--------------
+      </text>
+      <ne_typed_text>
+        a platí se za to něco nebo
+      </ne_typed_text>
+      <text type="fa_trn"/>
+    </utterance>
+  </turn>
+  <turn number="9" speaker="operator">
+    <utterance end_time="38.540" length="2.485" overlap="0" overlap_time="0.000" speaker="operator" start_time="36.055">
+      <text type="transcription">
+        patnáct korun stojí ta průkazka s pouzdrem
+      </text>
+      <text type="normalized">
+        patnáct korun stojí ta průkazka s pouzdrem
+      </text>
+      <text type="lemmatized">
+        patnáct koruna stát ten průkazka s pouzdro
+      </text>
+      <text type="pos_tagged">
+        Cn-S1---------- NNFP2-----A---- VB-S---3P-AA--- PDNP1---------- NNFS1-----A---- RR--7---------- NNNS7-----A----
+      </text>
+      <ne_typed_text>
+        patnáct korun stojí ta průkazka s pouzdrem
+      </ne_typed_text>
+      <text type="fa_trn"/>
+    </utterance>
+  </turn>
+  <turn number="10" speaker="user">
+    <utterance end_time="41.471" length="2.931" overlap="0" overlap_time="0.000" speaker="user" start_time="38.540">
+      <text type="transcription">
+        s pouzdrem a jakpa dlouho to platí ještě mi řekněte
+      </text>
+      <text type="normalized">
+        s pouzdrem a jakpak dlouho to platí ještě mi řekněte
+      </text>
+      <text type="lemmatized">
+        s pouzdro a jakpak dlouho ten platit ještě já řeknout
+      </text>
+      <text type="pos_tagged">
+        RR--7---------- NNNS7-----A---- J-------------- Db------------- Dg-------1A---- PDNS1---------- VB-S---3P-AA--- Db------------- PH-S3--1------- Vi-P---2--A----
+      </text>
+      <ne_typed_text>
+        s pouzdrem a jakpak dlouho to platí ještě mi řekněte
+      </ne_typed_text>
+      <text type="fa_trn"/>
+    </utterance>
+  </turn>
+  <turn number="11" speaker="operator">
+    <utterance end_time="43.451" length="1.980" overlap="0" overlap_time="0.000" speaker="operator" start_time="41.471">
+      <text type="transcription">
+        no a je to do patnácti let
+      </text>
+      <text type="normalized">
+        no a je to do patnácti let
+      </text>
+      <text type="lemmatized">
+        no a být ten do patnáct rok
+      </text>
+      <text type="pos_tagged">
+        TT------------- J-------------- VB-S---3P-AA--- PDNS1---------- RR--2---------- Cn-P2---------- NNNP2-----A----
+      </text>
+      <ne_typed_text>
+        no a je to do patnácti let
+      </ne_typed_text>
+      <text type="fa_trn"/>
+    </utterance>
+  </turn>
+  <turn number="12" speaker="user">
+    <utterance end_time="50.484" length="7.033" overlap="0" overlap_time="0.000" speaker="user" start_time="43.451">
+      <text type="transcription">
+        do do patnácti let takže když tam pří(j)du teďka já nevím *na 'hs' zhruba když je holce jedenáct takže ty čtyry roky to to bude platit
+      </text>
+      <text type="normalized">
+        do do patnácti let takže když tam přijdu teď já nevím zhruba když je holce jedenáct takže ty čtyři roky to to bude platit
+      </text>
+      <text type="lemmatized">
+        do do patnáct rok takže když tam přijít teď já nevědět zhruba když být Holc jedenáct takže ty čtyři rok ten ten být platit
+      </text>
+      <text type="pos_tagged">
+        RR--2---------- RR--2---------- Cn-P2---------- NNNP2-----A---- J-------------- J-------------- Db------------- VB-S---1P-AA--- Db------------- PP-S1--1------- VB-S---1P-NA--- Db------------- J-------------- VB-S---3P-AA--- NNMS4-----A---- Cn-S4---------- J-------------- PP-S1--2------- ClXP1---------- NNIP1-----A---- PDNS4---------- PDNS1---------- VB-S---3F-AA--- Vf--------A----
+      </text>
+      <ne_typed_text>
+        do do patnácti let takže když tam přijdu teď já nevím zhruba když je holce jedenáct takže ty čtyři roky to to bude platit
+      </ne_typed_text>
+      <text type="fa_trn"/>
+    </utterance>
+  </turn>
+  <turn number="13" speaker="operator">
+    <utterance end_time="51.311" length="0.827" overlap="1" overlap_time="50.484" speaker="operator" start_time="50.484">
+      <text type="transcription">
+        'ps' ano ano
+      </text>
+      <text type="normalized">
+        ano ano
+      </text>
+      <text type="lemmatized">
+        ano ano
+      </text>
+      <text type="pos_tagged">
+        TT------------- TT-------------
+      </text>
+      <ne_typed_text>
+        ano ano
+      </ne_typed_text>
+      <text type="fa_trn"/>
+    </utterance>
+  </turn>
+  <turn number="14" speaker="user">
+    <utterance end_time="54.907" length="3.596" overlap="0" overlap_time="0.000" speaker="user" start_time="51.311">
+      <text type="transcription">
+        no protože voni to 'hs' u pokladny tam vždycky na mně chtěli 'hs'
+      </text>
+      <text type="normalized">
+        no protože oni to u pokladny tam vždycky na mně chtěli
+      </text>
+      <text type="lemmatized">
+        no protože on ten u pokladna tam vždycky na já chtít
+      </text>
+      <text type="pos_tagged">
+        TT------------- J-------------- PPMP1--3------- PDNS4---------- RR--2---------- NNFS2-----A---- Db------------- Db------------- RR--6---------- PP-S6--1------- VpMP---XR-AA---
+      </text>
+      <ne_typed_text>
+        no protože oni to u pokladny tam vždycky na mně chtěli
+      </ne_typed_text>
+      <text type="fa_trn"/>
+    </utterance>
+  </turn>
+  <turn number="15" speaker="operator">
+    <utterance end_time="56.992" length="2.085" overlap="0" overlap_time="0.000" speaker="operator" start_time="54.907">
+      <text type="transcription">
+        no vono vod deseti let musí bejt ta průkazka
+      </text>
+      <text type="normalized">
+        no ono od deseti let musí být ta průkazka
+      </text>
+      <text type="lemmatized">
+        no on od deset rok muset být ten průkazka
+      </text>
+      <text type="pos_tagged">
+        TT------------- PPNS1--3------- RR--2---------- Cn-P2---------- NNNP2-----A---- VB-S---3P-AA--- Vf--------A---- PDNP1---------- NNFS1-----A----
+      </text>
+      <ne_typed_text>
+        no ono od deseti let musí být ta průkazka
+      </ne_typed_text>
+      <text type="fa_trn"/>
+    </utterance>
+  </turn>
+  <turn number="16" speaker="user">
+    <utterance end_time="57.801" length="0.809" overlap="1" overlap_time="56.992" speaker="user" start_time="56.992">
+      <text type="transcription">
+        aha
+      </text>
+      <text type="normalized">
+        aha
+      </text>
+      <text type="lemmatized">
+        aha
+      </text>
+      <text type="pos_tagged">
+        II-------------
+      </text>
+      <ne_typed_text>
+        aha
+      </ne_typed_text>
+      <text type="fa_trn"/>
+    </utterance>
+  </turn>
+  <turn number="17" speaker="operator">
+    <utterance end_time="59.321" length="1.520" overlap="0" overlap_time="0.000" speaker="operator" start_time="57.801">
+      <text type="transcription">
+        jo to je v předpisech
+      </text>
+      <text type="normalized">
+        jo to je v předpisech
+      </text>
+      <text type="lemmatized">
+        jo ten být v předpis
+      </text>
+      <text type="pos_tagged">
+        TT------------- PDNS1---------- VB-S---3P-AA--- RR--6---------- NNIP6-----A----
+      </text>
+      <ne_typed_text>
+        jo to je v předpisech
+      </ne_typed_text>
+      <text type="fa_trn"/>
+    </utterance>
+  </turn>
+  <turn number="18" speaker="user">
+    <utterance end_time="64.283" length="4.962" overlap="0" overlap_time="0.000" speaker="user" start_time="59.321">
+      <text type="transcription">
+        aha aha a na počkáni by mně
+      </text>
+      <text type="normalized">
+        aha aha a na počkání by mně
+      </text>
+      <text type="lemmatized">
+        aha aha a na počkání být já
+      </text>
+      <text type="pos_tagged">
+        II------------- II------------- J-------------- RR--6---------- NNNS6-----A---- Vc-X---3------- PP-S3--1-------
+      </text>
+      <ne_typed_text>
+        aha aha a na počkání by mně
+      </ne_typed_text>
+      <text type="fa_trn"/>
+    </utterance>
+  </turn>
+  <turn number="19" speaker="operator">
+    <utterance end_time="65.471" length="1.188" overlap="1" overlap_time="64.283" speaker="operator" start_time="64.283">
+      <text type="transcription">
+        ano na počkání
+      </text>
+      <text type="normalized">
+        ano na počkání
+      </text>
+      <text type="lemmatized">
+        ano na počkání
+      </text>
+      <text type="pos_tagged">
+        TT------------- RR--6---------- NNNS6-----A----
+      </text>
+      <ne_typed_text>
+        ano na počkání
+      </ne_typed_text>
+      <text type="fa_trn"/>
+    </utterance>
+  </turn>
+  <turn number="20" speaker="user">
+    <utterance end_time="71.200" length="1.922" overlap="2" overlap_time="68.637" speaker="user" start_time="68.637">
+      <text type="transcription">
+        dobře děkuju mockrát zatím nashledanou
+      </text>
+      <text type="normalized">
+        dobře děkuji mockrát zatím nashledanou
+      </text>
+      <text type="lemmatized">
+        dobře děkovat mockrát zatím nashledanou
+      </text>
+      <text type="pos_tagged">
+        Dg-------1A---- VB-S---1P-AA--1 Cv------------- Db------------- AAFS4----1A----
+      </text>
+      <ne_typed_text>
+        dobře děkuji mockrát zatím nashledanou
+      </ne_typed_text>
+      <text type="fa_trn"/>
+    </utterance>
+  </turn>
+  <turn number="21" speaker="operator">
+    <utterance end_time="71.200" length="1.922" overlap="2" overlap_time="68.637" speaker="operator" start_time="68.637">
+      <text type="transcription">
+        prosím nashledanou
+      </text>
+      <text type="normalized">
+        prosím nashledanou
+      </text>
+      <text type="lemmatized">
+        prosit nashledanou
+      </text>
+      <text type="pos_tagged">
+        VB-S---1P-AA--- AAFS4----1A----
+      </text>
+      <ne_typed_text>
+        prosím nashledanou
+      </ne_typed_text>
+      <dialogue_act conversational_domain="frame" semantics="GREETING" speech_act="closing">
+        prosím nashledanou
+      </dialogue_act>
+      <parametrized_act conversational_domain="frame" semantics="GREETING" speech_act="closing" type="lemmatized">
+        prosit nashledanou
+      </parametrized_act>
+      <parametrized_act conversational_domain="frame" semantics="GREETING" speech_act="closing" type="pos_tagged">
+        VB-S---1P-AA--- AAFS4----1A----
+      </parametrized_act>
+      <text type="fa_trn">
+        GREETING(prosit nashledanou)
+      </text>
+      <parametrized_act conversational_domain="frame" semantics="GREETING" speech_act="closing" type="fa_trn">
+        GREETING(prosit nashledanou)
+      </parametrized_act>
+    </utterance>
+  </turn>
+</task>

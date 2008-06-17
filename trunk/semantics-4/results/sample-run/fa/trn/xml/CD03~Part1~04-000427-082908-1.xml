@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task comment="" day="27" description="" dialect="native" dialog="CD03~Part1~04-000427-082908-1" gender="female" hour="08" last-change="Tue May 23 00:04:40 2006" min="29" modified-by="XMLtextupdateLJ" month="04" pin="" processing-state="approved" quality="3" saved-by="Dialog Act Editor 1.0" specification="" system="hhdis-nádraží" transcription_level="?" update_code="127" volume="2" year="2000">
+  <turn number="1" speaker="operator">
+    <utterance end_time="1.870" length="1.870" overlap="0" overlap_time="0.000" speaker="operator" start_time="0.000">
+      <text type="transcription">
+        informace prosím
+      </text>
+      <text type="normalized">
+        informace prosím
+      </text>
+      <text type="lemmatized">
+        informace prosit
+      </text>
+      <text type="pos_tagged">
+        NNFS2-----A---- VB-S---1P-AA---
+      </text>
+      <ne_typed_text>
+        informace prosím
+      </ne_typed_text>
+      <dialogue_act conversational_domain="frame" semantics="GREETING" speech_act="opening">
+        informace prosím
+      </dialogue_act>
+      <parametrized_act conversational_domain="frame" semantics="GREETING" speech_act="opening" type="lemmatized">
+        informace prosit
+      </parametrized_act>
+      <parametrized_act conversational_domain="frame" semantics="GREETING" speech_act="opening" type="pos_tagged">
+        NNFS2-----A---- VB-S---1P-AA---
+      </parametrized_act>
+      <text type="fa_trn">
+        GREETING(informace prosit)
+      </text>
+      <parametrized_act conversational_domain="frame" semantics="GREETING" speech_act="opening" type="fa_trn">
+        GREETING(informace prosit)
+      </parametrized_act>
+    </utterance>
+  </turn>
+  <turn number="2" speaker="user">
+    <utterance end_time="7.930" length="6.060" overlap="1" overlap_time="1.870" speaker="user" start_time="1.870">
+      <text type="transcription">
+        dobrý den gaboňková{jm} já bych se chtěla zeptat jak jezdí vlaky 'hs' z plzně{st} teďko do dobřan{st}
+      </text>
+      <text type="normalized">
+        dobrý den gaboňková já bych se chtěla zeptat jak jezdí vlaky z plzně teď do dobřan
+      </text>
+      <text type="lemmatized">
+        dobrý den GABOŇKOVÁ já být se chtít zeptat jak jezdit vlak z Plzeň teď do Dobřany
+      </text>
+      <text type="pos_tagged">
+        AAIS1----1A---- NNIS1-----A---- NNFS1-----A---- PP-S1--1------- Vc-S---1------- P7-X4---------- VpQW---XR-AA--- Vf--------A---- Db------------- VB-P---3P-AA--- NNIP1-----A---- RR--2---------- NNFS2-----A---- Db------------- RR--2---------- NNMS1-----A----
+      </text>
+      <ne_typed_text>
+        dobrý den [person] gaboňková [/person] já bych se chtěla zeptat jak jezdí vlaky z [station] plzně [/station] teď do [station] dobřan [/station]
+      </ne_typed_text>
+      <dialogue_act conversational_domain="frame" semantics="GREETING, PERSON" speech_act="opening">
+        dobrý den [person] gaboňková [/person]
+      </dialogue_act>
+      <parametrized_act conversational_domain="frame" semantics="GREETING, PERSON" speech_act="opening" type="lemmatized">
+        dobrý den GABOŇKOVÁ
+      </parametrized_act>
+      <parametrized_act conversational_domain="frame" semantics="GREETING, PERSON" speech_act="opening" type="pos_tagged">
+        AAIS1----1A---- NNIS1-----A---- NNFS1-----A----
+      </parametrized_act>
+      <dialogue_act conversational_domain="task" semantics="DEPARTURE(FROM(STATION), TIME, TO(STATION))" speech_act="request_info">
+        já bych se chtěla zeptat jak jezdí vlaky z [station] plzně [/station] teď do [station] dobřan [/station]
+      </dialogue_act>
+      <parametrized_act conversational_domain="task" semantics="DEPARTURE(FROM(STATION), TIME, TO(STATION))" speech_act="request_info" type="lemmatized">
+        já být se chtít zeptat jak jezdit vlak z Plzeň teď do Dobřany
+      </parametrized_act>
+      <parametrized_act conversational_domain="task" semantics="DEPARTURE(FROM(STATION), TIME, TO(STATION))" speech_act="request_info" type="pos_tagged">
+        PP-S1--1------- Vc-S---1------- P7-X4---------- VpQW---XR-AA--- Vf--------A---- Db------------- VB-P---3P-AA--- NNIP1-----A---- RR--2---------- NNFS2-----A---- Db------------- RR--2---------- NNMS1-----A----
+      </parametrized_act>
+      <text type="fa_trn">
+        GREETING(dobrý den),PERSON(gaboňková) DEPARTURE(já být se chtít zeptat jak jezdit vlak,FROM(z,STATION(plzeň)),TIME(teď),TO(do,STATION(dobřany)))
+      </text>
+      <parametrized_act conversational_domain="frame" semantics="GREETING, PERSON" speech_act="opening" type="fa_trn">
+        GREETING(dobrý den),PERSON(gaboňková)
+      </parametrized_act>
+      <parametrized_act conversational_domain="task" semantics="DEPARTURE(FROM(STATION), TIME, TO(STATION))" speech_act="request_info" type="fa_trn">
+        DEPARTURE(já být se chtít zeptat jak jezdit vlak,FROM(z,STATION(plzeň)),TIME(teď),TO(do,STATION(dobřany)))
+      </parametrized_act>
+    </utterance>
+  </turn>
+  <turn number="3" speaker="operator">
+    <utterance end_time="12.820" length="4.890" overlap="0" overlap_time="0.000" speaker="operator" start_time="7.930">
+      <text type="transcription">
+        'lb' teďko z plzně{st} do dobřan{st} takže první máte deset padesát dva
+      </text>
+      <text type="normalized">
+        teď z plzně do dobřan takže první máte deset padesát dva
+      </text>
+      <text type="lemmatized">
+        teď z Plzeň do Dobřany takže první mít deset padesát dva
+      </text>
+      <text type="pos_tagged">
+        Db------------- RR--2---------- NNFS2-----A---- RR--2---------- NNMS1-----A---- J-------------- CrMS1---------- VB-P---2P-AA--- Cn-S1---------- Cn-S1---------- ClYP1----------
+      </text>
+      <ne_typed_text>
+        teď z [station] plzně [/station] do [station] dobřan [/station] takže první máte deset padesát dva
+      </ne_typed_text>
+      <dialogue_act conversational_domain="communication" semantics="TIME, FROM(STATION), TO(STATION)" speech_act="implicit_confirmation">
+        teď z [station] plzně [/station] do [station] dobřan [/station]
+      </dialogue_act>
+      <parametrized_act conversational_domain="communication" semantics="TIME, FROM(STATION), TO(STATION)" speech_act="implicit_confirmation" type="lemmatized">
+        teď z Plzeň do Dobřany
+      </parametrized_act>
+      <parametrized_act conversational_domain="communication" semantics="TIME, FROM(STATION), TO(STATION)" speech_act="implicit_confirmation" type="pos_tagged">
+        Db------------- RR--2---------- NNFS2-----A---- RR--2---------- NNMS1-----A----
+      </parametrized_act>
+      <dialogue_act conversational_domain="task" semantics="DEPARTURE(NUMBER, TIME)" speech_act="present_info">
+        takže první máte deset padesát dva
+      </dialogue_act>
+      <parametrized_act conversational_domain="task" semantics="DEPARTURE(NUMBER, TIME)" speech_act="present_info" type="lemmatized">
+        takže první mít deset padesát dva
+      </parametrized_act>
+      <parametrized_act conversational_domain="task" semantics="DEPARTURE(NUMBER, TIME)" speech_act="present_info" type="pos_tagged">
+        J-------------- CrMS1---------- VB-P---2P-AA--- Cn-S1---------- Cn-S1---------- ClYP1----------
+      </parametrized_act>
+      <text type="fa_trn">
+        TIME(teď),FROM(z,STATION(plzeň)),TO(do,STATION(dobřany)) DEPARTURE(takže první mít,NUMBER(deset),TIME(padesát dva))
+      </text>
+      <parametrized_act conversational_domain="communication" semantics="TIME, FROM(STATION), TO(STATION)" speech_act="implicit_confirmation" type="fa_trn">
+        TIME(teď),FROM(z,STATION(plzeň)),TO(do,STATION(dobřany))
+      </parametrized_act>
+      <parametrized_act conversational_domain="task" semantics="DEPARTURE(NUMBER, TIME)" speech_act="present_info" type="fa_trn">
+        DEPARTURE(takže první mít,NUMBER(deset),TIME(padesát dva))
+      </parametrized_act>
+    </utterance>
+  </turn>
+  <turn number="4" speaker="user">
+    <utterance end_time="14.387" length="1.567" overlap="0" overlap_time="0.000" speaker="user" start_time="12.820">
+      <text type="transcription">
+        'mh' deset padesát dva
+      </text>
+      <text type="normalized">
+        deset padesát dva
+      </text>
+      <text type="lemmatized">
+        deset padesát dva
+      </text>
+      <text type="pos_tagged">
+        Cn-S1---------- Cn-S1---------- ClYP1----------
+      </text>
+      <ne_typed_text>
+        deset padesát dva
+      </ne_typed_text>
+      <dialogue_act conversational_domain="communication" semantics="TIME" speech_act="implicit_confirmation">
+        deset padesát dva
+      </dialogue_act>
+      <parametrized_act conversational_domain="communication" semantics="TIME" speech_act="implicit_confirmation" type="lemmatized">
+        deset padesát dva
+      </parametrized_act>
+      <parametrized_act conversational_domain="communication" semantics="TIME" speech_act="implicit_confirmation" type="pos_tagged">
+        Cn-S1---------- Cn-S1---------- ClYP1----------
+      </parametrized_act>
+      <text type="fa_trn">
+        TIME(deset padesát dva)
+      </text>
+      <parametrized_act conversational_domain="communication" semantics="TIME" speech_act="implicit_confirmation" type="fa_trn">
+        TIME(deset padesát dva)
+      </parametrized_act>
+    </utterance>
+  </turn>
+  <turn number="5" speaker="operator">
+    <utterance end_time="14.877" length="0.490" overlap="1" overlap_time="14.387" speaker="operator" start_time="14.387">
+      <text type="transcription">
+        ano
+      </text>
+      <text type="normalized">
+        ano
+      </text>
+      <text type="lemmatized">
+        ano
+      </text>
+      <text type="pos_tagged">
+        TT-------------
+      </text>
+      <ne_typed_text>
+        ano
+      </ne_typed_text>
+      <dialogue_act conversational_domain="communication" semantics="ACCEPT" speech_act="acknowledgement">
+        ano
+      </dialogue_act>
+      <parametrized_act conversational_domain="communication" semantics="ACCEPT" speech_act="acknowledgement" type="lemmatized">
+        ano
+      </parametrized_act>
+      <parametrized_act conversational_domain="communication" semantics="ACCEPT" speech_act="acknowledgement" type="pos_tagged">
+        TT-------------
+      </parametrized_act>
+      <text type="fa_trn">
+        ACCEPT(ano)
+      </text>
+      <parametrized_act conversational_domain="communication" semantics="ACCEPT" speech_act="acknowledgement" type="fa_trn">
+        ACCEPT(ano)
+      </parametrized_act>
+    </utterance>
+  </turn>
+  <turn number="6" speaker="user">
+    <utterance end_time="16.490" length="1.613" overlap="0" overlap_time="0.000" speaker="user" start_time="14.877">
+      <text type="transcription">
+        a dřív už ne
+      </text>
+      <text type="normalized">
+        a dříve už ne
+      </text>
+      <text type="lemmatized">
+        a brzy už ne
+      </text>
+      <text type="pos_tagged">
+        J-------------- Dg-------2A---- Db------------- TT-------------
+      </text>
+      <ne_typed_text>
+        a dříve už ne
+      </ne_typed_text>
+      <dialogue_act conversational_domain="task" semantics="PREVIOUS" speech_act="request_info">
+        a dříve už ne
+      </dialogue_act>
+      <parametrized_act conversational_domain="task" semantics="PREVIOUS" speech_act="request_info" type="lemmatized">
+        a brzy už ne
+      </parametrized_act>
+      <parametrized_act conversational_domain="task" semantics="PREVIOUS" speech_act="request_info" type="pos_tagged">
+        J-------------- Dg-------2A---- Db------------- TT-------------
+      </parametrized_act>
+      <text type="fa_trn">
+        PREVIOUS(a brzy už ne)
+      </text>
+      <parametrized_act conversational_domain="task" semantics="PREVIOUS" speech_act="request_info" type="fa_trn">
+        PREVIOUS(a brzy už ne)
+      </parametrized_act>
+    </utterance>
+  </turn>
+  <turn number="7" speaker="operator">
+    <utterance end_time="18.738" length="2.248" overlap="0" overlap_time="0.000" speaker="operator" start_time="16.490">
+      <text type="transcription">
+        ne ne ten už jel osm nula pět
+      </text>
+      <text type="normalized">
+        ne ne ten už jel osm nula pět
+      </text>
+      <text type="lemmatized">
+        ne ne ten už jet osm nula pět
+      </text>
+      <text type="pos_tagged">
+        TT------------- TT------------- PDIS4---------- Db------------- VpYS---XR-AA--- Cn-S4---------- NNFS1-----A---- Cn-S1----------
+      </text>
+      <ne_typed_text>
+        ne ne ten už jel osm nula pět
+      </ne_typed_text>
+      <dialogue_act conversational_domain="task" semantics="REJECT(TIME)" speech_act="acknowledgement">
+        ne ne ten už jel osm nula pět
+      </dialogue_act>
+      <parametrized_act conversational_domain="task" semantics="REJECT(TIME)" speech_act="acknowledgement" type="lemmatized">
+        ne ne ten už jet osm nula pět
+      </parametrized_act>
+      <parametrized_act conversational_domain="task" semantics="REJECT(TIME)" speech_act="acknowledgement" type="pos_tagged">
+        TT------------- TT------------- PDIS4---------- Db------------- VpYS---XR-AA--- Cn-S4---------- NNFS1-----A---- Cn-S1----------
+      </parametrized_act>
+      <text type="fa_trn">
+        REJECT(ne ten už,TIME(jet osm nula pět))
+      </text>
+      <parametrized_act conversational_domain="task" semantics="REJECT(TIME)" speech_act="acknowledgement" type="fa_trn">
+        REJECT(ne ten už,TIME(jet osm nula pět))
+      </parametrized_act>
+    </utterance>
+  </turn>
+  <turn number="8" speaker="user">
+    <utterance end_time="21.802" length="3.064" overlap="0" overlap_time="0.000" speaker="user" start_time="18.738">
+      <text type="transcription">
+        osm nula pět už přijel | dobře takže vám mnohokrát děku(ji)~
+      </text>
+      <text type="normalized">
+        osm nula pět už přijel dobře takže vám mnohokrát děkuji
+      </text>
+      <text type="lemmatized">
+        osm nula pět už přijet dobře takže ty mnohokrát děkovat
+      </text>
+      <text type="pos_tagged">
+        Cn-S4---------- NNFS1-----A---- Cn-S1---------- Db------------- VpYS---XR-AA--- Dg-------1A---- J-------------- PP-P3--2------- Co------------- VB-S---1P-AA--1
+      </text>
+      <ne_typed_text>
+        osm nula pět už přijel dobře takže vám mnohokrát děkuji
+      </ne_typed_text>
+      <dialogue_act conversational_domain="task" semantics="ACCEPT(ARRIVAL(TIME))" speech_act="acknowledgement">
+        osm nula pět už přijel dobře
+      </dialogue_act>
+      <parametrized_act conversational_domain="task" semantics="ACCEPT(ARRIVAL(TIME))" speech_act="acknowledgement" type="lemmatized">
+        osm nula pět už přijet dobře
+      </parametrized_act>
+      <parametrized_act conversational_domain="task" semantics="ACCEPT(ARRIVAL(TIME))" speech_act="acknowledgement" type="pos_tagged">
+        Cn-S4---------- NNFS1-----A---- Cn-S1---------- Db------------- VpYS---XR-AA--- Dg-------1A----
+      </parametrized_act>
+      <dialogue_act conversational_domain="frame" semantics="" speech_act="thanking">
+        takže vám mnohokrát děkuji
+      </dialogue_act>
+      <parametrized_act conversational_domain="frame" semantics="" speech_act="thanking" type="lemmatized">
+        takže ty mnohokrát děkovat
+      </parametrized_act>
+      <parametrized_act conversational_domain="frame" semantics="" speech_act="thanking" type="pos_tagged">
+        J-------------- PP-P3--2------- Co------------- VB-S---1P-AA--1
+      </parametrized_act>
+      <text type="fa_trn">
+        ACCEPT(ARRIVAL(osm nula,TIME(pět už přijet)),dobře) takže vám mnohokrát děkuji
+      </text>
+      <parametrized_act conversational_domain="task" semantics="ACCEPT(ARRIVAL(TIME))" speech_act="acknowledgement" type="fa_trn">
+        ACCEPT(ARRIVAL(osm nula,TIME(pět už přijet)),dobře)
+      </parametrized_act>
+      <parametrized_act conversational_domain="frame" semantics="" speech_act="thanking" type="fa_trn">
+        takže vám mnohokrát děkuji
+      </parametrized_act>
+    </utterance>
+  </turn>
+  <turn number="9" speaker="operator">
+    <utterance end_time="23.672" length="1.403" overlap="2" overlap_time="21.802" speaker="operator" start_time="21.802">
+      <text type="transcription">
+        není zač | nashledanou
+      </text>
+      <text type="normalized">
+        není zač nashledanou
+      </text>
+      <text type="lemmatized">
+        nebýt zač nashledanou
+      </text>
+      <text type="pos_tagged">
+        VB-S---3P-NA--- PY------------- AAFS4----1A----
+      </text>
+      <ne_typed_text>
+        není zač nashledanou
+      </ne_typed_text>
+      <dialogue_act conversational_domain="frame" semantics="" speech_act="thanking">
+        není zač
+      </dialogue_act>
+      <parametrized_act conversational_domain="frame" semantics="" speech_act="thanking" type="lemmatized">
+        nebýt zač
+      </parametrized_act>
+      <parametrized_act conversational_domain="frame" semantics="" speech_act="thanking" type="pos_tagged">
+        VB-S---3P-NA--- PY-------------
+      </parametrized_act>
+      <dialogue_act conversational_domain="frame" semantics="" speech_act="closing">
+        nashledanou
+      </dialogue_act>
+      <parametrized_act conversational_domain="frame" semantics="" speech_act="closing" type="lemmatized">
+        nashledanou
+      </parametrized_act>
+      <parametrized_act conversational_domain="frame" semantics="" speech_act="closing" type="pos_tagged">
+        AAFS4----1A----
+      </parametrized_act>
+      <text type="fa_trn">
+        není zač nashledanou
+      </text>
+      <parametrized_act conversational_domain="frame" semantics="" speech_act="thanking" type="fa_trn">
+        není zač
+      </parametrized_act>
+      <parametrized_act conversational_domain="frame" semantics="" speech_act="closing" type="fa_trn">
+        nashledanou
+      </parametrized_act>
+    </utterance>
+  </turn>
+  <turn number="10" speaker="user">
+    <utterance end_time="23.672" length="1.403" overlap="2" overlap_time="21.802" speaker="user" start_time="21.802">
+      <text type="transcription">
+        nashledanou
+      </text>
+      <text type="normalized">
+        nashledanou
+      </text>
+      <text type="lemmatized">
+        nashledanou
+      </text>
+      <text type="pos_tagged">
+        AAFS4----1A----
+      </text>
+      <ne_typed_text>
+        nashledanou
+      </ne_typed_text>
+      <dialogue_act conversational_domain="frame" semantics="" speech_act="closing">
+        nashledanou
+      </dialogue_act>
+      <parametrized_act conversational_domain="frame" semantics="" speech_act="closing" type="lemmatized">
+        nashledanou
+      </parametrized_act>
+      <parametrized_act conversational_domain="frame" semantics="" speech_act="closing" type="pos_tagged">
+        AAFS4----1A----
+      </parametrized_act>
+      <text type="fa_trn">
+        nashledanou
+      </text>
+      <parametrized_act conversational_domain="frame" semantics="" speech_act="closing" type="fa_trn">
+        nashledanou
+      </parametrized_act>
+    </utterance>
+  </turn>
+</task>

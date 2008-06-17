@@ -1,0 +1,257 @@
+1 % number of Decision Trees
+0 % index of DT
+
+concept1GivenC2C3C4 % DT name
+3 % number of parents
+
+%% (C4,C3,C2,C1)
+
+2	9	_EMPTY_	ACCEPT	ARRIVAL	BACK	DEPARTURE	DISTANCE	PRICE	REF	default
+	1	20	_EMPTY_	ACCEPT	ARRIVAL	BACK	DEPARTURE	DISTANCE	FROM	GREETING	OTHER_INFO	PLATFORM	PREVIOUS	PRICE	REF	REJECT	THROUGH	TO	TRANSFER	TROUGH	WAIT	default
+		0	31	_EMPTY_	ACCEPT	AREA	ARRIVAL	BACK	DELAY	DEPARTURE	DISTANCE	FROM	GREETING	MAYBE	NEXT	OTHER_INFO	PERSON	PLATFORM	PREVIOUS	PRICE	REF	REJECT	REPEAT	STATION	SYSTEM_FEATURE	THROUGH	TIME	TO	TRAIN_TYPE	TRANSFER	TROUGH	WAIT	WHAT_TIME	default
+				-1	1      % [_EMPTY_,_EMPTY_,_EMPTY_]
+				-1	2      % [_EMPTY_,_EMPTY_,ACCEPT]
+				-1	3      % [_EMPTY_,_EMPTY_,AREA]
+				-1	4      % [_EMPTY_,_EMPTY_,ARRIVAL]
+				-1	5      % [_EMPTY_,_EMPTY_,BACK]
+				-1	6      % [_EMPTY_,_EMPTY_,DELAY]
+				-1	7      % [_EMPTY_,_EMPTY_,DEPARTURE]
+				-1	8      % [_EMPTY_,_EMPTY_,DISTANCE]
+				-1	9      % [_EMPTY_,_EMPTY_,FROM]
+				-1	10     % [_EMPTY_,_EMPTY_,GREETING]
+				-1	11     % [_EMPTY_,_EMPTY_,MAYBE]
+				-1	12     % [_EMPTY_,_EMPTY_,NEXT]
+				-1	13     % [_EMPTY_,_EMPTY_,OTHER_INFO]
+				-1	14     % [_EMPTY_,_EMPTY_,PERSON]
+				-1	15     % [_EMPTY_,_EMPTY_,PLATFORM]
+				-1	16     % [_EMPTY_,_EMPTY_,PREVIOUS]
+				-1	17     % [_EMPTY_,_EMPTY_,PRICE]
+				-1	18     % [_EMPTY_,_EMPTY_,REF]
+				-1	19     % [_EMPTY_,_EMPTY_,REJECT]
+				-1	20     % [_EMPTY_,_EMPTY_,REPEAT]
+				-1	21     % [_EMPTY_,_EMPTY_,STATION]
+				-1	22     % [_EMPTY_,_EMPTY_,SYSTEM_FEATURE]
+				-1	23     % [_EMPTY_,_EMPTY_,THROUGH]
+				-1	24     % [_EMPTY_,_EMPTY_,TIME]
+				-1	25     % [_EMPTY_,_EMPTY_,TO]
+				-1	26     % [_EMPTY_,_EMPTY_,TRAIN_TYPE]
+				-1	27     % [_EMPTY_,_EMPTY_,TRANSFER]
+				-1	28     % [_EMPTY_,_EMPTY_,TROUGH]
+				-1	29     % [_EMPTY_,_EMPTY_,WAIT]
+				-1	30     % [_EMPTY_,_EMPTY_,WHAT_TIME]
+				-1	0 % fail index
+
+		0	6	ARRIVAL	FROM	SYSTEM_FEATURE	THROUGH	TIME	default
+				-1	31     % [_EMPTY_,ACCEPT,ARRIVAL]
+				-1	32     % [_EMPTY_,ACCEPT,FROM]
+				-1	33     % [_EMPTY_,ACCEPT,SYSTEM_FEATURE]
+				-1	34     % [_EMPTY_,ACCEPT,THROUGH]
+				-1	35     % [_EMPTY_,ACCEPT,TIME]
+				-1	0 % fail index
+
+		0	6	FROM	REF	TIME	TO	TRANSFER	default
+				-1	36     % [_EMPTY_,ARRIVAL,FROM]
+				-1	37     % [_EMPTY_,ARRIVAL,REF]
+				-1	38     % [_EMPTY_,ARRIVAL,TIME]
+				-1	39     % [_EMPTY_,ARRIVAL,TO]
+				-1	40     % [_EMPTY_,ARRIVAL,TRANSFER]
+				-1	0 % fail index
+
+		0	5	ARRIVAL	FROM	TIME	TO	default
+				-1	41     % [_EMPTY_,BACK,ARRIVAL]
+				-1	42     % [_EMPTY_,BACK,FROM]
+				-1	43     % [_EMPTY_,BACK,TIME]
+				-1	44     % [_EMPTY_,BACK,TO]
+				-1	0 % fail index
+
+		0	12	AMOUNT	ARRIVAL	FROM	NUMBER	PLATFORM	REF	THROUGH	TIME	TO	TRAIN_TYPE	TRANSFER	default
+				-1	45     % [_EMPTY_,DEPARTURE,AMOUNT]
+				-1	46     % [_EMPTY_,DEPARTURE,ARRIVAL]
+				-1	47     % [_EMPTY_,DEPARTURE,FROM]
+				-1	48     % [_EMPTY_,DEPARTURE,NUMBER]
+				-1	49     % [_EMPTY_,DEPARTURE,PLATFORM]
+				-1	50     % [_EMPTY_,DEPARTURE,REF]
+				-1	51     % [_EMPTY_,DEPARTURE,THROUGH]
+				-1	52     % [_EMPTY_,DEPARTURE,TIME]
+				-1	53     % [_EMPTY_,DEPARTURE,TO]
+				-1	54     % [_EMPTY_,DEPARTURE,TRAIN_TYPE]
+				-1	55     % [_EMPTY_,DEPARTURE,TRANSFER]
+				-1	0 % fail index
+
+		0	4	FROM	LENGTH	TO	default
+				-1	56     % [_EMPTY_,DISTANCE,FROM]
+				-1	57     % [_EMPTY_,DISTANCE,LENGTH]
+				-1	58     % [_EMPTY_,DISTANCE,TO]
+				-1	0 % fail index
+
+		0	2	STATION	default
+				-1	59     % [_EMPTY_,FROM,STATION]
+				-1	0 % fail index
+
+		0	2	PERSON	default
+				-1	60     % [_EMPTY_,GREETING,PERSON]
+				-1	0 % fail index
+
+		0	2	TIME	default
+				-1	61     % [_EMPTY_,OTHER_INFO,TIME]
+				-1	0 % fail index
+
+		0	3	NUMBER	STATION	default
+				-1	62     % [_EMPTY_,PLATFORM,NUMBER]
+				-1	63     % [_EMPTY_,PLATFORM,STATION]
+				-1	0 % fail index
+
+		0	2	TRAIN_TYPE	default
+				-1	64     % [_EMPTY_,PREVIOUS,TRAIN_TYPE]
+				-1	0 % fail index
+
+		0	4	AMOUNT	FROM	TO	default
+				-1	65     % [_EMPTY_,PRICE,AMOUNT]
+				-1	66     % [_EMPTY_,PRICE,FROM]
+				-1	67     % [_EMPTY_,PRICE,TO]
+				-1	0 % fail index
+
+		0	4	ARRIVAL	TIME	TRAIN_TYPE	default
+				-1	68     % [_EMPTY_,REF,ARRIVAL]
+				-1	69     % [_EMPTY_,REF,TIME]
+				-1	70     % [_EMPTY_,REF,TRAIN_TYPE]
+				-1	0 % fail index
+
+		0	4	OTHER_INFO	PLATFORM	TIME	default
+				-1	71     % [_EMPTY_,REJECT,OTHER_INFO]
+				-1	72     % [_EMPTY_,REJECT,PLATFORM]
+				-1	73     % [_EMPTY_,REJECT,TIME]
+				-1	0 % fail index
+
+		0	2	STATION	default
+				-1	74     % [_EMPTY_,THROUGH,STATION]
+				-1	0 % fail index
+
+		0	2	STATION	default
+				-1	75     % [_EMPTY_,TO,STATION]
+				-1	0 % fail index
+
+		0	2	STATION	default
+				-1	76     % [_EMPTY_,TRANSFER,STATION]
+				-1	0 % fail index
+
+		0	2	STATION	default
+				-1	77     % [_EMPTY_,TROUGH,STATION]
+				-1	0 % fail index
+
+		0	2	TIME	default
+				-1	78     % [_EMPTY_,WAIT,TIME]
+				-1	0 % fail index
+
+		-1	0 % fail index
+
+	1	4	ARRIVAL	FROM	THROUGH	default
+		0	2	TIME	default
+				-1	79     % [ACCEPT,ARRIVAL,TIME]
+				-1	0 % fail index
+
+		0	2	STATION	default
+				-1	80     % [ACCEPT,FROM,STATION]
+				-1	0 % fail index
+
+		0	2	STATION	default
+				-1	81     % [ACCEPT,THROUGH,STATION]
+				-1	0 % fail index
+
+		-1	0 % fail index
+
+	1	3	FROM	TO	default
+		0	2	STATION	default
+				-1	82     % [ARRIVAL,FROM,STATION]
+				-1	0 % fail index
+
+		0	2	STATION	default
+				-1	83     % [ARRIVAL,TO,STATION]
+				-1	0 % fail index
+
+		-1	0 % fail index
+
+	1	4	ARRIVAL	FROM	TO	default
+		0	2	TIME	default
+				-1	84     % [BACK,ARRIVAL,TIME]
+				-1	0 % fail index
+
+		0	2	STATION	default
+				-1	85     % [BACK,FROM,STATION]
+				-1	0 % fail index
+
+		0	2	STATION	default
+				-1	86     % [BACK,TO,STATION]
+				-1	0 % fail index
+
+		-1	0 % fail index
+
+	1	8	ARRIVAL	FROM	PLATFORM	REF	THROUGH	TO	TRANSFER	default
+		0	4	FROM	TIME	TO	default
+				-1	87     % [DEPARTURE,ARRIVAL,FROM]
+				-1	88     % [DEPARTURE,ARRIVAL,TIME]
+				-1	89     % [DEPARTURE,ARRIVAL,TO]
+				-1	0 % fail index
+
+		0	2	STATION	default
+				-1	90     % [DEPARTURE,FROM,STATION]
+				-1	0 % fail index
+
+		0	2	NUMBER	default
+				-1	91     % [DEPARTURE,PLATFORM,NUMBER]
+				-1	0 % fail index
+
+		0	2	FROM	default
+				-1	92     % [DEPARTURE,REF,FROM]
+				-1	0 % fail index
+
+		0	2	STATION	default
+				-1	93     % [DEPARTURE,THROUGH,STATION]
+				-1	0 % fail index
+
+		0	2	STATION	default
+				-1	94     % [DEPARTURE,TO,STATION]
+				-1	0 % fail index
+
+		0	2	STATION	default
+				-1	95     % [DEPARTURE,TRANSFER,STATION]
+				-1	0 % fail index
+
+		-1	0 % fail index
+
+	1	3	FROM	TO	default
+		0	2	STATION	default
+				-1	96     % [DISTANCE,FROM,STATION]
+				-1	0 % fail index
+
+		0	2	STATION	default
+				-1	97     % [DISTANCE,TO,STATION]
+				-1	0 % fail index
+
+		-1	0 % fail index
+
+	1	3	FROM	TO	default
+		0	2	STATION	default
+				-1	98     % [PRICE,FROM,STATION]
+				-1	0 % fail index
+
+		0	2	STATION	default
+				-1	99     % [PRICE,TO,STATION]
+				-1	0 % fail index
+
+		-1	0 % fail index
+
+	1	3	ARRIVAL	FROM	default
+		0	3	TIME	TO	default
+				-1	100    % [REF,ARRIVAL,TIME]
+				-1	101    % [REF,ARRIVAL,TO]
+				-1	0 % fail index
+
+		0	2	STATION	default
+				-1	102    % [REF,FROM,STATION]
+				-1	0 % fail index
+
+		-1	0 % fail index
+
+	-1	0 % fail index
+

@@ -1,0 +1,147 @@
+1 % number of Decision Trees
+0 % index of DT
+
+concept1GivenC2C3 % DT name
+2 % number of parents
+
+%% (C4,C3,C2,C1)
+
+1	20	_EMPTY_	ACCEPT	ARRIVAL	BACK	DEPARTURE	DISTANCE	FROM	GREETING	OTHER_INFO	PLATFORM	PREVIOUS	PRICE	REF	REJECT	THROUGH	TO	TRANSFER	TROUGH	WAIT	default
+	0	31	_EMPTY_	ACCEPT	AREA	ARRIVAL	BACK	DELAY	DEPARTURE	DISTANCE	FROM	GREETING	MAYBE	NEXT	OTHER_INFO	PERSON	PLATFORM	PREVIOUS	PRICE	REF	REJECT	REPEAT	STATION	SYSTEM_FEATURE	THROUGH	TIME	TO	TRAIN_TYPE	TRANSFER	TROUGH	WAIT	WHAT_TIME	default
+			-1	1      % [_EMPTY_,_EMPTY_]
+			-1	2      % [_EMPTY_,ACCEPT]
+			-1	3      % [_EMPTY_,AREA]
+			-1	4      % [_EMPTY_,ARRIVAL]
+			-1	5      % [_EMPTY_,BACK]
+			-1	6      % [_EMPTY_,DELAY]
+			-1	7      % [_EMPTY_,DEPARTURE]
+			-1	8      % [_EMPTY_,DISTANCE]
+			-1	9      % [_EMPTY_,FROM]
+			-1	10     % [_EMPTY_,GREETING]
+			-1	11     % [_EMPTY_,MAYBE]
+			-1	12     % [_EMPTY_,NEXT]
+			-1	13     % [_EMPTY_,OTHER_INFO]
+			-1	14     % [_EMPTY_,PERSON]
+			-1	15     % [_EMPTY_,PLATFORM]
+			-1	16     % [_EMPTY_,PREVIOUS]
+			-1	17     % [_EMPTY_,PRICE]
+			-1	18     % [_EMPTY_,REF]
+			-1	19     % [_EMPTY_,REJECT]
+			-1	20     % [_EMPTY_,REPEAT]
+			-1	21     % [_EMPTY_,STATION]
+			-1	22     % [_EMPTY_,SYSTEM_FEATURE]
+			-1	23     % [_EMPTY_,THROUGH]
+			-1	24     % [_EMPTY_,TIME]
+			-1	25     % [_EMPTY_,TO]
+			-1	26     % [_EMPTY_,TRAIN_TYPE]
+			-1	27     % [_EMPTY_,TRANSFER]
+			-1	28     % [_EMPTY_,TROUGH]
+			-1	29     % [_EMPTY_,WAIT]
+			-1	30     % [_EMPTY_,WHAT_TIME]
+			-1	0 % fail index
+
+	0	6	ARRIVAL	FROM	SYSTEM_FEATURE	THROUGH	TIME	default
+			-1	31     % [ACCEPT,ARRIVAL]
+			-1	32     % [ACCEPT,FROM]
+			-1	33     % [ACCEPT,SYSTEM_FEATURE]
+			-1	34     % [ACCEPT,THROUGH]
+			-1	35     % [ACCEPT,TIME]
+			-1	0 % fail index
+
+	0	6	FROM	REF	TIME	TO	TRANSFER	default
+			-1	36     % [ARRIVAL,FROM]
+			-1	37     % [ARRIVAL,REF]
+			-1	38     % [ARRIVAL,TIME]
+			-1	39     % [ARRIVAL,TO]
+			-1	40     % [ARRIVAL,TRANSFER]
+			-1	0 % fail index
+
+	0	5	ARRIVAL	FROM	TIME	TO	default
+			-1	41     % [BACK,ARRIVAL]
+			-1	42     % [BACK,FROM]
+			-1	43     % [BACK,TIME]
+			-1	44     % [BACK,TO]
+			-1	0 % fail index
+
+	0	12	AMOUNT	ARRIVAL	FROM	NUMBER	PLATFORM	REF	THROUGH	TIME	TO	TRAIN_TYPE	TRANSFER	default
+			-1	45     % [DEPARTURE,AMOUNT]
+			-1	46     % [DEPARTURE,ARRIVAL]
+			-1	47     % [DEPARTURE,FROM]
+			-1	48     % [DEPARTURE,NUMBER]
+			-1	49     % [DEPARTURE,PLATFORM]
+			-1	50     % [DEPARTURE,REF]
+			-1	51     % [DEPARTURE,THROUGH]
+			-1	52     % [DEPARTURE,TIME]
+			-1	53     % [DEPARTURE,TO]
+			-1	54     % [DEPARTURE,TRAIN_TYPE]
+			-1	55     % [DEPARTURE,TRANSFER]
+			-1	0 % fail index
+
+	0	4	FROM	LENGTH	TO	default
+			-1	56     % [DISTANCE,FROM]
+			-1	57     % [DISTANCE,LENGTH]
+			-1	58     % [DISTANCE,TO]
+			-1	0 % fail index
+
+	0	2	STATION	default
+			-1	59     % [FROM,STATION]
+			-1	0 % fail index
+
+	0	2	PERSON	default
+			-1	60     % [GREETING,PERSON]
+			-1	0 % fail index
+
+	0	2	TIME	default
+			-1	61     % [OTHER_INFO,TIME]
+			-1	0 % fail index
+
+	0	3	NUMBER	STATION	default
+			-1	62     % [PLATFORM,NUMBER]
+			-1	63     % [PLATFORM,STATION]
+			-1	0 % fail index
+
+	0	2	TRAIN_TYPE	default
+			-1	64     % [PREVIOUS,TRAIN_TYPE]
+			-1	0 % fail index
+
+	0	4	AMOUNT	FROM	TO	default
+			-1	65     % [PRICE,AMOUNT]
+			-1	66     % [PRICE,FROM]
+			-1	67     % [PRICE,TO]
+			-1	0 % fail index
+
+	0	5	ARRIVAL	FROM	TIME	TRAIN_TYPE	default
+			-1	68     % [REF,ARRIVAL]
+			-1	69     % [REF,FROM]
+			-1	70     % [REF,TIME]
+			-1	71     % [REF,TRAIN_TYPE]
+			-1	0 % fail index
+
+	0	4	OTHER_INFO	PLATFORM	TIME	default
+			-1	72     % [REJECT,OTHER_INFO]
+			-1	73     % [REJECT,PLATFORM]
+			-1	74     % [REJECT,TIME]
+			-1	0 % fail index
+
+	0	2	STATION	default
+			-1	75     % [THROUGH,STATION]
+			-1	0 % fail index
+
+	0	2	STATION	default
+			-1	76     % [TO,STATION]
+			-1	0 % fail index
+
+	0	2	STATION	default
+			-1	77     % [TRANSFER,STATION]
+			-1	0 % fail index
+
+	0	2	STATION	default
+			-1	78     % [TROUGH,STATION]
+			-1	0 % fail index
+
+	0	2	TIME	default
+			-1	79     % [WAIT,TIME]
+			-1	0 % fail index
+
+	-1	0 % fail index
+

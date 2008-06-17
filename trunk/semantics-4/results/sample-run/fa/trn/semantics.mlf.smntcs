@@ -1,0 +1,1882 @@
+#!MLF!#
+"*/CD03~Part1~04-000427-074450-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-074450-1_00001.rec"
+GREETING(dobrý den)
+.
+"*/CD03~Part1~04-000427-074450-1_00002.rec"
+DEPARTURE(já mít prosba,TIME(jakpak),jet dnes,TRAIN_TYPE(osobní),vlak nějak,TIME(dopoledne),TO(do,STATION(starý plzenec)))
+.
+"*/CD03~Part1~04-000427-074450-1_00004.rec"
+TIME(teď jet v osm šestnáct jestli stihnout)
+.
+"*/CD03~Part1~04-000427-074450-1_00005.rec"
+TIME(potom až v jedenáct deset)
+.
+"*/CD03~Part1~04-000427-074450-1_00006.rec"
+TIME(až v jedenáct deset)
+.
+"*/CD03~Part1~04-000427-074450-1_00007.rec"
+ACCEPT(a ten být tak,TIME(nějak),stačit,FROM(ten jedenáct deset z,STATION(hlavní)),jo)
+.
+"*/CD03~Part1~04-000427-074450-1_00008.rec"
+_DUMMY_(a dát se tam vzít),TRAIN_TYPE(kočárek)
+.
+"*/CD03~Part1~04-000427-074450-1_00009.rec"
+ACCEPT(samozřejmě paní ten vědět že ano)
+.
+"*/CD03~Part1~04-000427-074450-1_00010.rec"
+_DUMMY_(takže tam být ten nový),TRAIN_TYPE(vagón)
+.
+"*/CD03~Part1~04-000427-074450-1_00012.rec"
+_DUMMY_(jako jestli on muset vzít jako zavazadlo nebo jestli on),TRAIN_TYPE(vzít)
+.
+"*/CD03~Part1~04-000427-074450-1_00013.rec"
+TRAIN_TYPE(pro matka s dítě pro matka s dítě)
+.
+"*/CD03~Part1~04-000427-074450-1_00014.rec"
+ACCEPT(jo dobře tak jo)
+.
+"*/CD03~Part1~04-000427-075424-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-075424-1_00001.rec"
+GREETING(jo dobrý den mladý paní)
+.
+"*/CD03~Part1~04-000427-075424-1_00002.rec"
+DEPARTURE(chtít být se zeptat,TO(na,STATION(budějovice)),TRAIN_TYPE(rychlík),okolo,TIME(sedmý hodina navečer))
+.
+"*/CD03~Part1~04-000427-075424-1_00003.rec"
+TIME(devatenáct nula čtyři)
+.
+"*/CD03~Part1~04-000427-075424-1_00004.rec"
+TO(a v,STATION(číčenice))
+.
+"*/CD03~Part1~04-000427-075424-1_00005.rec"
+ARRIVAL(takže,TO(pan v,STATION(číčenice)),být,TIME(dvacet třicet pět),už)
+.
+"*/CD03~Part1~04-000427-075424-1_00006.rec"
+ACCEPT(jo,TIME(dvacet třicet pět),výborně)
+.
+"*/CD03~Part1~04-000427-075424-1_00007.rec"
+TIME(a chtít být se zeptat jezdit každý den tento nebo)
+.
+"*/CD03~Part1~04-000427-075424-1_00008.rec"
+ACCEPT(ano pan)
+.
+"*/CD03~Part1~04-000427-075424-1_00009.rec"
+TIME(i v sobota jo)
+.
+"*/CD03~Part1~04-000427-075424-1_00010.rec"
+ACCEPT(ano bez výjimka)
+.
+"*/CD03~Part1~04-000427-075424-1_00011.rec"
+ACCEPT(dobře)
+.
+"*/CD03~Part1~04-000427-075424-1_00012.rec"
+TIME(a v sobota ráno nějak)
+.
+"*/CD03~Part1~04-000427-075424-1_00013.rec"
+TIME(v sobota ráno)
+.
+"*/CD03~Part1~04-000427-075424-1_00015.rec"
+TIME(buď šest šestnáct)
+.
+"*/CD03~Part1~04-000427-075424-1_00016.rec"
+TIME(šest šestnáct)
+.
+"*/CD03~Part1~04-000427-075424-1_00017.rec"
+ARRIVAL(ten mít,TO(v,STATION(číčenice)),v,TIME(sedm čtyřicet devět))
+.
+"*/CD03~Part1~04-000427-075424-1_00018.rec"
+TIME(a nebo osm nula)
+.
+"*/CD03~Part1~04-000427-075424-1_00019.rec"
+ARRIVAL(a ten být tam,TIME(devět třicet))
+.
+"*/CD03~Part1~04-000427-075424-1_00020.rec"
+ACCEPT(TIME(devět třicet),výborně)
+.
+"*/CD03~Part1~04-000427-075424-1_00025.rec"
+TIME(ten jet každý den také tento)
+.
+"*/CD03~Part1~04-000427-075424-1_00026.rec"
+ACCEPT(také ano)
+.
+"*/CD03~Part1~04-000427-075758-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-075758-1_00001.rec"
+GREETING(dobrý den)
+.
+"*/CD03~Part1~04-000427-075758-1_00002.rec"
+DEPARTURE(prosit ty já být potřebovat,FROM(spojení z,STATION(sušice)),TO(do,STATION(brno)),dnes kolem,TIME(poledne))
+.
+"*/CD03~Part1~04-000427-075758-1_00003.rec"
+DEPARTURE(TIME(v jedenáct čtyřicet čtyři),vyjet,FROM(z,STATION(sušice)))
+.
+"*/CD03~Part1~04-000427-075758-1_00004.rec"
+ARRIVAL(TIME(dvanáct),být,TO(v,STATION(horažďovice)))
+.
+"*/CD03~Part1~04-000427-075758-1_00005.rec"
+TIME(dvanáct)
+.
+"*/CD03~Part1~04-000427-075758-1_00006.rec"
+FROM(z,STATION(horažďovice)),TIME(dvanáct dvacet)
+.
+"*/CD03~Part1~04-000427-075758-1_00007.rec"
+TIME(dvanáct dvacet)
+.
+"*/CD03~Part1~04-000427-075758-1_00008.rec"
+ARRIVAL(TIME(třináct třicet šest),být tady,TO(v,STATION(plzeň)))
+.
+"*/CD03~Part1~04-000427-075758-1_00009.rec"
+TIME(třináct třicet šest),STATION(plzeň)
+.
+"*/CD03~Part1~04-000427-075758-1_00010.rec"
+DEPARTURE(odsud ty jet,TRAIN_TYPE(rychlík),TIME(v čtrnáct deset),TO(do,STATION(praha)))
+.
+"*/CD03~Part1~04-000427-075758-1_00011.rec"
+ARRIVAL(TO(v praga na,STATION(hlavní,_DUMMY_(nádraží))),být v,TIME(šestnáct nula))
+.
+"*/CD03~Part1~04-000427-075758-1_00012.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-075758-1_00013.rec"
+DEPARTURE(FROM(z,STATION(praha)),další,TRAIN_TYPE(rychlík),TIME(šestnáct třicet šest))
+.
+"*/CD03~Part1~04-000427-075758-1_00014.rec"
+ARRIVAL(a,TO(v,STATION(brno)),TIME(devatenáct čtyřicet dva))
+.
+"*/CD03~Part1~04-000427-075758-1_00015.rec"
+TIME(devatenáct čtyřicet dva),STATION(brno)
+.
+"*/CD03~Part1~04-000427-075758-1_00016.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-075758-1_00017.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-080612-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-080612-1_00001.rec"
+GREETING(dobrý den),PERSON(hilianová),AREA(plzeň)
+.
+"*/CD03~Part1~04-000427-080612-1_00002.rec"
+DEPARTURE(já k ty mít prosba jakpak jet vlak,TO(do,STATION(domažlice)),FROM(z,STATION(jižní)),teď nějak tady sobota neděle a nebo i ten,TIME(první))
+.
+"*/CD03~Part1~04-000427-080612-1_00003.rec"
+OTHER_INFO(jestli být v tom nějaký rozdíl)
+.
+"*/CD03~Part1~04-000427-080612-1_00004.rec"
+DEPARTURE(dopoledne,TIME(paní),jako chtít jet)
+.
+"*/CD03~Part1~04-000427-080612-1_00005.rec"
+TIME(dopoledne tak kolem ten osmý devátý)
+.
+"*/CD03~Part1~04-000427-080612-1_00006.rec"
+REJECT(OTHER_INFO(jinak tam nebýt žádný rozdíl))
+.
+"*/CD03~Part1~04-000427-080612-1_00007.rec"
+TIME(jet ten stejně v osm dvacet tři každý den paní deset padesát sedm každý den ať být pátek nebo svátek)
+.
+"*/CD03~Part1~04-000427-080612-1_00008.rec"
+TO(do ten,STATION(domažlice))
+.
+"*/CD03~Part1~04-000427-080612-1_00009.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-080612-1_00010.rec"
+FROM(z,STATION(jižní))
+.
+"*/CD03~Part1~04-000427-080612-1_00011.rec"
+ACCEPT(ano ten,FROM(být odjezd z,STATION(jižní)))
+.
+"*/CD03~Part1~04-000427-080612-1_00012.rec"
+DEPARTURE(ještě k ty mít prosba,TO(do,STATION(děčín)),FROM(z,STATION(hlavní)),zase)
+.
+"*/CD03~Part1~04-000427-080612-1_00013.rec"
+TO(do,STATION(děčín)),FROM(z,STATION(hlavní))
+.
+"*/CD03~Part1~04-000427-080612-1_00014.rec"
+WHAT_TIME(a ten být zase kdy)
+.
+"*/CD03~Part1~04-000427-080612-1_00015.rec"
+TIME(také tak nějak být ten být také ten,_DUMMY_(pondělí))
+.
+"*/CD03~Part1~04-000427-080612-1_00016.rec"
+TIME(a ten chtít odpoledne nebo)
+.
+"*/CD03~Part1~04-000427-080612-1_00017.rec"
+TIME(také nějak takto ráno)
+.
+"*/CD03~Part1~04-000427-080612-1_00018.rec"
+THROUGH(no také takto nějak takže ten ty vzít přes,STATION(praha))
+.
+"*/CD03~Part1~04-000427-080612-1_00020.rec"
+DEPARTURE(já,TIME(když),být jet,THROUGH(STATION(posledně)),tak ten být nějak přes ten chomutov)
+.
+"*/CD03~Part1~04-000427-080612-1_00021.rec"
+TROUGH(přes,STATION(chomutov),mít),TRAIN_TYPE(přímý paní),TIME(až v šestnáct čtyřicet šest)
+.
+"*/CD03~Part1~04-000427-080612-1_00022.rec"
+TIME(ten jezdit každý den)
+.
+"*/CD03~Part1~04-000427-080612-1_00023.rec"
+ACCEPT(ano bez výjimka)
+.
+"*/CD03~Part1~04-000427-080612-1_00024.rec"
+ARRIVAL(a ten být,TO(v,STATION(děčín)),v kolik)
+.
+"*/CD03~Part1~04-000427-080612-1_00025.rec"
+ARRIVAL(tak a s ten být,TO(v děčín v,STATION(děčín)),TIME(dvacet jeden čtrnáct))
+.
+"*/CD03~Part1~04-000427-080612-1_00026.rec"
+REJECT(TIME(jo),tak ten už být dlouho)
+.
+"*/CD03~Part1~04-000427-080612-1_00027.rec"
+REJECT(TIME(ten),už být dlouho)
+.
+"*/CD03~Part1~04-000427-080612-1_00028.rec"
+_DUMMY_(já být jet),TRAIN_TYPE(s malý dítě)
+.
+"*/CD03~Part1~04-000427-080612-1_00029.rec"
+REJECT(no tak ten ne)
+.
+"*/CD03~Part1~04-000427-080612-1_00030.rec"
+DEPARTURE(a pokud být chtít,TRANSFER(s přestup v,STATION(chomutov)),tak ten jet jenom,TIME(v pondělí paní))
+.
+"*/CD03~Part1~04-000427-080612-1_00031.rec"
+WAIT(ale když jet,TIME(s dítě ty tam být jenom tři),minuta na přestup)
+.
+"*/CD03~Part1~04-000427-080612-1_00032.rec"
+REF(takže ten,TIME(šestnáct čtyřicet šest),ten být,TRAIN_TYPE(přímý))
+.
+"*/CD03~Part1~04-000427-080612-1_00033.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-080612-1_00034.rec"
+TRAIN_TYPE(přímý rychlík),TIME(každý den)
+.
+"*/CD03~Part1~04-000427-080612-1_00035.rec"
+TIME(a ten jezdit každý den bez výjimka)
+.
+"*/CD03~Part1~04-000427-080612-1_00036.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-080612-1_00037.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-080612-1_00038.rec"
+TIME(každý den každý den paní)
+.
+"*/CD03~Part1~04-000427-080612-1_00039.rec"
+ACCEPT(dobře tak jo)
+.
+"*/CD03~Part1~04-000427-080648-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-080648-1_00001.rec"
+GREETING(dobrý den)
+.
+"*/CD03~Part1~04-000427-080648-1_00002.rec"
+DEPARTURE(prosit ty moci já říci se,TIME(dnes),dostat,TO(do,STATION(praha)),dnes večer kolem osmnáctý nebo po osmnáctý,TIME(hodina))
+.
+"*/CD03~Part1~04-000427-080648-1_00003.rec"
+DEPARTURE(takže pan buď,TIME(v osmnáct třicet),jeden vlak,TRAIN_TYPE(intercity))
+.
+"*/CD03~Part1~04-000427-080648-1_00004.rec"
+TIME(nebo osmnáct padesát tři),TRAIN_TYPE(rychlík)
+.
+"*/CD03~Part1~04-000427-080648-1_00005.rec"
+TIME(osmnáct padesát tři),TRAIN_TYPE(normální rychlík)
+.
+"*/CD03~Part1~04-000427-080648-1_00006.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-080648-1_00007.rec"
+ACCEPT(dobře)
+.
+"*/CD03~Part1~04-000427-080810-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-080810-1_00001.rec"
+PERSON(kubica),AREA(odra),GREETING(dobrý den)
+.
+"*/CD03~Part1~04-000427-080810-1_00002.rec"
+GREETING(dobrý den)
+.
+"*/CD03~Part1~04-000427-081044-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-081044-1_00001.rec"
+GREETING(no dobrý den)
+.
+"*/CD03~Part1~04-000427-081044-1_00002.rec"
+DEPARTURE(prosit ty já být se ty chtít zeptat,TO(do,STATION(beroun)),nějak vlak)
+.
+"*/CD03~Part1~04-000427-081044-1_00003.rec"
+DEPARTURE(on jezdit nějak,TIME(v třičtvrtě na jedenáct),viďte)
+.
+"*/CD03~Part1~04-000427-081044-1_00004.rec"
+DEPARTURE(no,TO(do,STATION(beroun)),jet pan,TIME(v deset padesát osm),TRAIN_TYPE(osobní))
+.
+"*/CD03~Part1~04-000427-081044-1_00005.rec"
+TIME(deset padesát osm)
+.
+"*/CD03~Part1~04-000427-081044-1_00006.rec"
+NEXT(a potom)
+.
+"*/CD03~Part1~04-000427-081044-1_00007.rec"
+DEPARTURE(potom ty jet,TIME(v třináct nula,_DUMMY_(jeden)),TRAIN_TYPE(osobní))
+.
+"*/CD03~Part1~04-000427-081044-1_00008.rec"
+TIME(v třináct nula jeden)
+.
+"*/CD03~Part1~04-000427-081044-1_00009.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-081044-1_00010.rec"
+ARRIVAL(a,FROM(prosit ty takto příjezd,_DUMMY_(tamodtud)),TO(do,STATION(plzeň)),tak kolem mezi,TIME(šestý sedmý hodina))
+.
+"*/CD03~Part1~04-000427-081044-1_00012.rec"
+DEPARTURE(takže ty chtít odjezd,FROM(z,STATION(beroun)))
+.
+"*/CD03~Part1~04-000427-081044-1_00013.rec"
+ARRIVAL(nebo,TO(příjezd do,STATION(plzeň)))
+.
+"*/CD03~Part1~04-000427-081044-1_00017.rec"
+DEPARTURE(chtít,FROM(z,STATION(beroun)),odjezd kolem,TIME(šestý))
+.
+"*/CD03~Part1~04-000427-081044-1_00019.rec"
+DEPARTURE(kolem,TIME(šestý),odjíždět)
+.
+"*/CD03~Part1~04-000427-081044-1_00020.rec"
+ARRIVAL(a nebo už být,TO(v,STATION(plzeň)))
+.
+"*/CD03~Part1~04-000427-081044-1_00021.rec"
+DEPARTURE(já být chtít,TIME(v),kolik ten jet teď dopoledne,TO(do,STATION(beroun)))
+.
+"*/CD03~Part1~04-000427-081044-1_00023.rec"
+BACK(a,ARRIVAL(kolem třetí hodina aby,TIME(se vrátit)),tak nějak jak ten sem přijíždět)
+.
+"*/CD03~Part1~04-000427-081044-1_00024.rec"
+ARRIVAL(kolem,TIME(třetí přijíždět))
+.
+"*/CD03~Part1~04-000427-081044-1_00025.rec"
+ACCEPT(no aby být)
+.
+"*/CD03~Part1~04-000427-081044-1_00026.rec"
+ACCEPT(jo,FROM(z,STATION(beroun)))
+.
+"*/CD03~Part1~04-000427-081044-1_00027.rec"
+ARRIVAL(TO(v,STATION(plzeň)),tak v,TIME(sedm v osm dlouho))
+.
+"*/CD03~Part1~04-000427-081044-1_00028.rec"
+ACCEPT(aha)
+.
+"*/CD03~Part1~04-000427-081044-1_00029.rec"
+DEPARTURE(takže,FROM(z,STATION(beroun)),moci odjet,TIME(dnes),být ten ano)
+.
+"*/CD03~Part1~04-000427-081044-1_00030.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-081044-1_00031.rec"
+TIME(šestnáct dvacet dva),TRAIN_TYPE(osobní)
+.
+"*/CD03~Part1~04-000427-081044-1_00032.rec"
+REF(ten,ARRIVAL(být,TO(v,STATION(plzeň)),TIME(sedmnáct padesát)),dva)
+.
+"*/CD03~Part1~04-000427-081044-1_00033.rec"
+TRAIN_TYPE(nebo),TIME(sedmnáct jedenáct rychlík)
+.
+"*/CD03~Part1~04-000427-081044-1_00034.rec"
+REF(ten,ARRIVAL(být,TO(tady),TIME(osmnáct)),jedenáct)
+.
+"*/CD03~Part1~04-000427-081044-1_00035.rec"
+TRAIN_TYPE(a nebo rychlík),TIME(devatenáct jedenáct)
+.
+"*/CD03~Part1~04-000427-081044-1_00036.rec"
+ACCEPT(ten já stačit paní)
+.
+"*/CD03~Part1~04-000427-081044-1_00038.rec"
+ACCEPT(já stačit tento dva)
+.
+"*/CD03~Part1~04-000427-081044-1_00039.rec"
+ACCEPT(dobře)
+.
+"*/CD03~Part1~04-000427-081044-1_00041.rec"
+ACCEPT(fajn)
+.
+"*/CD03~Part1~04-000427-081236-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-081236-1_00002.rec"
+_DUMMY_(já být),TIME(v sobota a nebo v neděle v boro),AREA(u,_DUMMY_(tachov))
+.
+"*/CD03~Part1~04-000427-081236-1_00003.rec"
+DEPARTURE(a potřebovat být jestli tam odtud jet nějaký vlak,FROM(kolem),TIME(půl pátý))
+.
+"*/CD03~Part1~04-000427-081236-1_00004.rec"
+TIME(odpoledne teda ano)
+.
+"*/CD03~Part1~04-000427-081236-1_00005.rec"
+TIME(večer odpoledne)
+.
+"*/CD03~Part1~04-000427-081236-1_00006.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-081236-1_00007.rec"
+THROUGH(a chtít jet pan přes,STATION(svojšín))
+.
+"*/CD03~Part1~04-000427-081236-1_00008.rec"
+ACCEPT(ano,THROUGH(STATION(přes),svojšín))
+.
+"*/CD03~Part1~04-000427-081236-1_00009.rec"
+DEPARTURE(takže pan být odjíždět,TIME(šestnáct dvacet,_DUMMY_(čtyři)),FROM(z,STATION(bor)),ano)
+.
+"*/CD03~Part1~04-000427-081236-1_00010.rec"
+ARRIVAL(TO(v,STATION(svojšín)),být,TIME(šestnáct čtyřicet pět),tak)
+.
+"*/CD03~Part1~04-000427-081236-1_00011.rec"
+DEPARTURE(a,FROM(z,STATION(svojšín)),ty jet,TRAIN_TYPE(přípoj),TIME(sedmnáct patnáct))
+.
+"*/CD03~Part1~04-000427-081236-1_00012.rec"
+ACCEPT(ano už ten mít napsaný)
+.
+"*/CD03~Part1~04-000427-081236-1_00013.rec"
+ARRIVAL(a být,TO(v,STATION(plzeň)),v,TIME(osmnáct deset))
+.
+"*/CD03~Part1~04-000427-081236-1_00015.rec"
+TIME(a ještě a ten platit i v neděle)
+.
+"*/CD03~Part1~04-000427-081236-1_00016.rec"
+ACCEPT(TIME(každý den),pan)
+.
+"*/CD03~Part1~04-000427-081412-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-081412-1_00001.rec"
+DEPARTURE(budit tak hodný,TIME(dnes),večer,TO(na,STATION(brčálník)))
+.
+"*/CD03~Part1~04-000427-081412-1_00002.rec"
+DEPARTURE(takže paní vyjet,TIME(v osmnáct padesát osm),TO(do,STATION(klatovy)))
+.
+"*/CD03~Part1~04-000427-081412-1_00003.rec"
+ARRIVAL(tam být,TIME(devatenáct padesát sedm))
+.
+"*/CD03~Part1~04-000427-081412-1_00004.rec"
+DEPARTURE(a,FROM(z,STATION(klatovy)),TRAIN_TYPE(přípoj),TIME(dvacet třicet))
+.
+"*/CD03~Part1~04-000427-081412-1_00005.rec"
+STATION(brčálník,_DUMMY_(dvacet)),TIME(jeden třicet tři)
+.
+"*/CD03~Part1~04-000427-081412-1_00006.rec"
+PREVIOUS(a,TRAIN_TYPE(předtím nějaký přímý))
+.
+"*/CD03~Part1~04-000427-081412-1_00007.rec"
+DEPARTURE(předtím,TRAIN_TYPE(přímý),být až,TIME(v patnáct šestnáct paní))
+.
+"*/CD03~Part1~04-000427-081412-1_00008.rec"
+ACCEPT(TIME(patnáct šestnáct),jo)
+.
+"*/CD03~Part1~04-000427-081412-1_00009.rec"
+DEPARTURE(a mladý,TIME(paní),budit tak hodný ráno někdy,FROM(z,STATION(brčálník)),někdy,TIME(dopoledne))
+.
+"*/CD03~Part1~04-000427-081412-1_00010.rec"
+DEPARTURE(tak pokud chtít paní,TRAIN_TYPE(přímý),tak ty jet,TIME(v devět nula))
+.
+"*/CD03~Part1~04-000427-081412-1_00011.rec"
+ACCEPT(jo ten být skvělý)
+.
+"*/CD03~Part1~04-000427-081412-1_00012.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-082740-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-082740-1_00001.rec"
+PERSON(nováková),AREA(třemošná),GREETING(dobrý den)
+.
+"*/CD03~Part1~04-000427-082740-1_00002.rec"
+OTHER_INFO(být tak hodný a najít já vlakový spojení)
+.
+"*/CD03~Part1~04-000427-082740-1_00004.rec"
+ACCEPT(dobře)
+.
+"*/CD03~Part1~04-000427-082740-1_00005.rec"
+DEPARTURE(prosit ty pěkně já být se potřebovat dostat,FROM(z,STATION(třemošná)),TO(do,STATION(vodňany)),TIME(pátý),a být ten asi všední den ale)
+.
+"*/CD03~Part1~04-000427-082740-1_00006.rec"
+OTHER_INFO(TIME(pátý květen být paní pátek))
+.
+"*/CD03~Part1~04-000427-082740-1_00007.rec"
+TIME(a chtít jet ráno)
+.
+"*/CD03~Part1~04-000427-082740-1_00008.rec"
+ARRIVAL(no tak nějak aby se tam dostal do ten,TIME(jedenáct dvanáct),hodina,TO(do,STATION(vodňany)))
+.
+"*/CD03~Part1~04-000427-082740-1_00010.rec"
+DEPARTURE(protože ty být muset odjetý,FROM(z,STATION(třemošná)),už,TIME(v pět padesát))
+.
+"*/CD03~Part1~04-000427-082740-1_00011.rec"
+TIME(pět padesát)
+.
+"*/CD03~Part1~04-000427-082740-1_00012.rec"
+ACCEPT(ten nevadit)
+.
+"*/CD03~Part1~04-000427-082740-1_00013.rec"
+ACCEPT(nevadit výborně)
+.
+"*/CD03~Part1~04-000427-082740-1_00014.rec"
+DEPARTURE(takže poslouchat,TIME(paní pět padesát),FROM(z,STATION(třemošná)),být,TRAIN_TYPE(osobní),TO(do,STATION(plzeň,_DUMMY_(ano))))
+.
+"*/CD03~Part1~04-000427-082740-1_00015.rec"
+ARRIVAL(tady být,TIME(šest nula šest))
+.
+"*/CD03~Part1~04-000427-082740-1_00017.rec"
+DEPARTURE(FROM(z,STATION(plzeň)),ty odjíždět paní,TRAIN_TYPE(rychlík),TIME(šest šestnáct),jet s on,TO(do,STATION(stanice číčenice,_DUMMY_(ano))))
+.
+"*/CD03~Part1~04-000427-082740-1_00018.rec"
+ARRIVAL(ano tam být v,TIME(sedm čtyřicet devět),tak)
+.
+"*/CD03~Part1~04-000427-082740-1_00019.rec"
+DEPARTURE(a z,REF(FROM(ten,STATION(číčenice))),ty odjíždět,TRAIN_TYPE(přípoj),TIME(v osm nula),ty odjíždět,TRAIN_TYPE(motorový),TO(do,STATION(vodňany)))
+.
+"*/CD03~Part1~04-000427-082740-1_00020.rec"
+ARRIVAL(a být tam,TIME(osm nula sedm))
+.
+"*/CD03~Part1~04-000427-082740-1_00021.rec"
+TIME(osm nula sedm na místo)
+.
+"*/CD03~Part1~04-000427-082908-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-082908-1_00001.rec"
+GREETING(dobrý den),PERSON(gaboňková)
+.
+"*/CD03~Part1~04-000427-082908-1_00002.rec"
+DEPARTURE(já být se chtít zeptat jak jezdit vlak,FROM(z,STATION(plzeň)),TIME(teď),TO(do,STATION(dobřany)))
+.
+"*/CD03~Part1~04-000427-082908-1_00003.rec"
+TIME(teď),FROM(z,STATION(plzeň)),TO(do,STATION(dobřany))
+.
+"*/CD03~Part1~04-000427-082908-1_00004.rec"
+DEPARTURE(takže první mít,NUMBER(deset),TIME(padesát dva))
+.
+"*/CD03~Part1~04-000427-082908-1_00005.rec"
+TIME(deset padesát dva)
+.
+"*/CD03~Part1~04-000427-082908-1_00006.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-082908-1_00007.rec"
+PREVIOUS(a brzy už ne)
+.
+"*/CD03~Part1~04-000427-082908-1_00008.rec"
+REJECT(ne ten už,TIME(jet osm nula pět))
+.
+"*/CD03~Part1~04-000427-082908-1_00009.rec"
+ACCEPT(ARRIVAL(osm nula,TIME(pět už přijet)),dobře)
+.
+"*/CD03~Part1~04-000427-083316-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-083506-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-083506-1_00001.rec"
+GREETING(no dobrý den)
+.
+"*/CD03~Part1~04-000427-083506-1_00002.rec"
+DEPARTURE(prosit ty pěkně potřebovat být vědět jeden,FROM(spoj,STATION(plzeň,_DUMMY_(ted))))
+.
+"*/CD03~Part1~04-000427-083506-1_00003.rec"
+DEPARTURE(FROM(z,STATION(praha)),TO(do,STATION(plzeň)),na vlak který teď,ARRIVAL(TIME(přijíždět),v,FROM(devět,STATION(hodina)),TO(z,STATION(ostrava brno))),do praha)
+.
+"*/CD03~Part1~04-000427-083506-1_00004.rec"
+TIME(v devět hodina),FROM(z,STATION(ostrava))
+.
+"*/CD03~Part1~04-000427-083506-1_00005.rec"
+DEPARTURE(a první mít pokud on,NUMBER(stihnout),TIME(devět nula devět),TRAIN_TYPE(expres))
+.
+"*/CD03~Part1~04-000427-083506-1_00006.rec"
+ARRIVAL(ten být ty přijet,TO(do,STATION(plzeň)),v,TIME(deset třicet šest))
+.
+"*/CD03~Part1~04-000427-083506-1_00007.rec"
+DEPARTURE(kdyby jim ujet tak jet,TRAIN_TYPE(rychlík),TIME(deset nula šest))
+.
+"*/CD03~Part1~04-000427-083506-1_00008.rec"
+ARRIVAL(a být tady v,TIME(jedenáct čtyřicet,_DUMMY_(čtyři)))
+.
+"*/CD03~Part1~04-000427-083506-1_00010.rec"
+TIME(takže jet ten jinak devět nula devět)
+.
+"*/CD03~Part1~04-000427-083506-1_00011.rec"
+TIME(devět nula devět)
+.
+"*/CD03~Part1~04-000427-083506-1_00012.rec"
+ARRIVAL(sem přijet,TIME(deset třicet šest))
+.
+"*/CD03~Part1~04-000427-083506-1_00013.rec"
+TIME(deset třicet šest)
+.
+"*/CD03~Part1~04-000427-083506-1_00014.rec"
+TIME(a nebo deset nula šest)
+.
+"*/CD03~Part1~04-000427-083506-1_00015.rec"
+ARRIVAL(a být tady,TIME(jedenáct čtyřicet,_DUMMY_(čtyři)))
+.
+"*/CD03~Part1~04-000427-083506-1_00016.rec"
+TIME(jedenáct čtyřicet čtyři)
+.
+"*/CD03~Part1~04-000427-083506-1_00017.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-083506-1_00018.rec"
+ACCEPT(tak jo dobře)
+.
+"*/CD03~Part1~04-000427-083940-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-083940-1_00001.rec"
+GREETING(dobrý den)
+.
+"*/CD03~Part1~04-000427-083940-1_00002.rec"
+DEPARTURE(prosit ty já být potřebovat vědět vlak,TIME(v),sobota co jet,FROM(z var z,STATION(dolní nádraží)),TO(do,STATION(nový)),TIME(role ráno někdy))
+.
+"*/CD03~Part1~04-000427-083940-1_00003.rec"
+BACK(a potom v neděle,TIME(zpátky))
+.
+"*/CD03~Part1~04-000427-083940-1_00004.rec"
+FROM(z karlův var z,STATION(dolní)),TO(do,STATION(nový role,_DUMMY_(tak)))
+.
+"*/CD03~Part1~04-000427-083940-1_00005.rec"
+TIME(a který den že ten být prosit)
+.
+"*/CD03~Part1~04-000427-083940-1_00006.rec"
+TIME(teď v sobota)
+.
+"*/CD03~Part1~04-000427-083940-1_00007.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-083940-1_00008.rec"
+TIME(dopoledne)
+.
+"*/CD03~Part1~04-000427-083940-1_00009.rec"
+TIME(no někdy od devět hodina od ráno do ten)
+.
+"*/CD03~Part1~04-000427-083940-1_00010.rec"
+TIME(takže pan v deset čtyřicet osm)
+.
+"*/CD03~Part1~04-000427-083940-1_00011.rec"
+PREVIOUS(brzy nic)
+.
+"*/CD03~Part1~04-000427-083940-1_00012.rec"
+TIME(osm nula čtyři)
+.
+"*/CD03~Part1~04-000427-083940-1_00013.rec"
+REJECT(ten nestihnout)
+.
+"*/CD03~Part1~04-000427-083940-1_00015.rec"
+TIME(takže deset čtyřicet osm)
+.
+"*/CD03~Part1~04-000427-083940-1_00016.rec"
+ARRIVAL(a,TO(v nový,STATION(role)),být ten)
+.
+"*/CD03~Part1~04-000427-083940-1_00017.rec"
+TIME(jedenáct nula devět)
+.
+"*/CD03~Part1~04-000427-083940-1_00018.rec"
+TIME(jedenáct nula devět)
+.
+"*/CD03~Part1~04-000427-083940-1_00019.rec"
+NEXT(a další)
+.
+"*/CD03~Part1~04-000427-083940-1_00020.rec"
+DEPARTURE(pak jet,TIME(dvanáct třináct))
+.
+"*/CD03~Part1~04-000427-083940-1_00021.rec"
+ARRIVAL(TO(nový,STATION(role)),TIME(dvanáct třicet,_DUMMY_(čtyři)))
+.
+"*/CD03~Part1~04-000427-083940-1_00022.rec"
+DEPARTURE(pak jet,TIME(patnáct nula sedm))
+.
+"*/CD03~Part1~04-000427-083940-1_00023.rec"
+REJECT(tak ten už být dlouho ten už být dlouho)
+.
+"*/CD03~Part1~04-000427-083940-1_00024.rec"
+BACK(a zpátky potom,FROM(z,STATION(role)),TO(do,STATION(var)),v neděle a tak nějak tak nějak kolem,TIME(oběd no))
+.
+"*/CD03~Part1~04-000427-083940-1_00025.rec"
+TIME(kolem oběd)
+.
+"*/CD03~Part1~04-000427-083940-1_00026.rec"
+TIME(takže ten být v jedenáct čtyřicet pět)
+.
+"*/CD03~Part1~04-000427-083940-1_00027.rec"
+TIME(jedenáct čtyřicet pět)
+.
+"*/CD03~Part1~04-000427-083940-1_00028.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-083940-1_00029.rec"
+ARRIVAL(TIME(dvanáct nula osm),být,TO(v,STATION(var)))
+.
+"*/CD03~Part1~04-000427-083940-1_00030.rec"
+NEXT(a potom)
+.
+"*/CD03~Part1~04-000427-083940-1_00031.rec"
+DEPARTURE(pak jet pan až,TIME(v patnáct třicet pět))
+.
+"*/CD03~Part1~04-000427-083940-1_00032.rec"
+TIME(patnáct třicet pět jo)
+.
+"*/CD03~Part1~04-000427-083940-1_00033.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-083940-1_00034.rec"
+ARRIVAL(a,TO(v,STATION(var)),v,TIME(šestnáct nula dva))
+.
+"*/CD03~Part1~04-000427-083940-1_00035.rec"
+TIME(šestnáct nula dva)
+.
+"*/CD03~Part1~04-000427-083940-1_00036.rec"
+STATION(na dolní opět)
+.
+"*/CD03~Part1~04-000427-083940-1_00037.rec"
+ACCEPT(tak všechen)
+.
+"*/CD03~Part1~04-000427-084334-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-084334-1_00001.rec"
+DEPARTURE(prosit ty potřebovat být vědět jak jet,TRAIN_TYPE(rychlík),TO(na,STATION(praha)),dnes,TIME(odpoledne))
+.
+"*/CD03~Part1~04-000427-084334-1_00002.rec"
+TIME(takže třináct nula osm),TRAIN_TYPE(expres)
+.
+"*/CD03~Part1~04-000427-084334-1_00003.rec"
+TIME(třináct nula osm),TRAIN_TYPE(expres)
+.
+"*/CD03~Part1~04-000427-084334-1_00004.rec"
+TIME(čtrnáct deset),TRAIN_TYPE(rychlík)
+.
+"*/CD03~Part1~04-000427-084334-1_00005.rec"
+TIME(čtrnáct deset),TRAIN_TYPE(rychlík)
+.
+"*/CD03~Part1~04-000427-084334-1_00006.rec"
+TIME(patnáct deset),TRAIN_TYPE(vlak eurocity)
+.
+"*/CD03~Part1~04-000427-084334-1_00007.rec"
+TIME(patnáct)
+.
+"*/CD03~Part1~04-000427-084334-1_00008.rec"
+TIME(deset)
+.
+"*/CD03~Part1~04-000427-084334-1_00009.rec"
+TIME(patnáct deset)
+.
+"*/CD03~Part1~04-000427-084334-1_00010.rec"
+TRAIN_TYPE(eurocity)
+.
+"*/CD03~Part1~04-000427-084334-1_00011.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-084334-1_00012.rec"
+NEXT(ještě dále)
+.
+"*/CD03~Part1~04-000427-084334-1_00013.rec"
+TIME(šestnáct dvacet sedm),TRAIN_TYPE(rychlík)
+.
+"*/CD03~Part1~04-000427-084334-1_00014.rec"
+TIME(šestnáct dvacet sedm),TRAIN_TYPE(rychlík)
+.
+"*/CD03~Part1~04-000427-084334-1_00015.rec"
+TIME(osmnáct třicet jeden),TRAIN_TYPE(intercity)
+.
+"*/CD03~Part1~04-000427-084334-1_00016.rec"
+TIME(osmnáct třicet jeden),TRAIN_TYPE(intercity)
+.
+"*/CD03~Part1~04-000427-084334-1_00017.rec"
+ACCEPT(ten být tak stačit)
+.
+"*/CD03~Part1~04-000427-084334-1_00018.rec"
+DEPARTURE(a ještě,TIME(ráno),jak ten jet)
+.
+"*/CD03~Part1~04-000427-084334-1_00019.rec"
+TIME(brzy ráno)
+.
+"*/CD03~Part1~04-000427-084334-1_00020.rec"
+ACCEPT(no,TIME(brzy ráno))
+.
+"*/CD03~Part1~04-000427-084334-1_00021.rec"
+TIME(takže v pět třicet),TRAIN_TYPE(rychlík)
+.
+"*/CD03~Part1~04-000427-084334-1_00022.rec"
+TIME(pět třicet),TRAIN_TYPE(rychlík)
+.
+"*/CD03~Part1~04-000427-084334-1_00023.rec"
+TIME(šest třicet šest),TRAIN_TYPE(rychlík)
+.
+"*/CD03~Part1~04-000427-084334-1_00024.rec"
+TIME(šest třicet šest),TRAIN_TYPE(rychlík)
+.
+"*/CD03~Part1~04-000427-084334-1_00025.rec"
+TIME(osm nula dva),TRAIN_TYPE(rychlík)
+.
+"*/CD03~Part1~04-000427-084334-1_00026.rec"
+TIME(osm nula dva),TRAIN_TYPE(rychlík)
+.
+"*/CD03~Part1~04-000427-084334-1_00027.rec"
+TIME(devět padesát dva),TRAIN_TYPE(rychlík)
+.
+"*/CD03~Part1~04-000427-084334-1_00028.rec"
+ACCEPT(dobrý stačit)
+.
+"*/CD03~Part1~04-000427-084934-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-084934-1_00001.rec"
+GREETING(dobrý den)
+.
+"*/CD03~Part1~04-000427-084934-1_00002.rec"
+GREETING(dobrý den)
+.
+"*/CD03~Part1~04-000427-084934-1_00003.rec"
+DEPARTURE(mladý paní prosit ty já být se chtít zeptat kolem,TIME(druhý hodina v),všední den jet nějak vlak,TO(na,STATION(praha)),moci být já říci přesně)
+.
+"*/CD03~Part1~04-000427-084934-1_00004.rec"
+DEPARTURE(jet paní přesně,TIME(v čtrnáct deset),TRAIN_TYPE(rychlík))
+.
+"*/CD03~Part1~04-000427-084934-1_00005.rec"
+TIME(čtrnáct deset)
+.
+"*/CD03~Part1~04-000427-084934-1_00006.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-084934-1_00007.rec"
+ARRIVAL(a prosit ty v kolik být,TO(praha,STATION(hlavní nádraží)))
+.
+"*/CD03~Part1~04-000427-084934-1_00008.rec"
+TIME(šestnáct nula)
+.
+"*/CD03~Part1~04-000427-084934-1_00010.rec"
+ARRIVAL(já totiž potřebovat až,TO(do,STATION(děčín)))
+.
+"*/CD03~Part1~04-000427-084934-1_00011.rec"
+TO(do,STATION(děčín))
+.
+"*/CD03~Part1~04-000427-084934-1_00012.rec"
+TRANSFER(takže paní tam přecházet na praha,STATION(masarykův))
+.
+"*/CD03~Part1~04-000427-084934-1_00013.rec"
+DEPARTURE(a,TIME(v šestnáct třicet osm),ty,FROM(z,STATION(masarykův)),odjíždět,TRAIN_TYPE(rychlík),TO(do,STATION(děčín)))
+.
+"*/CD03~Part1~04-000427-084934-1_00015.rec"
+ARRIVAL(tam být ten nějak kolem,TIME(sedmý hodina))
+.
+"*/CD03~Part1~04-000427-084934-1_00016.rec"
+TIME(osmnáct čtyřicet pět)
+.
+"*/CD03~Part1~04-000427-084934-1_00017.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-090306-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-090306-1_00001.rec"
+PERSON(sýkorová),GREETING(dobrý den)
+.
+"*/CD03~Part1~04-000427-090306-1_00002.rec"
+DEPARTURE(já být chtít vědět jestli,TIME(v),neděle ráno jet,FROM(z,STATION(plzeň)),TO(do,STATION(chomutov)),TRAIN_TYPE(rychlík),TIME(v šest sedmnáct))
+.
+"*/CD03~Part1~04-000427-090306-1_00003.rec"
+REJECT(ne ten,TIME(v neděle nejezdit))
+.
+"*/CD03~Part1~04-000427-090306-1_00004.rec"
+REJECT(TIME(ten v neděle nejet))
+.
+"*/CD03~Part1~04-000427-090306-1_00005.rec"
+DEPARTURE(a,TIME(v),neděle být nějaký náhradní spoj být)
+.
+"*/CD03~Part1~04-000427-090306-1_00006.rec"
+REJECT(náhradní žádný)
+.
+"*/CD03~Part1~04-000427-090306-1_00007.rec"
+DEPARTURE(ale jezdit ale jezdit ty,TIME(v osm hodina),TRAIN_TYPE(osobní),TO(do,STATION(žatec)),ten být se ty nelíbit)
+.
+"*/CD03~Part1~04-000427-090306-1_00008.rec"
+ACCEPT(ten vědět že být se já líbit)
+.
+"*/CD03~Part1~04-000427-090306-1_00010.rec"
+TIME(osm nula)
+.
+"*/CD03~Part1~04-000427-090306-1_00011.rec"
+ARRIVAL(TO(v,STATION(žatec)),být v,TIME(deset padesát tři mít))
+.
+"*/CD03~Part1~04-000427-090306-1_00012.rec"
+DEPARTURE(a,FROM(z,STATION(žatec)),ty odjíždět,TRAIN_TYPE(přípoj),no,TIME(dvanáct nula tři))
+.
+"*/CD03~Part1~04-000427-090306-1_00013.rec"
+ARRIVAL(a být,TO(v,STATION(chomutov)),TIME(dvanáct třicet sedm))
+.
+"*/CD03~Part1~04-000427-090306-1_00014.rec"
+TIME(takže v ten neděle),NEXT(opravdu nic jiný)
+.
+"*/CD03~Part1~04-000427-091708-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-091708-1_00001.rec"
+GREETING(dobrý den)
+.
+"*/CD03~Part1~04-000427-091708-1_00002.rec"
+SYSTEM_FEATURE(prosit ty dávat také na mezinárodní spoj informace)
+.
+"*/CD03~Part1~04-000427-091708-1_00003.rec"
+ACCEPT(no co potřebovat)
+.
+"*/CD03~Part1~04-000427-091708-1_00004.rec"
+DEPARTURE(TO(do,STATION(münchena)))
+.
+"*/CD03~Part1~04-000427-091708-1_00005.rec"
+DEPARTURE(TRAIN_TYPE(přímý),vlak,TO(do,STATION(münchena)),FROM(z,STATION(plzeň)))
+.
+"*/CD03~Part1~04-000427-091708-1_00006.rec"
+TIME(a být ten ještě teď někdy jo)
+.
+"*/CD03~Part1~04-000427-091708-1_00007.rec"
+REPEAT(prosit)
+.
+"*/CD03~Part1~04-000427-091708-1_00008.rec"
+DEPARTURE(jet teď někdy ještě do květen ten být do,TIME(konec květen))
+.
+"*/CD03~Part1~04-000427-091708-1_00009.rec"
+ACCEPT(jo)
+.
+"*/CD03~Part1~04-000427-091708-1_00010.rec"
+DEPARTURE(tak,TRAIN_TYPE(přímý),být ty jet buď,TIME(ráno v devět třicet,_DUMMY_(čtyři)),TRAIN_TYPE(eurocity))
+.
+"*/CD03~Part1~04-000427-091708-1_00011.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-091708-1_00012.rec"
+ARRIVAL(a,TO(v,STATION(müncheně)),TIME(třináct čtyřicet šest))
+.
+"*/CD03~Part1~04-000427-091708-1_00013.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-091708-1_00014.rec"
+DEPARTURE(a nebo potom,TRAIN_TYPE(přímý),TIME(v osmnáct čtyřicet dva),TRAIN_TYPE(intercity))
+.
+"*/CD03~Part1~04-000427-091708-1_00015.rec"
+ARRIVAL(a,TO(v,STATION(müncheně)),TIME(dvacet tři nula osm))
+.
+"*/CD03~Part1~04-000427-091708-1_00016.rec"
+ACCEPT(aha)
+.
+"*/CD03~Part1~04-000427-091708-1_00017.rec"
+PRICE(a kolik ten stát)
+.
+"*/CD03~Part1~04-000427-091708-1_00018.rec"
+OTHER_INFO(ten už zase v mezinárodní pokladna ty řeknout cena sedmset jeden čtyřicet dva třicet pět)
+.
+"*/CD03~Part1~04-000427-091708-1_00019.rec"
+OTHER_INFO(čtyřicet dva třicet pět)
+.
+"*/CD03~Part1~04-000427-093336-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-093336-1_00001.rec"
+GREETING(dobrý den)
+.
+"*/CD03~Part1~04-000427-093336-1_00002.rec"
+DEPARTURE(já být potřebovat vědět,TIME(dnes),TO(do,STATION(cheb)),okolo,TIME(osmnáctý hodina))
+.
+"*/CD03~Part1~04-000427-093336-1_00003.rec"
+DEPARTURE(takže paní moci ty nabídnout,TIME(v osmnáct třicet),TRAIN_TYPE(rychlík))
+.
+"*/CD03~Part1~04-000427-093336-1_00006.rec"
+ARRIVAL(a být tam v kolik prosit ty)
+.
+"*/CD03~Part1~04-000427-093336-1_00007.rec"
+ARRIVAL(TO(v,STATION(cheb)),být,TIME(dvacet devatenáct))
+.
+"*/CD03~Part1~04-000427-094034-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-094034-1_00001.rec"
+GREETING(no dobrý den)
+.
+"*/CD03~Part1~04-000427-094034-1_00002.rec"
+DISTANCE(FROM(já být potřebovat,STATION(zjistit)),kolik kilometr,TO(být ten odsud do,STATION(kolín)))
+.
+"*/CD03~Part1~04-000427-094034-1_00003.rec"
+PRICE(a kolik stát jízdenka)
+.
+"*/CD03~Part1~04-000427-094034-1_00004.rec"
+DISTANCE(FROM(takže,STATION(odsud)),TO(do,STATION(kolín)),sto,LENGTH(sedmdesát šest),kilometr)
+.
+"*/CD03~Part1~04-000427-094034-1_00005.rec"
+PRICE(a jízdenka mít,AMOUNT(za),sto deset koruna)
+.
+"*/CD03~Part1~04-000427-094034-1_00006.rec"
+PRICE(sto deset)
+.
+"*/CD03~Part1~04-000427-094034-1_00007.rec"
+DEPARTURE(a v kolik jet nějaký vlak)
+.
+"*/CD03~Part1~04-000427-094034-1_00008.rec"
+DEPARTURE(já nevědět kdy chtít jet,TIME(paní))
+.
+"*/CD03~Part1~04-000427-094034-1_00009.rec"
+ACCEPT(aha)
+.
+"*/CD03~Part1~04-000427-094034-1_00011.rec"
+DEPARTURE(ten být jeden paní teď kvečeru od,TIME(ráno),jak ten jezdit)
+.
+"*/CD03~Part1~04-000427-094034-1_00012.rec"
+DEPARTURE(no teď asi,TRAIN_TYPE(rychlík),TIME(devět padesát dva))
+.
+"*/CD03~Part1~04-000427-094034-1_00013.rec"
+REJECT(nestihnout)
+.
+"*/CD03~Part1~04-000427-094034-1_00014.rec"
+DEPARTURE(TIME(devět padesát dva),jet vlak)
+.
+"*/CD03~Part1~04-000427-094034-1_00015.rec"
+TRANSFER(no ale ten být s přestup v,STATION(praga))
+.
+"*/CD03~Part1~04-000427-094034-1_00016.rec"
+ACCEPT(aha)
+.
+"*/CD03~Part1~04-000427-094034-1_00017.rec"
+TRAIN_TYPE(a nějaký přímý)
+.
+"*/CD03~Part1~04-000427-094034-1_00018.rec"
+DEPARTURE(TRAIN_TYPE(přímý),jet,TIME(v čtrnáct deset))
+.
+"*/CD03~Part1~04-000427-094034-1_00019.rec"
+TIME(čtrnáct deset)
+.
+"*/CD03~Part1~04-000427-094034-1_00020.rec"
+ARRIVAL(ten jet až,TO(do,STATION(kolín)))
+.
+"*/CD03~Part1~04-000427-094034-1_00021.rec"
+TO(až do,STATION(kolín))
+.
+"*/CD03~Part1~04-000427-094034-1_00022.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-094034-1_00023.rec"
+NEXT(a jiný nejet)
+.
+"*/CD03~Part1~04-000427-094034-1_00024.rec"
+TIME(dvacet jeden deset také),TRAIN_TYPE(přímo)
+.
+"*/CD03~Part1~04-000427-094034-1_00025.rec"
+DEPARTURE(a ten jet ten co jet,TO(na,STATION(košice)),asi že jo)
+.
+"*/CD03~Part1~04-000427-094034-1_00026.rec"
+ACCEPT(ano jistě)
+.
+"*/CD03~Part1~04-000427-094034-1_00027.rec"
+ACCEPT(aha takto dobře)
+.
+"*/CD03~Part1~04-000427-095212-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-095212-1_00001.rec"
+GREETING(dobrý den)
+.
+"*/CD03~Part1~04-000427-095212-1_00002.rec"
+DEPARTURE(prosit ty pěkně já být prosít,TIME(v),neděle vlak,TO(do,STATION(klatovy)),kolem někdy osmnáctý devatenáctý,TIME(hodina))
+.
+"*/CD03~Part1~04-000427-095212-1_00003.rec"
+DEPARTURE(takže moci ty nabídnout,TIME(v osmnáct padesát osm),TRAIN_TYPE(osobní),vlak)
+.
+"*/CD03~Part1~04-000427-095212-1_00005.rec"
+DEPARTURE(a jet ten)
+.
+"*/CD03~Part1~04-000427-095212-1_00007.rec"
+TIME(i v svátek)
+.
+"*/CD03~Part1~04-000427-095212-1_00008.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-095212-1_00009.rec"
+ACCEPT(dobře)
+.
+"*/CD03~Part1~04-000427-095656-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-095656-1_00001.rec"
+PERSON(havel),GREETING(dobrý den)
+.
+"*/CD03~Part1~04-000427-095656-1_00002.rec"
+GREETING(dobrý den)
+.
+"*/CD03~Part1~04-000427-095656-1_00003.rec"
+DEPARTURE(mít jeden velký prosba vlak,TO(do,STATION(český budějovice)),TRAIN_TYPE(rychlík),kolem,TIME(druhý hodina zítra))
+.
+"*/CD03~Part1~04-000427-095656-1_00004.rec"
+TIME(čtrnáct nula čtyři pan)
+.
+"*/CD03~Part1~04-000427-095656-1_00005.rec"
+TIME(čtrnáct nula čtyři)
+.
+"*/CD03~Part1~04-000427-095656-1_00006.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-095656-1_00007.rec"
+DEPARTURE(z,PLATFORM(kterýpak nástupiště))
+.
+"*/CD03~Part1~04-000427-095656-1_00008.rec"
+DEPARTURE(ten já odjíždět,PLATFORM(NUMBER(třetí),východ))
+.
+"*/CD03~Part1~04-000427-095656-1_00009.rec"
+PLATFORM(NUMBER(třetí),východ)
+.
+"*/CD03~Part1~04-000427-095656-1_00010.rec"
+ARRIVAL(a,TO(v kolikpak být v,STATION(budějovice)))
+.
+"*/CD03~Part1~04-000427-095656-1_00011.rec"
+TIME(šestnáct nula jeden)
+.
+"*/CD03~Part1~04-000427-095656-1_00012.rec"
+TIME(šestnáct nula jeden)
+.
+"*/CD03~Part1~04-000427-095656-1_00013.rec"
+PRICE(a kolikpak ten stát ještě)
+.
+"*/CD03~Part1~04-000427-095656-1_00014.rec"
+PRICE(tam ten mít,AMOUNT(za osmdesát šest),koruna)
+.
+"*/CD03~Part1~04-000427-095656-1_00015.rec"
+TRAIN_TYPE(včetně,_DUMMY_(příplatek jo))
+.
+"*/CD03~Part1~04-000427-095656-1_00016.rec"
+REJECT(příplatek se neplatit pan)
+.
+"*/CD03~Part1~04-000427-095824-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-095824-1_00001.rec"
+GREETING(dobrý den),PERSON(mašková)
+.
+"*/CD03~Part1~04-000427-095824-1_00002.rec"
+DEPARTURE(já být chtít vědět jak jet vlak,FROM(z,STATION(hlavní nádraží)),teď,TIME(v),neděle někdy po ráno nebo dopoledne směr,TO(na,STATION(klatovy přeštice)))
+.
+"*/CD03~Part1~04-000427-095824-1_00003.rec"
+DEPARTURE(takže v neděle po ráno ty moci nabídnout,TIME(paní v šest osmnáct),ty jet,TRAIN_TYPE(rychlík),TO(do,STATION(klatovy)))
+.
+"*/CD03~Part1~04-000427-095824-1_00004.rec"
+THROUGH(v,STATION(přeštice stavět))
+.
+"*/CD03~Part1~04-000427-095824-1_00005.rec"
+ACCEPT(jinak být ty on nenabízet)
+.
+"*/CD03~Part1~04-000427-095824-1_00006.rec"
+ARRIVAL(i ty řeknout v kolik tam být tam,TIME(šest čtyřicet pět))
+.
+"*/CD03~Part1~04-000427-095824-1_00007.rec"
+DEPARTURE(kdyby ty ujet jet hned osobní,TIME(šest dvacet pět))
+.
+"*/CD03~Part1~04-000427-095824-1_00008.rec"
+TIME(šest dvacet pět)
+.
+"*/CD03~Part1~04-000427-095824-1_00009.rec"
+DEPARTURE(nebo další,TIME(osm nula pět))
+.
+"*/CD03~Part1~04-000427-095824-1_00010.rec"
+ACCEPT(ten být,TIME(bezvadný osm nula pět))
+.
+"*/CD03~Part1~04-000427-095824-1_00011.rec"
+ARRIVAL(a ten být tam v,REF(kolik))
+.
+"*/CD03~Part1~04-000427-095824-1_00012.rec"
+ARRIVAL(ten být tam,TIME(osm třicet šest))
+.
+"*/CD03~Part1~04-000427-095824-1_00013.rec"
+TIME(osm třicet šest)
+.
+"*/CD03~Part1~04-000427-095824-1_00014.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-095824-1_00015.rec"
+NEXT(a potom ještě něco)
+.
+"*/CD03~Part1~04-000427-095824-1_00016.rec"
+DEPARTURE(pak jet,TIME(deset padesát dva))
+.
+"*/CD03~Part1~04-000427-095824-1_00017.rec"
+TIME(deset padesát dva)
+.
+"*/CD03~Part1~04-000427-095824-1_00018.rec"
+ARRIVAL(a ten být tam,TIME(jedenáct dvacet sedm))
+.
+"*/CD03~Part1~04-000427-100346-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-100346-1_00001.rec"
+GREETING(dobrý den),PERSON(hanzlíková)
+.
+"*/CD03~Part1~04-000427-100346-1_00002.rec"
+DEPARTURE(já mít prosba já být potřebovat,FROM(spojení z,STATION(plzeň)),TO(do,STATION(praha)),TIME(na první květen))
+.
+"*/CD03~Part1~04-000427-100346-1_00003.rec"
+ARRIVAL(aby být,TO(v,STATION(praga)),tak mezi druhý a,TIME(půl třetí),nebo brzy)
+.
+"*/CD03~Part1~04-000427-100346-1_00005.rec"
+DEPARTURE(takže vyjet,TRAIN_TYPE(rychlík),TIME(v devět padesát dva))
+.
+"*/CD03~Part1~04-000427-100346-1_00006.rec"
+ARRIVAL(ten být,TO(v praga na,STATION(hlavní,_DUMMY_(nádraží))),TIME(jedenáct třicet pět))
+.
+"*/CD03~Part1~04-000427-100346-1_00007.rec"
+DEPARTURE(další ty jet paní vlak,TRAIN_TYPE(intercity),s,AMOUNT(příplatek třicet,_DUMMY_(koruna)),TIME(v jedenáct dvacet čtyři))
+.
+"*/CD03~Part1~04-000427-100346-1_00008.rec"
+ARRIVAL(a být,TO(v praga na,STATION(hlavní,_DUMMY_(nádraží))),v,TIME(dvanáct padesát osm))
+.
+"*/CD03~Part1~04-000427-100346-1_00009.rec"
+ACCEPT(jo)
+.
+"*/CD03~Part1~04-000427-100346-1_00010.rec"
+NEXT(a pak už nic teda nejet)
+.
+"*/CD03~Part1~04-000427-100346-1_00011.rec"
+DEPARTURE(pak jet paní až,TIME(v čtrnáct deset),TRAIN_TYPE(rychlík))
+.
+"*/CD03~Part1~04-000427-100346-1_00012.rec"
+REJECT(ne ten už nepřipadat)
+.
+"*/CD03~Part1~04-000427-100346-1_00013.rec"
+REJECT(ten už být dlouho)
+.
+"*/CD03~Part1~04-000427-100346-1_00014.rec"
+DEPARTURE(takže,TIME(v jedenáct dvacet,_DUMMY_(čtyři)))
+.
+"*/CD03~Part1~04-000427-100346-1_00015.rec"
+ARRIVAL(a,TIME(dvanáct padesát osm),být tam být)
+.
+"*/CD03~Part1~04-000427-100346-1_00016.rec"
+DEPARTURE(a jet ten ted i ten,TIME(první květen))
+.
+"*/CD03~Part1~04-000427-100346-1_00017.rec"
+ACCEPT(TIME(každý den),bez výjimka)
+.
+"*/CD03~Part1~04-000427-100346-1_00018.rec"
+ACCEPT(perfektní)
+.
+"*/CD03~Part1~04-000427-101208-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-101208-1_00001.rec"
+PERSON(jandová),GREETING(dobrý den)
+.
+"*/CD03~Part1~04-000427-101208-1_00002.rec"
+DEPARTURE(prosit ty být,TIME(přes),TRAIN_TYPE(svátek),jezdit nějaký parní)
+.
+"*/CD03~Part1~04-000427-101208-1_00003.rec"
+DEPARTURE(no tak tady mít,TIME(šestý))
+.
+"*/CD03~Part1~04-000427-101208-1_00004.rec"
+TIME(šestý květen)
+.
+"*/CD03~Part1~04-000427-101208-1_00005.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-101208-1_00007.rec"
+TIME(šestý i sedmý)
+.
+"*/CD03~Part1~04-000427-101208-1_00008.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-101428-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-101428-1_00001.rec"
+GREETING(dobrý den)
+.
+"*/CD03~Part1~04-000427-101428-1_00002.rec"
+DEPARTURE(mladý,TIME(paní),já být potřebovat zítra,TO(do,STATION(nýřany)),TIME(dopoledne))
+.
+"*/CD03~Part1~04-000427-101428-1_00003.rec"
+DEPARTURE(dopoledne moci ty nabídnout pan,TIME(v osm devatenáct))
+.
+"*/CD03~Part1~04-000427-101428-1_00004.rec"
+TIME(osm devatenáct)
+.
+"*/CD03~Part1~04-000427-101428-1_00005.rec"
+FROM(tady z,STATION(hlavní,_DUMMY_(jo)))
+.
+"*/CD03~Part1~04-000427-101428-1_00006.rec"
+FROM(tady z,STATION(hlavní))
+.
+"*/CD03~Part1~04-000427-101656-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-101656-1_00001.rec"
+PERSON(petra myšková)
+.
+"*/CD03~Part1~04-000427-101656-1_00002.rec"
+DEPARTURE(já být zajímat jak jet vlak,TIME(v),pátek,FROM(z,STATION(cheb)),TO(do,STATION(kynžvart)),TIME(odpoledne))
+.
+"*/CD03~Part1~04-000427-101656-1_00003.rec"
+DEPARTURE(takže,TIME(paní v dvanáct deset),TRAIN_TYPE(rychlík),TIME(čtrnáct čtyřicet))
+.
+"*/CD03~Part1~04-000427-102022-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-102022-1_00001.rec"
+GREETING(dobrý den)
+.
+"*/CD03~Part1~04-000427-102022-1_00002.rec"
+GREETING(dobrý den)
+.
+"*/CD03~Part1~04-000427-102022-1_00003.rec"
+SYSTEM_FEATURE(prosit ty pěkně ten být dráha nebo autobus)
+.
+"*/CD03~Part1~04-000427-102022-1_00004.rec"
+REJECT(ne)
+.
+"*/CD03~Part1~04-000427-102022-1_00005.rec"
+SYSTEM_FEATURE(dráha)
+.
+"*/CD03~Part1~04-000427-102022-1_00006.rec"
+ACCEPT(SYSTEM_FEATURE(dráha),dobře)
+.
+"*/CD03~Part1~04-000427-102022-1_00007.rec"
+DEPARTURE(já být potřebovat jestli,TIME(v),neděle odpoledne být nějaký spoj,TRAIN_TYPE(rychlíkový),TO(na,STATION(praha)),a,TO(STATION(ostrava)),FROM(z,STATION(plzeň)))
+.
+"*/CD03~Part1~04-000427-102022-1_00008.rec"
+TIME(který den že ten být prosit)
+.
+"*/CD03~Part1~04-000427-102022-1_00009.rec"
+TIME(v neděle teď)
+.
+"*/CD03~Part1~04-000427-102022-1_00010.rec"
+TIME(v neděle)
+.
+"*/CD03~Part1~04-000427-102022-1_00011.rec"
+TIME(a chtít ráno)
+.
+"*/CD03~Part1~04-000427-102022-1_00012.rec"
+TIME(odpoledne tak někdy kolem ten patnáctý po patnáctý)
+.
+"*/CD03~Part1~04-000427-102022-1_00013.rec"
+TIME(odpoledne pan ale v tento doba přicházet v úvaha),TRAIN_TYPE(vlak intercity nevadit)
+.
+"*/CD03~Part1~04-000427-102022-1_00014.rec"
+ACCEPT(nevadit)
+.
+"*/CD03~Part1~04-000427-102022-1_00016.rec"
+DEPARTURE(takže vyjet,FROM(z,STATION(plzeň)),TIME(v patnáct hodina deset minuta))
+.
+"*/CD03~Part1~04-000427-102022-1_00017.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-102022-1_00018.rec"
+ARRIVAL(ano,TO(v praga na,STATION(hlavní,_DUMMY_(nádraží))),být v,TIME(šestnáct čtyřicet šest))
+.
+"*/CD03~Part1~04-000427-102022-1_00019.rec"
+DEPARTURE(a opět,FROM(z,STATION(hlavní nádraží)),ty jet další vlak,TRAIN_TYPE(eurocity),být ten,TIME(perner sedmnáct čtyřicet čtyři))
+.
+"*/CD03~Part1~04-000427-102022-1_00020.rec"
+ARRIVAL(a jet do poruba nebo,TO(na,STATION(hlavní)),kam jet)
+.
+"*/CD03~Part1~04-000427-102022-1_00021.rec"
+TO(já nevědět asi na,STATION(hlaveň))
+.
+"*/CD03~Part1~04-000427-102022-1_00022.rec"
+TO(na,STATION(hlavní))
+.
+"*/CD03~Part1~04-000427-102022-1_00023.rec"
+ARRIVAL(takže,TO(na,STATION(hlaveň)),být v,TIME(dvacet dva nula šest))
+.
+"*/CD03~Part1~04-000427-102022-1_00024.rec"
+TIME(dvacet dva nula šest)
+.
+"*/CD03~Part1~04-000427-102022-1_00025.rec"
+ACCEPT(úplně perfektní)
+.
+"*/CD03~Part1~04-000427-102836-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-102836-1_00001.rec"
+GREETING(dobrý den tady)
+.
+"*/CD03~Part1~04-000427-102836-1_00002.rec"
+GREETING(dobrý den)
+.
+"*/CD03~Part1~04-000427-102836-1_00003.rec"
+DEPARTURE(prosit ty v kolikpak jet dnes vlak okolo,TIME(třetí hodina),FROM(z,STATION(plzeň)),TO(do,STATION(bayerische ruda)))
+.
+"*/CD03~Part1~04-000427-102836-1_00004.rec"
+TIME(no v patnáct šestnáct),TRAIN_TYPE(přímo)
+.
+"*/CD03~Part1~04-000427-102836-1_00005.rec"
+_DUMMY_(a ten být),TRAIN_TYPE(přímo),TO(do,STATION(železný ruda))
+.
+"*/CD03~Part1~04-000427-102836-1_00006.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-102836-1_00007.rec"
+ARRIVAL(a,TO(v,STATION(železný ruda)),být nebo,TO(v,STATION(bayerische)))
+.
+"*/CD03~Part1~04-000427-102836-1_00008.rec"
+ARRIVAL(TO(na,STATION(hranice)),být v,TIME(sedmnáct padesát jeden))
+.
+"*/CD03~Part1~04-000427-102836-1_00009.rec"
+ACCEPT(jo dobře)
+.
+"*/CD03~Part1~04-000427-131722-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-131722-1_00001.rec"
+PERSON(no,_DUMMY_(štědronský))
+.
+"*/CD03~Part1~04-000427-131722-1_00002.rec"
+DEPARTURE(prosit ty já být potřebovat vědět,TIME(kdy),teď jet vlak,FROM(z,STATION(vochov)),TO(do,STATION(plzeň)),TIME(blízký))
+.
+"*/CD03~Part1~04-000427-131722-1_00003.rec"
+TIME(teď),FROM(z,STATION(vochov))
+.
+"*/CD03~Part1~04-000427-131722-1_00005.rec"
+WHAT_TIME(v kolik prosit ty)
+.
+"*/CD03~Part1~04-000427-131722-1_00006.rec"
+DEPARTURE(ten jet,FROM(z,STATION(vochov)),TIME(třináct))
+.
+"*/CD03~Part1~04-000427-131722-1_00007.rec"
+DELAY(ale teď on hlásit zpoždění)
+.
+"*/CD03~Part1~04-000427-131722-1_00009.rec"
+DELAY(o kolik ten být)
+.
+"*/CD03~Part1~04-000427-131722-1_00011.rec"
+TIME(deset minuta)
+.
+"*/CD03~Part1~04-000427-131722-1_00012.rec"
+TIME(deset minuta)
+.
+"*/CD03~Part1~04-000427-131722-1_00013.rec"
+REJECT(ten být ten být špatný)
+.
+"*/CD03~Part1~04-000427-131722-1_00016.rec"
+NEXT(a další jed prosit ty)
+.
+"*/CD03~Part1~04-000427-131722-1_00017.rec"
+DEPARTURE(další jed,FROM(z,STATION(vochov)),až,TIME(patnáct dvanáct),TO(na,STATION(plzeň)))
+.
+"*/CD03~Part1~04-000427-131826-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-131826-1_00001.rec"
+GREETING(dobrý den)
+.
+"*/CD03~Part1~04-000427-131826-1_00002.rec"
+PRICE(FROM(prosit ty moci být se zeptat kolikpak být přibližně stát lístek,STATION(pro,_DUMMY_(padesát))),TO(člověk z plzeň do,STATION(železný ruda)))
+.
+"*/CD03~Part1~04-000427-131826-1_00003.rec"
+REJECT(ten já ty nepovědět pan)
+.
+"*/CD03~Part1~04-000427-131826-1_00005.rec"
+REJECT(ten já ty nepovědět)
+.
+"*/CD03~Part1~04-000427-131826-1_00009.rec"
+FROM(jeden jízdenka na,STATION(železný)),TO(STATION(ruda)),PRICE(ty stát,AMOUNT(šedesát),dva koruna a do šesta dvacet rok mít polovina jízdné)
+.
+"*/CD03~Part1~04-000427-131826-1_00011.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-131826-1_00012.rec"
+PRICE(šesta dvacet koruna teda stát být říkat)
+.
+"*/CD03~Part1~04-000427-131826-1_00013.rec"
+PRICE(ne šedesát dva)
+.
+"*/CD03~Part1~04-000427-131826-1_00014.rec"
+PRICE(šedesát dva koruna jo)
+.
+"*/CD03~Part1~04-000427-131826-1_00015.rec"
+PRICE(šedesát dva koruna jeden)
+.
+"*/CD03~Part1~04-000427-131826-1_00016.rec"
+PRICE(a s sleva být ten ted o polovina)
+.
+"*/CD03~Part1~04-000427-131826-1_00018.rec"
+PRICE(každý zaplatit tam a,AMOUNT(zpátky šedesát),dva koruna)
+.
+"*/CD03~Part1~04-000427-131826-1_00019.rec"
+ACCEPT(jo takto tak jo)
+.
+"*/CD03~Part1~04-000427-131826-1_00021.rec"
+GREETING(děkovat nashledanou)
+.
+"*/CD03~Part1~04-000427-131826-1_00022.rec"
+GREETING(nebýt zač pan nashledanou)
+.
+"*/CD03~Part1~04-000427-132152-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-132152-1_00001.rec"
+GREETING(dobrý den)
+.
+"*/CD03~Part1~04-000427-132152-1_00002.rec"
+DEPARTURE(prosit ty já být chtít vědět v kolikpak jet příští týden,TIME(v),pátek vlak,FROM(z,STATION(železný ruda)),nějak brzy ráno nějak,TIME(ráno))
+.
+"*/CD03~Part1~04-000427-132152-1_00003.rec"
+TIME(jak brzy ráno)
+.
+"*/CD03~Part1~04-000427-132152-1_00004.rec"
+TIME(okolo ten osmý hodina)
+.
+"*/CD03~Part1~04-000427-132152-1_00005.rec"
+REPEAT(tak ještě jednou prosit pěkně)
+.
+"*/CD03~Part1~04-000427-132152-1_00006.rec"
+TIME(co ten být za den)
+.
+"*/CD03~Part1~04-000427-132152-1_00007.rec"
+TIME(pátý dva tisíc)
+.
+"*/CD03~Part1~04-000427-132152-1_00008.rec"
+TIME(pátý)
+.
+"*/CD03~Part1~04-000427-132152-1_00010.rec"
+DEPARTURE(TIME(ráno),vlak,FROM(z,STATION(železný ruda)),TO(do,STATION(plzeň)))
+.
+"*/CD03~Part1~04-000427-132152-1_00011.rec"
+DEPARTURE(takže pan,TIME(v),pátek ty moci nabídnout,FROM(z,STATION(železný ruda město)),první,TIME(v tři nula),TRANSFER(dva s,STATION(přestup)),v klatovy)
+.
+"*/CD03~Part1~04-000427-132152-1_00012.rec"
+TIME(ráno)
+.
+"*/CD03~Part1~04-000427-132152-1_00013.rec"
+ACCEPT(ano pan)
+.
+"*/CD03~Part1~04-000427-132152-1_00014.rec"
+TIME(no moci okolo osmý hodina)
+.
+"*/CD03~Part1~04-000427-132152-1_00015.rec"
+TIME(až okolo osmý)
+.
+"*/CD03~Part1~04-000427-132152-1_00016.rec"
+DEPARTURE(takže pan dát ty,TRAIN_TYPE(přímý),TIME(osm čtyřicet šest),FROM(z,STATION(město)))
+.
+"*/CD03~Part1~04-000427-132152-1_00017.rec"
+TIME(v osm čtyřicet šest)
+.
+"*/CD03~Part1~04-000427-132152-1_00018.rec"
+DEPARTURE(nebo chtít jet,FROM(z,STATION(hranice)))
+.
+"*/CD03~Part1~04-000427-132152-1_00019.rec"
+REPEAT(prosit)
+.
+"*/CD03~Part1~04-000427-132152-1_00020.rec"
+DEPARTURE(chtít jet,FROM(z,STATION(hranice)),až z vrch)
+.
+"*/CD03~Part1~04-000427-132152-1_00021.rec"
+REJECT(ne)
+.
+"*/CD03~Part1~04-000427-132152-1_00022.rec"
+REJECT(ne)
+.
+"*/CD03~Part1~04-000427-132152-1_00023.rec"
+FROM(z,STATION(město))
+.
+"*/CD03~Part1~04-000427-132152-1_00024.rec"
+FROM(tam někde z,STATION(město někde))
+.
+"*/CD03~Part1~04-000427-132152-1_00025.rec"
+TIME(takže osm čtyřicet šest)
+.
+"*/CD03~Part1~04-000427-132152-1_00026.rec"
+TIME(v osm čtyřicet šest)
+.
+"*/CD03~Part1~04-000427-132152-1_00027.rec"
+WHAT_TIME(a v kolik)
+.
+"*/CD03~Part1~04-000427-132152-1_00028.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-132152-1_00029.rec"
+ARRIVAL(a v,TIME(jedenáct třináct),být tady,TO(v,STATION(plzeň)))
+.
+"*/CD03~Part1~04-000427-132152-1_00030.rec"
+ARRIVAL(v,TIME(jedenáct třináct),být,TO(v,STATION(plzeň)))
+.
+"*/CD03~Part1~04-000427-132152-1_00031.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-133208-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-133208-1_00001.rec"
+GREETING(PERSON(bystřický dobrý),den)
+.
+"*/CD03~Part1~04-000427-133208-1_00003.rec"
+GREETING(prosit nashledanou)
+.
+"*/CD03~Part1~04-000427-133606-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-133606-1_00001.rec"
+GREETING(dobrý den mladý paní)
+.
+"*/CD03~Part1~04-000427-133606-1_00002.rec"
+DEPARTURE(prosit ty pěkně,TIME(jakpak),jet teď vlak,TO(na,STATION(český budějovice)),TRAIN_TYPE(osobní),být ten nějak kolem,TIME(druhý hodina))
+.
+"*/CD03~Part1~04-000427-133606-1_00003.rec"
+TRAIN_TYPE(osobní)
+.
+"*/CD03~Part1~04-000427-133606-1_00004.rec"
+ACCEPT(ano,TIME(paní čtrnáct patnáct))
+.
+"*/CD03~Part1~04-000427-133606-1_00006.rec"
+PLATFORM(být ten z třetí)
+.
+"*/CD03~Part1~04-000427-133606-1_00009.rec"
+DEPARTURE(ten já jet,PLATFORM(čtvrtý východ))
+.
+"*/CD03~Part1~04-000427-133606-1_00010.rec"
+PLATFORM(čtvrtý východ),TRAIN_TYPE(osobní)
+.
+"*/CD03~Part1~04-000427-133606-1_00011.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-133606-1_00012.rec"
+ACCEPT(být ten)
+.
+"*/CD03~Part1~04-000427-133606-1_00013.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-134612-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-134612-1_00001.rec"
+GREETING(jelínková dobrý),PERSON(den)
+.
+"*/CD03~Part1~04-000427-134612-1_00002.rec"
+DEPARTURE(já být se chtít zeptat jakpak jet,TIME(v),pátek odpoledne vlak,TO(do,STATION(most)),FROM(z,STATION(plzeň)))
+.
+"*/CD03~Part1~04-000427-134612-1_00003.rec"
+TIME(v čtrnáct třináct),TRAIN_TYPE(spěšný),TRANSFER(s přestup v,STATION(chomutov))
+.
+"*/CD03~Part1~04-000427-134612-1_00004.rec"
+NEXT(pozdě)
+.
+"*/CD03~Part1~04-000427-134612-1_00005.rec"
+TIME(patnáct osmnáct),TRAIN_TYPE(osobní přímý),TO(do,STATION(most))
+.
+"*/CD03~Part1~04-000427-134612-1_00006.rec"
+TRAIN_TYPE(přímý)
+.
+"*/CD03~Part1~04-000427-134612-1_00008.rec"
+ACCEPT(dobře)
+.
+"*/CD03~Part1~04-000427-134612-1_00009.rec"
+DEPARTURE(a no,TIME(on),jet hned,TRAIN_TYPE(rychlík),ještě,TIME(v šestnáct čtyřicet šest),také,TRAIN_TYPE(přímo),TO(do,STATION(most)))
+.
+"*/CD03~Part1~04-000427-134612-1_00010.rec"
+OTHER_INFO(a kterýpak být tam z on brzy)
+.
+"*/CD03~Part1~04-000427-134612-1_00011.rec"
+REF(no říci být že ten,TRAIN_TYPE(osobní))
+.
+"*/CD03~Part1~04-000427-134612-1_00012.rec"
+ACCEPT(jo tak jo)
+.
+"*/CD03~Part1~04-000427-135246-1_00000.rec"
+GREETING(informace prosit)
+.
+"*/CD03~Part1~04-000427-135246-1_00001.rec"
+GREETING(dobrý den),PERSON(šedivý)
+.
+"*/CD03~Part1~04-000427-135246-1_00002.rec"
+DEPARTURE(prosit ty pěkně moci být já říci,TIME(v),kolik zítra odpoledne jet,TRAIN_TYPE(rychlík),TO(na,STATION(praha)),nějak po šestnáctý nebo sedmnáctý,TIME(hodina))
+.
+"*/CD03~Part1~04-000427-135246-1_00003.rec"
+TIME(v šestnáct dvacet sedm)
+.
+"*/CD03~Part1~04-000427-135246-1_00004.rec"
+TIME(šestnáct dvacet sedm)
+.
+"*/CD03~Part1~04-000427-135246-1_00005.rec"
+NEXT(a potom)
+.
+"*/CD03~Part1~04-000427-135246-1_00006.rec"
+TIME(potom v sedmnáct nula osm),TRAIN_TYPE(osobní)
+.
+"*/CD03~Part1~04-000427-135246-1_00007.rec"
+TRAIN_TYPE(a rychlík),TIME(osmnáct padesát tři)
+.
+"*/CD03~Part1~04-000427-135246-1_00008.rec"
+TIME(osmnáct padesát tři)
+.
+"*/CD03~Part1~04-000427-140420-1_00000.rec"
+GREETING(informace)
+.
+"*/CD03~Part1~04-000427-140420-1_00001.rec"
+GREETING(dobrý den)
+.
+"*/CD03~Part1~04-000427-140420-1_00002.rec"
+DEPARTURE(prosit ty pěkně,TIME(kdypak),se dostat večer,FROM(z,STATION(zdemyslice)),TIME(dnes))
+.
+"*/CD03~Part1~04-000427-140420-1_00003.rec"
+TO(ale kam)
+.
+"*/CD03~Part1~04-000427-140420-1_00004.rec"
+FROM(z,STATION(zdemyslice))
+.
+"*/CD03~Part1~04-000427-140420-1_00005.rec"
+FROM(z,STATION(zdemyslice)),TO(do,STATION(plzeň))
+.
+"*/CD03~Part1~04-000427-140420-1_00006.rec"
+DEPARTURE(takže,FROM(z,STATION(zdemyslice)),být ty odjíždět,TO(na,STATION(plzeň)),buď,TIME(v sedmnáct čtyřicet tři))
+.
+"*/CD03~Part1~04-000427-140420-1_00007.rec"
+DEPARTURE(a nebo potom,TIME(dvacet padesát),jeden)
+.
+"*/CD03~Part1~04-000427-140420-1_00008.rec"
+OTHER_INFO(jenom tento dva)
+.
+"*/CD03~Part1~04-000427-140420-1_00009.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-140420-1_00010.rec"
+PREVIOUS(nebo chtít brzy ještě)
+.
+"*/CD03~Part1~04-000427-140420-1_00011.rec"
+REJECT(ne)
+.
+"*/CD03~Part1~04-000427-140420-1_00012.rec"
+TIME(sedmnáct čtyřicet tři jo)
+.
+"*/CD03~Part1~04-000427-140420-1_00013.rec"
+ACCEPT(ano)
+.
+"*/CD03~Part1~04-000427-140614-1_00000.rec"
+GREETING(informace)
+.
+"*/CD03~Part1~04-000427-140614-1_00001.rec"
+GREETING(dobrý den)
+.
+"*/CD03~Part1~04-000427-140614-1_00002.rec"
+DEPARTURE(já být potřebovat vědět v všední den,TIME(v),středa vlak,FROM(z,STATION(chomutov)),TO(do,STATION(plzeň)))
+.
+"*/CD03~Part1~04-000427-140614-1_00003.rec"
+WHAT_TIME(v kolikpak hodina)
+.
+"*/CD03~Part1~04-000427-140614-1_00004.rec"
+ARRIVAL(který být,TO(do,STATION(plzeň)),dojet kolem,TIME(jedenáctý hodina))
+.
+"*/CD03~Part1~04-000427-140614-1_00005.rec"
+ARRIVAL(buď přijet,TO(do,STATION(plzeň)),v,TIME(devět patnáct))
+.
+"*/CD03~Part1~04-000427-140614-1_00006.rec"
+ARRIVAL(a nebo potom až v,TIME(třináct čtyřicet pět))
+.
+"*/CD03~Part1~04-000427-140614-1_00008.rec"
+ACCEPT(dobře)
+.
+"*/CD03~Part1~04-000427-140614-1_00009.rec"
+DEPARTURE(a jakpak vyjíždět prosit ty ten,ARRIVAL(TIME(co)),být v devět patnáct)
+.
+"*/CD03~Part1~04-000427-140614-1_00010.rec"
+TIME(v středa být říkat ano)
+.
+"*/CD03~Part1~04-000427-140614-1_00011.rec"
+ACCEPT(ano,TIME(v středa))
+.
+"*/CD03~Part1~04-000427-140614-1_00012.rec"
+DEPARTURE(takže,FROM(z,STATION(žatec západ)),ten odjíždět,TIME(sedm jedenáct),FROM(z,STATION(západ)),jo)
+.
+"*/CD03~Part1~04-000427-140614-1_00013.rec"
+ARRIVAL(a být ten,TIME(devět patnáct),TO(v,STATION(plzeň)))
+.
+"*/CD03~Part1~04-000427-140614-1_00014.rec"
+TRAIN_TYPE(být ten rychlík)
+.
+"*/CD03~Part1~04-000427-140614-1_00015.rec"
+ARRIVAL(a,TO(v,STATION(chomutov)),být ten kde)
+.
+"*/CD03~Part1~04-000427-140614-1_00019.rec"
+TIME(šest čtyřicet devět),FROM(z,STATION(chomutov))
+.
+"*/CD03~Part1~04-000427-140614-1_00020.rec"
+ARRIVAL(TIME(devět patnáct),být ten,TO(v,STATION(plzeň)))
+.
+"*/CD03~Part1~04-000427-140614-1_00021.rec"
+TRANSFER(nepřesedat se nikde jo)
+.
+"*/CD03~Part1~04-000427-140614-1_00022.rec"
+ACCEPT(dobře)
+.
+"*/CD03~Part1~04-000427-141328-1_00000.rec"
+GREETING(informace)
+.
+"*/CD03~Part1~04-000427-141328-1_00001.rec"
+GREETING(dobrý den)
+.
+"*/CD03~Part1~04-000427-141328-1_00002.rec"
+GREETING(dobrý den)
+.
+"*/CD03~Part1~04-000427-141328-1_00003.rec"
+DEPARTURE(já být prosít nějaký spoj,TO(do,STATION(hradec králová)),TIME(v),všednět den aby tak kolem,ARRIVAL(TIME(devátý)),hodina,FROM(z,STATION(plzeň)))
+.
+"*/CD03~Part1~04-000427-141328-1_00004.rec"
+ARRIVAL(aby v,TIME(devět),už být,TO(v,STATION(hradec)))
+.
+"*/CD03~Part1~04-000427-141328-1_00005.rec"
+MAYBE(no tak nějak)
+.
+"*/CD03~Part1~04-000427-141328-1_00006.rec"
+TIME(v všední den)
+.
+"*/CD03~Part1~04-000427-141328-1_00007.rec"
+ACCEPT(ano,TIME(v všední den))
+.
+"*/CD03~Part1~04-000427-141328-1_00008.rec"
+ARRIVAL(když být v hradec,TIME(králová devět deset),ten už být,TO(být,STATION(pozdě)))
+.
+"*/CD03~Part1~04-000427-141328-1_00009.rec"
+ACCEPT(ten být dobrý)
+.
+"*/CD03~Part1~04-000427-141328-1_00010.rec"
+ACCEPT(jo)
+.
+"*/CD03~Part1~04-000427-141328-1_00011.rec"
+DEPARTURE(takže,FROM(z,STATION(plzeň)),jet,TIME(pět třicet),TRAIN_TYPE(rychlík))
+.
+"*/CD03~Part1~04-000427-141328-1_00012.rec"
+TIME(pět třicet ano)
+.
+"*/CD03~Part1~04-000427-141328-1_00013.rec"
+ARRIVAL(být v,TIME(sedm deset),TO(v praga na,STATION(hlavní)),tam být,TRANSFER(přestup))
+.
+"*/CD03~Part1~04-000427-141328-1_00014.rec"
+DEPARTURE(FROM(z,STATION(praha hlavní)),odjíždět,TIME(v sedm devatenáct))
+.
+"*/CD03~Part1~04-000427-141328-1_00015.rec"
+TIME(a devět deset),STATION(hradec králová)
+.
+"*/CD03~Part1~04-000427-141328-1_00016.rec"
+ACCEPT(dobře)
+.
+"*/CD03~Part1~04-000427-141328-1_00017.rec"
+PLATFORM(a na,STATION(tom hlaveň),nevědět ten nástupiště)
+.
+"*/CD03~Part1~04-000427-141328-1_00018.rec"
+REJECT(PLATFORM(nástupiště),ne)
+.
+"*/CD03~Part1~04-000427-141328-1_00019.rec"
+STATION(v praga)
+.
+"*/CD03~Part1~04-000427-141328-1_00020.rec"
+REJECT(PLATFORM(nástupiště),ne)
+.

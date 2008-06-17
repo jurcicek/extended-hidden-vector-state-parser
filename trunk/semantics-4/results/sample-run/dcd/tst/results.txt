@@ -1,0 +1,367 @@
+####################################################################################
+#  Environment variables                                                           #
+####################################################################################
+ANNOTATED_DIR=data_annotated
+BACKOFF_FA_PROBS=0.9999 0.0001
+BUILD_DIR=build/2008-06-17-14.26
+CDPATH=.:/home/honza/Programovani/Python:/home/honza/Programovani/Python/UI:/home:/home/honza/Research
+COLORTERM=xterm
+CONCEPT_MAP=build/2008-06-17-14.26/maps/concept.map
+CONCEPT_MAP_TXT=build/2008-06-17-14.26/maps-txt/concept.map
+CONFUSE_DATA_DIR=build/2008-06-17-14.26/data-confused
+CONFUSE_DIR=/home/honza/Research/Semantics/extended-hidden-vector-state-parser-my/semantics-4/../confusion
+CONFUSE=0
+CPP_OPTIONS=-I build/2008-06-17-14.26/include -I params
+CVSROOT=:ext:jps@147.228.47.84:/cvs
+CVS_RSH=ssh
+DA_DIR=build/2008-06-17-14.26/da
+DATA_DIR=/home/honza/Research/Semantics/extended-hidden-vector-state-parser-my/semantics-4/../example-data
+DATA_HLDT=build/2008-06-17-14.26/data/hldt
+DATA_REDUCTION=100
+DATA_TRN=build/2008-06-17-14.26/data/trn
+DATA_TST=build/2008-06-17-14.26/data/tst
+DATA_TXT_HLDT=build/2008-06-17-14.26/data-txt/hldt
+DATA_TXT_TRN=build/2008-06-17-14.26/data-txt/trn
+DATA_TXT_TST=build/2008-06-17-14.26/data-txt/tst
+DATA_XML_HLDT=build/2008-06-17-14.26/data-xml/hldt
+DATA_XML_TRN=build/2008-06-17-14.26/data-xml/trn
+DATA_XML_TST=build/2008-06-17-14.26/data-xml/tst
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-FMKazKtHNx,guid=e0fb29706277f583fe84fc8e4856a64b
+DCD_HLDT=build/2008-06-17-14.26/dcd/hldt
+DCD_TST=build/2008-06-17-14.26/dcd/tst
+DESKTOP_SESSION=default
+DISPLAY=:0.0
+DM_CONTROL=/var/run/xdmctl
+EDITOR=gvim -f
+EXPERIMENT_NAME=2008-06-17-14.26
+FA_HLDT=build/2008-06-17-14.26/fa/hldt
+FA_TRN=build/2008-06-17-14.26/fa/trn
+FA_TST=build/2008-06-17-14.26/fa/tst
+FSM_CUTOFF_SYM=1e-20
+FSM_CUTOFF_TRANS=1e-10
+FSM_DIR=build/2008-06-17-14.26/fsm
+FSM_STATES=200
+GEN_COMMON_PARAMS_SETTINGS=build/2008-06-17-14.26/include/commonParamsSettings.h
+GEN_DATA_CONSTANTS=build/2008-06-17-14.26/include/dataConstants.h
+GEN_DIR=build/2008-06-17-14.26/gen
+GS_LIB=/home/honza/.fonts
+GTK_RC_FILES=/etc/gtk/gtkrc:/home/honza/.gtkrc:/home/honza/.kde/share/config/gtkrc
+GTK2_RC_FILES=/home/honza/.gtkrc-2.0-kde:/home/honza/.kde/share/config/gtkrc-2.0
+HOME=/home/honza
+HOSTNAME=honzas2
+INPUT_CHAIN=none
+INSERTION_PENALTY=1.0
+JUMP_PROBS=0.5 0.5 0.0 0.0 0.0 0.0 0.0
+KDE_FULL_SESSION=true
+KDE_MULTIHEAD=false
+KDE_SESSION_UID=1000
+KONSOLE_DCOP=DCOPRef(konsole-12769,konsole)
+KONSOLE_DCOP_SESSION=DCOPRef(konsole-12769,session-1)
+LANG=cs_CZ.UTF-8
+LD_LIBRARY_PATH=:/home/honza/bin-speech/att/lib:/home/honza/bin-speech/att/lib/rec11:/home/honza/bin-speech/dst-4.0/lib:/home/honza/bin-speech/fsm-4.0/lib
+LESS=-M
+LOGNAME=honza
+LS_COLORS=*.swp=00;44;37:*,v=5;34;93:*.vim=35:no=0:fi=0:di=32:ln=36:or=1;40:mi=1;40:pi=31:so=33:bd=44;37:cd=44;37:ex=35:*.jpg=1;32:*.jpeg=1;32:*.JPG=1;32:*.gif=1;32:*.png=1;32:*.jpeg=1;32:*.ppm=1;32:*.pgm=1;32:*.pbm=1;32:*.c=1;32:*.C=1;33:*.h=1;33:*.cc=1;33:*.awk=1;33:*.pl=1;33:*.gz=31:*.tar=31:*.zip=31:*.lha=1;31:*.lzh=1;31:*.arj=1;31:*.bz2=31:*.tgz=31:*.taz=1;31:*.html=36:*.htm=1;34:*.doc=1;34:*.txt=1;34:*.o=1;36:*.a=1;36
+MAKE_XML=1
+MANPATH=:/home/honza/bin-speech/man:/home/honza/bin-speech/srilm-1.4.6/man
+MAP_DIR=build/2008-06-17-14.26/maps
+MAP_TXT_DIR=build/2008-06-17-14.26/maps-txt
+MAX_PUSH=2
+MSTR_DCD_DIR=params/mstr/dcd
+MSTR_FA_HLDT_DIR=params/mstr/fa_hldt
+MSTR_FALIGNER_FA_TRN_DIR=params/mstr/faligner_fa_trn
+MSTR_FA_TRN_DIR=params/mstr/fa_trn
+MSTR_FA_TST_DIR=params/mstr/fa_tst
+MSTR_SMTH_DIR=params/mstr/smth
+MSTR_TRN_DIR=params/mstr/trn
+NLTK_DATA=/usr/share/nltk/data
+ORIG_DATASETS=lemma,pos
+OS=linux-gnu
+OSMAJOR=
+OSVERSION=
+PAGER=less
+PARAMS=params
+PARSE_TYPE=LRRL-FT
+PATH=/home/honza/bin:/usr/local/bin:/usr/bin:/bin:/usr/games:/opt/fsm-4.0/bin:/opt/gmtk-20070511:/opt/srilm-1.5.3/bin:/opt/srilm-1.5.3/bin/i686:/opt/htk-3.4/bin:/opt/srilm-1.4.6/bin:/opt/srilm-1.4.6/bin/i686:/opt/sctk/bin:/opt/OpenFST:/home/honza/bin-speech/bin:/home/honza/bin-speech/brecog/bin:/home/honza/bin-speech/dcd-2.0/bin:/home/honza/bin-speech/fsm-4.0/bin:/home/honza/bin-speech/fsm-misc/bin:/home/honza/bin-speech/gmtk/bin:/home/honza/bin-speech/grm-4.0/bin:/home/honza/bin-speech/htk-3.2/bin:/home/honza/bin-speech/htk-misc/bin:/home/honza/bin-speech/misc:/home/honza/bin-speech/nist/sctk-1.2c:/home/honza/bin-speech/nist/tranfilt-1.12:/home/honza/bin-speech/scripts:/home/honza/bin-speech/srilm-1.5.2/bin/i686:/home/honza/bin-speech/srilm-1.5.2/bin:/home/honza/bin-speech/xbin:/home/honza/bin-speech/evalb:/home/honza/bin-speech/svc:/home/honza/bin:/opt/ind:/home/honza/Research/Semantics/extended-hidden-vector-state-parser-my/semantics-4/bin/
+PDT_WORK_DIR=build/2008-06-17-14.26/pdt
+PDT20_TOOLS=/opt/PDT-2.0/tools/machine-annotation
+PERL5LIB=:/home/honza/bin-speech/xperl:/home/honza/bin-speech/xperl/byrne/site_perl:/home/honza/bin-speech/xperl:/home/honza/bin-speech/xperl/byrne/site_perl
+POP_CARD=5
+PUSH_CARD=5
+PWD=/home/honza/Research/Semantics/extended-hidden-vector-state-parser-my/semantics-4
+PYTHONPATH=/home/honza/lib/python2.2/user-packages
+PYTHONSTARTUP=/home/honza/lib/python2.2/startup.py
+RESULT_DIR=results/2008-06-17-14.26
+SCALE_CONCEPT12=2.4
+SCALE_PUSHPOP=2.0
+SESSION_MANAGER=local/honzas2:/tmp/.ICE-unix/4275
+SHELL=/usr/bin/zsh
+SHLVL=6
+SKIP_DUMMY_PROBS=0.3 0.7
+SRC_DIR=/home/honza/Research/Semantics/extended-hidden-vector-state-parser-my/semantics-4/src
+SRESULTS_SKIP=@SKIP,@DA
+SSH_AGENT_PID=4210
+SSH_AUTH_SOCK=/tmp/ssh-YWISqI4186/agent.4186
+STR_DIR=params/str
+S1_DATASET=lemma
+S1_INDEX=0
+S1_MAP=build/2008-06-17-14.26/maps/s1.map
+S1_MAP_TXT=build/2008-06-17-14.26/maps-txt/s1.map
+S1_NEGEX=1
+S1_NEG_METHOD=basic
+S1_PRUNE_COUNT=-0.05
+S2_DATASET=pos
+S2_INDEX=1
+S2_MAP=build/2008-06-17-14.26/maps/s2.map
+S2_MAP_TXT=build/2008-06-17-14.26/maps-txt/s2.map
+S2_NEGEX=0
+S2_NEG_METHOD=basic
+S2_PRUNE_COUNT=-0.05
+S3_DATASET=off
+S3_INDEX=2
+S3_MAP=build/2008-06-17-14.26/maps/s3.map
+S3_MAP_TXT=build/2008-06-17-14.26/maps-txt/s3.map
+S3_NEGEX=0
+S3_NEG_METHOD=basic
+S3_PRUNE_COUNT=-0.05
+TERM=xterm
+TRAIN_ALLOW_EMPTY=0
+TRAIN_DATA_REDUCTION=100
+TRAIN_EM_ITERS=5
+TRAIN_USE_ALL=0
+TRAIN_USE_EMPTY=0
+USE_COMMON_DATASET=0
+USE_NAMED_ENTITIES=0
+USER=honza
+_=/usr/bin/env
+VISUAL=gvim -f
+WINDOWID=81788936
+XCURSOR_THEME=default
+XDM_MANAGED=/var/run/xdmctl/xdmctl-:0,maysd,mayfn,sched,rsvd,method=classic,auto
+
+
+####################################################################################
+# ./data/train/data_constants 
+####################################################################################
+#define CONCEPT_CARD   35
+
+% I pruned 32.7% symbols (lemma) from the original vocabulary.
+#define S1_CARD   265
+
+% I pruned 53.3% symbols (pos) from the original vocabulary.
+#define S2_CARD   83
+
+% I pruned 0.0% symbols (off) from the original vocabulary.
+#define S3_CARD   5
+
+
+% the cardinality should be CONCEPT_CARD^DEPTH_OF_STACK, but I know that the stack values are sparse
+#define JOINT_C1C2C3C4_CARD     207
+
+% the cardinality should be CONCEPT_CARD^DEPTH_OF_STACK, but I know that the stack values are sparse
+#define JOINT_C1C2C3C4_CARD     207
+
+% the cardinality should be CONCEPT_CARD^DEPTH_OF_STACK, but I know that the stack values are sparse
+#define JOINT_C1C2C3C4_CARD     207
+
+
+####################################################################################
+# ./params/commonParamsSettings 
+####################################################################################
+#ifndef COMMON_PARAMS_SETTINGS
+#define COMMON_PARAMS_SETTINGS
+
+#define SKIP_DUMMY_PROBS    0.3 0.7
+#define JUMP_PROBS	        0.5 0.5 0.0 0.0 0.0 0.0 0.0
+
+#define S1_INDEX            0
+#define S2_INDEX            1
+#define S3_INDEX            2
+
+#define USE_S1              1  
+#define USE_S2              1
+#define USE_S3              0
+
+#define BACKOFF_FA_PROBS	0.9999 0.0001
+
+#define BUILD_DIR           build/2008-06-17-14.26
+#define DATA_DIR            /home/honza/Research/Semantics/extended-hidden-vector-state-parser-my/semantics-4/../example-data
+#define SRC_DIR             /home/honza/Research/Semantics/extended-hidden-vector-state-parser-my/semantics-4/src
+#define MAP_DIR             build/2008-06-17-14.26/maps
+#define MAP_TXT_DIR         build/2008-06-17-14.26/maps-txt
+#define GEN_DIR             build/2008-06-17-14.26/gen
+                          
+#define PARAMS              params
+#define STR_DIR             params/str
+#define MSTR_TRN_DIR        params/mstr/trn
+#define MSTR_FA_TRN_DIR     params/mstr/fa_trn
+                          
+#define DATA_XML_TRN        build/2008-06-17-14.26/data-xml/trn
+#define DATA_XML_HLDT       build/2008-06-17-14.26/data-xml/hldt
+#define DATA_XML_TST        build/2008-06-17-14.26/data-xml/tst
+                          
+#define DATA_TRN            build/2008-06-17-14.26/data/trn
+#define DATA_HLDT           build/2008-06-17-14.26/data/hldt
+#define DATA_TST            build/2008-06-17-14.26/data/tst
+                          
+#define DATA_TXT_TRN        build/2008-06-17-14.26/data-txt/trn
+#define DATA_TXT_HLDT       build/2008-06-17-14.26/data-txt/hldt
+#define DATA_TXT_TST        build/2008-06-17-14.26/data-txt/tst
+                          
+#define DCD_HLDT            build/2008-06-17-14.26/dcd/hldt
+#define DCD_TST             build/2008-06-17-14.26/dcd/tst
+                          
+#define FA_TRN              build/2008-06-17-14.26/fa/trn
+#define FA_HLDT             build/2008-06-17-14.26/fa/hldt
+#define FA_TST              build/2008-06-17-14.26/fa/tst
+
+#define GEN_DATA_CONSTANTS  build/2008-06-17-14.26/include/dataConstants.h
+
+#endif
+
+
+----------------------- Semantics Scores --------------------------
+====================== CDC Results Analysis =======================
+  Date: Tue, 17 Jun 2008 14:37:06
+  Ref : build/2008-06-17-14.26/data/tst/semantics.mlf
+  Rec : build/2008-06-17-14.26/dcd/tst/semantics.mlf
+-------------------------- File Results ---------------------------
+*/CD03~Part1~04-000506-143418-1_00000:    0.00(  0.00)  [H=   0, D=  0, S=  1, I=  0, N=  1]
+*/CD03~Part1~04-000506-143418-1_00001:  100.00(  0.00)  [H=   1, D=  0, S=  0, I=  1, N=  1]
+*/CD03~Part1~04-000506-143418-1_00002:   20.00( 20.00)  [H=   1, D=  3, S=  1, I=  0, N=  5]
+*/CD03~Part1~04-000506-143418-1_00003:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-143418-1_00004:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-143554-1_00000:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-143554-1_00001:  100.00(  0.00)  [H=   1, D=  0, S=  0, I=  1, N=  1]
+*/CD03~Part1~04-000506-143554-1_00002:   25.00( 25.00)  [H=   1, D=  3, S=  0, I=  0, N=  4]
+*/CD03~Part1~04-000506-143554-1_00003:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-143554-1_00004:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-143554-1_00005:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-143554-1_00006:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-143554-1_00007:  100.00(  0.00)  [H=   1, D=  0, S=  0, I=  1, N=  1]
+*/CD03~Part1~04-000506-143554-1_00008:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-143554-1_00009:   50.00( 50.00)  [H=   1, D=  1, S=  0, I=  0, N=  2]
+*/CD03~Part1~04-000506-143554-1_00010:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-143554-1_00011:   50.00(  0.00)  [H=   1, D=  1, S=  0, I=  1, N=  2]
+*/CD03~Part1~04-000506-144400-1_00000:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-144400-1_00001:  100.00(  0.00)  [H=   1, D=  0, S=  0, I=  1, N=  1]
+*/CD03~Part1~04-000506-144400-1_00002:   12.50( 12.50)  [H=   1, D=  6, S=  1, I=  0, N=  8]
+*/CD03~Part1~04-000506-144400-1_00003:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-144400-1_00004:    0.00(  0.00)  [H=   0, D=  0, S=  1, I=  0, N=  1]
+*/CD03~Part1~04-000506-144400-1_00005:   20.00( 20.00)  [H=   1, D=  3, S=  1, I=  0, N=  5]
+*/CD03~Part1~04-000506-144400-1_00006:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-144400-1_00007:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-145926-1_00000:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-145926-1_00001:  100.00(  0.00)  [H=   1, D=  0, S=  0, I=  1, N=  1]
+*/CD03~Part1~04-000506-145926-1_00002:   25.00( 25.00)  [H=   1, D=  2, S=  1, I=  0, N=  4]
+*/CD03~Part1~04-000506-145926-1_00003:    0.00(  0.00)  [H=   0, D=  0, S=  1, I=  0, N=  1]
+*/CD03~Part1~04-000506-145926-1_00005:    0.00(  0.00)  [H=   0, D=  1, S=  1, I=  0, N=  2]
+*/CD03~Part1~04-000506-145926-1_00006:    0.00(  0.00)  [H=   0, D=  1, S=  1, I=  0, N=  2]
+*/CD03~Part1~04-000506-145926-1_00007:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-145926-1_00008:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-145926-1_00009:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-145926-1_00010:   50.00( 50.00)  [H=   1, D=  1, S=  0, I=  0, N=  2]
+*/CD03~Part1~04-000506-145926-1_00011:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-145926-1_00012:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-152014-1_00000:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-152014-1_00001:   75.00( 25.00)  [H=   3, D=  1, S=  0, I=  2, N=  4]
+*/CD03~Part1~04-000506-152014-1_00002:   50.00( 50.00)  [H=   1, D=  1, S=  0, I=  0, N=  2]
+*/CD03~Part1~04-000506-152014-1_00004:   50.00( 50.00)  [H=   1, D=  1, S=  0, I=  0, N=  2]
+*/CD03~Part1~04-000506-152014-1_00005:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-152014-1_00006:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-152014-1_00007:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-152014-1_00008:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-152014-1_00009:    0.00(-50.00)  [H=   0, D=  0, S=  2, I=  1, N=  2]
+*/CD03~Part1~04-000506-152014-1_00010:   50.00( 50.00)  [H=   1, D=  1, S=  0, I=  0, N=  2]
+*/CD03~Part1~04-000506-152014-1_00011:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-154622-1_00000:  100.00(  0.00)  [H=   1, D=  0, S=  0, I=  1, N=  1]
+*/CD03~Part1~04-000506-154622-1_00001:  100.00(  0.00)  [H=   1, D=  0, S=  0, I=  1, N=  1]
+*/CD03~Part1~04-000506-154622-1_00002:   25.00( 25.00)  [H=   1, D=  3, S=  0, I=  0, N=  4]
+*/CD03~Part1~04-000506-154622-1_00003:    0.00(  0.00)  [H=   0, D=  1, S=  1, I=  0, N=  2]
+*/CD03~Part1~04-000506-154622-1_00004:   20.00( 20.00)  [H=   1, D=  3, S=  1, I=  0, N=  5]
+*/CD03~Part1~04-000506-154622-1_00005:   33.33( 33.33)  [H=   1, D=  2, S=  0, I=  0, N=  3]
+*/CD03~Part1~04-000506-154622-1_00006:   33.33( 33.33)  [H=   1, D=  1, S=  1, I=  0, N=  3]
+*/CD03~Part1~04-000506-154622-1_00007:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-154622-1_00008:  100.00(100.00)  [H=   3, D=  0, S=  0, I=  0, N=  3]
+*/CD03~Part1~04-000506-154622-1_00009:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-154622-1_00010:   50.00( 50.00)  [H=   1, D=  1, S=  0, I=  0, N=  2]
+*/CD03~Part1~04-000506-155802-1_00000:  100.00(  0.00)  [H=   1, D=  0, S=  0, I=  1, N=  1]
+*/CD03~Part1~04-000506-155802-1_00001:  100.00(  0.00)  [H=   2, D=  0, S=  0, I=  2, N=  2]
+*/CD03~Part1~04-000506-155802-1_00002:   16.67( 16.67)  [H=   1, D=  4, S=  1, I=  0, N=  6]
+*/CD03~Part1~04-000506-155802-1_00003:   33.33( 33.33)  [H=   1, D=  1, S=  1, I=  0, N=  3]
+*/CD03~Part1~04-000506-155802-1_00004:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-155802-1_00005:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-155802-1_00006:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-155802-1_00007:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-155802-1_00008:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-155916-1_00000:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-155916-1_00001:   20.00( 20.00)  [H=   1, D=  3, S=  1, I=  0, N=  5]
+*/CD03~Part1~04-000506-155916-1_00002:    0.00(  0.00)  [H=   0, D=  0, S=  1, I=  0, N=  1]
+*/CD03~Part1~04-000506-155916-1_00004:   33.33( 33.33)  [H=   1, D=  2, S=  0, I=  0, N=  3]
+*/CD03~Part1~04-000506-155916-1_00005:    0.00(  0.00)  [H=   0, D=  0, S=  1, I=  0, N=  1]
+*/CD03~Part1~04-000506-155916-1_00006:   33.33( 33.33)  [H=   1, D=  0, S=  2, I=  0, N=  3]
+*/CD03~Part1~04-000506-155916-1_00007:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-155916-1_00008:  100.00(100.00)  [H=   3, D=  0, S=  0, I=  0, N=  3]
+*/CD03~Part1~04-000506-155916-1_00009:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-155916-1_00010:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-155916-1_00011:  100.00(-100.00)  [H=   1, D=  0, S=  0, I=  2, N=  1]
+*/CD03~Part1~04-000506-155916-1_00013:    0.00(  0.00)  [H=   0, D=  1, S=  1, I=  0, N=  2]
+*/CD03~Part1~04-000506-155916-1_00014:    0.00(  0.00)  [H=   0, D=  0, S=  1, I=  0, N=  1]
+*/CD03~Part1~04-000506-155916-1_00015:    0.00(  0.00)  [H=   0, D=  0, S=  1, I=  0, N=  1]
+*/CD03~Part1~04-000506-155916-1_00016:  100.00(  0.00)  [H=   1, D=  0, S=  0, I=  1, N=  1]
+*/CD03~Part1~04-000506-155916-1_00017:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-155916-1_00018:  100.00( 50.00)  [H=   2, D=  0, S=  0, I=  1, N=  2]
+*/CD03~Part1~04-000506-155916-1_00019:    0.00(  0.00)  [H=   0, D=  0, S=  2, I=  0, N=  2]
+*/CD03~Part1~04-000506-155916-1_00020:    0.00(  0.00)  [H=   0, D=  0, S=  2, I=  0, N=  2]
+*/CD03~Part1~04-000506-155916-1_00021:    0.00(  0.00)  [H=   0, D=  2, S=  1, I=  0, N=  3]
+*/CD03~Part1~04-000506-155916-1_00022:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-155916-1_00023:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-155916-1_00024:    0.00(-300.00)  [H=   0, D=  0, S=  1, I=  3, N=  1]
+*/CD03~Part1~04-000506-155916-1_00025:    0.00(  0.00)  [H=   0, D=  0, S=  1, I=  0, N=  1]
+*/CD03~Part1~04-000506-155916-1_00026:    0.00(-100.00)  [H=   0, D=  0, S=  1, I=  1, N=  1]
+*/CD03~Part1~04-000506-155916-1_00027:    0.00(  0.00)  [H=   0, D=  0, S=  1, I=  0, N=  1]
+*/CD03~Part1~04-000506-155916-1_00028:    0.00(  0.00)  [H=   0, D=  0, S=  1, I=  0, N=  1]
+*/CD03~Part1~04-000506-160946-1_00000:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-160946-1_00001:  100.00(  0.00)  [H=   1, D=  0, S=  0, I=  1, N=  1]
+*/CD03~Part1~04-000506-160946-1_00002:   25.00( 25.00)  [H=   1, D=  3, S=  0, I=  0, N=  4]
+*/CD03~Part1~04-000506-160946-1_00003:    0.00(  0.00)  [H=   0, D=  0, S=  1, I=  0, N=  1]
+*/CD03~Part1~04-000506-160946-1_00004:    0.00(  0.00)  [H=   0, D=  0, S=  2, I=  0, N=  2]
+*/CD03~Part1~04-000506-160946-1_00005:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-160946-1_00006:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-160946-1_00007:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-160946-1_00008:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-160946-1_00009:    0.00(  0.00)  [H=   0, D=  0, S=  1, I=  0, N=  1]
+*/CD03~Part1~04-000506-160946-1_00010:    0.00(-200.00)  [H=   0, D=  0, S=  1, I=  2, N=  1]
+*/CD03~Part1~04-000506-160946-1_00011:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-160946-1_00012:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-161930-1_00000:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-161930-1_00001:  100.00(  0.00)  [H=   1, D=  0, S=  0, I=  1, N=  1]
+*/CD03~Part1~04-000506-161930-1_00002:   14.29( 14.29)  [H=   1, D=  5, S=  1, I=  0, N=  7]
+*/CD03~Part1~04-000506-161930-1_00003:    0.00(  0.00)  [H=   0, D=  0, S=  1, I=  0, N=  1]
+*/CD03~Part1~04-000506-161930-1_00004:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+*/CD03~Part1~04-000506-161930-1_00005:  100.00(100.00)  [H=   1, D=  0, S=  0, I=  0, N=  1]
+------------------------ Concept Results --------------------------
+PREVIOUS       : F=100.00, P=100.00, R=100.00 [C=2, M=0, FA=0]
+NEXT           : F=100.00, P=100.00, R=100.00 [C=3, M=0, FA=0]
+GREETING       : F= 94.44, P= 94.44, R= 94.44 [C=17, M=1, FA=1]
+TIME           : F= 73.58, P= 81.25, R= 67.24 [C=39, M=19, FA=9]
+REJECT         : F= 66.67, P= 50.00, R=100.00 [C=1, M=0, FA=1]
+STATION        : F= 65.12, P=100.00, R= 48.28 [C=14, M=15, FA=0]
+ACCEPT         : F= 60.00, P= 56.25, R= 64.29 [C=9, M=5, FA=7]
+SYSTEM_FEATURE : F= 50.00, P=100.00, R= 33.33 [C=1, M=2, FA=0]
+FROM           : F= 46.15, P= 75.00, R= 33.33 [C=3, M=6, FA=1]
+DEPARTURE      : F= 37.50, P= 42.86, R= 33.33 [C=6, M=12, FA=8]
+PERSON         : F= 20.00, P= 11.11, R=100.00 [C=1, M=0, FA=8]
+TO             : F=  8.33, P= 33.33, R=  4.76 [C=1, M=20, FA=2]
+WHAT_TIME      : F=  0.00, P=  0.00, R=  0.00 [C=0, M=2, FA=0]
+TROUGH         : F=  0.00, P=  0.00, R=  0.00 [C=0, M=0, FA=10]
+TRANSFER       : F=  0.00, P=  0.00, R=  0.00 [C=0, M=3, FA=3]
+TRAIN_TYPE     : F=  0.00, P=  0.00, R=  0.00 [C=0, M=7, FA=3]
+OTHER_INFO     : F=  0.00, P=  0.00, R=  0.00 [C=0, M=6, FA=8]
+BACK           : F=  0.00, P=  0.00, R=  0.00 [C=0, M=0, FA=1]
+ARRIVAL        : F=  0.00, P=  0.00, R=  0.00 [C=0, M=1, FA=5]
+------------------------ Overall Results --------------------------
+UTTR: %Correct=44.74 [H=51, S=63, N=114]
+CONC: F=53.89, P=59.15, R=49.49 [C=97, M=99, FA=67]
+      %Corr=49.49, Acc=36.22 [H=97, D=58, S=41, I=26, N=196]
+===================================================================
