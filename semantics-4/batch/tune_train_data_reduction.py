@@ -1,25 +1,27 @@
 from svc.utils import linrange, linspace
 
 def tune(**env):
-    prepareData(env=env)
-    train(env=env)
-    forcealignTrn(env=env)
-    smooth(env=env)
-    scale(env=env)
+    settings.update(env)
+    all(noDcd=True, moveResults=False)
     res = decodeHldt()
     return res['cAcc'], res['uCorr']
 
-params = {
-    'TRAIN_DATA_REDUCTION': linrange(5,100,5),
-}
+if 'test' not in argv:
+    params = {
+        'TRAIN_DATA_REDUCTION': linrange(5,100,5),
+    }
+else:
+    params = {
+        'TRAIN_DATA_REDUCTION': [5, 10],
+    }
 
-params = Grid(params)
+params = Grid.cartezianGrid(params)
 
 value, tuned_params = params.tune(tune, logger=logger)
 
-params.writeCSV('build/tune_train_data_reduction.csv')
+params.writeCSV(os.path.join(env['BUILD_DIR'], 'tune_train_data_reduction.csv'))
 
-env.update(tuned_params)
+settings.update(tuned_params)
 
 all()
 

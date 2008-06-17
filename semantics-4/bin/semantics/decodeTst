@@ -34,6 +34,12 @@ $SRC_DIR/extractSmntcs.py --dirCmb=$DCD_TST/dcd \
     --outputMlf=$DCD_TST/semantics.lemma.mlf 
 
 printSettings > $DCD_TST/results.txt
-cdc-treedist.py sresults $DATA_TST/semantics.mlf $DCD_TST/semantics.mlf >> $DCD_TST/results.txt
+if [ x"$SRESULTS_ONLY" != x ]; then
+    ONLY="--only=$SRESULTS_ONLY"
+fi
+if [ x"$SRESULTS_SKIP" != x ]; then
+    SKIP="--skip=$SRESULTS_SKIP"
+fi
+cdc-treedist.py sresults $DATA_TST/semantics.mlf $DCD_TST/semantics.mlf $ONLY $SKIP >> $DCD_TST/results.txt
 
 

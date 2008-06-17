@@ -3,12 +3,14 @@
 import os.path
 from glob import glob
 import codecs
+import sys
 
 from svc.scripting import *
+from svc.map import SymMap
+from svc.utils import ADict
 
 import toolkit
 import gmtk
-from lexMap import LexMap
 from observation import Observation
 from hiddenObservation import HiddenObservation
 from sparseProbability import SparseProbability
@@ -29,7 +31,6 @@ class SymbolGivenC1C2C3C4(Script):
         'symMap': (Required, String),
         'outDir': (Required, String),
         'negExamples': String,
-        'noNegExamples': Flag,
         'posExamples': String,
         'symName': String,
         'extraExt': String,
@@ -57,21 +58,26 @@ class SymbolGivenC1C2C3C4(Script):
         h_obs = [self.mapInt(v) for v in h_obs]
         return HiddenObservation(h_obs, h_id)
 
-    def makeIntegerMap(self, map):
-        map.lexMap = dict((k, int(v)) for (k,v) in map.lexMap.iteritems())
-        return map
-
     def setupMaps(self, conceptMap, symMap):
-        conceptMap = LexMap().read(conceptMap)
-        self.conceptMap = self.makeIntegerMap(conceptMap)
-        symMap = LexMap().read(symMap)
-        self.symMap = self.makeIntegerMap(symMap)
+        self.conceptMap = SymMap.readFromFile(conceptMap, format=(int, unicode)).inverse
+        self.symMap = SymMap.readFromFile(symMap, format=(int, unicode)).inverse
 
-    def getLeafConceptsGroups(self):
-        return [self.mapSet(i, self.conceptMap) for i in CONCEPT_GROUPS]
-
-    def getRootConcepts(self):
-        return self.mapSet(CONCEPT_ROOTS, self.conceptMap)
+    def mapExamples(self, dict):
+        _unseen_ = self.symMap['_unseen_']
+        ret = {}
+        for concept_word, count in dict.iteritems():
+            if len(concept_word) != 2:
+                # TODO: REMOVE: used only with bigram_lemma
+                continue
+            c, w = concept_word
+            if c not in self.conceptMap:
+                continue
+            c = self.conceptMap[c]
+            w = self.symMap.get(w, _unseen_)
+            if c not in ret:
+                ret[c] = ADict()
+            ret[c][w] += count
+        return ret
 
     def getSkipSymbols(self):
         symbols = set(['_empty_', '_dummy_', '_sink_'])
@@ -79,6 +85,10 @@ class SymbolGivenC1C2C3C4(Script):
 
     def getEmptyWord(self):
         empty = '_empty_'
+        return self.symMap[empty]
+
+    def getUnseenWord(self):
+        empty = '_unseen_'
         return self.symMap[empty]
 
     def getEmptyHist(self):
@@ -105,50 +115,11 @@ class SymbolGivenC1C2C3C4(Script):
             o_map = Observation(obs, ho.id)
             yield ho_map, o_map
 
-    def collectNegExamples(self, neg_ex, ho, o):
-        skipSymbols = self.getSkipSymbols()
-        rootConcepts = self.getRootConcepts()
-        leafGroups = self.getLeafConceptsGroups()
-        symbols = o.getSefOfWords()
-        concepts = ho.getSetOfConcepts()
-        for rootConcept in rootConcepts:
-            if rootConcept in concepts:
-                # the utterance can be used as negative example 
-                
-                for leafConcepts in leafGroups:
-                    # you have one group of dependent concepts (generally numbers)
-                    ok = True
-                    for leafConcept in leafConcepts:
-                        if leafConcept in concepts:
-                            ok = False
-                    
-                    if ok:
-                        # all words in the utterance can be used as negative
-                        # exapmles beceause they are not connected with
-                        # lexConceptsDependent (the example does not contain
-                        # lexConceptsDependent)
-                        
-                        for leafConcept in leafConcepts:
-                            if leafConcept not in neg_ex:
-                                neg_ex[leafConcept] = {}
-                            for sym in symbols:
-                                if sym in skipSymbols:
-                                    continue
-                                neg_ex[leafConcept].setdefault(sym, 0)
-                                neg_ex[leafConcept][sym] += 1
-
-                # the example was already used
-                break
-
-    def makeDTS_CollectExmpls(self, generator, collectNegEx=True, collectPosEx=True):
-        rootConcepts = self.getRootConcepts()
-        leafGroups = self.getLeafConceptsGroups()
-
+    def makeDTS(self, generator):
         dt4 = {}
         dt3 = {}
         dt2 = {}
 
-        neg_ex = {}
         histories = set()
 
         for ho, o in generator:
@@ -157,19 +128,15 @@ class SymbolGivenC1C2C3C4(Script):
             ho.collectConceptsC1C2(dt2)
             histories |= set(ho.getSetOfConceptVectors())
 
-            if collectNegEx:
-                self.collectNegExamples(neg_ex, ho, o)
+        return (dt4, dt3, dt2), histories
 
-        word_C = self.makeSparseProb(histories, neg_ex)
-
-        return dt4, dt3, dt2, word_C, neg_ex
-
-    def makeSparseProb(self, histories, neg_ex):
-        EPSILON = 3.3e-90
+    def makeSparseProb(self, histories, pos_ex, neg_ex):
+        EPSILON = 0.01
         symCard = len(self.symMap)
         skipSymbols = self.getSkipSymbols()
         emptyWord = self.getEmptyWord()
         emptyHist = self.getEmptyHist()
+        _unseen_ = self.getUnseenWord()
 
         table = SparseProbability()
 
@@ -177,17 +144,32 @@ class SymbolGivenC1C2C3C4(Script):
             hist = list(hist_tuple)
             if hist == emptyHist:
                 table.setValue([ emptyWord ] + emptyHist, 1.0)
-            else:
-                # Set nonzero probability for all posible words
+            if hist[0] in pos_ex:
+                # Apply positive examples
+                counts = pos_ex[hist[0]]
                 for w in range(symCard):
-                  if w not in skipSymbols:
-                      table.setValue([ w ] + hist, 1.0)
+                    if w not in skipSymbols:
+                        if w in counts:
+                            table.setValue([ w ] + hist, 1.0)
+                        else:
+                            table.setValue([ w ] + hist, EPSILON)
+            else:
+                # No positive examples, set nonzero probability for all posible
+                # words
+                for w in range(symCard):
+                    if w not in skipSymbols:
+                        table.setValue([ w ] + hist, 1.0)
 
             # Apply negative examples
-            for w in neg_ex.get(hist[0], []):
-                index = [ w ] + hist
-                if table.getSafeValue(index) >= EPSILON:
-                    table.setValue(index, EPSILON)
+            if hist[0] in neg_ex:
+                counts = neg_ex[hist[0]]
+                for w, count in counts.iteritems():
+                    index = [ w ] + hist
+                    if table.getSafeValue(index) >= EPSILON:
+                        table.setValue(index, EPSILON)
+            
+            # Probability of _unseen_ is set to nonzero
+            table.setValue([ _unseen_ ] + hist, 1.0)
 
             # Normalize sum to one, keep zeros zeros
             sum = 0.
@@ -202,7 +184,7 @@ class SymbolGivenC1C2C3C4(Script):
 
         return table
 
-    def storeResults(self, outDir, symName, (dt4, dt3, dt2, word_C, neg_ex), constFile=None, constAppend=True):
+    def storeResults(self, outDir, symName, (dt4, dt3, dt2), word_C, constFile=None, constAppend=True):
         wordCard = len(self.symMap)
         # Save 5-grams
         NAME = '%sGivenC1C2C3C4' % symName
@@ -236,35 +218,9 @@ class SymbolGivenC1C2C3C4(Script):
         gmtk.saveCollection(outDir, NAME, numberOfSpmfs)
         gmtk.saveSpmfs(outDir, NAME, numberOfSpmfs, wordCard)
 
-    def printNegExamples(self, neg_ex, fw=None):
-        if fw is None:
-            fw = sys.stdout
-
-        triples = []
-
-        rconceptMap = self.conceptMap.reverse()
-        rsymMap = self.symMap.reverse()
-
-        for concept, c_value in neg_ex.iteritems():
-            for word, count in c_value.iteritems():
-                c = rconceptMap[concept].encode('utf-8')
-                s = rsymMap[word].encode('utf-8')
-                triples.append((c, s, str(count)))
-
-        triples.sort()
-        for line in triples:
-            fw.write('\t'.join(line) + '\n')
-
-    def storeNegExamples(self, fn, neg_ex):
-        fw = file(fn, 'w')
-        try:
-            self.printNegExamples(neg_ex, fw=fw)
-        finally:
-            fw.close()
-
     def main(self, files, conceptMap, symMap, outDir, symName='word',
             extraExt='', obsColumn=0, negExamples=None, posExamples=None,
-            writeConst=None, appendConst=None, noNegExamples=False):
+            writeConst=None, appendConst=None):
 
         if writeConst is not None and appendConst is not None:
             raise ValueError("Use only writeConst or appendConst, not both")
@@ -284,8 +240,17 @@ class SymbolGivenC1C2C3C4(Script):
             file_ids.add(file_id)
         file_ids = sorted(file_ids)
 
-        ho_generator = self.generateHO(file_ids, extraExt, obsColumn)
-        dts = self.makeDTS_CollectExmpls(ho_generator, collectNegEx=not noNegExamples)
+        if negExamples and negExamples != 'off':
+            neg_ex = ADict.readFromFile(negExamples)
+            neg_ex = self.mapExamples(neg_ex)
+        else:
+            neg_ex = {}
+
+        if posExamples and posExamples != 'off':
+            pos_ex = ADict.readFromFile(posExamples)
+            pos_ex = self.mapExamples(pos_ex)
+        else:
+            pos_ex = {}
 
         if writeConst:
             constFile = writeConst
@@ -294,10 +259,12 @@ class SymbolGivenC1C2C3C4(Script):
             constFile = appendConst
             constAppend = True
 
-        self.storeResults(outDir, symName, dts, constFile, constAppend)
+        ho_generator = self.generateHO(file_ids, extraExt, obsColumn)
+        dts, histories = self.makeDTS(ho_generator)
 
-        if negExamples:
-            self.storeNegExamples(negExamples, dts[-1])
+        word_C = self.makeSparseProb(histories, pos_ex, neg_ex)
+
+        self.storeResults(outDir, symName, dts, word_C, constFile, constAppend)
 
     optionsDoc = {
     'files':

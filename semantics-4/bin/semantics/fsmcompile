@@ -1,3 +1,5 @@
 #!/bin/bash
 
-fsmcompile -t -s tropical $FSM_DIR/hvsparser.txt > $FSM_DIR/hvsparser.fsm
+fsmcompile -t -f const -s tropical $FSM_DIR/hvsrepeater.txt > $FSM_DIR/hvsrepeater.fsm
+fsmcompile -t -f const -s tropical $FSM_DIR/hvspadder.txt > $FSM_DIR/hvspadder.fsm
+fsmcompile -t -f const -s tropical $FSM_DIR/hvsparser_pad.txt | fsmcompose $FSM_DIR/hvsrepeater.fsm $FSM_DIR/hvspadder.fsm - > $FSM_DIR/hvsparser.fsm

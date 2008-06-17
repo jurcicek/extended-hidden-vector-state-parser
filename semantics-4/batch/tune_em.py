@@ -1,8 +1,9 @@
 import os
 
 def tune_em(**env):
-    all(env=env, noDcd=True, moveResults=False)
-    res = decodeHldt(env=env)
+    settings.update(env)
+    all(noDcd=True, moveResults=False)
+    res = decodeHldt()
     return res['cAcc'], res['uCorr']
 
 params = {

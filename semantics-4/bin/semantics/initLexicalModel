@@ -1,56 +1,103 @@
 #!/bin/bash
 
-if [ $S1_NEGEX == 1 ]; then
-    S1_NA="--negExamples $DATA_TRN/s1.negExamples"
-else
-    S1_NA="--noNegExamples"
-fi;
+S1_POS=${S1_POS_METHOD:-off}
+S1_NEG=${S1_NEG_METHOD:-basic}
 
-if [ $S2_NEGEX == 1 ]; then
-    S2_NA="--negExamples $DATA_TRN/s2.negExamples"
-else
-    S2_NA="--noNegExamples"
-fi;
+S2_POS=${S2_POS_METHOD:-off}
+S2_NEG=${S2_NEG_METHOD:-basic}
 
-if [ $S3_NEGEX == 1 ]; then
-    S3_NA="--negExamples $DATA_TRN/s3.negExamples"
-else
-    S3_NA="--noNegExamples"
-fi;
+S3_POS=${S3_POS_METHOD:-off}
+S3_NEG=${S3_NEG_METHOD:-basic}
+
+EXTRA_ARGS="--debug"
+
+if [ "$USE_NAMED_ENTITIES" -eq "0" ]; then
+    EXTRA_ARGS="$EXTRA_ARGS --disable-ne"
+fi
+
+if [ "$USE_COMMON_DATASET" -eq "0" ]; then
+    EXTRA_ARGS="$EXTRA_ARGS --disable-common"
+fi
+
 
 ######################################################################################
 # train
 ######################################################################################
 
+$SRC_DIR/collectExamples.py $DATA_XML_TRN \
+        --dataset $S1_DATASET \
+        --default-datasets $ORIG_DATASETS \
+        --pos-method $S1_POS \
+        --neg-method $S1_NEG \
+        --posout $DATA_TRN/s1.posExamples \
+        --negout $DATA_TRN/s1.negExamples \
+        $EXTRA_ARGS
+
+$SRC_DIR/collectExamples.py $DATA_XML_TRN \
+        --dataset $S2_DATASET \
+        --default-datasets $ORIG_DATASETS \
+        --pos-method $S2_POS \
+        --neg-method $S2_NEG \
+        --posout $DATA_TRN/s2.posExamples \
+        --negout $DATA_TRN/s2.negExamples \
+        $EXTRA_ARGS
+
+$SRC_DIR/collectExamples.py $DATA_XML_TRN \
+        --dataset $S3_DATASET \
+        --default-datasets $ORIG_DATASETS \
+        --pos-method $S3_POS \
+        --neg-method $S3_NEG \
+        --posout $DATA_TRN/s3.posExamples \
+        --negout $DATA_TRN/s3.negExamples \
+        $EXTRA_ARGS
+
+# S1
+
+$SRC_DIR/reduceExamples.py $CONCEPT_MAP $S1_MAP $DATA_TRN/s1.negExamples $DATA_TRN/s1.negExamples.flt
+$SRC_DIR/reduceExamples.py $CONCEPT_MAP $S1_MAP $DATA_TRN/s1.posExamples $DATA_TRN/s1.posExamples.flt
+
 $SRC_DIR/genSymbolGivenC1C2C3C4.py --files $DATA_TRN/ho --debug \
         --obsColumn=0 \
         --outDir $DATA_TRN/ \
-        $S1_NA \
+        --posExamples $DATA_TRN/s1.posExamples \
+        --negExamples $DATA_TRN/s1.negExamples \
         --symName s1 \
         --conceptMap $CONCEPT_MAP \
         --symMap $S1_MAP \
         --appendConst $GEN_DATA_CONSTANTS
 
+# S2
+
+$SRC_DIR/reduceExamples.py $CONCEPT_MAP $S2_MAP $DATA_TRN/s2.negExamples $DATA_TRN/s2.negExamples.flt
+$SRC_DIR/reduceExamples.py $CONCEPT_MAP $S2_MAP $DATA_TRN/s2.posExamples $DATA_TRN/s2.posExamples.flt
+
 $SRC_DIR/genSymbolGivenC1C2C3C4.py --files $DATA_TRN/ho --debug \
         --extraExt=.2 \
         --obsColumn=0 \
         --outDir $DATA_TRN/ \
-        $S2_NA \
+        --posExamples $DATA_TRN/s2.posExamples \
+        --negExamples $DATA_TRN/s2.negExamples \
         --symName s2 \
         --conceptMap $CONCEPT_MAP \
-        --symMap $S2_MAP
+        --symMap $S2_MAP \
+        --appendConst $GEN_DATA_CONSTANTS
+
+# S3
+
+$SRC_DIR/reduceExamples.py $CONCEPT_MAP $S3_MAP $DATA_TRN/s3.negExamples $DATA_TRN/s3.negExamples.flt
+$SRC_DIR/reduceExamples.py $CONCEPT_MAP $S3_MAP $DATA_TRN/s3.posExamples $DATA_TRN/s3.posExamples.flt
 
 $SRC_DIR/genSymbolGivenC1C2C3C4.py --files $DATA_TRN/ho --debug \
         --extraExt=.2 \
         --obsColumn=1 \
         --outDir $DATA_TRN/ \
-        $S3_NA \
+        --posExamples $DATA_TRN/s3.posExamples \
+        --negExamples $DATA_TRN/s3.negExamples \
         --symName s3 \
         --conceptMap $CONCEPT_MAP \
-        --symMap $S3_MAP
-        
-######################################################################################
-# train
+        --symMap $S3_MAP \
+        --appendConst $GEN_DATA_CONSTANTS
+
 ######################################################################################
 $SRC_DIR/genJointProbC1C2C3C4.py --spmfsFile=$DATA_TRN/s1GivenC1C2C3C4.spmfs \
         --dirOut=$DATA_TRN

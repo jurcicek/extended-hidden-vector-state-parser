@@ -12,6 +12,7 @@ if [ "${EXPERIMENT_NAME}foo" != "foo" ]; then
     echo "#PBS -N $EXPERIMENT_NAME" >> $JOB_FN
 fi
 
+echo 'export BUILD_DIR=/scratch/honzas/semantics-4' >> $JOB_FN
 echo cd `pwd` >> $JOB_FN
 echo $* >> $JOB_FN
 

@@ -109,10 +109,10 @@ assert toolkit.testProb(jointDcptC1C2C3C4), "Sum of probabilities should be alwa
 jointProbC1C2C3C4 = gmtk.combineDtDcpt1(jointDtC1C2C3C4, jointDcptC1C2C3C4) 
 
 # desable generating _EMPTY_ by _EMPTY_, _EMPTY_, _EMPTY_
-jointProbC1C2C3C4.setValue([int(conceptMap["_EMPTY_"]), 
-                            int(conceptMap["_EMPTY_"]), 
-                            int(conceptMap["_EMPTY_"]), 
-                            int(conceptMap["_EMPTY_"])], 0)
+# jointProbC1C2C3C4.setValue([int(conceptMap["_EMPTY_"]), 
+#                             int(conceptMap["_EMPTY_"]), 
+#                             int(conceptMap["_EMPTY_"]), 
+#                             int(conceptMap["_EMPTY_"])], 0)
 
 ##concept1DtC2C3C4 = gmtk.readDt(concept1DtFileName)
 ##concept1DpmfC2C3C4 = gmtk.readDpmf(dpmfsFileName, "concept1GivenC2C3C4")

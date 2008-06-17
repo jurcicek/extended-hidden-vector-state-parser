@@ -7,10 +7,9 @@ import os.path
 from types import *
     
 def conceptCmp(x, y):
-    try:
-        x = long(x)
-        y = long(y)
-    except:
+    if isinstance(x, (long, int)) or isinstance(y, (long, int)):
+        return cmp(x, y)
+    else:
         xx = x.lower()
         yy = y.lower()
         

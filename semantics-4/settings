@@ -9,10 +9,22 @@ export INSERTION_PENALTY=1.0
 export DATA_REDUCTION=100
 export TRAIN_DATA_REDUCTION=100
 
-export TRAIN_EM_ITERS=4
+export TRAIN_EM_ITERS=5
+export TRAIN_ALLOW_EMPTY=0   # 0 - words cannot generate empty stacks
+                             # 1 - it is possible to generate empty stacks
+export TRAIN_USE_ALL=0       # 0 - separate dataset in proportion to 72:8:20
+                             # 1 - use all available data as training data
+export TRAIN_USE_EMPTY=0     # 0 - don't use empty dialogue acts
+                             # 1 - use dialogue acts with empty semantics for training too
+export MAKE_XML=1
 
 # Possible parse types: LR, LRRL, LRRL-FT
 export PARSE_TYPE='LRRL-FT'
+
+# Possible input chains:
+#       none, join_acts, join_acts_selected, filler, only_[speech_act]
+export INPUT_CHAIN='none'
+#export INPUT_CHAIN_DCD=none
 
 # Possible datasets: 
 #       word, lemma, pos, 
@@ -46,6 +58,18 @@ export S3_INDEX=2
 
 export CONFUSE=0
 
-export FSM_STATES=1000
-export FSM_CUTOFF_SYM=1e-20
-export FSM_CUTOFF_TRANS=1e-10
+export S1_NEG_METHOD=basic
+export S2_NEG_METHOD=basic
+export S3_NEG_METHOD=basic
+
+export USE_NAMED_ENTITIES=0       # Use named entites?
+export USE_COMMON_DATASET=0       # Use common dataset for lexical initialization?
+
+#export SRESULTS_ONLY=@DA
+export SRESULTS_SKIP=@SKIP,@DA
+
+export FSM_STATES=200
+export FSM_CUTOFF_SYM='1e-20'
+export FSM_CUTOFF_TRANS='1e-10'
+
+export CONFUSE=0

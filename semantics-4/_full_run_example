@@ -1,5 +1,6 @@
 #!/bin/sh
 
 date
-./semantics.py runbatch --verbose-level DEBUG --script ./batch/full_run_example.py
+#./semantics.py runbatch --verbose-level DEBUG --script ./batch/full_run_example.py
+./semantics.py all -vvv
 date

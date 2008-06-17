@@ -6,11 +6,15 @@ import xml.dom.minidom
 from svc.scripting.externals import *
 from svc.ui.mlf import MLF, ConceptMLF, ROOT_CONCEPT
 
-ENTITY_CONCEPTS = ['AMOUNT', 'AREA', 'DELAY', 'DURATION', 'LENGTH', 'NUMBER', 'PERSON', 'PLATFORM', 'STATION', 'THROUGH', 'TIME', 'TRAIN_TYPE']
+ENTITY_CONCEPTS = ['AMOUNT', 'AREA', 'DELAY', 'DURATION', 'LENGTH', 'NUMBER', 'PERSON', 'PLATFORM', 'STATION', 'THROUGH', 'TIME', 'TRAIN_TYPE', 'STATUS_REPORT']
 
 SKIP_CONCEPTS = [ROOT_CONCEPT, 'GREETING', 'ARRIVAL', 'DEPARTURE', 'ACCEPT', 'THROUGH', 'REJECT', 'ACCEPT', 'REF', 'BACK', 'DISTANCE', 'PRICE', 'TRANSFER', 'WAIT']
 
 SKIP_TITLES = ['to', 'from']
+
+
+AV_ATTRIBUTES = ['to_station', 'from_station', 'time', 'train_type', 'area', 'number', 'station', 'amount']
+AV_INDICATORS = ['departure', 'arrival', 'accept', 'price', 'back', 'duration', 'greeting', 'next', 'other_info', 'platform', 'previous', 'price', 'reject', 'repeat', 'other_info', 'system_feature', 'through', 'transfer', 'wait', 'what_time']
 
 class TreeProcessor(PythonEgg):
     def strAV(self, av):
@@ -65,24 +69,70 @@ class NadraziProcessor(TreeProcessor):
 
         return self._cache[full][turnNo]
 
-    def entityAV(self, tree):
-        attr_title = tree.label.lower()
-        av = []
-        for label, subtree, orig_stack in tree.preOrderStack():
-            stack = orig_stack[:]
-            if label in ENTITY_CONCEPTS:
-                while stack and stack[0].label in SKIP_CONCEPTS:
-                    del stack[0]
-                if not stack:
-                    continue
-                attribute = '_'.join(s.label.lower() for s in stack)
-                if attribute == attr_title:
-                    attr_title = None
-                value = '"' + ' '.join(s.label for s in subtree) + '"'
-                av.append((attribute, value))
+    # def entityAV(self, tree):
+    #     attr_title = tree.label.lower()
+    #     av = []
+    #     for label, subtree, orig_stack in tree.preOrderStack():
+    #         stack = orig_stack[:]
+    #         if label in ENTITY_CONCEPTS:
+    #             while stack and stack[0].label in SKIP_CONCEPTS:
+    #                 del stack[0]
+    #             if not stack:
+    #                 continue
+    #             attribute = '_'.join(s.label.lower() for s in stack)
+    #             if attribute == attr_title:
+    #                 attr_title = None
+    #             value = '"' + ' '.join(s.label for s in subtree) + '"'
+    #             av.append((attribute, value))
 
-        if attr_title is not None and attr_title not in SKIP_TITLES:
-            av.insert(0, (attr_title, None))
+    #     if attr_title is not None and attr_title not in SKIP_TITLES:
+    #         av.insert(0, (attr_title, None))
+    #     return av
+
+    def subtreeString(self, tree):
+        ret = []
+        for label, node in tree.preOrder():
+            if len(node) == 0:
+                ret.append(label)
+        return ret
+    
+    def entityAV(self, tree):
+        a = [None]
+        v = [None]
+
+        stacks = []
+        for label, subtree, orig_stack in tree.preOrderStack():
+            s = (subtree, orig_stack)
+            if s not in stacks:
+                stacks.append(s)
+
+        for subtree, orig_stack in stacks:
+            stack = '_'.join(i.label for i in orig_stack[:-1]).lower()
+            indicator = ''
+            for i in AV_INDICATORS:
+                if stack.startswith(i) and len(i) > len(indicator):
+                    indicator = i
+            if indicator and indicator not in a:
+                a.append(indicator)
+                v.append(None)
+
+            attribute = ''
+            for i in AV_ATTRIBUTES:
+                if stack.endswith(i) and len(i) > len(attribute):
+                    attribute = i
+            if attribute:
+                value = '"' +' '.join(self.subtreeString(subtree.parent))+'"'
+                try:
+                    idx = v.index(value)
+                    ok = (a[idx] != attribute)
+                except ValueError:
+                    ok = True
+                if ok:
+                    a.append(attribute)
+                    v.append(value)
+        del a[0]
+        del v[0]
+        av = zip(a, v)
         return av
 
     def removeDUMMY(self, tree, dummy='_DUMMY_'):
@@ -121,9 +171,12 @@ class Intentions(ExternalScript):
         'command': ExScript.CommandParam,
         'rootConcepts.mlf': (Required, String),
         '__premain__.cfgfile': (Multiple, String),
+        'process_file.fn': (Required, String),
+        'process_file.dir': (Required, String),
     }
 
-    posOpts = ['command', {'rootConcepts': ['mlf']}]
+    posOpts = ['command', {'rootConcepts': ['mlf'],
+                           'process_file': ['fn', 'dir']}]
 
     def __extractIntentionsFile(self, fn, data_dir, out_fn):
         self.logger.info('Making intention level from: %s', fn)
@@ -170,6 +223,10 @@ class Intentions(ExternalScript):
         for fn in cfgfile:
             self.sourceEnv(fn)
         return ret
+
+    @ExScript.command
+    def process_file(self, fn, dir):
+        self.__extractIntentionsFile(fn, dir, fn+'.int')
 
 
 def __main__():

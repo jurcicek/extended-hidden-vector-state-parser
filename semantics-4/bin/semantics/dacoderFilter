@@ -1,0 +1,4 @@
+#!/bin/bash
+
+farcompilestrings -u '_unseen_' -i $1/dacoder.fsm.isym | farfilter "fsmcompose - $1/dacoder.fsm $1/dialogue_act.fsm | fsmbestpath" | farprintstrings -2 -o $1/dacoder.fsm.osym
+# farcompilestrings -u '_unseen_' -i $1/dacoder.fsm.isym | farfilter "fsmcompose - $1/dacoder.fsm | fsmbestpath" | farprintstrings -2 -o $1/dacoder.fsm.osym

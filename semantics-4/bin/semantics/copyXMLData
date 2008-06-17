@@ -1,13 +1,27 @@
 #!/bin/bash
 
-$SRC_DIR/copyXML2DataRaw.py --dataReduction=$DATA_REDUCTION \
-	--trainDataReduction=$TRAIN_DATA_REDUCTION \
-	--dirIn=$DATA_DIR \
-	--dirTrain=$DATA_XML_TRN \
-	--weightTrain=72 \
-	--dirHeldout=$DATA_XML_HLDT \
-	--weightHeldout=8 \
-	--dirTest=$DATA_XML_TST \
-	--weightTest=20
-
-
+if [ "$TRAIN_USE_ALL" == "0" ]; then
+    $SRC_DIR/copyXML2DataRaw.py --dataReduction=$DATA_REDUCTION \
+        --trainDataReduction=$TRAIN_DATA_REDUCTION \
+        --dirIn=$DATA_DIR \
+        --dirTrain=$DATA_XML_TRN \
+        --weightTrain=72 \
+        --dirHeldout=$DATA_XML_HLDT \
+        --weightHeldout=8 \
+        --dirTest=$DATA_XML_TST \
+        --weightTest=20
+else
+    $SRC_DIR/copyXML2DataRaw.py --dataReduction=$DATA_REDUCTION \
+        --trainDataReduction=$TRAIN_DATA_REDUCTION \
+        --dirIn=$DATA_DIR \
+        --dirTrain=$DATA_XML_TRN \
+        --weightTrain=100 \
+        --dirHeldout=$DATA_XML_HLDT \
+        --weightHeldout=0 \
+        --dirTest=$DATA_XML_TST \
+        --weightTest=0
+    cp $DATA_XML_HLDT/*.xml $DATA_XML_TRN 2> /dev/null
+    cp $DATA_XML_TST/*.xml $DATA_XML_TRN 2> /dev/null
+    cp $DATA_XML_TRN/*.xml $DATA_XML_HLDT 2> /dev/null
+    exit 0
+fi
