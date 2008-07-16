@@ -74,8 +74,9 @@ class CollectExamples(Script):
     def generalizer(self, parent, common_dataset):
         for da in parent:
             da['generalized'] = da[common_dataset]
-            for lemma, pos in zip(da[common_dataset], da['pos']):
-                self.posTags[lemma].add(pos)
+            if 'pos' in da:
+                for lemma, pos in zip(da[common_dataset], da['pos']):
+                    self.posTags[lemma].add(pos)
 
             # da['generalized'] = generalized = []
             # for lemma, pos in zip(da['lemma'], da['pos']):
