@@ -1,5 +1,9 @@
 #!/bin/bash
 
+touch $DATA_DIR/.train.list
+touch $DATA_DIR/.test.list
+touch $DATA_DIR/.heldout.list
+
 if [ "$TRAIN_USE_ALL" == "0" ]; then
     $SRC_DIR/copyXML2DataRaw.py --dataReduction=$DATA_REDUCTION \
         --trainDataReduction=$TRAIN_DATA_REDUCTION \
