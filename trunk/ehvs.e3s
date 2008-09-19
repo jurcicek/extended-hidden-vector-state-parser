@@ -2,14 +2,15 @@
 <!DOCTYPE Session SYSTEM "Session-3.8.dtd">
 <!-- eric3 session file for project ehvs -->
 <!-- This file was generated automatically, do not edit. -->
-<!-- Saved: 2008-09-18, 18:38:09 -->
+<!-- Saved: 2008-09-19, 19:26:25 -->
 <Session version="3.8">
   <Filenames>
-    <Filename cline="127" cindex="4">/home/filip/cued/sem/ehvs/semantics-4/src/extractSmntcs.py</Filename>
-    <Filename cline="676" cindex="18">/home/filip/cued/sem/ehvs/semantics-4/src/semantics.py</Filename>
-    <Filename cline="138" cindex="0">/home/filip/cued/sem/ehvs/svc/ui/smntcs/hvsparser.py</Filename>
+    <Filename cline="125" cindex="16">/home/filip/cued/ehvs/semantics-4/src/extractSmntcs.py</Filename>
+    <Filename cline="222" cindex="79">/home/filip/cued/ehvs/semantics-4/src/genInputs.py</Filename>
+    <Filename cline="76" cindex="37">/home/filip/cued/ehvs/semantics-4/src/semantics.py</Filename>
+    <Filename cline="488" cindex="30">/home/filip/cued/ehvs/semantics-4/semantics.py</Filename>
   </Filenames>
-  <ActiveWindow cline="676" cindex="18">/home/filip/cued/sem/ehvs/semantics-4/src/semantics.py</ActiveWindow>
+  <ActiveWindow cline="488" cindex="30">/home/filip/cued/ehvs/semantics-4/semantics.py</ActiveWindow>
   <Breakpoints>
   </Breakpoints>
   <Watchpoints>
@@ -25,9 +26,5 @@
     <CovexcPattern></CovexcPattern>
   </DebugInfo>
   <Bookmarks>
-    <Bookmark>
-      <BmFilename>/home/filip/cued/sem/ehvs/semantics-4/src/semantics.py</BmFilename>
-      <Linenumber value="171" />
-    </Bookmark>
   </Bookmarks>
 </Session>

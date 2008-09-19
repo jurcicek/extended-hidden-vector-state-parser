@@ -10,6 +10,7 @@ from svc.ui.cdc.treedist import TreeDistScript
 from svc.map import SymMap
 from svc.osutils import mkdirp
 from StringIO import StringIO
+import commands
 
 class Grid(PythonEgg, dict):
     def __init__(self, *args, **kwargs):
@@ -192,6 +193,10 @@ REQ_RESULTS = [
     ('cAcc', 'Concept Accuracy'),
     ('cCorr', 'Concept Correctness'),
     ('uCorr', 'Utterance Correctness'),
+    ('sActAcc', 'Speech Act Accuracy'),
+    ('iP', 'Item Precision'),
+    ('iR', 'Item Recall'),
+    ('iF', 'Item F-measure'),
     ('brF', 'Bracket F-measure'),
     ('brR', 'Bracket Recall'),
     ('brP', 'Bracket Precision'),
@@ -477,7 +482,16 @@ class SemanticsMain(ExternalScript):
         output = StringIO()
         td = TreeDistScript()
         results = td.sresults((gold_mlf, hyp_mlf), fw=output, only=only, skip=skip)
+        
+        cued = commands.getoutput(self.externalMethodDirs[0]+'/cuedSemScore -d '+hyp_mlf+'.cued '+gold_mlf+'.cued')
+        cued = cued.split()
+        results['sActAcc'] = float(cued[0])
+        results['iP'] = float(cued[1])
+        results['iR'] = float(cued[2])
+        results['iF'] = float(cued[3])
+
         self.printResults(results)
+        
         return results
 
     def printResults(self, results):
