@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Session SYSTEM "Session-3.8.dtd">
+<!-- eric3 session file for project ehvs -->
+<!-- This file was generated automatically, do not edit. -->
+<!-- Saved: 2008-09-18, 18:38:09 -->
+<Session version="3.8">
+  <Filenames>
+    <Filename cline="127" cindex="4">/home/filip/cued/sem/ehvs/semantics-4/src/extractSmntcs.py</Filename>
+    <Filename cline="676" cindex="18">/home/filip/cued/sem/ehvs/semantics-4/src/semantics.py</Filename>
+    <Filename cline="138" cindex="0">/home/filip/cued/sem/ehvs/svc/ui/smntcs/hvsparser.py</Filename>
+  </Filenames>
+  <ActiveWindow cline="676" cindex="18">/home/filip/cued/sem/ehvs/semantics-4/src/semantics.py</ActiveWindow>
+  <Breakpoints>
+  </Breakpoints>
+  <Watchpoints>
+  </Watchpoints>
+  <DebugInfo>
+    <CommandLine></CommandLine>
+    <WorkingDirectory></WorkingDirectory>
+    <Environment></Environment>
+    <ReportExceptions value="1" />
+    <Exceptions>
+    </Exceptions>
+    <TracePython value="0" />
+    <CovexcPattern></CovexcPattern>
+  </DebugInfo>
+  <Bookmarks>
+    <Bookmark>
+      <BmFilename>/home/filip/cued/sem/ehvs/semantics-4/src/semantics.py</BmFilename>
+      <Linenumber value="171" />
+    </Bookmark>
+  </Bookmarks>
+</Session>
