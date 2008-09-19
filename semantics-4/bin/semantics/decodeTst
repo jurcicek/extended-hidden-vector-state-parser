@@ -42,4 +42,5 @@ if [ x"$SRESULTS_SKIP" != x ]; then
 fi
 cdc-treedist.py sresults $DATA_TST/semantics.mlf $DCD_TST/semantics.mlf $ONLY $SKIP >> $DCD_TST/results.txt
 
+SemScoreFixed.pl $DCD_TST/semantics.mlf.cued $DATA_TST/semantics.mlf.cued >> $DCD_TST/results.txt
 

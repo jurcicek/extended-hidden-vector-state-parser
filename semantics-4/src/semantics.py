@@ -105,7 +105,14 @@ def getDepthOfSemantics(text):
 ###################################################################################################
 ###################################################################################################
 
+
+
 def removeTextFromSemantics(smntcs):
+    """
+    Only pure EHVS semantics will be returned. All words (imput
+    tokens) will be removed. Also concepts like _DUMMY_ and _SINK_
+    are removed.
+    """    
     smntcsOld = smntcs
     
 ##    print ">>> " + smntcs.encode('ascii', 'backslashreplace')
@@ -150,6 +157,26 @@ def removeTextFromSemantics(smntcs):
 
     return smntcs
 
+
+def removeConceptsFromSemantics(smntcs):
+    """
+    Only pure text is on the otput of this function. All concepts are removed from the input semnatics. 
+    """
+
+    # remove rest of the words
+    text = re.sub(r'[A-Z_(),]+', " ", smntcs)
+    text = re.sub(r'\ +', " ", text)
+    text = re.sub(r'_+', "_", text)
+    
+    text = text.strip()
+
+    return text
+
+def getCuedDA(smntcs):
+    DA = ""
+    
+    return DA
+    
 ######################################################################################################
 ######################################################################################################
 
@@ -595,3 +622,82 @@ class Semantics:
         
         smntcs = smntcs[:-1]
         return smntcs + ')'
+
+    def getCUEDSlot(self, pair):
+        """
+        Only one slot is exported.
+        """
+        
+##        print pair
+        
+        slot = pair[0].lower()
+        equal = ""
+        value = ''
+        try:
+            if pair[1][0][0] == 'NOT':
+                equal = '!='
+                try:
+                    value = pair[1][0][1][0]
+                except IndexError:
+                    value = ''
+                    equal = ''
+            else:
+                equal = '='
+                try:
+                    value = pair[1][0][0]
+                except IndexError:
+                    value = ''
+                    equal = ''
+        except IndexError:
+            pass
+        
+        # translate value
+        if value == 'VALUE':
+            value = '"'+value.lower()+'"'
+        
+        try:
+            vst = value.startswith('VALUE_')
+            if vst:
+                value = '"'+value[len('VALUE_'):].replace("_", " ")+'"'
+        except AttributeError:
+            value = ''
+            equal = ''
+        
+        
+        return slot+equal+value
+        
+    def getCUEDSpeechAct(self, pair):
+        """
+        Export one DA in CUED format. Ofcourse it export all its 
+        slots.
+        """
+        
+        speechAct = pair[0].lower()
+        
+        slots = ''
+        for eachSlot in pair[1]:
+            slots += self.getCUEDSlot(eachSlot)+','
+            
+        slots = slots[:-1]
+        
+        return speechAct+'('+slots+')'
+        
+    def getCUEDSemantics(self):
+        """
+        CUED format is used for the output. We expect that
+        semantics has only one root, then slots, and finaly 
+        values. Between slot and value can be placed concept 
+        'NOT' which will translated into '!-'. All value concepts 
+        must start with 'VALUE_'. All values are placed into into 
+        "" and '_' are replaced with ' '. 
+        """
+
+        smntcs = ''
+        
+        for conceptPair in self.semanticsTree:
+            smntcs += self.getCUEDSpeechAct(conceptPair)+ ","
+        
+        smntcs = smntcs[:-1]
+        
+        return smntcs
+        

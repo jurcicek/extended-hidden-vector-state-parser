@@ -6,7 +6,7 @@ export EXPERIMENT_NAME=`date +%Y-%m-%d-%H.%M`${EXPERIMENT_NAME:+-$EXPERIMENT_NAM
 
 export BUILD_DIR=${REUSE_BUILD_DIR:-${BUILD_DIR:-build}/$EXPERIMENT_NAME}
 export RESULT_DIR=${RESULT_DIR:-results}/${BUILD_DIR##*/}
-export DATA_DIR=`pwd`/../example-data
+export DATA_DIR=`pwd`/../cued-data
 export ANNOTATED_DIR=data_annotated
 export SRC_DIR=`pwd`/src
 export MAP_DIR=$BUILD_DIR/maps

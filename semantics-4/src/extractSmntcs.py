@@ -20,15 +20,13 @@ from semantics import *
 ###################################################################################################
 ###################################################################################################
 
-fileNamePrefix = "../data/train"
+fileNamePrefix = "maps"
 
-dirCmb = "../dcd_hldt/push2/dcd"
-#dirCmb = "../fa_hlft/dcd"
-dirSmntcs = "../dcd_hldt/push2"
-#dirSmntcs = "../fa_hldt"
+dirCmb = "dcd/tst/dcd"
+dirSmntcs = "data/tst"
 ext = "cmb"
 force = False
-outputMlf = "../dcd_hldt/push2/semantics.mlf"
+outputMlf = "dcd/tst/semantics.mlf"
 lemmatized = False
 
 conceptFileName = fileNamePrefix + "/" + "concept.map"
@@ -108,6 +106,7 @@ else:
 
 outputMlfFileSmntcs = codecs.open(outputMlf + ".smntcs", "w", "UTF-8")
 outputPush2MlfFileSmntcs = codecs.open(outputMlf + ".push2.smntcs", "w", "UTF-8")
+outputCuedFileSmntcs = codecs.open(outputMlf + ".cued", "w", "UTF-8")
 
 outputMlfFile.write("#!MLF!#\n")
 outputPush2MlfFile.write("#!MLF!#\n")
@@ -126,6 +125,8 @@ for fileName in lst:
 
     smntcs = readSemanticsFromCMBFile(fileName, lemmatized=lemmatized)
     smntcsWithoutText = removeTextFromSemantics(smntcs)
+    text = removeConceptsFromSemantics(smntcs)
+    
     try:
         Semantics('id', smntcsWithoutText, 'x')
     except ValueError:
@@ -174,6 +175,8 @@ for fileName in lst:
     outputMlfFileSmntcs.write('"*/' + idLab + '.rec"\n')
     outputMlfFileSmntcs.write(smntcs + "\n")
     outputMlfFileSmntcs.write(".\n")
+    
+    outputCuedFileSmntcs.write(text+' <=> '+Semantics('id', smntcsWithoutText.encode('ascii','replace'), 'x').getCUEDSemantics()+'\n')
 
     if push2:
         outputPush2MlfFileSmntcs.write('"*/' + idLab + '.rec"\n')
@@ -185,6 +188,8 @@ outputPush2MlfFile.close()
 outputMlfFileLab.close()
 outputTrnFile.close()
 outputPtbFile.close()
+outputMlfFileSmntcs.close()
+outputCuedFileSmntcs.close()
 
 if verbose:
     print("-------------------------------------------------")

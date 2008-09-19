@@ -9,7 +9,7 @@ from svc.scripting import *
 from svc.ui.dxml import DXML
 
 from lexMap import LexMap
-from semantics import Semantics, removeTextFromSemantics, splitSmntcsToMlf
+from semantics import Semantics, removeTextFromSemantics, removeConceptsFromSemantics, splitSmntcsToMlf
 from svc.ui.smntcs import input
 import observation
 import random
@@ -212,7 +212,18 @@ class InputGenerator(Script):
                     fw.write("(TOP x)\n")
         finally:
             fw.close()
-        
+
+    def writeCUEDFile(self, cued_fn, semantics):
+        fw = codecs.open(cued_fn, "w", "UTF-8")
+        try:
+            for smntcs in semantics:
+                text = removeConceptsFromSemantics(smntcs.semantics)
+                smntcsWithoutText = removeTextFromSemantics(smntcs.semantics)
+                smntcsWithoutText = Semantics('id', smntcsWithoutText, 'x')
+                fw.write(smntcs.text+' <=> '+smntcsWithoutText.getCUEDSemantics() + '\n')
+        finally:
+            fw.close()
+            
     def writeListFile(self, lst_fn, template, semantics):
         """Write list of `semantics` into file `lst_fn` using `template`
 
@@ -308,6 +319,7 @@ class InputGenerator(Script):
         if outputMlf is not None:
             self.writeMLFFile(outputMlf, simple_semantics)
             self.writePTBFile(outputMlf+'.ptb', simple_semantics)
+            self.writeCUEDFile(outputMlf+'.cued', simple_semantics)
 
         if outputMlfDcd is not None:
             self.writeMLF_DCDFile(outputMlfDcd, simple_semantics)
