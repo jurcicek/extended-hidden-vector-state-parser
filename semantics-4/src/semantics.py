@@ -73,7 +73,14 @@ def readSemanticsFromCMBFile(fileName, lemmatized=False):
         stack.reverse()
         depth = getDepthOfComposedStack(stack, oldStack)
         smntcs += addRelevantPartOfStack(oldDepth, depth, stack)
-    
+        
+        # if we have to same stacks in row than we have add at least
+        # the word (input symbol). the alg. was ommiting repeted
+        # input symbols with the same labeling (parsing)
+        if oldStack == stack:
+            smntcs += ' '+stack[-1]+' '
+        # fix-end
+        
         oldDepth = len(stack) - 1 
         oldStack = stack
     
@@ -171,11 +178,6 @@ def removeConceptsFromSemantics(smntcs):
     text = text.strip()
 
     return text
-
-def getCuedDA(smntcs):
-    DA = ""
-    
-    return DA
     
 ######################################################################################################
 ######################################################################################################
@@ -213,7 +215,7 @@ def cleanSmntcs(smntcs):
         smntcs = smntcs.replace(",_,",",")
 
     for i in range(4):
-        # remove repeated words, be beware of _SINK_DUMMY_ it was result of transforming _,_ in _SINK_,_DUMMY_ 
+        # remove repeated concepts, be beware of _SINK_DUMMY_ it is result of transforming _,_ in _SINK_,_DUMMY_ 
         smntcs = re.sub(r'([(),])([A-Z_]+),\2', r'\1\2', smntcs)
         smntcs = re.sub(r'^([A-Z_]+),\1,', r'\1,', smntcs)
         smntcs = re.sub(r',([A-Z_]+),\1$', r',\1', smntcs)
@@ -631,6 +633,13 @@ class Semantics:
 ##        print pair
         
         slot = pair[0].lower()
+        if slot == 'emptyslot':
+            slot = ''
+        # translate venue_dot_name into venue.name
+        slot = slot.replace("_dot_", ".")
+        
+
+            
         equal = ""
         value = ''
         try:
@@ -658,7 +667,10 @@ class Semantics:
         try:
             vst = value.startswith('VALUE_')
             if vst:
-                value = '"'+value[len('VALUE_'):].replace("_", " ")+'"'
+                value = value[len('VALUE_'):]
+                value = value.replace("_", " ")
+                value = value.lower()
+                value = '"'+value+'"'
         except AttributeError:
             value = ''
             equal = ''
@@ -668,7 +680,7 @@ class Semantics:
         
     def getCUEDSpeechAct(self, pair):
         """
-        Export one DA in CUED format. Ofcourse it export all its 
+        Export one DA in CUED format. Ofcourse it exports all its 
         slots.
         """
         
@@ -687,9 +699,10 @@ class Semantics:
         CUED format is used for the output. We expect that
         semantics has only one root, then slots, and finaly 
         values. Between slot and value can be placed concept 
-        'NOT' which will translated into '!-'. All value concepts 
-        must start with 'VALUE_'. All values are placed into into 
-        "" and '_' are replaced with ' '. 
+        'NOT' which will translated into '!='. 
+        All value concepts must start with 'VALUE_'. All values 
+        are placed into "", all '_DOT_' are replaced with '.' 
+        and all '_' are replaced with ' '. 
         """
 
         smntcs = ''

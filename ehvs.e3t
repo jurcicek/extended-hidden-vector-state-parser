@@ -1,17 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Tasks SYSTEM "Tasks-3.8.dtd">
 <!-- Tasks file for project ehvs -->
-<!-- Saved: 2008-09-18, 18:39:51 -->
+<!-- Saved: 2008-09-19, 19:26:25 -->
 <Tasks version="3.8">
   <Task priority="1" completed="0" bugfix="0">
+    <Description>TODO:</Description>
+    <Created>2008-09-19, 16:03:42</Created>
+    <Resource>
+      <Filename>
+        <Dir>svc</Dir>
+        <Dir>scripting</Dir>
+        <Name>externals.py</Name>
+      </Filename>
+      <Linenumber>37</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="0" bugfix="0">
+    <Description>TODO: Check for inconsitencies in method specifiers</Description>
+    <Created>2008-09-19, 16:03:42</Created>
+    <Resource>
+      <Filename>
+        <Dir>svc</Dir>
+        <Dir>scripting</Dir>
+        <Name>externals.py</Name>
+      </Filename>
+      <Linenumber>407</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="0" bugfix="0">
+    <Description>TODO: Other specifiers</Description>
+    <Created>2008-09-19, 16:34:05</Created>
+    <Resource>
+      <Filename>
+        <Dir>svc</Dir>
+        <Dir>scripting</Dir>
+        <Name>__init__.py</Name>
+      </Filename>
+      <Linenumber>265</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="0" bugfix="1">
+    <Description>FIXME: Remove</Description>
+    <Created>2008-09-19, 16:34:05</Created>
+    <Resource>
+      <Filename>
+        <Dir>svc</Dir>
+        <Dir>scripting</Dir>
+        <Name>__init__.py</Name>
+      </Filename>
+      <Linenumber>496</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="0" bugfix="0">
+    <Description>TODO: Move into self._extractionError()</Description>
+    <Created>2008-09-19, 16:34:05</Created>
+    <Resource>
+      <Filename>
+        <Dir>svc</Dir>
+        <Dir>scripting</Dir>
+        <Name>__init__.py</Name>
+      </Filename>
+      <Linenumber>1051</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="0" bugfix="0">
+    <Description>TODO: Change type of exception</Description>
+    <Created>2008-09-19, 16:34:05</Created>
+    <Resource>
+      <Filename>
+        <Dir>svc</Dir>
+        <Dir>scripting</Dir>
+        <Name>__init__.py</Name>
+      </Filename>
+      <Linenumber>1361</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="0" bugfix="0">
     <Description>TODO: Improve tuned/nontuned mixture</Description>
-    <Created>2008-09-18, 15:52:05</Created>
+    <Created>2008-09-19, 18:38:06</Created>
     <Resource>
       <Filename>
         <Dir>semantics-4</Dir>
         <Name>semantics.py</Name>
       </Filename>
-      <Linenumber>147</Linenumber>
+      <Linenumber>148</Linenumber>
     </Resource>
   </Task>
 </Tasks>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-3.9.dtd">
 <!-- Project file for project ehvs -->
-<!-- Saved: 2008-09-18, 11:15:59 -->
+<!-- Saved: 2008-09-19, 10:48:17 -->
 <!-- Copyright (C) 2008 Filip Jurcicek and Jan Svec,  -->
 <Project version="3.9">
   <ProgLanguage mixed="0">Python</ProgLanguage>
@@ -658,6 +658,10 @@
       <Dir>clnum-1.4</Dir>
       <Name>setup.py</Name>
     </Source>
+    <Source>
+      <Dir>cued</Dir>
+      <Name>genXMLdataFromCUEDdas.py</Name>
+    </Source>
   </Sources>
   <Forms>
   </Forms>
@@ -728,9 +732,9 @@ s.</VcsOtherData>
   </Vcs>
   <FiletypeAssociations>
     <FiletypeAssociation pattern="*.ui.h" type="FORMS" />
-    <FiletypeAssociation pattern="*.ui" type="FORMS" />
-    <FiletypeAssociation pattern="*.idl" type="INTERFACES" />
-    <FiletypeAssociation pattern="*.py" type="SOURCES" />
     <FiletypeAssociation pattern="*.ptl" type="SOURCES" />
+    <FiletypeAssociation pattern="*.idl" type="INTERFACES" />
+    <FiletypeAssociation pattern="*.ui" type="FORMS" />
+    <FiletypeAssociation pattern="*.py" type="SOURCES" />
   </FiletypeAssociations>
 </Project>

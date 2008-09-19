@@ -15,9 +15,10 @@ use strict;
 use Getopt::Std;
 
 my %cmdlineopts;
-getopts('ev', \%cmdlineopts);
+getopts('evd', \%cmdlineopts);
 my $verbose=$cmdlineopts{"v"};
 my $perrors=$cmdlineopts{"e"};
+my $data_only=$cmdlineopts{"d"};
 my $nargs = scalar @ARGV;
 
 # keep track of the most frequent causes of error
@@ -34,6 +35,7 @@ if ($nargs<2){
     print "usage: SemScore.pl [-ev] semtst semref\n"; 
     print "       -e  print all non=matching pairs\n";
     print "       -v  verbose\n";
+    print "       -d  data only\n";
     exit;
 }
 
@@ -281,7 +283,7 @@ if ($Na==0){
 	++$nerrs; 
 }
 
-
+if (not $data_only){
 # print stats
 foreach my $act (sort { $daPrecisionError{$a}/$testActs{$a} <=>  $daPrecisionError{$b}/$testActs{$b} } keys %daPrecisionError) {
     printf  "Precision error per act: %5.2f $act (%i/%i)\n",($daPrecisionError{$act}/$testActs{$act}),$daPrecisionError{$act},$testActs{$act};
@@ -300,12 +302,16 @@ foreach my $item (sort { $itemRecallError{$a}/$refItems{$a} <=>  $itemRecallErro
     printf  "Recall error per item: %5.2f $item (%i/%i)\n",($itemRecallError{$item}/$refItems{$item}),$itemRecallError{$item},$refItems{$item};
 }
 print "\n";
+}
 my $c1; my $c2;
 map { $c1 += $refItems{$_}; } keys %refItems;
+if (not $data_only){
 print "total ref items = $c1\n";
+}
 map { $c2 += $testItems{$_}; } keys %testItems;
+if (not $data_only){
 print "total test items = $c2\n";
-
+}
 #if ($nerrs>0){
 #   print "$nerrs error detected - fix and rerun\n";
 #}else{
@@ -314,13 +320,18 @@ print "total test items = $c2\n";
 	$prec = 100*($Hi/$Ri);
 	$rec = 100*($Hi/$Ni);
 	$f = 2*$prec*$rec/($rec+$prec);
+if (not $data_only){
    print "\nSemScore Results: Ref contains $Na acts; $Ni items\n";
    print "---------------------------------------------\n";
    printf "|%10s|%10s|%10s|%10s|\n|%10s|%10s|%10s|%10s|\n",
            "Act Type","Item","Item","Item","Accuracy","Precision","Recall","F-measure";
-	print "---------------------------------------------\n";
+   print "---------------------------------------------\n";
    printf "|%10.2f|%10.2f|%10.2f|%10.2f|\n",$acc,$prec,$rec,$f;
    print "---------------------------------------------\n";
+}
+else {
+   printf "%10.2f %10.2f %10.2f %10.2f\n",$acc,$prec,$rec,$f;
+}
 #}
 
 
