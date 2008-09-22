@@ -9,7 +9,7 @@ SCALE_CONCEPT12_RANGE = SCALE_PUSHPOP_RANGE
 SCALE_CONCEPT12_STEP  = SCALE_PUSHPOP_STEP
 
 if not 'noall' in argv:
-    all()
+    all(moveResults=False)
 
 def tune_scale(**env):
     eps = 1e-6
