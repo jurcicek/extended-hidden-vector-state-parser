@@ -134,11 +134,13 @@ while(<SD>) {
 	}
 	# check that utts are identical
 	if ($rutt ne $tutt) {
+              if (not $data_only){
 		print "ERROR: utts differ at line $Na\n";
 		print "  Ref Utt: $rutt\n";
 		print "  Tst Utt: $tutt\n";
 		++$nerrs; $isok=0;
-		next;
+	 	next;
+	  }
 	}
 	# compare dialog acts
 	$ract =~ m/(.*)\((.*)\)/;
@@ -279,8 +281,10 @@ while(<SD>) {
 	# }
 }
 if ($Na==0){
+  if (not $data_only){
 	print "ERROR: no acts processed!\n";
 	++$nerrs; 
+  }
 }
 
 if (not $data_only){
