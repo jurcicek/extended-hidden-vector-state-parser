@@ -1,5 +1,7 @@
 from svc.utils import linrange, linspace
 
+settings['DATA_REDUCTION']=100
+
 def tune(**env):
     prepareData(env=env)
     train(env=env)

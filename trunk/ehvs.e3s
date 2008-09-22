@@ -2,15 +2,16 @@
 <!DOCTYPE Session SYSTEM "Session-3.8.dtd">
 <!-- eric3 session file for project ehvs -->
 <!-- This file was generated automatically, do not edit. -->
-<!-- Saved: 2008-09-19, 19:26:25 -->
+<!-- Saved: 2008-09-23, 05:41:02 -->
 <Session version="3.8">
   <Filenames>
     <Filename cline="125" cindex="16">/home/filip/cued/ehvs/semantics-4/src/extractSmntcs.py</Filename>
     <Filename cline="222" cindex="79">/home/filip/cued/ehvs/semantics-4/src/genInputs.py</Filename>
     <Filename cline="76" cindex="37">/home/filip/cued/ehvs/semantics-4/src/semantics.py</Filename>
-    <Filename cline="488" cindex="30">/home/filip/cued/ehvs/semantics-4/semantics.py</Filename>
+    <Filename cline="486" cindex="10">/home/filip/cued/ehvs/semantics-4/semantics.py</Filename>
+    <Filename cline="7" cindex="49">/home/filip/cued/ehvs/ctest/genXMLdataFromCUEDdas.py</Filename>
   </Filenames>
-  <ActiveWindow cline="488" cindex="30">/home/filip/cued/ehvs/semantics-4/semantics.py</ActiveWindow>
+  <ActiveWindow cline="7" cindex="49">/home/filip/cued/ehvs/ctest/genXMLdataFromCUEDdas.py</ActiveWindow>
   <Breakpoints>
   </Breakpoints>
   <Watchpoints>
