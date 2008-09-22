@@ -13,7 +13,7 @@ params = Grid.cartezianGrid(params)
 
 value, tuned_params = params.tune(tune_em, logger=logger)
 
-params.writeCSV(os.path.join(env['BUILD_DIR'], 'tune_scale.csv'))
+params.writeCSV(os.path.join(env['BUILD_DIR'], 'tune_em.csv'))
 
 env.update(tuned_params)
 

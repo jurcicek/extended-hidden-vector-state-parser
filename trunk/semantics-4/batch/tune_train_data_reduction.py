@@ -23,5 +23,5 @@ params.writeCSV(os.path.join(env['BUILD_DIR'], 'tune_train_data_reduction.csv'))
 
 settings.update(tuned_params)
 
-all()
+all(moveResults=False)
 

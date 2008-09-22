@@ -7,7 +7,8 @@ def tune(**env):
     smooth(env=env)
     scale(env=env)
     res = decodeHldt()
-    return res['cAcc'], res['uCorr']
+    return res['sActAcc'], res['iF'], res['iP'], res['iR']
+#    return res['cAcc'], res['uCorr']
 
 params = {
     'DATA_REDUCTION': linrange(10,100,10),
@@ -24,5 +25,3 @@ env.update(tuned_params)
 # I know that all data are always the best
 #all()
 moveResults()
-
-
