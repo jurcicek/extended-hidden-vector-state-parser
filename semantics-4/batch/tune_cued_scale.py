@@ -18,12 +18,12 @@ def tune_scale(**env):
     eps = 1e-6
     if env['SCALE_CONCEPT12'] < 1.0-eps or env['SCALE_PUSHPOP'] < 1.0-eps:
         logger.info("Scaling factor is less than 1.0")
-        return 0.
+        return 0
     if 'test' not in argv:
         scale(env=env)
         res = decodeHldt()
 #        return res['cAcc'], res['uCorr']
-       return res['sActAcc'], res['iF'], res['iP'], res['iR']
+       return res['sActAcc'], res['iF']
     else:
         # V pripade testovani je ztratova funkce maximalni (rovna 1) v bodech
         # 1.83, 1.97

@@ -7,7 +7,7 @@ def tune(**env):
     smooth(env=env)
     scale(env=env)
     res = decodeHldt()
-    return res['sActAcc'], res['iF'], res['iP'], res['iR']
+    return res['sActAcc'], res['iF']
 #    return res['cAcc'], res['uCorr']
 
 params = {

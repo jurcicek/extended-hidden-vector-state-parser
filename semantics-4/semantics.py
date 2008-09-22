@@ -193,10 +193,10 @@ REQ_RESULTS = [
     ('cAcc', 'Concept Accuracy'),
     ('cCorr', 'Concept Correctness'),
     ('uCorr', 'Utterance Correctness'),
-    ('sActAcc', 'Speech Act Accuracy'),
-    ('iP', 'Item Precision'),
-    ('iR', 'Item Recall'),
-    ('iF', 'Item F-measure'),
+    ('sActAcc', 'CUED Speech Act Accuracy'),
+    ('iP', 'CUED Item Precision'),
+    ('iR', 'CUED Item Recall'),
+    ('iF', 'CUED Item F-measure'),
     ('brF', 'Bracket F-measure'),
     ('brR', 'Bracket Recall'),
     ('brP', 'Bracket Precision'),
@@ -428,7 +428,7 @@ class SemanticsMain(ExternalScript):
         results = {}
         if not noDcd:
             results = self.decodeHldt(env=env)
-            self.decodeTst(env=env)
+            self.decodeTst(env=env)     
 
         if self.settings['MAKE_XML'] == '1':
             self.parametrizeXML('fa_trn')
@@ -484,12 +484,20 @@ class SemanticsMain(ExternalScript):
         results = td.sresults((gold_mlf, hyp_mlf), fw=output, only=only, skip=skip)
         
         cued = commands.getoutput(self.externalMethodDirs[0]+'/cuedSemScore -d '+hyp_mlf+'.cued '+gold_mlf+'.cued')
-        cued = cued.split()
-        results['sActAcc'] = float(cued[0])
-        results['iP'] = float(cued[1])
-        results['iR'] = float(cued[2])
-        results['iF'] = float(cued[3])
+        self.logger.info('CUED SemScore.pl: %s', cued)
 
+        cued = cued.split()
+        try:
+            results['sActAcc'] = float(cued[0])
+            results['iP'] = float(cued[1])
+            results['iR'] = float(cued[2])
+            results['iF'] = float(cued[3])
+        except ValueError:
+            results['sActAcc'] = 0.0
+            results['iP'] = 0.0
+            results['iR'] = 0.0
+            results['iF'] = 0.0
+        
         self.printResults(results)
         
         return results
