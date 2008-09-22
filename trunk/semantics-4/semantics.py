@@ -484,7 +484,7 @@ class SemanticsMain(ExternalScript):
         results = td.sresults((gold_mlf, hyp_mlf), fw=output, only=only, skip=skip)
         
         cued = commands.getoutput(self.externalMethodDirs[0]+'/cuedSemScore -d '+hyp_mlf+'.cued '+gold_mlf+'.cued')
-        self.logger.info('CUED SemScore.pl: %s', cued)
+##        self.logger.info('CUED SemScore.pl: %s', cued)
 
         cued = cued.split()
         try:
