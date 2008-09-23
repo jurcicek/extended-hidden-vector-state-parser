@@ -6,7 +6,7 @@ export MAX_PUSH=2 #1 2
 
 export INSERTION_PENALTY=1.0
 
-export DATA_REDUCTION=10
+export DATA_REDUCTION=100
 export TRAIN_DATA_REDUCTION=100
 
 export TRAIN_EM_ITERS=4
@@ -22,6 +22,12 @@ export MAKE_XML=0            # 0 - do not generate
 
 # Possible parse types: LR, LRRL, LRRL-FT
 export PARSE_TYPE='LRRL-FT'
+
+# Set whether the smootnig is perfomed
+# '-n' - no smoothing
+# ''   - smoothing
+#export WORD_NO_SMOOTHING='-n'
+#export CONCEPT1_NO_SMOOTHING='-n'
 
 # Possible input chains:
 #       none, join_acts, join_acts_selected, filler, only_[speech_act]

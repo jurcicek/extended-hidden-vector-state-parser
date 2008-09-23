@@ -214,6 +214,17 @@ buildTree(tree, c2Grams4)
 
 gmtk.saveDtBackoff(dirOut, "backoffC2C3C4", tree, 3)
 
+# save stats
+bStats = file(dirOut+"/backoffC2C3C4"+'.stats', 'w')
+
+bStats.write("Number of c1Grams4: %d\n" % len(c2Grams4))
+bStats.write("Number of c1Grams3: %d\n" % len(c2Grams3))
+bStats.write("Number of c1Grams2: %d\n" % len(c2Grams2))
+bStats.write("Number of pruned c1Grams4: %d\n" % len(c2Grams4))
+bStats.write("Number of pruned c1Grams3: %d\n" % len(c2Grams3))
+bStats.write("Number of pruned c1Grams2: %d\n" % len(c2Grams2))
+
+bStats.close()
 
 
 # save the cardinality of bucketing of C1C2C3C4

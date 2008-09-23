@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-3.9.dtd">
 <!-- Project file for project ehvs -->
-<!-- Saved: 2008-09-23, 05:41:02 -->
+<!-- Saved: 2008-09-24, 05:54:57 -->
 <!-- Copyright (C) 2008 Filip Jurcicek and Jan Svec,  -->
 <Project version="3.9">
   <ProgLanguage mixed="0">Python</ProgLanguage>
@@ -665,12 +665,17 @@
     <Source>
       <Dir>semantics-4</Dir>
       <Dir>batch</Dir>
-      <Name>tune_data_reduction_new.py</Name>
+      <Name>tune_cued_scale.py</Name>
     </Source>
     <Source>
       <Dir>semantics-4</Dir>
       <Dir>batch</Dir>
-      <Name>tune_cued_scale_simple.py</Name>
+      <Name>tune_cued_data_reduction.py</Name>
+    </Source>
+    <Source>
+      <Dir>semantics-4</Dir>
+      <Dir>batch</Dir>
+      <Name>tune_cued_train_data_reduction.py</Name>
     </Source>
   </Sources>
   <Forms>
@@ -741,10 +746,10 @@ I1
 s.</VcsOtherData>
   </Vcs>
   <FiletypeAssociations>
-    <FiletypeAssociation pattern="*.ui.h" type="FORMS" />
-    <FiletypeAssociation pattern="*.ui" type="FORMS" />
-    <FiletypeAssociation pattern="*.idl" type="INTERFACES" />
-    <FiletypeAssociation pattern="*.ptl" type="SOURCES" />
     <FiletypeAssociation pattern="*.py" type="SOURCES" />
+    <FiletypeAssociation pattern="*.ui.h" type="FORMS" />
+    <FiletypeAssociation pattern="*.idl" type="INTERFACES" />
+    <FiletypeAssociation pattern="*.ui" type="FORMS" />
+    <FiletypeAssociation pattern="*.ptl" type="SOURCES" />
   </FiletypeAssociations>
 </Project>

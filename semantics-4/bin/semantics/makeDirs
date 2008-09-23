@@ -8,6 +8,7 @@ mkdir -p $GEN_DIR
 mkdir -p $GEN_DIR/tri
 mkdir -p $GEN_DIR/trn
 mkdir -p $GEN_DIR/smth
+mkdir -p $GEN_DIR/smth-txt
 mkdir -p $GEN_DIR/scale
 
 mkdir -p $DATA_XML_TRN
