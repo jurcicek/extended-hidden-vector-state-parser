@@ -120,7 +120,15 @@ def usage():
            dirCmb, 
            conceptFileName, 
            wordFileName))
+##############################################################################
+
+def printGrams(f, gram):
+    k = gram.keys()
+    k.sort()
     
+    for each in k:
+        f.write("%s = %s\n" % (str(each), str(gram[each])))
+
 ###################################################################################################
 ###################################################################################################
 
@@ -236,7 +244,28 @@ buildTree(tree, c1Grams4)
 
 gmtk.saveDtBackoff(dirOut, "backoffC1C2C3C4", tree, 4)
 
+# save stats
+bStats = file(dirOut+"/backoffC1C2C3C4"+'.stats', 'w')
 
+bStats.write("Number of c1Grams4: %d\n" % len(c1Grams4))
+bStats.write("Number of c1Grams3: %d\n" % len(c1Grams3))
+bStats.write("Number of c1Grams2: %d\n" % len(c1Grams2))
+bStats.write("Number of c1Grams1: %d\n" % len(c1Grams1))
+bStats.write("Number of pruned c1Grams4: %d\n" % len(c1Grams4))
+bStats.write("Number of pruned c1Grams3: %d\n" % len(c1Grams3))
+bStats.write("Number of pruned c1Grams2: %d\n" % len(c1Grams2))
+bStats.write("Number of pruned c1Grams1: %d\n" % len(c1Grams1))
+
+bStats.write("\nPruned c1Grams4:\n")
+printGrams(bStats, c1Grams4)
+bStats.write("\nPruned c1Grams3:\n")
+printGrams(bStats, c1Grams3)
+bStats.write("\nPruned c1Grams2:\n")
+printGrams(bStats, c1Grams2)
+bStats.write("\nPruned c1Grams1:\n")
+printGrams(bStats, c1Grams1)
+
+bStats.close()
 
 # save the cardinality of bucketing of C1C2C3C4
 ### !!! remeber you are rewriting the file because you clean the file

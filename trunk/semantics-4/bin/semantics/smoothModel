@@ -5,7 +5,17 @@ $SRC_DIR/backoffC1C2C3C4.py -v $WORD_NO_SMOOTHING --dirOut=$GEN_DIR/smth \
 	--conceptMap=$CONCEPT_MAP \
 	--wordMap=$S1_MAP
 
+$SRC_DIR/backoffC1C2C3C4.py -v -t $WORD_NO_SMOOTHING --dirOut=$GEN_DIR/smth-txt \
+	--dirCmb=$FA_TRN/dcd \
+	--conceptMap=$CONCEPT_MAP \
+	--wordMap=$S1_MAP
+
 $SRC_DIR/backoffC2C3C4.py -v $CONCEPT1_NO_SMOOTHING --dirOut=$GEN_DIR/smth \
+	--dirCmb=$FA_TRN/dcd \
+	--conceptMap=$CONCEPT_MAP \
+	--wordMap=$S1_MAP
+
+$SRC_DIR/backoffC2C3C4.py -v -t $CONCEPT1_NO_SMOOTHING --dirOut=$GEN_DIR/smth-txt \
 	--dirCmb=$FA_TRN/dcd \
 	--conceptMap=$CONCEPT_MAP \
 	--wordMap=$S1_MAP

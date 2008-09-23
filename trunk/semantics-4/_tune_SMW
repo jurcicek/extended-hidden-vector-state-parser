@@ -1,6 +1,6 @@
 #!/bin/sh
 
 date
-./semantics.py runbatch --verbose-level DEBUG --script ./batch/tune_cued_scale.py
+./semantics.py runbatch --verbose-level DEBUG --script ./batch/tune_scale.py
 #./semantics.py all -vvv
 date
