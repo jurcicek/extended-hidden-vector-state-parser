@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-3.9.dtd">
 <!-- Project file for project ehvs -->
-<!-- Saved: 2008-09-24, 05:54:57 -->
+<!-- Saved: 2008-09-24, 14:28:36 -->
 <!-- Copyright (C) 2008 Filip Jurcicek and Jan Svec,  -->
 <Project version="3.9">
   <ProgLanguage mixed="0">Python</ProgLanguage>
@@ -665,17 +665,27 @@
     <Source>
       <Dir>semantics-4</Dir>
       <Dir>batch</Dir>
-      <Name>tune_cued_scale.py</Name>
+      <Name>cued_tune_data_reduction.py</Name>
     </Source>
     <Source>
       <Dir>semantics-4</Dir>
       <Dir>batch</Dir>
-      <Name>tune_cued_data_reduction.py</Name>
+      <Name>cued_full_run_no_smoothing.py</Name>
     </Source>
     <Source>
       <Dir>semantics-4</Dir>
       <Dir>batch</Dir>
-      <Name>tune_cued_train_data_reduction.py</Name>
+      <Name>cued_full_run.py</Name>
+    </Source>
+    <Source>
+      <Dir>semantics-4</Dir>
+      <Dir>batch</Dir>
+      <Name>cued_tune_train_data_reduction.py</Name>
+    </Source>
+    <Source>
+      <Dir>semantics-4</Dir>
+      <Dir>batch</Dir>
+      <Name>cued_tune_scale.py</Name>
     </Source>
   </Sources>
   <Forms>
@@ -746,10 +756,10 @@ I1
 s.</VcsOtherData>
   </Vcs>
   <FiletypeAssociations>
-    <FiletypeAssociation pattern="*.py" type="SOURCES" />
     <FiletypeAssociation pattern="*.ui.h" type="FORMS" />
-    <FiletypeAssociation pattern="*.idl" type="INTERFACES" />
     <FiletypeAssociation pattern="*.ui" type="FORMS" />
+    <FiletypeAssociation pattern="*.idl" type="INTERFACES" />
+    <FiletypeAssociation pattern="*.py" type="SOURCES" />
     <FiletypeAssociation pattern="*.ptl" type="SOURCES" />
   </FiletypeAssociations>
 </Project>

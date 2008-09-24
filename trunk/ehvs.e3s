@@ -2,14 +2,15 @@
 <!DOCTYPE Session SYSTEM "Session-3.8.dtd">
 <!-- eric3 session file for project ehvs -->
 <!-- This file was generated automatically, do not edit. -->
-<!-- Saved: 2008-09-24, 05:54:57 -->
+<!-- Saved: 2008-09-24, 14:28:37 -->
 <Session version="3.8">
   <Filenames>
-    <Filename cline="199" cindex="14">/home/filip/cued/ehvs/semantics-4/src/backoffC1C2C3C4.py</Filename>
+    <Filename cline="191" cindex="5">/home/filip/cued/ehvs/semantics-4/src/backoffC1C2C3C4.py</Filename>
     <Filename cline="224" cindex="0">/home/filip/cued/ehvs/semantics-4/src/bucketing.py</Filename>
     <Filename cline="404" cindex="24">/home/filip/cued/ehvs/semantics-4/src/gmtk.py</Filename>
+    <Filename cline="262" cindex="0">/home/filip/cued/ehvs/semantics-4/src/backoffC2C3C4.py</Filename>
   </Filenames>
-  <ActiveWindow cline="199" cindex="14">/home/filip/cued/ehvs/semantics-4/src/backoffC1C2C3C4.py</ActiveWindow>
+  <ActiveWindow cline="262" cindex="0">/home/filip/cued/ehvs/semantics-4/src/backoffC2C3C4.py</ActiveWindow>
   <Breakpoints>
   </Breakpoints>
   <Watchpoints>

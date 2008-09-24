@@ -112,6 +112,7 @@ def usage():
              -v                        : produce verbose output
              -t                        : produce text output that is not suitable for GMTK, but it is human readable
              -n                        : turn off smoothing 
+             -p                        : turn off pruning of histories when you perform smoothing
              --dirOut=DIR              : the output directory where to put all output files {%s} 
              --dirCmb=DIR              : input directory for *.dcd ( *.extension) files {%s}
              --conceptMap=FILE         : the concept map file name {%s}
@@ -133,7 +134,7 @@ def printGrams(f, gram):
 ###################################################################################################
 
 try:
-    opts, args = getopt.gnu_getopt(sys.argv[1:], "hvtn", 
+    opts, args = getopt.gnu_getopt(sys.argv[1:], "hvtnp", 
         ["dirOut=",
          "dirCmb=", 
          "conceptMap=", 
@@ -147,6 +148,7 @@ except getopt.GetoptError, exc:
 verbose = None
 text = None
 noSmoothing = False
+noPruning = False
 
 for o, a in opts:
     if o == "-h":
@@ -158,6 +160,8 @@ for o, a in opts:
         text = True
     elif o == "-n":
         noSmoothing = True
+    elif o == "-p":
+        noPruning = True
     elif o == "--dirOut":
         dirOut = a
     elif o == "--dirCmb":
@@ -166,116 +170,132 @@ for o, a in opts:
         conceptFileName = a
     elif o == "--wordMap":
         wordFileName = a
-        
-lst = glob.glob(dirCmb + "/*.cmb")
-##lst = lst[:300]
-lst.sort()
 
 if verbose:
     print("Start word history backoff-ing")
     print("-------------------------------------------------")
 
-conceptMap = LexMap().read(conceptFileName)
-wordMap = LexMap().read(wordFileName)
-rConceptMap = LexMap().read(conceptFileName).reverse()
-rWordMap = LexMap().read(wordFileName).reverse()
+if noSmoothing:
+    dt = """1 % number of Decision Trees
+0 % index of DT
 
-wordGrams = {}
-c1Grams = {}
-c2Grams = {}
+backoffC1C2C3C4 % DT name
+4 % number of parents
 
-for fileName in lst:
-    bucketing.getWordGrams(fileName, wordGrams, c1Grams, c2Grams)
+%% (C1,C2,C3,C4)
+-1 0
+"""
+    dtFile = file(dirOut+"/backoffC1C2C3C4"+'.dt', 'w')
+    dtFile.write(dt)
+   
+    dtFile.close()
+else:
+    lst = glob.glob(dirCmb + "/*.cmb")
+    ##lst = lst[:300]
+    lst.sort()
 
 
-c1Grams[(u'_EMPTY_', u'_EMPTY_', u'_EMPTY_', u'_EMPTY_')] = 999999
+    conceptMap = LexMap().read(conceptFileName)
+    wordMap = LexMap().read(wordFileName)
+    rConceptMap = LexMap().read(conceptFileName).reverse()
+    rWordMap = LexMap().read(wordFileName).reverse()
 
-# number of stacks [c1, c2, c3, c4] is lower than for training
-# because during force alingnment was not decoded many _DUMMY_
-# concepts
+    wordGrams = {}
+    c1Grams = {}
+    c2Grams = {}
 
-if not text:
-    c1Grams = translate(c1Grams, wordMap, conceptMap)
-    
-c1Grams4 = c1Grams
-c1Grams3 = reduceGrams(c1Grams4)
-c1Grams2 = reduceGrams(c1Grams3)
-c1Grams1 = reduceGrams(c1Grams2)
+    for fileName in lst:
+        bucketing.getWordGrams(fileName, wordGrams, c1Grams, c2Grams)
 
-if verbose:
-    print("Number of c1Grams4: %d" % len(c1Grams4))
-    print("Number of c1Grams3: %d" % len(c1Grams3))
-    print("Number of c1Grams2: %d" % len(c1Grams2))
-    print("Number of c1Grams1: %d" % len(c1Grams1))
 
-if not noSmoothing:
-    c1Grams4 = pruneGrams(c1Grams4, 8)
-    c1Grams3 = pruneGrams(c1Grams3, 6)
-    c1Grams2 = pruneGrams(c1Grams2, 4)
-    c1Grams1 = pruneGrams(c1Grams1, 2)
+    c1Grams[(u'_EMPTY_', u'_EMPTY_', u'_EMPTY_', u'_EMPTY_')] = 999999
 
-if verbose:
-    print("Number of pruned c1Grams4: %d" % len(c1Grams4))
-    print("Number of pruned c1Grams3: %d" % len(c1Grams3))
-    print("Number of pruned c1Grams2: %d" % len(c1Grams2))
-    print("Number of pruned c1Grams1: %d" % len(c1Grams1))
+    # number of stacks [c1, c2, c3, c4] is lower than for training
+    # because during force alingnment was not decoded many _DUMMY_
+    # concepts
 
-##c1Grams0 = {}
-##c1Grams0[('alfa'),]=1
-##c1Grams0[('beta'),]=1
-##c1Grams0[('gama'),]=1
-##c1Grams1 = {}
-##c1Grams1[('alfa', 'ALFA')]=1
-##c1Grams1[('alfa', 'BETA')]=1
-##c1Grams1[('beta', 'ALFA')]=1
-##c1Grams1[('beta', 'BETA')]=1
-##c1Grams2 = {}
-##c1Grams2[('alfa', 'BETA', 'GAMA')]=5
-##c1Grams3 = {}
-##c1Grams3[('alfa', 'BETA', 'GAMA', 'DELTA')]=6
+    if not text:
+        c1Grams = translate(c1Grams, wordMap, conceptMap)
+        
+    c1Grams4 = c1Grams
+    c1Grams3 = reduceGrams(c1Grams4)
+    c1Grams2 = reduceGrams(c1Grams3)
+    c1Grams1 = reduceGrams(c1Grams2)
 
-tree = {}
-buildTree(tree, c1Grams1)
-buildTree(tree, c1Grams2)
-buildTree(tree, c1Grams3)
-buildTree(tree, c1Grams4)
+    if verbose:
+        print("Number of c1Grams4: %d" % len(c1Grams4))
+        print("Number of c1Grams3: %d" % len(c1Grams3))
+        print("Number of c1Grams2: %d" % len(c1Grams2))
+        print("Number of c1Grams1: %d" % len(c1Grams1))
 
-#print tree['alfa']
+    if not noPruning:
+        c1Grams4 = pruneGrams(c1Grams4, 8)
+        c1Grams3 = pruneGrams(c1Grams3, 6)
+        c1Grams2 = pruneGrams(c1Grams2, 4)
+        c1Grams1 = pruneGrams(c1Grams1, 2)
 
-gmtk.saveDtBackoff(dirOut, "backoffC1C2C3C4", tree, 4)
+    if verbose:
+        print("Number of pruned c1Grams4: %d" % len(c1Grams4))
+        print("Number of pruned c1Grams3: %d" % len(c1Grams3))
+        print("Number of pruned c1Grams2: %d" % len(c1Grams2))
+        print("Number of pruned c1Grams1: %d" % len(c1Grams1))
 
-# save stats
-bStats = file(dirOut+"/backoffC1C2C3C4"+'.stats', 'w')
+    ##c1Grams0 = {}
+    ##c1Grams0[('alfa'),]=1
+    ##c1Grams0[('beta'),]=1
+    ##c1Grams0[('gama'),]=1
+    ##c1Grams1 = {}
+    ##c1Grams1[('alfa', 'ALFA')]=1
+    ##c1Grams1[('alfa', 'BETA')]=1
+    ##c1Grams1[('beta', 'ALFA')]=1
+    ##c1Grams1[('beta', 'BETA')]=1
+    ##c1Grams2 = {}
+    ##c1Grams2[('alfa', 'BETA', 'GAMA')]=5
+    ##c1Grams3 = {}
+    ##c1Grams3[('alfa', 'BETA', 'GAMA', 'DELTA')]=6
 
-bStats.write("Number of c1Grams4: %d\n" % len(c1Grams4))
-bStats.write("Number of c1Grams3: %d\n" % len(c1Grams3))
-bStats.write("Number of c1Grams2: %d\n" % len(c1Grams2))
-bStats.write("Number of c1Grams1: %d\n" % len(c1Grams1))
-bStats.write("Number of pruned c1Grams4: %d\n" % len(c1Grams4))
-bStats.write("Number of pruned c1Grams3: %d\n" % len(c1Grams3))
-bStats.write("Number of pruned c1Grams2: %d\n" % len(c1Grams2))
-bStats.write("Number of pruned c1Grams1: %d\n" % len(c1Grams1))
+    tree = {}
+    buildTree(tree, c1Grams1)
+    buildTree(tree, c1Grams2)
+    buildTree(tree, c1Grams3)
+    buildTree(tree, c1Grams4)
 
-bStats.write("\nPruned c1Grams4:\n")
-printGrams(bStats, c1Grams4)
-bStats.write("\nPruned c1Grams3:\n")
-printGrams(bStats, c1Grams3)
-bStats.write("\nPruned c1Grams2:\n")
-printGrams(bStats, c1Grams2)
-bStats.write("\nPruned c1Grams1:\n")
-printGrams(bStats, c1Grams1)
+    #print tree['alfa']
 
-bStats.close()
+    gmtk.saveDtBackoff(dirOut, "backoffC1C2C3C4", tree, 4)
 
-# save the cardinality of bucketing of C1C2C3C4
-### !!! remeber you are rewriting the file because you clean the file
-##print("I am rewriting " + dirOut + "/data_constants")
-##
-##file = open(dirOut + "/data_constants", "w")
-##file.write("\n% the cardinality should be CONCEPT_CARD^DEPTH_OF_STACK, but I know that the stack values are sparse\n")
-##file.write("#define WORD_BUCKET_C1C2C3C4_CARD     %d\n" % len(histories))
-##file.write("#define JOINT_FA_C1C2C3C4_CARD   %d\n" % len(c1Grams))
-##file.close()
+    # save stats
+    bStats = file(dirOut+"/backoffC1C2C3C4"+'.stats', 'w')
+
+    bStats.write("Number of c1Grams4: %d\n" % len(c1Grams4))
+    bStats.write("Number of c1Grams3: %d\n" % len(c1Grams3))
+    bStats.write("Number of c1Grams2: %d\n" % len(c1Grams2))
+    bStats.write("Number of c1Grams1: %d\n" % len(c1Grams1))
+    bStats.write("Number of pruned c1Grams4: %d\n" % len(c1Grams4))
+    bStats.write("Number of pruned c1Grams3: %d\n" % len(c1Grams3))
+    bStats.write("Number of pruned c1Grams2: %d\n" % len(c1Grams2))
+    bStats.write("Number of pruned c1Grams1: %d\n" % len(c1Grams1))
+
+    bStats.write("\nPruned c1Grams4:\n")
+    printGrams(bStats, c1Grams4)
+    bStats.write("\nPruned c1Grams3:\n")
+    printGrams(bStats, c1Grams3)
+    bStats.write("\nPruned c1Grams2:\n")
+    printGrams(bStats, c1Grams2)
+    bStats.write("\nPruned c1Grams1:\n")
+    printGrams(bStats, c1Grams1)
+
+    bStats.close()
+
+    # save the cardinality of bucketing of C1C2C3C4
+    ### !!! remeber you are rewriting the file because you clean the file
+    ##print("I am rewriting " + dirOut + "/data_constants")
+    ##
+    ##file = open(dirOut + "/data_constants", "w")
+    ##file.write("\n% the cardinality should be CONCEPT_CARD^DEPTH_OF_STACK, but I know that the stack values are sparse\n")
+    ##file.write("#define WORD_BUCKET_C1C2C3C4_CARD     %d\n" % len(histories))
+    ##file.write("#define JOINT_FA_C1C2C3C4_CARD   %d\n" % len(c1Grams))
+    ##file.close()
 
 if verbose:
     print("-------------------------------------------------")

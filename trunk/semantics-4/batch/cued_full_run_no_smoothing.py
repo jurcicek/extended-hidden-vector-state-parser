@@ -1,6 +1,6 @@
 from svc.utils import linrange, linspace
 
-settings['DATA_REDUCTION']=10
+#settings['DATA_REDUCTION']=6
 
 # Set whether the smootnig is perfomed
 # '-n' - no smoothing
