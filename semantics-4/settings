@@ -4,12 +4,28 @@ export POP_CARD=5
 export PUSH_CARD=5
 export MAX_PUSH=2 #1 2 
 
-export INSERTION_PENALTY=1.0
+export INSERTION_PENALTY=0.10
+export SCALE_CONCEPT12=1.0
+export SCALE_PUSHPOP=1.0
+export TRAIN_EM_ITERS=4
+
+# CUED dialogue act annotation expets only one DA per input sentence, 
+# as a results it is benefitial to force the decoder to accept hypotheses only with one output dialogue act
+# 0 - off - no hard limit on the number of output dialogue acts during decoding
+# 1 - the decoder accepts only one DA on its input
+export ONLY_ONE_TOP_ROOT_CONCEPT=0
+
+# Set whether the smootnig is perfomed
+# '-n' - no smoothing
+# ''   - smoothing
+# '-p' - smoothing, no pruning
+export WORD_NO_SMOOTHING='-n'
+export CONCEPT1_NO_SMOOTHING='-n'
+
 
 export DATA_REDUCTION=100
 export TRAIN_DATA_REDUCTION=100
 
-export TRAIN_EM_ITERS=4
 export TRAIN_ALLOW_EMPTY=0   # 0 - words cannot generate empty stacks
                              # 1 - it is possible to generate empty stacks
 export TRAIN_USE_ALL=0       # 0 - separate dataset in proportion to 72:8:20
@@ -23,11 +39,6 @@ export MAKE_XML=0            # 0 - do not generate
 # Possible parse types: LR, LRRL, LRRL-FT
 export PARSE_TYPE='LRRL-FT'
 
-# Set whether the smootnig is perfomed
-# '-n' - no smoothing
-# ''   - smoothing
-#export WORD_NO_SMOOTHING='-n'
-#export CONCEPT1_NO_SMOOTHING='-n'
 
 # Possible input chains:
 #       none, join_acts, join_acts_selected, filler, only_[speech_act]
@@ -45,8 +56,6 @@ export S2_DATASET=off
 export S3_DATASET=off
 export ORIG_DATASETS=word,word
 
-export SCALE_CONCEPT12=2.4
-export SCALE_PUSHPOP=2.0
 
 export S1_NEGEX=0
 export S2_NEGEX=0

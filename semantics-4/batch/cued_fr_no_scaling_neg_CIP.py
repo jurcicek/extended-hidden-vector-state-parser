@@ -1,6 +1,9 @@
 from svc.utils import linrange, linspace
 
-#settings['DATA_REDUCTION']=30
+#settings['DATA_REDUCTION']=10
+settings['SCALE_CONCEPT12']=1.0
+settings['SCALE_PUSHPOP']=1.0
+settings['INSERTION_PENALTY']=0.1
 
 prepareData(env=env)
 train(env=env)

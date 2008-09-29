@@ -34,6 +34,9 @@ frame : 0 {
 
    #define SMOOTH_SYMBOLS
    #include "symbols/observed_symbols.str"
+
+   #include "validators/top_root_concept.str"
+
 }
 
 frame : 1 {
@@ -176,7 +179,9 @@ frame : 1 {
      conditionalparents: concept1(0),concept2(0),concept3(0),concept4(0)
         using DeterministicCPT("stackValidatorGivenC1C2C3C4");
   }
- 
+
+  #include "validators/top_root_concept.str"
+  #include "validators/only_one_top_root_concept.str"
 }
 
 chunk 1:1

@@ -11,25 +11,31 @@ from math import log
 ###################################################################################################
 ###################################################################################################
 
-def getWordGrams(fileName, wordGrams, c1Grams, c2Grams, c3Grams = {}):
+def getWordGrams(fileName, wordGrams, c1Grams, c2Grams, c3Grams = {}, fileType='cmb'):
     cmbFile = codecs.open(fileName, "r", "UTF-8")
 
     for line in cmbFile.readlines():
         splitLine = line.strip().split("\t")
         # splitLine = splitLine[0:1] + splitLine[6:10]
-        splitLine = splitLine[0:1] + splitLine[7:11]
+        if fileType == 'cmb':
+            splitLine = splitLine[0:1] + splitLine[7:11]
+        elif fileType == 'hddn':
+            splitLine = splitLine[0:5]
+        else:
+            ValueError('fileType has unsupported value: %s' % fileType)
 
         tt0 = tuple(splitLine[0:5])
         tt1 = tt0[1:]
 
         ###########################################################
-        # exclude grams related to the word _empty_
-        if tt0[0] == u'_empty_':
-            continue
-        
-        # there is an excess of vectors of u'_EMPTY_', u'_EMPTY_', u'_EMPTY_', u'_EMPTY_'
-        if tt1 == (u'_EMPTY_', u'_EMPTY_', u'_EMPTY_', u'_EMPTY_'):
-            continue
+        if fileType == 'cmb':
+            # exclude grams related to the word _empty_
+            if tt0[0] == u'_empty_':
+                continue
+            
+            # there is an excess of vectors of u'_EMPTY_', u'_EMPTY_', u'_EMPTY_', u'_EMPTY_'
+            if tt1 == (u'_EMPTY_', u'_EMPTY_', u'_EMPTY_', u'_EMPTY_'):
+                continue
         ###########################################################
 
         tt2 = tt1[1:]

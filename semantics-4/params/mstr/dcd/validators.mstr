@@ -1,0 +1,71 @@
+%
+%
+
+#ifndef DCD_VALIDATORS
+#define DCD_VALIDATORS
+
+#include <commonParams>
+#include <utils.h>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DECISION TREEs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+DT_IN_FILE inline
+2 % number of decision trees
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+0 % a DT detects a top root concept 
+topRootConceptGivenC1C2C3C4
+4 % number of parents
+3	2	_EMPTY_	default
+	2	2	_EMPTY_ 	default
+		1	2	_EMPTY_	default
+			0	2	_EMPTY_	default
+				-1	_EMPTY_
+				-1	{p0}
+			-1	{p1}
+		-1	{p2}
+	-1	{p3}
+				
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1 % a DT that evaluates to one when there there is no chage on the top 
+% root concept (CUED DAs decoding constrain)
+onlyOneTopRootConceptValidatorGivenTRCTRC_1
+2 % number of parents
+0	4	_EMPTY_	_DUMMY_ 	_SINK_	default
+	-1	1 	% TRC(0) contains _EMPTY_ than there is nothing to test
+	-1	0	% _DUMMY_ cannot be the top root concept
+	-1	0	% _SINK_ cannot be the top root concept
+	1	4	_EMPTY_	_DUMMY_ 	_SINK_ default
+		-1	1	% TRC(-1) contains _EMPTY_ than there is nothing to test
+		-1	0	% _DUMMY_ cannot be the top root concept
+		-1	0	% _SINK_ cannot be the top root concept
+		-1	{(p0==p1)}
+		
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DETERMINISTIC CPTs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+DETERMINISTIC_CPT_IN_FILE inline
+
+2 % number of dereministic CPTs
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+0 % a deterministic CPT
+topRootConceptGivenC1C2C3C4
+4 % number of parents
+CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD CONCEPT_CARD % C1(0), C2(0), C3(0), C4(0), self card
+topRootConceptGivenC1C2C3C4 % DT name
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1 % a deterministic CPT
+onlyOneTopRootConceptValidatorGivenTRCTRC_1
+2 % number of parents
+CONCEPT_CARD CONCEPT_CARD 2 % topRootConcept(0), topRootConcept(-1), self card
+onlyOneTopRootConceptValidatorGivenTRCTRC_1 % DT name
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+#endif
