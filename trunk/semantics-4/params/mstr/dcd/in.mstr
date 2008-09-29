@@ -15,7 +15,7 @@ DENSE_CPT_IN_FILE       GEN_DIR/scale/dcpts.out ascii
 #include "observed_symbols.mstr"
 #include "popGivenC1C2C3C4.mstr"
 #include "pushGivenC1C2C3C4.mstr"
-
+#include "validators.mstr"
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % DECISION TREEs

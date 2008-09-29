@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-3.9.dtd">
 <!-- Project file for project ehvs -->
-<!-- Saved: 2008-09-24, 14:28:36 -->
+<!-- Saved: 2008-09-29, 18:44:54 -->
 <!-- Copyright (C) 2008 Filip Jurcicek and Jan Svec,  -->
 <Project version="3.9">
   <ProgLanguage mixed="0">Python</ProgLanguage>
@@ -670,22 +670,47 @@
     <Source>
       <Dir>semantics-4</Dir>
       <Dir>batch</Dir>
-      <Name>cued_full_run_no_smoothing.py</Name>
-    </Source>
-    <Source>
-      <Dir>semantics-4</Dir>
-      <Dir>batch</Dir>
-      <Name>cued_full_run.py</Name>
-    </Source>
-    <Source>
-      <Dir>semantics-4</Dir>
-      <Dir>batch</Dir>
       <Name>cued_tune_train_data_reduction.py</Name>
     </Source>
     <Source>
       <Dir>semantics-4</Dir>
       <Dir>batch</Dir>
       <Name>cued_tune_scale.py</Name>
+    </Source>
+    <Source>
+      <Dir>semantics-4</Dir>
+      <Dir>src</Dir>
+      <Name>statsC1C2C3C4.py</Name>
+    </Source>
+    <Source>
+      <Dir>semantics-4</Dir>
+      <Dir>batch</Dir>
+      <Name>cued_fr_no_scaling_neg_CIP.py</Name>
+    </Source>
+    <Source>
+      <Dir>semantics-4</Dir>
+      <Dir>batch</Dir>
+      <Name>cued_fr.py</Name>
+    </Source>
+    <Source>
+      <Dir>semantics-4</Dir>
+      <Dir>batch</Dir>
+      <Name>cued_fr_maxpush1.py</Name>
+    </Source>
+    <Source>
+      <Dir>semantics-4</Dir>
+      <Dir>batch</Dir>
+      <Name>cued_fr_no_smoothing.py</Name>
+    </Source>
+    <Source>
+      <Dir>semantics-4</Dir>
+      <Dir>batch</Dir>
+      <Name>cued_fr_no_scaling.py</Name>
+    </Source>
+    <Source>
+      <Dir>semantics-4</Dir>
+      <Dir>batch</Dir>
+      <Name>cued_fr_ootrc.py</Name>
     </Source>
   </Sources>
   <Forms>
@@ -756,10 +781,10 @@ I1
 s.</VcsOtherData>
   </Vcs>
   <FiletypeAssociations>
-    <FiletypeAssociation pattern="*.ui.h" type="FORMS" />
-    <FiletypeAssociation pattern="*.ui" type="FORMS" />
-    <FiletypeAssociation pattern="*.idl" type="INTERFACES" />
     <FiletypeAssociation pattern="*.py" type="SOURCES" />
+    <FiletypeAssociation pattern="*.ui.h" type="FORMS" />
+    <FiletypeAssociation pattern="*.idl" type="INTERFACES" />
+    <FiletypeAssociation pattern="*.ui" type="FORMS" />
     <FiletypeAssociation pattern="*.ptl" type="SOURCES" />
   </FiletypeAssociations>
 </Project>

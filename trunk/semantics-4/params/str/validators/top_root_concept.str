@@ -1,0 +1,8 @@
+#if defined(ONLY_ONE_TOP_ROOT_CONCEPT)
+    variable: topRootConcept {
+     type: discrete hidden cardinality CONCEPT_CARD; 
+     switchingparents: nil;
+     conditionalparents: concept1(0),concept2(0),concept3(0),concept4(0)
+        using DeterministicCPT("topRootConceptGivenC1C2C3C4");
+    }
+#endif

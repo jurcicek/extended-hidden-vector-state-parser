@@ -228,6 +228,14 @@ else:
         print("Number of c1Grams2: %d" % len(c1Grams2))
         print("Number of c1Grams1: %d" % len(c1Grams1))
 
+    # save stats
+    bStats = file(dirOut+"/backoffC1C2C3C4"+'.stats', 'w')
+
+    bStats.write("Number of c1Grams4: %d\n" % len(c1Grams4))
+    bStats.write("Number of c1Grams3: %d\n" % len(c1Grams3))
+    bStats.write("Number of c1Grams2: %d\n" % len(c1Grams2))
+    bStats.write("Number of c1Grams1: %d\n" % len(c1Grams1))
+
     if not noPruning:
         c1Grams4 = pruneGrams(c1Grams4, 8)
         c1Grams3 = pruneGrams(c1Grams3, 6)
@@ -264,13 +272,6 @@ else:
 
     gmtk.saveDtBackoff(dirOut, "backoffC1C2C3C4", tree, 4)
 
-    # save stats
-    bStats = file(dirOut+"/backoffC1C2C3C4"+'.stats', 'w')
-
-    bStats.write("Number of c1Grams4: %d\n" % len(c1Grams4))
-    bStats.write("Number of c1Grams3: %d\n" % len(c1Grams3))
-    bStats.write("Number of c1Grams2: %d\n" % len(c1Grams2))
-    bStats.write("Number of c1Grams1: %d\n" % len(c1Grams1))
     bStats.write("Number of pruned c1Grams4: %d\n" % len(c1Grams4))
     bStats.write("Number of pruned c1Grams3: %d\n" % len(c1Grams3))
     bStats.write("Number of pruned c1Grams2: %d\n" % len(c1Grams2))

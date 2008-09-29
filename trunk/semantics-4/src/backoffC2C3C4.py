@@ -139,6 +139,7 @@ except getopt.GetoptError, exc:
 verbose = None
 text = None
 noSmoothing = False
+noPruning = False
 
 for o, a in opts:
     if o == "-h":
@@ -214,6 +215,13 @@ else:
         print("Number of c2Grams3: %d" % len(c2Grams3))
         print("Number of c2Grams2: %d" % len(c2Grams2))
 
+    # save stats
+    bStats = file(dirOut+"/backoffC2C3C4"+'.stats', 'w')
+
+    bStats.write("Number of c1Grams4: %d\n" % len(c2Grams4))
+    bStats.write("Number of c1Grams3: %d\n" % len(c2Grams3))
+    bStats.write("Number of c1Grams2: %d\n" % len(c2Grams2))
+
     if not noPruning:
         c2Grams4 = pruneGrams(c2Grams4, 6)
         c2Grams3 = pruneGrams(c2Grams3, 4)
@@ -233,12 +241,6 @@ else:
 
     gmtk.saveDtBackoff(dirOut, "backoffC2C3C4", tree, 3)
 
-    # save stats
-    bStats = file(dirOut+"/backoffC2C3C4"+'.stats', 'w')
-
-    bStats.write("Number of c1Grams4: %d\n" % len(c2Grams4))
-    bStats.write("Number of c1Grams3: %d\n" % len(c2Grams3))
-    bStats.write("Number of c1Grams2: %d\n" % len(c2Grams2))
     bStats.write("Number of pruned c1Grams4: %d\n" % len(c2Grams4))
     bStats.write("Number of pruned c1Grams3: %d\n" % len(c2Grams3))
     bStats.write("Number of pruned c1Grams2: %d\n" % len(c2Grams2))
