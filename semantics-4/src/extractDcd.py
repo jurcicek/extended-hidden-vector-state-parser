@@ -218,22 +218,48 @@ for fileName in list:
 ##    print fileName
 ##    print splitext(basename(fileName))[0]
     
+    brokenDCD = False
     obsFileName = normpath(dirObs +  "/" + splitext(basename(fileName))[0] + ".obs.orig")
     obsFile = codecs.open(obsFileName, 'r', 'utf-8')
     for i, line in enumerate(obsFile):
         obs_line = line.split()
         if i >= len(dcd):
-            break
+            # output DCD file is not long enough, decoding was broken
+            brokenDCD = True
+            dcd.append(obs_line)
         dcd[i][0:0] = obs_line
     obsFile.close()
-
+    
+    # search for broken DCD files
+    for dcdVect in dcd:
+        for each in dcdVect:
+            if each == '_SINK_':
+                # forbidden concept on the stack
+                brokenDCD = True
+                break
+        
+        if brokenDCD:
+            break
+            
     # save the combination of a dcd file and an observation file
     dcdExtractFile = codecs.open(fileName + ".cmb", "w", "utf-8")
-    for dcdVect in dcd:
-        for each in dcdVect[:-1]:
-            dcdExtractFile.write(each + "\t")
-        
-        dcdExtractFile.write(dcdVect[-1] + "\n")
+    if not brokenDCD:
+        for dcdVect in dcd:
+            for each in dcdVect[:-1]:
+                dcdExtractFile.write(each + "\t")
+            
+            dcdExtractFile.write(dcdVect[-1] + "\n")
+    else:
+        for dcdVect in dcd:
+            dcdExtractFile.write(dcdVect[0] + "\t")
+            dcdExtractFile.write(dcdVect[1] + "\t")
+            for i in range(4):
+                dcdExtractFile.write("_EMPTY_\t")
+            dcdExtractFile.write("0\t")
+            for i in range(4):
+                dcdExtractFile.write("_EMPTY_\t")
+            dcdExtractFile.write("0\n")
+    
         
     dcdExtractFile.close()
 

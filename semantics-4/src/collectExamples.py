@@ -11,22 +11,43 @@ from svc.ui.smntcs import input
 import sys
 
 DEPENDENT_CONCEPTS = [
-    ['AMOUNT', 'LENGTH', 'NUMBER'],
-    ['STATION'],
-    ['TRAIN_TYPE'],
+    ['ADDR'],
+    ['AREA'],
+    ['DRINKS'],
+    ['FOOD'],
+    ['MUSIC'],
+    ['NAME'],
+    ['NEAR'],
+    ['PHONE'],
+    ['PRICE'],
+    ['STARS'],
+    ['TASK'],
+    ['TYPE'],
 ]
 
-DOMINATED_CONCEPTS = set(['ACCEPT', 'ARRIVAL', 'DELAY', 'DEPARTURE',
-    'DISTANCE', 'DURATION', 'PLATFORM', 'PRICE', 'REJECT'])
+DOMINATED_CONCEPTS = set(['CONFIRM', 'INFORM', 'REQUEST'])
 
-
-CONCEPT_GROUPING = {
-    'AMOUNT': ['LENGTH', 'NUMBER', 'TIME'],
-    'LENGTH': ['NUMBER', 'AMOUNT', 'TIME'],
-    'NUMBER': ['LENGTH', 'AMOUNT', 'TIME'],
-}
+CONCEPT_GROUPING = {}
 
 NUMBER_CONCEPTS = set(['AMOUNT', 'LENGTH', 'NUMBER', 'TIME'])
+
+##DEPENDENT_CONCEPTS = [
+##    ['AMOUNT', 'LENGTH', 'NUMBER'],
+##    ['STATION'],
+##    ['TRAIN_TYPE'],
+##]
+##
+##DOMINATED_CONCEPTS = set(['ACCEPT', 'ARRIVAL', 'DELAY', 'DEPARTURE',
+##    'DISTANCE', 'DURATION', 'PLATFORM', 'PRICE', 'REJECT'])
+##
+##
+##CONCEPT_GROUPING = {
+##    'AMOUNT': ['LENGTH', 'NUMBER', 'TIME'],
+##    'LENGTH': ['NUMBER', 'AMOUNT', 'TIME'],
+##    'NUMBER': ['LENGTH', 'AMOUNT', 'TIME'],
+##}
+##
+##NUMBER_CONCEPTS = set(['AMOUNT', 'LENGTH', 'NUMBER', 'TIME'])
 
 
 class CollectExamples(Script):

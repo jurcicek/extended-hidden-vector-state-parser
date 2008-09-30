@@ -5,17 +5,38 @@ from glob import *
 import re
 import os
 
-inputCuedSemanticsTrain   = 'towninfo-train-head.sem'
+inputCuedSemanticsTrain   = 'towninfo-train.sem'
 inputCuedSemanticsHeldout = 'towninfo-heldout.sem'
 inputCuedSemanticsTest    = 'towninfo-test.sem'
 
 maxProcessedDAs = 18000
 outputDir = "/home/filip/cued/ehvs/cued/xml/"
 
-filterOutSlotsNumberTrain   = range(2,12)
-filterOutSlotsNumberHeldout = range(2,12)
-filterOutSlotsNumberTest    = range(2,12)
+#filterOutSlotsNumberTrain   = range(2,12)
+#filterOutSlotsNumberHeldout = range(2,12)
+#filterOutSlotsNumberTest    = range(2,12)
 
+filterOutSlotsNumberTrain   = (0,2,3,4,5,6,7,8,9,10,11,12)
+filterOutSlotsNumberHeldout = (0,2,3,4,5,6,7,8,9,10,11,12)
+filterOutSlotsNumberTest    = (0,2,3,4,5,6,7,8,9,10,11,12)
+
+filterOutSpeechActs = ('xxx', 
+##                       'ask',
+##                       'affirm', 
+##                       'bye', 
+##                       'confirm', 
+##                       'deny', 
+##                       'hello',
+##                       'inform',
+##                       'negate',
+##                       'repeat',
+##                       'reqalts',
+##                       'reqmore',
+##                       'request',
+##                       'restart',
+##                       'select',
+##                       'thankyou',
+                       )
 # there is definitely problem with speech acts negate and deny
 
 conceptStats = {}
@@ -300,7 +321,10 @@ def transformCuedDAs(counter, inputFile, outputDir, listFileName, filterOutSlots
     
             if da.getNumOfSlots() in filterOutSlotsNumber:
                 continue
-                
+    
+            if da.speechAct in filterOutSpeechActs:
+                continue
+
             print strip(sentence), ' <=> ', strip(das)
             print da.render()
             

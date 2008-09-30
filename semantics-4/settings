@@ -13,7 +13,7 @@ export TRAIN_EM_ITERS=4
 # as a results it is benefitial to force the decoder to accept hypotheses only with one output dialogue act
 # 0 - off - no hard limit on the number of output dialogue acts during decoding
 # 1 - the decoder accepts only one DA on its input
-export ONLY_ONE_TOP_ROOT_CONCEPT=0
+export ONLY_ONE_TOP_ROOT_CONCEPT=1
 
 # Set whether the smootnig is perfomed
 # '-n' - no smoothing

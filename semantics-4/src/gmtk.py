@@ -19,8 +19,8 @@ def probPruneToZero(prob):
     
     return prob
     
-###################################################################################################
-###################################################################################################
+#############################################################################
+#############################################################################
 
 def readDcpt(fileName, name):
     """ This function read one dense CPT from the output of GMTK. 
@@ -40,8 +40,39 @@ def readDcpt(fileName, name):
             probs = [float(x) for x in probs]
             
             return probs
-    
-######################################################################################################
+
+            #############################################################################
+#############################################################################
+
+def readDcptBigram(fileName, name):
+    """ This function read one dense bigram CPT from the output of GMTK. 
+        
+    """
+    dcptsFile = open(fileName, "r")
+    dcptLines = dcptsFile.readlines()
+    dcptsFile.close()
+ 
+    bigram = []
+    for i in range(len(dcptLines)):
+        line = dcptLines[i].strip()
+
+        if line == name:
+            # I found dcpt in which I am interested in
+            numOfParents = int(dcptLines[i+1].split('%')[0])
+            xy = dcptLines[i+2].split('%')[0].split()
+            cardinalityX = int(xy[0])
+            cardinalityY = int(xy[1])
+            
+            for x in range(cardinalityX):
+                probs = dcptLines[i+3+x].split('%')[0].strip().split()
+                probs = [float(p) for p in probs]
+                
+                bigram.append(probs)
+                
+    return bigram
+
+
+################concept######################################################################################
 ######################################################################################################
 
 def saveDcptZerogram(fileNamePrefix, dcptName, selfCard, parentsCardinality=[]):
