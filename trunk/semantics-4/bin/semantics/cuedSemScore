@@ -9,6 +9,8 @@
 # 1. allow requesting for multiple attirbutes
 # 2. fix error that assign an item match even if value is not there
 
+# MODIFICATION Filip 10/09/2008
+# added data output only - it is easier to parse
 
 use strict; 
 
@@ -320,10 +322,28 @@ print "total test items = $c2\n";
 #   print "$nerrs error detected - fix and rerun\n";
 #}else{
 	my ($acc,$prec,$rec,$f);
-	$acc = 100*($Ha/$Na);
-	$prec = 100*($Hi/$Ri);
-	$rec = 100*($Hi/$Ni);
+	
+	if ($Na != 0) {
+              $acc = 100*($Ha/$Na);
+	} 
+	else {
+	  $acc = -100.0
+	}
+	if ($Ri != 0) {
+	  $prec = 100*($Hi/$Ri);
+	}
+	else {
+	  $prec = -100.0
+	}
+	if ($Ni != 0) {
+	  $rec = 100*($Hi/$Ni);
+	}
+	else {
+	  $rec = -100.0
+	}
+	 
 	$f = 2*$prec*$rec/($rec+$prec);
+	
 if (not $data_only){
    print "\nSemScore Results: Ref contains $Na acts; $Ni items\n";
    print "---------------------------------------------\n";

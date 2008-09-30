@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Tasks SYSTEM "Tasks-3.8.dtd">
 <!-- Tasks file for project ehvs -->
-<!-- Saved: 2008-09-29, 18:44:54 -->
+<!-- Saved: 2008-09-30, 19:27:22 -->
 <Tasks version="3.8">
   <Task priority="1" completed="0" bugfix="0">
     <Description>TODO:</Description>
@@ -28,8 +28,42 @@
     </Resource>
   </Task>
   <Task priority="1" completed="0" bugfix="0">
+    <Description>TODO: Improve tuned/nontuned mixture</Description>
+    <Created>2008-09-30, 11:28:46</Created>
+    <Resource>
+      <Filename>
+        <Dir>semantics-4</Dir>
+        <Name>semantics.py</Name>
+      </Filename>
+      <Linenumber>148</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="0" bugfix="1">
+    <Description>FIXME:</Description>
+    <Created>2008-09-30, 16:19:28</Created>
+    <Resource>
+      <Filename>
+        <Dir>svc</Dir>
+        <Name>map.py</Name>
+      </Filename>
+      <Linenumber>104</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="0" bugfix="0">
+    <Description>TODO: REMOVE: used only with bigram_lemma</Description>
+    <Created>2008-09-30, 19:15:04</Created>
+    <Resource>
+      <Filename>
+        <Dir>semantics-4</Dir>
+        <Dir>src</Dir>
+        <Name>reduceExamples.py</Name>
+      </Filename>
+      <Linenumber>20</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="0" bugfix="0">
     <Description>TODO: Other specifiers</Description>
-    <Created>2008-09-19, 16:34:05</Created>
+    <Created>2008-09-30, 19:24:58</Created>
     <Resource>
       <Filename>
         <Dir>svc</Dir>
@@ -41,7 +75,7 @@
   </Task>
   <Task priority="1" completed="0" bugfix="1">
     <Description>FIXME: Remove</Description>
-    <Created>2008-09-19, 16:34:05</Created>
+    <Created>2008-09-30, 19:24:58</Created>
     <Resource>
       <Filename>
         <Dir>svc</Dir>
@@ -53,7 +87,7 @@
   </Task>
   <Task priority="1" completed="0" bugfix="0">
     <Description>TODO: Move into self._extractionError()</Description>
-    <Created>2008-09-19, 16:34:05</Created>
+    <Created>2008-09-30, 19:24:58</Created>
     <Resource>
       <Filename>
         <Dir>svc</Dir>
@@ -65,7 +99,7 @@
   </Task>
   <Task priority="1" completed="0" bugfix="0">
     <Description>TODO: Change type of exception</Description>
-    <Created>2008-09-19, 16:34:05</Created>
+    <Created>2008-09-30, 19:24:58</Created>
     <Resource>
       <Filename>
         <Dir>svc</Dir>
@@ -73,17 +107,6 @@
         <Name>__init__.py</Name>
       </Filename>
       <Linenumber>1361</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="0" bugfix="0">
-    <Description>TODO: Improve tuned/nontuned mixture</Description>
-    <Created>2008-09-29, 16:06:21</Created>
-    <Resource>
-      <Filename>
-        <Dir>semantics-4</Dir>
-        <Name>semantics.py</Name>
-      </Filename>
-      <Linenumber>148</Linenumber>
     </Resource>
   </Task>
 </Tasks>

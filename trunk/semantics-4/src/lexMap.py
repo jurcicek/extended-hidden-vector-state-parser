@@ -84,6 +84,11 @@ class LexMap:
     def has_key(self, i):
         return self.lexMap.has_key(i)
         
+    def keys(self):
+        return self.lexMap.keys()
+
+    def values(self):
+        return self.lexMap.values()
     ######################################################################################################
     ######################################################################################################
     

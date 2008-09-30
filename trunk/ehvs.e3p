@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-3.9.dtd">
 <!-- Project file for project ehvs -->
-<!-- Saved: 2008-09-29, 18:44:54 -->
+<!-- Saved: 2008-09-30, 19:27:22 -->
 <!-- Copyright (C) 2008 Filip Jurcicek and Jan Svec,  -->
 <Project version="3.9">
   <ProgLanguage mixed="0">Python</ProgLanguage>
@@ -712,6 +712,16 @@
       <Dir>batch</Dir>
       <Name>cued_fr_ootrc.py</Name>
     </Source>
+    <Source>
+      <Dir>semantics-4</Dir>
+      <Dir>batch</Dir>
+      <Name>cued_dcd.py</Name>
+    </Source>
+    <Source>
+      <Dir>semantics-4</Dir>
+      <Dir>src</Dir>
+      <Name>statsHVSprob.py</Name>
+    </Source>
   </Sources>
   <Forms>
   </Forms>
@@ -781,10 +791,10 @@ I1
 s.</VcsOtherData>
   </Vcs>
   <FiletypeAssociations>
-    <FiletypeAssociation pattern="*.py" type="SOURCES" />
     <FiletypeAssociation pattern="*.ui.h" type="FORMS" />
-    <FiletypeAssociation pattern="*.idl" type="INTERFACES" />
     <FiletypeAssociation pattern="*.ui" type="FORMS" />
+    <FiletypeAssociation pattern="*.idl" type="INTERFACES" />
+    <FiletypeAssociation pattern="*.py" type="SOURCES" />
     <FiletypeAssociation pattern="*.ptl" type="SOURCES" />
   </FiletypeAssociations>
 </Project>
