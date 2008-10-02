@@ -40,6 +40,7 @@ filterOutSpeechActs = ('xxx',
 # there is definitely problem with speech acts negate and deny
 
 conceptStats = {}
+
 stats = {}
 
 def splitByComma(text):
@@ -68,7 +69,11 @@ def splitByComma(text):
 
 class Slot:
     def __init__(self, slot):
+        # data normalisation:
+        # both name and phone.name has their equivalents
         self.slot = slot
+##        self.slot = re.sub('^name', 'venue.name',slot)
+##        self.slot = re.sub('^phone.name', 'venue.name',self.slot)
         self.name = ''
         self.value = ''
         self.equal = False
@@ -109,7 +114,7 @@ class Slot:
         elif len(self.value) == 0:
             value = ''
         else:
-            value = '(VALUE)'
+            value = '(VALUE_'+name+')'
         
         incrementConceptStats(value)
 
@@ -135,7 +140,7 @@ class Slot:
             value = ''
             equal = ''
         else:
-            value = 'value'
+            value = 'value_'+name
 
         return name+equal+value
     
@@ -350,7 +355,6 @@ def transformCuedDAs(counter, inputFile, outputDir, listFileName, filterOutSlots
     print 'slot5: ', stats['slot5']
     print 'slot6: ', stats['slot6']
 
-    
     printConceptStats(listFileName)
     
     return counter
