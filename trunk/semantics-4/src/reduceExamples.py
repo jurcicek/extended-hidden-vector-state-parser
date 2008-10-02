@@ -33,7 +33,9 @@ class ReduceExamples(Script):
 
         examples = ADict.readFromFile(examples)
         examples = self.mapExamples(examples)
-        examples.writeToFile(output)
+
+        key=lambda (k,v): (k[0], -v, k[1])
+        examples.writeToFile(output, key=key)
 
 if __name__ == '__main__':
     s = ReduceExamples()

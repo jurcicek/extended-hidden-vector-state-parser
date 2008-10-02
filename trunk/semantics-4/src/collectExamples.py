@@ -23,13 +23,27 @@ DEPENDENT_CONCEPTS = [
     ['STARS'],
     ['TASK'],
     ['TYPE'],
+##    ['VENUE_DOT_NAME'],
+##    ['VALUE_ADDR'],
+##    ['VALUE_AREA'],
+##    ['VALUE_DRINKS'],
+##    ['VALUE_FOOD'],
+##    ['VALUE_MUSIC'],
+##    ['VALUE_NAME'],
+##    ['VALUE_NEAR'],
+##    ['VALUE_PHONE'],
+##    ['VALUE_PRICE'],
+##    ['VALUE_STARS'],
+##    ['VALUE_TASK'],
+##    ['VALUE_TYPE'],
+##    ['VALUE_VENUE_DOT_NAME'],
 ]
 
-DOMINATED_CONCEPTS = set(['CONFIRM', 'INFORM', 'REQUEST'])
+DOMINATING_CONCEPT = set(['CONFIRM', 'INFORM', 'REQUEST'])
 
 CONCEPT_GROUPING = {}
 
-NUMBER_CONCEPTS = set(['AMOUNT', 'LENGTH', 'NUMBER', 'TIME'])
+NUMBER_CONCEPTS = set()
 
 ##DEPENDENT_CONCEPTS = [
 ##    ['AMOUNT', 'LENGTH', 'NUMBER'],
@@ -180,7 +194,7 @@ class CollectExamples(Script):
         concepts = set()
         for stack in stacks:
             concepts |= set(stack)
-        for rootConcept in DOMINATED_CONCEPTS:
+        for rootConcept in DOMINATING_CONCEPT:
             if rootConcept in concepts:
                 # the utterance can be used as negative example 
                 

@@ -57,7 +57,7 @@ export S3_DATASET=off
 export ORIG_DATASETS=word,word
 
 
-export S1_NEGEX=0
+export S1_NEGEX=1
 export S2_NEGEX=0
 export S3_NEGEX=0
 
