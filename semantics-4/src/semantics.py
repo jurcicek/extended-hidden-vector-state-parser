@@ -688,7 +688,9 @@ class Semantics:
         
         slots = ''
         for eachSlot in pair[1]:
-            slots += self.getCUEDSlot(eachSlot)+','
+            slot = self.getCUEDSlot(eachSlot)
+            if slot:
+                slots += slot+','
             
         slots = slots[:-1]
         

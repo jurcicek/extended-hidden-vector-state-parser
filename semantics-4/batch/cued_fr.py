@@ -1,6 +1,6 @@
 from svc.utils import linrange, linspace
 
-#settings['DATA_REDUCTION']=30
+#settings['DATA_REDUCTION']=6
 
 prepareData(env=env)
 train(env=env)
