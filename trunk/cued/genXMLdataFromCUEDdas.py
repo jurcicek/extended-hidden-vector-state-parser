@@ -4,12 +4,14 @@ from string import *
 from glob import *
 import re
 import os
+import heapq
+from operator import *
 
 inputCuedSemanticsTrain   = 'towninfo-train.sem'
 inputCuedSemanticsHeldout = 'towninfo-heldout.sem'
 inputCuedSemanticsTest    = 'towninfo-test.sem'
 
-maxProcessedDAs = 18000
+maxProcessedDAs = 28000
 outputDir = "/home/filip/cued/ehvs/cued/xml/"
 
 #filterOutSlotsNumberTrain   = range(2,12)
@@ -40,7 +42,8 @@ filterOutSpeechActs = ('xxx',
 # there is definitely problem with speech acts negate and deny
 
 conceptStats = {}
-
+alignmentStats = {}
+##alignmentStats['none'] = -1
 stats = {}
 
 def splitByComma(text):
@@ -98,7 +101,126 @@ class Slot:
         self.value = self.value.replace('"', '')
 
         return
+
+    def findValue(self, text, values):
+        for each in values:
+            v = each.replace(' ', '').lower()
+            v = v.replace("'", '')
+            n = re.search(v, text)
+            
+            if n == None: 
+                n = -1
+            else:
+                n = n.start()
+                
+            if n >= 0:
+                break
+                
+        return n
         
+    def align(self, text):
+        text = text.replace(' ', '').lower()
+        text = text.replace("'", '')
+        name = self.name
+        value = self.value
+        
+        dontcare = ["s not important",'t (really)* (erm)* care','t (really)* (erm)* mind', 'forget about', 'im not interested in', 'anything', 't matter', 'i oov (really)* mind', 'i dont want any', 'any kind of', 'doesnt need to be', 'doesnt have to play', 'no i just want']
+        
+        # rule based alignment
+        if value == 'find':
+            value = ["(just)* looking for","(just)* looking to", 'want to find']
+        elif value == 'central':
+            value = ["centr", 'middle']
+        elif name == 'area' and value == 'dontcare':
+            value = dontcare + ["somewhere", "anywhere", 'any part']
+        elif name == 'pricerange' and value == 'dontcare':
+            value = dontcare + ["any price range",]
+        elif name == 'near' and value == 'dontcare':
+            value = dontcare + ["near",]
+        elif name == 'drinks' and value == 'dontcare':
+            value = dontcare + ["different type",]
+        elif value == 'dontcare':
+            value = dontcare
+        elif value == 'bar':
+            value = ["bar", 'sells? beer', 'get a? drink', 'for a drink']
+        elif value == 'cocktails':
+            value = ["cocktail",]
+        elif value == 'drinks':
+            value = ["drink", 'alcohol']
+        elif value == '1':
+            value = ["one star",]
+        elif value == '2':
+            value = ["two star",]
+        elif value == '3':
+            value = ["three star",]
+        elif value == '4':
+            value = ["four star",]
+        elif value == '5':
+            value = ["five star",]
+        elif value == 'restaurant':
+            value = ["restaurant", 'to eat', 'food', 'meal', 'want dinner', 'oov']
+        elif value == 'expensive':
+            value = ["expensive", 'luxurious', 'fancy', 'smart', 'hogh price', 'the best']
+        elif value == 'cheap':
+            value = ["cheap", 'basic', 'dont have much money']
+        elif value == 'moderate':
+            value = ["moderate", 'midprice', 'medium', 'intermediate', 'reasonably', 'range', 'at oov price', 'better than a cheap', 'mid range', 'oov price', 'beer bar', 'too expesive']
+        elif value == 'Westside Shopping':
+            value = ["westside shopping", 'shopping centre', 'supermarket', 'shopping area']
+        elif value == 'River Jay':
+            value = ["river side",'river jay', 'riverside', 'river']
+        elif value == 'Railway Station':
+            value = ["station",]
+        elif value == 'Tourist Information':
+            value = ["information",]
+        elif value == 'Saint Petersburg':
+            value = ["peters",]
+        elif value == 'Hotel Primus':
+            value = ["primus",]
+        elif value == 'Alexander Hotel':
+            value = ["hotel",]
+        elif value == 'Alexandra Hotel':
+            value = ["hotel",]
+        elif value == 'Char Sue':
+            value = ["Char Sue", 'chow oov']
+        elif value == 'hotel':
+            value = ["hotel", 'hostel', 'place to stay', 'to stay']
+        elif value == 'snacks':
+            value = ["snack",]
+        elif value == 'Italian':
+            value = ["italian", 'pizza']
+        elif name == 'addr' and value == '':
+            value = ["address", 'name', 'riverside', 'river', 'where is', 'where can i', 'location', 'where that is']
+        elif name == 'venue.name' and value == '':
+            value = ['name']
+        elif name == 'phone' and value == '':
+            value = ['phone', 'number']
+        elif name == 'price' and value == '':
+            value = ["what price is it",'how much .* cost', 'riverside', 'tell me how much', 'they charge', 'cost', 'whats the', 'price', 'how much', 'how expensive']
+        elif name == 'area' and value == '':
+            value = ["what part","where is",'area', 'which part']
+        elif name == 'near' and value == '':
+            value = ["near","closest"]
+        elif name == 'food' and value == '':
+            value = ["food","cuisine", 'type of']
+        elif name == 'stars' and value == '':
+            value = ["star",]
+        elif name == 'pricerange' and value == '':
+            value = ["what sort of prices", 'pricerange', 'what kind of price', 'how expensive', 'how much', 'typical price']
+        else:
+            value = [value,]
+
+        if len(value[0]) == 0:
+            value[0] = name
+            
+        self.n = self.findValue(text, value)
+        
+        if self.n == -1:
+            incrementAlignment(self.name+'|'+self.value)
+            incrementAlignment('_BAD_')
+        else:
+            incrementAlignment('_OK_')
+    
     def render(self):
         if len(self.name) == 0:
             name = 'EMPTYSLOT'
@@ -154,6 +276,21 @@ class DialogueAct:
 
         return
 
+    def sortSlots(self):
+        again = True
+        
+        while again:
+            again = False
+            for i in range(1, len(self.slots)):
+                if self.slots[i-1].n > self.slots[i].n:
+                    slot = self.slots[i]
+                    self.slots[i] = self.slots[i-1]
+                    self.slots[i-1] = slot
+                    
+                    again = True
+                    break
+                    
+    
     def parse(self):
         numOfDAs = len(splitByComma(self.dialogueAct))
         if numOfDAs > 1:
@@ -166,10 +303,15 @@ class DialogueAct:
         slots = slots.replace('(', '')
         slots = slots.replace(')', '')
 
+        stats['das'] += 1
+
+        if slots == '':
+            # no slots to process
+            return
+            
         # split slots
         slots = splitByComma(slots)
         
-        stats['das'] += 1
         if len(slots[0]) > 0:
             stats['slot'+str(len(slots))] += 1
         else:
@@ -178,10 +320,19 @@ class DialogueAct:
 
         for each_slot in slots:
             slot = Slot(each_slot)
+
             slot.parse()
+            
+            if len(slots) > 1:
+                slot.align(self.text)
+            else:
+                slot.n = -1
             
             self.slots.append(slot)
 
+        if len(slots) > 1:
+            self.sortSlots()
+        
         return
 
     def render(self):
@@ -217,6 +368,21 @@ class DialogueAct:
         DA += '('+rendered_slots+')'
 
         return DA
+
+    def getAlignment(self):
+        s = ''
+        for each_slot in self.slots:
+            s += each_slot.name+':'+str(each_slot.n)+' '
+        
+        return s
+        
+    def unAligned(self):
+        if len(self.slots) > 1:
+            for each_slot in self.slots:
+                if each_slot.n == -1:
+                    return True
+                
+        return False
         
     def getNumOfSlots(self):
         return len(self.slots)
@@ -267,10 +433,22 @@ class DialogueAct:
         return xml
 
 def incrementConceptStats(concept):
+    global conceptStats
+    
     try:
         conceptStats[concept] += 1
     except KeyError:
         conceptStats[concept] = 1
+    
+    return
+
+def incrementAlignment(concept):
+    global alignmentStats
+    
+    try:
+        alignmentStats[concept] += 1
+    except KeyError:
+        alignmentStats[concept] = 1
     
     return
 
@@ -330,8 +508,12 @@ def transformCuedDAs(counter, inputFile, outputDir, listFileName, filterOutSlots
             if da.speechAct in filterOutSpeechActs:
                 continue
 
-            print strip(sentence), ' <=> ', strip(das)
-            print da.render()
+            if da.unAligned():
+                print strip(sentence), ' <=> ', strip(das)
+                print 'EHVS: ', da.render()
+                print 'CUED: ', da.renderCUED()
+                print 'Alig: ', da.getAlignment()
+                print
             
             cuedFile.write(strip(sentence)+' <=> '+da.renderCUED()+'\n')
             
@@ -355,6 +537,11 @@ def transformCuedDAs(counter, inputFile, outputDir, listFileName, filterOutSlots
     print 'slot5: ', stats['slot5']
     print 'slot6: ', stats['slot6']
 
+    ali = heapq.nlargest(100, alignmentStats.iteritems(), itemgetter(1))
+
+    for k, v in ali:
+        print k+'='+str(v)
+    
     printConceptStats(listFileName)
     
     return counter
