@@ -11,19 +11,16 @@ from svc.ui.smntcs import input
 import sys
 
 DEPENDENT_CONCEPTS = [
-    ['ADDR'],
-    ['AREA'],
     ['DRINKS'],
     ['FOOD'],
     ['MUSIC'],
-    ['NAME'],
+    ['NAME', 'VENUE_DOT_NAME', 'AREA', 'ADDR'],
     ['NEAR'],
     ['PHONE'],
-    ['PRICE'],
+    ['PRICE', 'PRICERANGE'],
     ['STARS'],
     ['TASK'],
     ['TYPE'],
-##    ['VENUE_DOT_NAME'],
 ##    ['VALUE_ADDR'],
 ##    ['VALUE_AREA'],
 ##    ['VALUE_DRINKS'],

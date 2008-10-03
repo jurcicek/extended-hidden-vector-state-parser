@@ -2,14 +2,13 @@
 <!DOCTYPE Session SYSTEM "Session-3.8.dtd">
 <!-- eric3 session file for project ehvs -->
 <!-- This file was generated automatically, do not edit. -->
-<!-- Saved: 2008-09-30, 19:27:22 -->
+<!-- Saved: 2008-10-03, 18:18:51 -->
 <Session version="3.8">
   <Filenames>
-    <Filename cline="27" cindex="0">/home/filip/cued/ehvs/semantics-4/src/statsC1C2C3C4.py</Filename>
-    <Filename cline="36" cindex="0">/home/filip/cued/ehvs/cued/genXMLdataFromCUEDdas.py</Filename>
-    <Filename cline="27" cindex="33">/home/filip/cued/ehvs/semantics-4/src/collectExamples.py</Filename>
+    <Filename cline="20" cindex="0">/home/filip/cued/ehvs/semantics-4/src/collectExamples.py</Filename>
+    <Filename cline="192" cindex="21">/home/filip/cued/ehvs/cued/genXMLdataFromCUEDdas.py</Filename>
   </Filenames>
-  <ActiveWindow cline="27" cindex="33">/home/filip/cued/ehvs/semantics-4/src/collectExamples.py</ActiveWindow>
+  <ActiveWindow cline="20" cindex="0">/home/filip/cued/ehvs/semantics-4/src/collectExamples.py</ActiveWindow>
   <Breakpoints>
   </Breakpoints>
   <Watchpoints>
