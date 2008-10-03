@@ -26,7 +26,7 @@
 #define BACKOFF_C2C3C4_CARD     4
 
 % number of possible transition between different stacks
-#define STACK_TRANS_COUNTER_CARD	60
+#define STACK_TRANS_COUNTER_CARD	120
 
 % useful definitions that ease the readability of master files
 
