@@ -44,3 +44,5 @@ fi
 cdc-treedist.py sresults $DATA_HLDT/semantics.mlf $DCD_HLDT/semantics.mlf $ONLY $SKIP >> $DCD_HLDT/results.txt
 
 $SRC_DIR/cuedSemScore.pl $DCD_HLDT/semantics.mlf.cued $DATA_HLDT/semantics.mlf.cued >> $DCD_HLDT/results.txt
+
+exit 0

@@ -44,3 +44,4 @@ cdc-treedist.py sresults $DATA_TST/semantics.mlf $DCD_TST/semantics.mlf $ONLY $S
 
 $SRC_DIR/cuedSemScore.pl $DCD_TST/semantics.mlf.cued $DATA_TST/semantics.mlf.cued >> $DCD_TST/results.txt
 
+exit 0
