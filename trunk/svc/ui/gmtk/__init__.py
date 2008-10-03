@@ -577,6 +577,145 @@ class DPMF(_PMF, list):
             stream.writeFloat(i)
         stream.writeNewLine()
 
+#MEAN is exactly the same as DPMF, only cardinality variable is replaced by dimentionality
+class MEAN(_Object, list):
+    def __init__(self, parent, name, dimensionality):
+        _Object.__init__(self, parent, name)
+        self._initTable(dimensionality)
+
+    def _initTable(self, dimensionality):
+        self[:] = [0] * dimensionality
+
+    def getDimensionality(self):
+        return len(self)
+
+    @classmethod
+    def readFromFile(cls, parent, stream):
+        name = stream.readWord()
+        dimensionality = stream.readInt()
+        vec = cls(parent, name, dimensionality)
+
+        for i in range(dimensionality):
+            vec[i] = stream.readFloat()
+        return vec
+
+    def writeToFile(self, stream):
+        stream.writelnWord(self.name)
+        stream.writelnInt(self.dimensionality)
+        for i in self:
+            stream.writeFloat(i)
+        stream.writeNewLine()
+
+#diagonal convariances are also the same as MEAN
+class COVAR(MEAN):
+    pass
+
+#Gaussian Component
+class GC(_Object):
+    
+    def __init__(self, parent, name, dimensionality, meanName, varName):
+        super(GC, self).__init__(parent, name)
+        self.dimensionality=dimensionality
+        self.meanName=meanName
+        self.varName=varName
+    
+    @classmethod
+    def readFromFile(cls, parent, stream):
+        dimensionality = stream.readInt()
+        typ = stream.readInt()
+        if typ != 0:
+            raise ValueError('only GC type 0 is supported, but %d is specified' % typ)
+        name = stream.readWord()
+        meanName = stream.readWord()
+        varName = stream.readWord()
+        gc = cls(parent, name, dimensionality, meanName, varName)
+        #print gc
+        return gc
+
+    def writeToFile(self, stream):
+        stream.writelnInt(self.dimensionality)
+        stream.writelnInt(0)
+        stream.writelnWord(self.name)
+        stream.writeWord(self.meanName)
+        stream.writelnWord(self.varName)
+
+
+
+
+#Mixture of Gaussians 
+class MG(_Object):
+    
+    def __init__(self, parent, name, dimensionality, weightsDpmfName, gcNames):
+        super(MG, self).__init__(parent, name)
+        self.dimensionality=dimensionality
+        self.weightsDpmfName=weightsDpmfName
+        self.gcNames=gcNames
+    
+    @classmethod
+    def readFromFile(cls, parent, stream):
+        dimensionality = stream.readInt()
+        name = stream.readWord()
+        numComponents = stream.readInt()
+        weightsDpmfName = stream.readWord()
+        gcNames=[]
+        for i in range(numComponents):
+            gcNames.append(stream.readWord())
+        mg = cls(parent, name, dimensionality, weightsDpmfName, gcNames)
+        #print mg
+        return mg
+
+    def writeToFile(self, stream):
+        stream.writelnInt(self.dimensionality)
+        stream.writelnWord(self.name)
+        stream.writelnInt(len(self.gcNames))
+        stream.writelnWord(self.weightsDpmfName)
+        for i in range(len(self.gcNames)):
+            stream.writeWord(self.gcNames[i])
+
+class DLINK_MAT(_Object):
+    def __init__(self, parent, name):
+        raise NotImplemented
+
+    @classmethod
+    def readFromFile(cls, parent, stream):
+        raise NotImplemented
+
+class WEIGHT_MAT(_Object):
+    def __init__(self, parent, name, cardinality):
+        raise NotImplemented
+
+    @classmethod
+    def readFromFile(cls, parent, stream):
+        raise NotImplemented
+
+class GSMG(_Object):
+    def __init__(self, parent, name, cardinality):
+        raise NotImplemented
+
+    @classmethod
+    def readFromFile(cls, parent, stream):
+        raise NotImplemented
+
+class LSMG(_Object):
+    def __init__(self, parent, name, cardinality):
+        raise NotImplemented
+
+    @classmethod
+    def readFromFile(cls, parent, stream):
+        raise NotImplemented
+
+class MSMG(_Object):
+    def __init__(self, parent, name, cardinality):
+        raise NotImplemented
+
+    @classmethod
+    def readFromFile(cls, parent, stream):
+        raise NotImplemented
+
+#diagonal convariances are also the same as DPMF
+class COVAR(DPMF):
+    pass
+
 class SPMF(_PMF):
     def __init__(self, parent, name, cardinality, dpmfName):
         super(SPMF, self).__init__(parent, name, cardinality)
@@ -893,11 +1032,20 @@ class Workspace(PythonEgg):
             'NAME_COLLECTION': Collection,
             'DT': DT,
             'DPMF': DPMF,
+            'MEAN': MEAN,
+            'COVAR': COVAR,
+            'GC': GC,
+            'MG': MG,
             'SPMF': SPMF,
             'DENSE_CPT': DCPT,
             'SPARSE_CPT': SCPT,
             'DETERMINISTIC_CPT': DetCPT,
             '____DTs': DTs,
+            'DLINK_MAT' : DLINK_MAT,  
+            'WEIGHT_MAT' : WEIGHT_MAT,
+            'GSMG' : GSMG,
+            'LSMG' : LSMG,
+            'MSMG' : MSMG
     }
 
     def __init__(self, cppOptions=None, readDTS=True):
@@ -985,11 +1133,12 @@ class Workspace(PythonEgg):
 
     def writeToIO(self, obj_type, io):
         items = sorted(self[obj_type].items())
+        io.writelnWord('%  '+ "%s objects"  %  obj_type.__name__)
         io.writeInt(len(items))
         io.writeNewLine()
         io.writeNewLine()
         for i, (name, obj) in enumerate(items):
-            io.writeInt(i)
+            io.writelnInt(i)
             obj.writeToFile(io)
             io.writeNewLine()
 

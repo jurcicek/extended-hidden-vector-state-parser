@@ -17,12 +17,13 @@
 import sys
 import codecs
 from svc.map import SymMap
+from svc.utils import ADict
 import os
 import re
 try:
-    from xml.etree.ElementTree import parse, ElementTree, XML as ETreeXML, SubElement
+    from xml.etree.ElementTree import parse, ElementTree, XML as ETreeXML, SubElement, Element
 except ImportError:
-    from elementtree.ElementTree import parse, ElementTree, XML as ETreeXML, SubElement
+    from elementtree.ElementTree import parse, ElementTree, XML as ETreeXML, SubElement, Element
 from math import log10
 import urllib
 import urlparse
@@ -41,7 +42,7 @@ def UniValueError(string):
     return ValueError(string)
 
 class FSM(dict):
-    __slots__ = ['s_0', 's_end', '_FSM__remap_idx']
+    #__slots__ = ['s_0', 's_end', '_FSM__remap_idx']
 
     eps = 'eps'
     epsEdge = (eps,)
@@ -140,11 +141,11 @@ class FSM(dict):
                 head = s_0_new
 
             if tail:
-                if len(tail) > 1:
-                    for i in tail:
-                        self[i,s_0_new] = self.epsEdge
-                else:
-                    join = (list(tail)[0], s_0_new)
+                #if len(tail) > 1:
+                   for i in tail:
+                       self[i,s_0_new] = self.epsEdge
+                #else:
+                #    join = (list(tail)[0], s_0_new)
 
             for (s0, s1), attrs in fsm.items():
                 s0_new = self.__remap(my_states, mapping, s0)
@@ -324,6 +325,10 @@ class FSM(dict):
         self._writeMaps(fn, maps, encoding)
 
     def joinstates(self, states):
+        print states
+        if len(states) == 1:
+            return self.s0
+
         states = list(states)
         s0 = states.pop(0)
         map = dict((k, s0) for k in states)
@@ -973,9 +978,117 @@ class ABNFToXML(object):
         return xml.encode(self.encoding)
         
 
+class FSMProcessor(object):
+    def __init__(self, fsm):
+        self.fsm = fsm
+
+    def normalizedEdgesFrom(self, node):
+        lst = ADict()
+
+        for new_node, edge in self.fsm.edgesFrom(node):
+            isym = edge[0]
+            osym = edge[1]
+            if len(edge) == 2:
+                weight = 1
+            else:
+                weight = edge[2]
+
+            lst[new_node, isym, osym] += weight
+
+        lst_sum = float(lst.sum())
+        lst_sum = 1
+        for (new_node, isym, osym), weight in lst.iteritems():
+            weight /= lst_sum
+            yield new_node, isym, osym, weight
+
+    def processFromNode(self, node, items):
+        if not items:
+            if node in self.fsm.s_end:
+                yield 1.0, [], []
+            else:
+                yield 1.0, None, None
+            head = None
+            tail = items
+        else:
+            head = items[0]
+            tail = items[1:]
+
+        garbage_stack = []
+        something = False
+
+        for new_node, isym, osym, weight in self.normalizedEdgesFrom(node):
+            if head == isym:
+                for w, inputs, outputs in self.processFromNode(new_node, tail):
+                    if inputs is not None and outputs is not None:
+                        inputs = [head] + inputs
+                        outputs = [osym] + outputs
+                    else:
+                        inputs = outputs = None
+                    yield weight*w, inputs, outputs
+                    something = True
+            elif isym == self.fsm.eps:
+                for w, inputs, outputs in self.processFromNode(new_node, items):
+                    if inputs is not None and outputs is not None:
+                        inputs = [isym] + inputs
+                        outputs = [osym] + outputs
+                    else:
+                        inputs = outputs = None
+                    yield weight*w, inputs, outputs
+                    something = True
+            elif isym == GARBAGE_WORD:
+                garbage_stack.append( (new_node, isym, osym, weight) )
+
+        if not something and head is not None:
+            for new_node, isym, osym, weight in garbage_stack:
+                for w, inputs, outputs in self.processFromNode(new_node, tail):
+                    if inputs is not None and outputs is not None:
+                        inputs = [head] + inputs
+                        outputs = [osym] + outputs
+                    else:
+                        inputs = outputs = None
+                    yield weight*w, inputs, outputs
+
+    def process(self, items, best=False):
+        parses = []
+        is_incomplete = False
+        for w, inputs, outputs in self.processFromNode(self.fsm.s_0, items):
+            if inputs is not None and outputs is not None:
+                parses.append( (w, inputs, outputs) )
+            else:
+                is_incomplete = True
+
+        if parses and is_incomplete:
+            is_incomplete = False
+
+        results = []
+        for (w, inputs, outputs) in parses:
+            stack = [[]]
+            for i, o in zip(inputs, outputs):
+                if i != self.fsm.eps:
+                    stack[-1].append(i)
+                if o != self.fsm.eps:
+                    if o.startswith('#START-') and o.endswith('#'):
+                        rule_name = unicode(o[7:-1])
+                        nested = [rule_name]
+                        stack[-1].append(nested)
+                        stack.append(nested)
+                    elif o.startswith('#END-') and o.endswith('#'):
+                        del stack[-1]
+                    else:
+                        o = u'{%s}' % o
+                        stack[-1].append(o)
+            results.append(stack[-1][0])
+
+        if is_incomplete:
+            results.append([u'#INCOMPLETE#']+items)
+
+        return results
+
 
 class XMLRuleConvertor(object):
-    def __init__(self, etree, sourceEncoding, xmlns='http://www.w3.org/2001/06/grammar', forceRule=None, urlBase=None):
+    def __init__(self, etree, sourceEncoding,
+            xmlns='http://www.w3.org/2001/06/grammar', forceRule=None,
+            urlBase=None, trackRules=False, urlCache=None, debug=False):
         self.fileName = '-'
         self.etree = etree
         self._xmlns = xmlns
@@ -985,6 +1098,13 @@ class XMLRuleConvertor(object):
         self.urlBase = urlBase
         self.maxRepeat = None
         self.estimateList = []
+        self.trackRules = trackRules
+        self._fsmCache = {}
+        self.debug = debug
+        if urlCache is None:
+            self._urlCache = {}
+        else:
+            self._urlCache = urlCache
 
     @classmethod
     def createFromFile(cls, fn, *args, **kwargs):
@@ -1007,6 +1127,21 @@ class XMLRuleConvertor(object):
         return cls(etree, enc, *args, **kwargs)
 
     @classmethod
+    def createFromURL(cls, url, noAutoBase=False, *args, **kwargs):
+        from urlparse import urlparse, urlunparse
+        scheme, netloc, path, parameters, query, fragment = urlparse(url)
+        path = os.path.split(path)[0]
+        urlBase = urlunparse((scheme, netloc, path, '', '', ''))
+        fr = urllib.urlopen(url)
+        content = fr.read()
+        fr.close()
+        if not noAutoBase:
+            return cls.createFromString(content, urlBase=urlBase, *args, **kwargs)
+        else:
+            return cls.createFromString(content, *args, **kwargs)
+
+
+    @classmethod
     def _sourceEncoding(cls, fn_or_obj):
         if hasattr(fn_or_obj, 'readline'):
             fn_or_obj.seek(0)
@@ -1026,6 +1161,9 @@ class XMLRuleConvertor(object):
 
     def setEstimateList(self, l):
         self.estimateList = list(l)
+
+    def setTrackRules(self, r):
+        self.trackRules = r
 
     def convertToFSM(self, level=50, skipping=False):
         """Converts whole source file into FSM
@@ -1090,10 +1228,13 @@ class XMLRuleConvertor(object):
         """
         if level <= 0:
             return None
+        if rule_id in self._fsmCache:
+            return self._fsmCache[rule_id]
         elem = self._findRuleElement(rule_id)
         fsm = self._FSMForElement(elem, level)
         if self.ruleInEstimateList(rule_id):
             fsm = fsm.estimateWeights()
+        self._fsmCache[rule_id] = fsm
         return fsm
 
     def _FSMForElement(self, element, level):
@@ -1131,25 +1272,33 @@ class XMLRuleConvertor(object):
                         base = urlparse.urljoin(self.urlBase, base)
 
                     if base is not None:
-                        print 'Loading file: %s' % base
+                        if self.debug: print 'Loading file: %s' % base
                     if fragment is not None:
-                        print 'Parsing rule: %s' % fragment
+                        if self.debug: print 'Parsing rule: %s' % fragment
 
                     if base is None:
                         creator = self
                     else:
-                        fr = urllib.urlopen(base)
-                        content = fr.read()
-                        fr.close()
-                        creator = self.createFromString(content, xmlns=self._xmlns, forceRule=self.forceRule, urlBase=self.urlBase)
-                        creator.setMaxRepeat(self.maxRepeat)
-                        creator.setEstimateList(self.estimateList)
+                        if base in self._urlCache:
+                            creator = self._urlCache[base]
+                        else:
+                            if self.debug: print 'Creating creator for %s' % base
+                            creator = self.createFromURL(base,
+                                    xmlns=self._xmlns,
+                                    forceRule=self.forceRule,
+                                    urlBase=self.urlBase, noAutoBase=True,
+                                    urlCache=self._urlCache,
+                                    debug=self.debug)
+                            creator.setMaxRepeat(self.maxRepeat)
+                            creator.setEstimateList(self.estimateList)
+                            creator.setTrackRules(self.trackRules)
+                            self._urlCache[base] = creator
 
                     if fragment is None:
                         mainRule = creator.mainRule()
                         if mainRule is None:
                             raise ValueError("External grammar '%s' doesn't specify root rule" % base)
-                        fsm = creator._FSMForRule(creator.mainRule(), level-1)
+                        fsm = creator._FSMForRule(mainRule, level-1)
                     else:
                         fsm = creator._FSMForRule(fragment, level-1)
             elif t == 'tag':
@@ -1250,6 +1399,11 @@ class XMLRuleConvertor(object):
 
 
     def _iterElement(self, element):
+        if self.trackRules and element.tag == self.tag('rule'):
+            tag = Element(self.tag('tag'))
+            tag.text = '#START-%s#' % element.get('id')
+            yield ('tag', tag)
+            
         t = element.text
         if t is not None:
             t = t.strip()
@@ -1269,6 +1423,11 @@ class XMLRuleConvertor(object):
                 t = t.strip()
                 if t:
                     yield ('text', t)
+
+        if self.trackRules and element.tag == self.tag('rule'):
+            tag = Element(self.tag('tag'))
+            tag.text = '#END-%s#' % element.get('id')
+            yield ('tag', tag)
 
     def _FSMForText(self, text):
         fsm = self.fsmClass()
@@ -1301,10 +1460,13 @@ class XMLRuleConvertor(object):
 
     def _FSMForTag(self, tag):
         fsm = self.fsmClass()
-        for idx, text in enumerate(self._splitText(tag)):
-            fsm[idx,idx+1] = (fsm.eps, text)
+        #for idx, text in enumerate(self._splitText(tag)):
+        #    fsm[idx,idx+1] = (fsm.eps, text)
+        # fsm.s_0 = 0
+        # fsm.s_end = [idx+1]
+        fsm[0,1] = (fsm.eps, tag)
         fsm.s_0 = 0
-        fsm.s_end = [idx+1]
+        fsm.s_end = [1]
         return fsm
 
     def _FSMForSpecialRule(self, special):

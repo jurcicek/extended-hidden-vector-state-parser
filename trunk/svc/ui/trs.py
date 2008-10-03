@@ -43,6 +43,10 @@ class Transcript(PythonEgg):
 
         self._speakersReverse = dict((v, k) for (k, v) in self._speakers.iteritems())
 
+    def __iter__(self):
+        for i in self._turns:
+            yield self._DOMToText(i)
+
     def __getitem__(self, i):
         turn = self._turns[i]
         return self._DOMToText(turn)
@@ -63,8 +67,8 @@ class Transcript(PythonEgg):
                     ret.append(conv(child))
         text = ' '.join(ret)
 
-        spkr_id = node.getAttribute('speaker')
-        spkr = self._speakers[spkr_id]
+        spkrs_id = node.getAttribute('speaker').split()
+        spkr = ' '.join(self._speakers.get(i, 'unknown') for i in spkrs_id)
 
         return '%s:\t%s' % (spkr, text)
 
@@ -151,6 +155,7 @@ class Transcript(PythonEgg):
             for element, value in match.groupdict().iteritems():
                 if value is not None:
                     if element == 'spkr':
+                        #TODO: NEEDS to fix to handle more speakers
                         if value not in self._speakersReverse:
                             self.createNewSpeaker(value)
                         spkr_id = self._speakersReverse[value]

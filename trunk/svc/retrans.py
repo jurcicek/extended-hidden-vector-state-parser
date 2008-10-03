@@ -137,13 +137,14 @@ class RuleList(PythonEgg, list):
 
     @classmethod
     def createFromFiles(cls, fns, encoding='utf-8', ruleClass=RuleSet):
-        cpp = Preprocessor()
+        #cpp = Preprocessor()
 
         rules = []
         for fn in fns:
             fr = file(fn, 'r')
             try:
-                for line in cpp.process(fr):
+                #for line in cpp.process(fr):
+                for line in fr:
                     line = unicode(line, encoding)
                     rules.extend( cls.parseRuleLine(line) )
             finally:
