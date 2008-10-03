@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Tasks SYSTEM "Tasks-3.8.dtd">
 <!-- Tasks file for project ehvs -->
-<!-- Saved: 2008-09-30, 19:27:22 -->
+<!-- Saved: 2008-10-03, 18:18:51 -->
 <Tasks version="3.8">
   <Task priority="1" completed="0" bugfix="0">
     <Description>TODO:</Description>
@@ -50,18 +50,6 @@
     </Resource>
   </Task>
   <Task priority="1" completed="0" bugfix="0">
-    <Description>TODO: REMOVE: used only with bigram_lemma</Description>
-    <Created>2008-09-30, 19:15:04</Created>
-    <Resource>
-      <Filename>
-        <Dir>semantics-4</Dir>
-        <Dir>src</Dir>
-        <Name>reduceExamples.py</Name>
-      </Filename>
-      <Linenumber>20</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="0" bugfix="0">
     <Description>TODO: Other specifiers</Description>
     <Created>2008-09-30, 19:24:58</Created>
     <Resource>
@@ -107,6 +95,30 @@
         <Name>__init__.py</Name>
       </Filename>
       <Linenumber>1361</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="0" bugfix="0">
+    <Description>TODO: REMOVE: used only with bigram_lemma</Description>
+    <Created>2008-10-02, 14:45:03</Created>
+    <Resource>
+      <Filename>
+        <Dir>semantics-4</Dir>
+        <Dir>src</Dir>
+        <Name>reduceExamples.py</Name>
+      </Filename>
+      <Linenumber>20</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="0" bugfix="0">
+    <Description>TODO: REMOVE: used only with bigram_lemma</Description>
+    <Created>2008-10-02, 15:28:36</Created>
+    <Resource>
+      <Filename>
+        <Dir>semantics-4</Dir>
+        <Dir>src</Dir>
+        <Name>genSymbolGivenC1C2C3C4.py</Name>
+      </Filename>
+      <Linenumber>69</Linenumber>
     </Resource>
   </Task>
 </Tasks>

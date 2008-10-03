@@ -14,13 +14,13 @@ inputCuedSemanticsTest    = 'towninfo-test.sem'
 maxProcessedDAs = 28000
 outputDir = "/home/filip/cued/ehvs/cued/xml/"
 
-#filterOutSlotsNumberTrain   = range(2,12)
-#filterOutSlotsNumberHeldout = range(2,12)
-#filterOutSlotsNumberTest    = range(2,12)
+filterOutSlotsNumberTrain   = range(12,12)
+filterOutSlotsNumberHeldout = range(12,12)
+filterOutSlotsNumberTest    = range(12,12)
 
-filterOutSlotsNumberTrain   = (0,2,3,4,5,6,7,8,9,10,11,12)
-filterOutSlotsNumberHeldout = (0,2,3,4,5,6,7,8,9,10,11,12)
-filterOutSlotsNumberTest    = (0,2,3,4,5,6,7,8,9,10,11,12)
+filterOutSlotsNumberTrain   = (0,1,3,4,5,6,7,8,9,10,11,12)
+filterOutSlotsNumberHeldout = (0,1,3,4,5,6,7,8,9,10,11,12)
+filterOutSlotsNumberTest    = (0,1,3,4,5,6,7,8,9,10,11,12)
 
 filterOutSpeechActs = ('xxx', 
 ##                       'ask',
