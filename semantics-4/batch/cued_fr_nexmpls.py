@@ -2,6 +2,7 @@ from svc.utils import linrange, linspace
 
 #settings['DATA_REDUCTION']=6
 settings['S1_NEGEX']=1
+settings['S1_NEG_THRESHOLD']=10
 
 prepareData(env=env)
 train(env=env)

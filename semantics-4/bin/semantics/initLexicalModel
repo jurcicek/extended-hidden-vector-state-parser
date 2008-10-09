@@ -53,8 +53,8 @@ $SRC_DIR/collectExamples.py $DATA_XML_TRN \
 
 # S1
 
-$SRC_DIR/reduceExamples.py $CONCEPT_MAP $S1_MAP $DATA_TRN/s1.negExamples $DATA_TRN/s1.negExamples.flt
-$SRC_DIR/reduceExamples.py $CONCEPT_MAP $S1_MAP $DATA_TRN/s1.posExamples $DATA_TRN/s1.posExamples.flt
+$SRC_DIR/reduceExamples.py $CONCEPT_MAP $S1_MAP $DATA_TRN/s1.negExamples $DATA_TRN/s1.negExamples.flt $S1_NEG_THRESHOLD
+$SRC_DIR/reduceExamples.py $CONCEPT_MAP $S1_MAP $DATA_TRN/s1.posExamples $DATA_TRN/s1.posExamples.flt $S1_NEG_THRESHOLD
 
 $SRC_DIR/genSymbolGivenC1C2C3C4.py --files $DATA_TRN/ho --debug \
         --obsColumn=0 \
@@ -68,8 +68,8 @@ $SRC_DIR/genSymbolGivenC1C2C3C4.py --files $DATA_TRN/ho --debug \
 
 # S2
 
-$SRC_DIR/reduceExamples.py $CONCEPT_MAP $S2_MAP $DATA_TRN/s2.negExamples $DATA_TRN/s2.negExamples.flt
-$SRC_DIR/reduceExamples.py $CONCEPT_MAP $S2_MAP $DATA_TRN/s2.posExamples $DATA_TRN/s2.posExamples.flt
+$SRC_DIR/reduceExamples.py $CONCEPT_MAP $S2_MAP $DATA_TRN/s2.negExamples $DATA_TRN/s2.negExamples.flt $S2_NEG_THRESHOLD
+$SRC_DIR/reduceExamples.py $CONCEPT_MAP $S2_MAP $DATA_TRN/s2.posExamples $DATA_TRN/s2.posExamples.flt $S2_NEG_THRESHOLD
 
 $SRC_DIR/genSymbolGivenC1C2C3C4.py --files $DATA_TRN/ho --debug \
         --extraExt=.2 \
@@ -84,8 +84,8 @@ $SRC_DIR/genSymbolGivenC1C2C3C4.py --files $DATA_TRN/ho --debug \
 
 # S3
 
-$SRC_DIR/reduceExamples.py $CONCEPT_MAP $S3_MAP $DATA_TRN/s3.negExamples $DATA_TRN/s3.negExamples.flt
-$SRC_DIR/reduceExamples.py $CONCEPT_MAP $S3_MAP $DATA_TRN/s3.posExamples $DATA_TRN/s3.posExamples.flt
+$SRC_DIR/reduceExamples.py $CONCEPT_MAP $S3_MAP $DATA_TRN/s3.negExamples $DATA_TRN/s3.negExamples.flt $S3_NEG_THRESHOLD
+$SRC_DIR/reduceExamples.py $CONCEPT_MAP $S3_MAP $DATA_TRN/s3.posExamples $DATA_TRN/s3.posExamples.flt $S3_NEG_THRESHOLD
 
 $SRC_DIR/genSymbolGivenC1C2C3C4.py --files $DATA_TRN/ho --debug \
         --extraExt=.2 \

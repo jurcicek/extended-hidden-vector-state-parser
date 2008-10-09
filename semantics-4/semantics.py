@@ -483,7 +483,7 @@ class SemanticsMain(ExternalScript):
         td = TreeDistScript()
         results = td.sresults((gold_mlf, hyp_mlf), fw=output, only=only, skip=skip)
         
-        cued = commands.getoutput(self.externalMethodDirs[0]+'/cuedSemScore -d '+hyp_mlf+'.cued '+gold_mlf+'.cued')
+        cued = commands.getoutput(self.settings['SRC_DIR']+'/cuedSemScore.pl -d '+hyp_mlf+'.cued '+gold_mlf+'.cued')
 ##        self.logger.info('CUED SemScore.pl: %s', cued)
 
         cued = cued.split()

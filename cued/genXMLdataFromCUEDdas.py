@@ -238,6 +238,10 @@ class Slot:
         else:
             value = '(VALUE_'+name+')'
         
+##        if len(self.value) == 0:
+##            value = ''
+##        else:
+##            value = '('+'VALUE_'+self.value.upper().replace(' ', '_')+')'
         incrementConceptStats(value)
 
         if self.equal:
@@ -255,7 +259,7 @@ class Slot:
             equal = '='
         else:
             equal = '!='
-        
+
         if self.value == 'dontcare' or self.value == 'none':
             value = self.value
         elif len(self.value) == 0:
@@ -263,6 +267,12 @@ class Slot:
             equal = ''
         else:
             value = 'value_'+name
+            
+##        if len(self.value) == 0:
+##            value = ''
+##            equal = ''
+##        else:
+##            value = self.value
 
         return name+equal+value
     
@@ -299,6 +309,10 @@ class DialogueAct:
         # get the speech-act
         i = self.dialogueAct.index("(")
         self.speechAct = self.dialogueAct[:i]
+        
+        # FIX-IT
+        self.speechAct = 'root'
+        
         slots = self.dialogueAct[i:]
         slots = slots.replace('(', '')
         slots = slots.replace(')', '')

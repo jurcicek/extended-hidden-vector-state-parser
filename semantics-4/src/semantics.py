@@ -638,8 +638,6 @@ class Semantics:
         # translate venue_dot_name into venue.name
         slot = slot.replace("_dot_", ".")
         
-
-            
         equal = ""
         value = ''
         try:
@@ -668,6 +666,8 @@ class Semantics:
             vst = value.startswith('VALUE_')
             if vst:
                 value = value[len('VALUE_'):]
+                # translate venue_dot_name into venue.name
+                value = value.replace("_DOT_", ".")
                 value = value.replace("_", " ")
                 value = value.lower()
                 value = '"'+value+'"'

@@ -14,29 +14,24 @@ DEPENDENT_CONCEPTS = [
     ['DRINKS'],
     ['FOOD'],
     ['MUSIC'],
-    ['NAME', 'VENUE_DOT_NAME', 'AREA', 'ADDR'],
-    ['NEAR'],
+    ['NAME', 'VENUE_DOT_NAME', 'AREA', 'ADDR', 'NEAR'],
     ['PHONE'],
     ['PRICE', 'PRICERANGE'],
     ['STARS'],
     ['TASK'],
     ['TYPE'],
-##    ['VALUE_ADDR'],
-##    ['VALUE_AREA'],
 ##    ['VALUE_DRINKS'],
 ##    ['VALUE_FOOD'],
 ##    ['VALUE_MUSIC'],
-##    ['VALUE_NAME'],
-##    ['VALUE_NEAR'],
+##    ['VALUE_NAME', 'VALUE_VENUE_DOT_NAME', 'VALUE_AREA', 'VALUE_ADDR', 'VALUE_NEAR'],
 ##    ['VALUE_PHONE'],
-##    ['VALUE_PRICE'],
+##    ['VALUE_PRICE', 'VALUE_PRICERANGE'],
 ##    ['VALUE_STARS'],
 ##    ['VALUE_TASK'],
 ##    ['VALUE_TYPE'],
-##    ['VALUE_VENUE_DOT_NAME'],
 ]
 
-DOMINATING_CONCEPT = set(['CONFIRM', 'INFORM', 'REQUEST'])
+DOMINATING_CONCEPT = set(['CONFIRM', 'INFORM', 'REQUEST', 'ROOT'])
 
 CONCEPT_GROUPING = {}
 

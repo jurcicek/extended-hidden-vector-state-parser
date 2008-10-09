@@ -61,6 +61,10 @@ export S1_NEGEX=1
 export S2_NEGEX=0
 export S3_NEGEX=0
 
+export S1_NEG_THRESHOLD=1
+export S2_NEG_THRESHOLD=1
+export S3_NEG_THRESHOLD=1
+
 export S1_PRUNE_COUNT=1
 export S2_PRUNE_COUNT=-0.05
 export S3_PRUNE_COUNT=-0.05
