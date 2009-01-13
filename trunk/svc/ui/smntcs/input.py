@@ -35,7 +35,7 @@ DEFAULT_DS = None
 DONT_LOWER_SETS = ['pos', 'rpos', 'analytical', 'word+pos']
 
 DONT_REMOVE_UNDERSCORES = ['speech_act', 'domain_speech_act', 'domain',
-        'signed', 'bigram_word', 'bigram_lemma', 'bigram_pos']
+        'bigram_word', 'bigram_lemma', 'bigram_pos']
 
 REMOVE_SINGLE_UNDERSCORE = ['signed']
 
@@ -249,8 +249,9 @@ class InputGenerator(PythonEgg):
     def readDAs(self):
         for da in self.reader:
             da = self.renameDA(da)
-            da = self.synthDA(da)
             da = self.postprocessDA(da)
+            da = self.synthDA(da)
+            da = self.updateRequested(da)
             self.checkDA(da)
             yield da
 
@@ -343,9 +344,10 @@ class InputGenerator(PythonEgg):
 
         da['ne_typed'] = ne_typed
         da['ne_part'] = ne_part
+        return da
 
+    def updateRequested(self, da):
         da['requested'] = zip(*[da[ds] for ds in self.data_sets])
-
         return da
 
     def readInputs(self):
@@ -372,9 +374,12 @@ class InputGenerator(PythonEgg):
 
     def removeUnderscores(self, line, remove=False):
         if not remove:
-            return [w.replace('_', 'x') for w in line]
+            ret = [w.replace('_', 'x') for w in line]
         else:
-            return [w.replace('_', 'x') for w in line if w != '_']
+            ret = [w.replace('_', 'x') for w in line if w != '_']
+        if not ret and line:
+            ret = ['nothing']
+        return ret
 
 
 
