@@ -13,13 +13,15 @@ To run our scripts, you will need working
 
 Checkout the project into your home directory. The name of the directory for the extended HVS parser should be `extended-HVS-parser`. If you want to have read/write access to the project SVN tree use the following command (you also have to be a contributor in this project)
 {{{
-svn checkout https://extended-hidden-vector-state-parser.googlecode.com/svn/trunk extended-HVS-parser --username YOUR-USER-NAME
+svn checkout https://extended-hidden-vector-state-parser.googlecode.com/svn/trunk extended-HVS-parser --username YOUR-USER-NAME -r 108
 }}}
 or
 {{{
-svn checkout http://extended-hidden-vector-state-parser.googlecode.com/svn/trunk extended-HVS-parser
+svn checkout http://extended-hidden-vector-state-parser.googlecode.com/svn/trunk extended-HVS-parser -r 108
 }}}
 the read-only version.
+
+*The revision 108 is the latest working version. The code on the HEAD is not working.*
 
 = Full run example =
 
