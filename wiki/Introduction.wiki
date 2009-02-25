@@ -5,7 +5,9 @@ This chapter presents the basic concepts used in our implementation of the parse
 
 To run our scripts, you will need working 
   * Linux environment, Python (minimum v 2.4), 
-  * GMTK (last available version) (http://ssli.ee.washington.edu/~bilmes/gmtk/) 
+  * GMTK  (http://ssli.ee.washington.edu/~bilmes/gmtk/)
+    * version 2009 is not working!
+    * version March 2006 is OK: http://ssli.ee.washington.edu/~bilmes/gmtk/linux/2006/WedMar1_2006/ 
   * envsubst command (on Debian it is part of gettext-base package)
   * scipy
 
