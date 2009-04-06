@@ -18,6 +18,7 @@ import sys
 import codecs
 from types import StringTypes
 from inspect import isroutine
+import traceback, logging
 
 class sym(object):
     def __init__(self, s):
@@ -255,4 +256,17 @@ class ADict(dict):
         finally:
             fr.close()
 
+
+def log_exception(func):
+    '''Decorator which logs an exception which occur in decorated function
+    '''
+    def wrapper(*args, **kwargs):
+        try:
+            return func(*args, **kwargs)
+        except:
+            for line in traceback.format_exc().splitlines():
+                logging.error(line)
+            raise
+    wrapper.func_name = func.func_name
+    return wrapper
 

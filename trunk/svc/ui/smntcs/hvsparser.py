@@ -98,6 +98,8 @@ class HVSParser(Script):
         'skip_empty': Flag,
         'input_chain': String,
         'no_underscores': Flag,
+        'force_pdt': Flag,
+        'pdt_dir': String,
     }
 
     posOpts = ['model_dir']
@@ -159,9 +161,10 @@ class HVSParser(Script):
                 input_lines.extend(si)
 
         lines = []
-        for i, w in enumerate(mapped):
-            lines.append('%d\t%d\t%d\t%d\n' % (i, i+1, i+1, w))
-        lines.append('%d\n' % (i+1, ))
+        if len(mapped):
+            for i, w in enumerate(mapped):
+                lines.append('%d\t%d\t%d\t%d\n' % (i, i+1, i+1, w))
+            lines.append('%d\n' % (i+1, ))
 
         # print ''.join(lines)
         # print ' '.join(input_lines)
@@ -199,7 +202,7 @@ class HVSParser(Script):
 
     def main(self, model_dir, encoding=None, batch=False, omit_leaves=False,
             mlf=False, xml_dir=None, ref_mlf=None, skip_empty=False,
-            input_chain=None, batch_size=100, no_underscores=True):
+            input_chain=None, batch_size=100, no_underscores=True, force_pdt=False, pdt_dir=None):
         encoding = sys.stdout.encoding
         if encoding is None:
             if os.name == 'nt':
@@ -224,14 +227,21 @@ class HVSParser(Script):
         else:
             da_type = 'normalized'
 
+        if not pdt_dir:
+            pdt_dir = '/opt/PDT-2.0/tools/machine-annotation'
+
         if xml_dir:
             reader = input.MultiReader([xml_dir], input.DXMLReader)
+            if force_pdt and 'lemma' in datasets or 'pos' in datasets:
+                if os.name == 'nt':
+                    raise RuntimeError("Datasets 'lemma' and 'pos' are unsupported on Windows")
+                reader = input.PDTReader(pdt_dir, reader, online=not batch)
         else:
             reader = input.StdInReader(encoding=encoding, type=da_type)
             if 'lemma' in datasets or 'pos' in datasets:
                 if os.name == 'nt':
                     raise RuntimeError("Datasets 'lemma' and 'pos' are unsupported on Windows")
-                reader = input.PDTReader('/opt/PDT-2.0/tools/machine-annotation', reader, online=not batch)
+                reader = input.PDTReader(pdt_dir, reader, online=not batch)
         if input_chain is not None:
             reader = input.InputChain(input_chain, reader)
         generator = input.InputGenerator(reader, datasets, datasets[0], noUnderscores=no_underscores)
